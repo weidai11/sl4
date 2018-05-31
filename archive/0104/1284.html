@@ -1,0 +1,382 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: A fairly concrete path to the Singularity</title>
+<meta name="Author" content="Ben Goertzel (ben@webmind.com)">
+<meta name="Subject" content="RE: A fairly concrete path to the Singularity">
+<meta name="Date" content="2001-04-28">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: A fairly concrete path to the Singularity</h1>
+<!-- received="Sat Apr 28 20:34:49 2001" -->
+<!-- isoreceived="20010429023449" -->
+<!-- sent="Sat, 28 Apr 2001 20:36:14 -0400" -->
+<!-- isosent="20010429003614" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@webmind.com" -->
+<!-- subject="RE: A fairly concrete path to the Singularity" -->
+<!-- id="NDBBIBGFAPPPBODIPJMMMEKLFHAA.ben@webmind.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="3AEB510B.870E9376@objectent.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@webmind.com?Subject=RE:%20A%20fairly%20concrete%20path%20to%20the%20Singularity"><em>ben@webmind.com</em></a>)<br>
+<strong>Date:</strong> Sat Apr 28 2001 - 18:36:14 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1285.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>Previous message:</strong> <a href="1283.html">Samantha Atkins: "Re: A fairly concrete path to the Singularity"</a>
+<li><strong>In reply to:</strong> <a href="1283.html">Samantha Atkins: "Re: A fairly concrete path to the Singularity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1285.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>Reply:</strong> <a href="1285.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>Reply:</strong> <a href="1291.html">Samantha Atkins: "Re: A fairly concrete path to the Singularity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1284">[ date ]</a>
+<a href="index.html#1284">[ thread ]</a>
+<a href="subject.html#1284">[ subject ]</a>
+<a href="author.html#1284">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Choice of programming language is always a tricky and personal issue, huh?
+<br>
+<p>I first have to confess that I, personally, have never cared for LISP very
+<br>
+much.  I just don't enjoy programming in it as much as a lot of other
+<br>
+languages.  My favorites are functional languages like Haskell and Miranda.
+<br>
+Next is Java, of which C++ and C# seem like perversions....  I know pure
+<br>
+LISP is a functional language, but even there, the parenthese-mad syntax
+<br>
+annoys me: the currying of Haskell syntax is so much cleaner!
+<br>
+<p>Also, the fact that we already have 700,000 lines of Webmind code in Java
+<br>
+causes me to strongly hope that a high-performance Java comes out, so I
+<br>
+don't have to worry about other languages.  If we rewrite little crucial
+<br>
+bits of the code in C now but leave the rest in Java, maybe we can put the
+<br>
+crucial bits back into Java later when Java improves.
+<br>
+<p>But about LISP... I'll try to be objective here and put my &quot;religious&quot;
+<br>
+sympathies aside ;&gt;
+<br>
+<p>A main point is, I don't believe that fully optimized LISP is likely to
+<br>
+perform nearly as well fully optimized C on most problems.   This is
+<br>
+personal experience, plus a perusal of the literature a few years ago.
+<br>
+<p>Also, even more critically, I have never heard of a truly large-scale LISP
+<br>
+app: gigabytes of RAM, multiple processors, multiple servers, etc.
+<br>
+<p>Perhaps a handful of such apps exist, unbeknownst to me.  But given the
+<br>
+relative preponderance of such apps in C/C++, it stands to reason that C/C++
+<br>
+compilers have been much more fully tested and tuned for this type of
+<br>
+application.
+<br>
+<p>Object oriented design is very very nice for a large-scale software system
+<br>
+of any kind, also.  LISP does not provide this, unless there's an
+<br>
+ObjectiveLisp I'm not aware of.
+<br>
+<p>The ease of reflection in LISP is a  major point.  But Java has built-in
+<br>
+reflection as well.
+<br>
+<p>In LISP, can one &quot;method&quot; look into another while it's running and see the
+<br>
+ephemeral values of local variables inside that method?  (I know, this is
+<br>
+Java terminology; I forget the LISP terminology.)  If so, then this is a
+<br>
+more powerful kind of reflection than Java currently provides.
+<br>
+<p><p>-- Ben
+<br>
+<p><p><p><em>&gt; -----Original Message-----
+</em><br>
+<em>&gt; From: <a href="mailto:owner-sl4@sysopmind.com?Subject=RE:%20A%20fairly%20concrete%20path%20to%20the%20Singularity">owner-sl4@sysopmind.com</a> [mailto:<a href="mailto:owner-sl4@sysopmind.com?Subject=RE:%20A%20fairly%20concrete%20path%20to%20the%20Singularity">owner-sl4@sysopmind.com</a>]On Behalf
+</em><br>
+<em>&gt; Of Samantha Atkins
+</em><br>
+<em>&gt; Sent: Saturday, April 28, 2001 7:24 PM
+</em><br>
+<em>&gt; To: <a href="mailto:sl4@sysopmind.com?Subject=RE:%20A%20fairly%20concrete%20path%20to%20the%20Singularity">sl4@sysopmind.com</a>
+</em><br>
+<em>&gt; Subject: Re: A fairly concrete path to the Singularity
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Why C# and other such languages as opposed to Lisp and its variants?
+</em><br>
+<em>&gt; Lisp has many advantages including great underlying simplicity, full
+</em><br>
+<em>&gt; reflection,  a history of formal analysis of language constructs and
+</em><br>
+<em>&gt; programs, optimization to near (or better than) C speeds on many classes
+</em><br>
+<em>&gt; of problems, self-modification and so on.  To my mind those are
+</em><br>
+<em>&gt; difficult features to beat when any of the C derivative languages
+</em><br>
+<em>&gt; including C#.   What does C# (for instance) buy you that you don't and
+</em><br>
+<em>&gt; can't have with Lisp?
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; I very much agree with the scenario and have considered proceeding on
+</em><br>
+<em>&gt; such lines for a while now.  Many of the by-products along the way are
+</em><br>
+<em>&gt; also generally important and lucrative to the software industry.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Some of the more interesting problems revolve around the semantics of
+</em><br>
+<em>&gt; software components of various types.  Without classification of the
+</em><br>
+<em>&gt; semantics, of what a component is for and under what circumstances, it
+</em><br>
+<em>&gt; would be extremely difficult to build a system that could write programs
+</em><br>
+<em>&gt; from a general description of what was desired.  But long before that
+</em><br>
+<em>&gt; there are many types of analysis of source, dependencies, searching for
+</em><br>
+<em>&gt; applicable patterns, refactoring and such that would be useful and
+</em><br>
+<em>&gt; again, lucrative, steps in this general direction.   The by-products
+</em><br>
+<em>&gt; could be used to build a variety of software engineering tools.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; - samantha
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Ben Goertzel wrote:
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; Hi all,
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; Having posted some peripheral stuff to the list lately, I feel
+</em><br>
+<em>&gt; obliged to
+</em><br>
+<em>&gt; &gt; post something on-topic ;&gt;
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; This follows up a conversation that Eliezer, Peter Voss and
+</em><br>
+<em>&gt; some others and
+</em><br>
+<em>&gt; &gt; I had over dinner at the Foresight conference
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; I proposed the following sequence of events leading up to the
+</em><br>
+<em>&gt; Singularity
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; 1) Someone [perhaps Eli, perhaps little old me, perhaps both of
+</em><br>
+<em>&gt; us together,
+</em><br>
+<em>&gt; &gt; perhaps some unknown hacker from the barren plains of
+</em><br>
+<em>&gt; Tadzikistan] creates a
+</em><br>
+<em>&gt; &gt; fairly intelligent AI, one that can be taught, conversed with, etc.
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; 2) This AI is taught about programming languages, is taught
+</em><br>
+<em>&gt; about algorithms
+</em><br>
+<em>&gt; &gt; and data structures, etc.
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; 3) It begins by being able to write and optimize and rewrite
+</em><br>
+<em>&gt; simple programs
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; 4) After it achieves a significant level of practical software
+</em><br>
+<em>&gt; engineering
+</em><br>
+<em>&gt; &gt; experience and mathematical and AI knowledge, it is able to
+</em><br>
+<em>&gt; begin improving
+</em><br>
+<em>&gt; &gt; itself ... at which point the hard takeoff begins.
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; My intuition is that, even in this picture, the hard takeoff
+</em><br>
+<em>&gt; takes months or
+</em><br>
+<em>&gt; &gt; a few years, not minutes.  But that's still pretty fast by the
+</em><br>
+<em>&gt; standards of
+</em><br>
+<em>&gt; &gt; human progress.
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; If this is the way it goes, then I have a concrete proposal for
+</em><br>
+<em>&gt; two things
+</em><br>
+<em>&gt; &gt; that would probably speed up step 2.
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; The first is the creation of a formalized database of knowledge about
+</em><br>
+<em>&gt; &gt; algorithms, programming languages and AI.  At www.mizar.org, there is a
+</em><br>
+<em>&gt; &gt; formalized database of knowledge about undergraduate and some
+</em><br>
+<em>&gt; graduate-level
+</em><br>
+<em>&gt; &gt; mathematics.  But it's scanty on CS.  Now, I am well aware that
+</em><br>
+<em>&gt; formalized
+</em><br>
+<em>&gt; &gt; theorems and proofs are not the essence of mathematics.  But they're an
+</em><br>
+<em>&gt; &gt; important component, which a young AI will more easily absorb from
+</em><br>
+<em>&gt; &gt; formalized treatments than from journal math articles, which
+</em><br>
+<em>&gt; have their own
+</em><br>
+<em>&gt; &gt; peculiar social and psychological assumptions underlying them, different
+</em><br>
+<em>&gt; &gt; from the patterns underlying the math itself.
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; The second is the creation of an efficient &amp; scalable
+</em><br>
+<em>&gt; programming language
+</em><br>
+<em>&gt; &gt; with a purely formal semantics.  C# may fulfill this criterion;
+</em><br>
+<em>&gt; Peter Voss
+</em><br>
+<em>&gt; &gt; is evaluating it for this purpose.  Java is formal but not yet
+</em><br>
+<em>&gt; efficient and
+</em><br>
+<em>&gt; &gt; scalable enough; an improved JVM could solve the problem,
+</em><br>
+<em>&gt; particularly a JVM
+</em><br>
+<em>&gt; &gt; specialized for large-scale AI.  C is efficient and scalable
+</em><br>
+<em>&gt; but its use of
+</em><br>
+<em>&gt; &gt; pointers means that its formal semantics needs to include a
+</em><br>
+<em>&gt; formal model of
+</em><br>
+<em>&gt; &gt; heap memory, which  makes the task of inference-driven self-modification
+</em><br>
+<em>&gt; &gt; MUCH more difficult for a C program.  [When I say C I include C++]
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; I think that this picture of the path to the Singularity is a little
+</em><br>
+<em>&gt; &gt; different from that of Eliezer.  But I'm not sure.  My sense is that he
+</em><br>
+<em>&gt; &gt; views self-modification as entering into the picture earlier, perhaps in
+</em><br>
+<em>&gt; &gt; stage 1, as the best way of getting to the first &quot;fairly
+</em><br>
+<em>&gt; intelligent AI.&quot;
+</em><br>
+<em>&gt; &gt; I'm not 100% sure this is wrong, but after a lot of thought I
+</em><br>
+<em>&gt; have not seen
+</em><br>
+<em>&gt; &gt; a good way to do this, whereas I have a pretty clear picture of
+</em><br>
+<em>&gt; how to get
+</em><br>
+<em>&gt; &gt; to the Singularity according to the steps I've outlined here.
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; -- Ben
+</em><br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1285.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>Previous message:</strong> <a href="1283.html">Samantha Atkins: "Re: A fairly concrete path to the Singularity"</a>
+<li><strong>In reply to:</strong> <a href="1283.html">Samantha Atkins: "Re: A fairly concrete path to the Singularity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1285.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>Reply:</strong> <a href="1285.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>Reply:</strong> <a href="1291.html">Samantha Atkins: "Re: A fairly concrete path to the Singularity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1284">[ date ]</a>
+<a href="index.html#1284">[ thread ]</a>
+<a href="subject.html#1284">[ subject ]</a>
+<a href="author.html#1284">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

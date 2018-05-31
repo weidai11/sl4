@@ -1,0 +1,247 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: &quot;Real&quot; programming and seed AI</title>
+<meta name="Author" content="Alan Grimes (alangrimes@starpower.net)">
+<meta name="Subject" content="Re: &quot;Real&quot; programming and seed AI">
+<meta name="Date" content="2002-02-07">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: &quot;Real&quot; programming and seed AI</h1>
+<!-- received="Thu Feb 07 17:19:10 2002" -->
+<!-- isoreceived="20020208001910" -->
+<!-- sent="Thu, 07 Feb 2002 17:18:24 -0500" -->
+<!-- isosent="20020207221824" -->
+<!-- name="Alan Grimes" -->
+<!-- email="alangrimes@starpower.net" -->
+<!-- subject="Re: &quot;Real&quot; programming and seed AI" -->
+<!-- id="3C62FD30.C4204728@starpower.net" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="003301c1b01b$e57944a0$140b640a@stellentied.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Alan Grimes (<a href="mailto:alangrimes@starpower.net?Subject=Re:%20&quot;Real&quot;%20programming%20and%20seed%20AI"><em>alangrimes@starpower.net</em></a>)<br>
+<strong>Date:</strong> Thu Feb 07 2002 - 15:18:24 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="2918.html">Remco Gerlich: "Re: &quot;Real&quot; programming and seed AI"</a>
+<li><strong>Previous message:</strong> <a href="2916.html">Simon McClenahan: "&quot;Real&quot; programming and seed AI"</a>
+<li><strong>In reply to:</strong> <a href="2916.html">Simon McClenahan: "&quot;Real&quot; programming and seed AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="2918.html">Remco Gerlich: "Re: &quot;Real&quot; programming and seed AI"</a>
+<li><strong>Reply:</strong> <a href="2918.html">Remco Gerlich: "Re: &quot;Real&quot; programming and seed AI"</a>
+<li><strong>Reply:</strong> <a href="2921.html">Dani Eder: "Re: &quot;Real&quot; programming and seed AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2917">[ date ]</a>
+<a href="index.html#2917">[ thread ]</a>
+<a href="subject.html#2917">[ subject ]</a>
+<a href="author.html#2917">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Simon McClenahan wrote:
+<br>
+<em>&gt; I just read The Story of Mel, a Real Programmer at
+</em><br>
+<em>&gt; <a href="http://www.jargon.8hz.com/jargon_49.html">http://www.jargon.8hz.com/jargon_49.html</a> .
+</em><br>
+<p>Yes the &quot;story of Mel&quot; is a classic; but not terrably relevant.
+<br>
+<p><em>&gt; Everyone knows that Real Programmers write in machine code or assembly, 
+</em><br>
+<em>&gt; their code is self modifying and is tightly coupled with the hardware 
+</em><br>
+<em>&gt; and maybe the OS.
+</em><br>
+<p>This idea of &quot;realness&quot; is a macho thing which has no relevance to
+<br>
+actual computer programming... Its like saying &quot;Real drivers drive
+<br>
+stick&quot;. 
+<br>
+<p><em>&gt; Modern programmers use higher-level languages such as C, LISP, etc. and 
+</em><br>
+<em>&gt; rely on the compiler to optimize the code. Modern operating systems 
+</em><br>
+<em>&gt; (including MSDOS?) have a memory manager to protect the code section of 
+</em><br>
+<em>&gt; a process from being modified.
+</em><br>
+<p>DOS will let you get away with anything while also providing services
+<br>
+for guest-oses as well as reasonably modern software... =)
+<br>
+<p>If you look at concurrent systems you see that you must eliminate
+<br>
+self-modifying code because process B might attempt to run code that has
+<br>
+been incompletely modified by process A. Additionally, modern processors
+<br>
+cache data so agressively that a tightly self-modifying program will not
+<br>
+function correctly as the instruction cache is never synchronized with
+<br>
+the data cache... 
+<br>
+<p>The obvious way around this is to implement a system that allows the
+<br>
+program to generate new code at runtime, this is then linked in to the
+<br>
+program binary by the OS in a safe way... Other high-level concepts,
+<br>
+such as &quot;functionals&quot; and &quot;macros&quot;, provide ways of generating code on
+<br>
+an as-needed basis. 
+<br>
+<p>When a code segment is nolonger needed, it is reclaimed by the OS or
+<br>
+compiler...
+<br>
+<p><em>&gt; When creating a seed AI, is it still wise to use a component-based
+</em><br>
+<em>&gt; architecture with an OS that provides memory protection?
+</em><br>
+<p>Well... the CPU provides memory protection, the OS manages it.
+<br>
+Alternatively, protection could be provided through the compiler with an
+<br>
+unprotected CPU, the OS performing the same function...
+<br>
+<p>If you could show me how component based software is written in LiNuKs,
+<br>
+I would be glad to evaluate it for you... But as far as I know, you
+<br>
+can't. 
+<br>
+<p>Windows seems to be better in a number of ways demonstrating that it is
+<br>
+not the memory protection but rather how the OS utilizes it. 
+<br>
+<p><em>&gt; Is top-down programming going to give a seed AI any advantage over a 
+</em><br>
+<em>&gt; bottom-up implementation?
+</em><br>
+<p>Please give an example of each....
+<br>
+Top-Down/Bottom-up generally refer to problem analysis techniques rather
+<br>
+than what the finished software looks like. 
+<br>
+<p>If you look at current implementation approaches you will probably
+<br>
+classify them as bottom-up... 
+<br>
+<p><em>&gt; So what if we don't understand it, so long as a few 
+</em><br>
+<em>&gt; people do and they don't all die at the same time, why shouldn't we get 
+</em><br>
+<em>&gt; the latest PC or supercomputer, start hacking in self-modifying 
+</em><br>
+<em>&gt; assembly for the first generation of seed AI?
+</em><br>
+<p>Not a bad idea!
+<br>
+If you are referring to the previous calculations of $43mil, we wouldn't
+<br>
+want to buy that machine even if we could afford it... 
+<br>
+<p>In a few months I expect AMD CPUs with 333mhz (DDR) Front side busses... 
+<br>
+We will be able to assemble a development box with that technology for
+<br>
+around $1000. This would be the best choice for an ameture developer...
+<br>
+<p>However, it is my beleif that one could make useful progress on AI with
+<br>
+just paper-and-pencil, and sucessfully demonstrate theories on an
+<br>
+antiquated 486. 
+<br>
+<p>My biggest problem is that I don't have an OS that I would consider even
+<br>
+remotely suitable for work in AI. 
+<br>
+<p><em>&gt; Not an easy task I know, but we have hardware emulators or virtual 
+</em><br>
+<em>&gt; machine software to help debug the seed during development.
+</em><br>
+<p>*shrug*... 
+<br>
+The hardware isn't the problem, nor is there any evidence that it is... 
+<br>
+<p><p><em>&gt; I know there are many correlations between self-modifying code and our
+</em><br>
+<em>&gt; biological DNA programming,
+</em><br>
+<p>=\
+<br>
+The DNA builds your brain then mostly shuts down....
+<br>
+It contains a meta code for intelligence. It doesn't program your mind
+<br>
+rather it specifies neurological features which behave in desirable
+<br>
+ways... 
+<br>
+<p>While an effort to reverse-engineer the brain through DNA may prove
+<br>
+fruitful and useful, it is still wrong to say that DNA plays an active
+<br>
+role in your intelligence or that it is self-modifying... Asside from
+<br>
+mutations replication, your DNA is fixed at birth and only self-modifies
+<br>
+in a random fassion during meiosis. 
+<br>
+<p>Furthermore, the changes in neural structure that take place througout
+<br>
+your life should be thought of in terms of training and adaptation
+<br>
+rather than self-modification which implies a higher level of
+<br>
+direction...
+<br>
+<p><p><pre>
+-- 
+DOS LIVES! MWAHAHAHAHA
+<a href="http://users.rcn.com/alangrimes/">http://users.rcn.com/alangrimes/</a>  &lt;my website.
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="2918.html">Remco Gerlich: "Re: &quot;Real&quot; programming and seed AI"</a>
+<li><strong>Previous message:</strong> <a href="2916.html">Simon McClenahan: "&quot;Real&quot; programming and seed AI"</a>
+<li><strong>In reply to:</strong> <a href="2916.html">Simon McClenahan: "&quot;Real&quot; programming and seed AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="2918.html">Remco Gerlich: "Re: &quot;Real&quot; programming and seed AI"</a>
+<li><strong>Reply:</strong> <a href="2918.html">Remco Gerlich: "Re: &quot;Real&quot; programming and seed AI"</a>
+<li><strong>Reply:</strong> <a href="2921.html">Dani Eder: "Re: &quot;Real&quot; programming and seed AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2917">[ date ]</a>
+<a href="index.html#2917">[ thread ]</a>
+<a href="subject.html#2917">[ subject ]</a>
+<a href="author.html#2917">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:37 MDT
+</em></small></p>
+</body>
+</html>

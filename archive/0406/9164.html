@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: About &quot;safe&quot; AGI architecture</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="About &quot;safe&quot; AGI architecture">
+<meta name="Date" content="2004-06-12">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>About &quot;safe&quot; AGI architecture</h1>
+<!-- received="Sat Jun 12 09:02:27 2004" -->
+<!-- isoreceived="20040612150227" -->
+<!-- sent="Sat, 12 Jun 2004 11:02:17 -0400" -->
+<!-- isosent="20040612150217" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="About &quot;safe&quot; AGI architecture" -->
+<!-- id="00b901c4508e$40f5b880$6501a8c0@ZOMBIETHUSTRA" -->
+<!-- charset="us-ascii" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=Re:%20About%20&quot;safe&quot;%20AGI%20architecture"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Sat Jun 12 2004 - 09:02:17 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="9165.html">Eliezer Yudkowsky: "Re: right of withdrawal"</a>
+<li><strong>Previous message:</strong> <a href="9163.html">Ben Goertzel: "(Post) Embodied AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="9179.html">Samantha Atkins: "Re: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Reply:</strong> <a href="9179.html">Samantha Atkins: "Re: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Maybe reply:</strong> <a href="9184.html">Harvey Newstrom: "Re: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Maybe reply:</strong> <a href="9191.html">Yan King Yin: "RE: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Maybe reply:</strong> <a href="9209.html">Yan King Yin: "Re: About &quot;safe&quot; AGI architecture"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#9164">[ date ]</a>
+<a href="index.html#9164">[ thread ]</a>
+<a href="subject.html#9164">[ subject ]</a>
+<a href="author.html#9164">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+This excerpt from a private email I sent someone last week, who was
+<br>
+asking me about FAI and Novamente and &quot;safety mechanisms&quot;, may be of
+<br>
+interst to some on this list...
+<br>
+<p>-- Ben G
+<br>
+<p><p>******
+<br>
+<p>To indicate why I'm not as worried about Novamente as you -- in the
+<br>
+future scenario in which my project succeeds and Novamente becomes a
+<br>
+clever infrahuman AI -- I'll describe briefly the way we achieve a high
+<br>
+degree of safety in the Novamente design.  I'm not sure how much
+<br>
+software background you have, so some of this may be opaque to you.
+<br>
+<p>The main point is, the Novamente design is layered.  
+<br>
+<p>There is a C++ layer, which implements the &quot;Novamente core&quot;, which is a
+<br>
+kind of special &quot;operating system&quot; handling scheduling of cognitive
+<br>
+operations, movement of data between disk and RAM, network
+<br>
+communications, and storage and retrieval of nodes and links in the
+<br>
+Novamente RAM-based knowledge repository called the AtomTable.
+<br>
+<p>One of the things implemented by this C++ layer is a type of node called
+<br>
+a SchemaNode, which wraps up a structure called a CombinatorTree.  A
+<br>
+CombinatorTree is effectively a special computer program, that is
+<br>
+interpreted by a special interpreter that is part of the Novamente core.
+<br>
+<p><p>So, the programs wrapped in SchemaNodes can control Novamente's
+<br>
+cognitive operations.  But there is no way for them to affect the
+<br>
+underlying C++ layer.  
+<br>
+<p>We can restrict Novamente's self-modification to automatic programming
+<br>
+of SchemaNodes.  This allows it to modify all its thought processes but
+<br>
+not its underlying architecture.  
+<br>
+<p>Of course, there's a possibility that a sufficiently smart NM system
+<br>
+could find some kind of hole in the separation between layers -- a
+<br>
+careful software bug.  This leads to the need for specialized narrow-AI
+<br>
+software focusing on program-correctness-checking, to verify that no
+<br>
+such bugs exist.  It also points to a problem in that the core is now
+<br>
+implemented in C++, which isn't really very compatible with formal
+<br>
+program verification technology.  Therefore, for safety purposes, we'll
+<br>
+need to reimplement the core in C# or Java.  Doing a Java
+<br>
+reimplementation when the time comes will not be extremely hard, since
+<br>
+using gcc (the compiler we use), Java and C++ are compiled to the same
+<br>
+sort of binaries.  My friends at supercompilers.com have unique
+<br>
+technology that allows formal verification of Java programs.
+<br>
+<p>Of course, there's also a possibility that an evil, calculating
+<br>
+Novamente AI could convince its programmers to modify its implementation
+<br>
+and break the layering structure.  Arguments such as &quot;My intelligence is
+<br>
+limited by this layering architecture ... Think how much more good I
+<br>
+could do for humanity, and how much more money I could make YOU, if you
+<br>
+let me achieve the intelligence leap that would come from modifying all
+<br>
+those dumb things you did in my core layer....&quot;   And naturally, at some
+<br>
+point it WILL be the case that the system figures out better ways to
+<br>
+modify its core ... But here is where we'll need to be very very very
+<br>
+careful....
+<br>
+<p>We are not at the level where the system can learn new cognitive
+<br>
+processes for itself yet, however.  For that, the system's procedure
+<br>
+learning component will need to be able to learn CombinatorTrees with
+<br>
+500-1000 nodes in them, and now we're off from that by a factor of
+<br>
+10-20.  This can't be solved merely by adding more machines because
+<br>
+there are exponentially scaling processes involved.  We have a bunch of
+<br>
+ideas for how to make the procedure learning to scale to the needed
+<br>
+size, and that's one of the many things we'll be working on during the
+<br>
+next couple years.
+<br>
+<p>Once procedure learning is working well enough that having the system
+<br>
+learn its own cognitive processes is a real possibility, then probably
+<br>
+we'll reimplement the core in Java or C# to take advantage of the formal
+<br>
+verification properties that these languages possess.
+<br>
+<p>Note that none of this is a design for AGI Friendliness.  Rather, it's a
+<br>
+design to allow you to safely play around with self-modifying code,
+<br>
+without letting the system modify itself severely enough that it can
+<br>
+cause damage in the world.  Which, in my view, will allow us to gather
+<br>
+the data we need to create real theories of AGI and FAI, as opposed to
+<br>
+the somewhat facile speculations that are being tossed around these days
+<br>
+by Eliezer, myself, and others who enjoy scientific speculation.
+<br>
+<p>Game theory, evolutionary theory, probability theory and so forth are
+<br>
+simply abstractions of simple types of social, physical and biological
+<br>
+systems that humans are familiar with.  I don't think they will model
+<br>
+post-singularity situations very well.  I bet that playing with
+<br>
+infrahuman AGI's will lead us to alternative theories that are at least
+<br>
+a little more informative, albeit still not totally insightful relative
+<br>
+to the vast unknowability that is the singularity
+<br>
+<p>-- Ben  
+<br>
+<p>*********
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="9165.html">Eliezer Yudkowsky: "Re: right of withdrawal"</a>
+<li><strong>Previous message:</strong> <a href="9163.html">Ben Goertzel: "(Post) Embodied AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="9179.html">Samantha Atkins: "Re: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Reply:</strong> <a href="9179.html">Samantha Atkins: "Re: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Maybe reply:</strong> <a href="9184.html">Harvey Newstrom: "Re: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Maybe reply:</strong> <a href="9191.html">Yan King Yin: "RE: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Maybe reply:</strong> <a href="9209.html">Yan King Yin: "Re: About &quot;safe&quot; AGI architecture"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#9164">[ date ]</a>
+<a href="index.html#9164">[ thread ]</a>
+<a href="subject.html#9164">[ subject ]</a>
+<a href="author.html#9164">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:47 MDT
+</em></small></p>
+</body>
+</html>

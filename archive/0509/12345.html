@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: CAS, symbolic and subsymbolic AI, etc.</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="CAS, symbolic and subsymbolic AI, etc.">
+<meta name="Date" content="2005-09-13">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>CAS, symbolic and subsymbolic AI, etc.</h1>
+<!-- received="Tue Sep 13 10:19:47 2005" -->
+<!-- isoreceived="20050913161947" -->
+<!-- sent="Tue, 13 Sep 2005 12:19:42 -0400" -->
+<!-- isosent="20050913161942" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="CAS, symbolic and subsymbolic AI, etc." -->
+<!-- id="JNEIJCJJHIEAILJBFHILOEJEGCAA.ben@goertzel.org" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="4326E7D0.4030006@lightlink.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=Re:%20CAS,%20symbolic%20and%20subsymbolic%20AI,%20etc."><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Tue Sep 13 2005 - 10:19:42 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="12346.html">H C: "Re: Logics at multiple levels of abstraction"</a>
+<li><strong>Previous message:</strong> <a href="12344.html">Phil Goetz: "Re: Logics at multiple levels of abstraction"</a>
+<li><strong>In reply to:</strong> <a href="12343.html">Richard Loosemore: "Re: Non-black non-ravens etc."</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12347.html">Michael Wilson: "Re: Non-black non-ravens etc."</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12345">[ date ]</a>
+<a href="index.html#12345">[ thread ]</a>
+<a href="subject.html#12345">[ subject ]</a>
+<a href="author.html#12345">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Richard wrote:
+<br>
+<p><em>&gt; The (Neural Net) symbol engine generates these distributed patterns that 
+</em><br>
+<em>&gt; correspond to symbols.  The logic engine uses these to reason with.  Now 
+</em><br>
+<em>&gt; imagine that the logic engine does something (I am not sure what) to 
+</em><br>
+<em>&gt; cause there to be a need for a new symbol.  This would be difficult or 
+</em><br>
+<em>&gt; impossible, because there is no way for you to impose a new symbol on 
+</em><br>
+<em>&gt; the symbol engine; the symbols emerge, so to create a new one you have 
+</em><br>
+<em>&gt; to set up the right pattern of connections across a big chunk of 
+</em><br>
+<em>&gt; network, you can't just write another symbol to memory the way you would 
+</em><br>
+<em>&gt; in a conventional system.  The logic engine doesn't know about neural 
+</em><br>
+<em>&gt; signals, only high level symbols.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; This question hinges on my suggestion that a logic engine would somehow 
+</em><br>
+<em>&gt; need to create or otherwise modify the symbols themselves.  So tell me 
+</em><br>
+<em>&gt; folks:  can we guarantee that the symbol engine can get along without 
+</em><br>
+<em>&gt; ever touching any symbols?  You know more about this than I do.  Is 
+</em><br>
+<em>&gt; there going to be a firewall between the logic engine and whatever 
+</em><br>
+<em>&gt; creates and maintains symbols?  You can look but you can't touch, so to 
+</em><br>
+<em>&gt; speak?  This all speaks to the question of what exactly such a built-in 
+</em><br>
+<em>&gt; logic engine would be for, exactly?
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; I could stand to be enlightened on this point.  In my world, I wouldn't 
+</em><br>
+<em>&gt; try to connect them, so I have not yet considered the problem.
+</em><br>
+<p>You seem to be using the word &quot;symbol&quot; in a strange way, because it's
+<br>
+not a hard problem for a logic engine to create new symbols according to
+<br>
+the ordinary usage of that word....  But I'll try to answer the spirit of
+<br>
+your question in spite of not fully understanding your use of terminology.
+<br>
+<p>I'll describe what would happen if we coupled Novamente to a third-party
+<br>
+neural-net vision-processing engine, a scenario that I've thought about
+<br>
+before, though there are no immediate plans to do so.
+<br>
+<p>Let's assume that the input neurons of the vision engine match up to 
+<br>
+pixels on a camera, and that the output neurons of the vision engine
+<br>
+are calculated from these inputs.
+<br>
+<p>The output neurons of the vision engine then map into certain node
+<br>
+types in Novamente, call them VisionNodes (such things don't exist
+<br>
+in the current Novamente).  Novamente records relationships of the form
+<br>
+&quot;The output of VisionNode n at time T is .37&quot; and so forth.  It then
+<br>
+has the job of recognizing patterns among these relationships, using
+<br>
+all the tools at its disposal, including
+<br>
+<p>-- probabilistic reasoning (in both fast, lightweight and sophisticated,
+<br>
+heavyweight variants)
+<br>
+-- stochastic frequent itemset mining
+<br>
+-- evolutionary learning on program-trees representing complex predicates
+<br>
+<p>These patterns are embodied as nodes and links in Novamente's knowledge
+<br>
+base.  Further patterns may be learned connecting the relationships 
+<br>
+abstracted from visual input to relationships learned via other means,
+<br>
+say linguistic, acoustic, or imported from databases.
+<br>
+<p>Now, consider for instance a pattern corresponding to the concept of
+<br>
+a &quot;chair.&quot;  This may be represented by a single PredicateNode within
+<br>
+Novamente.  But when this PredicateNode is activated, this activation
+<br>
+causes other nodes and links within Novamente to be activated as well,
+<br>
+via multiple iterations of Novamente's attention allocation dynamics.
+<br>
+Thus, there is an &quot;attractor pattern&quot; corresponding to &quot;chair&quot; in
+<br>
+Novamente, as well as a specific node corresponding to &quot;chair.&quot;
+<br>
+<p>Novamente's wired-in probabilistic reasoning system allows it to 
+<br>
+reason in a probabilistically correct way (albeit with some errors
+<br>
+due to heuristics) about the PredicateNode embodying the abstracted
+<br>
+concept of &quot;chair.&quot;  But, the dynamics of attractors in Novamente
+<br>
+will also lead the &quot;chair&quot; attractor to interact with other attractors
+<br>
+in a way that roughly follows the rules of probability theory,
+<br>
+albeit with a lesser accuracy.  
+<br>
+<p>The human brain seems to have this higher-level &quot;emergent logic&quot;
+<br>
+coming out of interactions between attractor patterns.  It doesn't
+<br>
+have precise probabilistic logic wired in at the lower level.  On
+<br>
+the other hand, what it does apparently have is Hebbian learning of
+<br>
+some form wired in at the lower level, and it's not hard to see
+<br>
+(and I've argued in detail elsewhere) that Hebbian learning is 
+<br>
+basically a noisy, slow way of accomplishing probabilistic inference.
+<br>
+<p>So I would say the brain does have these two levels just like
+<br>
+Novamente.  The brain has lower-level reasoning consisting of
+<br>
+Hebbian Learning and higher-level reasoning that is emergent
+<br>
+from attractor patterns; whereas Novamente has lower-level
+<br>
+reasoning consistent of PTL logic and higher-level reasoning
+<br>
+that is emergent from attractor patterns.
+<br>
+<p>Both in the brain and in Novamente, the relationships between these
+<br>
+two different levels of reasoning is quite subtle.
+<br>
+<p>Regarding the interaction with the vision system, what happens if
+<br>
+Novamente's understanding of the scene around it isn't good enough?
+<br>
+Well it can try harder to recognize patterns in the output of the
+<br>
+vision engine.  Or if it wants it can manipulate the parameters of
+<br>
+the vision engine to try to improve the output to cause there to be
+<br>
+better patterns in it.  
+<br>
+<p>Finally, the vision system may need to access long-term memory to 
+<br>
+help it recognize things better.  In this case, there needs to 
+<br>
+be some feedback, wherein output patterns are sent to Novamente, 
+<br>
+then Novamente processes these, and then Novamente stimulates
+<br>
+the VisionNodes mentioned above (or other separate VisionNodes)
+<br>
+with &quot;visual memory&quot; of similar things it's seen before.  The
+<br>
+neural net vision system may then use this visual memory to guide
+<br>
+its processing.
+<br>
+<p>Of course, in this email I have only outlined a few aspects of
+<br>
+mental processing, which is a very complex matter, but perhaps
+<br>
+I've addressed some of the issues that were concerning you in
+<br>
+your e-mail.
+<br>
+<p><p><p>-- Ben  
+<br>
+<p>&nbsp;
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="12346.html">H C: "Re: Logics at multiple levels of abstraction"</a>
+<li><strong>Previous message:</strong> <a href="12344.html">Phil Goetz: "Re: Logics at multiple levels of abstraction"</a>
+<li><strong>In reply to:</strong> <a href="12343.html">Richard Loosemore: "Re: Non-black non-ravens etc."</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12347.html">Michael Wilson: "Re: Non-black non-ravens etc."</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12345">[ date ]</a>
+<a href="index.html#12345">[ thread ]</a>
+<a href="subject.html#12345">[ subject ]</a>
+<a href="author.html#12345">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:52 MDT
+</em></small></p>
+</body>
+</html>

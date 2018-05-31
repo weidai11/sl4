@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Webmind Solutions - Was: G. Chaitin on AI</title>
+<meta name="Author" content="Michael Roy Ames (michaelroyames@hotmail.com)">
+<meta name="Subject" content="Webmind Solutions - Was: G. Chaitin on AI">
+<meta name="Date" content="2002-03-03">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Webmind Solutions - Was: G. Chaitin on AI</h1>
+<!-- received="Sun Mar 03 12:34:44 2002" -->
+<!-- isoreceived="20020303193444" -->
+<!-- sent="Sun, 3 Mar 2002 09:47:22 -0800" -->
+<!-- isosent="20020303174722" -->
+<!-- name="Michael Roy Ames" -->
+<!-- email="michaelroyames@hotmail.com" -->
+<!-- subject="Webmind Solutions - Was: G. Chaitin on AI" -->
+<!-- id="OE52W8CHjhezylN8IgE0001af71@hotmail.com" -->
+<!-- charset="iso-8859-1" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Michael Roy Ames (<a href="mailto:michaelroyames@hotmail.com?Subject=Re:%20Webmind%20Solutions%20-%20Was:%20G.%20Chaitin%20on%20AI"><em>michaelroyames@hotmail.com</em></a>)<br>
+<strong>Date:</strong> Sun Mar 03 2002 - 10:47:22 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3090.html">Ben Goertzel: "RE: Webmind Solutions - Was: G. Chaitin on AI"</a>
+<li><strong>Previous message:</strong> <a href="3088.html">Eliezer S. Yudkowsky: "The Revolution Refuses To Slow Down And Explain Itself"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3090.html">Ben Goertzel: "RE: Webmind Solutions - Was: G. Chaitin on AI"</a>
+<li><strong>Reply:</strong> <a href="3090.html">Ben Goertzel: "RE: Webmind Solutions - Was: G. Chaitin on AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3089">[ date ]</a>
+<a href="index.html#3089">[ thread ]</a>
+<a href="subject.html#3089">[ subject ]</a>
+<a href="author.html#3089">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Ben,
+<br>
+<p>Your recounting of experiences with Webmind makes for fascinating reading.
+<br>
+I have many questions - but for now I'll limit myself to two.
+<br>
+You wrote:
+<br>
+<p><em>&gt;
+</em><br>
+<em>&gt; Dealing with distributed processing so early in our project was a
+</em><br>
+<em>&gt; significant mistake, because it took a lot of effort, and a distributed AI
+</em><br>
+<em>&gt; system is vastly harder to debug than an isolated one.  There are no real
+</em><br>
+<em>&gt; testing tools that handle distributed nondeterministic self-organizing
+</em><br>
+<em>&gt; systems.  Testing tools for distributed systems that exist at present are
+</em><br>
+<em>&gt; *very* simplistic and limited, mostly focused on application server
+</em><br>
+<em>&gt; setups.
+</em><br>
+<p>I have thought on this problem a little - the problem of how to
+<br>
+monitor/track/debug a process distributed across multiple independent
+<br>
+machines.  Most of my 'implementable' ideas (as apposed to 'crazy' ideas)
+<br>
+have been based on the 'transaction' paradigm.  Processes churn away in
+<br>
+multiple threads, multiple machines, at different speeds, and when they have
+<br>
+a result of some kind, they 'commit' that result to a central location.  At
+<br>
+this point the result becomes visible to any other process that cares to
+<br>
+look, and also to the operating console - or debug module - whatever it is
+<br>
+you want to call it.
+<br>
+<p>Your reply didn't say how you solved this problem... did you?  Or haven't
+<br>
+you got there yet?
+<br>
+<p><em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Consider two scenarios:
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; A) You have X amount of RAM on one machine, with P processors on
+</em><br>
+<em>&gt; that one machine.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; B) You have the P processors and X amount of RAM spread among K
+</em><br>
+<em>&gt; machines, where P/K is small (commonly 2-4)...
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Our experience was that the speed of configuration B was *after copious
+</em><br>
+<em>&gt; optimization* about 1/5 that of configuration A.  This is not because of
+</em><br>
+<em>&gt; network latency, it's because of all the software stuff you have to do to
+</em><br>
+<em>&gt; make your system distributed-processing-friendly. It's possible this could
+</em><br>
+<em>&gt; be improved to 1/3 or so.  We did a lot of work on this in Java but also
+</em><br>
+<em>&gt; some prototyping in C.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Also, the effective amount of information you can store in configuration B
+</em><br>
+<em>&gt; is about 2/3 that in configuration A, because of the need to repeatedly
+</em><br>
+<em>&gt; cache information to achieve reasonable time-efficiency.
+</em><br>
+<em>&gt;
+</em><br>
+<p>This jives with both my own experience building
+<br>
+boring-old-business-applications, also with my study of other's software
+<br>
+solutions to difficult problems, and with personal experimentation.
+<br>
+<p>My current guestimate as to how CPU cycles will be allocated to run a
+<br>
+General Intelligence is:
+<br>
+<p>40% - What ve's thinking about
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Keeping track of Data - Basically: Database services
+<br>
+<p>40% - How ve's thinking about it
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Keeping track of Process - Messaging/IPC, O/S, Load Balancing,
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clustering/Parallel-Processing
+<br>
+<p>20% - Actual thinking
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &quot;AI&quot; algorithms - Sensory Modalities, Concept Manipulation, Goals,
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Predictions, Decisions, Actions.
+<br>
+<p>It might seem strange/inefficient/just-plain-nuts to expend 5 units of
+<br>
+'effort' in order to make 1 unit of 'progress'... but I cannot see any way
+<br>
+around it.  &lt;---(Super Geniuses please insert 'Way Around It' here)
+<br>
+<p>Ben, how closely does this correspond with your experience so far?
+<br>
+<p>Michael Roy Ames.
+<br>
+Ottawa, Canada - <a href="mailto:michaelroyames@hotmail.com?Subject=Re:%20Webmind%20Solutions%20-%20Was:%20G.%20Chaitin%20on%20AI">michaelroyames@hotmail.com</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3090.html">Ben Goertzel: "RE: Webmind Solutions - Was: G. Chaitin on AI"</a>
+<li><strong>Previous message:</strong> <a href="3088.html">Eliezer S. Yudkowsky: "The Revolution Refuses To Slow Down And Explain Itself"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3090.html">Ben Goertzel: "RE: Webmind Solutions - Was: G. Chaitin on AI"</a>
+<li><strong>Reply:</strong> <a href="3090.html">Ben Goertzel: "RE: Webmind Solutions - Was: G. Chaitin on AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3089">[ date ]</a>
+<a href="index.html#3089">[ thread ]</a>
+<a href="subject.html#3089">[ subject ]</a>
+<a href="author.html#3089">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:37 MDT
+</em></small></p>
+</body>
+</html>

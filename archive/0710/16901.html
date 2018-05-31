@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Ethical experimentation on AIs</title>
+<meta name="Author" content="Matt Mahoney (matmahoney@yahoo.com)">
+<meta name="Subject" content="Re: Ethical experimentation on AIs">
+<meta name="Date" content="2007-10-21">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Ethical experimentation on AIs</h1>
+<!-- received="Sun Oct 21 11:03:29 2007" -->
+<!-- isoreceived="20071021170329" -->
+<!-- sent="Sun, 21 Oct 2007 10:01:57 -0700 (PDT)" -->
+<!-- isosent="20071021170157" -->
+<!-- name="Matt Mahoney" -->
+<!-- email="matmahoney@yahoo.com" -->
+<!-- subject="Re: Ethical experimentation on AIs" -->
+<!-- id="867335.41036.qm@web51907.mail.re2.yahoo.com" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="471ABFF7.40108@mydruthers.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Matt Mahoney (<a href="mailto:matmahoney@yahoo.com?Subject=Re:%20Ethical%20experimentation%20on%20AIs"><em>matmahoney@yahoo.com</em></a>)<br>
+<strong>Date:</strong> Sun Oct 21 2007 - 11:01:57 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="16902.html">Rolf Nelson: "Re: Ethical experimentation on AIs"</a>
+<li><strong>Previous message:</strong> <a href="16900.html">Bryan Bishop: "Re: The Meaning That Immortality Gives to Life"</a>
+<li><strong>In reply to:</strong> <a href="16889.html">Chris Hibbert: "Re: Ethical experimentation on AIs"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="16903.html">Chris Hibbert: "Re: Ethical experimentation on AIs"</a>
+<li><strong>Reply:</strong> <a href="16903.html">Chris Hibbert: "Re: Ethical experimentation on AIs"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#16901">[ date ]</a>
+<a href="index.html#16901">[ thread ]</a>
+<a href="subject.html#16901">[ subject ]</a>
+<a href="author.html#16901">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+--- Chris Hibbert &lt;<a href="mailto:hibbert@mydruthers.com?Subject=Re:%20Ethical%20experimentation%20on%20AIs">hibbert@mydruthers.com</a>&gt; wrote:
+<br>
+<p><em>&gt; Evolution has little to do with what we &quot;ought&quot; to do.
+</em><br>
+<p>Yes it does.  Ethics is a function of your upbringing.  Cultures that teach
+<br>
+respect for other humans in your cultural group are more successful than those
+<br>
+that don't.
+<br>
+<p><em>&gt; My theory has long been that self-awareness is the level that I would 
+</em><br>
+<em>&gt; demand from any creature before granting it an equal &quot;right to live&quot;. 
+</em><br>
+<em>&gt; Others seem to rely on ability to feel pain, or something even less.
+</em><br>
+<p>How do you test for self awareness?
+<br>
+<p><em>&gt; &gt; Also, do you presume there is a test to distinguish a machine that can
+</em><br>
+<em>&gt; feel
+</em><br>
+<em>&gt; &gt; pain from one that only claims to feel pain?
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; If the claim seems real, and not recorded, I'm willing to count that. 
+</em><br>
+<p>What makes a claim seem real?  If you can trace the neural pathways in my
+<br>
+brain when I say &quot;ouch&quot; and conclude that my response was computable, is the
+<br>
+pain still real?  If a program says &quot;ouch&quot; but the code is too complex for you
+<br>
+to understand, is its pain real?
+<br>
+<p>If a program changes its behavior to avoid a negative reinforcement signal, as
+<br>
+the program below does, does it experience pain?  If not, then what test does
+<br>
+this program fail?
+<br>
+<p>/* This program simulates a programmable 2 input logic gate
+<br>
+that is trained by reinforcement learning.  It can be trained
+<br>
+to implement any 2 input function (AND, OR, XOR, NAND, etc). */
+<br>
+#include &lt;stdio.h&gt;
+<br>
+#include &lt;stdlib.h&gt;
+<br>
+#include &lt;math.h&gt;
+<br>
+int main() {
+<br>
+&nbsp;&nbsp;static double mem[4]={0,0,0,0};  // tendency to output 1
+<br>
+&nbsp;&nbsp;while (1) {
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int input;  // 0..3 meaning 00, 01, 10, 11
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int output; // 0 or 1
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;double reward;  // reinforcement signal
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf(&quot;Enter input (00, 01, 10, or 11)? &quot;);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;scanf(&quot;%d&quot;, &amp;input);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;input-=8*(input&gt;=10);  // 00, 01, 10, 11 --&gt; 0, 1, 2, 3
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (input&gt;=0 &amp;&amp; input&lt;=3) {
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output=RAND_MAX &gt; rand()*(1+exp(-mem[input]));
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(&quot;Output = %d. &quot;, output);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(&quot;Enter reward (positive) or penalty (negative) &quot;);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scanf(&quot;%lf&quot;, &amp;reward);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mem[input]+=reward*(2*output-1);  // learn!
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (reward&gt;3) printf(&quot;Oh yes!!!\n&quot;);  // act human :-)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if (reward&gt;0.5) printf(&quot;aah!\n&quot;);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if (reward&gt;-0.5) printf(&quot;OK\n&quot;);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if (reward&gt;-1.5) printf(&quot;Oh!\n&quot;);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if (reward&gt;-3) printf(&quot;Ouch!\n&quot;);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if (reward&gt;-10) printf(&quot;AAARGH!!!\n&quot;);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else printf(&quot;Fatal error\n&quot;), exit(1);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}
+<br>
+&nbsp;&nbsp;}
+<br>
+}
+<br>
+<p><p>-- Matt Mahoney, <a href="mailto:matmahoney@yahoo.com?Subject=Re:%20Ethical%20experimentation%20on%20AIs">matmahoney@yahoo.com</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="16902.html">Rolf Nelson: "Re: Ethical experimentation on AIs"</a>
+<li><strong>Previous message:</strong> <a href="16900.html">Bryan Bishop: "Re: The Meaning That Immortality Gives to Life"</a>
+<li><strong>In reply to:</strong> <a href="16889.html">Chris Hibbert: "Re: Ethical experimentation on AIs"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="16903.html">Chris Hibbert: "Re: Ethical experimentation on AIs"</a>
+<li><strong>Reply:</strong> <a href="16903.html">Chris Hibbert: "Re: Ethical experimentation on AIs"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#16901">[ date ]</a>
+<a href="index.html#16901">[ thread ]</a>
+<a href="subject.html#16901">[ subject ]</a>
+<a href="author.html#16901">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:58 MDT
+</em></small></p>
+</body>
+</html>

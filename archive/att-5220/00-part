@@ -1,0 +1,31 @@
+On Wed, 2002-08-28 at 00:57, Ben Goertzel wrote:
+> I'm not so sure there isn't a clear relationship between processor speed and
+> narrow-AI efficiency, however.
+> 
+> AI chess-playing is an example. I think the quality of chess programs'
+> gameplay has pretty much increased right along with processor speed.
+> Certainly the algorithms involved in these programs (alpha-beta pruning with
+> special evaluation heuristics) are simple and are able to make direct use of
+> increased processor speed.
+
+I think the increase in performance in chess programs is estimated to be
+50 ELO points per processor speed doubling, so, yes, for now, it's a
+direct improvement.  Improvement of this kind has to drop off at some
+point, since there is a diminishing rate of return for search depth. 
+Note, though, that algorithmic improvements tend to come at least as
+quick as hardware.  (As a side note, i think you are slightly
+oversimplifying the algorithms involved.  Noone really uses "standard"
+alpha-beta any more, but derivations of it (NegaScout, MTD(f)). 
+Selective search extensions play a very important part (heuristics for
+when to extend can be tricky).  Move ordering is also very important.
+Forward pruning techniques are also used by pretty much every program.
+Also add transposition table replacement heuristics, time management
+heuristics, book learning, positional lerning.  Still relatively simple,
+but alpha-beta plus evaluation heuristics at 20 GHz won't compete with
+Fritz at 2GHz)
+alejandro
+
+
+
+
+

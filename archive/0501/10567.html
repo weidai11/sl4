@@ -1,0 +1,563 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=WINDOWS-1252">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: My attempt at a general technical definition of 'Friendliness'</title>
+<meta name="Author" content="Harvey Newstrom (mail@HarveyNewstrom.com)">
+<meta name="Subject" content="Re: My attempt at a general technical definition of 'Friendliness'">
+<meta name="Date" content="2005-01-21">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: My attempt at a general technical definition of 'Friendliness'</h1>
+<!-- received="Fri Jan 21 06:29:24 2005" -->
+<!-- isoreceived="20050121132924" -->
+<!-- sent="Fri, 21 Jan 2005 08:28:56 -0500" -->
+<!-- isosent="20050121132856" -->
+<!-- name="Harvey Newstrom" -->
+<!-- email="mail@HarveyNewstrom.com" -->
+<!-- subject="Re: My attempt at a general technical definition of 'Friendliness'" -->
+<!-- id="666BA5D8-6BB0-11D9-82FB-0030654881D2@HarveyNewstrom.com" -->
+<!-- charset="WINDOWS-1252" -->
+<!-- inreplyto="20050120032801.53686.qmail@web20227.mail.yahoo.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Harvey Newstrom (<a href="mailto:mail@HarveyNewstrom.com?Subject=Re:%20My%20attempt%20at%20a%20general%20technical%20definition%20of%20'Friendliness'"><em>mail@HarveyNewstrom.com</em></a>)<br>
+<strong>Date:</strong> Fri Jan 21 2005 - 06:28:56 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="10568.html">Eliezer Yudkowsky: "Re: My attempt at a general technical definition of 'Friendliness'"</a>
+<li><strong>Previous message:</strong> <a href="10566.html">Thomas Buckner: "Re: Bad Bayesian - no biscuit! (was A New Year's gift for Bayesians)"</a>
+<li><strong>In reply to:</strong> <a href="10557.html">Marc Geddes: "My attempt at a general technical definition of 'Friendliness'"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="10568.html">Eliezer Yudkowsky: "Re: My attempt at a general technical definition of 'Friendliness'"</a>
+<li><strong>Reply:</strong> <a href="10568.html">Eliezer Yudkowsky: "Re: My attempt at a general technical definition of 'Friendliness'"</a>
+<li><strong>Reply:</strong> <a href="10570.html">Thomas Buckner: "Re: My attempt at a general technical definition of 'Friendliness'"</a>
+<li><strong>Reply:</strong> <a href="10574.html">Marc Geddes: "Re: My attempt at a general technical definition of 'Friendliness'"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#10567">[ date ]</a>
+<a href="index.html#10567">[ thread ]</a>
+<a href="subject.html#10567">[ subject ]</a>
+<a href="author.html#10567">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Sorry to wade in here with such bluntness.  But I actually work in an 
+<br>
+engineering field that defines vague english words with rigorous 
+<br>
+technical definitions to describe emergent properties of systems not 
+<br>
+associated with any individual component design.  I really use these 
+<br>
+definitions to develop and implement technical security architectures.  
+<br>
+At some point, the words have to stop being vague english words and 
+<br>
+must be given rigorous technical definitions.  These definitions must 
+<br>
+be sound if the concepts are to be used to actually engineer some 
+<br>
+design.  I am afraid that this &quot;definition&quot; totally fails to work as a 
+<br>
+definition.
+<br>
+<p>In security, the field is full of nebulous english words that are like 
+<br>
+&quot;friendliness&quot;.  They describe attributes or aspects of a system that 
+<br>
+are not isolated to a single function or object within the 
+<br>
+architecture.  They are emergent properties that we want to result.  
+<br>
+&quot;Friendliness&quot; is no more difficult or technical or nebulous than what 
+<br>
+I work with every day.  Real engineering methods and techniques will 
+<br>
+work here as anywhere.  I see no reason to resort to imprecise 
+<br>
+definitions, claims of incomputability, or other excuses to explain why 
+<br>
+no clear definition can be achieved.
+<br>
+<p>Examples of similar types of hard-to-define terms in my field would 
+<br>
+include:
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SECURITY = CONFIDENTIALITY + INTEGRITY + AVAILABILITY, where:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONFIDENTIALITY = Access + Privacy, where:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Access = access controlability + identification + authentication + 
+<br>
+authorization + custody chain
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Privacy = consent + anonymity
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INTEGRITY = Accountability + Assurance + Capability + Safety, where:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accountability = authenticity + traceability + non-repudiation + 
+<br>
+recordkeeping
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assurance = legality + licensing + compliance + auditability
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Capability = relevance + suitability + correctness + accuracy + 
+<br>
+effectiveness + efficiency + cost
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Safety = equipment safety + environmental safety + interface safety
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AVAILABILITY = Usability + Reliability + Maintainability + 
+<br>
+Compatibility, where:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Usability = interconnectivity + accessibility + performance + 
+<br>
+productivity + consistency + predictability + understandability + 
+<br>
+learnability + operability + localization + persistence
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reliability = continuity + maturity + fault tolerance + conciseness 
+<br>
++ openness + survivability + recoverability
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maintainability = scalability + changeability + extensibility + 
+<br>
+analyzability + stability + testability + modularity + configurability 
+<br>
++ customizability
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compatibility = interoperability + integration + portability + 
+<br>
+reusability + replaceability + adaptability + installability + 
+<br>
+conformance
+<br>
+<p>As you can see, all of these are plain english words that describe 
+<br>
+happy/fluffy ideas of &quot;good things&quot;. But they have all been given 
+<br>
+precise and rigorous definitions in the engineering fields.  They can 
+<br>
+be calculated with mathematical formulas and statistics.  They can be 
+<br>
+audited.  They can be bought and sold as measureable commodities.  My 
+<br>
+career is based on meeting these terms in ways that can be 
+<br>
+mathematically, legally, and realisitically be proven.  &quot;Friendliness&quot; 
+<br>
+must be similarly defined to a rigorous or precise level.  Otherwise, 
+<br>
+it can never be approached with real technology or engineering.
+<br>
+<p><em>&gt; * Proposition: A mind is a utility function.  The
+</em><br>
+<em>&gt; universe itself could be interpreted as a kind of mind
+</em><br>
+<em>&gt; in the limit that it formed a super-intelligence at an
+</em><br>
+<em>&gt; Omega Point.  Therefore any concept within reality
+</em><br>
+<em>&gt; could be interpreted as a 'utility function' within
+</em><br>
+<em>&gt; the universal mind.
+</em><br>
+<p>These are very controversial and non-obvious propositions on which to 
+<br>
+base your definitions.  Is friendliness really dependent on the 
+<br>
+universe being a &quot;mind&quot;?  If I dispute that the universe is a &quot;mind&quot;, 
+<br>
+does that mean friendliness doesn't exist?  Your evidence that all 
+<br>
+concepts in reality can be coded as utility functions within an AI is 
+<br>
+based on the fact that the universe is a mind which codes all reality 
+<br>
+at the omega point?  This is more of a religious faith-based assumption 
+<br>
+than a basis for an engineering design of an AI.
+<br>
+<p><em>&gt; The 'Omega Point' condition requires that the rate of
+</em><br>
+<em>&gt; information processing (computation) within the
+</em><br>
+<em>&gt; universe approaches infinity as time approaches the
+</em><br>
+<em>&gt; end.  The idea is that a concept is no different to
+</em><br>
+<em>&gt; the computational function existing in the mind of a
+</em><br>
+<em>&gt; super-intelligence which generates a list of all
+</em><br>
+<em>&gt; things possessing the attribute, in the limit that the
+</em><br>
+<em>&gt; Omega Point condition is approached.
+</em><br>
+<p>Besides requiring the universe to be a mind, your definitions seem to 
+<br>
+require a Tipler-type omega point to occur for your definition.  Since 
+<br>
+this is unknown and unproven at this point, it sounds like your 
+<br>
+definition must be unknown or unproven for now as well.  Since the 
+<br>
+Omega Point won't occur until the end of the universe, it is unclear 
+<br>
+that your explanation applies to anything today.  Can't you base your 
+<br>
+examples on physics existing now?
+<br>
+<p><em>&gt; Example:  The concept 'Beauty' is defined as being
+</em><br>
+<em>&gt; equivalent to the mathematical function which
+</em><br>
+<em>&gt; generates a list of all beautiful things.
+</em><br>
+<p>This is a circular definition.  You defined beauty by using the word 
+<br>
+&quot;beautiful&quot; in the definition.
+<br>
+<p><em>&gt; This is an
+</em><br>
+<em>&gt; uncomputable function, since beauty appears to a
+</em><br>
+<em>&gt; prospective attribute: the function to recognize or
+</em><br>
+<em>&gt; generate beautiful things cannot be finitely
+</em><br>
+<em>&gt; specified.
+</em><br>
+<p>I don't like where this is going.  We can't develop coherent plans for 
+<br>
+achieving something we can't define.  I doubt (and hope) that 
+<br>
+&quot;friendiness&quot; is not such a function.  Otherwise, it boils down to 
+<br>
+&quot;friendliness is in the eye of the beholder&quot;.  You end up saying that 
+<br>
+people will call the system friendly if they like it and unfriendly if 
+<br>
+they don't.  You can't engineer to such a spec, and it ends up being a 
+<br>
+democracy with people voting on what they want for friendliness.  If 
+<br>
+you can't define it precisely, how can it be a requirement?  How do you 
+<br>
+know it even exists, if you don't know what it is?  This isn't some 
+<br>
+observation that we haven't pinned down an explanation for yet.  This 
+<br>
+is our instructions and requirements to people trying to build AI 
+<br>
+systems.  How can our request be vague and ill-defined, but we'll know 
+<br>
+it when we see it?
+<br>
+<p><em>&gt; But if the Omega Point condition holds for our
+</em><br>
+<em>&gt; universe, then the function can be defined to be the
+</em><br>
+<em>&gt; one that a super-intelligence (Universal Mind) would
+</em><br>
+<em>&gt; hold, in the limit that the rate of information
+</em><br>
+<em>&gt; processing was approaching infinity (Omega Point).  So
+</em><br>
+<em>&gt; all concepts can be thought of as 'utility functions'
+</em><br>
+<em>&gt; in the universal mind.
+</em><br>
+<p>Again, circular logic.  You define the universe as mind.  Everything is 
+<br>
+in the universe (which equals mind, which equals universal mind).  
+<br>
+Therefore everything is in this universal mind.  Therefore all concepts 
+<br>
+are held in this mind.  Therefore a concept is what this universal mind 
+<br>
+holds.  There are no definitions here.  You are stating circular 
+<br>
+relationships and tautologies that do not distinguish between items 
+<br>
+within the definition and items without it.
+<br>
+<p>At the point where the information processing approaches infinity, you 
+<br>
+assume it holds everything.  Thus, what you say for concepts would 
+<br>
+apply to anything and everything else I might want to apply it to.  
+<br>
+There is nothing that wouldn't be defined in such a definition of 
+<br>
+infinity.
+<br>
+<p>(On an unrelated tangent, I reject the notion that infinity = 
+<br>
+everything.  A number-line of intergers from 1, 2, 3....infinity is 
+<br>
+infinite, but it does not encode any information besides sequential 
+<br>
+numbers.  Even though it is an infinite string of digits, there are no 
+<br>
+binary pictures, words, messages, concepts or information encoded in 
+<br>
+there.  This infinite sequence if relatively empty.  Infinite 
+<br>
+processing may or may not contain much of anything.  I have a similar 
+<br>
+objection to Many Worlds.  Even if their are infinite dimensions, it 
+<br>
+does not mean that all conceivable possibilities must exist.)
+<br>
+<p><em>&gt; * Propositions:  All concepts in reality can be
+</em><br>
+<em>&gt; interpreted as utility functions.  'Friendliness' is a
+</em><br>
+<em>&gt; concept; therefore Friendliness is a utility function.
+</em><br>
+<p>This is not a proposition.  You are labeling something with a name you 
+<br>
+want to call it.  This is not the same thing as defining it or 
+<br>
+explaining it.  A label is not a testable theory.  There is no validity 
+<br>
+or truth test as to whether these things are what you say or not.  You 
+<br>
+merely coined a term.  Besides using circular logic to reach this 
+<br>
+point, you still haven't defined it.  You merely labeled it.
+<br>
+<p><em>&gt; The class of friendly sentients appears to be
+</em><br>
+<em>&gt; potentially infinite, making 'Friendliness' a
+</em><br>
+<em>&gt; prospective attribute.  Therefore the exact
+</em><br>
+<em>&gt; Friendliness utility function is uncomputable.
+</em><br>
+<p>The first part of you sentence says &quot;it appears...&quot;, then you jump to a 
+<br>
+more assertive &quot;making....&quot;   Vague appearances don't make anything 
+<br>
+true.  This argument is beyond weak.  It doesn't actually explain 
+<br>
+anything at all.
+<br>
+<p>The last sentence seem to sum up most of your &quot;definition&quot;.  Instead of 
+<br>
+giving a strong definition, you seem to be spending most of your words 
+<br>
+giving excuses for the weakness of any definition.
+<br>
+<p><em>&gt; Therefore all finite approximations to 'Friendliness'
+</em><br>
+<em>&gt; must have the property that they are recursive and
+</em><br>
+<em>&gt; converge on the ideal utility function.
+</em><br>
+<p>The only thing you have defined in the end is that friendliness is 
+<br>
+recursive.  This is not a definition either.  It is an implementation 
+<br>
+method for encoding the process toward friendliness.  This is about as 
+<br>
+useful as defining Bayes Theorem as being mathematical notation.  It 
+<br>
+tells us how it is implemented or expressed, but tells us nothing about 
+<br>
+what you are implementing.
+<br>
+<p><em>&gt; Let Partial Friendly (PF) = finitely specified
+</em><br>
+<em>&gt; approximation to the Friendliness function.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;       Omega Friendly (OF) = exact Friendliness
+</em><br>
+<em>&gt; function (uncomputable)
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; PF must be a recursive function such that PF (PF)
+</em><br>
+<em>&gt; outputs PF’ which approaches OF as number of
+</em><br>
+<em>&gt; iterations approaches infinity.
+</em><br>
+<p>Assigning variables (or abbreviations) to terms sounds like a lead into 
+<br>
+a rigorous definition, like a mathematical formula or technical 
+<br>
+specification.  But you fizzle off and don't actually use these 
+<br>
+abbreviations you define.  They sound good, and look rigorous, but 
+<br>
+aren't actually used anything.  This is about as useful as padding a 
+<br>
+glossary with technical words that aren't actually used.  It adds 
+<br>
+nothing.
+<br>
+<p><em>&gt; Definition of Friendliness
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; A computable 'Friendly' function (PF) is a function
+</em><br>
+<em>&gt; which takes any finitely specified function Partial x
+</em><br>
+<em>&gt; as input and modifies it such that the outputted
+</em><br>
+<em>&gt; function Partial x' is a better approximation to Omega
+</em><br>
+<em>&gt; x.   Successive output used as input for the next
+</em><br>
+<em>&gt; iteration has to cause Partial x' to converge on Omega
+</em><br>
+<em>&gt; x as the number of iterations approaches infinity.
+</em><br>
+<p>This definition of &quot;friendliness&quot; merely says it is will have a 
+<br>
+recursive implementation.  There is no definition here.  You have 
+<br>
+described one attribute (recursiveness) of another attribute 
+<br>
+(friendliness) without defining that other attribute.  There is also no 
+<br>
+measurement method of friendliness here, to calculate how friendly we 
+<br>
+are getting.  Nor is there a test to define whether we are friendly or 
+<br>
+not.
+<br>
+<p>Any recursive function, such as factorial, would seem to meet your 
+<br>
+definition above.  As such, it fails to define or distinguish between 
+<br>
+friendly and non-friendly items.
+<br>
+<p><em>&gt; None the less, I think my understanding has improved
+</em><br>
+<em>&gt; to the point where I at least understand in general
+</em><br>
+<em>&gt; terms what the concept 'Friendliness' mean.  So here
+</em><br>
+<em>&gt; I've had a go at attempting to give, in my own words,
+</em><br>
+<em>&gt; a technical definition of 'Friendliness'.  Admittedly
+</em><br>
+<em>&gt; it's only a very general definition, but I don't think
+</em><br>
+<em>&gt; it's vacuous or gibberish.  That is, I think I'm
+</em><br>
+<em>&gt; actually defining something meaningful here.  If you
+</em><br>
+<em>&gt; disagree by all means please tell me.
+</em><br>
+<p>No offense, but I think this is close to gibberish.  It consists of 
+<br>
+tautologies that each might make sense, but they go nowhere.  You also 
+<br>
+contradict yourself by claiming to give a &quot;technical definition&quot; but 
+<br>
+only as a &quot;very general definition&quot;.  It can't be both the technical or 
+<br>
+rigorous definition and general at the same time.  You can't give a 
+<br>
+&quot;technical definition&quot; in your own words.  Not only have you failed to 
+<br>
+give a definition (IMHO), but you are not even clear about the goals or 
+<br>
+what you are claiming to present here.
+<br>
+<p>I see no or few definitions here at all.  I am not even sure if you and 
+<br>
+I would agree on what a definition is or what it is supposed to do.  
+<br>
+But by my understanding, you are not defining, and what you are doing 
+<br>
+fails to achieve any goal of a definition.  Maybe you are trying to 
+<br>
+invent terminology instead?  Maybe you are giving a background or 
+<br>
+context in which friendliness must exist?  Maybe you are describing 
+<br>
+goals, principles, constraints, assumptions, methodology, or some other 
+<br>
+attribute besides definition of this concept?
+<br>
+<p>I would be curious to see Eliezer's take on this &quot;definition&quot; of 
+<br>
+friendliness.  If you gave it to him using a term other than 
+<br>
+&quot;friendliness&quot;, would he even recognize it as describing the same thing 
+<br>
+that he frequently talks about?
+<br>
+<p>Again, please excuse my bluntness.  But if I were editing your work, 
+<br>
+this would be my critique.  If I were an engineer handed such a 
+<br>
+definition or requirement, this would be my response.  And please 
+<br>
+realize that I am not just complaining about it not being in the right 
+<br>
+form or terminology that I like to see.  In my career, I work with 
+<br>
+customers all the time translating their vague notions into rigorous 
+<br>
+engineering specs.  But I cannot extract any useful guidance out of 
+<br>
+what you have written.  I have a similar problem with much AI and 
+<br>
+transhumanist writings, which tend to be more philosophy than anything 
+<br>
+else.  In many cases, it isn't even philosophy, it is just attitude.
+<br>
+<p><pre>
+--
+Harvey Newstrom &lt;HarveyNewstrom.com&gt;
+CISSP, ISSAP, ISSMP, CISA, CISM, IAM, IBMCP, GSEC
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="10568.html">Eliezer Yudkowsky: "Re: My attempt at a general technical definition of 'Friendliness'"</a>
+<li><strong>Previous message:</strong> <a href="10566.html">Thomas Buckner: "Re: Bad Bayesian - no biscuit! (was A New Year's gift for Bayesians)"</a>
+<li><strong>In reply to:</strong> <a href="10557.html">Marc Geddes: "My attempt at a general technical definition of 'Friendliness'"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="10568.html">Eliezer Yudkowsky: "Re: My attempt at a general technical definition of 'Friendliness'"</a>
+<li><strong>Reply:</strong> <a href="10568.html">Eliezer Yudkowsky: "Re: My attempt at a general technical definition of 'Friendliness'"</a>
+<li><strong>Reply:</strong> <a href="10570.html">Thomas Buckner: "Re: My attempt at a general technical definition of 'Friendliness'"</a>
+<li><strong>Reply:</strong> <a href="10574.html">Marc Geddes: "Re: My attempt at a general technical definition of 'Friendliness'"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#10567">[ date ]</a>
+<a href="index.html#10567">[ thread ]</a>
+<a href="subject.html#10567">[ subject ]</a>
+<a href="author.html#10567">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:50 MDT
+</em></small></p>
+</body>
+</html>

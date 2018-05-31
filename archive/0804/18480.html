@@ -1,0 +1,392 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Mathematical Model of GLUTs and Lookups</title>
+<meta name="Author" content="Lee Corbin (lcorbin@rawbw.com)">
+<meta name="Subject" content="Re: Mathematical Model of GLUTs and Lookups">
+<meta name="Date" content="2008-04-14">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Mathematical Model of GLUTs and Lookups</h1>
+<!-- received="Mon Apr 14 19:38:56 2008" -->
+<!-- isoreceived="20080415013856" -->
+<!-- sent="Mon, 14 Apr 2008 18:32:31 -0700" -->
+<!-- isosent="20080415013231" -->
+<!-- name="Lee Corbin" -->
+<!-- email="lcorbin@rawbw.com" -->
+<!-- subject="Re: Mathematical Model of GLUTs and Lookups" -->
+<!-- id="1ead01c89e99$072f62b0$6401a8c0@homeef7b612677" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="38f493f10804020445o1b22ffa3i24b43d66b5fcf76d@mail.gmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Lee Corbin (<a href="mailto:lcorbin@rawbw.com?Subject=Re:%20Mathematical%20Model%20of%20GLUTs%20and%20Lookups"><em>lcorbin@rawbw.com</em></a>)<br>
+<strong>Date:</strong> Mon Apr 14 2008 - 19:32:31 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="18481.html">Jeff Herrlich: "Re: Arbitrarily decide who benefits (was Re: Bounded population)"</a>
+<li><strong>Previous message:</strong> <a href="18479.html">Eliezer S. Yudkowsky: "Re: AI investment  (was AGI investment)"</a>
+<li><strong>In reply to:</strong> <a href="18339.html">Stuart Armstrong: "Re: Mathematical Model of GLUTs and Lookups"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="18516.html">Stuart Armstrong: "Re: Mathematical Model of GLUTs and Lookups"</a>
+<li><strong>Reply:</strong> <a href="18516.html">Stuart Armstrong: "Re: Mathematical Model of GLUTs and Lookups"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#18480">[ date ]</a>
+<a href="index.html#18480">[ thread ]</a>
+<a href="subject.html#18480">[ subject ]</a>
+<a href="author.html#18480">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+To recapitulate:  to avoid &quot;the end of time&quot; or to avoid belief
+<br>
+in &quot;platonia&quot; or having to dismiss (according to my calculations)
+<br>
+mundane moral concerns about other people's suffering and so
+<br>
+on, many years ago I abandoned strict functionalism because
+<br>
+that recourse seemed to be the only &quot;out&quot;. 
+<br>
+<p>I then claimed that although it looked like ordinary computation
+<br>
+(including conscious instances) from the outside, a Giant Lookup
+<br>
+Table (GLUT) would in fact not be conscious. The S-GLUT here
+<br>
+(for Simple GLUT) is assumed to take any state that it's currently
+<br>
+in and merely use that as an address of its next state. Example:
+<br>
+take a particular generation on Conway's Life Board (of a trillion
+<br>
+by trillion pixels) and instead of computing the next generation
+<br>
+by local rules (Rules of Life) use the whole 10^24 bits to look
+<br>
+up the next state.
+<br>
+<p>But I was concerned that the noose of my argument wasn't
+<br>
+quite drawn tight enough; therefore, I made a slightly more
+<br>
+complex GLUT (this time with no &quot;S-&quot;) that first took the
+<br>
+present state, used a perfect hash on it to produce (in Stuart
+<br>
+Armstrong's notation) f(s) where s is a state and f(s) is the
+<br>
+hash of that state (or bit string).  Then *that* element would
+<br>
+be used as an address into the GLUT that would yield the
+<br>
+next state (e.g. the next generation). 
+<br>
+<p>It *was* probably a good idea to use f, because if you took
+<br>
+just a state of the Life Board (or of a human brain) and
+<br>
+simply encoded it by a raster scan or something into what
+<br>
+will be used as an address (for table lookup), then the
+<br>
+&quot;connection&quot; between two states is still relatively simple:
+<br>
+No, not quite as simple as Conway's Rules (or, for a human
+<br>
+brain, the laws of physics), but still, a fairly trivial algorithm
+<br>
+could unpack the string  and then do local (simple) (and
+<br>
+perhaps *genuine*) computations on it to arrive at the
+<br>
+next state. (As Stuart would say, the KC of just going from
+<br>
+one state in the S-GLUT to the next would be low.)
+<br>
+<p>By introducing the hash function f, I made sure that this 
+<br>
+mapping would *not* be simple. An algorithm given f(s)
+<br>
+would have to (in order to *calculate* the next state)
+<br>
+first compute f^(-1)  of f(s) and go from there. Thus my
+<br>
+GLUT, as it ended up, has this structure:  at address
+<br>
+f(s) is the next state s'.
+<br>
+<p>So, for example, a computronium machine that already had
+<br>
+this GLUT could hold a conversation with you as follows.
+<br>
+It's in state s1, and when you utter a syllable to it, it goes
+<br>
+into s2, which is (fundamentally) a function of s1 and your
+<br>
+input.  Now, so far, that's how all of us are, and how any
+<br>
+machine is.  But next, instead of &quot;thinking&quot; about your
+<br>
+syllable, I claim that as a very unauthentic form of computation
+<br>
+it merely does this:  it adds your syllable to its present state
+<br>
+performs a complex (but perfect) hash on the result when 
+<br>
+interpreted as a bit string, and using that hash as an address,
+<br>
+looks up its next state, which presumably includes a bit of
+<br>
+structure that is a little of the first formulation of something
+<br>
+it might be going to say back to you (for example).
+<br>
+<p>And I argued at length, and still do, that surely this is not
+<br>
+conscious activity.
+<br>
+<p>Stuart then created a couple of nice mathematical models
+<br>
+of this, about which it appears that exact results can be
+<br>
+proven, instead of relying on intuition as I had been doing.
+<br>
+I like his models very much.
+<br>
+<p>He says this, taken verbatim from his earlier posts in
+<br>
+&quot;The GLUT and Functionalism&quot;:  
+<br>
+<p><em>&gt;        S = a finite set of polynomials.
+</em><br>
+<p>This is the analog of the state of someone's brain or
+<br>
+a generation in Conway's Life.
+<br>
+<p><em>&gt;        G = a GLUT on S.
+</em><br>
+<p>G takes a generation, state, (or actually, the hash of a generation
+<br>
+or state) and outputs &quot;the next&quot; state. I made it use *addresses*
+<br>
+in particular, but Stuart is abstracting away from that to explain
+<br>
+that G is actually a function. I don't think that the domain of the
+<br>
+function is S, however. The domain of the function G is the GLUT
+<br>
+itself; G takes entries of the GLUT to other entries.  I hope that
+<br>
+all this explication is to Stuart's satisfaction.
+<br>
+<p><em>&gt;        R = a rule that says that any polynomial of n-th degree will be
+</em><br>
+<em>&gt;               mapped, under G, to a polynomial of (n-1)-th degree.
+</em><br>
+<p>This is analogous to the rule in Conway's Life that would take a
+<br>
+generation to the next generation, or the laws of physics that would
+<br>
+take a human brain (or the present state of a conscious program)
+<br>
+to its next state.
+<br>
+<p><em>&gt;         f = a hash function from S (to f(S))
+</em><br>
+<p><em>&gt;         f(G) = the GLUT on f(S) equivalent to G on S.
+</em><br>
+<p>Entries in this new GLUT-2 take elements GLUT-2 to other
+<br>
+elements of GLUT-2, which I now think is at odds with my
+<br>
+original conception, namely that in my GLUT, one could
+<br>
+visualize an address and the contents at that address, 
+<br>
+respectively f(s) and s'.  (So in my GLUT, the entries were
+<br>
+ordinary states, it's just that they were looked up by a very
+<br>
+peculiar process (the hash).) Perhaps it's really equivalent
+<br>
+to what Stuart as saying---but even if not, his model strikes
+<br>
+me, again, as very interesting and applicable.
+<br>
+<p><em>&gt;          f(R) = the rule on f(S) equivalent to R on S.
+</em><br>
+<p>While the rule R that takes, for example, s to s', is fairly simple
+<br>
+(e.g. the Rules of Life), this new rule f(R) seems to take hashes
+<br>
+to other hashes, though I may be confused.
+<br>
+<p>Anyway, Stuart now writes
+<br>
+<p><em>&gt; Hum, my understanding of a GLUT was that you fed it the state of a
+</em><br>
+<em>&gt; system, and it would give you the next one. Thus a GLUT is a function
+</em><br>
+<em>&gt; on the states of a system; you feed it one state and it gives you
+</em><br>
+<em>&gt; another.
+</em><br>
+<p>Well, that was without the use of the hash function. But now I see
+<br>
+where I wasn't understanding:  any GLUT could be taken as a
+<br>
+function that took states of the GLUT to other states of it. Thanks
+<br>
+for explaining.
+<br>
+<p><em>&gt; So S is my set of states (taken to be polynomials, for this example),
+</em><br>
+<em>&gt; and G is a GLUT on S - a function from S to itself.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; (note: I don't actually want G to be full GLUT, but actually a simpler
+</em><br>
+<em>&gt; rule, like differentiation; but we'll have to start with G being a
+</em><br>
+<em>&gt; GLUT).
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; G is therefore a collection of ordered pairs of elements of S (the
+</em><br>
+<em>&gt; pairs are (initial state , resulting state). The KC of such a
+</em><br>
+<em>&gt; collection is well defined.
+</em><br>
+<p>Yes, and pretty simple, too. You can locally examine (of course)
+<br>
+patches of a Life Board to get to the next generation, and still
+<br>
+rather trivially examine a simple raster scan or bit string (made
+<br>
+by taking the 10^12 x 10^12 Life Board and reading it out
+<br>
+one row at a time), and legitimately compute the next state.
+<br>
+<p><em>&gt; Now R is a rule, i.e. a restriction that the function G must obey.
+</em><br>
+<em>&gt; It is given by an ordered collection of sets (P(n) = the &quot;n-th degree
+</em><br>
+<em>&gt; polynomials&quot;), and the rule that G must map P(n) to P(n-1)).
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Now the maximal KC that G can have, given this rule, is huge.
+</em><br>
+<p>Well, I'm not really sure of that, or if it's profitable to speak that
+<br>
+way. G takes states of *this* GLUT to other states, and since
+<br>
+we haven't hashed anything yet, why emphasize that its KC
+<br>
+could be huge?
+<br>
+<p><em>&gt; Formulating the rule R itself is of trivial KC; [yes] the process
+</em><br>
+<em>&gt; of taking a polynomial and sending it to its degree is also of
+</em><br>
+<em>&gt; trivial KC. In fact I have just, completely defined it in a few
+</em><br>
+<em>&gt; sentences, no matter what the cardinality of S is.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Now we have a hash function f, mapping bijectively to the set f(S). By
+</em><br>
+<em>&gt; the composition f G f^{-1} , we have a function (a GLUT) mapping f(S)
+</em><br>
+<em>&gt; to itself. I called it f(G).
+</em><br>
+<p>Okay.
+<br>
+<p><em>&gt; We also have the &quot;rule&quot; f(R). This is given by the requirement that
+</em><br>
+<em>&gt; f(G) must map f(P(n)) to f(P(n-1)). That statement is of trivial KC.
+</em><br>
+<p>What?  How could that be? I would think that the connection
+<br>
+between f(P(n)) and f(P(n-1)) would be enormously more
+<br>
+complicated. (It's why I introduced the hash function f in the
+<br>
+first place.)  Looks like we may have a slightly different idea
+<br>
+of what we're talking about.
+<br>
+<p>Oh!  Perhaps you simply mean that the literal table-lookup
+<br>
+connection between f(P(n)) to f(P(n-1)) is by definition
+<br>
+trivial, since it's just an assignment?  (Sort of like the way
+<br>
+that the relation between an address and the contents at
+<br>
+that address is absurdly simple in my scheme.)
+<br>
+<p><em>&gt; But given an element p of f(S), knowing whether it is in f(P(n))
+</em><br>
+<em>&gt; is of very high KC: to do so,
+</em><br>
+<p>Well, yes, it would be.
+<br>
+<p><em>&gt; we need to calculate f^{-1}(p), and the KC of f is maximal.
+</em><br>
+<p>Yes.
+<br>
+<p><em>&gt; Thus the rule f(R) is of high KC, as it requires a lot of information
+</em><br>
+<em>&gt; to describe.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; With me so far?
+</em><br>
+<p>Maybe!  What does it look like to you?  Is it safe to proceed?  :-)
+<br>
+<p>Lee
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="18481.html">Jeff Herrlich: "Re: Arbitrarily decide who benefits (was Re: Bounded population)"</a>
+<li><strong>Previous message:</strong> <a href="18479.html">Eliezer S. Yudkowsky: "Re: AI investment  (was AGI investment)"</a>
+<li><strong>In reply to:</strong> <a href="18339.html">Stuart Armstrong: "Re: Mathematical Model of GLUTs and Lookups"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="18516.html">Stuart Armstrong: "Re: Mathematical Model of GLUTs and Lookups"</a>
+<li><strong>Reply:</strong> <a href="18516.html">Stuart Armstrong: "Re: Mathematical Model of GLUTs and Lookups"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#18480">[ date ]</a>
+<a href="index.html#18480">[ thread ]</a>
+<a href="subject.html#18480">[ subject ]</a>
+<a href="author.html#18480">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:01:02 MDT
+</em></small></p>
+</body>
+</html>

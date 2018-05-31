@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Introduction</title>
+<meta name="Author" content="J. Andrew Rogers (andrew@ceruleansystems.com)">
+<meta name="Subject" content="Re: Introduction">
+<meta name="Date" content="2005-09-08">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Introduction</h1>
+<!-- received="Thu Sep  8 12:37:43 2005" -->
+<!-- isoreceived="20050908183743" -->
+<!-- sent="Thu, 08 Sep 2005 11:37:37 -0700" -->
+<!-- isosent="20050908183737" -->
+<!-- name="J. Andrew Rogers" -->
+<!-- email="andrew@ceruleansystems.com" -->
+<!-- subject="Re: Introduction" -->
+<!-- id="BF45D301.2CB5%andrew@ceruleansystems.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="200509080005.UAA16582@emerald.lightlink.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> J. Andrew Rogers (<a href="mailto:andrew@ceruleansystems.com?Subject=Re:%20Introduction"><em>andrew@ceruleansystems.com</em></a>)<br>
+<strong>Date:</strong> Thu Sep 08 2005 - 12:37:37 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="12244.html">Richard Loosemore: "Re: AI communities"</a>
+<li><strong>Previous message:</strong> <a href="12242.html">rpwl@lightlink.com: "Re: The Relevance of Complex Systems [was: Re: Retrenchment]"</a>
+<li><strong>In reply to:</strong> <a href="12225.html">rpwl@lightlink.com: "Re: Introduction"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12248.html">Richard Loosemore: "Re: Introduction"</a>
+<li><strong>Reply:</strong> <a href="12248.html">Richard Loosemore: "Re: Introduction"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12243">[ date ]</a>
+<a href="index.html#12243">[ thread ]</a>
+<a href="subject.html#12243">[ subject ]</a>
+<a href="author.html#12243">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On 9/7/05 5:05 PM, &quot;<a href="mailto:rpwl@lightlink.com?Subject=Re:%20Introduction">rpwl@lightlink.com</a>&quot; &lt;<a href="mailto:rpwl@lightlink.com?Subject=Re:%20Introduction">rpwl@lightlink.com</a>&gt; wrote:
+<br>
+<em>&gt; How to you know I *didn't* specify the engineering problem?
+</em><br>
+<p><p>I don't, but:
+<br>
+<p>- I've never seen a rigorous specification of the problem from you. Maybe it
+<br>
+is a secret, since rigorous specification is a big chunk of implementing a
+<br>
+solution.
+<br>
+<p>- Even if you did not want to disclose a rigorous specification of the
+<br>
+problem, you have not provided any rigorous specification of this
+<br>
+purportedly necessary software tool.
+<br>
+<p><p>In short, as far as I can tell the only support for your notion that some
+<br>
+brand new type of software development something or other is required to
+<br>
+solve AI is nothing more than your intuition.  Intuition is what got us the
+<br>
+last half century of fabulously successful AI designs, so color me
+<br>
+unimpressed in the absence of evidence of something interesting or new.
+<br>
+<p><p><em>&gt; Prior to starting that AI Ph.D. I had worked long and hard on Inmos
+</em><br>
+<em>&gt; Transputers (do you know what they were?  massively parallel hardware with
+</em><br>
+<em>&gt; a novel parallel programming language integrated in the chip design), so my
+</em><br>
+<em>&gt; comments about the difficulty level were based on real world experience of
+</em><br>
+<em>&gt; massively parallel systems.
+</em><br>
+<p><p>Parallel == Serial == Parallel.  It is not special, just complicated, and
+<br>
+fairly vanilla large systems design knowledge these days.  It is complex,
+<br>
+but not *that* complex.  I deal with this every day.
+<br>
+<p>The complexity of software development on such systems is extremely
+<br>
+dependent on the nature of the algorithm space one is implementing on them.
+<br>
+The nature of the trade-offs and problems of parallel systems design are
+<br>
+fairly well characterized and known.  There are enough dimensions to the
+<br>
+design choices for these things that compilers/languages have a hard time
+<br>
+implementing them automatically across the entire space of program
+<br>
+possibilities.  Which is only a problem to the extent that you have to worry
+<br>
+about those design aspects yourself, in the same way that a lack of garbage
+<br>
+collection means you have to worry about memory management.  Also a
+<br>
+trade-off; the automagic implementations of such things invariably suck for
+<br>
+some application spaces such that you need to disable them and do it
+<br>
+yourself anyway.
+<br>
+<p>Programming languages have a hard time specifying parallelism behavior
+<br>
+because the scope of behaviors is context sensitive and orthogonal to the
+<br>
+code flow itself.  There is no way to elegantly specify all possible graphs
+<br>
+and constraints in a simple ASCII syntax, and so assumptions are buried in
+<br>
+the compiler/interpreter.  Which is why every parallel programming language
+<br>
+I am aware of that hides the complexity is broken for some type of
+<br>
+parallelism.  This is probably the major reason parallel languages like
+<br>
+Erlang are stuck in niches; unless your software only requires the types of
+<br>
+parallelism supported by the language, the language is basically broken for
+<br>
+parallelism.  And many real-world software applications are mixed bags of
+<br>
+parallelism.
+<br>
+<p><p>But again, this is nothing more than a tool and therefore mostly unimportant
+<br>
+to the larger problem of AI.  Every type of parallelism needed can be
+<br>
+implemented in C by a savvy programmer if it is possible at all.  A nuisance
+<br>
+sure, but not a major roadblock.
+<br>
+<p><p>Cheers,
+<br>
+<p>J. Andrew Rogers
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="12244.html">Richard Loosemore: "Re: AI communities"</a>
+<li><strong>Previous message:</strong> <a href="12242.html">rpwl@lightlink.com: "Re: The Relevance of Complex Systems [was: Re: Retrenchment]"</a>
+<li><strong>In reply to:</strong> <a href="12225.html">rpwl@lightlink.com: "Re: Introduction"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12248.html">Richard Loosemore: "Re: Introduction"</a>
+<li><strong>Reply:</strong> <a href="12248.html">Richard Loosemore: "Re: Introduction"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12243">[ date ]</a>
+<a href="index.html#12243">[ thread ]</a>
+<a href="subject.html#12243">[ subject ]</a>
+<a href="author.html#12243">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:52 MDT
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: [sl4] Rolf's gambit revisited</title>
+<meta name="Author" content="Matt Mahoney (matmahoney@yahoo.com)">
+<meta name="Subject" content="Re: [sl4] Rolf's gambit revisited">
+<meta name="Date" content="2009-01-13">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: [sl4] Rolf's gambit revisited</h1>
+<!-- received="Tue Jan 13 07:39:28 2009" -->
+<!-- isoreceived="20090113143928" -->
+<!-- sent="Tue, 13 Jan 2009 06:39:22 -0800 (PST)" -->
+<!-- isosent="20090113143922" -->
+<!-- name="Matt Mahoney" -->
+<!-- email="matmahoney@yahoo.com" -->
+<!-- subject="Re: [sl4] Rolf's gambit revisited" -->
+<!-- id="262489.74816.qm@web51911.mail.re2.yahoo.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="ff7ba12a0901121241o36450feen70fa802c41d23ace@mail.gmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Matt Mahoney (<a href="mailto:matmahoney@yahoo.com?Subject=Re:%20[sl4]%20Rolf's%20gambit%20revisited"><em>matmahoney@yahoo.com</em></a>)<br>
+<strong>Date:</strong> Tue Jan 13 2009 - 07:39:22 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="19744.html">Benja Fallenstein: "Re: [sl4] Rolf's gambit revisited"</a>
+<li><strong>Previous message:</strong> <a href="19742.html">Vladimir Nesov: "Re: [sl4] A hypothesis for what our world might simulate"</a>
+<li><strong>In reply to:</strong> <a href="19729.html">Benja Fallenstein: "Re: [sl4] Rolf's gambit revisited"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="19744.html">Benja Fallenstein: "Re: [sl4] Rolf's gambit revisited"</a>
+<li><strong>Reply:</strong> <a href="19744.html">Benja Fallenstein: "Re: [sl4] Rolf's gambit revisited"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#19743">[ date ]</a>
+<a href="index.html#19743">[ thread ]</a>
+<a href="subject.html#19743">[ subject ]</a>
+<a href="author.html#19743">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+--- On Mon, 1/12/09, Benja Fallenstein &lt;<a href="mailto:benja.fallenstein@gmail.com?Subject=Re:%20[sl4]%20Rolf's%20gambit%20revisited">benja.fallenstein@gmail.com</a>&gt; wrote:
+<br>
+<p><em>&gt; Hi Matt,
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; On Mon, Jan 12, 2009 at 7:21 PM, Matt Mahoney
+</em><br>
+<em>&gt; &lt;<a href="mailto:matmahoney@yahoo.com?Subject=Re:%20[sl4]%20Rolf's%20gambit%20revisited">matmahoney@yahoo.com</a>&gt; wrote:
+</em><br>
+<em>&gt; &gt; Perhaps you could write a simple program of two agents
+</em><br>
+<em>&gt; simulating each other and prove me wrong.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Fair enough. Here goes.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; The following is a Python program of two agents, one
+</em><br>
+<em>&gt; guessing a number
+</em><br>
+<em>&gt; and the other one telling whether the guess is high or low,
+</em><br>
+<em>&gt; conducting
+</em><br>
+<em>&gt; a dialog by simulating each other. The program as given is
+</em><br>
+<em>&gt; the
+</em><br>
+<em>&gt; guesser; to get the verifier (which behaves the same way
+</em><br>
+<em>&gt; except that
+</em><br>
+<em>&gt; it prints &quot;Running the verifier&quot; instead of
+</em><br>
+<em>&gt; &quot;Running the guesser&quot; --
+</em><br>
+<em>&gt; but they have different main loops that just happen to do
+</em><br>
+<em>&gt; the same
+</em><br>
+<em>&gt; thing), change the last line from &quot;exec guesser&quot;
+</em><br>
+<em>&gt; to &quot;exec verifier.&quot;
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; =====
+</em><br>
+<em>&gt; verifier = '''
+</em><br>
+<em>&gt; guesserState = {'verifier':verifier,
+</em><br>
+<em>&gt; 'guesser':guesser, 'number':number}
+</em><br>
+<em>&gt; isFirstStep = True
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; def stepVerifier():
+</em><br>
+<em>&gt;     global verifierSays, isFirstStep
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;     if isFirstStep: exec guesser in guesserState;
+</em><br>
+<em>&gt; isFirstStep = False
+</em><br>
+<em>&gt;     else: exec 'stepGuesser()' in guesserState
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;     if guesserState['guesserSays'] &lt; number:
+</em><br>
+<em>&gt;         verifierSays = &quot;Too low.&quot;
+</em><br>
+<em>&gt;     elif guesserState['guesserSays'] == number:
+</em><br>
+<em>&gt;         verifierSays = &quot;Correct!&quot;
+</em><br>
+<em>&gt;     else:
+</em><br>
+<em>&gt;         verifierSays = &quot;Too high.&quot;
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; if __name__ == '__main__':
+</em><br>
+<em>&gt;     print &quot;Running the verifier!&quot;
+</em><br>
+<em>&gt;     while True:
+</em><br>
+<em>&gt;         stepVerifier()
+</em><br>
+<em>&gt;         print &quot;Guess:&quot;,
+</em><br>
+<em>&gt; guesserState['guesserSays']
+</em><br>
+<em>&gt;         print &quot;-&gt;&quot;, verifierSays
+</em><br>
+<em>&gt;         if verifierSays == &quot;Correct!&quot;: break
+</em><br>
+<em>&gt; '''
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; guesser = '''
+</em><br>
+<em>&gt; low = 1; high = 10
+</em><br>
+<em>&gt; verifierState = {'verifier':verifier,
+</em><br>
+<em>&gt; 'guesser':guesser, 'number':number}
+</em><br>
+<em>&gt; isFirstStep = True
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; guesserSays = 5
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; def stepGuesser():
+</em><br>
+<em>&gt;     global low, high, guesserSays, isFirstStep
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;     if isFirstStep: exec verifier in verifierState;
+</em><br>
+<em>&gt; isFirstStep = False
+</em><br>
+<em>&gt;     exec 'stepVerifier()' in verifierState
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;     if verifierState['verifierSays'] == &quot;Too
+</em><br>
+<em>&gt; low.&quot;:
+</em><br>
+<em>&gt;         low = guesserSays + 1
+</em><br>
+<em>&gt;     elif verifierState['verifierSays'] == &quot;Too
+</em><br>
+<em>&gt; high.&quot;:
+</em><br>
+<em>&gt;         high = guesserSays - 1
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;     guesserSays = low + ((high-low) % 2)
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; if __name__ == '__main__':
+</em><br>
+<em>&gt;     print &quot;Running the guesser!&quot;
+</em><br>
+<em>&gt;     while True:
+</em><br>
+<em>&gt;         print &quot;Guess:&quot;, guesserSays
+</em><br>
+<em>&gt;         stepGuesser()
+</em><br>
+<em>&gt;         print &quot;-&gt;&quot;,
+</em><br>
+<em>&gt; verifierState['verifierSays']
+</em><br>
+<em>&gt;         if verifierState['verifierSays'] ==
+</em><br>
+<em>&gt; &quot;Correct!&quot;: break
+</em><br>
+<em>&gt; '''
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; from random import choice
+</em><br>
+<em>&gt; number = choice(range(1,11))
+</em><br>
+<em>&gt; exec guesser
+</em><br>
+<em>&gt; =====
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Is this convincing, or do you see something in it that you
+</em><br>
+<em>&gt; don't think
+</em><br>
+<em>&gt; carries over to the situation under discussion?
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; (It's possible to get rid of the exec on the outer
+</em><br>
+<em>&gt; level by turning
+</em><br>
+<em>&gt; this into a less magical quine-- compare to the difference
+</em><br>
+<em>&gt; between
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; <a href="http://users.aims.ac.za/~mackay/python/quine/quine3.py">http://users.aims.ac.za/~mackay/python/quine/quine3.py</a>
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; and
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; <a href="http://users.aims.ac.za/~mackay/python/quine/quine4a.py">http://users.aims.ac.za/~mackay/python/quine/quine4a.py</a> )
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Thanks,
+</em><br>
+<em>&gt; - Benja
+</em><br>
+<p>You're right. I see how this program could be turned into a quine pair where each program knows the other's source code.
+<br>
+<p>-- Matt Mahoney, <a href="mailto:matmahoney@yahoo.com?Subject=Re:%20[sl4]%20Rolf's%20gambit%20revisited">matmahoney@yahoo.com</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="19744.html">Benja Fallenstein: "Re: [sl4] Rolf's gambit revisited"</a>
+<li><strong>Previous message:</strong> <a href="19742.html">Vladimir Nesov: "Re: [sl4] A hypothesis for what our world might simulate"</a>
+<li><strong>In reply to:</strong> <a href="19729.html">Benja Fallenstein: "Re: [sl4] Rolf's gambit revisited"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="19744.html">Benja Fallenstein: "Re: [sl4] Rolf's gambit revisited"</a>
+<li><strong>Reply:</strong> <a href="19744.html">Benja Fallenstein: "Re: [sl4] Rolf's gambit revisited"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#19743">[ date ]</a>
+<a href="index.html#19743">[ thread ]</a>
+<a href="subject.html#19743">[ subject ]</a>
+<a href="author.html#19743">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:01:03 MDT
+</em></small></p>
+</body>
+</html>

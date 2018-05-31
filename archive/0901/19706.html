@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: [sl4] Rolf's gambit revisited</title>
+<meta name="Author" content="Benja Fallenstein (benja.fallenstein@gmail.com)">
+<meta name="Subject" content="Re: [sl4] Rolf's gambit revisited">
+<meta name="Date" content="2009-01-06">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: [sl4] Rolf's gambit revisited</h1>
+<!-- received="Tue Jan  6 10:42:29 2009" -->
+<!-- isoreceived="20090106174229" -->
+<!-- sent="Tue, 6 Jan 2009 18:42:27 +0100" -->
+<!-- isosent="20090106174227" -->
+<!-- name="Benja Fallenstein" -->
+<!-- email="benja.fallenstein@gmail.com" -->
+<!-- subject="Re: [sl4] Rolf's gambit revisited" -->
+<!-- id="ff7ba12a0901060942h72b24afcpe55ac3596b99791@mail.gmail.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="ff7ba12a0901060747h6338a0a8je68d9b3af68affb7@mail.gmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Benja Fallenstein (<a href="mailto:benja.fallenstein@gmail.com?Subject=Re:%20[sl4]%20Rolf's%20gambit%20revisited"><em>benja.fallenstein@gmail.com</em></a>)<br>
+<strong>Date:</strong> Tue Jan 06 2009 - 10:42:27 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="19707.html">Peter de Blanc: "Re: [sl4] Rolf's gambit revisited"</a>
+<li><strong>Previous message:</strong> <a href="19705.html">Benja Fallenstein: "Re: [sl4] Rolf's gambit revisited"</a>
+<li><strong>In reply to:</strong> <a href="19705.html">Benja Fallenstein: "Re: [sl4] Rolf's gambit revisited"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="19707.html">Peter de Blanc: "Re: [sl4] Rolf's gambit revisited"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#19706">[ date ]</a>
+<a href="index.html#19706">[ thread ]</a>
+<a href="subject.html#19706">[ subject ]</a>
+<a href="author.html#19706">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+I wrote:
+<br>
+<em>&gt; I don't want to try my hand at doing this with Turing machines, but
+</em><br>
+<em>&gt; let's try it with computable functions.
+</em><br>
+(...)
+<br>
+<p>For those who read Haskell, below is a type-checked version of the
+<br>
+definitions and claims in my previous message.
+<br>
+<p>- Benja
+<br>
+<p>=====
+<br>
+<p>{-# LANGUAGE EmptyDataDecls #-}
+<br>
+<p>import Prelude hiding (interact)
+<br>
+import Control.Arrow (first)
+<br>
+<p>-- Rep (a -&gt; b) = Gödel number
+<br>
+-- Rep (x,y) = surjective pairing of representations of x and y
+<br>
+-- Rep Input/Rep Action/Rep Message = natural number representing inp/act/msg
+<br>
+data Rep a
+<br>
+<p>pair   :: (Rep a, Rep b) -&gt; Rep (a,b)
+<br>
+unpair :: Rep (a,b) -&gt; (Rep a, Rep b)
+<br>
+pair = undefined; unpair = undefined
+<br>
+<p>tuple   :: (Rep a, Rep b, Rep c, Rep d, Rep e, Rep f) -&gt; Rep (a,b,c,d,e,f)
+<br>
+untuple :: Rep (a,b,c,d,e,f) -&gt; (Rep a, Rep b, Rep c, Rep d, Rep e, Rep f)
+<br>
+tuple = undefined; untuple = undefined
+<br>
+<p>eval :: Rep a -&gt; a
+<br>
+eval = undefined
+<br>
+<p>apply :: Rep ((a,b) -&gt; c) -&gt; Rep a -&gt; Rep (b -&gt; c)
+<br>
+apply = undefined
+<br>
+<p>fixRep :: (Rep (a -&gt; b) -&gt; (Rep a -&gt; Rep b)) -&gt; Rep (a -&gt; b)
+<br>
+fixRep = undefined
+<br>
+<p><p>data Input; data Action
+<br>
+newtype Agent = Agent { runAgent :: Rep Input -&gt; (Rep Action, Rep Agent) }
+<br>
+newtype Env = Env { runEnv :: Rep Action -&gt; (Rep Input, Rep Env) }
+<br>
+<p>mkAgent :: (Rep (Input -&gt; (Action, Agent))) -&gt; Rep Agent
+<br>
+mkAgent = undefined
+<br>
+<p>interact :: Rep Agent -&gt; Rep Input -&gt; Rep Env -&gt; [(Rep Input,Rep Action)]
+<br>
+interact ag inp env = (inp,act) : interact ag' inp' env' where
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(act,ag') = runAgent (eval ag) inp
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(inp',env') = runEnv (eval env) act
+<br>
+<p><p>data Message
+<br>
+type MsgInput = (Message, Input)
+<br>
+type MsgAction = (Message, Action)
+<br>
+newtype MsgAgent = MsgAgent { runMsgAgent :: Rep MsgInput -&gt; (Rep
+<br>
+MsgAction, Rep MsgAgent) }
+<br>
+<p>interactMsg :: Rep MsgAgent -&gt; Rep MsgAgent
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt; Rep Input -&gt; Rep Input
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt; Rep Message -&gt; Rep Message
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt; Rep Env -&gt; Rep Env
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt; [(Rep Input,Rep Input,Rep Message,Rep Message,Rep
+<br>
+Action,Rep Action)]
+<br>
+interactMsg ag1 ag2 inp1 inp2 msg1 msg2 env1 env2 = result where
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;result = (inp1,inp2,msg1',msg2',act1,act2) : rest
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rest   = interactMsg ag1' ag2' inp1' inp2' msg1' msg2' env1' env2'
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;((msg1',act1),ag1') = first unpair $ runMsgAgent (eval ag1) (pair
+<br>
+(msg1,inp1))
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;((msg2',act2),ag2') = first unpair $ runMsgAgent (eval ag2) (pair
+<br>
+(msg2,inp2))
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(inp1',env1') = runEnv (eval env1) act1
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(inp2',env2') = runEnv (eval env2) act2
+<br>
+<p><p>rolfinize :: Rep MsgAgent -&gt; Rep MsgAgent
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt; Rep Input
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt; Rep Message -&gt; Rep Message
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt; Rep Env
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt; Rep Agent
+<br>
+rolfinize ag1 ag2 inp2 msg1 msg2 env2 = mkAgent (apply (fixRep rolf') tup) where
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tup = tuple (ag1,ag2,inp2,msg1,msg2,env2)
+<br>
+<p>rolf' :: Rep (((MsgAgent,MsgAgent,Input,Message,Message,Env),Input) -&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Action, Agent))
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt; Rep ((MsgAgent,MsgAgent,Input,Message,Message,Env),Input)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt; Rep (Action, Agent)
+<br>
+rolf' r arg = pair (act1, ag1star') where
+<br>
+&nbsp;&nbsp;&nbsp;(tup,inp1) = unpair arg
+<br>
+&nbsp;&nbsp;&nbsp;(ag1,ag2,inp2,msg1,msg2,env2) = untuple tup
+<br>
+&nbsp;&nbsp;&nbsp;((msg1',act1),ag1') = first unpair $ runMsgAgent (eval ag1) (pair
+<br>
+(msg1,inp1))
+<br>
+&nbsp;&nbsp;&nbsp;((msg2',act2),ag2') = first unpair $ runMsgAgent (eval ag2) (pair
+<br>
+(msg2,inp2))
+<br>
+&nbsp;&nbsp;&nbsp;(inp2',env2') = runEnv (eval env2) act2
+<br>
+&nbsp;&nbsp;&nbsp;ag1star' = mkAgent (apply r (tuple tup'))
+<br>
+&nbsp;&nbsp;&nbsp;tup' = (ag1',ag2',inp2',msg1',msg2',env2')
+<br>
+<p><p>data Proposition
+<br>
+<p>equals :: a -&gt; a -&gt; Proposition
+<br>
+equals = undefined
+<br>
+<p>forAll :: (a -&gt; Proposition) -&gt; Proposition
+<br>
+forAll = undefined
+<br>
+<p>theorem :: Proposition
+<br>
+theorem = forAll $ \(ag1,ag2,inp1,inp2,msg1,msg2,env1,env2) -&gt;
+<br>
+&nbsp;&nbsp;let xs = interact (rolfinize ag1 ag2 inp2 msg1 msg2 env2) inp1 env2
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ys = map f (interactMsg ag1 ag2 inp1 inp2 msg1 msg2 env1 env2)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f (i1,i2,m1,m2,a1,a2) = (i1,a1)
+<br>
+&nbsp;&nbsp;&nbsp;in xs `equals` ys
+<br>
+<p>main = putStrLn &quot;It type-checks, but is it true?&quot;
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="19707.html">Peter de Blanc: "Re: [sl4] Rolf's gambit revisited"</a>
+<li><strong>Previous message:</strong> <a href="19705.html">Benja Fallenstein: "Re: [sl4] Rolf's gambit revisited"</a>
+<li><strong>In reply to:</strong> <a href="19705.html">Benja Fallenstein: "Re: [sl4] Rolf's gambit revisited"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="19707.html">Peter de Blanc: "Re: [sl4] Rolf's gambit revisited"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#19706">[ date ]</a>
+<a href="index.html#19706">[ thread ]</a>
+<a href="subject.html#19706">[ subject ]</a>
+<a href="author.html#19706">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:01:03 MDT
+</em></small></p>
+</body>
+</html>

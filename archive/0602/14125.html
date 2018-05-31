@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Fundamental problems</title>
+<meta name="Author" content="Philip Goetz (philgoetz@gmail.com)">
+<meta name="Subject" content="Re: Fundamental problems">
+<meta name="Date" content="2006-02-17">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Fundamental problems</h1>
+<!-- received="Fri Feb 17 08:05:15 2006" -->
+<!-- isoreceived="20060217150515" -->
+<!-- sent="Fri, 17 Feb 2006 10:05:12 -0500" -->
+<!-- isosent="20060217150512" -->
+<!-- name="Philip Goetz" -->
+<!-- email="philgoetz@gmail.com" -->
+<!-- subject="Re: Fundamental problems" -->
+<!-- id="6fdad3790602170705l2a4d6fc6pa48d890bb39228ea@mail.gmail.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="20060217070401.40946.qmail@web50506.mail.yahoo.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Philip Goetz (<a href="mailto:philgoetz@gmail.com?Subject=Re:%20Fundamental%20problems"><em>philgoetz@gmail.com</em></a>)<br>
+<strong>Date:</strong> Fri Feb 17 2006 - 08:05:12 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="14126.html">Philip Goetz: "Re: Turing Test"</a>
+<li><strong>Previous message:</strong> <a href="14124.html">Phillip Huggan: "Re: Fundamental problems"</a>
+<li><strong>In reply to:</strong> <a href="14123.html">Marc Geddes: "Fundamental problems"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="14131.html">H C: "RE: Fundamental problems"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#14125">[ date ]</a>
+<a href="index.html#14125">[ thread ]</a>
+<a href="subject.html#14125">[ subject ]</a>
+<a href="author.html#14125">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On 2/17/06, Marc Geddes &lt;<a href="mailto:m_j_geddes@yahoo.com.au?Subject=Re:%20Fundamental%20problems">m_j_geddes@yahoo.com.au</a>&gt; wrote:
+<br>
+<em>&gt; Also see blog entry by Ben Goertzel:
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; *The management of uncertainty in the human brain: new
+</em><br>
+<em>&gt; experimental insights*
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; &quot;In other words, some of us maverick AI theorists have
+</em><br>
+<em>&gt; been saying for a while that using just ONE number
+</em><br>
+<em>&gt; (typically probability) to measure uncertainty is not
+</em><br>
+<em>&gt; enough. Two numbers -- e.g. a probability and another
+</em><br>
+<em>&gt; number measuring the &quot;weight of evidence&quot; in favor of
+</em><br>
+<em>&gt; this probability (or to put it differently, the
+</em><br>
+<em>&gt; &quot;confidence&quot; one has in the probability) -- are needed
+</em><br>
+<em>&gt; to make a cognitively meaningful algebra of
+</em><br>
+<em>&gt; uncertainty.&quot;
+</em><br>
+<p>I don't know what Ben means by that, since &quot;confidence&quot; in AI is
+<br>
+merely a term that means &quot;this is a number like a probability, but
+<br>
+that does not follow Bayesian rules because my logic engine acts
+<br>
+stupidly if I try that&quot;.
+<br>
+<p>But I agree that you need a bunch of numbers, because there are a
+<br>
+bunch of different types of uncertainties that you need to consider. 
+<br>
+Consider a field commander told that &quot;Grid section Q32 contains a
+<br>
+defensive formation of twenty tanks&quot;.  You should be interested in
+<br>
+<p>- Confidence: How certain is the source of their information?  This
+<br>
+should be expressed as a probability distribution (for instance, a
+<br>
+mean and a variance), not as a probability.
+<br>
+<p>- Reliability of the information source - Is this coming from
+<br>
+satellite data, or an informant of dubious loyalty?
+<br>
+<p>- Measurement accuracy:  How accurate are the sensors used?  This
+<br>
+should also be expressed as an error distribution for the sensor,
+<br>
+rather than as a single value.  In the example, the question is
+<br>
+whether &quot;40&quot; is an exact number, or an approximation.  If it is an
+<br>
+approximation, we might suppose the informant has rounded to the
+<br>
+nearest 10, giving us a uniform distribution from 35 to 44.
+<br>
+<p>- Typicality:  In the statement &quot;a defensive formation&quot;, how good a
+<br>
+defensive formation is it?  This one is hugely important when dealing
+<br>
+with natural language, but has never been made use of.
+<br>
+<p>- Age:  When was the observation made?
+<br>
+<p>I did a project back in 2001 or so in which I developed a logic system
+<br>
+that assigned each statement an age and a probability distribution,
+<br>
+rather than a probability.  It was obvious, in the domain (fire
+<br>
+prediction), that you needed to assign a probability distribution to
+<br>
+each assertion rather than simply a probability, but again, I'm not
+<br>
+aware of anyone else having done so.
+<br>
+<p>- Phil
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="14126.html">Philip Goetz: "Re: Turing Test"</a>
+<li><strong>Previous message:</strong> <a href="14124.html">Phillip Huggan: "Re: Fundamental problems"</a>
+<li><strong>In reply to:</strong> <a href="14123.html">Marc Geddes: "Fundamental problems"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="14131.html">H C: "RE: Fundamental problems"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#14125">[ date ]</a>
+<a href="index.html#14125">[ thread ]</a>
+<a href="subject.html#14125">[ subject ]</a>
+<a href="author.html#14125">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:55 MDT
+</em></small></p>
+</body>
+</html>

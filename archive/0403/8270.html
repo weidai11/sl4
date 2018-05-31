@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: 'Singularity Realism' - A few thoughts</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: 'Singularity Realism' - A few thoughts">
+<meta name="Date" content="2004-03-16">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: 'Singularity Realism' - A few thoughts</h1>
+<!-- received="Tue Mar 16 06:25:51 2004" -->
+<!-- isoreceived="20040316132551" -->
+<!-- sent="Tue, 16 Mar 2004 08:25:13 -0500" -->
+<!-- isosent="20040316132513" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: 'Singularity Realism' - A few thoughts" -->
+<!-- id="03c101c40b5a$22f9e0a0$7601a8c0@ZOMBIETHUSTRA" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="006501c40b0c$f9494c20$0100a8c0@FamilyRoom" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20'Singularity%20Realism'%20-%20A%20few%20thoughts"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Tue Mar 16 2004 - 06:25:13 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="8271.html">Ben Goertzel: "RE: What would implications be for Singularity if US a theocratic state?"</a>
+<li><strong>Previous message:</strong> <a href="8269.html">Samantha Atkins: "Re: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>In reply to:</strong> <a href="8267.html">Mark Waser: "Re: 'Singularity Realism' - A few thoughts"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="8273.html">Keith Henson: "RE: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>Reply:</strong> <a href="8273.html">Keith Henson: "RE: 'Singularity Realism' - A few thoughts"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#8270">[ date ]</a>
+<a href="index.html#8270">[ thread ]</a>
+<a href="subject.html#8270">[ subject ]</a>
+<a href="author.html#8270">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; In order for the system to self-modify programming, Sasha 
+</em><br>
+<em>&gt; should be (as you state below) in the form of the basic 
+</em><br>
+<em>&gt; Novamente data structures.  These Novamente data structures 
+</em><br>
+<em>&gt; should easily translate into XML.
+</em><br>
+<p>Right
+<br>
+<p><em>&gt; Once the program is interpreted into a combinator tree, the 
+</em><br>
+<em>&gt; source code is irrelevant.  For parsing to get it into the 
+</em><br>
+<em>&gt; tree, for storage and, particularly for retrieval, it could 
+</em><br>
+<em>&gt; be VERY useful to use a lot of the standards and 
+</em><br>
+<em>&gt; infrastructure already developed for XML.  
+</em><br>
+<p>The reason we use XML is for interoperability between Novamente and
+<br>
+other databases and software programs.
+<br>
+<p>For instance, when the NM core loads in information from a biology
+<br>
+database, it does so using XML as an intermediary (i.e., we first map
+<br>
+the bio-db into XML in a Novamente-appropriate way, then have Novamente
+<br>
+load the XML)
+<br>
+<p>And, when the NM core sends information to a user interface, it does so
+<br>
+via XML ... (a different DTD for each different type of user interface)
+<br>
+<p>But all this is just using XML as a *data language*, not using it to
+<br>
+store procedures.
+<br>
+<p><em>&gt; One thing which I 
+</em><br>
+<em>&gt; haven't seen yet in Novamente that I'm sure will be necessary 
+</em><br>
+<em>&gt; is ways to partition an atom space, label the pieces, and 
+</em><br>
+<em>&gt; provide efficient and scalable directed access to specific 
+</em><br>
+<em>&gt; pieces (and only those pieces) when you need them.
+</em><br>
+<p>Yes, we have not built that stuff yet.  We had stuff like that in
+<br>
+Webmind (Novamente's predecessor system) and will definitely need it for
+<br>
+Novamente as well.  In Webmind we used an Oracle DB for this purpose,
+<br>
+but our solution now will be XML-based.  
+<br>
+<p>Still, this is using XML for data storage.  While Atoms defining
+<br>
+procedures may be stored in this way, they're being manipulated on a
+<br>
+very coarse level (i.e. being categorized according to general qualities
+<br>
+like topic area, period of time in which they were used, etc.).  They're
+<br>
+not being manipulated &quot;as procedures&quot;, used to generate new procedures,
+<br>
+etc.
+<br>
+<p>XML is, in my view, a pain in the butt for this purpose.
+<br>
+<p>I don't share Samantha's LISP evangelism -- I like LISP in principle,
+<br>
+but personally I find it a bit annoying.  I prefer Haskell if I'm going
+<br>
+to use a functional language.  And I love Refal in principle, though I
+<br>
+haven't done much coding in it.  For Novamente, we chose C++ because we
+<br>
+were paranoid about scalability to deal effectively with massive amounts
+<br>
+of memory....  
+<br>
+<p>-- Ben G
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="8271.html">Ben Goertzel: "RE: What would implications be for Singularity if US a theocratic state?"</a>
+<li><strong>Previous message:</strong> <a href="8269.html">Samantha Atkins: "Re: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>In reply to:</strong> <a href="8267.html">Mark Waser: "Re: 'Singularity Realism' - A few thoughts"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="8273.html">Keith Henson: "RE: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>Reply:</strong> <a href="8273.html">Keith Henson: "RE: 'Singularity Realism' - A few thoughts"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#8270">[ date ]</a>
+<a href="index.html#8270">[ thread ]</a>
+<a href="subject.html#8270">[ subject ]</a>
+<a href="author.html#8270">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:46 MDT
+</em></small></p>
+</body>
+</html>

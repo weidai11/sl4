@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: formally defining emergence</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="formally defining emergence">
+<meta name="Date" content="2005-10-09">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>formally defining emergence</h1>
+<!-- received="Sun Oct  9 07:07:27 2005" -->
+<!-- isoreceived="20051009130727" -->
+<!-- sent="Sun, 9 Oct 2005 09:07:21 -0400" -->
+<!-- isosent="20051009130721" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="formally defining emergence" -->
+<!-- id="JNEIJCJJHIEAILJBFHILEEBFGHAA.ben@goertzel.org" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="200510090241.WAA32182@emerald.lightlink.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=Re:%20formally%20defining%20emergence"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Sun Oct 09 2005 - 07:07:21 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="12281.html">Ben Goertzel: "RE: Emergence"</a>
+<li><strong>Previous message:</strong> <a href="12279.html">rpwl@lightlink.com: "(no subject)"</a>
+<li><strong>In reply to:</strong> <a href="12279.html">rpwl@lightlink.com: "(no subject)"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12280">[ date ]</a>
+<a href="index.html#12280">[ thread ]</a>
+<a href="subject.html#12280">[ subject ]</a>
+<a href="author.html#12280">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; &gt; Intuitively, H(x) is to be thought of as the complexity of 
+</em><br>
+<em>&gt; producing x, and
+</em><br>
+<em>&gt; &gt; H(x,y) is to be thought of as the complexity of producing x given y as
+</em><br>
+<em>&gt; &gt; input.  This interpretation makes it plausible to assume that
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; [BTW:  my previous question was dumb:  I was assuming you were trying to
+</em><br>
+<em>&gt; say something a lot more complicated than you really were.  Apologies!]
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; This idea of the &quot;complexity of producing x&quot; now confuses me.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; I have too many questions to list.... could you help by just saying what
+</em><br>
+<em>&gt; this means, and assure me that it does not introduce hidden (i.e. 
+</em><br>
+<em>&gt; implicit)
+</em><br>
+<em>&gt; assumptions about the possible choices of E, F etc.
+</em><br>
+<p>I left it vague intentionally but there are a number of precise definitions
+<br>
+that can be plugged in here.
+<br>
+<p>The most basic one would be
+<br>
+<p>H(x) = the length of the shortest self-delimiting computer program that
+<br>
+produces x (running on some fixed, assumed Universal Turing Machine U)
+<br>
+<p>Then we'd also have
+<br>
+<p>H(x,y) = the length of the shortest self-delimiting computer program that
+<br>
+produces x, based on initial input y 
+<br>
+(running on some fixed, assumed Universal Turing Machine U)
+<br>
+<p>One elegant way to define the UTM U is to consider it as a classic Turing 
+<br>
+machine but with two tapes instead of one.  One of the tapes contains
+<br>
+the input y (or is left blank if y=0); the other tape is the standard
+<br>
+data/output tape.
+<br>
+<p>The &quot;self-delimiting&quot; bit is standard in algorithmic information theory
+<br>
+(see Chaitin's book Algorithmic Information Theory) and is necessary to
+<br>
+get the algebra of algorithmic information to work out nicely.  See
+<br>
+<p><a href="http://www.talkorigins.org/faqs/information/algorithmic.html#selfdel">http://www.talkorigins.org/faqs/information/algorithmic.html#selfdel</a>
+<br>
+<p>for the definition.  A &quot;self-delimiting code&quot; is the same as a &quot;prefix
+<br>
+code.&quot;
+<br>
+<p>There are other variations, for instance, one can modify the definition
+<br>
+of H to take into account program runtime as well as program length,
+<br>
+or the difficulty of finding H via program search (&quot;crypticity&quot;), etc.
+<br>
+But these variations don't make much difference from the perspective
+<br>
+of my email on emergence.
+<br>
+<p>-- Ben
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="12281.html">Ben Goertzel: "RE: Emergence"</a>
+<li><strong>Previous message:</strong> <a href="12279.html">rpwl@lightlink.com: "(no subject)"</a>
+<li><strong>In reply to:</strong> <a href="12279.html">rpwl@lightlink.com: "(no subject)"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12280">[ date ]</a>
+<a href="index.html#12280">[ thread ]</a>
+<a href="subject.html#12280">[ subject ]</a>
+<a href="author.html#12280">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Tue Feb 21 2006 - 04:23:04 MST
+</em></small></p>
+</body>
+</html>

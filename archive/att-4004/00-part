@@ -1,0 +1,24 @@
+On Fri, 2002-06-14 at 06:35, Martin Moore wrote:
+> 
+> Instead, as is currently becomming pretty vogue,
+> allowing the program to write itself might be a faster
+> approach, even though it seems 'inefficient' due to
+> its randomness. However, I still think that a lot of
+> these genetic models are good, but still focus too
+> heavily on creating "that one perfect seed". It's way
+> too top-down.
+
+
+In my (limited) experience, GP is only tractable for tightly constrained
+models.  For the purposes of AGI, this would mean that one would
+effectively be required to solve the problem before you could use GP to
+"solve the problem". GP is good for finding optimal solutions within
+well-defined boundaries and metrics though, at least in terms of being
+tractable for practical purposes.  AFAIK, it fairs much poorer at
+unconstrained discovery type problems.
+
+-James Rogers
+ jamesr@best.com
+
+
+

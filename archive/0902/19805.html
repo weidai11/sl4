@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: [sl4] simplistic models of capability growth</title>
+<meta name="Author" content="Johnicholas Hines (johnicholas.hines@gmail.com)">
+<meta name="Subject" content="[sl4] simplistic models of capability growth">
+<meta name="Date" content="2009-02-04">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>[sl4] simplistic models of capability growth</h1>
+<!-- received="Wed Feb  4 18:27:55 2009" -->
+<!-- isoreceived="20090205012755" -->
+<!-- sent="Wed, 4 Feb 2009 20:27:36 -0500" -->
+<!-- isosent="20090205012736" -->
+<!-- name="Johnicholas Hines" -->
+<!-- email="johnicholas.hines@gmail.com" -->
+<!-- subject="[sl4] simplistic models of capability growth" -->
+<!-- id="8bad43370902041727x20021dd3gebe08dcafdf75c3c@mail.gmail.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Johnicholas Hines (<a href="mailto:johnicholas.hines@gmail.com?Subject=Re:%20[sl4]%20simplistic%20models%20of%20capability%20growth"><em>johnicholas.hines@gmail.com</em></a>)<br>
+<strong>Date:</strong> Wed Feb 04 2009 - 18:27:36 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="19806.html">Krekoski Ross: "Re: [sl4] Uploads coming first would be good, right?"</a>
+<li><strong>Previous message:</strong> <a href="19804.html">Charles Hixson: "Re: [sl4] Uploads coming first would be good, right?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="19851.html">Petter Wingren-Rasmussen: "Re: [sl4] simplistic models of capability growth"</a>
+<li><strong>Reply:</strong> <a href="19851.html">Petter Wingren-Rasmussen: "Re: [sl4] simplistic models of capability growth"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#19805">[ date ]</a>
+<a href="index.html#19805">[ thread ]</a>
+<a href="subject.html#19805">[ subject ]</a>
+<a href="author.html#19805">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+I think it is valuable to specify models and make them concrete. Then
+<br>
+we can ask each other &quot;Are you using THIS mental model? How exactly
+<br>
+does your mental model differ?&quot;.
+<br>
+People might, with justification, criticize me for offering models
+<br>
+which are simplistic. However, I hope this message spurs people to
+<br>
+offer countermodels in a comparably concrete and specific format.
+<br>
+<p>1. Here is one model, which you might call &quot;constant capability
+<br>
+increase per effort&quot;.
+<br>
+There is one endogenous variable &quot;capability&quot; (c).
+<br>
+There is one exogenous variable &quot;effort&quot; (e).
+<br>
+There is one parameter, &quot;capability growth per effort&quot; (cpe).
+<br>
+The single equation is that the time derivative of capability is
+<br>
+proportional to effort (D[c]=e * cpe).
+<br>
+The story for this model is something like: &quot;Once upon a time, there
+<br>
+was an engineer, and she worked every day on her system. It gradually
+<br>
+got more and more capable.&quot;
+<br>
+<p>2. Here is a second model, which you might call &quot;constant capability
+<br>
+increase per capability&quot;.
+<br>
+There is one endogenous variable &quot;capability&quot; (c).
+<br>
+There is one parameter, &quot;capability growth per capability&quot; (cpc).
+<br>
+The single equation is that the time derivative of capability is
+<br>
+proportional to capability (D[c]=c * cpc).
+<br>
+The story for this model is something like: &quot;Once upon a time, a
+<br>
+system tried to improve itself. It became more and more capable, and
+<br>
+was able to improve itself faster and faster.&quot;
+<br>
+<p>3. Here is a third model, which you might call &quot;diminishing capability
+<br>
+increase per capability&quot;.
+<br>
+There is one endogenous variable &quot;capability&quot; (c).
+<br>
+There is one parameter, &quot;capability growth constant&quot; (cgc).
+<br>
+The single equation is that the time derivative of capability is
+<br>
+inversely proportional to capability (D[c]=cgc / c).
+<br>
+The story for this model is something like: &quot;Once upon a time, a
+<br>
+system tried to improve itself. It became more and more capable, but
+<br>
+each increment took more and more time.&quot;
+<br>
+<p>4. You can add the first two models together.
+<br>
+There is one endogenous variable &quot;capability&quot; (c).
+<br>
+There is one exogenous variable &quot;effort&quot; (e).
+<br>
+There are two parameters, &quot;capability growth per effort&quot; (cpe) and
+<br>
+&quot;capability growth per capability&quot; (cpc).
+<br>
+The single equation is that the time derivative of capability is the
+<br>
+sum of two components, one proportional to effort, and one
+<br>
+proportional to capability (D[c]=e * cpe + c * cpc).
+<br>
+The story for this model is something like: &quot;Once upon a time, there
+<br>
+was an engineer, and her system. They worked together on improving the
+<br>
+system's capabilities, and the system gradually got more and more
+<br>
+capable, until her improvements were eclipsed by its
+<br>
+self-improvements.&quot;
+<br>
+<p>5. You can add a threshold to get a model with linear engineering,
+<br>
+exponential growth, and a threshold (D[c]=e*cpe + (c&gt;ct?c*cpc:0)).
+<br>
+There is one endogenous variable &quot;capability&quot; (c).
+<br>
+There is one exogenous variable &quot;effort&quot; (e).
+<br>
+There are three parameters, &quot;capability growth per effort&quot; (cpe),
+<br>
+&quot;capability growth per capability&quot; (cpc), and &quot;capability threshold&quot;
+<br>
+(ct).
+<br>
+The single equation is that the time derivative of capability is the
+<br>
+sum of two components, one proportional to effort, and one which is
+<br>
+proportional to capability if capability is above the capability
+<br>
+theshold, and zero otherwise.
+<br>
+(I think this is what most AGI rhetoric uses.)
+<br>
+<p>6. This last one takes a bit of motivation. Suppose the system in
+<br>
+question has two parts, one which is modifiable by the system and one
+<br>
+which is not. The total capability of the system is a combination of
+<br>
+the two parts. But the combination is not a simple addition or
+<br>
+multiplication of figures of merit. Rather, the total capability of
+<br>
+the system is measured in &quot;speed&quot;, and each &quot;elementary cycle&quot; needs
+<br>
+to pass through both the modifiable part and the nonmodifiable part.
+<br>
+There is one endogenous variable &quot;modifiable part's speed&quot; (m).
+<br>
+There are two parameters, &quot;modifiable part's improvement per
+<br>
+capability&quot; (mpc), and &quot;nonmodifiable part's speed&quot; (n).
+<br>
+There are two equations:
+<br>
+The total capability of the system, the speed, is the inverse of the
+<br>
+sum of the inverses of the modifiable and nonmodifiable parts' speeds
+<br>
+(c = 1/((1/n)+(1/m))).
+<br>
+The time derivative of the modifiable part's speed is proportional to
+<br>
+the total capability (D[m]=mpc * c).
+<br>
+<p>Note: ALL of these are one-dimensional models. The world of
+<br>
+higher-dimensional models (e.g. separate capabilities for chess and
+<br>
+learning to learn) is entirely open.
+<br>
+<p>Johnicholas
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="19806.html">Krekoski Ross: "Re: [sl4] Uploads coming first would be good, right?"</a>
+<li><strong>Previous message:</strong> <a href="19804.html">Charles Hixson: "Re: [sl4] Uploads coming first would be good, right?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="19851.html">Petter Wingren-Rasmussen: "Re: [sl4] simplistic models of capability growth"</a>
+<li><strong>Reply:</strong> <a href="19851.html">Petter Wingren-Rasmussen: "Re: [sl4] simplistic models of capability growth"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#19805">[ date ]</a>
+<a href="index.html#19805">[ thread ]</a>
+<a href="subject.html#19805">[ subject ]</a>
+<a href="author.html#19805">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:01:04 MDT
+</em></small></p>
+</body>
+</html>

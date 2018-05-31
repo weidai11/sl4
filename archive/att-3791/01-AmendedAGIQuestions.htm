@@ -1,0 +1,591 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE>Questions about any Would-Be AGI System</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20020521;8265726">
+	<META NAME="CHANGEDBY" CONTENT="Stephen Reed">
+	<META NAME="CHANGED" CONTENT="20020521;9505942">
+	<META NAME="ProgId" CONTENT="Word.Document">
+	<META NAME="Originator" CONTENT="Microsoft Word 9">
+	<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>ben</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>ben</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>57</o:TotalTime>
+  <o:Created>2002-05-21T06:39:00Z</o:Created>
+  <o:LastSaved>2002-05-21T06:44:00Z</o:LastSaved>
+  <o:Pages>5</o:Pages>
+  <o:Words>1302</o:Words>
+  <o:Characters>7424</o:Characters>
+  <o:Company>Cognitive Bioscience</o:Company>
+  <o:Lines>61</o:Lines>
+  <o:Paragraphs>14</o:Paragraphs>
+  <o:CharactersWithSpaces>9117</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+	<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>75</w:Zoom>
+ </w:WordDocument>
+</xml><![endif]-->
+	<STYLE>
+	<!--
+		H1 { color: #000000 }
+		P { color: #000000 }
+		H2 { color: #000000 }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000">
+<P CLASS="msonormal">&nbsp;</P>
+<H1>Questions about any Would-Be AGI System</H1>
+<P CLASS="msonormal" ALIGN=CENTER>&nbsp;</P>
+<P CLASS="msonormal" ALIGN=CENTER>Ben Goertzel</P>
+<P CLASS="msonormal" ALIGN=CENTER>May 20, 2002</P>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">This question list is designed to aid in the
+comparative discussion and analysis of different approaches to
+Artificial General Intelligence (AGI).&nbsp; 
+</P>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">It is in no sense <I>complete</I>, and it is
+certainly a bit biased toward my own AGI approaches and interests, in
+spite of my efforts to make it not too severely so.&nbsp; I hope that
+near-future revisions will be less biased in this way.</P>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">For this preliminary version, feedback is sought
+on the questions themselves.&nbsp; After the question list has been
+fleshed out through feedback from others, I will provide answers for
+my own Novamente AGI design, and try to get other AGI designers to
+give their own answers.</P>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">I am less interested in reactions of the form
+&ldquo;This or that question is not relevant to my AGI system&rdquo;
+and more interested in reactions of the form &ldquo;You left out this
+question, which is very important for my AGI system.&rdquo;&nbsp;&nbsp;&nbsp;
+I assume that not all questions will be relevant to all AGI&nbsp;
+systems.</P>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Knowledge Representation</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">How are the following represented?</P>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>Concepts 
+	</P>
+	<LI><P>Types (kinds) and individuals</P>
+	<LI><P>Functional terms (e.g. &ldquo;the sum of one and two.&rdquo; 
+	&ldquo;the flower of the oak tree.&rdquo;)</P>
+	<LI><P>Term subsumption hierarchy.</P>
+	<LI><P>Relationships between concepts 
+	</P>
+	<LI><P>Argument constraints on relationships</P>
+	<LI><P>Relationship subsumption hierarchy</P>
+	<LI><P>Quantified relationships (e.g. &ldquo;Every boy loves a
+	girl&rdquo;, &ldquo;Every boy has a dog that every girl likes to
+	call by some special pet name&rdquo;) 
+	</P>
+	<LI><P>Logical operators (e.g. &ldquo;not&rdquo;, &ldquo;or&rdquo;,
+	&ldquo;and&rdquo;, &ldquo;xor&rdquo;, &ldquo;equivalent&rdquo;,
+	&ldquo;implies&rdquo;)</P>
+	<LI><P>Rules (e.g. &ldquo;if something is a dog, then it has fur.&rdquo;)</P>
+	<LI><P>Events (is the event reified with roles for actors,
+	particpants, situation, etc., and/or is the event represented mainly
+	by the actions that occur?)</P>
+	<LI><P>Actions (preconditions and effects suitable for planning)</P>
+	<LI><P>Procedures 
+	</P>
+	<LI><P>Time (e.g. &ldquo;Today is Saturday.&rdquo;, &ldquo;at night&rdquo;
+	&ldquo;Step A happens before step B.&rdquo; &ldquo;During the 1980's
+	we feared the Soviet Union.&rdquo;)</P>
+	<LI><P>Counterfactuals (e.g. &ldquo;Dracula is a vampire.&rdquo;
+	&ldquo;There are no human vampires.&rdquo;)</P>
+	<LI><P>Percepts 
+	</P>
+	<LI><P>Thoughts (considered as temporary mental phenomena, actively
+	evolving and not committed to memory) 
+	</P>
+	<LI><P>Beliefs about named concepts 
+	</P>
+	<LI><P>Beliefs about unnamed concepts 
+	</P>
+	<LI><P>Beliefs about procedures 
+	</P>
+	<LI><P>The degree/strength/certainty of a belief 
+	</P>
+	<LI><P>Hypothetical knowledge (&ldquo;Pei believes the Earth is
+	flat&rdquo;) 
+	</P>
+	<LI><P>Contextual knowledge (&ldquo;At parties, she is cute.&rdquo;)
+		</P>
+	<LI><P>Truth Maintenance (when a fact or rule is retracted, the
+	solely supported facts should be automatically retracted).</P>
+	<LI><P>Fuzzy lexical terms (&ldquo;near&rdquo; &ldquo;very close to&rdquo;
+	&ldquo;approximately&rdquo; &ldquo;sort of&rdquo; &ldquo;might be&rdquo;)</P>
+	<LI><P>Reflection -- the representation of the AGI by concepts and
+	relationships, in particular its behavior</P>
+	<LI><P>Lexicon for associating concepts with natural language words.
+	 Support for NL parsing and generation</P>
+	<LI><P>Is there an XML serialization of the knowledge store?</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Attention Allocation</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>Of the many processes the system can carry out at a given
+	time, what determines which ones get the most attention? 
+	</P>
+	<LI><P>Of the many knowledge items the system can focus on at a
+	given time, what determines which ones get the most attention? 
+	</P>
+</OL>
+<P CLASS="msonormal"><FONT SIZE=5>&nbsp;<B>Distributed Processing</B></FONT></P>
+<OL>
+	<LI><P CLASS="msonormal">&nbsp;Can the system collaborate with
+	others of its kind?</P>
+	<LI><P CLASS="msonormal">How is knowledge replicated?</P>
+	<LI><P CLASS="msonormal">How is knowledge merged when two similar
+	concepts are independently created by distributed instances of the
+	AGI</P>
+	<LI><P CLASS="msonormal">How do distributed instances of the AGI
+	collaborate to achieve goals?</P>
+	<LI><P CLASS="msonormal">What is the security model? (prevent
+	&ldquo;viruses&rdquo;).</P>
+</OL>
+<P STYLE="margin-bottom: 0cm"><B><FONT SIZE=5>Knowledge Acquisition</FONT></B></P>
+<OL>
+	<LI><P STYLE="margin-bottom: 0cm; font-weight: medium"><FONT SIZE=3>What
+	facilities are provided for acquisition of knowledge from experts?</FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm; font-weight: medium"><FONT SIZE=3>Can
+	information be extracted from text?</FONT></P>
+</OL>
+<P CLASS="msonormal">&nbsp;&nbsp;</P>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Reasoning</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">How are the following types of reasoning carried
+out?</P>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>Deduction (including planning)</P>
+	<LI><P>Induction 
+	</P>
+	<LI><P>Abduction (hypothesis formation, and best explanation for
+	observed evidence) 
+	</P>
+	<LI><P>Analogy 
+	</P>
+	<LI><P>Finding of generic &ldquo;associations&rdquo; between mental
+	entities 
+	</P>
+	<LI><P>Prediction (&ldquo;I expect that I will run much faster on
+	the new computer.&rdquo;)</P>
+	<LI><P>Classification (&ldquo;This small animal has fur and barks,
+	so it could be a dog.&rdquo;)</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Procedure Learning</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>How are new procedures learned? 
+	</P>
+	<LI><P>How are existing procedures reinforced when they lead to
+	desirable behavior? 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Goals</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>How are the system&rsquo;s goals represented? 
+	</P>
+	<LI><P>Does it have initial built-in basic goals, and if so can it
+	modify them? 
+	</P>
+	<LI><P>How does it create new subgoals and supergoals from its
+	existing goals? 
+	</P>
+	<LI><P>How do the goals guide the system&rsquo;s various processes? 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Internal Sensation (&ldquo;Feelings&rdquo;)</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>How does the system sense its own internal state? 
+	</P>
+	<LI><P>Can it create new ways of sensing its own internal state? 
+	</P>
+	<LI><P>How does the output of the system&rsquo;s
+	internal-state-sensors affect the system&rsquo;s behavior? 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Linguistics</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">How are the following processes carried out?</P>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>Noun phrase parsing (&ldquo;young computer scientists&rdquo;
+	&ldquo;laptop computer parts&rdquo;) 
+	</P>
+	<LI><P>Sentence parsing</P>
+	<LI><P>Syntactic disambiguation 
+	</P>
+	<LI><P>Semantic disambiguation 
+	</P>
+	<LI><P>Anaphor resolution 
+	</P>
+	<LI><P>Discourse (understanding the rhetorical structure of a
+	document or speech)</P>
+	<LI><P>Sentence production (generation)</P>
+	<LI><P>Transformation of nonlinguistic &ldquo;thought forms&rdquo;
+	into sentences 
+	</P>
+	<LI><P>&ldquo;Semantic mapping&rdquo; of sentences into
+	nonlinguistic thought-forms</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Perception</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>How are perceptual gestalts recognized? 
+	</P>
+	<LI><P>How are inputs from different sensory modalities merged and
+	interrelated? 
+	</P>
+	<LI><P>How are sensations turned into perceptions? 
+	</P>
+	<LI><P>Given a huge set of perceptions, how does the system
+	recognize potentially salient patterns in the set? 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Memory</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">How are the following distinctions represented,
+in terms of both structures and dynamics?</P>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>Short-term vs. long-term memory 
+	</P>
+	<LI><P>Declarative versus procedural memory 
+	</P>
+	<LI><P>The modality-dependent &ldquo;perceptual store&rdquo; aspect
+	of short-term memory, versus the &ldquo;blackboard&rdquo; aspect of
+	short-term memory 
+	</P>
+	<LI><P>Memory of perceptions versus memory of ideas 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">And:</P>
+<P CLASS="msonormal">&nbsp;</P>
+<OL START=5>
+	<LI><P>What determines when an item is &ldquo;forgotten&rdquo; from
+	the system&rsquo;s memory 
+	</P>
+	<LI><P>Is there a mechanism for saving forgotten memories in
+	long-term storage (e.g. on disk) and then retrieving them (and if
+	so, by what retrieval mechanism?) 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Specialized Cognitive Components</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">What primitive representations and/or dynamics
+are provides for dealing with</P>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>Time 
+	</P>
+	<LI><P>Space 
+	</P>
+	<LI><P>Other minds 
+	</P>
+	<LI><P>Self-perception and self-analysis 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Causality</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">How does the system represent a causal
+relationship between two:</P>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>events or event-categories 
+	</P>
+	<LI><P>processes 
+	</P>
+	<LI><P>actions taken by agents 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">What major components go into determining that
+there is a causal relation between two:</P>
+<P CLASS="msonormal">&nbsp;</P>
+<OL START=4>
+	<LI><P>Events or event categories 
+	</P>
+	<LI><P>Processes 
+	</P>
+	<LI><P>Actions taken by agents 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Special Cognitive Processes</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>How does the system go about predicting what is likely to
+	happen in a given future situation? 
+	</P>
+	<LI><P>How does the system go about dividing a set of items into
+	&ldquo;natural categories&rdquo;? 
+	</P>
+	<LI><P>If the system is given examples of items in several different
+	categories, how does it go about creating implicit or explicit
+	&ldquo;models&rdquo; that let it place a new item in an appropriate
+	one of the categories? 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Specialized Data Types</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">How does the system represent:and manipulate:</P>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>Visual data? 
+	</P>
+	<LI><P>Acoustic data? 
+	</P>
+	<LI><P>Tactile? 
+	</P>
+	<LI><P>Olfactory? 
+	</P>
+	<LI><P>Software code? 
+	</P>
+	<LI><P>Quantitative data tables? 
+	</P>
+	<LI><P>Database records? 
+	</P>
+	<LI><P>Text files? 
+	</P>
+	<LI><P>Knowledge records from repositories such as the Cyc KB or the
+	WordNet lexical KB? 
+	</P>
+	<LI><P>Mathematical knowledge 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Concept Formation</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>What is the internal structure of a &ldquo;concept&rdquo; 
+	</P>
+	<LI><P>In what sort of external relationships is a &ldquo;concept&rdquo;
+	involved? 
+	</P>
+	<LI><P>By what methods are new concepts formed? 
+	</P>
+	<LI><P>What factors determine the choice of method for
+	concept-formation in a given context?</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Integration</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>How does cognition guide perception? 
+	</P>
+	<LI><P>How does action guide perception? 
+	</P>
+	<LI><P>How do cognition, perception and action guide the process of
+	storing an item in memory, or retrieving an item from memory 
+	</P>
+	<LI><P>How do concepts relate to &ldquo;mental imagery&rdquo; 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>High-Level Structures</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>What high-level structures exist in your system? 
+	</P>
+	<LI><P>Which of these structures are explicit in the codebase and
+	which are expected to emerge dynamically? 
+	</P>
+	<LI><P>What are the primary categories of dynamics in your system? 
+	</P>
+	<LI><P>Which of these dynamics are explicit in the codebase and
+	which are expected to emerge? 
+	</P>
+	<LI><P>Does your system involve a perceptual hierarchy?&nbsp; A
+	motor hierarchy?&nbsp; Are these hierarchies interconnected?&nbsp;
+	How are they constructed?&nbsp; How do the parts of the hierarchy
+	corresponding to different sensory modality or motor components
+	interact? 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Belief Systems</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>How is a &ldquo;system of beliefs&rdquo; represented in your
+	system? 
+	</P>
+	<LI><P>What mechanisms does a belief system use to preserve itself
+	over time? 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Mind and Reality</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>How is your system&rsquo;s &ldquo;model of reality&rdquo;
+	defined? 
+	</P>
+	<LI><P>How is this model constructed? 
+	</P>
+	<LI><P>What is the relation between its model of self and its model
+	of reality? 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Creativity</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>How are fundamentally new ideas, not directly derived from
+	existing ideas in the system, created? 
+	</P>
+	<LI><P>Is there a special component of the system, special
+	structures, or special dynamics devoted to creativity? 
+	</P>
+	<LI><P>If creative thinking corresponds to a particular aspect or
+	property of your system, which one (or ones)? 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Personality</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>Will different instances of your system have different
+	&ldquo;personalities&rdquo;? 
+	</P>
+	<LI><P>Might there be multiple subpersonalities, in some sense &ndash;
+	if so, in what sense? 
+	</P>
+	<LI><P>How might different personalities be grounded in different
+	aspects of the system&rsquo;s structure and dynamics? 
+	</P>
+	<LI><P>In what ways is the system&rsquo;s understanding of itself
+	affected by its interactions with others? 
+	</P>
+	<LI><P>How is morality expressed in the system? 
+	</P>
+	<LI><P>To what extent is morality learned versus in-built?&nbsp;
+	What is the relation between learned and in-built morality in your
+	system? 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Evolution</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>Are there elements of your system that &ldquo;evolve&rdquo;
+	in the sense of surviving with probability roughly proportional to
+	&ldquo;fitness&rdquo; in some sense?&nbsp; If so, what are they? 
+	</P>
+	<LI><P>Is this evolution ecological, in the sense that the fitness
+	of one evolving entity depends on the states of other entities in
+	the system?&nbsp; If so, specify details. 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Computation Theory</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>Does your system rely heavily on (quasi) stochastic processes
+	(e.g. random number generation).&nbsp; For what purposes? 
+	</P>
+	<LI><P>What are the biggest general computational-complexity issues
+	you&rsquo;ve faced in building your system (or that you&rsquo;ll
+	envision you&rsquo;ll face) 
+	</P>
+	<LI><P>What aspects of your system&rsquo;s structure/dynamics are
+	the most difficult from a computational-complexity perspective? 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Implementation</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>What kind of hardware does the system require? 
+	</P>
+	<LI><P>If it is intended for distributed implementation, how are
+	knowledge and processes to be distributed among machines? 
+	</P>
+	<LI><P>How&nbsp; much RAM and processing power do you think will be
+	necessary to achieve roughly human-level intelligence using your
+	system? 
+	</P>
+	<LI><P>Does your system involve the &ldquo;scheduling&rdquo; of
+	different processes?&nbsp; If so how is this accomplished? 
+	</P>
+	<LI><P>Is an Application Programming Interface (API) provided that
+	helps integrate foreign systems?</P>
+	<LI><P>Is the implementation open source &ndash; entirely or in part
+	or none?</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Parameters</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">Of course, rough estimates are all that&rsquo;s
+expected for these quantitative questions.</P>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>How many non-fixed parameters does the system have? 
+	</P>
+	<LI><P>How many of these can be optimized once for a system&rsquo;s
+	whole lifetime and how many have to be tuned adaptively? 
+	</P>
+	<LI><P>How many of these have to do with the internal performance of
+	some relatively localized system component, versus having to do with
+	the interactions between components? 
+	</P>
+	<LI><P>What mechanisms are used for automatic optimization of
+	parameters, either offline or adaptively 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">&nbsp;</P>
+<H2>Experiential Learning</H2>
+<P CLASS="msonormal">&nbsp;</P>
+<OL>
+	<LI><P>What kind of environment is the system intended to operate
+	in? 
+	</P>
+	<LI><P>What kind of instruction will it be given, and by whom? 
+	</P>
+</OL>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">&nbsp;</P>
+<P CLASS="msonormal">&nbsp;</P>
+</BODY>
+</HTML>

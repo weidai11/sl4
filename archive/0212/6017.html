@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: [agi] Early Apps.</title>
+<meta name="Author" content="James Rogers (jamesr@best.com)">
+<meta name="Subject" content="Re: [agi] Early Apps.">
+<meta name="Date" content="2002-12-29">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: [agi] Early Apps.</h1>
+<!-- received="Sun Dec 29 18:39:37 2002" -->
+<!-- isoreceived="20021230013937" -->
+<!-- sent="Sun, 29 Dec 2002 17:39:02 -0800" -->
+<!-- isosent="20021230013902" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Re: [agi] Early Apps." -->
+<!-- id="BA34E3B6.E68A%jamesr@best.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="000001c2af99$93ddd100$3e553f94@GaryMiller01" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> James Rogers (<a href="mailto:jamesr@best.com?Subject=Re:%20[agi]%20Early%20Apps."><em>jamesr@best.com</em></a>)<br>
+<strong>Date:</strong> Sun Dec 29 2002 - 18:39:02 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="6018.html">Eliezer S. Yudkowsky: "Re: [agi] Early Apps."</a>
+<li><strong>Previous message:</strong> <a href="6016.html">Gary Miller: "RE: [agi] Early Apps."</a>
+<li><strong>In reply to:</strong> <a href="6016.html">Gary Miller: "RE: [agi] Early Apps."</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6018.html">Eliezer S. Yudkowsky: "Re: [agi] Early Apps."</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6017">[ date ]</a>
+<a href="index.html#6017">[ thread ]</a>
+<a href="subject.html#6017">[ subject ]</a>
+<a href="author.html#6017">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On 12/29/02 4:22 PM, &quot;Gary Miller&quot; &lt;<a href="mailto:garymiller@starband.net?Subject=Re:%20[agi]%20Early%20Apps.">garymiller@starband.net</a>&gt; wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; Each 
+</em><br>
+<em>&gt; web client would need to run a separate instance of the application also due
+</em><br>
+<em>&gt; to the bot's need to maintain context within each conversation.
+</em><br>
+<p><p>I don't know anything about your application, but couldn't a properly
+<br>
+threaded app handle this with a single process image plus a little context
+<br>
+memory.  It certainly sounds like it to me.
+<br>
+<p>&nbsp;
+<br>
+<em>&gt; I have some college students giving
+</em><br>
+<em>&gt; me a bid on a Web interface and trying to get me and inexpensive host site,
+</em><br>
+<em>&gt; but the last estimate I received from a national ISP was about $750 a month.
+</em><br>
+<p><p>[ OFFTOPIC ]
+<br>
+<p>$750/month for what?  That much money will get you a few Mbps (not even
+<br>
+oversubscribed) on a GigE fiber backbone and rackspace around here (and many
+<br>
+other parts of the country).  And these are at standard commercial rates for
+<br>
+a dedicated circuit straight to the core, not preferential rates or with
+<br>
+looser SLAs.  It sounds like you are getting ripped on prices.
+<br>
+<p>What are you looking for precisely?  Go ahead and respond offline, but I
+<br>
+might be able to help you out.  I am an original principal at one of the
+<br>
+fastest growing top-tier network providers in the world currently (and
+<br>
+attracting a good amount of buzz both for our network performance and the
+<br>
+fact that they are making money and growing while everyone else goes
+<br>
+bankrupt).  This is one of my investments that I am actively involved in on
+<br>
+a weekly basis among other things, so I can personally see what they could
+<br>
+do for you.  They continue to be exceptionally price competitive for what
+<br>
+they offer.
+<br>
+<p>[ /OFFTOPIC ]
+<br>
+<p><p><em>&gt; Note the mam(m){a|e}l in the pattern allows mammal to be spelled mamel, mamal,
+</em><br>
+<em>&gt; mammal, or mammel to allow for common misspellings.
+</em><br>
+<em>&gt; An additional Levenschtein distance calculation is also used if a less common
+</em><br>
+<em>&gt; misspelling is encountered and the pattern does not match pattern 1.
+</em><br>
+<p><p>This seems like a very brittle way of doing things.  A smart system should
+<br>
+be able to automatically read through misspellings based on the context of
+<br>
+the entire sentence.  It makes for vastly smaller memory and computational
+<br>
+requirements than trying to exhaustively search some arbitrary parameter
+<br>
+space.  Statistical methods would be better here, but you'd need a pretty
+<br>
+clever data structure to make such searches efficient.
+<br>
+<p>&nbsp;
+<br>
+<em>&gt; But 
+</em><br>
+<em>&gt; some such as the pattern for greetings can run 2400 characters in length to
+</em><br>
+<em>&gt; accomadate all of the various ways of greeting a person.
+</em><br>
+<p><p>I'm guessing that if you efficiently compressed all those greetings you are
+<br>
+testing for, it would take less than 2400 characters (or 4800 bytes, since
+<br>
+you are probably storing Unicode using .NET), probably by a fair margin.
+<br>
+Not that this is particularly important to you, but there is a theoretical
+<br>
+notion buried in there.  I realize that what you are doing is mostly chatbot
+<br>
+type stuff, but it seems incredibly exhausting, both in time and resources
+<br>
+to try and scale this.
+<br>
+<p><p>Cheers,
+<br>
+<p>-James Rogers
+<br>
+&nbsp;<a href="mailto:jamesr@best.com?Subject=Re:%20[agi]%20Early%20Apps.">jamesr@best.com</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="6018.html">Eliezer S. Yudkowsky: "Re: [agi] Early Apps."</a>
+<li><strong>Previous message:</strong> <a href="6016.html">Gary Miller: "RE: [agi] Early Apps."</a>
+<li><strong>In reply to:</strong> <a href="6016.html">Gary Miller: "RE: [agi] Early Apps."</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6018.html">Eliezer S. Yudkowsky: "Re: [agi] Early Apps."</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6017">[ date ]</a>
+<a href="index.html#6017">[ thread ]</a>
+<a href="subject.html#6017">[ subject ]</a>
+<a href="author.html#6017">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:41 MDT
+</em></small></p>
+</body>
+</html>

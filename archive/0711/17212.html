@@ -1,0 +1,262 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: UCaRtMaAI paper</title>
+<meta name="Author" content="Tim Freeman (tim@fungible.com)">
+<meta name="Subject" content="Re: UCaRtMaAI paper">
+<meta name="Date" content="2007-11-22">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: UCaRtMaAI paper</h1>
+<!-- received="Thu Nov 22 17:26:39 2007" -->
+<!-- isoreceived="20071123002639" -->
+<!-- sent="Thu, 22 Nov 2007 14:39:48 -0700" -->
+<!-- isosent="20071122213948" -->
+<!-- name="Tim Freeman" -->
+<!-- email="tim@fungible.com" -->
+<!-- subject="Re: UCaRtMaAI paper" -->
+<!-- id="20071123002425.AACA8D27A1@fungible.com" -->
+<!-- inreplyto="829AAD82866243D1B4DB43A5F196C82B@weidaim1" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Tim Freeman (<a href="mailto:tim@fungible.com?Subject=Re:%20UCaRtMaAI%20paper"><em>tim@fungible.com</em></a>)<br>
+<strong>Date:</strong> Thu Nov 22 2007 - 14:39:48 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="17213.html">Wei Dai: "Re: UCaRtMaAI paper"</a>
+<li><strong>Previous message:</strong> <a href="17211.html">Stathis Papaioannou: "Re: How to make a slave (was: Building a friendly AI)"</a>
+<li><strong>In reply to:</strong> <a href="17205.html">Wei Dai: "Re: UCaRtMaAI paper (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="17213.html">Wei Dai: "Re: UCaRtMaAI paper"</a>
+<li><strong>Reply:</strong> <a href="17213.html">Wei Dai: "Re: UCaRtMaAI paper"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#17212">[ date ]</a>
+<a href="index.html#17212">[ thread ]</a>
+<a href="subject.html#17212">[ subject ]</a>
+<a href="author.html#17212">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+From: &quot;Wei Dai&quot; &lt;<a href="mailto:weidai@weidai.com?Subject=Re:%20UCaRtMaAI%20paper">weidai@weidai.com</a>&gt;
+<br>
+<em>&gt;Actually I am not a big fan of the Speed prior.  See
+</em><br>
+<em>&gt;<a href="http://groups.google.com/group/everything-list/browse_frm/thread/411eedecc7af80d8/d818a1f516f5a368">http://groups.google.com/group/everything-list/browse_frm/thread/411eedecc7af80d8/d818a1f516f5a368</a>
+</em><br>
+<em>&gt;for a discussion between Juergen Schmidhuber and myself about it.
+</em><br>
+<p>I wanted my algorithm to be a decision procedure for do-what-we-want.
+<br>
+There is an error bound, in the sense that it would keep churning
+<br>
+until the total a-priori probability of the ignored possibilities is
+<br>
+less than the error bound.  The prior used for a-priori probability
+<br>
+was the speed prior.  The only more dominant prior I understand well
+<br>
+is the universal prior, where you don't penalize programs for running
+<br>
+too long.  If I had used the universal prior instead of the speed
+<br>
+prior, then my algorithm wouldn't have been an algorithm because it
+<br>
+would sometimes run forever.  (Another alternative is to impose an
+<br>
+arbitrary computation time bound.  I did that in an earlier draft and
+<br>
+eventually realized that I didn't have an error bound any more, which
+<br>
+is no good.)
+<br>
+<p>Do you know of a reasonable prior I could have used that dominates the
+<br>
+speed prior without breaking the algorithm?  The essential
+<br>
+requirements are that, for any explanation, we can compute answers to
+<br>
+the questions:
+<br>
+<p>* Does this explanation match the observed past and make predictions
+<br>
+&nbsp;&nbsp;about the future?
+<br>
+<p>* What predictions does it make about the future?
+<br>
+<p>* What is the a-priori probability of this explanation?
+<br>
+<p>We also have to be able to enumerate explanations in an order where the
+<br>
+total possible a-priori probability of the not-yet-enumerated
+<br>
+explanations is less than an arbitrary positive error bound.
+<br>
+<p><em>&gt;First suppose I don't know that the AI exists. If I reach for an apple in a 
+</em><br>
+<em>&gt;store, that is a good indication that I consider the benefit of owning the 
+</em><br>
+<em>&gt;apple higher than the cost of the apple. If the AI observes me reaching for 
+</em><br>
+<em>&gt;an apple without being aware of its existence, it can reasonably deduce that 
+</em><br>
+<em>&gt;fact about my utility function, and pay for the apple for me out of its own 
+</em><br>
+<em>&gt;pocket. But what happens if I do know that the AI exists? In that case I 
+</em><br>
+<em>&gt;might reach for the apple even if the benefit of the apple to me is quite 
+</em><br>
+<em>&gt;small, because I think the AI will pay for me. So then how can the AI figure 
+</em><br>
+<em>&gt;out how much I really value the apple?
+</em><br>
+<p>Good example.  If the AI knows you expect the AI to buy the apple if
+<br>
+you reach for the apple, then all the AI learns from your reaching is
+<br>
+that the value of the apple to you exceeds the effort required to
+<br>
+reach.  So the AI can enumerate all utility functions consistent with
+<br>
+that and compute lots of different possible utilities for you to get
+<br>
+the apple.  Because there's little information about you and
+<br>
+apples going into the procedure, there will be a large range of
+<br>
+possible utilites coming out.  The AI might want to periodically
+<br>
+temporarily stop helping you so it can get more information about your
+<br>
+utility function and make better decisions about how to prioritize.
+<br>
+<p>The same issue arises when raising kids -- if you give them too much
+<br>
+then everybody involved loses all sense of what's important.  It's an
+<br>
+essential issue with helping people, not something specific about this
+<br>
+algorithm.
+<br>
+<p><em>&gt;Do you think this will actually result in a *fair* comparison of 
+</em><br>
+<em>&gt;interpersonal utilities? If so why?
+</em><br>
+<p>How do you define &quot;fair&quot; here?
+<br>
+<p>Assuming there is no real definition of &quot;fair&quot;:
+<br>
+<p>The main issue here seems to be that I put a plausible algorithm for
+<br>
+&quot;do-what-we-want&quot; on the table, and we don't have any other
+<br>
+specification of &quot;do-what-we-want&quot; so there's no way to judge whether
+<br>
+the algorithm is any good.  I can see no approaches to solving that
+<br>
+problem other than implementing and running some practical
+<br>
+approximation to the algorithm.  This seems unsafe, but less unsafe
+<br>
+than a bunch of other AGI projects presently in progress that don't
+<br>
+have a model of friendliness.  I would welcome any ideas.
+<br>
+<p>If you're worried about fairness, keep in mind that unless the AI is
+<br>
+unfairly biased toward its creator, the creator seems likely to be
+<br>
+murdered.  The AI would have to have a lot of respect for its creator
+<br>
+so it doesn't murder the creator itself, and it would have to have a
+<br>
+lot of compassion for its creator if it is going to defend its creator
+<br>
+against murder attempts by others.  Back-of-the-envelope estimates are
+<br>
+at <a href="http://www.fungible.com/respect/paper.html#murder-creator">http://www.fungible.com/respect/paper.html#murder-creator</a> and
+<br>
+<a href="http://www.fungible.com/respect/paper.html#defending-creator">http://www.fungible.com/respect/paper.html#defending-creator</a>.
+<br>
+<p><em>&gt;What about my desire for greater support of classical music, versus my 
+</em><br>
+<em>&gt;neighbor's desire for more research into mind-altering drugs? It's not 
+</em><br>
+<em>&gt;always so clear...
+</em><br>
+<p>Yes, sometimes the AI will decide arbitrarily because the situation
+<br>
+really is ambiguous.  If it gets plausible answers to the important
+<br>
+questions, I'll be satisfied with it.  People really are dying from
+<br>
+many different things, the world is burning in places, etc., so there
+<br>
+are lots of obvious conclusions to draw about interpersonal comparison
+<br>
+of utilities.
+<br>
+<p><em>&gt;There is actually an infinite number of algorithms that can be used,
+</em><br>
+<em>&gt;and choosing among them is the real problem.
+</em><br>
+<p>I agree about having an infinite number of algorithms, but I don't see
+<br>
+it as a problem.  Life seems to require arbitrary choices.
+<br>
+<p>All of the algorithmic priors I've run into depend on measuring the
+<br>
+complexity of something by counting the bits in an encoded
+<br>
+representation of an algorithm.  There are infinitely many ways to do
+<br>
+the encoding, but people don't seem to mind it too much.  If you're
+<br>
+looking for indefensible arbitrary choices, the choice of what
+<br>
+language to use for knowledge representation seems less defensible
+<br>
+than the algorithm for interpersonal utility comparison we're talking
+<br>
+about here.
+<br>
+<p><pre>
+-- 
+Tim Freeman               <a href="http://www.fungible.com">http://www.fungible.com</a>           <a href="mailto:tim@fungible.com?Subject=Re:%20UCaRtMaAI%20paper">tim@fungible.com</a>
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="17213.html">Wei Dai: "Re: UCaRtMaAI paper"</a>
+<li><strong>Previous message:</strong> <a href="17211.html">Stathis Papaioannou: "Re: How to make a slave (was: Building a friendly AI)"</a>
+<li><strong>In reply to:</strong> <a href="17205.html">Wei Dai: "Re: UCaRtMaAI paper (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="17213.html">Wei Dai: "Re: UCaRtMaAI paper"</a>
+<li><strong>Reply:</strong> <a href="17213.html">Wei Dai: "Re: UCaRtMaAI paper"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#17212">[ date ]</a>
+<a href="index.html#17212">[ thread ]</a>
+<a href="subject.html#17212">[ subject ]</a>
+<a href="author.html#17212">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:01:00 MDT
+</em></small></p>
+</body>
+</html>

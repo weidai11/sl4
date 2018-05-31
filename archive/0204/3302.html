@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: PAPER: Levels of Organization in General Intelligence</title>
+<meta name="Author" content="Eugen Leitl (eugen@leitl.org)">
+<meta name="Subject" content="RE: PAPER: Levels of Organization in General Intelligence">
+<meta name="Date" content="2002-04-08">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: PAPER: Levels of Organization in General Intelligence</h1>
+<!-- received="Mon Apr 08 06:16:46 2002" -->
+<!-- isoreceived="20020408121646" -->
+<!-- sent="Mon, 8 Apr 2002 12:10:30 +0200 (CEST)" -->
+<!-- isosent="20020408101030" -->
+<!-- name="Eugen Leitl" -->
+<!-- email="eugen@leitl.org" -->
+<!-- subject="RE: PAPER: Levels of Organization in General Intelligence" -->
+<!-- id="Pine.LNX.4.33.0204081147210.29925-100000@hydrogen.leitl.org" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="000001c1ded7$a95ca300$6601a8c0@exonode" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eugen Leitl (<a href="mailto:eugen@leitl.org?Subject=RE:%20PAPER:%20Levels%20of%20Organization%20in%20General%20Intelligence"><em>eugen@leitl.org</em></a>)<br>
+<strong>Date:</strong> Mon Apr 08 2002 - 04:10:30 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3303.html">Ben Houston: "RE: PAPER: Levels of Organization in General Intelligence"</a>
+<li><strong>Previous message:</strong> <a href="3301.html">Ben Houston: "RE: PAPER: Levels of Organization in General Intelligence"</a>
+<li><strong>In reply to:</strong> <a href="3301.html">Ben Houston: "RE: PAPER: Levels of Organization in General Intelligence"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3303.html">Ben Houston: "RE: PAPER: Levels of Organization in General Intelligence"</a>
+<li><strong>Reply:</strong> <a href="3303.html">Ben Houston: "RE: PAPER: Levels of Organization in General Intelligence"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3302">[ date ]</a>
+<a href="index.html#3302">[ thread ]</a>
+<a href="subject.html#3302">[ subject ]</a>
+<a href="author.html#3302">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Haven't read the paper myself yet.
+<br>
+<p>On Mon, 8 Apr 2002, Ben Houston wrote:
+<br>
+<p><em>&gt; &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+</em><br>
+<em>&gt; Parallelism on the hardware level is currently supported by symmetric
+</em><br>
+<em>&gt; multiprocessing chip architectures [Hwang98], NOW
+</em><br>
+<p>I would have mentioned SIMD in a register here, which most modern CPUs
+<br>
+utilize for multimedia operations speedup, and which already routinely
+<br>
+operates on 64 bit broad registers, with the trend going up. SMP is a
+<br>
+crappy kind of parallelism, since limited to non-memory-bottlenecked codes
+<br>
+which don't thrash the cache -- an unlikely assumption for AI.
+<br>
+<p><em>&gt; (network-of-workstations) clustering [Anderson95] and Beowulf clustering
+</em><br>
+<em>&gt; [Becker95], and message-passing APIs such as PVM [Geist93] and MPI
+</em><br>
+<p>PVM isn't really a message-passing API, since it assumes a global shared
+<br>
+memory paradigm, which is unphysical and hence doesn't scale. Due to
+<br>
+unavailability of message-passing hardware supporting PVM most PVM
+<br>
+implementations emulate it by using MPI as transport layer.
+<br>
+<p><em>&gt; [Gropp94].  However, software-level parallelism is not handled well by
+</em><br>
+<em>&gt; present-day languages and is therefore likely to present one of the
+</em><br>
+<em>&gt; greatest challenges.
+</em><br>
+<p>Indeedy.
+<br>
+<p><em>&gt; &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; I've seen some truly amazing things done in the computational
+</em><br>
+<em>&gt; pharmacology field dealing with cheap, but massive parallelization.
+</em><br>
+<p>Most of pharmacology is virtual screening/docking, which is embarassingly 
+<br>
+parallel. Basically it's a parametrized run, where each node adresses a 
+<br>
+tiny subset of search space.
+<br>
+<p><em>&gt; Basically, a lot of short cuts are available in the parallelization of
+</em><br>
+<em>&gt; an algorithm once you've solidified it.  In order words making a
+</em><br>
+<em>&gt; parallel problem solving is difficult and cost in the general case but
+</em><br>
+<em>&gt; in a specific case it can be quite cheap.  The field of computational
+</em><br>
+<em>&gt; pharmacology is working with special purpose multi-teraflop machines
+</em><br>
+<em>&gt; that cost less than $1,000,000 US for a year or so now.
+</em><br>
+<p>I had the impression that field was dominated by COTS machines (at least
+<br>
+most sales for COTS machines come from there). I'm not aware of any
+<br>
+current dedicated hardware for pharma screening, could you give us a few
+<br>
+pointers?
+<br>
+&nbsp;
+<br>
+<em>&gt; &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+</em><br>
+<em>&gt; Even if software parallelism were well-supported, AI developers will
+</em><br>
+<em>&gt; still need to spend time explicitly thinking on how to parallelize
+</em><br>
+<em>&gt; cognitive processes - human cognition may be massively parallel on the
+</em><br>
+<em>&gt; lower levels, but the overall flow of cognition is still serial.
+</em><br>
+<em>&gt; &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Cognition, in my opinion, is quite parallel at all levels.  There are,
+</em><br>
+<em>&gt; in my understanding, only a few bottlenecks in the brain that forces
+</em><br>
+<em>&gt; things to become serial.  An obvious example would be the serial nature
+</em><br>
+<em>&gt; of linguistic output.
+</em><br>
+<p>There's a big difference between what introspection tells you, and between 
+<br>
+what objective measurements tell you. And the latter show plainly that 
+<br>
+introspection is dead wrong. A few high-order signatures are serial, 
+<br>
+that's true, but the processes themselves are massively parallel.
+<br>
+&nbsp;
+<br>
+<em>&gt; &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+</em><br>
+<em>&gt; We know it is possible to evolve a general intelligence that runs on a
+</em><br>
+<em>&gt; hundred trillion synapses with characteristic limiting speeds of
+</em><br>
+<em>&gt; approximately 200 spikes per second.
+</em><br>
+<em>&gt; &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; 200 spikes/sec is probably the median for the brain.  Some neurons I've
+</em><br>
+<em>&gt; studied in my courses have upper limits around 1000 spikes/sec.
+</em><br>
+<p>The spikes/s are a misleading metric, if timing signals is being used, or 
+<br>
+if pattern-based coding on multiple fibers is being used. We have evidence 
+<br>
+that this is the case.
+<br>
+&nbsp;
+<br>
+<em>&gt; Neglect the sensory and motor systems I believe that in the CNS 'S'
+</em><br>
+<em>&gt; would be upwards of at least 5 as a result of the DAG-like arrangements
+</em><br>
+<em>&gt; of the signal processing pathways -- ignoring backwards, regulatory
+</em><br>
+<em>&gt; projections. 
+</em><br>
+<p>It seems to depend on the complexity of the stimuli, and on signalling
+<br>
+distance. Short reflexory pathways (blinking reflex) is different from a
+<br>
+high-order processing (adjustment of steering wheel when evading a sudden
+<br>
+obstacle on the road).
+<br>
+&nbsp;&nbsp;
+<br>
+[rest snipped]
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3303.html">Ben Houston: "RE: PAPER: Levels of Organization in General Intelligence"</a>
+<li><strong>Previous message:</strong> <a href="3301.html">Ben Houston: "RE: PAPER: Levels of Organization in General Intelligence"</a>
+<li><strong>In reply to:</strong> <a href="3301.html">Ben Houston: "RE: PAPER: Levels of Organization in General Intelligence"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3303.html">Ben Houston: "RE: PAPER: Levels of Organization in General Intelligence"</a>
+<li><strong>Reply:</strong> <a href="3303.html">Ben Houston: "RE: PAPER: Levels of Organization in General Intelligence"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3302">[ date ]</a>
+<a href="index.html#3302">[ thread ]</a>
+<a href="subject.html#3302">[ subject ]</a>
+<a href="author.html#3302">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:38 MDT
+</em></small></p>
+</body>
+</html>

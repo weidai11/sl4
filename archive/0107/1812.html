@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Languages and AI</title>
+<meta name="Author" content="Ben Goertzel (ben@webmind.com)">
+<meta name="Subject" content="RE: Languages and AI">
+<meta name="Date" content="2001-07-20">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Languages and AI</h1>
+<!-- received="Fri Jul 20 20:52:53 2001" -->
+<!-- isoreceived="20010721025253" -->
+<!-- sent="Fri, 20 Jul 2001 20:24:30 -0400" -->
+<!-- isosent="20010721002430" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@webmind.com" -->
+<!-- subject="RE: Languages and AI" -->
+<!-- id="NDBBIBGFAPPPBODIPJMMIEPGFMAA.ben@webmind.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="3B58AE9F.B430AD79@pobox.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@webmind.com?Subject=RE:%20Languages%20and%20AI"><em>ben@webmind.com</em></a>)<br>
+<strong>Date:</strong> Fri Jul 20 2001 - 18:24:30 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1813.html">Aaron McBride: "Re: Flare improvements"</a>
+<li><strong>Previous message:</strong> <a href="1811.html">Ben Goertzel: "RE: Introspection Capabilities in Java (RE: Languages and AI)"</a>
+<li><strong>In reply to:</strong> <a href="1800.html">Eliezer S. Yudkowsky: "Re: Languages and AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1802.html">Ben Houston: "read/write on parse tree program representation (RE: Languages and AI)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1812">[ date ]</a>
+<a href="index.html#1812">[ thread ]</a>
+<a href="subject.html#1812">[ subject ]</a>
+<a href="author.html#1812">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; &quot;B&quot;, of course.  There is no conceivable benefit to internally
+</em><br>
+<em>&gt; representing the brackets and so on.  &quot;XML&quot;, for our purpose, means &quot;tree
+</em><br>
+<em>&gt; structure in which adding new nodes or new node types does not destroy the
+</em><br>
+<em>&gt; integrity of existing data&quot;.
+</em><br>
+<em>&gt;
+</em><br>
+<p>OK, Eli, I am starting to see what you're trying to get at here.  I'll print
+<br>
+up your documentation and read it carefully and think about it more.  All
+<br>
+the XML mentions actually distracted me from the important points about what
+<br>
+you're trying to do.  Actually, XML is almost entirely irrelevant to what
+<br>
+you're trying to do.
+<br>
+<p>What is important about your proposal is the idea of making a programming
+<br>
+language with *efficient &amp; robust self-modification* as a design goal.
+<br>
+<p>But, I'm afraid that the Flare proposal you've created so far doesn't come
+<br>
+very close to presenting something that could be given to a programmer to
+<br>
+implement, with any plausible hope of coming up with a usable
+<br>
+implementation.
+<br>
+<p>I suspect that making an internal structure that allows modifications
+<br>
+robustly &amp; efficiently, AND is reasonably efficient when executing, may be a
+<br>
+very difficult detailed design problem.  It doesn't need a programmer yet,
+<br>
+and it doesn't need an open-source-style gang of programmers.  It needs a
+<br>
+lot of hard thinking on the part of a real expert in compiler design.
+<br>
+<p>Linux did well with a gang of coders of varying ability and insight, but
+<br>
+Linux was just a port of Unix to a different hardware platform.  What you're
+<br>
+talking about here is an internal programming language representation that
+<br>
+has different mathematical properties than the standard ones.
+<br>
+<p>Saying that the internal representation will be a tree gets you about 10% of
+<br>
+the way there.  The hard part is guaranteeing that representing common
+<br>
+programming constructions (elementary ones, and composite ones) is done in
+<br>
+an efficiently modifiable and yet efficiently executable way.
+<br>
+Multithreading and memory allocation are going to be particularly
+<br>
+interesting issues here, as will be dynamic binding if it's allowed...
+<br>
+<p>I don't think you should yet be seeking a programmer for this project.  I
+<br>
+think you should be seeking an expert design group to work out formally how
+<br>
+this thing should work inside, to some level of detail.  Most
+<br>
+optimistically, this will take several months of effort.  And then it will
+<br>
+be time to recruit a programmer, or more.
+<br>
+<p><p>-- Ben
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1813.html">Aaron McBride: "Re: Flare improvements"</a>
+<li><strong>Previous message:</strong> <a href="1811.html">Ben Goertzel: "RE: Introspection Capabilities in Java (RE: Languages and AI)"</a>
+<li><strong>In reply to:</strong> <a href="1800.html">Eliezer S. Yudkowsky: "Re: Languages and AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1802.html">Ben Houston: "read/write on parse tree program representation (RE: Languages and AI)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1812">[ date ]</a>
+<a href="index.html#1812">[ thread ]</a>
+<a href="subject.html#1812">[ subject ]</a>
+<a href="author.html#1812">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:37 MDT
+</em></small></p>
+</body>
+</html>

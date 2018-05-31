@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Towards a prototype mini-AI</title>
+<meta name="Author" content="Mitchell Porter (mitchtemporarily@hotmail.com)">
+<meta name="Subject" content="RE: Towards a prototype mini-AI">
+<meta name="Date" content="2003-01-31">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Towards a prototype mini-AI</h1>
+<!-- received="Fri Jan 31 22:24:51 2003" -->
+<!-- isoreceived="20030201052451" -->
+<!-- sent="Sat, 01 Feb 2003 05:11:20 +0000" -->
+<!-- isosent="20030201051120" -->
+<!-- name="Mitchell Porter" -->
+<!-- email="mitchtemporarily@hotmail.com" -->
+<!-- subject="RE: Towards a prototype mini-AI" -->
+<!-- id="F1558SPIeZeWR5CIvLk0000b91e@hotmail.com" -->
+<!-- inreplyto="Towards a prototype mini-AI" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Mitchell Porter (<a href="mailto:mitchtemporarily@hotmail.com?Subject=RE:%20Towards%20a%20prototype%20mini-AI"><em>mitchtemporarily@hotmail.com</em></a>)<br>
+<strong>Date:</strong> Fri Jan 31 2003 - 22:11:20 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="6138.html">Ben Goertzel: "RE: Towards a prototype mini-AI"</a>
+<li><strong>Previous message:</strong> <a href="6136.html">Eliezer S. Yudkowsky: "Visiting New York, 20-23rd"</a>
+<li><strong>Maybe in reply to:</strong> <a href="6129.html">Mitchell Porter: "Towards a prototype mini-AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6138.html">Ben Goertzel: "RE: Towards a prototype mini-AI"</a>
+<li><strong>Reply:</strong> <a href="6138.html">Ben Goertzel: "RE: Towards a prototype mini-AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6137">[ date ]</a>
+<a href="index.html#6137">[ thread ]</a>
+<a href="subject.html#6137">[ subject ]</a>
+<a href="author.html#6137">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Ben G:
+<br>
+<p><em>&gt;you must be aware that the step from your informal sketch to something 
+</em><br>
+<em>&gt;vaguely workable is a HUGE step with numerous difficult substeps...
+</em><br>
+<p>What I want to see is a pseudocode schema for a general AI: the
+<br>
+&quot;Hello, world&quot; of LOGI-compliant programming, something you might
+<br>
+find on page 1 of a SIAI textbook for seed AI programmers. Even
+<br>
+if Novamente meets all the AGI criteria, it's a mature project
+<br>
+and is way too big and sophisticated for a print-out of source
+<br>
+code to be enlightening. I want a minimal example of the proposed
+<br>
+architecture, just a few dozen or a few hundred lines long.
+<br>
+<p>What follows is not exactly LOGI-compliant, but it might make
+<br>
+things clearer. Suppose I say: &quot;Lo, the ideal AI has three parts:
+<br>
+a feature extractor, a concept generator, and a goal chaser.
+<br>
+<p>* The feature extractor looks upon the perceptual input and
+<br>
+determines whether certain primitive features are satisfied.
+<br>
+* The concept generator proposes 'concepts', logical conjunctions
+<br>
+of the primitive features, in terms of which a conceptual
+<br>
+representation is produced from the list of current features.
+<br>
+* The goal chaser proposes actions, intended to bring about a
+<br>
+specified goal state, by applying its heuristics to the state of
+<br>
+affairs indicated by the conceptual representation.&quot;
+<br>
+<p>Okay, so that's my design idea in natural language. Now if I add,
+<br>
+in my barbaric personal parody of C:
+<br>
+<p>main()
+<br>
+{
+<br>
+somedatatype inputData = /* WHATEVER */ ;
+<br>
+boolean goalStateReached = /* some condition */ ;
+<br>
+extractFeatures(inputData);
+<br>
+constructRepresentation();
+<br>
+while(not(goalStateReached)) {chaseGoal()};
+<br>
+}
+<br>
+<p>extractFeatures(object)
+<br>
+{
+<br>
+for(i=0;i&gt;numPrimitiveFeatures;i++)
+<br>
+&nbsp;&nbsp;{feature[i] = featureDetector[i,object];};
+<br>
+}
+<br>
+<p>constructRepresentation()
+<br>
+{
+<br>
+for(i=0;i&gt;numConcepts;i++)
+<br>
+&nbsp;&nbsp;{if(satisfyConcept(i,feature[])) {addRepresentation(i)}};
+<br>
+&nbsp;&nbsp;/* the 'representation' merely lists the 'concepts'
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;satisfied by the list of features */
+<br>
+}
+<br>
+<p>chaseGoal()
+<br>
+{
+<br>
+applyHeuristics();
+<br>
+generateConcept(criteria);
+<br>
+constructRepresentation();
+<br>
+}
+<br>
+<p>generateConcept()
+<br>
+{
+<br>
+&nbsp;&nbsp;/* pick out a new list of features according to criteria,
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;declare that this is concept number (numConcepts) */
+<br>
+&nbsp;&nbsp;numConcepts++;
+<br>
+}
+<br>
+<p>featureDetector()
+<br>
+{ /* specialized code */ }
+<br>
+<p>... etc., etc., I think it makes a little clearer what I was
+<br>
+talking about to begin with, right? In particular, it makes
+<br>
+it clearer what I had in mind for the *implementation* of
+<br>
+my cognitive concepts.
+<br>
+<p>Again, I want to emphasize: I'm not talking of a schema for a
+<br>
+*seed AI*, but of a schema for a *general AI*. A seed AI is a
+<br>
+highly particular subspecies of general AI, namely one that
+<br>
+is optimized for self-enhancement. A seed AI will necessarily
+<br>
+conform to the general-AI schema, but is likely to have enough
+<br>
+specific architectural properties that it deserves its own
+<br>
+schema (see part 2 of the textbook).
+<br>
+<p><p>_________________________________________________________________
+<br>
+MSN 8 with e-mail virus protection service: 2 months FREE*  
+<br>
+<a href="http://join.msn.com/?page=features/virus">http://join.msn.com/?page=features/virus</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="6138.html">Ben Goertzel: "RE: Towards a prototype mini-AI"</a>
+<li><strong>Previous message:</strong> <a href="6136.html">Eliezer S. Yudkowsky: "Visiting New York, 20-23rd"</a>
+<li><strong>Maybe in reply to:</strong> <a href="6129.html">Mitchell Porter: "Towards a prototype mini-AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6138.html">Ben Goertzel: "RE: Towards a prototype mini-AI"</a>
+<li><strong>Reply:</strong> <a href="6138.html">Ben Goertzel: "RE: Towards a prototype mini-AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6137">[ date ]</a>
+<a href="index.html#6137">[ thread ]</a>
+<a href="subject.html#6137">[ subject ]</a>
+<a href="author.html#6137">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:41 MDT
+</em></small></p>
+</body>
+</html>

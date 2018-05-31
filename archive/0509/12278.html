@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: The Relevance of Complex Systems</title>
+<meta name="Author" content="Michael Wilson (mwdestinystar@yahoo.co.uk)">
+<meta name="Subject" content="Re: The Relevance of Complex Systems">
+<meta name="Date" content="2005-09-08">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: The Relevance of Complex Systems</h1>
+<!-- received="Thu Sep  8 23:35:18 2005" -->
+<!-- isoreceived="20050909053518" -->
+<!-- sent="Fri, 9 Sep 2005 06:35:15 +0100 (BST)" -->
+<!-- isosent="20050909053515" -->
+<!-- name="Michael Wilson" -->
+<!-- email="mwdestinystar@yahoo.co.uk" -->
+<!-- subject="Re: The Relevance of Complex Systems" -->
+<!-- id="20050909053515.1584.qmail@web26709.mail.ukl.yahoo.com" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="d7e54a6c050908192875495f85@mail.gmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Michael Wilson (<a href="mailto:mwdestinystar@yahoo.co.uk?Subject=Re:%20The%20Relevance%20of%20Complex%20Systems"><em>mwdestinystar@yahoo.co.uk</em></a>)<br>
+<strong>Date:</strong> Thu Sep 08 2005 - 23:35:15 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="12279.html">J. Andrew Rogers: "Re: Parallelism (Re: Introduction)"</a>
+<li><strong>Previous message:</strong> <a href="12277.html">Tennessee Leeuwenburg: "Evolution still leaving its critics for dead"</a>
+<li><strong>In reply to:</strong> <a href="12274.html">Joel Peter William Pitt: "Re: The Relevance of Complex Systems"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12280.html">Tennessee Leeuwenburg: "Re: The Relevance of Complex Systems"</a>
+<li><strong>Reply:</strong> <a href="12280.html">Tennessee Leeuwenburg: "Re: The Relevance of Complex Systems"</a>
+<li><strong>Reply:</strong> <a href="12294.html">Phil Goetz: "Nature isn't so sloppy"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12278">[ date ]</a>
+<a href="index.html#12278">[ thread ]</a>
+<a href="subject.html#12278">[ subject ]</a>
+<a href="author.html#12278">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Joel Peter William Pitt wrote:
+<br>
+<em>&gt; The states in a chaotic system *are* able to be predicted with the
+</em><br>
+<em>&gt; knowledge of initial conditions and the rules they follow. However
+</em><br>
+<em>&gt; any slight  deviation or error in the initial conditions result in
+</em><br>
+<em>&gt; the system following different trajectories - so, in the real world
+</em><br>
+<em>&gt; a chaotic system is deterministic, but we can't predict it's future
+</em><br>
+<p>Correct. When engineers design systems, they make extensive use of
+<br>
+state relationships that act as compression functions, mapping a
+<br>
+large range of input states onto a smaller range of output states
+<br>
+(strictly, they enforce specific sharp or near sharp set constraints
+<br>
+on the state of the cause/input and the state of the effect/output).
+<br>
+Imagine a buffer in digital electronics. There is an infinite range
+<br>
+of input potentials, but all the input states below the threshold
+<br>
+cause an output of 0, while all the outputs above the threshold
+<br>
+result in an output of 1. The buffer has compressed a huge range of
+<br>
+input states down to two, or if you want to account for the slight
+<br>
+variances in output it has enforced the constraints 'input state
+<br>
+member of above_threshold -&gt; output state member of on_states'
+<br>
+and 'input state member of below_threshold -&gt; output state member
+<br>
+of off_states'. Practically the constraint will always very
+<br>
+slightly fuzzy, because below_threshold and above_threshold will be
+<br>
+fuzzy sets that aren't quite disjoint. But because we know that
+<br>
+on_states is a very small subset of above_threshold, and that
+<br>
+off_states is a small sharp subset of below_threshold, and that
+<br>
+these two /are/ disjoint, we can string indefinite numbers of logic
+<br>
+gates together and reliably predict the final state of any
+<br>
+cycle-free network. Synapses are similar but less reliable.
+<br>
+<p>The end result is that we can design highly ordered systems (and
+<br>
+highly useful) systems by employing state space compression. These
+<br>
+systems can be combined by deductive reasoning into supersystems
+<br>
+that we can reliably predict will work before we actually build
+<br>
+them, wheras if we were working with chaos we'd wouldn't be able
+<br>
+to improve much on trial-and-error.
+<br>
+<p>Now the curious thing about AGIs are that they are the ultimate
+<br>
+in state compression functions. When Eliezer talks about
+<br>
+building a 'really powerful optimisation process', he is talking
+<br>
+about building a system that will (reliably) squeeze all the
+<br>
+probability mass in the PDF over possible future histories into
+<br>
+a small subset that the goal system defines as desireable. This
+<br>
+is the very definition of 'goal seeking process'; a process
+<br>
+which predictably tends to steer the state of the world into
+<br>
+desireable states, though the intermediate states and means it
+<br>
+uses to do that may not be so predictable.
+<br>
+<p>In a Bayesian AGI, absolutely everything happens because it is
+<br>
+suspected of helping to achieve some goal. This is what 'causally
+<br>
+clean' means, and it means that the kind of predictability that
+<br>
+applies to the AGI as a whole continues to apply on a more local
+<br>
+scale as you drill down into the components. An AGI which
+<br>
+generates actions by a less rigorous mechanism will probably not
+<br>
+show the same kind of predictability.
+<br>
+<p><em>&gt; When one tunes a car you adjust timing and other variables in
+</em><br>
+<em>&gt; order to get the emergent behaviour of a working car
+</em><br>
+<p>If a 'working car' is emergent behaviour, then the behaviour of
+<br>
+any system that is a collection of subcomponents is 'emergent'
+<br>
+(regardless of predictability), and the term becomes fairly useless.
+<br>
+<p>&nbsp;* Michael Wilson
+<br>
+<p><p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+___________________________________________________________ 
+<br>
+Yahoo! Messenger - NEW crystal clear PC to PC calling worldwide with voicemail <a href="http://uk.messenger.yahoo.com">http://uk.messenger.yahoo.com</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="12279.html">J. Andrew Rogers: "Re: Parallelism (Re: Introduction)"</a>
+<li><strong>Previous message:</strong> <a href="12277.html">Tennessee Leeuwenburg: "Evolution still leaving its critics for dead"</a>
+<li><strong>In reply to:</strong> <a href="12274.html">Joel Peter William Pitt: "Re: The Relevance of Complex Systems"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12280.html">Tennessee Leeuwenburg: "Re: The Relevance of Complex Systems"</a>
+<li><strong>Reply:</strong> <a href="12280.html">Tennessee Leeuwenburg: "Re: The Relevance of Complex Systems"</a>
+<li><strong>Reply:</strong> <a href="12294.html">Phil Goetz: "Nature isn't so sloppy"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12278">[ date ]</a>
+<a href="index.html#12278">[ thread ]</a>
+<a href="subject.html#12278">[ subject ]</a>
+<a href="author.html#12278">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:52 MDT
+</em></small></p>
+</body>
+</html>

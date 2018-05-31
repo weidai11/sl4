@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: [sl4] A model of RSI</title>
+<meta name="Author" content="Stuart Armstrong (dragondreaming@googlemail.com)">
+<meta name="Subject" content="Re: [sl4] A model of RSI">
+<meta name="Date" content="2008-09-17">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: [sl4] A model of RSI</h1>
+<!-- received="Wed Sep 17 08:33:52 2008" -->
+<!-- isoreceived="20080917143352" -->
+<!-- sent="Wed, 17 Sep 2008 15:30:49 +0100" -->
+<!-- isosent="20080917143049" -->
+<!-- name="Stuart Armstrong" -->
+<!-- email="dragondreaming@googlemail.com" -->
+<!-- subject="Re: [sl4] A model of RSI" -->
+<!-- id="38f493f10809170730o54943f39r9253c36108704b92@mail.gmail.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="595898.4002.qm@web51903.mail.re2.yahoo.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Stuart Armstrong (<a href="mailto:dragondreaming@googlemail.com?Subject=Re:%20[sl4]%20A%20model%20of%20RSI"><em>dragondreaming@googlemail.com</em></a>)<br>
+<strong>Date:</strong> Wed Sep 17 2008 - 08:30:49 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="19347.html">Matt Mahoney: "Re: [sl4] A model of RSI"</a>
+<li><strong>Previous message:</strong> <a href="19345.html">Mikael Hall: "Re: [sl4] A model of RSI"</a>
+<li><strong>In reply to:</strong> <a href="19344.html">Matt Mahoney: "Re: [sl4] A model of RSI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="19347.html">Matt Mahoney: "Re: [sl4] A model of RSI"</a>
+<li><strong>Reply:</strong> <a href="19347.html">Matt Mahoney: "Re: [sl4] A model of RSI"</a>
+<li><strong>Reply:</strong> <a href="19349.html">Bryan Bishop: "Re: [sl4] A model of RSI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#19346">[ date ]</a>
+<a href="index.html#19346">[ thread ]</a>
+<a href="subject.html#19346">[ subject ]</a>
+<a href="author.html#19346">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; I think you are right that we can't distinguish between code and data. If we use the definitions in my paper then there is no difference between RSI (the program rewriting itself) and a simple program with a goal (meaning that the utility of the output would increase if its run time limit were relaxed).
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; So how could RSI be defined in a meaningful way?
+</em><br>
+<p>By engineering, not mathematics. A RSI program with a finite set of
+<br>
+data is mathematically equivalent to a universal Turing machine
+<br>
+running a fixed integer. But this equivalence is virtually never used
+<br>
+in practice, because it's nearly impossible to calculate and nearly
+<br>
+meaningless when you do so!
+<br>
+<p>So a RSI has to be a statement about the actual architecture of a
+<br>
+program, not about the equivalent Turing machine. Your model seems
+<br>
+acceptable as a definition, as far as I can tell (there will be
+<br>
+others). A heuristic definition of RSI could be a program in an
+<br>
+architecture that returns, after some time, to state similar to the
+<br>
+one it started with, except with an improvement. The formal definition
+<br>
+would be given by specifying this architechture. For instance, you
+<br>
+could demand that a program has to start in a certain isolated
+<br>
+computer, with a certain amount of free space, always accepting
+<br>
+certain inputs. Subject to these constraints, a RSI makes sense.
+<br>
+<p>As an aside, the restriction from Kolmogorov complexity in your paper
+<br>
+isn't actually very restrictive. Real programs are hopelessly
+<br>
+inefficient for their length, even more so if you break them down into
+<br>
+machine code. There are vast possibilities for improvement; for
+<br>
+instance, P1 could incoporate the instruction &quot;first, wait ten million
+<br>
+years, then start doing stuff&quot;, and each subsequent P knocks one year
+<br>
+off this total. The Kolmogorov complexity of P10 000 000 is slightly
+<br>
+lower than P1, but I know which program I'd want to use...
+<br>
+<p>Stuart
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="19347.html">Matt Mahoney: "Re: [sl4] A model of RSI"</a>
+<li><strong>Previous message:</strong> <a href="19345.html">Mikael Hall: "Re: [sl4] A model of RSI"</a>
+<li><strong>In reply to:</strong> <a href="19344.html">Matt Mahoney: "Re: [sl4] A model of RSI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="19347.html">Matt Mahoney: "Re: [sl4] A model of RSI"</a>
+<li><strong>Reply:</strong> <a href="19347.html">Matt Mahoney: "Re: [sl4] A model of RSI"</a>
+<li><strong>Reply:</strong> <a href="19349.html">Bryan Bishop: "Re: [sl4] A model of RSI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#19346">[ date ]</a>
+<a href="index.html#19346">[ thread ]</a>
+<a href="subject.html#19346">[ subject ]</a>
+<a href="author.html#19346">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:01:03 MDT
+</em></small></p>
+</body>
+</html>

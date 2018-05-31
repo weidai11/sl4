@@ -1,0 +1,412 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Calculemus</title>
+<meta name="Author" content="Christian Szegedy (szegedy@or.uni-bonn.de)">
+<meta name="Subject" content="Re: Calculemus">
+<meta name="Date" content="2004-11-10">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Calculemus</h1>
+<!-- received="Wed Nov 10 04:22:00 2004" -->
+<!-- isoreceived="20041110112200" -->
+<!-- sent="Wed, 10 Nov 2004 13:07:51 +0100" -->
+<!-- isosent="20041110120751" -->
+<!-- name="Christian Szegedy" -->
+<!-- email="szegedy@or.uni-bonn.de" -->
+<!-- subject="Re: Calculemus" -->
+<!-- id="41920497.9020007@or.uni-bonn.de" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="JNEIJCJJHIEAILJBFHILMEPJCLAA.ben@goertzel.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Christian Szegedy (<a href="mailto:szegedy@or.uni-bonn.de?Subject=Re:%20Calculemus"><em>szegedy@or.uni-bonn.de</em></a>)<br>
+<strong>Date:</strong> Wed Nov 10 2004 - 05:07:51 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="10270.html">Ben Goertzel: "RE: Calculemus"</a>
+<li><strong>Previous message:</strong> <a href="10268.html">Christian Szegedy: "Re: Memes and War [was: Tomorrow is a new day]"</a>
+<li><strong>In reply to:</strong> <a href="10265.html">Ben Goertzel: "RE: Calculemus"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="10270.html">Ben Goertzel: "RE: Calculemus"</a>
+<li><strong>Reply:</strong> <a href="10270.html">Ben Goertzel: "RE: Calculemus"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#10269">[ date ]</a>
+<a href="index.html#10269">[ thread ]</a>
+<a href="subject.html#10269">[ subject ]</a>
+<a href="author.html#10269">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Ben Goertzel wrote:
+<br>
+<p><em>&gt;So I'm wondering if you've thought through any of the details of how to make
+</em><br>
+<em>&gt;an AI based on mathematical deduction of the form used in contemporary
+</em><br>
+<em>&gt;theorem-provers, and mathematical optimization of the form used in
+</em><br>
+<em>&gt;contemporary computer algebra systems.
+</em><br>
+<em>&gt;
+</em><br>
+I don't try to pretend being an expert in this area. I do *not* have my own
+<br>
+answer to AI, the Universe and Everything. 
+<br>
+However, Hutters and Schmidhubers works are good examples of such
+<br>
+approaches. I do not want to suggest that the &quot;Goedel machine&quot; is
+<br>
+practical (I expressed my critiques on this list), still I think that the
+<br>
+direction is right.
+<br>
+<p>Of course, you are right if you resetrict yourself to &quot;contemporary&quot; 
+<br>
+systems,
+<br>
+but I think that several shortcomings of those systems are rooted
+<br>
+in the separation of deduction and optimization.
+<br>
+<p>You seem to differentiate between traditional timeless extact
+<br>
+deduction and more stochastic indeterministic human-like reasoning.
+<br>
+Of course this distinction is justified to some extent, but I believe that
+<br>
+the latter can be very well formulated in the framework of mathematical
+<br>
+optimization.
+<br>
+<p>For example, if you look at the classical (simple) theory of neural networks
+<br>
+from the optimization point of view, it turnes out that algorithms
+<br>
+based on them mostly perform a special primal-dual subgradient
+<br>
+method based on Lagrangian relaxation. This does not mean that all such
+<br>
+subgradient methods can be described by neural subnetworks.
+<br>
+For practical pupropses, non-neural type subgradient methods are
+<br>
+the base of several successful domain-specific optimization algorithms
+<br>
+on current hardware. Of course, only very few people in the optimization
+<br>
+community associate such methods with neural-networks or AI.
+<br>
+<p>The area of stochastic methods is  a very broad and intensively
+<br>
+studied topic in optimization and there are a lot of theoretically
+<br>
+justified combinatorial algorithms based on analytical (continous)
+<br>
+optimization and randomized rounding. This may sound
+<br>
+unspectacular, but in fact, there are extremely tricky ways to apply
+<br>
+such methods without recognizing that one has, in fact, performed
+<br>
+&quot;randomized rounding&quot;.
+<br>
+<p>There are  other randomized approaches: for example the
+<br>
+famous, deep and surprising  PCP-Theorem states that
+<br>
+every mathematical proof can be checked in polynomial
+<br>
+tiime with arbitrary high probability by looking at only a
+<br>
+*constant number* of bits of a sufficiently transformed form of
+<br>
+the proof (the transformation can be performed in polynomial time).
+<br>
+That is, for every epsilon, there is an N such that you have to look
+<br>
+at only N randomly chosen bits of the proof to be able to say
+<br>
+with 1-epsilon probability that it is correct.
+<br>
+Keep in mind that  the proof can be arbitrarily long!
+<br>
+<p>There is also a very well-established theory of approximation algorithms.
+<br>
+Such algorithms do not necessary produce optimal solutions only
+<br>
+a good approximation of them. There are a lot of &quot;hard&quot; optimization
+<br>
+problems, for which there exist very good polynomial time approximation
+<br>
+algorithms (like the famous Travelling Salesman Problem). But there are
+<br>
+also very simply sounding problems (e.g.: find a maximum clique in
+<br>
+a graph) for which there exists no reasonable polynomial time
+<br>
+approximation algorithm (assuming P!=NP). Interestingly, the proof of
+<br>
+such non-approximability results make use of the above-mentioned
+<br>
+PCP-Theorem.
+<br>
+<p>My point is that approximative and stochastic methods are not
+<br>
+incompatible with theoretically justified mathematics and this applies
+<br>
+to formal deduction too, since theorem-proving can also be formulated
+<br>
+as a discrete optimization problem.
+<br>
+<p>I also think that the gap between timeless and stateful problems are
+<br>
+not so huge as you suggest. The control-theory is also a very well
+<br>
+established area of mathematical optimization and it deals exaclty
+<br>
+with these type of problems. 
+<br>
+<p>&nbsp;From a formalist point of view, the  functional programming
+<br>
+community developed the notion of monads which allows
+<br>
+to embed stateful computations into completely
+<br>
+statelessly defined (purely functional) programs. This simplifies
+<br>
+the reasoning about the correctness of programs with side-effects
+<br>
+and allows to look at such computations in a stateless way.
+<br>
+(In fact, that state is not complitely eliminated, but merely made
+<br>
+explicit.)
+<br>
+<p>A nice thing about functional programming is that it narrows the
+<br>
+gap between programs and logic (formal reasoning).: Functional
+<br>
+programs can be viewed as mathematical formulas and can be
+<br>
+manipulated, reasoned about and executed at the same time.
+<br>
+The drawback, of course, is that the resource-usage is hard
+<br>
+to argue about. As the saying goes: &quot;A LISP programmer knows
+<br>
+the value of everything and the cost of nothing.&quot; I think that
+<br>
+this is not necessary and one could extend the type-sysytem of
+<br>
+functional programs to incorporate information about the resource
+<br>
+usage of functions. This is of course a hard topic, since it would
+<br>
+need more sopisticated formal reasoning tools to make it feasible.
+<br>
+<p><em>&gt;Regarding theorem-provers, for instance, the truth is that contemporary
+</em><br>
+<em>&gt;theorem-provers use very oversimplistic inference control strategies.  As an
+</em><br>
+<em>&gt;example,  the Otter theorem-prover, which is an excellent system compared to
+</em><br>
+<em>&gt;most of the competitors, basically does only proofs by contradiction, and
+</em><br>
+<em>&gt;deals with existential quantifiers solely by Skolemizing them out (which
+</em><br>
+<em>&gt;only works in the context of proofs by contradiction and other special
+</em><br>
+<em>&gt;cases).  This kind of control strategy appears to bear no relevance to how
+</em><br>
+<em>&gt;any adaptive, autonomous cognitive system would reason (presumably such
+</em><br>
+<em>&gt;systems would reason by combining crisp deductive reasoning with
+</em><br>
+<em>&gt;uncertain-inference-driven inductive and abductive reasoning and speculative
+</em><br>
+<em>&gt;concept-creation).
+</em><br>
+<em>&gt;
+</em><br>
+I would mostly agree, but I would stress that sufficient interaction
+<br>
+between formal deduction and optimization could be of great relevance.
+<br>
+I believe that this interaction must be mutual: the deduction subsystem
+<br>
+should make use of the optimization methods and argue about their
+<br>
+efficiency at the same time.  It should be able to access the practical
+<br>
+performance results of the optimization and also rewrite itself.
+<br>
+A formal reasonong system should be able to perform experients
+<br>
+and formulate hypotheses. The usage of functional programming could
+<br>
+be practically useful in this reagrd, since it narrows the gap between
+<br>
+formulas and programs.
+<br>
+<p><p><p>=========================================
+<br>
+<p>To test these ideas, I have designed an extremely simple
+<br>
+yet powerful  fully reflective functional programming language
+<br>
+(I called it *BLess*, which stands for &quot;Be less!&quot;) It is currently
+<br>
+being implemented in OCaml. (A first preview very rudimentary
+<br>
+version without type-checking is available.)
+<br>
+<p>It turned out that the power of a programming language can be
+<br>
+extended by generalization. In fact, the power of BLess comes
+<br>
+from the unification of seemingly different concepts. The result
+<br>
+is a framework which is powerful and simple at the same time.
+<br>
+BLess is similar to LISP, but there are a lot of very essential
+<br>
+differences: 
+<br>
+<p>Most programming languages are designed by a graduate
+<br>
+evolutionary process. First the applicative system is
+<br>
+designed, then a type system is defined allow for detecting
+<br>
+obvious run-time errors in the applicative code in advance.
+<br>
+At last the module system completes the design of the language.
+<br>
+Although this procedure may seem mandatory to most
+<br>
+language designers, BLess is desgined by a completely
+<br>
+different  approach: It started with the design of the module
+<br>
+system... and it ended with it.
+<br>
+<p>In BLess, the data, the code and the logic is one.
+<br>
+The same internal representation is used to define pure data,
+<br>
+code that operates on data and logic to argue about the
+<br>
+correctness of the code.
+<br>
+<p>In BLess, value,  type and module is one.
+<br>
+There are no syntactic and representional differences between
+<br>
+values, types and modules. Although the optimization of
+<br>
+BLess programs requires a separation between these quantities,
+<br>
+the definition of applicational semantics and type correctness
+<br>
+does not differentiate between the above notions.
+<br>
+<p>In BLess, function (or functor) application,
+<br>
+interface restriction and type validation is one.
+<br>
+There is no syntactic or representational difference between
+<br>
+the above concepts. In BLess, they are all different
+<br>
+facets of the general concept of *imposition*.
+<br>
+<p>The most important distinguishing feature of BLess it that
+<br>
+it is designed to generate, process and check BLess programs.
+<br>
+This does not only involve syntactic manipulations, but
+<br>
+also access to the type inference and checking mechanisms.
+<br>
+The standard library coming with BLess will contain a fully
+<br>
+featured interface to the internal representation of BLess
+<br>
+code. This library allows for online type inference and
+<br>
+type checking of newly inserted BLess code. It can also
+<br>
+be used to examine and type-check externally supplied
+<br>
+BLess code.
+<br>
+<p>BLess will  support deep generic programming:
+<br>
+Already checked applicative bless code may operate on the full
+<br>
+type and module system before the whole code is completely
+<br>
+type checked.
+<br>
+<p>Bless is a purely functional language, so it does not
+<br>
+allow mutable data. However, through the monadic
+<br>
+system (built on top of the core language, like in Haskell)
+<br>
+allows for a simple a concise simlulation of the
+<br>
+above features while maintaining  referential transparency.
+<br>
+<p>The current proof of concept (not yet ready) implementation is
+<br>
+a very  inefficient interpreter, I have plans to compile BLess
+<br>
+programs to OCaml code, which can be compiled to efficient
+<br>
+native assemble.
+<br>
+<p>=========================================
+<br>
+<p>Best Regards, Christian
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="10270.html">Ben Goertzel: "RE: Calculemus"</a>
+<li><strong>Previous message:</strong> <a href="10268.html">Christian Szegedy: "Re: Memes and War [was: Tomorrow is a new day]"</a>
+<li><strong>In reply to:</strong> <a href="10265.html">Ben Goertzel: "RE: Calculemus"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="10270.html">Ben Goertzel: "RE: Calculemus"</a>
+<li><strong>Reply:</strong> <a href="10270.html">Ben Goertzel: "RE: Calculemus"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#10269">[ date ]</a>
+<a href="index.html#10269">[ thread ]</a>
+<a href="subject.html#10269">[ subject ]</a>
+<a href="author.html#10269">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:50 MDT
+</em></small></p>
+</body>
+</html>

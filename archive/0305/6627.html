@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Hardware Progress: $212/GFlop/s</title>
+<meta name="Author" content="Stephen Reed (reed@cyc.com)">
+<meta name="Subject" content="RE: Hardware Progress: $212/GFlop/s">
+<meta name="Date" content="2003-05-07">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Hardware Progress: $212/GFlop/s</h1>
+<!-- received="Wed May  7 12:31:12 2003" -->
+<!-- isoreceived="20030507183112" -->
+<!-- sent="Wed, 7 May 2003 13:31:05 -0500 (CDT)" -->
+<!-- isosent="20030507183105" -->
+<!-- name="Stephen Reed" -->
+<!-- email="reed@cyc.com" -->
+<!-- subject="RE: Hardware Progress: $212/GFlop/s" -->
+<!-- id="Pine.LNX.4.33.0305071321070.1113-100000@crapgame.cyc.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="LAEGJLOGJIOELPNIOOAJGEJDEOAA.ben@goertzel.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Stephen Reed (<a href="mailto:reed@cyc.com?Subject=RE:%20Hardware%20Progress:%20$212/GFlop/s"><em>reed@cyc.com</em></a>)<br>
+<strong>Date:</strong> Wed May 07 2003 - 12:31:05 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="6628.html">Eliezer S. Yudkowsky: "SL4 CHAT: Wed May 7th, 9PM EST"</a>
+<li><strong>Previous message:</strong> <a href="6626.html">Dani Eder: "RE: Hardware Progress: $212/GFlop/s"</a>
+<li><strong>In reply to:</strong> <a href="6625.html">Ben Goertzel: "RE: Hardware Progress: $212/GFlop/s"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6629.html">Ben Goertzel: "RE: Hardware Progress: $212/GFlop/s"</a>
+<li><strong>Reply:</strong> <a href="6629.html">Ben Goertzel: "RE: Hardware Progress: $212/GFlop/s"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6627">[ date ]</a>
+<a href="index.html#6627">[ thread ]</a>
+<a href="subject.html#6627">[ subject ]</a>
+<a href="author.html#6627">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Wed, 7 May 2003, Ben Goertzel wrote:
+<br>
+<em>&gt; &gt; Likewise this year we have a team of programmers working on generalized
+</em><br>
+<em>&gt; &gt; semantic integration of relational databases.  The objective of our work
+</em><br>
+<em>&gt; &gt; is to make structured information from databases and web services appear
+</em><br>
+<em>&gt; &gt; to be Cyc assertions for the purpose of deductive inference.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; I am pretty skeptical that this can be done in a meaningful and generalized
+</em><br>
+<em>&gt; way...
+</em><br>
+<p>The generalized part is the mapping vocabulary.  Each structured knowledge
+<br>
+source requires semantic mapping by hand, using the generalized
+<br>
+vocabulary.  So I agree with your point and regret not being more
+<br>
+specific.  Cyc is far from being able to automatically understand an
+<br>
+arbitrary structured knowledge source.
+<br>
+<p><em>&gt; I've just gone through a long process of mapping a bunch of biology
+</em><br>
+<em>&gt; databases into Novamente's semantic structures... and it was not a
+</em><br>
+<em>&gt; straightforward task, it required a lot of human intelligence and some
+</em><br>
+<em>&gt; biological knowledge too, to get the  mappings right.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Of course, one can simply map the relational algebra of an RDB into
+</em><br>
+<em>&gt; predicate logic [or probabilistic combinatory term logic, in Novamente's
+</em><br>
+<em>&gt; case].  This may lead to something interesting, sometimes.  But it will very
+</em><br>
+<em>&gt; very rarely lead to anywhere near the most natural logical representation of
+</em><br>
+<em>&gt; the RDB structures.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Of course, a smart enough AI can read in the RDB in a simplistic
+</em><br>
+<em>&gt; mathematical way, and then on its own learn a better reprsentation,
+</em><br>
+<em>&gt; reformulating the RDB-derived knowledge intenrally.  Novametne is not that
+</em><br>
+<em>&gt; smart yet, and I don't believe Cyc is either...
+</em><br>
+<p>We are working on a tool which can use DB schema as the starting point for
+<br>
+the subsequent hand-mapping.
+<br>
+<p><em>&gt; But maybe you don't really mean a &quot;generalized&quot; way?  I mean, if you're
+</em><br>
+<em>&gt; looking at a restricted class of DB's (say, transactional DB's that back-end
+</em><br>
+<em>&gt; web servers; or DB's that come with Siebel systems) you  may be able to do
+</em><br>
+<em>&gt; something &quot;generic&quot; across that class.  Even there, though some special-case
+</em><br>
+<em>&gt; translator tweaking will probably be needed for each DB you process, unless
+</em><br>
+<em>&gt; the DB's are *really* regimented (as in the case of Siebel DB's).
+</em><br>
+<p>We are not being even this general in our semantic integration efforts.
+<br>
+<p>The primary benefit of our work is to avoid having to hand-enter
+<br>
+assertions about a domain when there exists a structured source of
+<br>
+facts about that domain.  We only have to map the schema for the
+<br>
+structured source and reuse the underlying general database/web service
+<br>
+connection infrastructure.
+<br>
+<p>-Steve
+<br>
+<p><p><pre>
+-- 
+===========================================================
+Stephen L. Reed                  phone:  512.342.4036
+Cycorp, Suite 100                  fax:  512.342.4040
+3721 Executive Center Drive      email:  <a href="mailto:reed@cyc.com?Subject=RE:%20Hardware%20Progress:%20$212/GFlop/s">reed@cyc.com</a>
+Austin, TX 78731                   web:  <a href="http://www.cyc.com">http://www.cyc.com</a>
+         download OpenCyc at <a href="http://www.opencyc.org">http://www.opencyc.org</a>
+===========================================================
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="6628.html">Eliezer S. Yudkowsky: "SL4 CHAT: Wed May 7th, 9PM EST"</a>
+<li><strong>Previous message:</strong> <a href="6626.html">Dani Eder: "RE: Hardware Progress: $212/GFlop/s"</a>
+<li><strong>In reply to:</strong> <a href="6625.html">Ben Goertzel: "RE: Hardware Progress: $212/GFlop/s"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6629.html">Ben Goertzel: "RE: Hardware Progress: $212/GFlop/s"</a>
+<li><strong>Reply:</strong> <a href="6629.html">Ben Goertzel: "RE: Hardware Progress: $212/GFlop/s"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6627">[ date ]</a>
+<a href="index.html#6627">[ thread ]</a>
+<a href="subject.html#6627">[ subject ]</a>
+<a href="author.html#6627">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:42 MDT
+</em></small></p>
+</body>
+</html>

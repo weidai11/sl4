@@ -1,0 +1,370 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Extreme Programming</TITLE>
+<META content=en-us http-equiv=Content-Language>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2314.1000" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId></HEAD>
+<BODY>
+<H1>Extreme Programming: A Primer</H1>
+<P>Tony Mann<BR>May 1, 2000 </P>
+<H2>Introduction</H2>
+<P>There is a major disconnect between theory and reality in the world of 
+software development.&nbsp;</P>
+<P>In the world of theory, all requirements are specified up front, and 
+customers do not change them. Management gives everyone plenty of time to do 
+analysis and design. During the implementation phase, if the code gets too 
+brittle due to too many changes, ample time is provided to rewrite it in its 
+entirety. When it comes to testing, the programmers will not rest until every 
+bug is fixed, no matter how long this takes. At last the customer gets the 
+product, and it is exactly what they need to make their lives easier and more 
+productive. Moreover, it is easy to learn and use, because of the extensive 
+analysis and reviews we conducted eons ago when the project first started.</P>
+<P>A belief in this ideal world is the underpinning for almost every text 
+written about software process. Sometime the authors admit that all is not rosy, 
+and use variations like iterations and change management to accommodate the 
+unpleasant fact that the world they are describing does not exist. The sad thing 
+is that so many teams have followed the prescriptions offered, yet their 
+projects fail, and they are left wondering what they did wrong.</P>
+<P>There is a growing concern that our current approach to software development 
+is fundamentally flawed. Some of the brightest people in the field are 
+rethinking all of the old assumptions, and coming up with new ideas that are 
+more suitable for tackling the challenges that a modern programming team faces. 
+This exciting new movement is known as Extreme Programming, or XP, and it could 
+eventually change the way we go about the business of creating new software.</P>
+<H2>What XP is not</H2>
+<P>Extreme Programming is not about descending into chaos, leaving all 
+discipline behind. Nor does it advocate a disregard for good analysis and 
+design. Rather, it is all about doing things in the most efficient manner 
+possible, balancing the conflicting desire to finish a product on time while 
+producing code of acceptable quality.</P>
+<H2>Common Problems</H2>
+<P>Most projects suffer from one or more of the following problems:</P>
+<UL>
+  <LI>
+  <P style="MARGIN-BOTTOM: 6px"><I>Gathering all the requirements for a project 
+  up front is nearly impossible</I>. Customers often do not know what they want, 
+  and they frequently change their mind as the project progresses. </P>
+  <LI>
+  <P style="MARGIN-BOTTOM: 6px"><I>Designing an entire system before a line of 
+  code is written is very challenging</I>. Only a few people can pull it off 
+  without having to modify their initial design. Unfortunately, such design 
+  modifications eventually lead to a code base that is brittle and unstable. 
+</P>
+  <LI>
+  <P style="MARGIN-BOTTOM: 6px"><I>Projects run out of money or get 
+  cancelled.</I> Usually when this happens, nothing usable can be salvaged. </P>
+  <LI>
+  <P style="MARGIN-BOTTOM: 6px"><I>There is no time to do a rewrite.</I> Even 
+  when the team knows that the code base is unstable and needs to be rewritten, 
+  the project schedule will not allow it. </P>
+  <LI>
+  <P style="MARGIN-BOTTOM: 6px"><I>Not everyone writes good code. </I>Most teams 
+  have a combination of outstanding programmers and mediocre ones, yet the 
+  overall code quality needs to be consistent. </P>
+  <LI>
+  <P style="MARGIN-BOTTOM: 6px"><I>Testing does not catch every problem.</I> For 
+  most projects, the testing is done at the end, and there is usually not enough 
+  time to find and fix all the defects. Moreover, fixing a bug can cause new 
+  bugs to crop up, leading to a situation where converging on stable code may be 
+  hard or impossible to do. </P></LI></UL>
+<H2>Tenets of XP</H2>
+<P>Extreme Programming is a holistic approach. It prescribes a series of 
+practices that, when taken together, can help solve the problems most projects 
+face. Each practice alone has its weaknesses, but these are balanced by the 
+strengths in the other practices.</P>
+<P>The practices are:</P>
+<UL>
+  <LI>The Planning Game 
+  <LI>Small Releases 
+  <LI>Metaphor 
+  <LI>Simple Design 
+  <LI>Testing 
+  <LI>Refactoring 
+  <LI>Pair Programming 
+  <LI>Collective Ownership 
+  <LI>40-Hour Week 
+  <LI>On-Site Customer 
+  <LI>Coding Standards </LI></UL>
+<P>I briefly explain each below, along with its potential problems and the 
+remedies to these problems.</P>
+<H3><A name="The Planning Game">The Planning Game</A></H3>
+<H4>Description</H4>
+<P>There is always a conflict between Business and Development. By establishing 
+a few simple rules, the needs of each can be balanced out. Business decides what 
+features are the most crucial. Development decides how long they will take to 
+implement. Then Business either chooses the features they want and accepts the 
+date given by the estimates, or chooses the date they want and accepts the 
+features that can be done within this time. Then Development produces a detailed 
+plan for the first release, and then goes off and produces it. The process is 
+then repeated, with an updated plan a new release. In this way Business gets 
+what they really want, and Development is given a task it can complete in a 
+timely manner. And because the plan is updated fairly frequently, it is a 
+reasonable reflection of what Business needs and what Development can do.</P>
+<H4>Potential Problems</H4>
+<UL>
+  <LI>Continually updating the plan takes time. 
+  <LI>The lack of stability can be upsetting for managers trying to work out a 
+  schedule and budget. 
+  <LI>The customer might feel like the ground is constantly shifting under them. 
+  </LI></UL>
+<H4>Balanced by</H4>
+<UL>
+  <LI>The customers themselves work on the plan and frequently meet with the 
+  development team. Thus they see any changes in the plan as they happen, and 
+  they can quickly pick up on any problems or chances to improve things. 
+  <LI>A rough long-term plan is put in place at the beginning of the project 
+  <LI>Frequent releases mean that any mistakes in the plan are caught and 
+  corrected without too much lost work </LI></UL>
+<H3><A name="Small Releases">Small Releases</A></H3>
+<H4>Description</H4>
+<P>The development team puts together a working, useful release as soon as 
+possible, and then continues to release new versions very frequently. This 
+provides a working&nbsp; system for the customer as soon as possible, which 
+allows them to play with the system and identify what needs to be changed. 
+Furthermore, getting something they can actually use right away builds up the 
+customer's trust in the development process.</P>
+<H4>Potential Problems</H4>
+<UL>
+  <LI>Many small releases can be a QA and maintenance nightmare 
+  <LI>There are too many required features for a small release of any value 
+</LI></UL>
+<H4>Balanced by</H4>
+<UL>
+  <LI>Features are carefully prioritized (see <A 
+  href="file:///C:/TEMP/extreme_programming.htm#The Planning Game">Planning 
+  Game</A>) 
+  <LI>Integration is done on a very frequent basis, so producing a release is 
+  easy 
+  <LI>Ongoing testing means that the typical "freeze the code and stomp bugs" 
+  phase is eliminated 
+  <LI>The design is always geared for the next release, not for the ambiguous 
+  future, making development faster and code more concise </LI></UL>
+<H3><A name=Metaphor>Metaphor</A></H3>
+<H4>Description</H4>
+<P>A metaphor is an informal, yet concise, description of how the system should 
+operate and what it needs to accomplish. It provides a focal point for the team, 
+and is a source for consistent terminology when referring to parts of the system 
+or the functions it can perform.</P>
+<H4>Potential Problems</H4>
+<UL>
+  <LI>Not enough detail to proceed with development 
+  <LI>Not formally verified </LI></UL>
+<H4>Balanced By</H4>
+<UL>
+  <LI>By doing <A 
+  href="file:///C:/TEMP/extreme_programming.htm#Small Releases">small 
+  releases</A>, the metaphor is constantly be verified, and updated as needed. 
+  <LI>The <A 
+  href="file:///C:/TEMP/extreme_programming.htm#On-Site Customer">on-site 
+  customer</A> is continually using the metaphor to describe the system. 
+  <LI>The meaning of the metaphor is frequently refined via <A 
+  href="file:///C:/TEMP/extreme_programming.htm#Refactoring">refactoring</A>. 
+  </LI></UL>
+<H3><A name="Simple Design">Simple Design</A></H3>
+<H4>Description</H4>
+<P>Always design for what you need today, because you really cannot anticipate 
+what you will need tomorrow. This way your design is always as simple as it can 
+be, which makes understanding and testing the system much easier.</P>
+<H4>Potential Problems</H4>
+<UL>
+  <LI>The requirements change, and your design is so fragile that a major 
+  rewrite will be required to accommodate the new functionality. 
+  <LI>Your design failed to anticipate all the needs of the system, and requires 
+  more and more hacks to complete the release iteration </LI></UL>
+<H4>Balanced By</H4>
+<UL>
+  <LI>When design problems are discovered, they are fixed via <A 
+  href="file:///C:/TEMP/extreme_programming.htm#Refactoring">refactoring</A>, 
+  and not hacked around 
+  <LI>A well defined <A 
+  href="file:///C:/TEMP/extreme_programming.htm#Metaphor">metaphor</A> keeps the 
+  design from going off the track 
+  <LI>If you are <A 
+  href="file:///C:/TEMP/extreme_programming.htm#Pair Programming">pair 
+  programming</A>, it is unlikely that you would both allow poor design 
+  decisions to stand. </LI></UL>
+<H3><A name=Testing>Testing</A></H3>
+<H4>Description</H4>
+<P>All parts of the system that could conceivably break are protected with 
+<I>unit tests</I>. These tests are run whenever a change is made to the affected 
+code.</P>
+<P>In addition, the customer defines a series of <I>functional tests</I> that 
+define how the system is supposed to behave. The system will not be released 
+until these tests pass.</P>
+<H4>Potential Problems</H4>
+<UL>
+  <LI>Writing tests takes too long 
+  <LI>Programmers are too lazy to write the tests 
+  <LI>No one will bother running the tests </LI></UL>
+<H4>Balanced By</H4>
+<UL>
+  <LI>With a <A 
+  href="file:///C:/TEMP/extreme_programming.htm#Simple Design">simple 
+  design</A>, writing tests is more manageable. 
+  <LI>If you are <A 
+  href="file:///C:/TEMP/extreme_programming.htm#Pair Programming">pair 
+  programming</A>, it is unlikely that you will both blow off the tests 
+  <LI>After a while, you get used to running the tests, and you won't be 
+  satisfied with the changes you made until they all pass. 
+  <LI>The <A 
+  href="file:///C:/TEMP/extreme_programming.htm#On-Site Customer">customer</A> 
+  feels more involved in the process, and their trust is increased when they see 
+  the tests pass </LI></UL>
+<H3><A name=Refactoring>Refactoring</A></H3>
+<H4>Description</H4>
+<P>When a programmer is about to make a change, they look at the code to see if 
+the change will be easy to add in, given the design of the system. If it is not, 
+then they improve and simplify the design until the change is easy to make. Only 
+then do they make the change.</P>
+<P>This provides two advantages. One is that the design is continually improved. 
+Two is that no changes are just "hacked in".</P>
+<H4>Potential Problems</H4>
+<UL>
+  <LI>Refactoring takes too long 
+  <LI>With everyone changing everyone's code, chaos would result 
+  <LI>The system would always keep breaking, and never stabilize </LI></UL>
+<H4>Balanced By</H4>
+<UL>
+  <LI>Since the group is used to <A 
+  href="file:///C:/TEMP/extreme_programming.htm#Collective Ownership">collective 
+  ownership</A>, making changes to code other people wrote is no big deal 
+  <LI>Because the <A 
+  href="file:///C:/TEMP/extreme_programming.htm#Simple Design">design starts 
+  simple</A> and is continually refactored to remain simple, additional 
+  refactorings are generally incremental and not too drastic. 
+  <LI>After every change, you can run the <A 
+  href="file:///C:/TEMP/extreme_programming.htm#Testing">tests</A> to make sure 
+  that nothing broke. 
+  <LI>Because <A 
+  href="file:///C:/TEMP/extreme_programming.htm#Small Releases">integration is 
+  done so often</A>, any problems that a refactoring might create are caught 
+  fairly quickly. </LI></UL>
+<H3><A name="Pair Programming">Pair Programming</A></H3>
+<H4>Description</H4>
+<P>All programming of production code is done by two people. One sits at the 
+keyboard and codes, the other looks on and provides advice, corrects mistakes, 
+etc. When one gets tired, they either switch or take a break.</P>
+<H4>Potential Problems</H4>
+<UL>
+  <LI>Putting two programmers on one machine means that everything takes twice 
+  as long to complete 
+  <LI>Most programmers are very independent, and will never work well together 
+  </LI></UL>
+<H4>Balanced By</H4>
+<UL>
+  <LI>Less code gets written, but what is written is much better: better 
+  designed, better tested, and better implemented. 
+  <LI>Everyone is well rested because of the <A 
+  href="file:///C:/TEMP/extreme_programming.htm#40-Hour Week">40-hour work 
+  week</A>, and therefore are less likely to get in petty arguments. 
+  <LI>Once programmers see the benefits of pair programming, they will want to 
+  continue doing it, and will work through any problems that crop up. </LI></UL>
+<H3><A name="Collective Ownership">Collective Ownership</A></H3>
+<H4>Description</H4>
+<P>All code written is the property of the team, and not of an individual or a 
+pair. If someone sees a problem in some code, they should go ahead and fix it, 
+whether they wrote it or not. This way no one waits around for someone else to 
+fix a problem, and the whole team has a good overall knowledge of the code 
+base.</P>
+<H4>Potential Problems</H4>
+<UL>
+  <LI>Code will break constantly 
+  <LI>Integration will be a nightmare 
+  <LI>The author of a piece of code will be very angry when someone else 
+  "improves" their carefully thought out design </LI></UL>
+<H4>Balanced By</H4>
+<UL>
+  <LI><A href="file:///C:/TEMP/extreme_programming.htm#Small Releases">Small 
+  releases</A> minimize the number of potential conflicts 
+  <LI>Because the <A 
+  href="file:///C:/TEMP/extreme_programming.htm#Testing">tests</A> will fail if 
+  there is a problem, code rarely breaks 
+  <LI>If programmers rotate the <A 
+  href="file:///C:/TEMP/extreme_programming.htm#Pair Programming">pairs</A> they 
+  program in, eventually everyone shares the coding process together </LI></UL>
+<H3><A name="40-Hour Week">40-Hour Week</A></H3>
+<H4>Description</H4>
+<P>This is simple. No one works overtime, because tired programmers get cranky 
+and make mistakes, and thus the net amount of useable code is not raised by 
+upping the number of work hours.</P>
+<H4>Potential Problems</H4>
+<UL>
+  <LI>There is too much work in to do in too short a time for a 40 hour work 
+  week to be effective </LI></UL>
+<H4>Balanced By</H4>
+<UL>
+  <LI>Careful <A 
+  href="file:///C:/TEMP/extreme_programming.htm#The Planning Game">planning</A> 
+  means that the amount of work to do is reasonable 
+  <LI>The combination of planning and <A 
+  href="file:///C:/TEMP/extreme_programming.htm#Testing">testing</A> tends to 
+  keep the code quality steady, making tasks more predictable </LI></UL>
+<H3><A name="On-Site Customer">On-Site Customer</A></H3>
+<H4>Description</H4>
+<P>If you are going to build a system for a customer, you need someone that 
+represents that customer to be available to the programmers to answer questions, 
+help design functional tests, and generally participate in the development 
+process whenever appropriate. The ideal scenario is to have them available at 
+all times, in order to keep the process moving as quickly and efficiently as 
+possible.&nbsp; The best way to do this is to have the customer on-site.</P>
+<H4>Potential Problems</H4>
+<UL>
+  <LI>A "real customer" needs to be on-site at their business, with their team 
+  <LI>The programming team will take so much of the customer's time that they 
+  will have no time for their own work </LI></UL>
+<H4>Balanced By</H4>
+<UL>
+  <LI>If they are on-site, the quality of the product will be better. This might 
+  be the best thing they can do for their business. 
+  <LI>The programmers will not have 40 hours of work for them to do. They will 
+  have time for other work. 
+  <LI>Writing and checking the functional tests is essential to insuring that 
+  the system does what they need it to do </LI></UL>
+<H3>Coding Standards</H3>
+<H4>Description</H4>
+<P>Pair programming, refactoring, and collective ownership are too difficult to 
+do if everyone uses a different coding style. By adhering to a simple set of 
+coding standards, the team can be more efficient. Furthermore, the whole body of 
+code will have a uniform appearance, which will enhance its maintainability.</P>
+<H4>Potential Problems</H4>
+<UL>
+  <LI>Programmers have their own standard, and are unwilling to change 
+  <LI>The whole team could never agree on one standard </LI></UL>
+<H4>Balanced By</H4>
+<UL>
+  <LI>Once programmers see how well XP works, they will be willing to be more 
+  flexible. 
+  <LI>If they ever try XP without setting coding standards, they will realize 
+  that it makes everything harder, with no benefit realized. </LI></UL>
+<H2>Conclusion</H2>
+<P>I have just touched on the very basics of XP. I recommend that everyone read 
+the book <I>Extreme Programming Explained</I> [Beck] for a much more detailed 
+(and fascinating) description of this new discipline.</P>
+<H2>Additional Reading</H2>
+<P><B>Beck</B>, Kent (2000). <I>Extreme Programming Explained</I>. Reading, MA: 
+Addison Wesley Longman Inc.</P>
+<P><B>Fowler</B>, Martin (1999) <I>Refactoring. </I>Reading, MA: Addison Wesley 
+Longman Inc.</P></BODY></HTML>
+
+>Balanced By</H4>
+<UL>
+  <LI>Once programmers see how well XP works, they will be willing to be =
+more 
+  flexible. 
+  <LI>If they ever try XP without setting coding standards, they will =
+realize 
+  that it makes everything harder, with no benefit realized. </LI></UL>
+<H2>Conclusion</H2>
+<P>I have just touched on the very basics of XP. I recommend that =
+everyone read 
+the book <I>Extreme Programming Explained</I> [Beck] for a much more =
+detailed 
+(and fascinating) description of this new discipline.</P>
+<H2>Additional Reading</H2>
+<P><B>Beck</B>, Kent (2000). <I>Extreme Programming Explained</I>. =
+Reading, MA: 
+Addison Wesley Longman Inc.</P>
+<P><B>Fowler</B>, Martin (1999) <I>Refactoring. </I>Reading, MA: Addison =
+Wesley 
+Longman Inc.</P></BODY></HTML>
+

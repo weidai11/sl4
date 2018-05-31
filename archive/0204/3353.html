@@ -1,0 +1,364 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Patterns and intelligence (was: DGI paper)</title>
+<meta name="Author" content="Eliezer S. Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="Patterns and intelligence (was: DGI paper)">
+<meta name="Date" content="2002-04-14">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Patterns and intelligence (was: DGI paper)</h1>
+<!-- received="Sun Apr 14 23:45:25 2002" -->
+<!-- isoreceived="20020415054525" -->
+<!-- sent="Sun, 14 Apr 2002 23:18:36 -0400" -->
+<!-- isosent="20020415031836" -->
+<!-- name="Eliezer S. Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Patterns and intelligence (was: DGI paper)" -->
+<!-- id="3CBA468C.7291C662@pobox.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="LAEGJLOGJIOELPNIOOAJOEDFCGAA.ben@goertzel.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eliezer S. Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20Patterns%20and%20intelligence%20(was:%20DGI%20paper)"><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Sun Apr 14 2002 - 21:18:36 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3354.html">Michael Roy Ames: "Re: DGI Paper"</a>
+<li><strong>Previous message:</strong> <a href="3352.html">Eliezer S. Yudkowsky: "Re: You Know You've Been Thinking About The Singularity Too Long When..."</a>
+<li><strong>In reply to:</strong> <a href="3341.html">Ben Goertzel: "RE: FW: DGI Paper"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3357.html">Doug Keenan: "Re: Patterns and intelligence (was: DGI paper)"</a>
+<li><strong>Reply:</strong> <a href="3357.html">Doug Keenan: "Re: Patterns and intelligence (was: DGI paper)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3353">[ date ]</a>
+<a href="index.html#3353">[ thread ]</a>
+<a href="subject.html#3353">[ subject ]</a>
+<a href="author.html#3353">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Ben Goertzel wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; &gt; Because there is a difference between genericity and generality.
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; Evolution, like search trees and artificial neural networks, is a fully
+</em><br>
+<em>&gt; &gt; generic process.  But it works much better for some things than
+</em><br>
+<em>&gt; &gt; others, and
+</em><br>
+<em>&gt; &gt; some things it can't handle at all.  It can't do many of the things that
+</em><br>
+<em>&gt; &gt; human intelligence does.  You can apply a generic process to
+</em><br>
+<em>&gt; &gt; anything but it
+</em><br>
+<em>&gt; &gt; won't necessarily work.  Usually it only solves a tiny fraction of special
+</em><br>
+<em>&gt; &gt; cases of the problem (which AI projects usually go on to mistake
+</em><br>
+<em>&gt; &gt; for having
+</em><br>
+<em>&gt; &gt; solved the general case of the problem; this is one of the Deadly Sins).
+</em><br>
+<em>&gt; &gt; Evolution uses an unreasonable amount of computational power to overcome
+</em><br>
+<em>&gt; &gt; this handicap.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; I think that any black-box global optimization algorithm -- including
+</em><br>
+<em>&gt; evolution, and some NN and search-tree based algorithms -- has a kind of
+</em><br>
+<em>&gt; &quot;general intelligence.&quot;  The problem is that it uses too many resources.
+</em><br>
+<em>&gt; Human brains achieve far more general intelligence per unit of space and
+</em><br>
+<em>&gt; time resources than evolutionary systems.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; What I mean by &quot;general intelligence&quot; is roughly &quot;the ability to solve a
+</em><br>
+<em>&gt; variety of complex problems in a variety of complex environments.&quot;  As you
+</em><br>
+<em>&gt; know I've tried with moderate success to quantify and formalize this
+</em><br>
+<em>&gt; definition.  I'm not sure exactly what you mean by &quot;general intelligence&quot;,
+</em><br>
+<em>&gt; maybe it's something different.
+</em><br>
+<p>Our different intuitions on this matter stem from our different definitions
+<br>
+of intelligence and pattern.
+<br>
+<p>You (Ben) define a pattern as &quot;a representation as something simpler&quot;.  I'd
+<br>
+better review this for the sake of the innocent onlookers... if X is a
+<br>
+string of 1s and 0s, then the complexity of X, c(X), is the size of the
+<br>
+smallest Turing machine that produces X.  Suppose you have a string Y that
+<br>
+is similar to X, but Y has less complexity than X - it is simpler.  In this
+<br>
+case, according to Ben, Y is a pattern in X; it is a representation of X as
+<br>
+something simpler.  Or rather, to be precise, the Turing machine that
+<br>
+produces Y as output is a pattern in the Turing machine that produces X as
+<br>
+output, because Y is similar to X but has less computational complexity.
+<br>
+<p>Ben goes on to define several useful extensions of this principle.  For
+<br>
+example, he defines the structure of X, St(X), as the set of all patterns in
+<br>
+X.  He also defines a measure for the complexity of X relative to an
+<br>
+existing knowledge/program base K.  Roughly: if you assume the Turing
+<br>
+machine K, how many *additional* states does it need in order to produce X
+<br>
+as an output?  The amount of extra information needed is the complexity of X
+<br>
+given K, c(X|K).
+<br>
+<p>I've left out a lot of stuff here, which Ben should feel free to fill in,
+<br>
+but I think the guts are there.  According to Ben, the purpose of Novamente
+<br>
+is to increase the amount of pattern it contains, thus increasing the amount
+<br>
+of mind.
+<br>
+<p>I independently arrived at broadly similar computational-theoretic
+<br>
+definitions, with some key differences because I was thinking about seed AI,
+<br>
+which may account for some of the differences in our respective intuitions
+<br>
+about AI.  First, though, I want to point some obvious extensions that work
+<br>
+with either of our definitions.  If pattern G decreases the complexity of a
+<br>
+very broad range of patterns X for c(X) vs. c(X|G), then pattern G is a
+<br>
+pattern that contributes to &quot;general intelligence&quot;.  Similarly, if you look
+<br>
+at the structure of X, St(X), and sort out the patterns in St(X) from
+<br>
+simpler patterns A to complex patterns Z, and then ask about c(B|A),
+<br>
+c(C|A+B), c(D|A+B+C), then you have a measure of the &quot;manageability&quot; of
+<br>
+St(X) - the degree to which the hard problems in X become more tractable
+<br>
+given the simpler problems in X.  (I'm calling this &quot;manageability&quot; because
+<br>
+&quot;tractability&quot; is already in use; see below.)  If you've already said this
+<br>
+somewhere, I apologize, but I didn't see it in the materials given.
+<br>
+<p>My definition of pattern differs in that it is based around tractability
+<br>
+rather than simplicity.  If A is a pattern in B, then the question is not
+<br>
+whether A is simpler than B, but rather whether A is, on average, less
+<br>
+expensive to compute.  Suppose that the AI faces a context-sensitivity
+<br>
+problem, where some set of complex conditions X within a problem P mean that
+<br>
+it would be a good time to test concept C against current imagery.  Suppose
+<br>
+that the AI or the programmer writes a codelet Q that programmatically
+<br>
+checks for conditions X within current imagery, and if X obtains, Q will
+<br>
+designate concept C as relevant.  For a seed AI, the question is whether
+<br>
+codelet Q contributes usefully to intelligence in that repeatedly executing
+<br>
+this codelet against current imagery is expected to be computationally less
+<br>
+expensive than associating to C by other means (including blind search),
+<br>
+bearing in mind that X may be true for only a tiny fraction of the occasions
+<br>
+the codelet runs.  This is the kind of problem a seed AI runs up against if
+<br>
+it wants to optimize itself - it's not as easy as it looks.
+<br>
+<p>My measure of the distance between a string X and a string Y is not based on
+<br>
+&quot;similarity&quot; because I can think of no good way to define &quot;similarity&quot; in a
+<br>
+way that is useful for intelligence; whether something that is similar to X
+<br>
+is a useful approximation of X is ultimately an AI-complete problem.  So,
+<br>
+since I've never been one for nice clean definitions, I'm assuming that X
+<br>
+and Y are patterned variables inside a seed AI that is trying to solve a
+<br>
+prediction or manipulation problem.  This gives me enough of a context to
+<br>
+say something like &quot;Y is usefully similar to X&quot;, in the sense that a pattern
+<br>
+which has a surface similarity to X but is totally useless for intelligence
+<br>
+will be weeded out when the current manipulation problem fails.  For
+<br>
+example, this catches the difference between two bytecode listings A and B
+<br>
+that compute the Fibonacchi sequence in different ways, and a bytecode
+<br>
+listing C that computes the Fibonacchi sequence versus D, the same bytecode
+<br>
+listing with one assembly-language instruction zeroed out.  The surface
+<br>
+similarities between C and D are very great, and yet a pattern which
+<br>
+produces D as an approximation of C is not contributing usefully to
+<br>
+intelligence, where a pattern that produces B as an approximation to A might
+<br>
+be.
+<br>
+<p>So under my definition, Y is a pattern in X, if Y produces a useful
+<br>
+approximation of X, and Y is more tractable than X - that is, less expensive
+<br>
+computationally.  From here you can build some of the same definitions that
+<br>
+can be constructed with Ben's building blocks; for example, the complexity
+<br>
+of Y given K as a base becomes the tractability of Y given K as a process
+<br>
+already computed.  Similarly, processes or learned complexity which
+<br>
+contributes strongly to general intelligence are those which render a wide
+<br>
+range of problems more tractable.  (Because DGI is a supersystem theory of
+<br>
+AI, it should be noted that in many cases you need to fit a lot of processes
+<br>
+P together into one big K before K will contribute strongly to general
+<br>
+intelligence.)  The manageability of X is the degree to which hard problems
+<br>
+in X become solvable after you've solved the easy problems in X; that is,
+<br>
+the manageability of X is the degree to which patterns that achieve very
+<br>
+useful approximations of X become easier to compute and/or easier to find,
+<br>
+once the system contains patterns that achieve minimally useful
+<br>
+approximations to X.
+<br>
+<p>This is why black-box processes such as neural nets and evolutionary
+<br>
+computations may strike Ben as &quot;general&quot; while striking me as &quot;generic&quot;. 
+<br>
+Ben's definition is based on simplicity; the black boxes are relatively
+<br>
+simple from the standpoint of complexity theory and hence appear to be
+<br>
+strong patterns.  My definition is based on tractability; neural nets and
+<br>
+evolutionary computations may apply to any problem, but they don't make the
+<br>
+problem much more tractable, so I see them as weak patterns.  Furthermore,
+<br>
+for NN or EC to have &quot;general&quot; intelligence would mean that taking NN or EC
+<br>
+as a knowledge base would make a wide range of problems much more tractable
+<br>
+- not just render a wide range of problems theoretically solvable given
+<br>
+unlimited computing power.  This is why NN and EC are &quot;generic&quot; rather than
+<br>
+&quot;general&quot;.
+<br>
+<p>Another example:  Who has the stronger patterns, Kasparov or Deep Blue? 
+<br>
+Under the simplicity definition, Deep Blue's computational processes are
+<br>
+vastly simpler than Kasparov's, and so Deep Blue has a much stronger chess
+<br>
+pattern.  Under the tractability definition, Kasparov and Deep Blue were
+<br>
+roughly evenly matched in skill when Kasparov was searching 1.8 moves per
+<br>
+second and Deep Blue was searching 2 billion moves per second, making
+<br>
+Kasparov's chess patterns enormously stronger than Deep Blue's.  Deep Blue
+<br>
+plays the Game of Actual Chess, searching through the tree structure of
+<br>
+actual chess positions.  Kasparov plays the Game of Regularities in Chess,
+<br>
+using an enormously more complex algorithm to execute a &quot;search&quot; that
+<br>
+roughly matched the gameplaying power of Deep Blue even when considering
+<br>
+only 1.8 positions per second - if such a measure can be said to apply at
+<br>
+all to Kasparov.  Kasparov's chess patterns are vastly more complex than
+<br>
+Deep Blue's chess patterns, and they render the game far more tractable for
+<br>
+Kasparov than for Deep Blue.
+<br>
+<p>--              --              --              --              -- 
+<br>
+Eliezer S. Yudkowsky                          <a href="http://intelligence.org/">http://intelligence.org/</a> 
+<br>
+Research Fellow, Singularity Institute for Artificial Intelligence
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3354.html">Michael Roy Ames: "Re: DGI Paper"</a>
+<li><strong>Previous message:</strong> <a href="3352.html">Eliezer S. Yudkowsky: "Re: You Know You've Been Thinking About The Singularity Too Long When..."</a>
+<li><strong>In reply to:</strong> <a href="3341.html">Ben Goertzel: "RE: FW: DGI Paper"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3357.html">Doug Keenan: "Re: Patterns and intelligence (was: DGI paper)"</a>
+<li><strong>Reply:</strong> <a href="3357.html">Doug Keenan: "Re: Patterns and intelligence (was: DGI paper)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3353">[ date ]</a>
+<a href="index.html#3353">[ thread ]</a>
+<a href="subject.html#3353">[ subject ]</a>
+<a href="author.html#3353">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:38 MDT
+</em></small></p>
+</body>
+</html>

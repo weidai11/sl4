@@ -1,0 +1,243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Kolmogorov complexity and prediction</title>
+<meta name="Author" content="Nick Hay (nickjhay@gmail.com)">
+<meta name="Subject" content="Kolmogorov complexity and prediction">
+<meta name="Date" content="2007-10-18">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Kolmogorov complexity and prediction</h1>
+<!-- received="Thu Oct 18 10:32:53 2007" -->
+<!-- isoreceived="20071018163253" -->
+<!-- sent="Thu, 18 Oct 2007 12:30:39 -0400" -->
+<!-- isosent="20071018163039" -->
+<!-- name="Nick Hay" -->
+<!-- email="nickjhay@gmail.com" -->
+<!-- subject="Kolmogorov complexity and prediction" -->
+<!-- id="c528628a0710180930t46ac8444g570ff91b83da5578@mail.gmail.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Nick Hay (<a href="mailto:nickjhay@gmail.com?Subject=Re:%20Kolmogorov%20complexity%20and%20prediction"><em>nickjhay@gmail.com</em></a>)<br>
+<strong>Date:</strong> Thu Oct 18 2007 - 10:30:39 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="16878.html">Bryan Bishop: "Re: Kolmogorov complexity and prediction"</a>
+<li><strong>Previous message:</strong> <a href="16876.html">CyTG: "Re: The Meaning That Immortality Gives to Life"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="16878.html">Bryan Bishop: "Re: Kolmogorov complexity and prediction"</a>
+<li><strong>Reply:</strong> <a href="16878.html">Bryan Bishop: "Re: Kolmogorov complexity and prediction"</a>
+<li><strong>Reply:</strong> <a href="16880.html">Eliezer S. Yudkowsky: "Re: Kolmogorov complexity and prediction"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#16877">[ date ]</a>
+<a href="index.html#16877">[ thread ]</a>
+<a href="subject.html#16877">[ subject ]</a>
+<a href="author.html#16877">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Here are some more precise observations.
+<br>
+<p>A program of fixed complexity can prove that infinitely many systems
+<br>
+(coded as strings or sequences) satisfy some specification, e.g. that
+<br>
+they are a halting program, or encode a bridge design that does not
+<br>
+collapse under certain stresses, or that the program correctly
+<br>
+predicts a certain class of sequences.
+<br>
+<p>Not all prediction specifications work.  For example this doesn't work
+<br>
+for the class of all simple sequences, i.e. of complexity &lt; K(n), but
+<br>
+it does for the class of all sequences pU(p) where U is a fixed TM
+<br>
+i.e. programs that first output their source code, then run it.
+<br>
+Perhaps it even works for the class of most sequences that will be
+<br>
+generated in this universe has a nice form (I don't have a precise
+<br>
+definition of this currently).
+<br>
+<p>A simple precise specification that does work is  the set of theorems
+<br>
+of some formal system paired with a proof of them.  We can easily
+<br>
+generate proofs and theorems of arbitrary complexity, and easily
+<br>
+verify if a particular theorem/proof is valid.
+<br>
+<p>A program of a fixed complexity can write understandable systems (i.e.
+<br>
+those it can predict fit some specification) of arbitrary complexity
+<br>
+(the above example works here).  The arbitrarily complex bridge design
+<br>
+has a lot of features, e.g. tailoring traffic signal policies, shape
+<br>
+details, colouring, etc.  But it is understandable e.g. because it is
+<br>
+sufficiently over designed that one can easily show, e.g. by
+<br>
+simulation, that it doesn't collapse under certain stresses.  The
+<br>
+program can generate strings significantly more complex that itself
+<br>
+because it reads some complex sequence from the environment (its
+<br>
+input).
+<br>
+<p>So systems of fixed complexity can both understand, and build
+<br>
+understandable, systems of greater complexity than themselves.
+<br>
+<p><p><p><p>Not all specifications in general work.  You can generalize Chaitin's
+<br>
+proof that a formal system can only prove sentences of the form K(x) &lt;
+<br>
+n for finitely many n.  Given a definable sequence C_n of classes of
+<br>
+strings (i.e there is a formula c(n,x) which is true iff x is a member
+<br>
+of C_n) which are each inhabited (i.e. for every n there is some x_n
+<br>
+such that you can prove c(n,x_n) holds), there is an algorithm which
+<br>
+produces on input n an element of C_n: just search the theorems of a
+<br>
+formal system until the find the right proof.
+<br>
+<p>As a corollary, if we encode the number n in binary form before
+<br>
+passing it to the algorithm, there is a fixed k such that C_n has a
+<br>
+member of complexity k + 2log(n), for all n.  This excludes P_n, the
+<br>
+class of programs which eventually predict all sequences of complexity
+<br>
+at most n, because by your adversary argument any element of P_n must
+<br>
+have complexity greater than n-k, for some fixed k, which grows faster
+<br>
+than log n.  If we encode the number as a program which outputs n you
+<br>
+can replace k+2log(n) in the above with  k + K(n).
+<br>
+<p>What this means is if all the strings in C_n have complexity greater
+<br>
+than some computable function of n, then for some N we for all n&gt;N we
+<br>
+cannot prove that any particular string is in C_n i.e. C_n is not
+<br>
+inhabited.  We can prove that C_n is nonempty for all n, but that's a
+<br>
+different thing.
+<br>
+<p>With regards to proving the Friendliness of a system, you would
+<br>
+probably not be able to prove your FAI successfully predicts all
+<br>
+systems of complexity at most n for some nice n, but you might be able
+<br>
+to prove that *if* it eventually predicts the particular sequence it
+<br>
+was given, then it is has a Friendly output.  For example, the class
+<br>
+C_n = for all strings with K(x)=n, if the system eventually predicts x
+<br>
+then it has a Friendly output.  This class doesn't suffer the above
+<br>
+proof, because C_n has simple programs in it for all n.
+<br>
+<p>We probably want a class of designs that doesn't necessarily fail if
+<br>
+it can't predict its environment.
+<br>
+<p>--- Nick
+<br>
+<p><p>On 10/17/07, Shane Legg &lt;<a href="mailto:shane@vetta.org?Subject=Re:%20Kolmogorov%20complexity%20and%20prediction">shane@vetta.org</a>&gt; wrote:
+<br>
+<em>&gt; Could you make your claim more precise?
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; What do you mean by a &quot;bridge&quot;, or a nice form,
+</em><br>
+<em>&gt; and when you talk about proving correctness,
+</em><br>
+<em>&gt; correctness at doing what?  Correctly predicting?
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Shane
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; On 10/16/07, Nick Hay &lt;<a href="mailto:nickjhay@gmail.com?Subject=Re:%20Kolmogorov%20complexity%20and%20prediction">nickjhay@gmail.com</a>&gt; wrote:
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; That is, it doesn't exclude predicting some complex systems, maybe
+</em><br>
+<em>&gt; &gt; many, and especially those of particularly nice forms (e.g. highly
+</em><br>
+<em>&gt; &gt; complex but understandable bridges, complex programs with attached
+</em><br>
+<em>&gt; &gt; proofs of correctness, etc).
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; -- Nick
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="16878.html">Bryan Bishop: "Re: Kolmogorov complexity and prediction"</a>
+<li><strong>Previous message:</strong> <a href="16876.html">CyTG: "Re: The Meaning That Immortality Gives to Life"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="16878.html">Bryan Bishop: "Re: Kolmogorov complexity and prediction"</a>
+<li><strong>Reply:</strong> <a href="16878.html">Bryan Bishop: "Re: Kolmogorov complexity and prediction"</a>
+<li><strong>Reply:</strong> <a href="16880.html">Eliezer S. Yudkowsky: "Re: Kolmogorov complexity and prediction"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#16877">[ date ]</a>
+<a href="index.html#16877">[ thread ]</a>
+<a href="subject.html#16877">[ subject ]</a>
+<a href="author.html#16877">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:58 MDT
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: A difficulty with AI reflectivity</title>
+<meta name="Author" content="Eliezer Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="A difficulty with AI reflectivity">
+<meta name="Date" content="2004-10-19">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>A difficulty with AI reflectivity</h1>
+<!-- received="Tue Oct 19 09:02:42 2004" -->
+<!-- isoreceived="20041019150242" -->
+<!-- sent="Tue, 19 Oct 2004 11:02:27 -0400" -->
+<!-- isosent="20041019150227" -->
+<!-- name="Eliezer Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="A difficulty with AI reflectivity" -->
+<!-- id="41752C83.4090802@pobox.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eliezer Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20A%20difficulty%20with%20AI%20reflectivity"><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Tue Oct 19 2004 - 09:02:27 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="9995.html">Jeff Medina: "Re: A difficulty with AI reflectivity"</a>
+<li><strong>Previous message:</strong> <a href="9993.html">Keith Henson: "Progress in understanding natural minds (pointer to pointer)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="9995.html">Jeff Medina: "Re: A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="9995.html">Jeff Medina: "Re: A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="9996.html">Christian Szegedy: "Re: A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="9997.html">Ben Goertzel: "RE: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="9999.html">Michael Roy Ames: "Re: A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="10001.html">Wei Dai: "Re: A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="10091.html">Maru: "Re: Weaknesses in FAI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#9994">[ date ]</a>
+<a href="index.html#9994">[ thread ]</a>
+<a href="subject.html#9994">[ subject ]</a>
+<a href="author.html#9994">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+I've recently been pondering a difficulty with self-modifying AI.  I shall 
+<br>
+illustrate with Juergen Schmidhuber's Gödel Machine, but the problem 
+<br>
+generalizes.
+<br>
+<p><a href="http://www.idsia.ch/~juergen/goedelmachine.html">http://www.idsia.ch/~juergen/goedelmachine.html</a>
+<br>
+<p>Juergen Schmidhuber's self-rewriting &quot;Gödel Machine&quot; is based on the notion 
+<br>
+of a machine that executes a self-rewrite as soon as it can produce a proof 
+<br>
+that the self-rewrite is an improvement.  This self-rewriting can extend to 
+<br>
+rewriting the theorem prover or theorem checker.  Leaving aside other 
+<br>
+qualms I have about the Gödel Machine, it appears to me that for the Gödel 
+<br>
+Machine to execute a change that switches to a new theorem-prover or 
+<br>
+proof-verifier, the Gödel Machine must prove that if the proof-verifier 
+<br>
+accepts P, then P.  Otherwise there is no way for the Gödel Machine to 
+<br>
+prove the new proof-verifier is useful, i.e., no way to expect results 
+<br>
+accepted by the verifier to be useful.
+<br>
+<p>Example:  For the Gödel Machine's current theorem-prover to accept a 
+<br>
+proposed new theorem-prover, might require establishing that if the new 
+<br>
+theorem-prover accepts a proof that a proposed newer theorem-prover is 
+<br>
+useful, then the newer theorem-prover is useful.  Part of my 
+<br>
+dissatisfaction with the Gödel Machine is that Schmidhuber does not specify 
+<br>
+exactly what is meant by &quot;useful&quot;, saying only that it has to do with 
+<br>
+expected utility.  But suppose we have an expected utility problem that 
+<br>
+involves maximizing the number of received apples.  To rewrite the current 
+<br>
+proof system with a new proof system would presumably involve proving that 
+<br>
+if the new proof system accepts a rewrite as &quot;useful for increasing 
+<br>
+apples&quot;, that rewrite is useful for increasing apples.  The verifier has to 
+<br>
+translate a meta-language result into an object-language result.
+<br>
+<p>Löb's Theorem establishes that for any proof system capable of encoding its 
+<br>
+own proof process,
+<br>
+<p>|- Provable('P') -&gt; P
+<br>
+&nbsp;&nbsp;&nbsp;if and only if
+<br>
+|- P.
+<br>
+<p>If you can prove &quot;if P is provable then P&quot;, you can prove P.
+<br>
+<p><a href="http://www.sm.luth.se/~torkel/eget/godel/theorems.html">http://www.sm.luth.se/~torkel/eget/godel/theorems.html</a>
+<br>
+<a href="http://www.sm.luth.se/~torkel/eget/godel/loeb.html">http://www.sm.luth.se/~torkel/eget/godel/loeb.html</a>
+<br>
+<p>In the same way that Gödel's Theorem formalizes the ancient Epimenides 
+<br>
+Paradox &quot;This sentence is false&quot;, Löb's Theorem sparked Haskell Curry to 
+<br>
+invent the Santa Claus Paradox, &quot;If this sentence is true then Santa Claus 
+<br>
+exists.&quot;  (Consider: *if* the sentence *were* true, then the antecedent 
+<br>
+would be true, and hence Santa Claus would exist, right?  So if the 
+<br>
+sentence were true, Santa Claus would exist?  This is precisely what the 
+<br>
+sentence asserts, and therefore the sentence is true and Santa Claus does 
+<br>
+exist.)  Löb's Theorem eliminates the self-reference in the Santa Claus 
+<br>
+Paradox via a diagonalization argument, as Gödel did with the Epimenides 
+<br>
+Paradox.  The upshot is that if you can prove &quot;P's provability implies P&quot;, 
+<br>
+the Santa Claus Paradox carries through and you can prove P.  If you could 
+<br>
+prove, in Peano Arithmetic, that a proof of P!=NP in Peano Arithmetic would 
+<br>
+imply P!=NP, you could use Löb's construction to prove P!=NP.
+<br>
+<p>Tarski used Löb's Theorem to argue that no consistent language can contain 
+<br>
+its own truth predicate.  If you want to talk about the truth of statements 
+<br>
+in an object language, you need a meta-language that cannot talk about the 
+<br>
+truth of the meta-language.  You can say &quot;The sky is blue&quot; and '&quot;The sky is 
+<br>
+blue&quot; is true', but not ''&quot;The sky is blue&quot; is true' is true', unless you 
+<br>
+invent a new concept of truth, true-1, to describe metalanguage truths in 
+<br>
+meta-meta-language.
+<br>
+<p><a href="http://www.ditext.com/tarski/tarski.html">http://www.ditext.com/tarski/tarski.html</a>
+<br>
+<p>In more familiar terms, it would seem that Schmidhuber's Gödel Machine must 
+<br>
+prove a new proof system is consistent in order to accept it, and that runs 
+<br>
+smack dab into Gödel's original theorem.  Any system that can prove its own 
+<br>
+consistency is inconsistent.
+<br>
+<p>Maybe the Gödel Machine's first proof system would start with ZFC set 
+<br>
+theory.  ZFC suffices to prove the consistency of Peano Arithmetic, and 
+<br>
+might accept a rewrite implementing a proof verifier that accepted PA 
+<br>
+proofs - but what about the next iteration of self-rewriting?  The Peano 
+<br>
+prover would not accept another Peano prover.  The same problem holds for 
+<br>
+starting off the Gödel Machine with an axiom about the consistency of Peano 
+<br>
+Arithmetic, a further axiom about the consistency of the new system PA+1, 
+<br>
+et cetera.  Even if we assert infinite levels of consistency in PA+w, it 
+<br>
+doesn't help.  Just as every descending sequence of ordinals must 
+<br>
+eventually terminate, every sequence of self-rewrites would need to 
+<br>
+eventually terminate.
+<br>
+<p>The difficulty with Schmidhuber's Gödel Machine concerns me because the 
+<br>
+problem with Löb's Theorem seems to generalize to other foundations for 
+<br>
+self-rewriting AI.  Even the simplest consistency under reflection of a 
+<br>
+self-modifying AI would seem to require the AI to believe that if its 
+<br>
+processes assert P, if AI |- P, that is evidence supporting P.  If the AI 
+<br>
+looks at its reflected processes, it will find that the meaning of belief 
+<br>
+P, the causal sequence leading up to the presence of the computational 
+<br>
+tokens representing belief P, is that such-and-such process T proved P.  If 
+<br>
+T's proof of P doesn't seem to the AI to imply P, then why would a 
+<br>
+reflective AI allow T's proof of P to load P as a belief, any more than a 
+<br>
+reflective AI would allow a random number-generator to load beliefs?  But 
+<br>
+if an AI does believe that (AI |- P) -&gt; P, Löb's construction permits an 
+<br>
+automatic proof of P - unless we change one of the other implicit 
+<br>
+assumptions in Löb's argument, or in this whole scenario.
+<br>
+<p>All the papers I've scanned so far on reflectivity in theorem-proving 
+<br>
+systems use the old towers-of-meta trick to get around Löb's Theorem.  I 
+<br>
+have not been able to find anything on reflectivity that wraps all the way 
+<br>
+around, the way humans think (but then humans are naively vulnerable to 
+<br>
+Epimenides and Santa Claus paradoxes), or the way a reflectively consistent 
+<br>
+seed AI would have to wrap around.
+<br>
+<p>Lest any despair of AI, remember that humans can think about this stuff 
+<br>
+without going up in flames, ergo it must be possible somehow.
+<br>
+<p>I have tentative ideas about how to resolve this problem, but I was 
+<br>
+wondering if there's anything in the existing literature.  Anything I 
+<br>
+should read on fully wrap-around reflectivity?  Anything out there on 
+<br>
+reflectivity that doesn't invoke the towers-of-meta trick?
+<br>
+<p><pre>
+-- 
+Eliezer S. Yudkowsky                          <a href="http://intelligence.org/">http://intelligence.org/</a>
+Research Fellow, Singularity Institute for Artificial Intelligence
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="9995.html">Jeff Medina: "Re: A difficulty with AI reflectivity"</a>
+<li><strong>Previous message:</strong> <a href="9993.html">Keith Henson: "Progress in understanding natural minds (pointer to pointer)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="9995.html">Jeff Medina: "Re: A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="9995.html">Jeff Medina: "Re: A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="9996.html">Christian Szegedy: "Re: A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="9997.html">Ben Goertzel: "RE: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="9999.html">Michael Roy Ames: "Re: A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="10001.html">Wei Dai: "Re: A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="10091.html">Maru: "Re: Weaknesses in FAI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#9994">[ date ]</a>
+<a href="index.html#9994">[ thread ]</a>
+<a href="subject.html#9994">[ subject ]</a>
+<a href="author.html#9994">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:49 MDT
+</em></small></p>
+</body>
+</html>

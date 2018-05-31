@@ -1,0 +1,361 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Pattern representation and Solomonoff</title>
+<meta name="Author" content="James Rogers (jamesr@best.com)">
+<meta name="Subject" content="Pattern representation and Solomonoff">
+<meta name="Date" content="2003-09-16">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Pattern representation and Solomonoff</h1>
+<!-- received="Tue Sep 16 02:56:05 2003" -->
+<!-- isoreceived="20030916085605" -->
+<!-- sent="Tue, 16 Sep 2003 01:54:05 -0700" -->
+<!-- isosent="20030916085405" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Pattern representation and Solomonoff" -->
+<!-- id="BB8C1DBD.4DA9%jamesr@best.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> James Rogers (<a href="mailto:jamesr@best.com?Subject=Re:%20Pattern%20representation%20and%20Solomonoff"><em>jamesr@best.com</em></a>)<br>
+<strong>Date:</strong> Tue Sep 16 2003 - 02:54:05 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="7136.html">Christian Szegedy: "Re: Pattern representation and Solomonoff"</a>
+<li><strong>Previous message:</strong> <a href="7134.html">Gordon Worley: "Re: [Fwd: more networking applications: tribe.net]"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="7136.html">Christian Szegedy: "Re: Pattern representation and Solomonoff"</a>
+<li><strong>Reply:</strong> <a href="7136.html">Christian Szegedy: "Re: Pattern representation and Solomonoff"</a>
+<li><strong>Reply:</strong> <a href="7149.html">James Rogers: "RE: Pattern representation and Solomonoff"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7135">[ date ]</a>
+<a href="index.html#7135">[ thread ]</a>
+<a href="subject.html#7135">[ subject ]</a>
+<a href="author.html#7135">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+There are so many different concepts interwoven into a single elegant model
+<br>
+that I get easily distracted when explaining certain aspects of my work.
+<br>
+<p>My use of the word &quot;convergent&quot; in a previous email was perhaps unfortunate;
+<br>
+the importance of it was implied by a layer or two of indirection for
+<br>
+someone with the appropriate context.
+<br>
+<p>I'm going to start exploring some of the basic interesting points mentioned
+<br>
+in the title here, but I'm going to work from a more basic data-oriented
+<br>
+perspective rather than from the assumption of a particular knowledge
+<br>
+representation framework which has almost no context for most of the people
+<br>
+reading this.
+<br>
+<p><p>Let us assume that we have a trivial function that generates the following
+<br>
+infinite stream of characters:
+<br>
+<p>F = &quot;1947194719471947...&quot;
+<br>
+<p>Writing a program that can express such a function is a minor feat, one line
+<br>
+in Python and many other languages.  By definition, this function has a low
+<br>
+Kolmogorov complexity.  More importantly, the entropy of the function has a
+<br>
+very specific profile, being locally high and globally low.  Locally, small
+<br>
+fragments have high entropy taken by themselves (e.g. &quot;4719&quot;), and are not
+<br>
+meaningfully regular.  Taken over long fragments, higher order regularities
+<br>
+are apparent even upon casual observation (e.g. the pattern &quot;1947&quot; appears
+<br>
+to repeat ad infinitum).
+<br>
+<p>How would one represent this function from the standpoint of efficient
+<br>
+knowledge representation?  Assume that pattern computation is a non-issue
+<br>
+(relevant to AGI but not to this email or narrow discussion), and that a
+<br>
+reference to a character takes as much memory as the character itself in
+<br>
+practice.
+<br>
+<p>1.) A naïve implementation would simply store the sequence of characters as
+<br>
+they are generated, since there is no guarantee that they will repeat
+<br>
+forever; the repetition is inferred only, we have no special knowledge of
+<br>
+the function.
+<br>
+<p>2.) A more clever implementation would use a sequential statistical model
+<br>
+(assume it is a 4th order model, for the sake of the example), which would
+<br>
+code a long sequence of references to the &quot;1947&quot; node of the model.  This
+<br>
+represents a substantial savings, requiring a single reference to store
+<br>
+instead of four characters.  Quite a savings and giving a roughly 4:1
+<br>
+compression ratio after discounting the fixed overhead of the model.  Let's
+<br>
+call the model overhead function OH(), which is a function of the number of
+<br>
+patterns stored in it (complex and exponential, but minor in some cases --
+<br>
+very important later).
+<br>
+<p>3.) An even more clever implementation doesn't use a single statistical
+<br>
+model.  Rather than modeling the data stream alone, it also models the
+<br>
+references to the models, and encodes references to *them* and so forth.
+<br>
+This works even better, giving logarithmic memory usage as a function of the
+<br>
+total characters stored minus model overhead.
+<br>
+<p><p>Each of the implementation's is more clever with representation than the
+<br>
+previous, but you say &quot;So what? It is a simple repeating pattern!
+<br>
+Representation doesn't matter!&quot;
+<br>
+<p>Let's change the assumptions a bit.  Let's assume that the pattern only
+<br>
+repeats for 1,000 iterations before changing to another random sequence of
+<br>
+four characters (say, &quot;6872&quot;), and keeps changing every 1,000 iterations.
+<br>
+Lets call the number of different patterns &quot;N&quot;.  Implementation #1
+<br>
+faithfully records the characters &quot;as is&quot; like it always has, implementation
+<br>
+#2 makes adjustments to its statistical model with a modest increase in the
+<br>
+overhead for a space complexity of DATA/4 + OH(N), and implementation #3
+<br>
+faces a simple increase of Nlog DATA + OH(logN)*N.
+<br>
+<p>Let's make the problem even more interesting.  Let's assume that the
+<br>
+function rolls over to the beginning after 1,000 different patterns are
+<br>
+generated 1,000 times each.  If we were talking about a UTM with infinite
+<br>
+memory, this would not be a problem, but since we live in this universe we
+<br>
+have to deal with the fact that everything is an FSM, with some fixed amount
+<br>
+of character/reference storage &quot;M&quot;.  It is conceivable that with
+<br>
+implementation #1, we never reach the rollover point where the function
+<br>
+repeats the original pattern because the machine runs out of memory after M
+<br>
+characters.  Implementation #2 does better, at M/4 - OH(N).  Implementation
+<br>
+#3 does even better at Nlog M + OH(logN)*N, with a vastly smaller memory
+<br>
+footprint than either #1 or #2 to losslessly encode the same pattern.
+<br>
+<p>Again you ask, so what?  One implementation is substantially more efficient
+<br>
+than the other, but that is a matter of degree.
+<br>
+<p>Something very interesting happens when the function rolls over and repeats
+<br>
+the same pattern again.  Assume the machine has enough memory that #2 has
+<br>
+space to record two full iterations of the &quot;super-pattern&quot; where the digit
+<br>
+patterns go back to the original pattern of &quot;1947&quot; and repeating the
+<br>
+sequence of apparently random pattern changes before running out of memory.
+<br>
+It follows that #1 will never see the rollover super-pattern and view the
+<br>
+sequence of pattern changes as truly random, and #3 will easily have enough
+<br>
+memory resources to record several iterations of the rollover super-pattern.
+<br>
+<p>For the second iteration of the super-pattern, you see a new memory
+<br>
+consumption function:  both #2 and #3 start to average less memory used per
+<br>
+character stored the more times the super-pattern repeats.  #2
+<br>
+asymptotically approaches DATA/4 for a minor improvement (taking into
+<br>
+account that &quot;DATA&quot; is twice as large after two iterations of the
+<br>
+super-pattern), with the function OH(N) effectively becoming a constant.
+<br>
+However, #3 consumes *almost no additional memory*, just some negligible
+<br>
+additional model overhead, and it already has a more efficient model OH()
+<br>
+scalability than #2 (the details of why there is an effective difference in
+<br>
+model efficiency is out-of-scope here).
+<br>
+&nbsp;
+<br>
+#2 and #3 represent implementations that are capable of &quot;converging&quot;, which
+<br>
+is to say the memory/character stored can start decreasing as more of an
+<br>
+apparently FSM-generated pattern is encoded.  Obviously, #2 and #3 represent
+<br>
+two very different implementational efficiencies, as #3 requires vastly less
+<br>
+memory to losslessly encode a pattern, something that becomes particularly
+<br>
+evident as the corpus of data to encode increases.   What is also evident is
+<br>
+that the memory profiles are vastly different such that #3 could converge on
+<br>
+patterns that are sufficiently complex that #2 does not have enough memory
+<br>
+to converge in some finite amount of memory (and even if it did, it would be
+<br>
+comparatively wasteful of resources).  One thing that I didn't really cover
+<br>
+is the pathological case of truly random data. In this case, #3 will
+<br>
+actually give the WORST performance of all three.  #1, #2, and #3 are
+<br>
+actually different algorithm classes (evidenced to a certain extent by their
+<br>
+space complexity profiles).  #1 guarantees space requirements but never
+<br>
+converges, #3 resource requirements fluctuate quite a bit within certain
+<br>
+hard limits depending on the apparent complexity of the data source but will
+<br>
+start to converge at the slightest hint of a pattern (obvious or subtle and
+<br>
+abstract), and #2 is somewhere in the middle.  The example function was
+<br>
+painfully simple, and the scalability math is bit uglier to compute with
+<br>
+more real world datasets.
+<br>
+<p>Which brings me to an important point.  The efficiency of an implementation
+<br>
+is directly related to the Kolmogorov complexity of a pattern that an
+<br>
+implementation can losslessly store in a finite amount of memory. As in the
+<br>
+above example, the differences in practical efficiency can be extraordinary.
+<br>
+More efficient implementations are capable of recognizing and utilizing more
+<br>
+abstract patterns.  There is actually multiple ways to do implementations
+<br>
+with the rough efficiency class of #3 (I've probably come up with three or
+<br>
+four myself) so it is really a class of algorithms, but that is beyond the
+<br>
+scope of this email.  To ground this a bit, #1 is a brain-dead UTM model, #2
+<br>
+is represented in CS literature, and #3 is only described in AIT mathematics
+<br>
+(and my code base).
+<br>
+<p>Now to bring up another important observation that I'm guessing most people
+<br>
+overlooked, probably in part because I didn't go into the implementational
+<br>
+details of #3, though it should be somewhat obvious upon reflection:
+<br>
+<p>The entire state space of the #3 data structure will be almost devoid of
+<br>
+duplicate patterns.  You can show why this should/must be the case from a
+<br>
+number of theoretical vectors (left as an exercise to the reader -- an easy
+<br>
+one).
+<br>
+<p>The implication is important, though.  It suggests that one has a structure
+<br>
+that approximates an exhaustive index of every pattern it has seen as an
+<br>
+intrinsic side-effect of its function.  While there is some truth to this,
+<br>
+the problem is much uglier in practice and a much more complex theoretical
+<br>
+problem.
+<br>
+<p><p><p>In any case, it is very late and my brain is numb.  I may have screwed up
+<br>
+the OH() function for #3, but I can't think well enough right now to
+<br>
+ascertain whether or not it is correct.  It looks like a footnote in this
+<br>
+email, but it is quite important and a small book in itself.  I'll see about
+<br>
+making any corrections to glaring errors tomorrow.
+<br>
+<p>The reference in a previous post was to a #3 class structure that converges
+<br>
+at very close to optimal that actually expresses a truly exhaustive pattern
+<br>
+index.  Much harder than it sounds because the OH() function is a serious
+<br>
+bitch to persuade to play nice.
+<br>
+<p>Cheers and Good Night,
+<br>
+<p>-James Rogers
+<br>
+&nbsp;<a href="mailto:jamesr@best.com?Subject=Re:%20Pattern%20representation%20and%20Solomonoff">jamesr@best.com</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="7136.html">Christian Szegedy: "Re: Pattern representation and Solomonoff"</a>
+<li><strong>Previous message:</strong> <a href="7134.html">Gordon Worley: "Re: [Fwd: more networking applications: tribe.net]"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="7136.html">Christian Szegedy: "Re: Pattern representation and Solomonoff"</a>
+<li><strong>Reply:</strong> <a href="7136.html">Christian Szegedy: "Re: Pattern representation and Solomonoff"</a>
+<li><strong>Reply:</strong> <a href="7149.html">James Rogers: "RE: Pattern representation and Solomonoff"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7135">[ date ]</a>
+<a href="index.html#7135">[ thread ]</a>
+<a href="subject.html#7135">[ subject ]</a>
+<a href="author.html#7135">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:42 MDT
+</em></small></p>
+</body>
+</html>

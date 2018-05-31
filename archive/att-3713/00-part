@@ -1,0 +1,73 @@
+On Thu, 2002-05-16 at 21:20, Ben Goertzel wrote:
+> 
+> Yes, but the catch is that for a complex problem, the "best approximation"
+> may be a very bad one ;>
+
+
+This is very literally true in a number of ways, though increasing
+improbable as the size of the UP model increases in the most critical
+sense. This leads me to an interesting thought worth bringing up. 
+
+Universal predictors of all types do not have a perfectly nice linear
+relationship between their available resources, the complexity of the
+problem, and the accuracy of their conclusions. "Non-optimal" UPs have
+this same characteristic and cover a huge swath of design and
+architecture for intelligent systems, encompassing just about everything
+that would fall under the umbrella of AGI.  The value of a "non-optimal"
+UPs in the real world is that under certain complexity constraints they
+can give better results, but the accuracy of their results do not
+converge as fast in the general case (i.e. when the complexity exceeds a
+certain trivial level).
+
+Of specific interest, for every UP ("optimal" or not) it is possible to
+construct a pattern (usually way out on the edge of the complexity limit
+for a given predictor) that will break the universal predictor in such a
+way that it makes conclusions/predictions WORSE than what you would
+expect to get by random chance.  In a sense, there is a very narrow
+boundary condition under which the predictor will behave in an
+"irrational" manner. The larger the predictor, the more improbable it is
+that you will find a pattern that can break the predictor by chance, but
+such patterns exist nonetheless.  (Hey, this reminds me of GEB when they
+discuss Godel's Incompleteness Theorem.)
+
+Implication: Any Friendliness theory for AGI that requires perfect
+rationality cannot be guaranteed to stay Friendly. Ironically, the best
+prophylactic for this (other than not doing it at all) would be to make
+the AI as big as possible to make the probability of a "psychotic
+episode" vanishingly small. 
+
+An opinion on this from a "Friendliness" expert (Eliezer?) would be
+interesting.
+
+I just thought of this today so I haven't really thought it through, but
+I don't see anything obviously wrong with my conclusion either. It would
+seem that some level of irrationality is intrinsic to any workable model
+for AGI (e.g. neural networks, AIC, etc).  It probably wouldn't manifest
+itself as it does in humans, but an analog is certainly possible in any
+such system.
+
+ 
+> Sure, but inadequate memory on a single machine can be turned into adequate
+> memory on a distributed system, at the cost of accepting a significant
+> slowdown!
+
+
+This is quite correct, and getting more correct every day. As someone
+who works at a company delivering obscene bandwidth to the masses, I
+should know this as well as anyone. Throw in 64-bit OS and boxen, and
+you can effectively have very large usable memories on the cheap. 
+
+One thing that I want to try doing is turning a solid-state disk array
+(not cheap by any means, but a lot cheaper than buying a box that can
+support and address, say, 128-Gb of RAM directly) and turning it into a
+giant swap partition on a 64-bit box. The idea being that this is a back
+door way to get really large blocks of addressable RAM without buying a
+mainframe, while being a few orders of magnitude faster than a hard
+drive.
+
+Cheers,
+
+-James Rogers
+ jamesr@best.com
+
+

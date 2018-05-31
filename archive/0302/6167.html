@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Games, competition and FSI education.</title>
+<meta name="Author" content="Stephen Reed (reed@cyc.com)">
+<meta name="Subject" content="Re: Games, competition and FSI education.">
+<meta name="Date" content="2003-02-08">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Games, competition and FSI education.</h1>
+<!-- received="Sat Feb  8 20:33:32 2003" -->
+<!-- isoreceived="20030209033332" -->
+<!-- sent="Sat, 8 Feb 2003 21:33:29 -0600 (CST)" -->
+<!-- isosent="20030209033329" -->
+<!-- name="Stephen Reed" -->
+<!-- email="reed@cyc.com" -->
+<!-- subject="Re: Games, competition and FSI education." -->
+<!-- id="Pine.LNX.4.33.0302082029110.1174-100000@crapgame.cyc.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="02cf01c2cfa3$9491d7c0$6501a8c0@slnt.phub.net.cable.rogers.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Stephen Reed (<a href="mailto:reed@cyc.com?Subject=Re:%20Games,%20competition%20and%20FSI%20education."><em>reed@cyc.com</em></a>)<br>
+<strong>Date:</strong> Sat Feb 08 2003 - 20:33:29 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="6168.html">Gordon Worley: "Re: Games, competition and FSI education."</a>
+<li><strong>Previous message:</strong> <a href="6166.html">Ben Goertzel: "RE: Games, competition and FSI education."</a>
+<li><strong>In reply to:</strong> <a href="6163.html">Michael Roy Ames: "Games, competition and FSI education."</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6168.html">Gordon Worley: "Re: Games, competition and FSI education."</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6167">[ date ]</a>
+<a href="index.html#6167">[ thread ]</a>
+<a href="subject.html#6167">[ subject ]</a>
+<a href="author.html#6167">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Sat, 8 Feb 2003, Michael Roy Ames wrote:
+<br>
+<p><em>&gt; Dear SL4,
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Last month in the #sl4 chat channel, there was a discussion about
+</em><br>
+<em>&gt; competitive games and whether we should teach a seed AI, or Friendly
+</em><br>
+<em>&gt; Super Intelligence (FSI), about playing them.
+</em><br>
+<p>Inspired by the recent Deep Junior vs. Gary Kasparov chess matches, I have
+<br>
+revisited (skimmed) the chess programming literature and critiques of
+<br>
+machine approaches to gameplay.  Critics point to the game of Go
+<br>
+as too computationally complex for brute force look ahead.  So knowing
+<br>
+very little about this game I read the simple rules and visited some Go
+<br>
+web sites for more information.
+<br>
+<p>Here is a plan which I hope to get around to sometime:
+<br>
+<p>1. Gnu-Go is open source Go software and interfaces with the Go game
+<br>
+communication protocols, so I can get Go realtime interface code there.
+<br>
+<p>2. There are a couple of Java web client GUI's for Go that you can play on
+<br>
+the web and observe library Go games, and which interface to Gnu-Go or an application
+<br>
+I could program to comply with the Gnu-Go interface. This software gives
+<br>
+my potential application an interface onto the web Go gaming arenas.
+<br>
+<p>3. A compelling critique of computer game play is that the best programs
+<br>
+have a large body of hand crafted heuristics which they employ.  For
+<br>
+example in chess, the best programs have both a library of standard
+<br>
+openings and a hand crafted position evaluation function.  I leave aside
+<br>
+whether the library of endgame positions is a heuristic or simply a form
+<br>
+of memoization.  Critics say: &quot;Why doesn't a smart computer just take the
+<br>
+rules and learn the rest from game play experience?&quot;.  But programs taking
+<br>
+this approach have not turned out to be very good, and if I actually
+<br>
+pursue this task I'll have to examine these previous learning approaches
+<br>
+so as not to repeat their mistakes.  I want to give a Cyc application
+<br>
+the rules of Go and a large body of commonsense gaming skill and see what
+<br>
+develops.
+<br>
+<p>4. Although I am still just coding the initial stages of a NIST/RCS
+<br>
+hierarchical control structure as a Cyc application for automatic term
+<br>
+mapping, I have read and re-read James Albus' writings on this subject and
+<br>
+feel that his approach would lend itself to gameplay.  I am especially
+<br>
+intrigued by the pattern recognition required for Go expertise.
+<br>
+<p>5. The hierarchical control structure could easily be adapted for Go
+<br>
+gameplay I think.  Each layer should have about ten times the planning
+<br>
+time horizon of the lower levels and I think that the smallest unit of
+<br>
+resolution would be a single move.  So maybe three levels in the
+<br>
+hierarchy.  Albus writes about sensory perception and the creation of
+<br>
+more general patterns from those sensed in the lower level.   What would
+<br>
+be neat for me would be the chance to explore the pattern classification
+<br>
+algorithms available that could apply to the Go game-space.  If Cyc is to
+<br>
+exhibit more intelligent behavior then it must learn to  recognize salient
+<br>
+patterns, reifying them into symbolic concepts and extending Cyc's
+<br>
+ontology.  On the planning side, plan operators would have to be formed
+<br>
+at first from a description of the rules and then expanded from learned
+<br>
+good groupings of simpler operations and their applicable gameboard
+<br>
+situations.  Adversarial planning means recognizing the plans of your
+<br>
+opponent and this is something that we are just beginning to think
+<br>
+about at Cycorp.
+<br>
+<p>6. The commonsense body of knowledge of gameplay could be applicable to
+<br>
+any adversarial situation and hence might get DARPA funding someday.
+<br>
+Especially if Cyc is able to learn how to play Go just from the rules, the
+<br>
+general gameplay knowledge and learning from experience.
+<br>
+<p>7. I went ahead and ordered a Go board and stones - having them will be
+<br>
+a reminder to work on this.
+<br>
+<p>Speaking of DARPA, Ron Brachman's visit to Cycorp in December went well
+<br>
+and we have hopeful expectations that his DARPA office may employ Cyc
+<br>
+as a standard software for an upcoming funded program.  To further this
+<br>
+development, I would like to get some of my NIST/RCS style application
+<br>
+for automatic term mapping working in a couple of months for a compelling
+<br>
+demo of active Cyc intelligent behavior.
+<br>
+<p>My java programming work in progress continues to be committed to
+<br>
+SourceForge but is out of sync with the released OpenCyc image.  Cycorp
+<br>
+plans monthly releases of OpenCyc so I hope to get back in sync soon.
+<br>
+<p>I gave a brief talk on the Singularity to Cycorp last month and it was a
+<br>
+hit.  I plan a followup talk on the importance of Friendly AI and some
+<br>
+ways, as published by Eliezer, that it can be safely brought about.
+<br>
+<p>-Steve
+<br>
+<p>===========================================================
+<br>
+Stephen L. Reed                  phone:  512.342.4036
+<br>
+Cycorp, Suite 100                  fax:  512.342.4040
+<br>
+3721 Executive Center Drive      email:  <a href="mailto:reed@cyc.com?Subject=Re:%20Games,%20competition%20and%20FSI%20education.">reed@cyc.com</a>
+<br>
+Austin, TX 78731                   web:  <a href="http://www.cyc.com">http://www.cyc.com</a>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;download OpenCyc at <a href="http://www.opencyc.org">http://www.opencyc.org</a>
+<br>
+===========================================================
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="6168.html">Gordon Worley: "Re: Games, competition and FSI education."</a>
+<li><strong>Previous message:</strong> <a href="6166.html">Ben Goertzel: "RE: Games, competition and FSI education."</a>
+<li><strong>In reply to:</strong> <a href="6163.html">Michael Roy Ames: "Games, competition and FSI education."</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6168.html">Gordon Worley: "Re: Games, competition and FSI education."</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6167">[ date ]</a>
+<a href="index.html#6167">[ thread ]</a>
+<a href="subject.html#6167">[ subject ]</a>
+<a href="author.html#6167">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:41 MDT
+</em></small></p>
+</body>
+</html>

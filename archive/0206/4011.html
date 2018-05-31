@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: .NET/C#'s CodeDOM and Flare</title>
+<meta name="Author" content="Ben Houston (ben@exocortex.org)">
+<meta name="Subject" content=".NET/C#'s CodeDOM and Flare">
+<meta name="Date" content="2002-06-15">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>.NET/C#'s CodeDOM and Flare</h1>
+<!-- received="Sat Jun 15 05:03:59 2002" -->
+<!-- isoreceived="20020615110359" -->
+<!-- sent="Sat, 15 Jun 2002 03:27:56 -0400" -->
+<!-- isosent="20020615072756" -->
+<!-- name="Ben Houston" -->
+<!-- email="ben@exocortex.org" -->
+<!-- subject=".NET/C#'s CodeDOM and Flare" -->
+<!-- id="000001c2143e$2b53b830$f5b0fea9@exonode" -->
+<!-- charset="us-ascii" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Houston (<a href="mailto:ben@exocortex.org?Subject=Re:%20.NET/C#'s%20CodeDOM%20and%20Flare"><em>ben@exocortex.org</em></a>)<br>
+<strong>Date:</strong> Sat Jun 15 2002 - 01:27:56 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="4012.html">Ben Houston: "A CodeDOM-Aware Generative IDE"</a>
+<li><strong>Previous message:</strong> <a href="4010.html">Ben Goertzel: "RE: Threats to the Singularity."</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="4027.html">Stephen Reed: "Re: .NET/C#'s CodeDOM and Flare"</a>
+<li><strong>Reply:</strong> <a href="4027.html">Stephen Reed: "Re: .NET/C#'s CodeDOM and Flare"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#4011">[ date ]</a>
+<a href="index.html#4011">[ thread ]</a>
+<a href="subject.html#4011">[ subject ]</a>
+<a href="author.html#4011">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Hello,
+<br>
+<p>I'm sure by now most people on this list are familiar with my love of
+<br>
+modern object oriented languages such as C#.  Today I'm going to explain
+<br>
+a little about C#'s and .NET's CodeDOM.  The term 'CodeDOM' is an
+<br>
+acronym for Code Document Object Model.  Basically it is a way to
+<br>
+represent piece of code in C# or a similar language as a tree or graph
+<br>
+of objects.  The root object in a standard CodeDOM is
+<br>
+System.CodeDom.CodeCompileUnit.  This root object contains a list of
+<br>
+System.CodeDom.CodeNamespaces.  Each CodeNamespace can then contain a
+<br>
+list of CodeTypeDeclarations -- the common root for reference types,
+<br>
+value types and enumerations.  I won't bore all you with the details but
+<br>
+there are objects that can represent variables, functions, if
+<br>
+statements, binary expressions, etc...
+<br>
+<p>For all the details check it out on MSDN:
+<br>
+&nbsp;
+<br>
+<a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/h">http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/h</a>
+<br>
+tml/frlrfsystemcodedom.asp 
+<br>
+<p>It is very easy to convert from CodeDOM into C# code.  Just pass the
+<br>
+root, CodeCompileUnit, to the CodeDOM.CodeGenerator and out comes
+<br>
+formatted C# or pass it to CodeDOM.CodeCompiler to get compiled
+<br>
+binaries.  I should add that a code CodeDOM theoretically can be
+<br>
+converted into any language that supports the various elements used.
+<br>
+&nbsp;
+<br>
+Interestly, you can now generate from C# code its corresponding CodeDOM
+<br>
+using a new tool by Ivan Zderadicka.  This means that you can load in a
+<br>
+piece of source code and manipulate it in a semi-compiled and highly
+<br>
+information representation.  Imagine the possibilities....  ;-)
+<br>
+&nbsp;&nbsp;<a href="http://www.c-sharpcorner.com/Code/2002/June/CsCodeParser.asp">http://www.c-sharpcorner.com/Code/2002/June/CsCodeParser.asp</a>
+<br>
+<p>The three representations of code in this model:
+<br>
+&nbsp;&nbsp;1. [C# text] The human readable C# text
+<br>
+&nbsp;&nbsp;2. [CodeDOM] Computer malleable CodeDOM graphs
+<br>
+&nbsp;&nbsp;3. [Compiled] Computer executable compiled assemblies.
+<br>
+<p>The transitions between the representations already discussed:
+<br>
+&nbsp;&nbsp;[C# text] --&gt; [CodeDOM]
+<br>
+&nbsp;&nbsp;[CodeDOM] --&gt; [C# text]
+<br>
+&nbsp;&nbsp;[CodeDOM] --&gt; [Compiled]
+<br>
+<p>The only missing transition is the [Compiled] --&gt; [CodeDOM].  Hopefully
+<br>
+it will not take too long for someone to develop a decent decompiler.
+<br>
+:-)
+<br>
+<p><p>I've tried writing some code that manipulates CodeDOMs as well as code
+<br>
+that manipulates human readable C# code for the purposes of execution
+<br>
+time code generation.  So far I have found it to be fairly challenging.
+<br>
+I almost feel as if there is some useful tool that is still not build
+<br>
+yet.  Maybe I just need some more abstract programming concepts such as
+<br>
+ADTs or functional blocks in a parallel structure to the current
+<br>
+CodeDOM?  What do you all think?
+<br>
+<p><p>I would suggest that CodeDOM really does bridge the gap between Flare
+<br>
+and traditional non-XML based languages.
+<br>
+<p><p>Cheers,
+<br>
+Ben Houston
+<br>
+<a href="http://www.exocortex.org/dsp">http://www.exocortex.org/dsp</a>
+<br>
+<a href="http://www.exocortex.org/3dengine">http://www.exocortex.org/3dengine</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="4012.html">Ben Houston: "A CodeDOM-Aware Generative IDE"</a>
+<li><strong>Previous message:</strong> <a href="4010.html">Ben Goertzel: "RE: Threats to the Singularity."</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="4027.html">Stephen Reed: "Re: .NET/C#'s CodeDOM and Flare"</a>
+<li><strong>Reply:</strong> <a href="4027.html">Stephen Reed: "Re: .NET/C#'s CodeDOM and Flare"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#4011">[ date ]</a>
+<a href="index.html#4011">[ thread ]</a>
+<a href="subject.html#4011">[ subject ]</a>
+<a href="author.html#4011">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:39 MDT
+</em></small></p>
+</body>
+</html>

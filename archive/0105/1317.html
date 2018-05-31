@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Digital Intuition</title>
+<meta name="Author" content="Ben Goertzel (ben@webmind.com)">
+<meta name="Subject" content="RE: Digital Intuition">
+<meta name="Date" content="2001-05-01">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Digital Intuition</h1>
+<!-- received="Tue May 01 22:34:21 2001" -->
+<!-- isoreceived="20010502043421" -->
+<!-- sent="Tue, 1 May 2001 20:30:30 -0400" -->
+<!-- isosent="20010502003030" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@webmind.com" -->
+<!-- subject="RE: Digital Intuition" -->
+<!-- id="JBEPKOGDDIKKAHFPOEFICEGICIAA.ben@webmind.com" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="NFBBLLAGILEOENAGEGNOKENNCCAA.peter@optimal.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@webmind.com?Subject=RE:%20Digital%20Intuition"><em>ben@webmind.com</em></a>)<br>
+<strong>Date:</strong> Tue May 01 2001 - 18:30:30 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1318.html">Peter Voss: "RE: Digital Intuition"</a>
+<li><strong>Previous message:</strong> <a href="1316.html">Damien Broderick: "yet another blather about THE SPIKE"</a>
+<li><strong>In reply to:</strong> <a href="1318.html">Peter Voss: "RE: Digital Intuition"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1317">[ date ]</a>
+<a href="index.html#1317">[ thread ]</a>
+<a href="subject.html#1317">[ subject ]</a>
+<a href="author.html#1317">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt;
+</em><br>
+<em>&gt; Thanks Ben, for making it available.
+</em><br>
+<p>No worries mate --
+<br>
+I eagerly await your detailed comments on various tricky points ;&gt;
+<br>
+<p><em>&gt;
+</em><br>
+<em>&gt; As to the NDA: I would estimate that about 65-75% of the material
+</em><br>
+<em>&gt; is already
+</em><br>
+<em>&gt; available online, anyway. The additional, more detailed protected
+</em><br>
+<em>&gt; information is certainly very useful. How much of a risk/ limitation this
+</em><br>
+<em>&gt; NDA represents has to be a personal decision. In my judgment:
+</em><br>
+<em>&gt; quite minimal
+</em><br>
+<em>&gt; (much is already in the public domain, you are unlikely to copy
+</em><br>
+<em>&gt; significant
+</em><br>
+<em>&gt; portions of the design, a lot of crucial detail is excluded,
+</em><br>
+<p>Yeah, the book does not include code-level detail, and only gives bits and
+<br>
+pieces of object structure.  There's an additional roughly 10,000 pages of
+<br>
+documents containing all this, which will be made accessible only to people
+<br>
+who are actually working on the system.
+<br>
+<p>The book tries to outline the **conceptual** design of the system -- how it
+<br>
+works as a complex system, and the general software architecture used to
+<br>
+implement this complex system..
+<br>
+<p>Personally, I would like to publish this book, but whether this can happen
+<br>
+depends on others besides myself... i.e. those involved with whatever
+<br>
+successor businesses to Webmind Inc. emerge.
+<br>
+<p><p>Another comment -- I definitely don't believe this is the ONLY way to create
+<br>
+real AI.  I just believe it's A way.  There might be better ways, I just
+<br>
+haven't found any.  I think it's very possible that deep
+<br>
+technical/conceptual dialogue with a bunch of you folks could lead to
+<br>
+changes to the design -- tweaks or even substantial changes.
+<br>
+<p>[This paragraph is mostly for Peter]
+<br>
+There are some moderately major parts of the design that I'm not in love
+<br>
+with, but they seem workable and I couldn't find workarounds.  For instance,
+<br>
+I don't like VariableNodes and explicit variable unification.  HOI is too
+<br>
+logic-y for my taste. I'd rather get that to emerge in a more subsymbolic
+<br>
+kind of way.  But we couldn't figure out how to do this, after very much
+<br>
+effort, and we couldn't identify any serious a priori problems with the
+<br>
+current approach.  (Pei Wang thought of the current approach, and he likes
+<br>
+it of course).  Another example: I don't really like having context
+<br>
+formation use its own data mining algorithm instead of a more
+<br>
+general-intelligence approach.   But, the folks working on that pointed out
+<br>
+that using the specialized approach they advocate will be much more
+<br>
+efficient and doesn't really lose you anything in real use cases they
+<br>
+analyzed.  So....   In this manner, a lot of the questionable design points
+<br>
+came out of a lot of thinking and analysis that unfortunately isn't fully
+<br>
+recorded in the book, but that will be drawn out when we talk about the
+<br>
+stuff.  I think my own intuition is closer to yours than the actual WM
+<br>
+design, because in building the WM AI Engine, when I couldn't come up with a
+<br>
+perfectly elegant and intuitive way to do something, we just invented
+<br>
+something that seemed to work.  The balance between engineering and
+<br>
+theory...
+<br>
+<p>My idea is, rather than getting a design that I think is PERFECT, to get a
+<br>
+design that I think is workable, and implement it, and then learn about its
+<br>
+benefits and shortcomings through experimentation.
+<br>
+<p>One thing I can tell you from experience is how VERY VERY MUCH effort it
+<br>
+takes to go from an intuitive conceptual design for a real AI, to a detailed
+<br>
+design suitable for implementation.  Whoa!
+<br>
+<p><p>-- ben
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1318.html">Peter Voss: "RE: Digital Intuition"</a>
+<li><strong>Previous message:</strong> <a href="1316.html">Damien Broderick: "yet another blather about THE SPIKE"</a>
+<li><strong>In reply to:</strong> <a href="1318.html">Peter Voss: "RE: Digital Intuition"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1317">[ date ]</a>
+<a href="index.html#1317">[ thread ]</a>
+<a href="subject.html#1317">[ subject ]</a>
+<a href="author.html#1317">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

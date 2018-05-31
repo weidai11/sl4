@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Towards a prototype mini-AI</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: Towards a prototype mini-AI">
+<meta name="Date" content="2003-01-29">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Towards a prototype mini-AI</h1>
+<!-- received="Wed Jan 29 07:14:45 2003" -->
+<!-- isoreceived="20030129141445" -->
+<!-- sent="Wed, 29 Jan 2003 09:16:19 -0500" -->
+<!-- isosent="20030129141619" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: Towards a prototype mini-AI" -->
+<!-- id="LAEGJLOGJIOELPNIOOAJCEGLEEAA.ben@goertzel.org" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="F113PeGbPn6U9BekWo700002c8b@hotmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20Towards%20a%20prototype%20mini-AI"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Wed Jan 29 2003 - 07:16:19 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="6131.html">Billy Brown: "RE: Towards a prototype mini-AI"</a>
+<li><strong>Previous message:</strong> <a href="6129.html">Mitchell Porter: "Towards a prototype mini-AI"</a>
+<li><strong>In reply to:</strong> <a href="6129.html">Mitchell Porter: "Towards a prototype mini-AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6134.html">Jonathan Standley: "Re: Towards a prototype mini-AI"</a>
+<li><strong>Reply:</strong> <a href="6134.html">Jonathan Standley: "Re: Towards a prototype mini-AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6130">[ date ]</a>
+<a href="index.html#6130">[ thread ]</a>
+<a href="subject.html#6130">[ subject ]</a>
+<a href="author.html#6130">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Mitchell,
+<br>
+<p>You seem to be moving in the direction of something like the
+<br>
+Webmind/Novamente design, which does in fact synthesize elements of neural
+<br>
+nets, logic (probabilistic combinatory term logic, not standard Prolog-style
+<br>
+logic), and a number of methods for concept formation bridging the two
+<br>
+levels.
+<br>
+<p>What one finds when one goes in this direction -- or at least what I
+<br>
+found -- is that the details of the existing approaches to NN's logic, and
+<br>
+concept formation do NOT WORK when one tries to use them as components of an
+<br>
+integrated system.  In practice, one has to rebuild ALL of these things from
+<br>
+scratch, inspired by the existing literature, in order to get them to work
+<br>
+as part of an integrative system.
+<br>
+<p>For me, the process of doing this rebuilding took 5 years -- from 1997-2002.
+<br>
+The Webmind AI Engine was only a partial success in this regard -- it was
+<br>
+too much of an awkward combination of different things.  With the Novamente
+<br>
+design, created in 2001, I feel we've finally &quot;gotten it right&quot; in the sense
+<br>
+of creating a detailed design that incorporates the aspects you mention but
+<br>
+in an elegantly unified way.  But it's NOT simple -- I spent much of 2002
+<br>
+just trying to write up the design in a clear and complete way (while my
+<br>
+colleagues have worked on the C++ implementation, which is far from
+<br>
+complete).  Now my collaborator Cassio Pennachin will spend a lot of 2003
+<br>
+turning my writeup into a really professional product.. and the resulting
+<br>
+1200+ page book will come out in 2004, by which point we'll hopefully have
+<br>
+50%+ of the Novamente design implemented and tested...
+<br>
+<p>In short, I very much appreciate your intuition, but, you  must be aware
+<br>
+that the step from your informal sketch to something vaguely workable is a
+<br>
+HUGE step with numerous difficult substeps...
+<br>
+<p>I'm sure that Novamente is not the only way to flesh out this sort of
+<br>
+intuition either -- it's just the best way that I and my collaborators have
+<br>
+happened upon -- so far --
+<br>
+<p><p>-- Ben Goertzel
+<br>
+<p><p><p><em>&gt; I think we are in dire need of such didactic prototypes
+</em><br>
+<em>&gt; if there is ever to be a *coding community* working on
+</em><br>
+<em>&gt; this thing. There has to be a common understanding of
+</em><br>
+<em>&gt; the basic concepts, and I'm not convinced that that exists
+</em><br>
+<em>&gt; yet.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; So - there are five levels: code, modality, concept,
+</em><br>
+<em>&gt; thought, deliberation. What I'm going to do is just
+</em><br>
+<em>&gt; informally sketch something which *sounds to me* like
+</em><br>
+<em>&gt; it has all those levels.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Code - no problem here, every program is made of code.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Modality - Above all, a modality seems to be a *feature
+</em><br>
+<em>&gt; extractor*, operating in a specific domain. The input is
+</em><br>
+<em>&gt; some sort of raw data set, static or dynamic, and the
+</em><br>
+<em>&gt; output is a representation as a list of features, or
+</em><br>
+<em>&gt; objects with features. Well, neural nets can do all of
+</em><br>
+<em>&gt; that.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Concept, thought, deliberation - In LOGI, these are
+</em><br>
+<em>&gt; described as analogous to word, sentence, stream of
+</em><br>
+<em>&gt; consciousness. So it seems that *propositional content*
+</em><br>
+<em>&gt; (think Prolog) might be enough for those top two
+</em><br>
+<em>&gt; levels - 'sentences' in some internal language of
+</em><br>
+<em>&gt; representation. The AI needs to produce descriptive
+</em><br>
+<em>&gt; sentences which express what its modalities tell it,
+</em><br>
+<em>&gt; and normative sentences which express its intentions.
+</em><br>
+<em>&gt; If you can get those, there is a wealth of symbolic AI
+</em><br>
+<em>&gt; work on putting them to use in a rational fashion.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; So, the key concept seems to be 'concept', and the way
+</em><br>
+<em>&gt; it bridges the gap between subsymbolic feature extraction
+</em><br>
+<em>&gt; and symbolic-level propositional processing. Well, one
+</em><br>
+<em>&gt; simple way to do that is to have concepts which are just
+</em><br>
+<em>&gt; lists of features. Each modality outputs an inventory
+</em><br>
+<em>&gt; of features possessed by its current input; the art of
+</em><br>
+<em>&gt; appropriate concept formation is all about picking out
+</em><br>
+<em>&gt; just a few of those features as 'co-relevant', worthy
+</em><br>
+<em>&gt; of being grouped together. And Copycat provides a model
+</em><br>
+<em>&gt; for *that* process.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; It looks to me like we already have all the ingredients,
+</em><br>
+<em>&gt; not for a seed AI, but certainly for a &quot;general AI&quot; as
+</em><br>
+<em>&gt; defined by LOGI.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; _________________________________________________________________
+</em><br>
+<em>&gt; Add photos to your messages with MSN 8. Get 2 months FREE*.
+</em><br>
+<em>&gt; <a href="http://join.msn.com/?page=features/featuredemail">http://join.msn.com/?page=features/featuredemail</a>
+</em><br>
+<em>&gt;
+</em><br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="6131.html">Billy Brown: "RE: Towards a prototype mini-AI"</a>
+<li><strong>Previous message:</strong> <a href="6129.html">Mitchell Porter: "Towards a prototype mini-AI"</a>
+<li><strong>In reply to:</strong> <a href="6129.html">Mitchell Porter: "Towards a prototype mini-AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6134.html">Jonathan Standley: "Re: Towards a prototype mini-AI"</a>
+<li><strong>Reply:</strong> <a href="6134.html">Jonathan Standley: "Re: Towards a prototype mini-AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6130">[ date ]</a>
+<a href="index.html#6130">[ thread ]</a>
+<a href="subject.html#6130">[ subject ]</a>
+<a href="author.html#6130">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:41 MDT
+</em></small></p>
+</body>
+</html>

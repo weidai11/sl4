@@ -1,0 +1,27 @@
+On Thu, 2002-06-13 at 07:38, Eugen Leitl wrote:
+In practice, even with reversible logic you will run into power
+> dissipation issues way before. (Of course, fractal cooling channels with a
+> high flux of coolant dilute your circuitry, increasing average distances).
+
+
+For superior cooling, you might want to consider building your logic on
+a porous substrate and immersing the whole system in superfluid He II. 
+It is very inert, offers extremely high thermal conductivity, and the
+phase change from superfluid to fluid creates a very efficient pump. The
+limit placed on conventional coolants in this type of environment is how
+fast and efficiently you can move coolant through channels of varying
+sizes, something which becomes far less of a concern with superfluids.
+
+I don't know if this is practical in all cases, but over the last few
+years there has been some interest and study of the superfluid immersion
+cooling using porous insulation.  The military is interested in it right
+now, but eventually I could see it having application in logic cooling.
+If I'm not mistaken, superfluid cooling technologies very substantially
+extend the thermal dissipation capabilities of conventional cooling
+technologies.
+
+-James Rogers
+ jamesr@best.com
+
+
+

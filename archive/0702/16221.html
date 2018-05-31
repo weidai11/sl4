@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Optimality of using probability</title>
+<meta name="Author" content="Mitchell Porter (mitchtemporarily@hotmail.com)">
+<meta name="Subject" content="Re: Optimality of using probability">
+<meta name="Date" content="2007-02-06">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Optimality of using probability</h1>
+<!-- received="Tue Feb  6 16:27:27 2007" -->
+<!-- isoreceived="20070206232727" -->
+<!-- sent="Tue, 06 Feb 2007 23:25:51 +0000" -->
+<!-- isosent="20070206232551" -->
+<!-- name="Mitchell Porter" -->
+<!-- email="mitchtemporarily@hotmail.com" -->
+<!-- subject="Re: Optimality of using probability" -->
+<!-- id="BAY133-F225D7F23AB76D8B67F6939CA9F0@phx.gbl" -->
+<!-- inreplyto="45C812A3.5040003@pobox.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Mitchell Porter (<a href="mailto:mitchtemporarily@hotmail.com?Subject=Re:%20Optimality%20of%20using%20probability"><em>mitchtemporarily@hotmail.com</em></a>)<br>
+<strong>Date:</strong> Tue Feb 06 2007 - 16:25:51 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="16222.html">Konstantinos Natsakis: "Definitions of cognitive functions - Any pointers?"</a>
+<li><strong>Previous message:</strong> <a href="16220.html">Tennessee Leeuwenburg: "Re: Optimality of using probability"</a>
+<li><strong>In reply to:</strong> <a href="16219.html">Eliezer S. Yudkowsky: "Re: Optimality of using probability"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#16221">[ date ]</a>
+<a href="index.html#16221">[ thread ]</a>
+<a href="subject.html#16221">[ subject ]</a>
+<a href="author.html#16221">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+I said
+<br>
+<p><em>&gt;If you the programmer ('you' being an AI, I assume) already have the
+</em><br>
+<em>&gt;concept of probability, and you can prove that a possible program will
+</em><br>
+<em>&gt;estimate probabilities more accurately than you do, you should be able
+</em><br>
+<em>&gt;to prove that it would provide an increase in utility, to a degree
+</em><br>
+<em>&gt;depending on the superiority of its estimates and the structure of
+</em><br>
+<em>&gt;your utility function. (A trivial observation, but that's usually where
+</em><br>
+<em>&gt;you have to start.)
+</em><br>
+<p>Suppose that
+<br>
+<p>the environment is a two-state Markov process, pr(A)=p, pr(B)=1-p;
+<br>
+your modelling freedom consists in setting q, your guess at the value of p;
+<br>
+and utility at timestep t is just the cumulative number of correct guesses.
+<br>
+<p>Then at time t, for a given q, expected utility is
+<br>
+EU_q[t] = pq + (1-p)(1-q).
+<br>
+<p>It should not be hard to prove that
+<br>
+|p-q0|&lt;|p-q1| implies EU_q0[t] &gt; EU_q1[t].
+<br>
+<p>What I had in mind was a situation in which there is a programmable
+<br>
+external device with higher-precision arithmetic than you have, so
+<br>
+it can estimate p better than you. It's a rather artificial example 
+<br>
+(although
+<br>
+this is the human situation with respect to electronic hardware), but
+<br>
+the situation involved would not be hard to represent, superficially
+<br>
+anyway, and that would be enough for the deduction to be made.
+<br>
+<p>So that's a simple case, &quot;where the statistical structure of the
+<br>
+environment is known&quot;, as you put it below. The more abstract
+<br>
+cases will revolve around proofs of *algorithmic* superiority,
+<br>
+perhaps.
+<br>
+<p>Eliezer said
+<br>
+<p><em>&gt;Mitch, I haven't found that problem to be trivial if one seeks a precise 
+</em><br>
+<em>&gt;demonstration.  I say &quot;precise demonstration&quot;, rather than &quot;formal proof&quot;, 
+</em><br>
+<em>&gt;because formal proof often carries the connotation of first-order logic, 
+</em><br>
+<em>&gt;which is not necessarily what I'm looking for.  But a line of reasoning 
+</em><br>
+<em>&gt;that an AI itself carries out will have some exact particular 
+</em><br>
+<em>&gt;representation and this is what I mean by &quot;precise&quot;.  What exactly does it 
+</em><br>
+<em>&gt;mean for an AI to believe that a program, a collection of ones and zeroes, 
+</em><br>
+<em>&gt;&quot;estimates probabilities&quot; &quot;more accurately&quot; than does the AI?  And how does 
+</em><br>
+<em>&gt;the AI use this belief to choose that the expected utility of running its 
+</em><br>
+<em>&gt;program is ordinally greater than the expected utility of the AI exerting 
+</em><br>
+<em>&gt;direct control?  For simple cases - where the statistical structure of the 
+</em><br>
+<em>&gt;environment is known, so that you could calculate the probabilities 
+</em><br>
+<em>&gt;yourself given the same sensory observations as the program - this can be 
+</em><br>
+<em>&gt;argued precisely by summing over all probable observations.  What if you 
+</em><br>
+<em>&gt;can't do the exact sum? How would you make the demonstration precise enough 
+</em><br>
+<em>&gt;for an AI to walk through it, let alone independently discover it?
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;*Intuitively* the argument is clear enough, I agree.
+</em><br>
+<p>_________________________________________________________________
+<br>
+Advertisement: Fresh jobs daily. Stop waiting for the newspaper. Search now! 
+<br>
+www.seek.com.au  
+<br>
+<a href="http://a.ninemsn.com.au/b.aspx?URL=http%3A%2F%2Fninemsn%2Eseek%2Ecom%2Eau&amp;_t=757263760&amp;_r=Hotmail_EndText_Dec06&amp;_m=EXT">http://a.ninemsn.com.au/b.aspx?URL=http%3A%2F%2Fninemsn%2Eseek%2Ecom%2Eau&amp;_t=757263760&amp;_r=Hotmail_EndText_Dec06&amp;_m=EXT</a><br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="16222.html">Konstantinos Natsakis: "Definitions of cognitive functions - Any pointers?"</a>
+<li><strong>Previous message:</strong> <a href="16220.html">Tennessee Leeuwenburg: "Re: Optimality of using probability"</a>
+<li><strong>In reply to:</strong> <a href="16219.html">Eliezer S. Yudkowsky: "Re: Optimality of using probability"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#16221">[ date ]</a>
+<a href="index.html#16221">[ thread ]</a>
+<a href="subject.html#16221">[ subject ]</a>
+<a href="author.html#16221">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:57 MDT
+</em></small></p>
+</body>
+</html>

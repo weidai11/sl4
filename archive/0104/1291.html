@@ -1,0 +1,434 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: A fairly concrete path to the Singularity</title>
+<meta name="Author" content="Samantha Atkins (samantha@objectent.com)">
+<meta name="Subject" content="Re: A fairly concrete path to the Singularity">
+<meta name="Date" content="2001-04-29">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: A fairly concrete path to the Singularity</h1>
+<!-- received="Sun Apr 29 13:40:59 2001" -->
+<!-- isoreceived="20010429194059" -->
+<!-- sent="Sun, 29 Apr 2001 03:47:53 -0700" -->
+<!-- isosent="20010429104753" -->
+<!-- name="Samantha Atkins" -->
+<!-- email="samantha@objectent.com" -->
+<!-- subject="Re: A fairly concrete path to the Singularity" -->
+<!-- id="3AEBF159.AAF0C87@objectent.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="NDBBIBGFAPPPBODIPJMMMEKLFHAA.ben@webmind.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Samantha Atkins (<a href="mailto:samantha@objectent.com?Subject=Re:%20A%20fairly%20concrete%20path%20to%20the%20Singularity"><em>samantha@objectent.com</em></a>)<br>
+<strong>Date:</strong> Sun Apr 29 2001 - 04:47:53 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1292.html">Samantha Atkins: "Re: A fairly concrete path to the Singularity"</a>
+<li><strong>Previous message:</strong> <a href="1290.html">Samantha Atkins: "Re: Whatever happened to Cyc?"</a>
+<li><strong>In reply to:</strong> <a href="1284.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1293.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>Reply:</strong> <a href="1293.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>Reply:</strong> <a href="../0105/1320.html">James Higgins: "Re: A fairly concrete path to the Singularity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1291">[ date ]</a>
+<a href="index.html#1291">[ thread ]</a>
+<a href="subject.html#1291">[ subject ]</a>
+<a href="author.html#1291">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Ben Goertzel wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; Choice of programming language is always a tricky and personal issue, huh?
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; I first have to confess that I, personally, have never cared for LISP very
+</em><br>
+<em>&gt; much.  I just don't enjoy programming in it as much as a lot of other
+</em><br>
+<em>&gt; languages.  My favorites are functional languages like Haskell and Miranda.
+</em><br>
+<em>&gt; Next is Java, of which C++ and C# seem like perversions....  I know pure
+</em><br>
+<em>&gt; LISP is a functional language, but even there, the parenthese-mad syntax
+</em><br>
+<em>&gt; annoys me: the currying of Haskell syntax is so much cleaner!
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Also, the fact that we already have 700,000 lines of Webmind code in Java
+</em><br>
+<em>&gt; causes me to strongly hope that a high-performance Java comes out, so I
+</em><br>
+<em>&gt; don't have to worry about other languages.  If we rewrite little crucial
+</em><br>
+<em>&gt; bits of the code in C now but leave the rest in Java, maybe we can put the
+</em><br>
+<em>&gt; crucial bits back into Java later when Java improves.
+</em><br>
+<em>&gt;
+</em><br>
+<p>Well, in a more dynamic and powerful language it might only be 100,000
+<br>
+lines. :-)   I believe Haskell and most of the functional languages were
+<br>
+intially developed in Lisp.  
+<br>
+&nbsp;
+<br>
+<em>&gt; But about LISP... I'll try to be objective here and put my &quot;religious&quot;
+</em><br>
+<em>&gt; sympathies aside ;&gt;
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; A main point is, I don't believe that fully optimized LISP is likely to
+</em><br>
+<em>&gt; perform nearly as well fully optimized C on most problems.   This is
+</em><br>
+<em>&gt; personal experience, plus a perusal of the literature a few years ago.
+</em><br>
+<p>I have seen other literature about optimizing systems for Lisp giving
+<br>
+performance from 2x that of C to better than C.  There are also reports
+<br>
+of people being *much* more productive in Lisp.  I can dig up the
+<br>
+references if there is interest.  To me, the ease of expression and
+<br>
+productivity is much more important than raw execution speed.  The speed
+<br>
+can always be improved by putting sufficient ingenuity into
+<br>
+optimization.  
+<br>
+<p>Generally I find environments where an interpreter is available and full
+<br>
+reflection is present to be much more productive to code in.  Java, C,
+<br>
+C++, C# do not have this.   Lisp systems invented and profected JIT
+<br>
+conversion to machine language long before Java came on the scene.  Java
+<br>
+reminds me of Pascal.  A lot of time is spent making the finicky
+<br>
+compiler happy at the cost of a lot of frustration of the person
+<br>
+attempting to design and program as they think and as is natural for the
+<br>
+problem at hand.  Language may not determine thought but it sure can
+<br>
+greatly frustrate and stifle it.
+<br>
+<p><em>&gt; 
+</em><br>
+<em>&gt; Also, even more critically, I have never heard of a truly large-scale LISP
+</em><br>
+<em>&gt; app: gigabytes of RAM, multiple processors, multiple servers, etc.
+</em><br>
+<em>&gt;
+</em><br>
+<p>I have never heard of a very successful hyper-large Java system either. 
+<br>
+But there is no reason whatsoever that Lisp cannot handle anything that
+<br>
+Java can and then some.  It is after all a simpler language
+<br>
+implementation wise.  At one time Lisp machines (chip level lisp) were
+<br>
+even built.  They failed due to the AI overhype of the 80s / early 90s
+<br>
+but not due to deficiencies in the language.  
+<br>
+<p>I will grant that Lisp is almost too flexible.  Good Lispers can run
+<br>
+rings around Java and C folks.  Bad Lispers can get bogged down more
+<br>
+easily than in Java.  Well, maybe I'll retract that.  In my humble
+<br>
+opinion very few programmers actually write good code and especially
+<br>
+good OO code regardless of the language.  
+<br>
+<p>I grok Java well but I find it quite frustrating and boring.  It slows
+<br>
+me down a lot.  
+<br>
+<p>If you are going to the C world for core functionality then I recommend
+<br>
+doing some OO in Objective C.  It is small, clean and relatively
+<br>
+powerful compared to C++ and is part of the GNU gcc now.  Many years ago
+<br>
+I did some twists to this language to support distributed messages and
+<br>
+transparent persistence in suprisingly few LOC.  It supports dynamic
+<br>
+messaging which is a godsend for proxies and pluggable frameworks.  
+<br>
+&nbsp;
+<br>
+<em>&gt; Perhaps a handful of such apps exist, unbeknownst to me.  But given the
+</em><br>
+<em>&gt; relative preponderance of such apps in C/C++, it stands to reason that C/C++
+</em><br>
+<em>&gt; compilers have been much more fully tested and tuned for this type of
+</em><br>
+<em>&gt; application.
+</em><br>
+<em>&gt; 
+</em><br>
+<p>C/C++ is a bad joke as far as programmer productivity.  On a large app
+<br>
+you will spend an ungodly amount of time waiting for the universe to
+<br>
+remake itself because you tweaked something in some include file that
+<br>
+rippled across the entire fragile mess.  Making changes in big C/C++
+<br>
+systems is a nightmare. I should know, I've been part of the design,
+<br>
+implementation and maintenance of enough of them.  COM/DCOM and CORBA
+<br>
+brought a bit of relief but not enough.  C/C++ compiles out all
+<br>
+intelligence in the source code.  There is no information about classes,
+<br>
+structs, inheritance and so on present in the runnable code.  They did
+<br>
+not have to do it that way.  It doesn't even buy them any extra speed. 
+<br>
+But they did.  
+<br>
+<p>And of course the other great bane of large C based systems is garbage
+<br>
+collection.  An efficient GC is crucial to large systems.  There is
+<br>
+provably no way to get it right by hand over that much code touched by
+<br>
+that many people.  Reference counting?  No circular dependency handling
+<br>
+and 3-4 times as slow as good generational scavenging.  But forget about
+<br>
+full GC without type information through tagging or some other means. 
+<br>
+Conservative GC that assumes everything that looks like a pointer is one
+<br>
+is the best that can be done in unmodified C compiler systems unless you
+<br>
+roll your own heap and do defacto tagging using types.  But then you are
+<br>
+departing from C and using it as more your assembly language anyway. 
+<br>
+And in conservative GC you lose the ability to do compaction.
+<br>
+<p>Where are the tools?  I learned OO in a Smalltalk world and later on
+<br>
+Symbolics machines.  I know what good tools that really support
+<br>
+efficient programming and maintenance can be like.  But this was in the
+<br>
+dark ages of the 80s and early 90s.  Now we know better.  Now we, SI
+<br>
+help us, have graduated to Java and C#!  Gag me.
+<br>
+<p>Sorry.  I know I rant.  But the sorry state of languages and tools
+<br>
+really pisses me off as a working programmer for these last two decades.
+<br>
+C environment tools (including C++) have not changed or improved hardly
+<br>
+at all in the last 15 years.  That is a disgrace.  It is certainly *not*
+<br>
+because the existing tools (if you can call them that) were adequate.   
+<br>
+<p><em>&gt; Object oriented design is very very nice for a large-scale software system
+</em><br>
+<em>&gt; of any kind, also.  LISP does not provide this, unless there's an
+</em><br>
+<em>&gt; ObjectiveLisp I'm not aware of.
+</em><br>
+<em>&gt;
+</em><br>
+<p>Ever heard of CLOS which is the king of OO languages and where almost
+<br>
+every new development in OO was first perfected?  Much of the cutting
+<br>
+edge of OO theory and practice is still there.  Have you read &quot;The
+<br>
+MetaObject Protocol&quot;? Do you know about Aspect programming?  More Lisp
+<br>
+environemnt inventions.  
+<br>
+&nbsp;
+<br>
+<em>&gt; The ease of reflection in LISP is a  major point.  But Java has built-in
+</em><br>
+<em>&gt; reflection as well.
+</em><br>
+<em>&gt;
+</em><br>
+<p>Java reflection is a poor joke.  It is more introspection than
+<br>
+reflection.  It does not allow modifying program structure or reflection
+<br>
+on the call relationships in the static code or in running programs. 
+<br>
+You have to tack on extra debuggers, special compilers and so on to get
+<br>
+any semblance of this and then only if you learn some arcane debugger
+<br>
+format or compiled lass file structure. 
+<br>
+&nbsp;
+<br>
+<em>&gt; In LISP, can one &quot;method&quot; look into another while it's running and see the
+</em><br>
+<em>&gt; ephemeral values of local variables inside that method?  (I know, this is
+</em><br>
+<em>&gt; Java terminology; I forget the LISP terminology.)  If so, then this is a
+</em><br>
+<em>&gt; more powerful kind of reflection than Java currently provides.
+</em><br>
+<em>&gt;
+</em><br>
+<p>Certainly.  And you can easily write code to find every usage,
+<br>
+definition, override and so on of any method as such reflection is
+<br>
+naturally supported.  You could sort of do it in Java if you dropped
+<br>
+down to class file format and were pretty patient.   In Lisp I can
+<br>
+rewrite the methods of an instance for special circumstances or to
+<br>
+evolve the code on the fly.  In C/Java it would be a very ugly set of
+<br>
+hacks to accomplish anything remotely similar.  
+<br>
+<p>Lisp, despite the nasty ()'s, is an extremely powerful tool that has
+<br>
+been wrongly ignored.  
+<br>
+<p>I am also quite fond of scripting languages like Python and especially
+<br>
+the relatively new import from Japan, Ruby.  Ruby is fully OO
+<br>
+(everything is a first class object) with quite a few lisp abilities
+<br>
+added in and full GC.  It makes a excellent prototyping and  glue
+<br>
+language to hook together various modules in other languages whether
+<br>
+they are in other languages for legacy reasons or for better
+<br>
+performance. 
+<br>
+<p>Python is used at some of the really big national defense labs to hook
+<br>
+together huge scientific programming projects spread across multiple
+<br>
+banks of supercomputer level machines and in multiple languages.  There
+<br>
+is simply no way they could keep up with demand and the changing mix
+<br>
+tractably with a large C/C++ or Java project.  
+<br>
+<p>Smalltalk is used in some highly mission critical systems in the
+<br>
+finacial world.  It is very popular on Wall Street where Smalltalk
+<br>
+wizards configure complete new trading tools and systems and modify
+<br>
+holds in near real time to satisfy the huge hunger for just one more
+<br>
+edge over the competition.  
+<br>
+<p>Truthfully there are places where C is very good.  It makes a useful
+<br>
+universal assmebler and is quite good for coding tight highly efficient
+<br>
+data structures and components.  But large systems and integrating and
+<br>
+modifying components dynamically are not its strengths.  
+<br>
+<p>What would be most ideal in the current state of things is if there was
+<br>
+a relatively transparent, efficient means to hook together components
+<br>
+and code snippets in multiple languages.  .NET is one try, CORBA and COM
+<br>
+are others.  I think all of these have some real weaknesses but CORBA is
+<br>
+the most adaptable across multiple platforms and languages.  .NET does
+<br>
+what people have already done with the Java VM.  The Java VM is
+<br>
+seriously constrained in its primitve operation set to what Java
+<br>
+supports.  Yet people have managed to support 100 language
+<br>
+implementations in Java and some of those directly running on top of the
+<br>
+JVM like Jython, at least two variants of Scheme and I believe I've even
+<br>
+seen a Haskell in the mix.   
+<br>
+<p>Speaking of platforms, is WebMind particular about OS?  I confess to
+<br>
+being mainly a Linux bigot.  For some reason every time I get my hands
+<br>
+on a new windoze machine, despite my solemn intentions otherwise, it
+<br>
+eventually ends up being wiped and loaded with Linux.  I do Windows for
+<br>
+$$$ but I do Linux generally on my own time. 
+<br>
+&nbsp;
+<br>
+- samantha
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1292.html">Samantha Atkins: "Re: A fairly concrete path to the Singularity"</a>
+<li><strong>Previous message:</strong> <a href="1290.html">Samantha Atkins: "Re: Whatever happened to Cyc?"</a>
+<li><strong>In reply to:</strong> <a href="1284.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1293.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>Reply:</strong> <a href="1293.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>Reply:</strong> <a href="../0105/1320.html">James Higgins: "Re: A fairly concrete path to the Singularity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1291">[ date ]</a>
+<a href="index.html#1291">[ thread ]</a>
+<a href="subject.html#1291">[ subject ]</a>
+<a href="author.html#1291">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

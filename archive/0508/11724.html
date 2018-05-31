@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Star Bridge and hypercomputers</title>
+<meta name="Author" content="Richard Loosemore (rpwl@lightlink.com)">
+<meta name="Subject" content="Re: Star Bridge and hypercomputers">
+<meta name="Date" content="2005-08-15">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Star Bridge and hypercomputers</h1>
+<!-- received="Mon Aug 15 13:40:35 2005" -->
+<!-- isoreceived="20050815194035" -->
+<!-- sent="Mon, 15 Aug 2005 15:40:26 -0400" -->
+<!-- isosent="20050815194026" -->
+<!-- name="Richard Loosemore" -->
+<!-- email="rpwl@lightlink.com" -->
+<!-- subject="Re: Star Bridge and hypercomputers" -->
+<!-- id="4300EFAA.1040109@lightlink.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="8d71341e05081511117ec466e5@mail.gmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Richard Loosemore (<a href="mailto:rpwl@lightlink.com?Subject=Re:%20Star%20Bridge%20and%20hypercomputers"><em>rpwl@lightlink.com</em></a>)<br>
+<strong>Date:</strong> Mon Aug 15 2005 - 13:40:26 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="11725.html">Ben Goertzel: "RE: Star Bridge and hypercomputers"</a>
+<li><strong>Previous message:</strong> <a href="11723.html">Russell Wallace: "Star Bridge and hypercomputers"</a>
+<li><strong>In reply to:</strong> <a href="11723.html">Russell Wallace: "Star Bridge and hypercomputers"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="11725.html">Ben Goertzel: "RE: Star Bridge and hypercomputers"</a>
+<li><strong>Reply:</strong> <a href="11725.html">Ben Goertzel: "RE: Star Bridge and hypercomputers"</a>
+<li><strong>Reply:</strong> <a href="11726.html">Russell Wallace: "Re: Star Bridge and hypercomputers"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11724">[ date ]</a>
+<a href="index.html#11724">[ thread ]</a>
+<a href="subject.html#11724">[ subject ]</a>
+<a href="author.html#11724">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Russell Wallace wrote:
+<br>
+<em>&gt; On 8/15/05, Richard Loosemore &lt;<a href="mailto:rpwl@lightlink.com?Subject=Re:%20Star%20Bridge%20and%20hypercomputers">rpwl@lightlink.com</a>&gt; wrote:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;&gt;One time Director of Research at Star Bridge Systems, a dysfunctional
+</em><br>
+<em>&gt;&gt;supercomputer company out of Salt Lake City.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; I heard of Star Bridge; there was a big flurry of announcements, then
+</em><br>
+<em>&gt; we never heard of them again. Are you at liberty to say what went
+</em><br>
+<em>&gt; wrong?
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; - Russell
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; 
+</em><br>
+<p>Oh, sure :-). But I will try to keep it short, since this only has the 
+<br>
+potential to be relevant to SL4.
+<br>
+<p>Background:  Star Bridge Systems wanted to build supercomputers out of 
+<br>
+field programmable gate arrays, because in principle this might allow 
+<br>
+software to be implemented as circuits, with sets of gates dedicated to 
+<br>
+individual algorithms, and with the circuits adapting fluidly as the 
+<br>
+software ran.  Theoretically, this could lead to speedups (for the right 
+<br>
+kind of software, and especially for massively parallel AI software) 
+<br>
+that involve silly numbers:  factor of 10,000, for example.
+<br>
+<p>The Technical Problems:  (a) Mapping software to circuits is an 
+<br>
+extremely hard problem.  (b) Understanding the actual mechanics of 
+<br>
+programming real FPGAs is more like art or voodoo than it is like 
+<br>
+programming.  (c) The FPGA chips are not currently designed to be 
+<br>
+reprogrammed rapidly, on the fly.  (d) If current FPGAs are used to full 
+<br>
+capacity, the way that Star Bridge envisaged, they generate prodigious 
+<br>
+amounts of heat.
+<br>
+<p>The Spin Machine Problem:  When SBS made their first announcement, they 
+<br>
+talked as if they had solved or finessed all these problems.  I was 
+<br>
+invited to go work for them in the spring of 2001, but it took me six 
+<br>
+months to finally realise that none of these problems had been solved, 
+<br>
+that people had made some &quot;exaggerations&quot; about the technology that 
+<br>
+bordered on outright lies, and that some of the problems were not even 
+<br>
+*understood* by the founder or employees of the company.
+<br>
+<p>[For amusement value only:  The prototype, that they initially wanted to 
+<br>
+lease for $26 million, could only be switched on for short periods 
+<br>
+because one or other of its twin PSUs would burn out with a half-life 
+<br>
+measured in hours.  The original CEO had previously been a guest of the 
+<br>
+government for a time.  There were a couple of Gigs of ram on the 
+<br>
+prototype boards, but all that time, until after I left, they couldn't 
+<br>
+get the FPGAs to talk to it reliably.  And when you ran your program on 
+<br>
+the actual hardware, correct functioning depended on whether timing 
+<br>
+problems would just happen not to be a problem.   Sigh. ].
+<br>
+<p>I remain hopeful that someone will buy the company, fire the founder and 
+<br>
+get a gang of competent people in there to work on the actual problems. 
+<br>
+&nbsp;&nbsp;As it is, the company survives on hype and the patronage of powerful 
+<br>
+entities who throw money at projects they do not understand.
+<br>
+<p><p>As I said above, this has the potential to be relevant to SL4 because a 
+<br>
+reconfigurable supercomputer of this sort is urgently needed by the AI 
+<br>
+community.  The hardware problems (heat) may soon be solvable, with 
+<br>
+radically new FPGA technologies that are over the horizon, and with the 
+<br>
+right kind of internal design it might be possible to understand and 
+<br>
+program the cells reliably.  And meanwhile, the software engineering 
+<br>
+community would have to do some lateral thinking on the issues involved 
+<br>
+in real-world parallel programming.
+<br>
+<p>You will all have to let me know if any of the issues mentioned in that 
+<br>
+last paragraph are relevant to the SL4 list.  Looks like no, from what I 
+<br>
+see.
+<br>
+<p>Richard Loosemore
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="11725.html">Ben Goertzel: "RE: Star Bridge and hypercomputers"</a>
+<li><strong>Previous message:</strong> <a href="11723.html">Russell Wallace: "Star Bridge and hypercomputers"</a>
+<li><strong>In reply to:</strong> <a href="11723.html">Russell Wallace: "Star Bridge and hypercomputers"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="11725.html">Ben Goertzel: "RE: Star Bridge and hypercomputers"</a>
+<li><strong>Reply:</strong> <a href="11725.html">Ben Goertzel: "RE: Star Bridge and hypercomputers"</a>
+<li><strong>Reply:</strong> <a href="11726.html">Russell Wallace: "Re: Star Bridge and hypercomputers"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11724">[ date ]</a>
+<a href="index.html#11724">[ thread ]</a>
+<a href="subject.html#11724">[ subject ]</a>
+<a href="author.html#11724">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Tue Feb 21 2006 - 04:23:01 MST
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Human-level CPU power crossover date</title>
+<meta name="Author" content="James Rogers (jamesr@best.com)">
+<meta name="Subject" content="Re: Human-level CPU power crossover date">
+<meta name="Date" content="2001-04-12">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Human-level CPU power crossover date</h1>
+<!-- received="Thu Apr 12 19:22:17 2001" -->
+<!-- isoreceived="20010413012217" -->
+<!-- sent="Thu, 12 Apr 2001 13:26:13 -0700" -->
+<!-- isosent="20010412202613" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Re: Human-level CPU power crossover date" -->
+<!-- id="5.0.2.1.0.20010412114213.00a6bb08@shell9.ba.best.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="20010412134050.A2522@aristotle.bomis.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> James Rogers (<a href="mailto:jamesr@best.com?Subject=Re:%20Human-level%20CPU%20power%20crossover%20date"><em>jamesr@best.com</em></a>)<br>
+<strong>Date:</strong> Thu Apr 12 2001 - 14:26:13 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1064.html">Durant Schoon: "Re: Human-level CPU power crossover date"</a>
+<li><strong>Previous message:</strong> <a href="1062.html">Jimmy Wales: "Re: Human-level CPU power crossover date"</a>
+<li><strong>In reply to:</strong> <a href="1062.html">Jimmy Wales: "Re: Human-level CPU power crossover date"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1063">[ date ]</a>
+<a href="index.html#1063">[ thread ]</a>
+<a href="subject.html#1063">[ subject ]</a>
+<a href="author.html#1063">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+At 01:40 PM 4/12/2001 -0500, Jimmy Wales wrote:
+<br>
+<p><em>&gt;Do you think it is possible to give a similar analysis of memory 
+</em><br>
+<em>&gt;bandwidth?  In
+</em><br>
+<em>&gt;other words, you speak about memory bandwidth in silicon growing exponentially
+</em><br>
+<em>&gt;but more slowly than speed.  And you speak about silicon memory bandwidth 
+</em><br>
+<em>&gt;still
+</em><br>
+<em>&gt;being dramatically less than brain memory bandwidth.  Can we quantify this 
+</em><br>
+<em>&gt;in some
+</em><br>
+<em>&gt;way?  At least, roughly?
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;How should we measure memory bandwidth?  How much bandwidth does the brain 
+</em><br>
+<em>&gt;have?
+</em><br>
+<em>&gt;How much bandwidth do current supercomputers have?  How fast is that growing?
+</em><br>
+<p><p>The rough figure for memory bandwidth growth is that it is growing at 10% 
+<br>
+the rate of processor speed, and has been following this rate of growth 
+<br>
+since at least the late '80s.  Memory latency has actually gotten much 
+<br>
+*worse*.  Increasingly complex caching schemes have mitigated the effect of 
+<br>
+slow memory to a certain extent, but the benefits of this are diminishing 
+<br>
+as well.  In low-level hardware circles, the point at which a processor is 
+<br>
+completely bound by the memory architecture is referred to as the &quot;memory 
+<br>
+wall&quot;.  Chip makers have been dodging this bullet for some time with clever 
+<br>
+cache optimizations that work for *most* applications; while processors are 
+<br>
+severely memory bound, increases in core clock speed do produce shrinking 
+<br>
+increases in total computing performance.  However for applications that 
+<br>
+have large codes and/or large data sets, you can easily hit the memory wall 
+<br>
+because the caching becomes ineffective.  It is interesting to note that 
+<br>
+this is one of the reasons the old 200MHz Pentium Pros still look very good 
+<br>
+for high-end computing; the well-matched (and expensive!) memory system on 
+<br>
+those chips give remarkably good real-world performance for classes of 
+<br>
+problems that are memory bandwidth bound.
+<br>
+<p>There are standard benchmarks for measuring memory bandwidth of systems 
+<br>
+(mem + proc + cache + I/O), the most commonly used one being STREAM.
+<br>
+<p>A bunch of citations and references on the subject (from Computer 
+<br>
+Architecture News) can be found at:
+<br>
+<p><a href="http://citeseer.nj.nec.com/context/100863/372270">http://citeseer.nj.nec.com/context/100863/372270</a>
+<br>
+<p><p>The human brain isn't really comparable to silicon in terms of memory 
+<br>
+bandwidth.  The human brain has billions of slow low-latency data 
+<br>
+channels.  Silicon has a small number of fast high-latency data 
+<br>
+channels.  The real killer in all this is the latency.  I think one could 
+<br>
+easily claim that a small number of fast channels are equivalent to a large 
+<br>
+number of slow channels as long as the aggregate data rates are the 
+<br>
+same.  Latency, on the other hand, can cause dramatic drops in real-world 
+<br>
+memory performance, especially for computation that causes frequent cache 
+<br>
+misses.  Note that latency is also why massively parallel systems don't 
+<br>
+work for problems that require access to large quantities of shared data; 
+<br>
+you lose as much real computation time on latency as you gain by having 
+<br>
+additional processors (in certain cases your application may actually run 
+<br>
+*slower* on parallel systems).  As a general rule, shared memory 
+<br>
+applications that show poor cache efficiency on a single processor will 
+<br>
+scale poorly on massively parallel systems.
+<br>
+<p><p><em>&gt;Questions like: how much of the brain is actually used
+</em><br>
+<em>&gt;for intelligence, as opposed to being used to run our automatic biological 
+</em><br>
+<em>&gt;functions?
+</em><br>
+<p><p>The line is fuzzy here (and a little outside my core competence), but I 
+<br>
+would guess that a small fraction of the brain hardware would actually be 
+<br>
+required for raw intelligence.  There have been many people who function 
+<br>
+quite well with large sections of their brains missing.
+<br>
+<p><p><em>&gt;To what extent can the speed advantage of silicon _make up for_ a lack of 
+</em><br>
+<em>&gt;memory
+</em><br>
+<em>&gt;bandwidth?
+</em><br>
+<p><p>Speed and memory bandwidth are apples and oranges; you cannot replace one 
+<br>
+with the other and both are rate limiters for the entire system (CPUs don't 
+<br>
+exist in a vacuum).  Right now, processor architectures are severely rate 
+<br>
+limited by bandwidth.
+<br>
+<p>Think of it this way:  If you have a simple processor that can execute 10 
+<br>
+operations per second, but is fed those operations at a rate of 3 
+<br>
+operations per second, what will be the effective execution speed of the 
+<br>
+system?  The answer is obviously 3 operations per second.  Now suppose they 
+<br>
+scaled the processor to 30 operations/s and increased the feed rate to 4 
+<br>
+operations/s (roughly the situation we have today).  It doesn't really 
+<br>
+matter how much processor you have if you can't keep the pipeline full.  To 
+<br>
+make matters worse, for some classes of problems, it is not possible to 
+<br>
+hack the design (e.g. caching schemes) to give faster effective feed 
+<br>
+rates.  Therefore, the speed advantage of silicon is actually irrelevant in 
+<br>
+the absence of sufficient memory bandwidth, as bandwidth is a rate limiter 
+<br>
+of the total system performance.
+<br>
+<p>-James Rogers
+<br>
+&nbsp;&nbsp;<a href="mailto:jamesr@best.com?Subject=Re:%20Human-level%20CPU%20power%20crossover%20date">jamesr@best.com</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1064.html">Durant Schoon: "Re: Human-level CPU power crossover date"</a>
+<li><strong>Previous message:</strong> <a href="1062.html">Jimmy Wales: "Re: Human-level CPU power crossover date"</a>
+<li><strong>In reply to:</strong> <a href="1062.html">Jimmy Wales: "Re: Human-level CPU power crossover date"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1063">[ date ]</a>
+<a href="index.html#1063">[ thread ]</a>
+<a href="subject.html#1063">[ subject ]</a>
+<a href="author.html#1063">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

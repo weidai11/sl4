@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Mathematical Model of GLUTs and Lookups</title>
+<meta name="Author" content="Lee Corbin (lcorbin@rawbw.com)">
+<meta name="Subject" content="Mathematical Model of GLUTs and Lookups">
+<meta name="Date" content="2008-04-01">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Mathematical Model of GLUTs and Lookups</h1>
+<!-- received="Tue Apr  1 23:30:24 2008" -->
+<!-- isoreceived="20080402053024" -->
+<!-- sent="Tue, 1 Apr 2008 22:26:35 -0700" -->
+<!-- isosent="20080402052635" -->
+<!-- name="Lee Corbin" -->
+<!-- email="lcorbin@rawbw.com" -->
+<!-- subject="Mathematical Model of GLUTs and Lookups" -->
+<!-- id="025001c89482$60d6d350$6401a8c0@homeef7b612677" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="38f493f10803310659h76c147efn25571be01adff85f@mail.gmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Lee Corbin (<a href="mailto:lcorbin@rawbw.com?Subject=Re:%20Mathematical%20Model%20of%20GLUTs%20and%20Lookups"><em>lcorbin@rawbw.com</em></a>)<br>
+<strong>Date:</strong> Tue Apr 01 2008 - 23:26:35 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="18336.html">Lee Corbin: "Memory Addition and The Clock/Torture Experiment"</a>
+<li><strong>Previous message:</strong> <a href="18334.html">Lee Corbin: "Re: The GLUT and functionalism"</a>
+<li><strong>In reply to:</strong> <a href="../0803/18329.html">Stuart Armstrong: "Re: The GLUT and functionalism"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="18339.html">Stuart Armstrong: "Re: Mathematical Model of GLUTs and Lookups"</a>
+<li><strong>Reply:</strong> <a href="18339.html">Stuart Armstrong: "Re: Mathematical Model of GLUTs and Lookups"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#18335">[ date ]</a>
+<a href="index.html#18335">[ thread ]</a>
+<a href="subject.html#18335">[ subject ]</a>
+<a href="author.html#18335">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Stuart writes
+<br>
+<p><em>&gt; We got on this point after a long tortuous route: so let's simplify!
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; S = a finite set of polynomials.
+</em><br>
+<p>I pretty much have to visualize everything, and probably don't
+<br>
+have your mathematical talent, so thanks for your patience :-)
+<br>
+Here I see (off to the left, actually) a finite set of polynomials
+<br>
+in mathematical platonia (Diagram 1)
+<br>
+<p><em>&gt; G = a GLUT on S.
+</em><br>
+<p>Here I see a giant lookup table whose entries actually are
+<br>
+elements of S. But I am maybe guessing at what &quot;on S&quot;
+<br>
+means. Anyway, I visualize this GLUT being at the center
+<br>
+of a whiteboard. (Diagram 2).
+<br>
+<p><em>&gt; R = a rule that says that any polynomial of n-th degree will be
+</em><br>
+<em>&gt; mapped, under G, to a polynomial of (n-1)-th degree.
+</em><br>
+<p>Now I would have thought that this rule existed between
+<br>
+elements of S: a mathematical-platonic rule analogous to
+<br>
+the rule that exists under the name differentiation, but 
+<br>
+vastly more complex (I presume). But you say that R
+<br>
+connects n-th degree polynomials *in G* (that is, as
+<br>
+table entries of the GLUT) to particular other polynomials
+<br>
+also in G. Well, I suppose that it amounts to the same
+<br>
+thing.  Okay. [ But it sounds a bit odd to refer to G as
+<br>
+a mapping, unless it was (incorrectly) taken to be a
+<br>
+mapping from platonia (Diagram 1) to the GLUT
+<br>
+(Diagram 2), where G(P) is the particular table entry
+<br>
+containing P. &lt;end incorrect interpretation&gt; ]
+<br>
+<p><em>&gt; f = a hash function from S (to f(S))
+</em><br>
+<p>Back to Diagram 1 in my mental imagery. Right &quot;underneath&quot;
+<br>
+every polynomial in S written in a differently colored marker
+<br>
+is f(S), a string of apparent gibberish output by f.
+<br>
+<p><em>&gt; f(G) = the GLUT on f(S) equivalent to G on S.
+</em><br>
+<p>We may have here Diagram 3, (which I visualize as being
+<br>
+at the extreme right of a whiteboard) and which is very
+<br>
+analogous to Diagram 2 (the GLUT, as you say, &quot;on S&quot;).
+<br>
+Here too is a GLUT, but its entries are f(P) for each P in S.
+<br>
+<p><em>&gt; f(R) = the rule on f(S) equivalent to R on S.
+</em><br>
+<p>Yes, I think I'm getting it. Just as R was a rule (see Diagram 2)
+<br>
+that connected polynomial entries in the first GLUT, e.g.
+<br>
+GLUTentry(P2) = R(GLUTentry(P1)), we now have in
+<br>
+Diagram 3
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GLUT2entry( f(P2) ) = f(R)(  GLUT2entry( f(P1) ) )
+<br>
+<p>where I may visualize P1 and P2 as being in S, f(P1) and f(P2)
+<br>
+being their &quot;shadows&quot; still in Diagram 1, and the two GLUT2
+<br>
+entries being connected by the new rule f(R) in Diagram 3.
+<br>
+<p><em>&gt; Main point: G has very high KC (as does f(G)),
+</em><br>
+<p>I don't know what that means. (Ah, but see below.)
+<br>
+Perhaps you mean the rule R that functionally connects
+<br>
+two elements of G = GLUT1 has high KC?  I think I
+<br>
+know what the KC of a rule or a function would be.
+<br>
+<p>If so, that does seem a bit odd, since where I thought you
+<br>
+were going was to have here an analogy between consecutive
+<br>
+states of a conscious entity. But these latter are causally 
+<br>
+connected, hence, I believe have a low KC rule (e.g. Conway's
+<br>
+Life has quite a low KC rule connecting a generation to a 
+<br>
+subsequent generation). 
+<br>
+<p><em>&gt; R has low KC, but f(R) has high KC.
+</em><br>
+<p>Oh, all right---that seems to make perfect sense. But I
+<br>
+guess I still don't know what &quot;G has very high KC&quot; means.
+<br>
+<p><em>&gt; Theorem (which will be left as as exercise to the reader - i.e. I
+</em><br>
+<em>&gt; haven't calculated it, but it seems obvious):
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; KC(f(R)) / KC(f(G)) can be made arbitrarily higher than KC(R) / KC(G) .
+</em><br>
+<p>Lost here.  I understand KC(R), but still don't grok KC(G),
+<br>
+likewise I understand KC(f(R)) but not KC(f(G)).
+<br>
+<p>I'll reply to the remainder here when I've understood better my
+<br>
+problems with the above.
+<br>
+<p>It all does continue to sound quite promising, though.
+<br>
+<p>Lee
+<br>
+<p><em>&gt; Corollary: We can decrease the KC of G to some extent, and still get
+</em><br>
+<em>&gt; the inequality above. We want to do this, because we don't want G to
+</em><br>
+<em>&gt; be a full GLUT but something more &quot;understandable&quot;.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Inspiration: If we imagine that G is the rules of consciousness, and R
+</em><br>
+<em>&gt; is some much simpler property of consciousness (say: it learns form
+</em><br>
+<em>&gt; experience), then R is only much simpler than G in our current
+</em><br>
+<em>&gt; description of the universe; in hash equivalent settings, R does not
+</em><br>
+<em>&gt; qualify as being &quot;much simpler&quot;.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Philosophical consequence: different hash equivalent ways of looking
+</em><br>
+<em>&gt; at problems are not equivalent. Since we essentially cannot deal with
+</em><br>
+<em>&gt; hash functions in any computable way, the different ways things are
+</em><br>
+<em>&gt; set up are very important.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Punch line: Let E be an explanation of consciousness, (an explanation
+</em><br>
+<em>&gt; in the sense we are used to). Let F be a GLUT, hash equivalent to E.
+</em><br>
+<em>&gt; Then though E and F are hash equivalent, they are not equivalent,
+</em><br>
+<em>&gt; especially from our point of view.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Hope this helps! I don't know if it's all that useful, though.
+</em><br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="18336.html">Lee Corbin: "Memory Addition and The Clock/Torture Experiment"</a>
+<li><strong>Previous message:</strong> <a href="18334.html">Lee Corbin: "Re: The GLUT and functionalism"</a>
+<li><strong>In reply to:</strong> <a href="../0803/18329.html">Stuart Armstrong: "Re: The GLUT and functionalism"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="18339.html">Stuart Armstrong: "Re: Mathematical Model of GLUTs and Lookups"</a>
+<li><strong>Reply:</strong> <a href="18339.html">Stuart Armstrong: "Re: Mathematical Model of GLUTs and Lookups"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#18335">[ date ]</a>
+<a href="index.html#18335">[ thread ]</a>
+<a href="subject.html#18335">[ subject ]</a>
+<a href="author.html#18335">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:01:02 MDT
+</em></small></p>
+</body>
+</html>

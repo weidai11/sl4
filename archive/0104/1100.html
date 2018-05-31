@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: ARTICLE: Memory bandwidth</title>
+<meta name="Author" content="Brian Atkins (brian@posthuman.com)">
+<meta name="Subject" content="Re: ARTICLE: Memory bandwidth">
+<meta name="Date" content="2001-04-14">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: ARTICLE: Memory bandwidth</h1>
+<!-- received="Sat Apr 14 11:48:18 2001" -->
+<!-- isoreceived="20010414174818" -->
+<!-- sent="Sat, 14 Apr 2001 02:47:23 -0400" -->
+<!-- isosent="20010414064723" -->
+<!-- name="Brian Atkins" -->
+<!-- email="brian@posthuman.com" -->
+<!-- subject="Re: ARTICLE: Memory bandwidth" -->
+<!-- id="3AD7F27B.F0370AA4@posthuman.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="B6FD1A96.91C%jamesr@best.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Brian Atkins (<a href="mailto:brian@posthuman.com?Subject=Re:%20ARTICLE:%20Memory%20bandwidth"><em>brian@posthuman.com</em></a>)<br>
+<strong>Date:</strong> Sat Apr 14 2001 - 00:47:23 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1101.html">Dale Johnstone: "Re: ARTICLE: Memory bandwidth"</a>
+<li><strong>Previous message:</strong> <a href="1099.html">Eliezer S. Yudkowsky: "Re: ARTICLE: Memory bandwidth"</a>
+<li><strong>In reply to:</strong> <a href="1098.html">James Rogers: "Re: ARTICLE: Memory bandwidth"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1124.html">James Rogers: "Re: ARTICLE: Memory bandwidth"</a>
+<li><strong>Reply:</strong> <a href="1124.html">James Rogers: "Re: ARTICLE: Memory bandwidth"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1100">[ date ]</a>
+<a href="index.html#1100">[ thread ]</a>
+<a href="subject.html#1100">[ subject ]</a>
+<a href="author.html#1100">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+James Rogers wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; On 4/13/01 6:15 PM, &quot;Brian Atkins&quot; &lt;<a href="mailto:brian@posthuman.com?Subject=Re:%20ARTICLE:%20Memory%20bandwidth">brian@posthuman.com</a>&gt; wrote:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; &gt; I didn't even read the article yet, but I have read about the P4 quite a
+</em><br>
+<em>&gt; &gt; bit. I don't think it is really appropriate to draw conclusions based on
+</em><br>
+<em>&gt; &gt; comparing it to P3 since they are radically different, and IMO the P4 is
+</em><br>
+<em>&gt; &gt; a botched design. They were trying for something really amazing with it,
+</em><br>
+<em>&gt; &gt; but a lot got gutted out of the design resulting in a very unbalanced
+</em><br>
+<em>&gt; &gt; CPU. In many benchmarks for instance a slower clocked P3 would beat a P4.
+</em><br>
+<p>Ok I read the article now, and stick by what I said.
+<br>
+<p><em>&gt; 
+</em><br>
+<em>&gt; You are somewhat missing the point.  The comparisons are in fact typically
+</em><br>
+<em>&gt; between a 800-MHz P3 and 1.5-GHz P4, but the difference in clock speed is
+</em><br>
+<em>&gt; immaterial if you actually look at the benchmarks (mostly because the
+</em><br>
+<em>&gt; benchmarks show *why* clock speed is immaterial).  In fact, the article
+</em><br>
+<em>&gt; squares perfectly with what I've been hearing on the hardware lists where
+</em><br>
+<em>&gt; people have been running their own benchmarks.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; In short:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; For fp and vector codes *where the data fits in the cache*, you generally
+</em><br>
+<em>&gt; get much better performance with the P4 than the P3 i.e. Better than
+</em><br>
+<em>&gt; suggested by the clock speed difference.  Since it fits in the cache, memory
+</em><br>
+<em>&gt; bandwidth and latency is mostly irrelevant.
+</em><br>
+<p>Except that the P4 fp unit is so badly done that a P3 will kill it on most
+<br>
+any straight fp app, UNLESS you recode to use SSE2 instead of normal fp
+<br>
+instructions.
+<br>
+<p><em>&gt; 
+</em><br>
+<em>&gt; For fp and vector codes that have data sets substantially larger than the
+</em><br>
+<em>&gt; cache, the speed of the processor is irrelevant: a P3 will be memory limited
+</em><br>
+<em>&gt; and the P4 will be memory limited.  The P4 has a poor memory architecture
+</em><br>
+<p>Well where does the &quot;Vortex&quot; benchmark mentioned in the article fit in?
+<br>
+Apparently it is larger than cache, yet the behavior demonstrated does not
+<br>
+scale based on the bandwidth. Rather it seems to be limited in the P4 case
+<br>
+by bad CPU design (bad penalties of branch prediction misses + filling up
+<br>
+cache with unneeded data) and higher latency memory.
+<br>
+<p><em>&gt; and benchmarks as a dog compared to similarly clocked Athlon chips, due
+</em><br>
+<em>&gt; solely to differences in memory architecture; the Athlon has more bandwidth,
+</em><br>
+<p>Actually no I believe even PC2100 DDR-SDRAM used on Athlon systems is far
+<br>
+lower bandwidth (2.1GB/sec) than the P4 theoretical maximum of 3.2GB/sec.
+<br>
+<p><em>&gt; so for memory limited problems it is faster, even at slower clock speeds.
+</em><br>
+<p>I just don't see how your argument is stacking up here. Clearly the P4 is
+<br>
+a lame horse not because of the memory situation, unless you have an app
+<br>
+that requires low latency. Primarily the P4 is lame because it just plain
+<br>
+sucks itself.
+<br>
+<p><em>&gt; Note that the P4 has 15-20% *worse* memory latency than the P3, so cache
+</em><br>
+<em>&gt; efficiency is even more important on the P4 than on the P3.  What the P4
+</em><br>
+<em>&gt; represents is one of the first times where the inter-generational
+</em><br>
+<em>&gt; differences in processor performance are based almost solely on the memory
+</em><br>
+<em>&gt; bus chipsets, not on the processor clock.
+</em><br>
+<p>Total BS IMO. The P4 primarily sucks due to its own totally radical differences
+<br>
+compared to the P3. The P4 has 20+ pipeline stages! And many other oddities
+<br>
+that trip it up. The memory actually is quite nice except for the latency. It
+<br>
+even has hardware prefetch and other goodies that the Athlon has yet to get.
+<br>
+Yet it can't do anything with it in many cases because the P4 is so unbalanced.
+<br>
+In some specific cases it screams along, and in others it is worse than an a
+<br>
+sub-ghz P3.
+<br>
+<p><em>&gt; 
+</em><br>
+<em>&gt; As for having a botched design, you are mostly correct -- the memory
+</em><br>
+<em>&gt; architecture is much worse than it has to be (addressed in the article).
+</em><br>
+<em>&gt; The problem is that Intel doesn't have a huge amount of room to improve it.
+</em><br>
+<em>&gt; For those classes of problem where everything (or most everything) fits in
+</em><br>
+<em>&gt; the high-speed cache, it screams.  Unfortunately, we aren't talking about
+</em><br>
+<em>&gt; those types of problems.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; The point to all this being that if you are running an AI, which presumably
+</em><br>
+<em>&gt; will be churning on vast quantities of data, the clock speed doesn't matter.
+</em><br>
+<em>&gt; What the benchmarks between the P3 and P4 show is that memory bandwidth is
+</em><br>
+<em>&gt; already a serious crisis for data hungry apps.  The situation on the P4 is
+</em><br>
+<em>&gt; so bad that they expect faster versions of the P4 to show no performance
+</em><br>
+<em>&gt; improvement for cache killers, whereas it used to be that you got *some*
+</em><br>
+<em>&gt; minor improvement with increased clock speeds even for these apps.
+</em><br>
+<em>&gt; 
+</em><br>
+<p>Here I can agree. Personally I hope they eventually move to some kind of
+<br>
+optical interconnect that would allow for much higher levels of bus performance.
+<br>
+Unfortunately there doesn't seem to be much demand for such things. Most
+<br>
+applications do just fine, and with upcoming hacks like large level 3 caches
+<br>
+being added to northbridges, the set of applications constrained by memory
+<br>
+bandwidth will shrink further.
+<br>
+<pre>
+-- 
+Brian Atkins
+Director, Singularity Institute for Artificial Intelligence
+<a href="http://www.intelligence.org/">http://www.intelligence.org/</a>
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1101.html">Dale Johnstone: "Re: ARTICLE: Memory bandwidth"</a>
+<li><strong>Previous message:</strong> <a href="1099.html">Eliezer S. Yudkowsky: "Re: ARTICLE: Memory bandwidth"</a>
+<li><strong>In reply to:</strong> <a href="1098.html">James Rogers: "Re: ARTICLE: Memory bandwidth"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1124.html">James Rogers: "Re: ARTICLE: Memory bandwidth"</a>
+<li><strong>Reply:</strong> <a href="1124.html">James Rogers: "Re: ARTICLE: Memory bandwidth"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1100">[ date ]</a>
+<a href="index.html#1100">[ thread ]</a>
+<a href="subject.html#1100">[ subject ]</a>
+<a href="author.html#1100">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: A fairly concrete path to the Singularity</title>
+<meta name="Author" content="Ben Goertzel (ben@webmind.com)">
+<meta name="Subject" content="RE: A fairly concrete path to the Singularity">
+<meta name="Date" content="2001-04-29">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: A fairly concrete path to the Singularity</h1>
+<!-- received="Sun Apr 29 13:41:05 2001" -->
+<!-- isoreceived="20010429194105" -->
+<!-- sent="Sun, 29 Apr 2001 08:56:23 -0400" -->
+<!-- isosent="20010429125623" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@webmind.com" -->
+<!-- subject="RE: A fairly concrete path to the Singularity" -->
+<!-- id="NDBBIBGFAPPPBODIPJMMIELGFHAA.ben@webmind.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="3AEBF159.AAF0C87@objectent.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@webmind.com?Subject=RE:%20A%20fairly%20concrete%20path%20to%20the%20Singularity"><em>ben@webmind.com</em></a>)<br>
+<strong>Date:</strong> Sun Apr 29 2001 - 06:56:23 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1294.html">Ben Goertzel: "RE: Whatever happened to Cyc?"</a>
+<li><strong>Previous message:</strong> <a href="1292.html">Samantha Atkins: "Re: A fairly concrete path to the Singularity"</a>
+<li><strong>In reply to:</strong> <a href="1291.html">Samantha Atkins: "Re: A fairly concrete path to the Singularity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1295.html">Samantha Atkins: "Re: A fairly concrete path to the Singularity"</a>
+<li><strong>Reply:</strong> <a href="1295.html">Samantha Atkins: "Re: A fairly concrete path to the Singularity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1293">[ date ]</a>
+<a href="index.html#1293">[ thread ]</a>
+<a href="subject.html#1293">[ subject ]</a>
+<a href="author.html#1293">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; Well, in a more dynamic and powerful language it might only be 100,000
+</em><br>
+<em>&gt; lines. :-)
+</em><br>
+<p>True, Java is a very verbose language.  On the other hand, it's also really
+<br>
+easy to read, unlike LISP
+<br>
+<p><p><em>&gt; To me, the ease of expression and
+</em><br>
+<em>&gt; productivity is much more important than raw execution speed.  The speed
+</em><br>
+<em>&gt; can always be improved by putting sufficient ingenuity into
+</em><br>
+<em>&gt; optimization.
+</em><br>
+<p>This attitude was why we chose Java in the first place.  We all found Java
+<br>
+simple and natural and easy to code in.  Unfortunately, after a while, we
+<br>
+found that adequately improving memory usage and speed for this application
+<br>
+was very very difficult even ~with~ very ingenious optimization by a great
+<br>
+team of people.
+<br>
+<p>The problem is that self-organizing cognition pushes the limits of what's
+<br>
+achievable with current computers.  (And anyone who knows me, knows that I'm
+<br>
+more likely in any given instance to be guilty of overoptimism than
+<br>
+overpessimism... )
+<br>
+<p><p><em>&gt; I have never heard of a very successful hyper-large Java system either.
+</em><br>
+<p>Damn right.  We thought we could build the first one, and we basically
+<br>
+failed, due to the fact that Java just isn't engineered for this, yet.  Now
+<br>
+we're working around this mistake by re-coding the critical processing and
+<br>
+memory intensive bits of the system in C.  But this is not a universally
+<br>
+acclaimed decision within our group... some folks still believe that with
+<br>
+sufficient ingenuity, the Java version can be adequately optimized.  Maybe
+<br>
+they're right; we'll see over the next copule months.  It's true that only
+<br>
+some of the problems with our last system version were language-based;
+<br>
+others were due to aspects of the architecture that we've now drastically
+<br>
+improved.
+<br>
+<p><em>&gt; But there is no reason whatsoever that Lisp cannot handle anything that
+</em><br>
+<em>&gt; Java can and then some.
+</em><br>
+<p>As was pointed out recently on this list, major firms are now pouring tens
+<br>
+of millions of dollars into making Java workable for large-scale, real-time
+<br>
+applications.  Unless I'm mistaken, the same is not true for LISP.
+<br>
+<p>But anyway, the problem is that, so far, it seems like Java can't handle the
+<br>
+Webmind AI Engine...
+<br>
+<p><p><p><em>&gt; If you are going to the C world for core functionality then I recommend
+</em><br>
+<em>&gt; doing some OO in Objective C.
+</em><br>
+<p>This is indeed worth considering
+<br>
+<p><em>&gt; C/C++ is a bad joke as far as programmer productivity.
+</em><br>
+<p>Yup, you got that right...
+<br>
+<p>On the other hand, testing a big Java program when all existing profilers
+<br>
+crash on apps with many threads and copious RAM usage, also sucks... and
+<br>
+consumes all the time that was saved programming in Java instead of C....
+<br>
+<p><em>&gt; &gt; In LISP, can one &quot;method&quot; look into another while it's running
+</em><br>
+<em>&gt; and see the
+</em><br>
+<em>&gt; &gt; ephemeral values of local variables inside that method?  (I
+</em><br>
+<em>&gt; know, this is
+</em><br>
+<em>&gt; &gt; Java terminology; I forget the LISP terminology.)  If so, then this is a
+</em><br>
+<em>&gt; &gt; more powerful kind of reflection than Java currently provides.
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Certainly.  And you can easily write code to find every usage,
+</em><br>
+<em>&gt; definition, override and so on of any method as such reflection is
+</em><br>
+<em>&gt; naturally supported.  You could sort of do it in Java if you dropped
+</em><br>
+<em>&gt; down to class file format and were pretty patient.
+</em><br>
+<p>I don't think you can do what I suggested in Java, even by looking at class
+<br>
+files.  The values of local method variables during execution are only
+<br>
+contained inside the JVM, in RAM, not in the class files.
+<br>
+<p><em>&gt; Speaking of platforms, is WebMind particular about OS?  I confess to
+</em><br>
+<em>&gt; being mainly a Linux bigot.  For some reason every time I get my hands
+</em><br>
+<em>&gt; on a new windoze machine, despite my solemn intentions otherwise, it
+</em><br>
+<em>&gt; eventually ends up being wiped and loaded with Linux.  I do Windows for
+</em><br>
+<em>&gt; $$$ but I do Linux generally on my own time.
+</em><br>
+<p>We've been using NT and Linux both, and occasionally Solaris (we couldn't
+<br>
+afford many Solaris boxes).
+<br>
+<p>The  majority of our developers prefer Linux, but not 100%.  And the JVM's
+<br>
+at this point are stronger on NT.
+<br>
+<p>ben
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1294.html">Ben Goertzel: "RE: Whatever happened to Cyc?"</a>
+<li><strong>Previous message:</strong> <a href="1292.html">Samantha Atkins: "Re: A fairly concrete path to the Singularity"</a>
+<li><strong>In reply to:</strong> <a href="1291.html">Samantha Atkins: "Re: A fairly concrete path to the Singularity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1295.html">Samantha Atkins: "Re: A fairly concrete path to the Singularity"</a>
+<li><strong>Reply:</strong> <a href="1295.html">Samantha Atkins: "Re: A fairly concrete path to the Singularity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1293">[ date ]</a>
+<a href="index.html#1293">[ thread ]</a>
+<a href="subject.html#1293">[ subject ]</a>
+<a href="author.html#1293">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

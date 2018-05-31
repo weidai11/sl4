@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Formal Verification of Functional Programs [ was RE: Introduction]</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="Formal Verification of Functional Programs [ was RE: Introduction]">
+<meta name="Date" content="2005-09-08">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Formal Verification of Functional Programs [ was RE: Introduction]</h1>
+<!-- received="Thu Sep  8 05:52:09 2005" -->
+<!-- isoreceived="20050908115209" -->
+<!-- sent="Thu, 8 Sep 2005 07:52:03 -0400" -->
+<!-- isosent="20050908115203" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="Formal Verification of Functional Programs [ was RE: Introduction]" -->
+<!-- id="JNEIJCJJHIEAILJBFHILCEKEGBAA.ben@goertzel.org" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="Pine.OSF.4.61.0509080823250.292353@kosh.hut.fi" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=Re:%20Formal%20Verification%20of%20Functional%20Programs%20[%20was%20RE:%20Introduction]"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Thu Sep 08 2005 - 05:52:03 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="12237.html">Wei Dai: "Re: The Relevance of Complex Systems [was: Re: Retrenchment]"</a>
+<li><strong>Previous message:</strong> <a href="12235.html">Mikko Särelä: "RE: Introduction"</a>
+<li><strong>In reply to:</strong> <a href="12235.html">Mikko Särelä: "RE: Introduction"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12225.html">rpwl@lightlink.com: "Re: Introduction"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12236">[ date ]</a>
+<a href="index.html#12236">[ thread ]</a>
+<a href="subject.html#12236">[ subject ]</a>
+<a href="author.html#12236">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Mikko,
+<br>
+<p>You're right of course that I spoke sloppily, one of my numerous bad habits
+<br>
+;-)
+<br>
+<p>What I meant, when I referred to &quot;program correctness checking,&quot; was really
+<br>
+&quot;program verification&quot; in the sense of &quot;formally verifying that a program
+<br>
+has certain properties of interest.&quot;
+<br>
+<p>For starters, this means something along the lines of Programatica
+<br>
+<p><a href="http://www.cse.ogi.edu/~hallgren/Programatica/HW2003/demoabstract.html">http://www.cse.ogi.edu/~hallgren/Programatica/HW2003/demoabstract.html</a>
+<br>
+<p>a Haskell framework which supports three basic forms of evidence regarding
+<br>
+claims about Haskell programs:
+<br>
+<p>-- informal claims (``I say so'')
+<br>
+-- tests run with a tool called QuickCheck
+<br>
+-- formal proofs done using a theorem-prover called Alfa
+<br>
+<p>This framework allows one to formally prove *some* rigorous and interesting
+<br>
+statements about Haskell programs.
+<br>
+<p>Relatedly, Bill Harrison's work
+<br>
+<p><a href="http://www.cs.missouri.edu/~harrison/pubs/research/research.html">http://www.cs.missouri.edu/~harrison/pubs/research/research.html</a>
+<br>
+<p>(see particularly the paper &quot;Domain Separation by Construction&quot;) uses monads
+<br>
+to allow one to prove formally that Haskell programs are &quot;safe&quot; in certain
+<br>
+senses.  For instance, if one produces a program with two different modules
+<br>
+that don't interact (even though they share the same memory space), his
+<br>
+formalism lets one prove -- even in complex cases -- that they truly don't
+<br>
+and can't interact.  This allows one, in theory, to combine safety with
+<br>
+efficiency in many cases (though of course this efficiency is only
+<br>
+theoretical at the moment as there is no efficient Haskell compiler!).
+<br>
+<p>This general kind of approach to security of software would seem to be a
+<br>
+prerequisite to safe AGI.  Without it, it's hard to be sure that bugs in
+<br>
+one's software aren't preventing one's supposedly &quot;Friendly&quot; architecture
+<br>
+from actually being Friendly.
+<br>
+<p>Research in automated verification of appropriate properties of computer
+<br>
+programs, including safety-related properties, COULD proceed alongside
+<br>
+research in AGI ---- in some ideal world where AGI and functional
+<br>
+programming were adequately-funded domains of endeavor....
+<br>
+<p>-- Ben
+<br>
+<p><p><p><em>&gt; On Wed, 7 Sep 2005, Ben Goertzel wrote:
+</em><br>
+<em>&gt; &gt; 6) automatic program-correctness-checking integrated with above system
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; &gt; And, achieving 3-6 remains far off, and involves a lot of work.  4 is
+</em><br>
+<em>&gt; &gt; of course straightforward work, and 6 is straightforward though subtle,
+</em><br>
+<em>&gt; &gt; but 3 is quite subtle and involves a lot of
+</em><br>
+<em>&gt; &gt; tricky computer science as well as difficult programming.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Actually depending on what you mean by automatic
+</em><br>
+<em>&gt; program-correctness-checking, it may not be simple, nor straightforward.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Automatic program verification for correctness is as a general task
+</em><br>
+<em>&gt; impossible, because in general case it is impossible to tell whether two
+</em><br>
+<em>&gt; Turing machines are equivalent or not. Still, there are people working on
+</em><br>
+<em>&gt; tools that are capable of verifying quite many things even from written
+</em><br>
+<em>&gt; code such as impossibility of getting into a deadlock, or livelock,
+</em><br>
+<em>&gt; etc.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; If you mean whether the compiler or some such verifies that the
+</em><br>
+<em>&gt; program is
+</em><br>
+<em>&gt; a legal example of the programming language (as for example c and most
+</em><br>
+<em>&gt; other often used languages do), then you are quite right. The task is
+</em><br>
+<em>&gt; quite straightforward and a small amount of understanding of programming
+</em><br>
+<em>&gt; and theory of computation should allow one to do the job.
+</em><br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="12237.html">Wei Dai: "Re: The Relevance of Complex Systems [was: Re: Retrenchment]"</a>
+<li><strong>Previous message:</strong> <a href="12235.html">Mikko Särelä: "RE: Introduction"</a>
+<li><strong>In reply to:</strong> <a href="12235.html">Mikko Särelä: "RE: Introduction"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12225.html">rpwl@lightlink.com: "Re: Introduction"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12236">[ date ]</a>
+<a href="index.html#12236">[ thread ]</a>
+<a href="subject.html#12236">[ subject ]</a>
+<a href="author.html#12236">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:52 MDT
+</em></small></p>
+</body>
+</html>

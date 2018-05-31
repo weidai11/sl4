@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: ARTICLE: Memory bandwidth</title>
+<meta name="Author" content="Ben Goertzel (ben@webmind.com)">
+<meta name="Subject" content="RE: ARTICLE: Memory bandwidth">
+<meta name="Date" content="2001-04-16">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: ARTICLE: Memory bandwidth</h1>
+<!-- received="Mon Apr 16 09:28:31 2001" -->
+<!-- isoreceived="20010416152831" -->
+<!-- sent="Mon, 16 Apr 2001 07:39:53 -0400" -->
+<!-- isosent="20010416113953" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@webmind.com" -->
+<!-- subject="RE: ARTICLE: Memory bandwidth" -->
+<!-- id="NDBBIBGFAPPPBODIPJMMOEBCFGAA.ben@webmind.com" -->
+<!-- charset="Windows-1252" -->
+<!-- inreplyto="LOBBLDGHBFLPJDFBIPFEKEHJGKAA.patrick@kia.net" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@webmind.com?Subject=RE:%20ARTICLE:%20Memory%20bandwidth"><em>ben@webmind.com</em></a>)<br>
+<strong>Date:</strong> Mon Apr 16 2001 - 05:39:53 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1139.html">Ben Goertzel: "RE: PAPER: Theory of Universal AI based on Algorithmic Complexity"</a>
+<li><strong>Previous message:</strong> <a href="1137.html">Ben Goertzel: "RE: PAPER: Theory of Universal AI based on Algorithmic Complexity"</a>
+<li><strong>In reply to:</strong> <a href="1133.html">Patrick McCuller: "RE: ARTICLE: Memory bandwidth"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1149.html">Samantha Atkins: "Re: ARTICLE: Memory bandwidth"</a>
+<li><strong>Reply:</strong> <a href="1149.html">Samantha Atkins: "Re: ARTICLE: Memory bandwidth"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1138">[ date ]</a>
+<a href="index.html#1138">[ thread ]</a>
+<a href="subject.html#1138">[ subject ]</a>
+<a href="author.html#1138">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+hi,
+<br>
+<p><em>&gt;Do you have much experience with C++?
+</em><br>
+<p>Yes, and I fucking hate it.  It's an awkward, oversized, nasty language,
+<br>
+which is intensely painful to debug.  That's why i chose Java for Webmind.
+<br>
+What a disappointment to find that, all in all, for large-scale projects
+<br>
+Java is even ~worse~ ;(
+<br>
+<p><em>&gt; 	What did you find was more of a problem: memory
+</em><br>
+<em>&gt; consumption, execution speed,
+</em><br>
+<em>&gt; or distributed interfaces?
+</em><br>
+<p>Execution speed was only a problem in one sense: the strict OO nature of
+<br>
+Java forces you to use design patterns that create a lot of objects all the
+<br>
+time.  Implementing a similar design in C++ and in Java, and using Hotspot
+<br>
+to optimize Java, there isn't much speed difference.  But C++ is a larger
+<br>
+and nastier language, and as a consequence gives you more design flexibility
+<br>
+to use an object-less, down-and-dirty pure C approach to implementing some
+<br>
+things, when it's really necessary.  In this sense, sometimes, the optimal
+<br>
+Java program for solving a problem can be slower than the optimal C++
+<br>
+program.  Because  in C++ you always have the option to revert to the most
+<br>
+nasty and efficient type of C when you need to.
+<br>
+<p>Memory consumption is a really big problem with Java, and there's no way to
+<br>
+get around it.  You can mitigate it by using object pools and other fancy
+<br>
+design patterns, but even so, Java uses at least 4 times as much memory as
+<br>
+C++ for doing the same things.  And that's a comparison with OO C++, not
+<br>
+with down-and-dirty C written with a view toward memory conservations.
+<br>
+<p><em>&gt; Even more mature languages only have a
+</em><br>
+<em>&gt; few years on
+</em><br>
+<em>&gt; Java in terms of distributed architectures, so I suspect that
+</em><br>
+<em>&gt; while you had a
+</em><br>
+<em>&gt; challenge on your hands with that, it wasn't the limiting factor.
+</em><br>
+<em>&gt; Am I wrong
+</em><br>
+<em>&gt; about that?
+</em><br>
+<p>Doing distributed programming in Java is REALLY REALLY NICE.
+<br>
+<p>The main problem is that Java's obscene memory consumption, combined with
+<br>
+the 1.2 GB memory limit on every existing JVM, forces you into distributed
+<br>
+programming when dealing with relatively small datasets (&quot;relatively&quot;
+<br>
+meaning &quot;relative to all human knowledge&quot; ;).
+<br>
+<p>There are some other technical issues too.  For instance, RMI is elegant and
+<br>
+easy to use, but, it wasn't made for high-volume message throughput, and
+<br>
+this shows sometimes.
+<br>
+<p>Also, if you need to send messages between machines really fast, the
+<br>
+serialization/deserialization of objects becomes your main bottleneck --
+<br>
+it's much slower than sending messages across cables these days.  And
+<br>
+there's no way to fix this without going inside the JVM.
+<br>
+<p><em>&gt; 	Do you mind if I ask a few more questions?
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; 	How many machines are we talking about - five, fifty, five hundred?
+</em><br>
+<p>At most, we're working with about 30 quad-processor PC's (4GB RAM each) for
+<br>
+the &quot;mind core&quot;, and about 50 ordinary PC's that can sometimes do small bits
+<br>
+of processing (when their users aren't using them)
+<br>
+<p>Of course, most of these machines have now been sold off in the bankruptcy
+<br>
+proceedings ;D
+<br>
+<p>Now we have a few quads left, and some smaller machines... running in the
+<br>
+basement of another WM die-hard along with the  mailserver, intranet, etc.
+<br>
+<p>In practice, we rarely ran a Webmind with more than 7-10 of the quads at
+<br>
+once
+<br>
+<p><em>&gt; 	How many JVMs did you run on each machine, and how many
+</em><br>
+<em>&gt; threads in each JVM?
+</em><br>
+<p>1-3 JVM's per machine, depending on all sorts of things
+<br>
+<p>In terms of threads, generally less than half a dozen per process.  We used
+<br>
+to have an architecture that used more threads than that, but that was
+<br>
+before we implemented our own internal scheduler.
+<br>
+<p><em>&gt; 	You mentioned billions of objects - are you serious about
+</em><br>
+<em>&gt; that? I've never
+</em><br>
+<em>&gt; worked with a system with so many active objects. Rows in
+</em><br>
+<em>&gt; databases, yes. But
+</em><br>
+<em>&gt; for running objects, even in a distributed C++ architecture, I've
+</em><br>
+<em>&gt; never seen
+</em><br>
+<em>&gt; anything like that many. Were they active (Runnable), serving as
+</em><br>
+<em>&gt; data storage,
+</em><br>
+<em>&gt; or what?
+</em><br>
+<p>Millions of nodes, billions of links between them.  All in RAM, on a cluster
+<br>
+of machines.
+<br>
+That's what it takes to make an object-oriented mind!
+<br>
+<p><p><em>&gt;  I take it you tried every available JVM?
+</em><br>
+<p>oh yeah...
+<br>
+<p>ben
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1139.html">Ben Goertzel: "RE: PAPER: Theory of Universal AI based on Algorithmic Complexity"</a>
+<li><strong>Previous message:</strong> <a href="1137.html">Ben Goertzel: "RE: PAPER: Theory of Universal AI based on Algorithmic Complexity"</a>
+<li><strong>In reply to:</strong> <a href="1133.html">Patrick McCuller: "RE: ARTICLE: Memory bandwidth"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1149.html">Samantha Atkins: "Re: ARTICLE: Memory bandwidth"</a>
+<li><strong>Reply:</strong> <a href="1149.html">Samantha Atkins: "Re: ARTICLE: Memory bandwidth"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1138">[ date ]</a>
+<a href="index.html#1138">[ thread ]</a>
+<a href="subject.html#1138">[ subject ]</a>
+<a href="author.html#1138">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Progress, and One road or many to AI?</title>
+<meta name="Author" content="James Rogers (jamesr@best.com)">
+<meta name="Subject" content="Re: Progress, and One road or many to AI?">
+<meta name="Date" content="2003-09-11">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Progress, and One road or many to AI?</h1>
+<!-- received="Thu Sep 11 00:22:19 2003" -->
+<!-- isoreceived="20030911062219" -->
+<!-- sent="Wed, 10 Sep 2003 23:20:23 -0700" -->
+<!-- isosent="20030911062023" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Re: Progress, and One road or many to AI?" -->
+<!-- id="BB856237.4B88%jamesr@best.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="20030911014738.50064.qmail@web11203.mail.yahoo.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> James Rogers (<a href="mailto:jamesr@best.com?Subject=Re:%20Progress,%20and%20One%20road%20or%20many%20to%20AI?"><em>jamesr@best.com</em></a>)<br>
+<strong>Date:</strong> Thu Sep 11 2003 - 00:20:23 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="7114.html">Alexander Mayboroda: "What so bad"</a>
+<li><strong>Previous message:</strong> <a href="7112.html">Kwame Porter-Robinson: "Re: Progress, and One road or many to AI?"</a>
+<li><strong>In reply to:</strong> <a href="7112.html">Kwame Porter-Robinson: "Re: Progress, and One road or many to AI?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="7116.html">Kwame Porter-Robinson: "Re: Progress, and One road or many to AI?"</a>
+<li><strong>Reply:</strong> <a href="7116.html">Kwame Porter-Robinson: "Re: Progress, and One road or many to AI?"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7113">[ date ]</a>
+<a href="index.html#7113">[ thread ]</a>
+<a href="subject.html#7113">[ subject ]</a>
+<a href="author.html#7113">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On 9/10/03 6:47 PM, &quot;Kwame Porter-Robinson&quot; &lt;<a href="mailto:ktprktpr@yahoo.com?Subject=Re:%20Progress,%20and%20One%20road%20or%20many%20to%20AI?">ktprktpr@yahoo.com</a>&gt; wrote:
+<br>
+<em>&gt;
+</em><br>
+<em>&gt; Can you give us some information on exactly what you
+</em><br>
+<em>&gt; are testing convergence upon? Does your data have to
+</em><br>
+<em>&gt; be &quot;prepared&quot;, meaning you can't just use raw text or
+</em><br>
+<em>&gt; some other lowest denominator type of information.
+</em><br>
+<em>&gt; Have you considered applying the program to stock
+</em><br>
+<em>&gt; market data :)
+</em><br>
+<p><p>Raw bytes, no massaging.  In many cases, files and tarballs that I
+<br>
+downloaded off the Internet with many different types of data and file
+<br>
+formats.  The efficacy is independent of the kind of data since it codes
+<br>
+patterns in the abstract.  For the purposes of testing, the corpuses I've
+<br>
+collected range from raw genomics data to English literature collections to
+<br>
+source code tarballs and most anything else I could get my hands on.  I also
+<br>
+have some generator functions that can create arbitrary amounts of
+<br>
+mathematically characteristic data for testing purposes.
+<br>
+<p>There is only one tunable parameter (the data structure automatically adapts
+<br>
+itself to the nature of the data it is exposed to, so not much is needed),
+<br>
+and that has been locked into the same value for all the testing, mostly
+<br>
+because it was easier than changing it and it only has a minor impact on
+<br>
+efficiency anyway.  That parameter was roughly set to a good value for raw
+<br>
+genomics data.  Massaging or cleaning up the data would definitely improve
+<br>
+the efficiency and let the model converge faster, but that wasn't the point
+<br>
+of this series of tests.  However, I will be testing some simple pre-filter
+<br>
+code shortly that I can insert into the data stream.  The primary point of
+<br>
+pre-filtering is to improve the signal-to-noise ratio of the data stream; a
+<br>
+lot of raw file formats have a lot of extraneous crap in them, which is
+<br>
+handled just fine but hardly desirable.
+<br>
+<p>And yes, there is already keen hedge fund interest based upon the
+<br>
+capabilities of earlier versions.  Whereas I wasn't entirely satisfied with
+<br>
+certain aspects of those earlier generations at that time from a theoretical
+<br>
+standpoint, I am pretty much satisfied with the design and performance of
+<br>
+this system.  I've been working on these problems for many years and have
+<br>
+gone through numerous revisions.
+<br>
+<p><p><em>&gt; And do you plan to keep this code to yourself or
+</em><br>
+<em>&gt; release to the world, in its developmental stage?
+</em><br>
+<p><p>It won't be released in a developmental stage regardless.  The code base is
+<br>
+quite small and clean but also very intricate; it would be very difficult to
+<br>
+hack unless you knew how it does what it does and why it does it in a
+<br>
+theoretical sense -- I wrote it and it is difficult even for me to think
+<br>
+through the interactions that lead to the correct emergent result.  I
+<br>
+haven't decided on what to do with the code precisely, but the formation of
+<br>
+a company is underway (name already selected, in fact) and it looks like I
+<br>
+may be able to collect a pretty interesting cast of Silicon Valley
+<br>
+characters for that venture.  The exact nature of the commercialization is
+<br>
+still being decided.  I've been stalling on commercialization until I could
+<br>
+prove this major milestone to my satisfaction.
+<br>
+<p>There is still work to be done, but it is becoming more a matter of tying up
+<br>
+loose ends and taking care of things I've put off, as well as simply
+<br>
+cleaning the code up a bit and adding some scalability enhancements for very
+<br>
+large systems.   I am inclined to put in my own VM since many of them don't
+<br>
+take well to being used like this, but the BSD VM that most of the testing
+<br>
+is done on is very fast and smiles the whole time.
+<br>
+<p>Cheers,
+<br>
+<p>-James Rogers
+<br>
+&nbsp;<a href="mailto:jamesr@best.com?Subject=Re:%20Progress,%20and%20One%20road%20or%20many%20to%20AI?">jamesr@best.com</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="7114.html">Alexander Mayboroda: "What so bad"</a>
+<li><strong>Previous message:</strong> <a href="7112.html">Kwame Porter-Robinson: "Re: Progress, and One road or many to AI?"</a>
+<li><strong>In reply to:</strong> <a href="7112.html">Kwame Porter-Robinson: "Re: Progress, and One road or many to AI?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="7116.html">Kwame Porter-Robinson: "Re: Progress, and One road or many to AI?"</a>
+<li><strong>Reply:</strong> <a href="7116.html">Kwame Porter-Robinson: "Re: Progress, and One road or many to AI?"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7113">[ date ]</a>
+<a href="index.html#7113">[ thread ]</a>
+<a href="subject.html#7113">[ subject ]</a>
+<a href="author.html#7113">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:42 MDT
+</em></small></p>
+</body>
+</html>

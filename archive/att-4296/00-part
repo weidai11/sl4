@@ -1,0 +1,32 @@
+On Mon, 2002-06-24 at 16:02, Eliezer S. Yudkowsky wrote:
+> An AI can have a very elegant design and still be far more complex than what 
+> human programmers are used to.  Overcomplexity and oversimplification are 
+> relative to the problem, not relative to what strikes humans as being a lot 
+> or a little complexity.  The natural complexity of AI is a lot higher than 
+> what programmers are used to, so in an absolute sense a "just-right AI" is 
+> probably more complex than most "overcomplicated" programs.  Yet an AI built 
+> "just right" might still have in all other ways the signature of good 
+> design, rather than bad design.
+
+
+That makes more sense now.  When I use "complexity" while talking about
+machinery, I usually mean intrinsic complexity (a la Kolmogorov).  Human
+programmers creating their own "complexity", or the reverse case of
+attempting to express an algorithm in a form that contains less
+intrinsic complexity than the algorithm they are trying to express (good
+luck!) are human factors and not something I generally concern myself
+with.  
+
+I don't usually consider something that is an example of "just right"
+engineering to be "complex", except perhaps in a pedestrian sense. For
+me, "elegant" and "complex" are at the opposite ends of the descriptive
+spectrum when talking about software.
+
+-James Rogers
+ jamesr@best.com
+
+
+
+
+
+

@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Review of Novamente</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: Review of Novamente">
+<meta name="Date" content="2002-05-11">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Review of Novamente</h1>
+<!-- received="Sat May 11 11:39:29 2002" -->
+<!-- isoreceived="20020511173929" -->
+<!-- sent="Sat, 11 May 2002 09:24:40 -0600" -->
+<!-- isosent="20020511152440" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: Review of Novamente" -->
+<!-- id="LAEGJLOGJIOELPNIOOAJGEOBCHAA.ben@goertzel.org" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="3CDC71F5.97BA66F0@pobox.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20Review%20of%20Novamente"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Sat May 11 2002 - 09:24:40 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3651.html">Ben Goertzel: "RE: Review of Novamente"</a>
+<li><strong>Previous message:</strong> <a href="3649.html">Eliezer S. Yudkowsky: "Re: Review of Novamente"</a>
+<li><strong>In reply to:</strong> <a href="3649.html">Eliezer S. Yudkowsky: "Re: Review of Novamente"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3651.html">Ben Goertzel: "RE: Review of Novamente"</a>
+<li><strong>Reply:</strong> <a href="3651.html">Ben Goertzel: "RE: Review of Novamente"</a>
+<li><strong>Reply:</strong> <a href="3652.html">Eliezer S. Yudkowsky: "Re: Review of Novamente"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3650">[ date ]</a>
+<a href="index.html#3650">[ thread ]</a>
+<a href="subject.html#3650">[ subject ]</a>
+<a href="author.html#3650">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; &gt; In bio &amp; finance we got really awesome results in terms of being able to
+</em><br>
+<em>&gt; &gt; recognized fancier patterns than anyone else.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; What results?  Why are they awesome?  According to my
+</em><br>
+<em>&gt; already-given estimate
+</em><br>
+<em>&gt; of the system, Novamente does have a genuine AI capability in the
+</em><br>
+<em>&gt; domain of
+</em><br>
+<em>&gt; pattern recognition and may be able to achieve a genuine AI capability in
+</em><br>
+<em>&gt; solving some goal-oriented problems in the patterns it can recognize, so
+</em><br>
+<em>&gt; recognizing fancier patterns than anyone else is exactly what I *think*
+</em><br>
+<em>&gt; Novamente ought to be able to do, but it would still help to have
+</em><br>
+<em>&gt; a specific
+</em><br>
+<em>&gt; example of a novel pattern that Novamente recognized.  I could, after all,
+</em><br>
+<em>&gt; be too optimistic.
+</em><br>
+<p>Here is a simple example of a pattern recognized by the system quite
+<br>
+recently, using some *very* simple methods compared to the full Novamente
+<br>
+capability...
+<br>
+<p>*******
+<br>
+<p>LOW, MOD_LOW, EXTR_HIGH, DECREASE, INCREASE are predicates applied to
+<br>
+numbers w/respect to a given set of numbers (establishing a Context).  Here
+<br>
+the context is a dataset of gene expression values regarding the yeast cell
+<br>
+cycle.
+<br>
+<p>SIC1, PCL2, CLN3, SWI5 are shorthands for gene  expression values.
+<br>
+<p>For instance, SIC1 is a shorthand for
+<br>
+expression(GeneNode SIC1) which is a function from time-values to numbers
+<br>
+<p>The variable D is a category learned from the Stanford Genome Database
+<br>
+<p>A relatively simple pattern in a yeast gene expression dataset, with a
+<br>
+fairly clear human meaning, is then:
+<br>
+<p><pre>
+----
+C = ( LOW(SIC1) OR MOD_LOW(SIC1) ) AND ( LOW(PCL2) ) AND (LOW(CLN3)) OR
+(MOD_LOW(CLN3) )
+D = &quot;involved in transcriptional regulation of CUP1&quot;
+C AND EXTR_HIGH( SWI5) --&gt;
+DECREASE(SWI5) AND INCREASE(D)
+C AND (MOD_HIGH(SWI5) OR HIGH(SWI5)) --&gt;
+INCREASE(SWI5) AND INCREASE(D)
+----
+**********
+I've omitted the quantitative truth values of the patterns...
+Many patterns found are more complicated by far, but in this application
+simple patterns are favored because the patterns are intended to be viewed
+by human biologists so they can stimulate the human mind to further
+hypothesis.
+No one told the system to look at these particular 4 genes (there are 6100
+yeast genes), or to look at transcriptional regulation as opposed to
+hundreds of other properties of genes in databases the system was given....
+We did tell the system to look for patterns involving combinations of
+certain predicates though.
+This is classic &quot;data mining&quot; -- the system is thrown a bunch of data and
+looks for interesting patterns.  It happens to be a datamining problem that
+has proved unsolvable for traditional datamining methods however, in spite
+of several years' effort.  (Only several years because gene expression data
+only recently became available due to the recent invention of gene chips &amp;
+spotted microarrays.)
+It's far from AGI of course ... the system is not posing its own problems
+based on its own experience, it's being given a particular data analysis
+problem by a script and then spitting out answers after hours of processing.
+It does involve two levels of analysis, a breakdown that's sort of
+interesting from a cognitive perspective.  level 1 is finding some part of
+the perceptual data that's worth paying attention to (e.g. a &quot;coherent&quot; set
+of genes), Level 2 is finding the best possible patterns in this
+coherent/attention-worthy part.
+Of course I am leaving out all the details of how this app was set up, which
+involves loads of tricks.  There is a paper to be submitted to Journal of
+Computational Biology that tells more, but it specifically doesn't go into
+the details of Novamente AI, instead trying to explain the
+application-specific behavior of Novamente in more conventional terms (so as
+to be able to explain what's going on in the context of an isolated research
+paper).
+Previous approaches to the gene expression data analysis problem are much
+simpler and less useful, involving either clustering, or recognition of
+simple pairwise patterns between genes, or linear time dependencies.  These
+previous approaches do not reveal much of the genetic regulatory structure
+underlying the dataset, but Novamente-based analysis does.
+Again, please do not accuse me of confusing this work with AGI.  Of course,
+it's &quot;just&quot; datamining.  We find that doing this sort of application, in
+addition to its intrinsic value (better understanding of gene interactions
+helps lead to disease cures etc.), helps us to tune the various mechanisms
+involved.  There is a risk that tuning a cognitive mechanism for datamining
+is actually tuning it to perform BADLY on more closely AGI-related tasks,
+but we have a theoretical perspective that at least helps us to ward off
+this problem.
+Also, please don't think that all our work is narrowly focused on such
+datamining apps.  Most of it now is focused on building basic stuff that's
+useful both for datamining and for AGI, but there's also some work going on
+that is not useful for datamining in the short term, only for AGI.
+Finally, this particular R&amp;D is at an early stage.  In 6 months we should
+have a *really solid* system for gene expression data analysis, we're just
+beginning with this application area at the moment.
+-- Ben
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3651.html">Ben Goertzel: "RE: Review of Novamente"</a>
+<li><strong>Previous message:</strong> <a href="3649.html">Eliezer S. Yudkowsky: "Re: Review of Novamente"</a>
+<li><strong>In reply to:</strong> <a href="3649.html">Eliezer S. Yudkowsky: "Re: Review of Novamente"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3651.html">Ben Goertzel: "RE: Review of Novamente"</a>
+<li><strong>Reply:</strong> <a href="3651.html">Ben Goertzel: "RE: Review of Novamente"</a>
+<li><strong>Reply:</strong> <a href="3652.html">Eliezer S. Yudkowsky: "Re: Review of Novamente"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3650">[ date ]</a>
+<a href="index.html#3650">[ thread ]</a>
+<a href="subject.html#3650">[ subject ]</a>
+<a href="author.html#3650">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:38 MDT
+</em></small></p>
+</body>
+</html>

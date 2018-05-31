@@ -1,0 +1,625 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Fundamental problems</title>
+<meta name="Author" content="Eliezer S. Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="Re: Fundamental problems">
+<meta name="Date" content="2006-02-14">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Fundamental problems</h1>
+<!-- received="Tue Feb 14 09:02:35 2006" -->
+<!-- isoreceived="20060214160235" -->
+<!-- sent="Tue, 14 Feb 2006 08:04:37 -0800" -->
+<!-- isosent="20060214160437" -->
+<!-- name="Eliezer S. Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Re: Fundamental problems" -->
+<!-- id="43F1FF95.1030106@pobox.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="BAY103-F17B9A93FD3E7B94650AA7CCA060@phx.gbl" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eliezer S. Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20Fundamental%20problems"><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Tue Feb 14 2006 - 09:04:37 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="14077.html">Jeff Medina: "Re: Fundamental problems"</a>
+<li><strong>Previous message:</strong> <a href="14075.html">Rick Geniale: "Re: Biowar vs. AI as existential threat"</a>
+<li><strong>In reply to:</strong> <a href="14073.html">Mitchell Porter: "Fundamental problems"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="14279.html">Mitchell Porter: "Re: Fundamental problems"</a>
+<li><strong>Reply:</strong> <a href="14279.html">Mitchell Porter: "Re: Fundamental problems"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#14076">[ date ]</a>
+<a href="index.html#14076">[ thread ]</a>
+<a href="subject.html#14076">[ subject ]</a>
+<a href="author.html#14076">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Mitchell Porter wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; Eliezer has posted a job notice at the SIAI website, looking
+</em><br>
+<em>&gt; for research partners to tackle the problem of rigorously
+</em><br>
+<em>&gt; ensuring AI goal stability under self-enhancement transformations.
+</em><br>
+<em>&gt; I would like to see this problem (or perhaps a more refined one)
+</em><br>
+<em>&gt; stated in the rigorous terms of theoretical computer science; and
+</em><br>
+<em>&gt; I'd like to see this list try to generate such a formulation.
+</em><br>
+<p>I strongly suspect that when this problem is stated in rigorous terms it 
+<br>
+will have been solved.
+<br>
+<p>I am not averse to SL4 trying to generate such a formulation, but I have 
+<br>
+a feeling it's not going to work.
+<br>
+<p><em>&gt; There are several reasons why one might wish to refine the
+</em><br>
+<em>&gt; problem's specification, even at an informal level. Clearly, one
+</em><br>
+<em>&gt; can achieve goal stability by committing to an architecture
+</em><br>
+<em>&gt; incapable of modifying its goal-setting components. This is an
+</em><br>
+<em>&gt; insufficiently general solution for Eliezer's purposes, but he does
+</em><br>
+<em>&gt; not specify exactly how broad the solution is supposed to be,
+</em><br>
+<em>&gt; and perhaps he can't. Ideally, one should want a theory of
+</em><br>
+<em>&gt; Friendliness which can say something (even if only 'irredeemably
+</em><br>
+<em>&gt; unsafe, do not use') for all possible architectures. More on this
+</em><br>
+<em>&gt; below.
+</em><br>
+<p>A theory which correctly sorts Friendly and unFriendly architectures *in 
+<br>
+general* is impossible by Rice's Theorem; you can't do that even for 
+<br>
+multiplication.  You can possibly have a theory which produces no false 
+<br>
+positives.  But that's not even what I'm looking for - just a theory 
+<br>
+which correctly states of a single recursive self-improver that it is 
+<br>
+Friendly.  That is all I need.  Engineers don't need a theory of which 
+<br>
+bridges in general stay up, just a theory which lets them select from a 
+<br>
+small subset of possible bridges which *knowably* stay up.
+<br>
+<p><em>&gt; So, now to business. What do we want? A theory of 'goal
+</em><br>
+<em>&gt; stability under self-enhancement', just as rigorous as (say) the
+</em><br>
+<em>&gt; theory of computational complexity classes.
+</em><br>
+<p>An interesting analogy.  Computational complexity classes will very 
+<br>
+often overestimate the difficulty of real-world problems, which are 
+<br>
+usually special cases possessing regularities not applicable to the 
+<br>
+problem as formulated by the computer scientist.  I guess one could make 
+<br>
+a case for complexity classes as rigorous upper bounds; like a bridge 
+<br>
+that knowably supports a certain minimum weight even if in practice, 
+<br>
+with real-world cars driving over it, it can handle an unguessable 
+<br>
+amount more.
+<br>
+<p><em>&gt; We want to pose
+</em><br>
+<em>&gt; exact problems, and solve them. But before we can even pose
+</em><br>
+<em>&gt; them, we must be able to formalize the basic concepts. What
+</em><br>
+<em>&gt; are they here? I would nominate 'Friendliness', 'self-enhancement',
+</em><br>
+<em>&gt; and 'Friendly self-enhancement'. (I suppose even the definition of
+</em><br>
+<em>&gt; 'goal' may prove subtle.)
+</em><br>
+<p>Reflective decision theory - a theory of motivationally stable 
+<br>
+self-enhancement - is the world's second most important math problem.
+<br>
+<p>The *most* important math problem is how to phrase the motivational 
+<br>
+invariant itself.  A classical utility function *probably* isn't going 
+<br>
+to cut it.  My suspicion is that being able to build a reflective 
+<br>
+decision system, I would know a great deal more about my options for 
+<br>
+motivational invariants, and how to structurally describe those 
+<br>
+structurally complex things that humans want - such as &quot;free will&quot; or 
+<br>
+&quot;freedom from having one's life path too heavily optimized by outside 
+<br>
+sources as opposed to one's own efforts&quot;.  I am doubtful I can solve the 
+<br>
+most important math problem without having solved the second most 
+<br>
+important math problem first.  Sadly and dangerously, FAI knowledge 
+<br>
+*always* lags behind AGI knowledge because AGI is a strictly simpler 
+<br>
+problem.
+<br>
+<p><em>&gt; It seems to me that the rigorous
+</em><br>
+<em>&gt; characterization of 'self-enhancement', especially, has been
+</em><br>
+<em>&gt; neglected so far - and this tracks the parallel failure to define
+</em><br>
+<em>&gt; 'intelligence'.
+</em><br>
+<p>Mitchell, you yourself in private conversation suggested the final form 
+<br>
+of the equation I'm still using to do that, at least for classical 
+<br>
+utility functions.  Let U(x) be the utility function over outcomes, and 
+<br>
+EU(a, P) be the expected utility of an action relative to a conditional 
+<br>
+probability distribution over outcomes given action.  Let H(x, U) be the 
+<br>
+entropy of an outcome relative to a utility function, defined as the 
+<br>
+logarithm of the volume of outcomes in X with utility equal to or 
+<br>
+greater than x.  We may similarly define EH(a, U, P) as the entropy of 
+<br>
+an action relative to a utility function and probability distribution.
+<br>
+<p>(I originally had H measured in the volume of outcomes with utility 
+<br>
+exactly equal to x, a silly mistake which Mitchell corrected, hence 
+<br>
+originating the final form of the equation.)
+<br>
+<p>A reason this does not work for specifying motivational stability is 
+<br>
+that you can have systems with different U, that still achieve lower 
+<br>
+entropy relative to your current U - for example, a more intelligent 
+<br>
+system that incorporates additional, unwanted criteria into a modular 
+<br>
+utility function, on top of your existing criteria.  If the system is 
+<br>
+more intelligent, it may, most of the time, steer reality into regions 
+<br>
+of higher utility relative to your current U, but there would be strange 
+<br>
+additional quirks, and it would not be motivationally stable in the long 
+<br>
+run.
+<br>
+<p><em>&gt; We have a sort of empirical definition - success at
+</em><br>
+<em>&gt; prediction - which provides an *empirical* criterion, but we need
+</em><br>
+<em>&gt; a theoretical one (prediction within possible worlds? but then
+</em><br>
+<em>&gt; which worlds, and with what a-priori probabilities?): both a way
+</em><br>
+<em>&gt; to rate the 'intelligence' of an algorithm or a bundle of heuristics,
+</em><br>
+<em>&gt; and a way to judge whether a given self-modification is actually
+</em><br>
+<em>&gt; an *enhancement* (although that should follow, given a truly
+</em><br>
+<em>&gt; rigorous definition of intelligence). When multiple criteria are in
+</em><br>
+<em>&gt; play, there are usually trade-offs: an improvement in one direction
+</em><br>
+<em>&gt; will eventually be a diminution in another. One needs to think
+</em><br>
+<em>&gt; carefully about how to set objective criteria for enhancement,
+</em><br>
+<em>&gt; without arbitrarily selecting a narrow set of assumptions.
+</em><br>
+<p>It is ability to steer the future that matters, not prediction. 
+<br>
+Decision theory incorporates probability theory but not the other way 
+<br>
+around.
+<br>
+<p><em>&gt; Now, the probability that YOU win the race is less than 1, probably
+</em><br>
+<em>&gt; much less; not necessarily because you're making an obvious
+</em><br>
+<em>&gt; mistake, but just because we do not know (and perhaps cannot
+</em><br>
+<em>&gt; know, in advance) the most efficient route to superintelligence.
+</em><br>
+<em>&gt; Given the uncertainties and the number of researchers, it's fair to
+</em><br>
+<em>&gt; say that the odds of any given research group being the first are
+</em><br>
+<em>&gt; LOW, but the odds that *someone* gets there are HIGH. But this
+</em><br>
+<em>&gt; implies that one should be working, not just privately on a
+</em><br>
+<em>&gt; Friendliness theory for one's preferred architecture, but publicly on
+</em><br>
+<em>&gt; a Friendliness theory general enough to say something about all
+</em><br>
+<em>&gt; possible architectures. That sounds like a huge challenge, but it's
+</em><br>
+<em>&gt; best to know what the ideal would be, and it's important to see
+</em><br>
+<em>&gt; this in game-theoretic terms. By contributing to a publicly available,
+</em><br>
+<em>&gt; general theory of Friendliness, you are hedging your bets;
+</em><br>
+<em>&gt; accounting for the contingency that someone else, with a
+</em><br>
+<em>&gt; different AI philosophy, will win the race.
+</em><br>
+<p>The first problem is that an FAI theory which generalizes across all 
+<br>
+architectures is impossible by Rice's Theorem.
+<br>
+<p>The second problem is that a constructive theory of the world's second 
+<br>
+most important math problem, reflective decision systems, is necessarily 
+<br>
+a constructive theory of seed AI; and constitutes, in itself, a weapon 
+<br>
+of math destruction, which can be used for destruction more *quickly* 
+<br>
+than to any good purpose.  Any Singularity-value I attach to publicizing 
+<br>
+Friendly AI would go into explaining the *problem*.  Solutions are far 
+<br>
+harder than this and will be specialized on particular constructive 
+<br>
+architectures.
+<br>
+<p><em>&gt; To expand on this: the priority of public research should be to
+</em><br>
+<em>&gt; achieve a rigorous theoretical conception of Friendliness, to develop
+</em><br>
+<em>&gt; a practical criterion for evaluating whether a proposed AI
+</em><br>
+<em>&gt; architecture is Friendly or not, and then to make this a *standard*
+</em><br>
+<em>&gt; in the world of AI research, or at least &quot;seed AI&quot; research.
+</em><br>
+<p>Practically, it's not very hard.  You can eliminate nearly all AGI 
+<br>
+projects by asking:
+<br>
+<p>&nbsp;&nbsp;&nbsp;&quot;What theory of AI ethics are you currently using?&quot;
+<br>
+<p>and they won't have one.  A few AI projects will solve the problem by 
+<br>
+slapping the word &quot;ethical&quot; on their sales literature, so you ask them:
+<br>
+<p>&nbsp;&nbsp;&nbsp;&quot;Please point to a specific design decision or architectural change 
+<br>
+that you made solely because your FAI theory required it.&quot;
+<br>
+<p>That eliminates everyone else.  If they'd answered that, your next 
+<br>
+question would be:
+<br>
+<p>&nbsp;&nbsp;&nbsp;&quot;Please show me a walkthrough of how your AI architecture makes a 
+<br>
+particular Friendly decision.&quot;
+<br>
+<p>Incidentally, the same criterion applies to AGI.  Most AI projects don't 
+<br>
+have a theory of general intelligence.  The ones that would claim to 
+<br>
+have a theory of general intelligence have a theory of mystic vital 
+<br>
+forces which supposedly produce general intelligence, which they are 
+<br>
+trying to infuse into their AI system in the hope that general 
+<br>
+intelligence comes out the other end.  In other words, they generally 
+<br>
+cannot show you a *walkthrough* for how their system does a particular 
+<br>
+generally intelligent thing - only say, &quot;what really causes general 
+<br>
+intelligence is such-and-such vital forces, so we're trying to build a 
+<br>
+system with such-and-such vital forces, just like a human&quot;.
+<br>
+<p><em>&gt; So, again, what would I say the research problems are? To
+</em><br>
+<em>&gt; develop behavioral criteria of Friendliness in an 'agent', whether
+</em><br>
+<em>&gt; natural or artificial;
+</em><br>
+<p>A complete, formally specified behavioral criterion solves the problem.
+<br>
+<p>An incomplete, informal criterion is easy.  Anything that wipes out the 
+<br>
+human species is unFriendly, anything that doesn't wipe out the human 
+<br>
+species is Friendly.  This probably works in practice to distinguish 
+<br>
+between nearly all AGIs that research projects are likely to actually build.
+<br>
+<p><em>&gt; to develop a theory of Friendly cognitive
+</em><br>
+<em>&gt; architecture (examples - an existence proof - would be useful;
+</em><br>
+<em>&gt; rigorous proof that these *and only these* architectures exhibit
+</em><br>
+<em>&gt; unconditional Friendliness would be even better);
+</em><br>
+<p>That can't possibly be right.  There should be an infinity of 
+<br>
+architectures that do this, smaller than the infinity of architectures 
+<br>
+that don't, and larger than the infinity of architectures that knowably do.
+<br>
+<p><em>&gt; to develop
+</em><br>
+<em>&gt; *criteria* of self-enhancement (what sort of modifications
+</em><br>
+<em>&gt; constitute an enhancement?); to develop a knowledge of
+</em><br>
+<em>&gt; what sort of algorithms will *actually self-enhance*.
+</em><br>
+<p>Any theory you can constructively apply to create an AGI with a simple 
+<br>
+goal system like 'paperclips', as opposed to putting in the additional 
+<br>
+work to define the Friendly part, is a weapon of math destruction; it 
+<br>
+can never go into the public domain until a Friendly AI is already up 
+<br>
+and running.
+<br>
+<p><em>&gt; Then one can tackle questions like, which initial conditions
+</em><br>
+<em>&gt; lead to stably Friendly self-enhancement; and which
+</em><br>
+<em>&gt; self-enhancing algorithms get smarter fastest, when
+</em><br>
+<em>&gt; launched at the same time.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; The aim should always be, to turn all of these into
+</em><br>
+<em>&gt; well-posed problems of theoretical computer science, just
+</em><br>
+<em>&gt; as well-posed as, say, &quot;Is P equal to NP?&quot;
+</em><br>
+<p>On ordinary computers or quantum ones?  For our current model of physics 
+<br>
+or actual physics?
+<br>
+<p><em>&gt; Beyond that, the
+</em><br>
+<em>&gt; aim should be to *answer* those problems (although I
+</em><br>
+<em>&gt; suspect that in some cases the answer will be an unhelpful
+</em><br>
+<em>&gt; 'undecidable', i.e. trial and error is all that can be advised,
+</em><br>
+<em>&gt; and so luck and raw computational speed are all that will
+</em><br>
+<em>&gt; matter),
+</em><br>
+<p>Then you're dead.  The Kolmogorov complexity of the target is too great; 
+<br>
+no one can have that much luck.  You can't build a working wagon by 
+<br>
+sawing boards at random and nailing them by coinflips.  You can maybe 
+<br>
+establish bounds where you know that a given algorithm will solve the 
+<br>
+problem correctly, but not how long the algorithm will take to solve the 
+<br>
+problem - those are acceptable.
+<br>
+<p><em>&gt; and to establish standards - standards of practice,
+</em><br>
+<em>&gt; perhaps even standards of implementation - in the global
+</em><br>
+<em>&gt; AI development community.
+</em><br>
+<p>I think this is around as likely as the spontaneous generation of AGI 
+<br>
+from the emergent complexity of packet routers.  It's not just that 
+<br>
+everyone has a different architecture, and a full solution constitutes 
+<br>
+in itself a weapon of math destruction.  Most of these people aren't in 
+<br>
+it for the Singularity; they're in AI because that's the major they 
+<br>
+stumbled into in college.  They aren't in it to protect the human 
+<br>
+species and it hasn't occurred to them that it's an issue.
+<br>
+<p><em>&gt; Furthermore, as I said, every AI project that aims to
+</em><br>
+<em>&gt; produce human-equivalent or superhuman intelligence
+</em><br>
+<em>&gt; should devote some fraction of its efforts to the establishment
+</em><br>
+<em>&gt; of universal safe standards among its peers and rivals - or at
+</em><br>
+<em>&gt; least, devote some fraction of its efforts to thinking about
+</em><br>
+<em>&gt; what 'universal safe standards' could possibly mean. The odds
+</em><br>
+<em>&gt; are it is in your interest, not just to try to secretly crack the
+</em><br>
+<em>&gt; seed AI problem in your bedroom, but to contribute to
+</em><br>
+<em>&gt; developing a *public* understanding of Friendliness theory.
+</em><br>
+<em>&gt; (What fraction of efforts should be spent on private project,
+</em><br>
+<em>&gt; versus on public discussion, I leave for individual researchers
+</em><br>
+<em>&gt; to decide.)
+</em><br>
+<p>It may be worthwhile to try and get more people to understand that there 
+<br>
+exists a problem and it is hard to solve.
+<br>
+<p>You will be unable to make external researchers solve this frontier 
+<br>
+research problem on your behalf, even if you can make them feel an 
+<br>
+obligation to put in at least a little effort, when the challenge isn't 
+<br>
+really what interests them and they secretly (or not-so-secretly) wish 
+<br>
+the whole problem would just go away and stop bothering them.
+<br>
+<p>Really difficult engineering problems can be solved by really smart 
+<br>
+engineers, and the trick works because you can select the engineers to 
+<br>
+be sufficiently smart.  Trying to get everyone else to play nice is a 
+<br>
+much harder problem because the &quot;everyone else&quot; is not preselected to be 
+<br>
+sufficiently smart.  In the lab, when you win or lose, it's your own 
+<br>
+fault.  Public relations success depends on many real-world factors that 
+<br>
+you cannot control by your own power.
+<br>
+<p><em>&gt; One more word on what public development of Friendliness
+</em><br>
+<em>&gt; standards would require - more than just having a
+</em><br>
+<em>&gt; Friendliness-stabilizing strategy for your preferred architecture,
+</em><br>
+<em>&gt; the one by means of which you hope that your team will win
+</em><br>
+<em>&gt; the mind race. Public Friendliness standards must have
+</em><br>
+<em>&gt; something to say on *every possible cognitive architecture* -
+</em><br>
+<em>&gt; that it is irrelevant because it cannot achieve superintelligence
+</em><br>
+<em>&gt; (although Friendliness is also relevant to the coexistence of
+</em><br>
+<em>&gt; humans with non-enhancing human-equivalent AIs); that it
+</em><br>
+<em>&gt; cannot be made safe, must not win the race, and should
+</em><br>
+<em>&gt; never be implemented; that it can be made safe, but only
+</em><br>
+<em>&gt; if you do it like so.
+</em><br>
+<p>This is knowably impossible by Rice's Theorem.
+<br>
+<p><em>&gt; And since in the real world, candidates for first
+</em><br>
+<em>&gt; superintelligence will include groups of humans, enhanced
+</em><br>
+<em>&gt; individual humans, enhanced animals, and all sorts of AI-human
+</em><br>
+<em>&gt; symbioses, as well as exercises such as massive experiments in
+</em><br>
+<em>&gt; Tierra-like darwinism - a theory of Friendliness, ideally, would
+</em><br>
+<em>&gt; have a principled evaluation of all of these, along the lines I
+</em><br>
+<em>&gt; already sketched.
+</em><br>
+<p>*Blink blink*.
+<br>
+<p>Well, in theory, this is far less difficult than saying it for *every 
+<br>
+possible* cognitive architecture.  The proposal may even achieve the 
+<br>
+status of not being ruled out a priori.
+<br>
+<p>In practice, it's a good way of illustrating how absurd is the problem 
+<br>
+as posed.  No way, dude.
+<br>
+<p><em>&gt; It sounds like a tall order, it certainly is, and
+</em><br>
+<em>&gt; it may even be unattainable, pre-Singularity. But it's worth
+</em><br>
+<em>&gt; having an idea of what the ideal looks like.
+</em><br>
+<p>Mitch, I hate to say this, but as long as we're asking for an ideal that 
+<br>
+unattainable, I'd also like a pony.
+<br>
+<p>I would prefer that we concentrate on how to go from the state of the 
+<br>
+world being simply doomed, which is where it is now, to the state where 
+<br>
+it is theoretically possible to survive because at least one project 
+<br>
+somewhere knows how to build a Friendly AI.  Let's try to make 
+<br>
+incremental progress on this.
+<br>
+<p><pre>
+-- 
+Eliezer S. Yudkowsky                          <a href="http://intelligence.org/">http://intelligence.org/</a>
+Research Fellow, Singularity Institute for Artificial Intelligence
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="14077.html">Jeff Medina: "Re: Fundamental problems"</a>
+<li><strong>Previous message:</strong> <a href="14075.html">Rick Geniale: "Re: Biowar vs. AI as existential threat"</a>
+<li><strong>In reply to:</strong> <a href="14073.html">Mitchell Porter: "Fundamental problems"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="14279.html">Mitchell Porter: "Re: Fundamental problems"</a>
+<li><strong>Reply:</strong> <a href="14279.html">Mitchell Porter: "Re: Fundamental problems"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#14076">[ date ]</a>
+<a href="index.html#14076">[ thread ]</a>
+<a href="subject.html#14076">[ subject ]</a>
+<a href="author.html#14076">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:55 MDT
+</em></small></p>
+</body>
+</html>

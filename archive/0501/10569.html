@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Technical definitions of FAI</title>
+<meta name="Author" content="Eliezer Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="Technical definitions of FAI">
+<meta name="Date" content="2005-01-21">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Technical definitions of FAI</h1>
+<!-- received="Fri Jan 21 10:12:35 2005" -->
+<!-- isoreceived="20050121171235" -->
+<!-- sent="Fri, 21 Jan 2005 12:12:07 -0500" -->
+<!-- isosent="20050121171207" -->
+<!-- name="Eliezer Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Technical definitions of FAI" -->
+<!-- id="41F137E7.3070206@pobox.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eliezer Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20Technical%20definitions%20of%20FAI"><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Fri Jan 21 2005 - 10:12:07 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="10570.html">Thomas Buckner: "Re: My attempt at a general technical definition of 'Friendliness'"</a>
+<li><strong>Previous message:</strong> <a href="10568.html">Eliezer Yudkowsky: "Re: My attempt at a general technical definition of 'Friendliness'"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="10573.html">Thomas Buckner: "Re: Technical definitions of FAI"</a>
+<li><strong>Reply:</strong> <a href="10573.html">Thomas Buckner: "Re: Technical definitions of FAI"</a>
+<li><strong>Reply:</strong> <a href="10580.html">Marc Geddes: "Re: Technical definitions of FAI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#10569">[ date ]</a>
+<a href="index.html#10569">[ thread ]</a>
+<a href="subject.html#10569">[ subject ]</a>
+<a href="author.html#10569">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+The following will not make sense unless you've read &quot;A Technical 
+<br>
+Explanation of Technical Explanation&quot;.
+<br>
+<p>In TechExp, I suggested that a &quot;technical&quot; model is a model which makes 
+<br>
+*sharp* predictions, that is, concentrates its probability mass into a tiny 
+<br>
+volume in the space of possible outcomes.
+<br>
+<p>What we want for assurance of Friendliness is an accurate (calibrated and 
+<br>
+confirmed) technical model of the FAI, a model which sends essentially 
+<br>
+*all* of its probability mass into the Friendly space of outcomes.  That 
+<br>
+is, we would have a legitimate, technical assurance of continued 
+<br>
+Friendliness, given the starting data, starting code, and chips that 
+<br>
+behaved like the designer said they did.  (Actually, we would want to 
+<br>
+encode some probability of error in both the transistors and the chip 
+<br>
+specification, test for that outcome, and require that a single bitflip not 
+<br>
+destroy the system.  All of this can be handled quantitatively and 
+<br>
+technically, just as in _Nanosystems_ Drexler carefully stacks together 
+<br>
+probabilistic carbon atoms to produce a rod logic unit with a failure 
+<br>
+probability of 10^-64.)
+<br>
+<p>How would we achieve this assurance?  By explicitly encoding the technical 
+<br>
+model and asking the FAI to verify its own code.
+<br>
+<p>Then what is a *technical* definition of Friendliness?  A technical 
+<br>
+definition of &quot;Friendliness&quot; would be an invariant which you can prove a 
+<br>
+recursively self-improving optimizer obeys.
+<br>
+<p>This doesn't address the issue of choosing the right invariant, or being 
+<br>
+able to design an invariant that specifies what you think it specifies, or 
+<br>
+even having a framework for invariants that won't *automatically* kill you. 
+<br>
+&nbsp;&nbsp;It might be possible to design a physically realizable, recursively 
+<br>
+self-improving version of AIXI such that it would stably maintain the 
+<br>
+invariant of &quot;maximize reward channel&quot;.  But the AI might alter the &quot;reward 
+<br>
+channel&quot; to refer to an internal, easily incremented counter, instead of 
+<br>
+the big green button attached to the AI; and your formal definition of 
+<br>
+&quot;reward channel&quot; would still match the result.  The result would obey the 
+<br>
+theorem, but you would have proved something unhelpful.  Or even if 
+<br>
+everything worked exactly as Hutter specified in his paper, AIXI would 
+<br>
+rewrite its future light cone to maximize the probability of keeping the 
+<br>
+reward channel maximized, with absolutely no other considerations (like 
+<br>
+human lives) taken into account.
+<br>
+<p>Once you specify an invariant and set it into motion, how do you guarantee 
+<br>
+that what happens will match the pleasant mental imagery inside your head 
+<br>
+that led you to specify that invariant?  The binding between human 
+<br>
+intention and human design is weak, untechnical, and unverifiable, because 
+<br>
+human intelligence itself is weak, untechnical, and unverifiable.  So I 
+<br>
+want to ask the AI itself to re-verify the binding between human intentions 
+<br>
+and human designs that gave rise to my attempt to specify an invariant. 
+<br>
+That's something I'm still trying to figure out.
+<br>
+<p>I want to describe a stronger way of binding together an invariant and a 
+<br>
+programmer's intention than the programmer just writing down something that 
+<br>
+he hopes will fit his mental imagery.  I don't want to set an invariant in 
+<br>
+motion blindly, like a stone rolling down a hill, based on an uncomputed 
+<br>
+hope that my keystrokes match my dreams.  I want a framework that describes 
+<br>
+the programmers' fallible intelligence as a part of the causal process that 
+<br>
+gives rise to the AI.  I want to verify the invariant against the 
+<br>
+programmers, and not just the AI code against the invariant.  I want this 
+<br>
+framework to be a formal part of the theory and be formally verifiable by 
+<br>
+the AI, maybe not at near-certain probability like the dynamics at 
+<br>
+transistors, but still with, say, 90% probability.  And I want to use the 
+<br>
+verification framework to describe the verification framework itself, to 
+<br>
+confirm that the verifier matches what humans intended from the 
+<br>
+&quot;verification protocol&quot;.
+<br>
+<p>I want to take the complete causal process leading up to the creation of an 
+<br>
+AI, and have the AI scrutinize the entire process to detect and report 
+<br>
+anything that a human being would call a mistake.  We could do that 
+<br>
+ourselves.  Should an AI do less?
+<br>
+<p>This breaks down FAI into four problems:
+<br>
+<p>1)  Devise a technical specification of a class of invariants, such that it 
+<br>
+is possible to prove a recursively self-improving optimizer stays within 
+<br>
+that invariant.
+<br>
+2)  Given an invariant, devise an RSIO such that it proves itself to follow 
+<br>
+the invariant.  (The RSIO's proof may be, e.g., a proof that the RSIO is 
+<br>
+stable if Peano Arithmetic is consistent.)
+<br>
+3)  Devise a framework and a formal verification protocol for translating a 
+<br>
+human intention (e.g. &quot;implement the collective volition of humankind&quot;) 
+<br>
+into an invariant.  This requirement interacts strongly with (1) because 
+<br>
+the permitted class of invariants has to be able to represent the output of 
+<br>
+the protocol.
+<br>
+4)  Intend something good.
+<br>
+<p><pre>
+-- 
+Eliezer S. Yudkowsky                          <a href="http://intelligence.org/">http://intelligence.org/</a>
+Research Fellow, Singularity Institute for Artificial Intelligence
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="10570.html">Thomas Buckner: "Re: My attempt at a general technical definition of 'Friendliness'"</a>
+<li><strong>Previous message:</strong> <a href="10568.html">Eliezer Yudkowsky: "Re: My attempt at a general technical definition of 'Friendliness'"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="10573.html">Thomas Buckner: "Re: Technical definitions of FAI"</a>
+<li><strong>Reply:</strong> <a href="10573.html">Thomas Buckner: "Re: Technical definitions of FAI"</a>
+<li><strong>Reply:</strong> <a href="10580.html">Marc Geddes: "Re: Technical definitions of FAI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#10569">[ date ]</a>
+<a href="index.html#10569">[ thread ]</a>
+<a href="subject.html#10569">[ subject ]</a>
+<a href="author.html#10569">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:50 MDT
+</em></small></p>
+</body>
+</html>

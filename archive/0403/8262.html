@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: 'Singularity Realism' - A few thoughts</title>
+<meta name="Author" content="Mark Waser (mwaser@cox.net)">
+<meta name="Subject" content="RE: 'Singularity Realism' - A few thoughts">
+<meta name="Date" content="2004-03-15">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: 'Singularity Realism' - A few thoughts</h1>
+<!-- received="Mon Mar 15 19:26:25 2004" -->
+<!-- isoreceived="20040316022625" -->
+<!-- sent="Mon, 15 Mar 2004 21:26:50 -0500" -->
+<!-- isosent="20040316022650" -->
+<!-- name="Mark Waser" -->
+<!-- email="mwaser@cox.net" -->
+<!-- subject="RE: 'Singularity Realism' - A few thoughts" -->
+<!-- id="001e01c40afe$236ea040$0100a8c0@FamilyRoom" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="'Singularity Realism' - A few thoughts" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Mark Waser (<a href="mailto:mwaser@cox.net?Subject=RE:%20'Singularity%20Realism'%20-%20A%20few%20thoughts"><em>mwaser@cox.net</em></a>)<br>
+<strong>Date:</strong> Mon Mar 15 2004 - 19:26:50 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="8263.html">Ben Goertzel: "RE: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>Previous message:</strong> <a href="8261.html">Keith Henson: "Re: De-Anthropomorphizing SL3 to SL4."</a>
+<li><strong>Maybe in reply to:</strong> <a href="8144.html">Marc Geddes: "'Singularity Realism' - A few thoughts"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="8263.html">Ben Goertzel: "RE: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>Reply:</strong> <a href="8263.html">Ben Goertzel: "RE: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>Reply:</strong> <a href="8269.html">Samantha Atkins: "Re: 'Singularity Realism' - A few thoughts"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#8262">[ date ]</a>
+<a href="index.html#8262">[ thread ]</a>
+<a href="subject.html#8262">[ subject ]</a>
+<a href="author.html#8262">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Samantha said:
+<br>
+<em>&gt; That a language can map into XML and is arguably a good language does
+</em><br>
+<em>&gt; not give weight to the reverse proposition that an XML-based
+</em><br>
+<em>&gt; programming language per se will be a huge advance.
+</em><br>
+<p>Of course not.
+<br>
+<p>&lt;Argh! break for many hours while composing and re-composing my answer . .
+<br>
+&nbsp;.  :-&gt;
+<br>
+&lt;let me try it this way . . . . &gt;
+<br>
+<p>&lt;Note: there are a couple of important points for Ben at the bottom&gt;
+<br>
+<p>The short answer - I want an environment where a program is also data so
+<br>
+that automatic program generation and manipulation is facilitated.  Making
+<br>
+a programming language XML-compliant pretty much guarantees this and also
+<br>
+gives access to a large existing infrastructure that already
+<br>
+manipulates/supports XML.  More importantly, I want the programs running
+<br>
+in that environment to be efficient and scalable through the use of native
+<br>
+data
+<br>
+space partitioning and compilation of programs/functions which are swappable
+<br>
+via package/program/function specifications.  There is no existing
+<br>
+combination of language and environment that does all of this but I believe
+<br>
+that given the popularity and current specification and infrastructure of
+<br>
+XML, it could be done most quickly if the language were XML-compliant.  In
+<br>
+LISP, a program is also data but efficiency and scalability (particularly
+<br>
+swappable modularity with compilation) are not built into the environment
+<br>
+and LISP doesn't have nearly the audience or the infrastructure that XML has
+<br>
+to support new development.
+<br>
+= = = = =
+<br>
+The long answer
+<br>
+<p>Any procedural computer program/function can be represented by recursive
+<br>
+data structure composed of a series (list) of statements that are themselves
+<br>
+programs/functions.  XML has no problem representing this as follows:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;function name=&quot;main&quot;&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;vars&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;var name = &quot;inString&quot; type=&quot;string&quot; /&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/var&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;list&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;function name=&quot;first&quot; /&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;function name=&quot;second&quot;&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;var name = &quot;secondvar1&quot; type=&quot;integer&quot; value=&quot;1&quot; /&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;var name = &quot;secondvar2&quot; type=&quot;string&quot; referent=&quot;inString&quot;/&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/function&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;function name=&quot;third'&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/list&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/function&gt;
+<br>
+<p>Well, actually, there are A LOT of decisions to be made as to how all sorts
+<br>
+of things should be represented . . . . .
+<br>
+<p>My point, though, is that any procedural language program COULD be
+<br>
+represented in XML syntax fairly easily.
+<br>
+<p>ASIDE:  If one wants to go down the functional programming path, programs
+<br>
+are even more easily be represented by hierarchical tree structures and XML.
+<br>
+Also note that procedural programs can be transformed into functional
+<br>
+programs simply by realizing that series/lists are themselves composed of
+<br>
+and can be replaced by functions)
+<br>
+<p>Now, what does all this buy us?
+<br>
+<p>First, there already exists substantial infrastructure for parsing XML,
+<br>
+moving it in and out of various datastructures, etc., etc.
+<br>
+<p>Second, now that our programs already exist in a DATA format, we already
+<br>
+have a lot of the tools that we need to be able to modify them.
+<br>
+<p>Now, if I were Samantha, I would argue that all of these things could be
+<br>
+done in LISP and I would be correct.  But what's generally missing in LISP
+<br>
+is a lot of what's required for true SPEED and SCALABILITY or, as Ben puts
+<br>
+it
+<br>
+<em>&gt; Separate *efficiency of implementation* from *logical structure of
+</em><br>
+<em>&gt; programs*.  In other words, have a language with two layers: one layer
+</em><br>
+<em>&gt; that is more like a formal specification, and the other layer that is
+</em><br>
+<em>&gt; transformed to be efficiently executable.  It's the first layer that
+</em><br>
+<em>&gt; can usefully be represented in XML, and potentially manipulated using
+</em><br>
+<em>&gt; XML-manipulation tools.
+</em><br>
+<p>Actually, what I envision when I talk about an XML-based language is more
+<br>
+like XML.NET i.e. a system where I can write a description of a program or a
+<br>
+function in my language but compile it down to or replace it with an
+<br>
+implementation-efficient version.
+<br>
+<p>IMPORTANT POINT:  If I were Ben and working on Novamente, I would be
+<br>
+making sure that my freezing and thawing (storage and retrieval) of schemas,
+<br>
+atomspaces, etc. was available through XML and that Sasha 2's syntax was XML
+<br>
+compliant.
+<br>
+<p>The whole point to this is to try to make a very modular, swappable
+<br>
+programming environment that lends itself to both very high levels of
+<br>
+abstraction and drilling down to the lowest detail when necessary.
+<br>
+<p>Note to Ben:  A couple of things that I would hope for but don't yet see in
+<br>
+Novamente are a) ways to take recognize and advantage of the scale
+<br>
+invariance of many activities through encapsulation and b) a way to compile
+<br>
+specific time-critical schemas from more general schemas (and the reverse,
+<br>
+allowing for subsequent description of currently compiled code, like
+<br>
+CIM-dynamics, WITHOUT affecting the system).
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="8263.html">Ben Goertzel: "RE: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>Previous message:</strong> <a href="8261.html">Keith Henson: "Re: De-Anthropomorphizing SL3 to SL4."</a>
+<li><strong>Maybe in reply to:</strong> <a href="8144.html">Marc Geddes: "'Singularity Realism' - A few thoughts"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="8263.html">Ben Goertzel: "RE: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>Reply:</strong> <a href="8263.html">Ben Goertzel: "RE: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>Reply:</strong> <a href="8269.html">Samantha Atkins: "Re: 'Singularity Realism' - A few thoughts"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#8262">[ date ]</a>
+<a href="index.html#8262">[ thread ]</a>
+<a href="subject.html#8262">[ subject ]</a>
+<a href="author.html#8262">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:46 MDT
+</em></small></p>
+</body>
+</html>

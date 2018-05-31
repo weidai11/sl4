@@ -1,0 +1,329 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Language considerations for AI</title>
+<meta name="Author" content="Fabio Mascarenhas (mascarenhas@acm.org)">
+<meta name="Subject" content="Language considerations for AI">
+<meta name="Date" content="2001-04-16">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Language considerations for AI</h1>
+<!-- received="Tue Apr 17 09:35:45 2001" -->
+<!-- isoreceived="20010417153545" -->
+<!-- sent="Tue, 17 Apr 2001 01:57:12 -0300" -->
+<!-- isosent="20010417045712" -->
+<!-- name="Fabio Mascarenhas" -->
+<!-- email="mascarenhas@acm.org" -->
+<!-- subject="Language considerations for AI" -->
+<!-- id="012501c0c6fb$07c86b40$b11cb1c8@darkside" -->
+<!-- charset="iso-8859-1" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Fabio Mascarenhas (<a href="mailto:mascarenhas@acm.org?Subject=Re:%20Language%20considerations%20for%20AI"><em>mascarenhas@acm.org</em></a>)<br>
+<strong>Date:</strong> Mon Apr 16 2001 - 22:57:12 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1152.html">Peter Voss: "Friendly AI at Foresight"</a>
+<li><strong>Previous message:</strong> <a href="1150.html">Samantha Atkins: "Re: ARTICLE: Memory bandwidth"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1151">[ date ]</a>
+<a href="index.html#1151">[ thread ]</a>
+<a href="subject.html#1151">[ subject ]</a>
+<a href="author.html#1151">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Hi everyone,
+<br>
+<p>I've been lurking for quite a while, and will try to send a JOIN message
+<br>
+shortly. For now, I'm a computer science student on my last semester to
+<br>
+graduation, with interests in distributed systems, programming languages
+<br>
+and, of course, AI.
+<br>
+<p>I'll try to comment if other languages, specially dynamic ones would bring
+<br>
+the same issues for AI development as Java, and how they could be addressed.
+<br>
+<p><em>&gt;Ben Gortzel writes:
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;Firstly, development is clearly faster in Java than in C/C++. Not having to
+</em><br>
+<em>&gt;debug malloc() errors is nice.
+</em><br>
+<p><p>Yes, this is accepted fact. But also the software engineering community
+<br>
+(those that do the actual programming, at least) is recognizing the benefits
+<br>
+that dynamic languages (such as Lisp, Scheme, Smalltalk, Python and Ruby)
+<br>
+offer even faster development time. Of course the lack of static typing
+<br>
+demands more testing of the system, but overall development goes faster, as
+<br>
+in practice tests for the correctness of behavior also check correctness of
+<br>
+types.
+<br>
+<p>And of course all these languages can interface with C/C++ code, so speed
+<br>
+bottlenecks can be recoded in C. This still leaves the memory bottleneck,
+<br>
+though. See below.
+<br>
+<p><em>&gt;Java, if you use HotSpot, is no slower than C++. It is surely still slower
+</em><br>
+<em>&gt;than a speed-optimized C program, but not by an order of magnitude
+</em><br>
+<p><p>This is to be expected, as Java method calls are conceptually identical to
+<br>
+calls to virtual methods in C++, so their performance should be similar
+<br>
+after JIT-compilation.
+<br>
+<p>Dynamic languages, with optimization, can come close to this, too. Modern
+<br>
+Smalltalk JVMs optimize the method calls so they also are almost as fast as
+<br>
+C++ virtual function calls.
+<br>
+<p><em>&gt;A Java program uses about 4 times as much memory as a comparable C++
+</em><br>
+<em>&gt;program. There's not much you can do about this. Also, all current JVM's
+</em><br>
+<em>&gt;on all current OS's are limited to about 1.2 GB of RAM per Java process.
+</em><br>
+<em>&gt;(Sun promises a 64-bit JVM, someday, but, well...). So, if you want an AI
+</em><br>
+<em>&gt;program with a lot of data in it, and you want to use Java, you're pushed
+</em><br>
+to
+<br>
+<em>&gt;deal with distributed processing pretty early in your work. Distributed
+</em><br>
+<em>&gt;processing, however, slows down processing a lot. With a lot of work, we
+</em><br>
+<em>&gt;got the performance of a distributed system in the range of 5-10 times
+</em><br>
+<em>&gt;slower than that of a comparable 1-JVM system with the same amount of data.
+</em><br>
+<p><p>The 4x figure for memory comsuption is pretty large. Is this due to
+<br>
+inneficient garbage-collection? (i.e. half or more of the memory comsumption
+<br>
+are &quot;dead&quot; objects). And the 1.2Gb limit is serious, after all 32-bit
+<br>
+operating systems nowadays give at least 2Gb addressable memory per-process.
+<br>
+Sloppy work they did! I don't know how Lisp and Smalltalk JVMs compare,
+<br>
+though, but Python and Ruby, being C-based (Ruby even uses a modified malloc
+<br>
+for memory allocation) should be able to handle just as much as a C process.
+<br>
+<p><em>&gt;The bottleneck turns out to be, not the actual network bandwidth, but the
+</em><br>
+<em>&gt;time required for Java to serialize/deserialize objects. One can minimize
+</em><br>
+<em>&gt;this by overriding the readObject() and writeObject() methods [custom
+</em><br>
+<em>&gt;serialization], but this has limited value, unfortunately.
+</em><br>
+<p><p>Yes, serialization is slow in Java. Cloning via clone() versus cloning via
+<br>
+serializing and serializing (to a memory stream) is two orders of magnitude
+<br>
+faster. I really don't know how this can be. For the other languages cited:
+<br>
+I don't know how Lisp and Scheme handle networking and serialization, but it
+<br>
+should be easy for them. I'll try some benchmarks with Ruby to see how it
+<br>
+fares. Maybe this is a design flaw in ObjectOutputStream?
+<br>
+<p><em>&gt;Furthermore, garbage collection in existing JVM's is fantastically
+</em><br>
+<em>&gt;inefficient for programs creating billions of objects. It seems that the
+</em><br>
+<em>&gt;JVM is not tuned for truly large-scale applications.
+</em><br>
+<p><p>What is the object creation profile of Webmind? Does its operation produce a
+<br>
+lot of &quot;dead&quot; objects? Java's standard GC is primitive (I don't know for
+<br>
+HotSpot JVM). It's now multithreaded, it's not generational... there was a
+<br>
+paper in January's ACM SIGPLAN Notices (&quot;Thread-Specific Heaps for
+<br>
+Multi-Threaded Programs&quot;, by Bjarne Steensgaard, Microsoft Research) about a
+<br>
+generational, multi-threaded garbage collector for a experimental
+<br>
+Java-to-native code compiler that gives each thread it's own heap, allowing
+<br>
+garbage collection of specific heaps to go in parallel with normal operation
+<br>
+in other threads. There were references for similar works for Java and
+<br>
+functional languages.
+<br>
+<p>Lisp and Smalltalk have got more advanced garbage collectors by now (the
+<br>
+functional nature of Lisp gives advantages to generational GC). Python does
+<br>
+reference-counting: circular structures leak memory (and I really think
+<br>
+you've got a lot of them :-) ). Ruby still has primitive (Java-level GC),
+<br>
+but a generational collector is being implemented.
+<br>
+<p><em>&gt;And, there are no existing Java profilers that will profile a large-scale,
+</em><br>
+<em>&gt;multi-threaded Java system. Quite literally, they all crash when applied to
+</em><br>
+<em>&gt;such a program. For this reason we have created our own Java profiler. [The
+</em><br>
+<em>&gt;eason the commercial profilers crash is that they try to report all events
+</em><br>
+<em>&gt;in the program to their GUI's, and the Java GUI tools are not able to deal
+</em><br>
+<em>&gt;with such a high volume of data. Our profiler just saves events in a log
+</em><br>
+<em>&gt;file, which avoids the problem.]
+</em><br>
+<p><p>Don't know about profilers, but mandatory reporting to UI is very braindead!
+<br>
+<p><em>&gt;There are also no adequate debuggers in Java, when one is creating a
+</em><br>
+<em>&gt;large-scale software system.
+</em><br>
+<p><p>You can alleviate the need for some debugging by careful test discipline.
+<br>
+Take a look at the testing discipline of Extreme Programming
+<br>
+(c2.com/cgi/wiki?ExtremeProgramming). It mandates that each class in the
+<br>
+system must have a test suite that exercises any interesting behavior the
+<br>
+class has. The suite must run wirhout human intervention, and best results
+<br>
+are arrived when you code a test *before* coding functionality for the test
+<br>
+to pass. Of course it doesn't help with concurrency and system tests, but
+<br>
+localized errors can be found and corrected (even prevented from ocurring)
+<br>
+without debugging the whole system.
+<br>
+<p><em>&gt;work with distributed processing very early on. Distributed computing is a
+</em><br>
+<em>&gt;whole science unto itself, which we've mastered, but it took a lot of time.
+</em><br>
+<p><p>At least you are in a local network, so get ordering of messages for free
+<br>
+(all machines receive messages in the same order)! :-)
+<br>
+<p><em>&gt;What a few of us are doing now is taking the most essential aspects of the
+</em><br>
+<em>&gt;system and re-coding them in C in a very simple and specialized way. We're
+</em><br>
+<em>&gt;not dealing with distributed processing in this experimental version yet.
+</em><br>
+<em>&gt;We just want a simple system in which we can play around with the
+</em><br>
+<em>&gt;interaction of the various AI components of the system, freely and easily.
+</em><br>
+<em>&gt;In a couple months we'll deal with the reintegration of this into the main
+</em><br>
+<em>&gt;codebase, using JNI, which works very nicely BTW.
+</em><br>
+<p><p>I see how you have been burned by Java. In retrospect I think Smalltalk or
+<br>
+Lisp would have been a better choice at the time (if you were starting now I
+<br>
+would still recommend them, in a couple years maybe Ruby will be a good
+<br>
+solution, too, but it's still in flux and the GC is poor). I think you
+<br>
+already came to this conclusion, but I would also recode the communication
+<br>
+core in C so messages woudn't have to be composed by Java serialization
+<br>
+(then you can really roll your own serialization, converting the Java
+<br>
+objects to the comm core message format). Wish you the best of luck!
+<br>
+<p><em>&gt;stick with C/C++. Java is just not tuned for such projects, and you run
+</em><br>
+<em>&gt;into a hell of a lot of annoying problems that waste a huge amount of time
+</em><br>
+<em>&gt;and effort, far outweighing the savings in programming time.
+</em><br>
+<em>&gt;LISP is a nice language too, and there are some fast LISPs. But in
+</em><br>
+<em>&gt;large-scale use cases, they have the same garbage collection inefficiency
+</em><br>
+<em>&gt;problems as current JVM's.
+</em><br>
+<p><p>As I said, Lisp and Smalltalk GCs are now a whole different animal than the
+<br>
+crude mark-and-sweep GC. They already have enhancements that are still in
+<br>
+the research labs for Java. Another paper in the same journal I cited above
+<br>
+has results showing that potential improvement for memory savings can be
+<br>
+from 23% to 74%, compared to the current Java GC. Of course it's an upper
+<br>
+bound, but it's still significant! And multi-threaded garbage collectors can
+<br>
+improve speed, too.
+<br>
+<p>Well, this is pretty long for a first post! Hope I could contribute with
+<br>
+something at least a tiny bit useful!
+<br>
+<p>Fabio Mascarenhas
+<br>
+<a href="mailto:mascarenhas@acm.org?Subject=Re:%20Language%20considerations%20for%20AI">mascarenhas@acm.org</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1152.html">Peter Voss: "Friendly AI at Foresight"</a>
+<li><strong>Previous message:</strong> <a href="1150.html">Samantha Atkins: "Re: ARTICLE: Memory bandwidth"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1151">[ date ]</a>
+<a href="index.html#1151">[ thread ]</a>
+<a href="subject.html#1151">[ subject ]</a>
+<a href="author.html#1151">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

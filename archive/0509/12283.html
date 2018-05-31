@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Parallelism (Re: Introduction)</title>
+<meta name="Author" content="J. Andrew Rogers (andrew@ceruleansystems.com)">
+<meta name="Subject" content="Re: Parallelism (Re: Introduction)">
+<meta name="Date" content="2005-09-09">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Parallelism (Re: Introduction)</h1>
+<!-- received="Fri Sep  9 01:35:01 2005" -->
+<!-- isoreceived="20050909073501" -->
+<!-- sent="Fri, 09 Sep 2005 00:34:56 -0700" -->
+<!-- isosent="20050909073456" -->
+<!-- name="J. Andrew Rogers" -->
+<!-- email="andrew@ceruleansystems.com" -->
+<!-- subject="Re: Parallelism (Re: Introduction)" -->
+<!-- id="BF468930.2DDC%andrew@ceruleansystems.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="43212BEA.6080208@tennessee.id.au" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> J. Andrew Rogers (<a href="mailto:andrew@ceruleansystems.com?Subject=Re:%20Parallelism%20(Re:%20Introduction)"><em>andrew@ceruleansystems.com</em></a>)<br>
+<strong>Date:</strong> Fri Sep 09 2005 - 01:34:56 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="12284.html">J. Andrew Rogers: "Re: Introduction"</a>
+<li><strong>Previous message:</strong> <a href="12282.html">Tennessee Leeuwenburg: "Re: Parallelism (Re: Introduction)"</a>
+<li><strong>In reply to:</strong> <a href="12281.html">Tennessee Leeuwenburg: "Re: Parallelism (Re: Introduction)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12289.html">Tennessee Leeuwenburg: "Re: Parallelism (Re: Introduction)"</a>
+<li><strong>Reply:</strong> <a href="12289.html">Tennessee Leeuwenburg: "Re: Parallelism (Re: Introduction)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12283">[ date ]</a>
+<a href="index.html#12283">[ thread ]</a>
+<a href="subject.html#12283">[ subject ]</a>
+<a href="author.html#12283">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On 9/8/05 11:30 PM, &quot;Tennessee Leeuwenburg&quot; &lt;<a href="mailto:tennessee@tennessee.id.au?Subject=Re:%20Parallelism%20(Re:%20Introduction)">tennessee@tennessee.id.au</a>&gt;
+<br>
+wrote:
+<br>
+<em>&gt; Quantum theory allows us the possibility of using action at a distance
+</em><br>
+<em>&gt; to ensure consistency over a large area.
+</em><br>
+<p><p>Last I checked, quantum theory does not allow information to move faster
+<br>
+than the speed of light.  Being able to absolutely guarantee synchronicity
+<br>
+between any two points in space at any specific moment in time is the
+<br>
+computer scientist's wet dream.  That we pretend we can do such things does
+<br>
+not mean that we actually can.  All we can really do is reduce the
+<br>
+probability of an incorrect state with clever tricks, like error
+<br>
+detection/correction that can handle a subset of possible failures.
+<br>
+<p>IIRC, the inability to guarantee correctness of state was discussed in GEB
+<br>
+albeit obliquely.
+<br>
+<p><p><em>&gt; If a brain was so large that one region could only produce output that
+</em><br>
+<em>&gt; would affect another region &quot;tomorrow&quot;, it would be difficult to
+</em><br>
+<em>&gt; imagine a resulting consciousness which experienced a consistent
+</em><br>
+<em>&gt; history, but was able to experience &quot;moments&quot; lasting less than the
+</em><br>
+<em>&gt; time taken to achieve consistency between brain areas.
+</em><br>
+<p><p>One of the basic mechanisms of distributed computing is having every locale
+<br>
+have a consistent view of history, even if it is on a different point of the
+<br>
+timeline than other locales in some absolute context.  The mark of a
+<br>
+generally effective distributed processing system is that if you turned off
+<br>
+all external input there is a very high probability that it would eventually
+<br>
+settle into a globally consistent state.  It is worth pointing out that
+<br>
+databases like Oracle or PostgreSQL do exactly this as well to guarantee
+<br>
+correctness on single processors with high-concurrency (virtual parallelism)
+<br>
+and an extremely high probability of correctness.  The modern Multi-Version
+<br>
+Concurrency Control (MVCC) family of algorithms is a distributed processing
+<br>
+algorithm designed to approximately guarantee eventual global consistency
+<br>
+even in single address spaces, never mind networked systems.  And in fact,
+<br>
+databases do give every user a consistent tidy view of the database, but
+<br>
+often two different users will have different inconsistent views that are
+<br>
+nonetheless internally consistent for each user.  As is in evidence, this
+<br>
+usually works out very well in practice despite the fact that different
+<br>
+views in the system are operating on different points in the database's
+<br>
+history.
+<br>
+<p>For many purposes, significant synchronization latencies will not impact the
+<br>
+correct functioning or consistency of the overall system as viewed from any
+<br>
+given point in the system.  However, synchronization latencies will impact
+<br>
+the overall throughput and intelligence of the system.
+<br>
+<p><p>J. Andrew Rogers
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="12284.html">J. Andrew Rogers: "Re: Introduction"</a>
+<li><strong>Previous message:</strong> <a href="12282.html">Tennessee Leeuwenburg: "Re: Parallelism (Re: Introduction)"</a>
+<li><strong>In reply to:</strong> <a href="12281.html">Tennessee Leeuwenburg: "Re: Parallelism (Re: Introduction)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12289.html">Tennessee Leeuwenburg: "Re: Parallelism (Re: Introduction)"</a>
+<li><strong>Reply:</strong> <a href="12289.html">Tennessee Leeuwenburg: "Re: Parallelism (Re: Introduction)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12283">[ date ]</a>
+<a href="index.html#12283">[ thread ]</a>
+<a href="subject.html#12283">[ subject ]</a>
+<a href="author.html#12283">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:52 MDT
+</em></small></p>
+</body>
+</html>

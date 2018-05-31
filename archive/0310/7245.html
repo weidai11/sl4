@@ -1,0 +1,241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Neural/Digital convergence: dynamic memory and bucket brigades</title>
+<meta name="Author" content="James Rogers (jamesr@best.com)">
+<meta name="Subject" content="Neural/Digital convergence: dynamic memory and bucket brigades">
+<meta name="Date" content="2003-10-09">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Neural/Digital convergence: dynamic memory and bucket brigades</h1>
+<!-- received="Thu Oct  9 18:41:57 2003" -->
+<!-- isoreceived="20031010004157" -->
+<!-- sent="09 Oct 2003 17:41:48 -0700" -->
+<!-- isosent="20031010004148" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Neural/Digital convergence: dynamic memory and bucket brigades" -->
+<!-- id="1065746508.6999.156.camel@localhost.localdomain" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> James Rogers (<a href="mailto:jamesr@best.com?Subject=Re:%20Neural/Digital%20convergence:%20dynamic%20memory%20and%20bucket%20brigades"><em>jamesr@best.com</em></a>)<br>
+<strong>Date:</strong> Thu Oct 09 2003 - 18:41:48 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="7246.html">EvolverTCB@aol.com: "Re: Neural/Digital convergence: dynamic memory and bucket brigades"</a>
+<li><strong>Previous message:</strong> <a href="7244.html">Yan King Yin: "Re: New Financing Idea"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="7246.html">EvolverTCB@aol.com: "Re: Neural/Digital convergence: dynamic memory and bucket brigades"</a>
+<li><strong>Maybe reply:</strong> <a href="7246.html">EvolverTCB@aol.com: "Re: Neural/Digital convergence: dynamic memory and bucket brigades"</a>
+<li><strong>Maybe reply:</strong> <a href="7248.html">Yan King Yin: "Re: Neural/Digital convergence: dynamic memory and bucket brigades"</a>
+<li><strong>Maybe reply:</strong> <a href="7249.html">Mitchell Porter: "Re: Neural/Digital convergence: dynamic memory and bucket brigades"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7245">[ date ]</a>
+<a href="index.html#7245">[ thread ]</a>
+<a href="subject.html#7245">[ subject ]</a>
+<a href="author.html#7245">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Hi folks,
+<br>
+<p>I had an insight a several weeks ago that may or may not be novel, but a
+<br>
+cursory Google search doesn't find any obvious mention of it.  I thought
+<br>
+some of the people who have more in-depth knowledge about neural
+<br>
+networks might be able to comment on this.
+<br>
+<p>One of the things that always interested me is the apparent fact that
+<br>
+the brain is capable of executing complex algorithms without the benefit
+<br>
+of something that we take for granted on computers: dynamic memory
+<br>
+allocation for storing transient data.  Nor are there large permanent
+<br>
+buffer structures in evidence that can be used for this purpose.
+<br>
+<p>Some background: As most people on this list know, I work on a novel
+<br>
+class of mathematically-derived universal computer (roughly based in
+<br>
+algorithmic information theory) that shows a striking convergence with
+<br>
+what we know about biological neural networks, both structurally and
+<br>
+behaviorally.  Something that I don't believe I've ever mentioned is
+<br>
+that it doesn't require dynamic memory to do computation, only for
+<br>
+additional links and the occasional node when encoding new patterns
+<br>
+(i.e. permanently learning).
+<br>
+<p>One thing that has bothered me about the design is that I make use of a
+<br>
+small number of fixed FIFO-type buffers (arrays in practice) at some
+<br>
+&quot;edges&quot; inside special nodes (&quot;special&quot; because of the small buffer)
+<br>
+that mostly exist for synchronization and to make data streams play
+<br>
+nicely with the network structures but are critically important
+<br>
+functionally.  From an algorithm elegance standpoint, these buffers are
+<br>
+cheating and everything about the brain suggests that no literal
+<br>
+permanent buffer structures that look like this are required for what it
+<br>
+does.
+<br>
+<p><p>I spent some time thinking about this problem in general.  I can't
+<br>
+imagine a functional universal computer without something equivalent to
+<br>
+transient or &quot;in-flight&quot; data storage area for various purposes, and I
+<br>
+still required a small number of memory buffers in one place which the
+<br>
+brain would suggest isn't strictly required.
+<br>
+<p>It occurred to me that a similar problem was solved at the fuzzy
+<br>
+boundary of analog-digital electronics many years ago when digital was
+<br>
+very expensive.  I don't know if these are used much any more, but for
+<br>
+what we would use digital memory buffers today, they used chains of
+<br>
+analog voltage &quot;buckets&quot; that would dump the voltage value down a wire
+<br>
+(often to another voltage bucket), with the dump timing and behavior
+<br>
+controlled by various external control voltage lines.  These analog
+<br>
+voltage &quot;bucket brigade&quot; designs were used to synchronize analog signals
+<br>
+by inducing controllable temporal delays, and were in effect a mechanism
+<br>
+for doing quasi-buffering of an analog signal without using digital
+<br>
+memory as we normally think of it. Simple and primitive, but quite
+<br>
+effective for applications that needed flexible FIFO-type buffering
+<br>
+behaviors without using digital electronics.  Using these primitives,
+<br>
+you can build interesting computational circuits that are neither analog
+<br>
+nor digital in a strict sense.
+<br>
+<p>With this in mind, it turns out that I was essentially folding a complex
+<br>
+but otherwise ordinary buffer-less multi-node structure (roughly
+<br>
+organized in columns/chains) that behaved in a fashion virtually
+<br>
+identical to the old analog bucket brigade type circuits into the
+<br>
+current small data buffer for the sake of convenience.  Elegance problem
+<br>
+solved.
+<br>
+<p><p>When I went back and looked up some neuroscience papers on column and
+<br>
+chain structures in the brain, I noticed that there are a lot of
+<br>
+structures that look very similar to that whole family of analog buffer
+<br>
+circuits, and in the places I would normally expect to find these kinds
+<br>
+of buffering structures computationally.  But the references to analog
+<br>
+buffers I've found (and only a small number of vaguely related papers
+<br>
+show up on Google), do not seem to be referring to complex multi-neuron
+<br>
+structures in the way I am.  Looking at some papers, it seems that they
+<br>
+are looking at the same macro structures, but their thoughts are in the
+<br>
+wrong place conceptually to see that model pop out.
+<br>
+<p>I don't deal with neural models much, so I would be interested in the
+<br>
+comments of someone who does. The more I look into it, the more I have a
+<br>
+hard time looking at it any other way.  From where I'm sitting, these
+<br>
+columns of neurons should be able to provide all the dynamic memory
+<br>
+buffers required for computation, and they show up in all the right
+<br>
+places.  What's more, you can infer a lot about the function of other
+<br>
+neural structures by how these things are arranged and connected in the
+<br>
+same way you would for similar types of circuits, so it would
+<br>
+potentially be useful for unraveling neural functions at a more macro
+<br>
+level.
+<br>
+<p>The list has been slow for a while, so I thought I would throw an idea
+<br>
+grenade into the room that I'd actually like to hear comments on.  As I
+<br>
+said, I'm far from the world's greatest expert on neural networks (and I
+<br>
+think the simulated ones are useless), so in some ways this concept is
+<br>
+only half-baked.  But it did answer a lingering design/structure
+<br>
+question in my mind, so it can't be totally stupid.
+<br>
+<p>Cheers,
+<br>
+<p>-James Rogers
+<br>
+&nbsp;<a href="mailto:jamesr@best.com?Subject=Re:%20Neural/Digital%20convergence:%20dynamic%20memory%20and%20bucket%20brigades">jamesr@best.com</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="7246.html">EvolverTCB@aol.com: "Re: Neural/Digital convergence: dynamic memory and bucket brigades"</a>
+<li><strong>Previous message:</strong> <a href="7244.html">Yan King Yin: "Re: New Financing Idea"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="7246.html">EvolverTCB@aol.com: "Re: Neural/Digital convergence: dynamic memory and bucket brigades"</a>
+<li><strong>Maybe reply:</strong> <a href="7246.html">EvolverTCB@aol.com: "Re: Neural/Digital convergence: dynamic memory and bucket brigades"</a>
+<li><strong>Maybe reply:</strong> <a href="7248.html">Yan King Yin: "Re: Neural/Digital convergence: dynamic memory and bucket brigades"</a>
+<li><strong>Maybe reply:</strong> <a href="7249.html">Mitchell Porter: "Re: Neural/Digital convergence: dynamic memory and bucket brigades"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7245">[ date ]</a>
+<a href="index.html#7245">[ thread ]</a>
+<a href="subject.html#7245">[ subject ]</a>
+<a href="author.html#7245">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:43 MDT
+</em></small></p>
+</body>
+</html>

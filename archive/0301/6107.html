@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Coding from Scratch: Jaron Lanier</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: Coding from Scratch: Jaron Lanier">
+<meta name="Date" content="2003-01-25">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Coding from Scratch: Jaron Lanier</h1>
+<!-- received="Sat Jan 25 12:53:25 2003" -->
+<!-- isoreceived="20030125195325" -->
+<!-- sent="Sat, 25 Jan 2003 14:54:42 -0500" -->
+<!-- isosent="20030125195442" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: Coding from Scratch: Jaron Lanier" -->
+<!-- id="LAEGJLOGJIOELPNIOOAJOEPMEDAA.ben@goertzel.org" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="9BEC442A-309A-11D7-9F5B-000A27D7C5CE@emilgilliam.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20Coding%20from%20Scratch:%20Jaron%20Lanier"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Sat Jan 25 2003 - 12:54:42 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="6108.html">Michael Roy Ames: "Re: Coding from Scratch: Jaron Lanier"</a>
+<li><strong>Previous message:</strong> <a href="6106.html">Emil Gilliam: "Coding from Scratch: Jaron Lanier"</a>
+<li><strong>In reply to:</strong> <a href="6106.html">Emil Gilliam: "Coding from Scratch: Jaron Lanier"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6109.html">Michael Roy Ames: "Re: Coding from Scratch: Jaron Lanier"</a>
+<li><strong>Reply:</strong> <a href="6109.html">Michael Roy Ames: "Re: Coding from Scratch: Jaron Lanier"</a>
+<li><strong>Reply:</strong> <a href="6111.html">Robin Lee Powell: "Re: Coding from Scratch: Jaron Lanier"</a>
+<li><strong>Reply:</strong> <a href="6118.html">Cliff Stabbert: "Re: Coding from Scratch: Jaron Lanier"</a>
+<li><strong>Reply:</strong> <a href="6133.html">Dani Eder: "RE: Coding from Scratch: Jaron Lanier"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6107">[ date ]</a>
+<a href="index.html#6107">[ thread ]</a>
+<a href="subject.html#6107">[ subject ]</a>
+<a href="author.html#6107">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Well, Jaron is right that standard software development processes don't work
+<br>
+well for large projects.  We discovered this at Webmind Inc. trying to build
+<br>
+the Webmind AI Engine!  Testing and debugging that system was the bitch to
+<br>
+end all bitches.... As a result, we tried really hard to make the Novamente
+<br>
+design smaller (though it's still much bigger than we'd like... we're always
+<br>
+looking for things to eliminate from it ;)
+<br>
+<p>I agree that a radically different approach to programming would help a lot.
+<br>
+<p>And I have a candidate for such an approach: Supercompilation.  See
+<br>
+www.supercompilers.com.  A fully functional supercompiler for Java or C# or
+<br>
+even LISP would allow programmers to
+<br>
+<p>1) write code for simplicity and transparency and maintainability
+<br>
+2) have the supercompiler turn it into plausibly efficient code
+<br>
+<p>This would make a HUGE difference in programming practice.
+<br>
+<p>What's needed to make this a reality is perhaps $1M in venture capital or
+<br>
+research money for Supercompilers LLC.  (Full disclosure: I'm involved with
+<br>
+that firm, though not in a central role.)
+<br>
+<p>Short of supercompilation or some comparable technical advance, however,
+<br>
+Jaron's article also overlooks what is clearly the most advanced and
+<br>
+promising route to the creation of reliable software: formal methods.
+<br>
+<p>The formal approach to software engineering is pretty simple really...
+<br>
+<p>1) Create a mathematical specification of one's software in a specification
+<br>
+language like Z, Object Z, etc.
+<br>
+<p>2) One can then prove with mathematical rigor that one's software will
+<br>
+perform according to the requirements, if its implemented according to the
+<br>
+specifications
+<br>
+<p>3) Translate the mathematical specification into a software program.  This
+<br>
+is easier if one uses a language that doesn't involve pointers.  It's not so
+<br>
+hard with Java for example; it could be done with a variation of the toolkit
+<br>
+the Java supercompiler (www.supercompilers.com) team is creating.  It's
+<br>
+really easy with nice languages like LISP or ML.  This step could in
+<br>
+principle be fully automated, but in practice right now it really has to be
+<br>
+done by hand or by humans interacting with software like the supercompiler,
+<br>
+because only humans know how to make the right decisions regarding
+<br>
+efficiency optimization.
+<br>
+<p>4) Check the software program against the specification carefully, using
+<br>
+repeated code inspections, unit tests, and black and white box system tests.
+<br>
+<p>If this approach is followed, one will have software that is fantastically
+<br>
+more reliable than most software produced this way.
+<br>
+<p>Why is this well-known approach not followed very often?
+<br>
+<p>Firstly COST ...
+<br>
+<p>secondly IGNORANCE
+<br>
+<p>The formal approach takes a long time, and it takes expensive people (people
+<br>
+with a grasp of math as well as programming).  It takes more $$ spent on
+<br>
+software testing than most companies want to spend.
+<br>
+<p>(We are NOT taking this approach in Novamente, but we have a very small and
+<br>
+tightly-integrated team, which makes an informal approach significantly more
+<br>
+reliable.)
+<br>
+<p>In short, I think we could do a lot better than we do right now, simply by
+<br>
+allocating our software dev. spending differently.
+<br>
+<p>And we could do a LOT LOT better with a bit of investment money put into
+<br>
+radical software technologies like supercompilation.
+<br>
+<p>These ideas may not be along the lines that Jaron is thinking, but, I think
+<br>
+they can provide substantial partial solutions to the problem he points out.
+<br>
+<p><p>-- Ben
+<br>
+<p><p><p><p><em>&gt; -----Original Message-----
+</em><br>
+<em>&gt; From: <a href="mailto:owner-sl4@sl4.org?Subject=RE:%20Coding%20from%20Scratch:%20Jaron%20Lanier">owner-sl4@sl4.org</a> [mailto:<a href="mailto:owner-sl4@sl4.org?Subject=RE:%20Coding%20from%20Scratch:%20Jaron%20Lanier">owner-sl4@sl4.org</a>]On Behalf Of Emil
+</em><br>
+<em>&gt; Gilliam
+</em><br>
+<em>&gt; Sent: Saturday, January 25, 2003 2:24 PM
+</em><br>
+<em>&gt; To: <a href="mailto:sl4@sl4.org?Subject=RE:%20Coding%20from%20Scratch:%20Jaron%20Lanier">sl4@sl4.org</a>
+</em><br>
+<em>&gt; Subject: Coding from Scratch: Jaron Lanier
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; You might disagree with Lanier elsewhere, but he speaks wisdom in this
+</em><br>
+<em>&gt; interview:
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Coding from Scratch
+</em><br>
+<em>&gt; A Conversation with Virtual Reality Pioneer Jaron Lanier, Part One
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; <a href="http://java.sun.com/features/2003/01/lanier_qa1.html">http://java.sun.com/features/2003/01/lanier_qa1.html</a>
+</em><br>
+<em>&gt;
+</em><br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="6108.html">Michael Roy Ames: "Re: Coding from Scratch: Jaron Lanier"</a>
+<li><strong>Previous message:</strong> <a href="6106.html">Emil Gilliam: "Coding from Scratch: Jaron Lanier"</a>
+<li><strong>In reply to:</strong> <a href="6106.html">Emil Gilliam: "Coding from Scratch: Jaron Lanier"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6109.html">Michael Roy Ames: "Re: Coding from Scratch: Jaron Lanier"</a>
+<li><strong>Reply:</strong> <a href="6109.html">Michael Roy Ames: "Re: Coding from Scratch: Jaron Lanier"</a>
+<li><strong>Reply:</strong> <a href="6111.html">Robin Lee Powell: "Re: Coding from Scratch: Jaron Lanier"</a>
+<li><strong>Reply:</strong> <a href="6118.html">Cliff Stabbert: "Re: Coding from Scratch: Jaron Lanier"</a>
+<li><strong>Reply:</strong> <a href="6133.html">Dani Eder: "RE: Coding from Scratch: Jaron Lanier"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6107">[ date ]</a>
+<a href="index.html#6107">[ thread ]</a>
+<a href="subject.html#6107">[ subject ]</a>
+<a href="author.html#6107">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:41 MDT
+</em></small></p>
+</body>
+</html>

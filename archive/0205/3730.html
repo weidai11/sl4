@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Complexity of AGI</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="Complexity of AGI">
+<meta name="Date" content="2002-05-19">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Complexity of AGI</h1>
+<!-- received="Sun May 19 16:13:57 2002" -->
+<!-- isoreceived="20020519221357" -->
+<!-- sent="Sun, 19 May 2002 14:08:36 -0600" -->
+<!-- isosent="20020519200836" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="Complexity of AGI" -->
+<!-- id="LAEGJLOGJIOELPNIOOAJAEENCIAA.ben@goertzel.org" -->
+<!-- charset="iso-8859-1" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=Re:%20Complexity%20of%20AGI"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Sun May 19 2002 - 14:08:36 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3731.html">Eliezer S. Yudkowsky: "Re: Complexity of AGI"</a>
+<li><strong>Previous message:</strong> <a href="3729.html">Michael Roy Ames: "Re: AI in &lt;what?&gt;"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3731.html">Eliezer S. Yudkowsky: "Re: Complexity of AGI"</a>
+<li><strong>Reply:</strong> <a href="3731.html">Eliezer S. Yudkowsky: "Re: Complexity of AGI"</a>
+<li><strong>Reply:</strong> <a href="3732.html">Mike & Donna Deering: "Re: Complexity of AGI"</a>
+<li><strong>Reply:</strong> <a href="3748.html">Michael Roy Ames: "Re: Complexity of AGI"</a>
+<li><strong>Maybe reply:</strong> <a href="3774.html">ben goertzel: "RE: Complexity of AGI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3730">[ date ]</a>
+<a href="index.html#3730">[ thread ]</a>
+<a href="subject.html#3730">[ subject ]</a>
+<a href="author.html#3730">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Eliezer,
+<br>
+<p>I have thought a little about your intuition that an AGI needs to be 1-2
+<br>
+orders of magnitude more complex than Novamente.
+<br>
+<p>It seems to me that there is some threshold T so that the following holds.
+<br>
+<p>IF the complexity of an AGI needs to be &gt; T, THEN it makes sense to focus
+<br>
+efforts on human brain simulation (as advocated by Kurzweil, Eugene Leitl,
+<br>
+and many others), rather than on designing systems loosely inspired by the
+<br>
+human brain/mind.
+<br>
+<p>And, as far as I understand it, your DGI approach is more brainlike than
+<br>
+Novamente, but still &quot;loosely inspired by the human brain-mind&quot; rather than
+<br>
+being a cellular or molecular level simulation.
+<br>
+<p>What is T?
+<br>
+<p>My intuition is that T is around, roughly, 3-5 times the complexity of the
+<br>
+current Novamente design.  Beyond this level, the difficulties of
+<br>
+parameter-tuning and engineering and performance analysis are just going to
+<br>
+become WAY too great for any team of humans to handle.
+<br>
+<p>Novamente is now about 30K lines of C++, it will be somewhere between 100K -
+<br>
+300K when done.  The total complexity of the algorithms in it probably does
+<br>
+not exceed that of the algorithms in a complex program like an efficient C++
+<br>
+compiler.  (Compilers have all sorts of shit in them, graph-coloring
+<br>
+algorithms, conversions between different types of trees, etc. etc. etc.)
+<br>
+However, the algorithms in a compiler are hooked together in a rigid and
+<br>
+predictable way, whereas the algorithms in Novamente are adaptive and self-
+<br>
+and inter-referential, which means that the testing/tuning process for
+<br>
+Novamente is going to vastly exceed that of a compiler (as we discovered in
+<br>
+building and toying with Webmind!!).
+<br>
+<p>The human mind/brain contains a lot of specialized inference, perception and
+<br>
+action modules, dealing with things like spatial and temporal inference,
+<br>
+social reasoning, aspects of language processing, each sensory stream that
+<br>
+we have, etc. etc.
+<br>
+<p>If an AGI has to be engineered to contain *significantly qualitatively
+<br>
+different* code for each of these specialized functional mind-modules, then
+<br>
+I suggest that this AGI is going to be 10-20 times more complex than
+<br>
+Novamente, and hence over my intuitively posited T value.  In other words,
+<br>
+rather than build a system like this, which will have so many parameters it
+<br>
+will be un-tunable, we'd be better off to focus on brain scanning and
+<br>
+cellular brain simulation.  In my guesswork opinion...
+<br>
+<p>On the other hand, my hypothesis is that we can achieve these specialized
+<br>
+functions by appropriately modifying the parameters of a handful of
+<br>
+individually-narrowly-intelligent, intelligently interacting learning
+<br>
+algorithms.  If this is true then something of *borderline manageable
+<br>
+complexity* like Novamente (or, say, A2I2) can work, and we don't
+<br>
+necessarily need to follow the path of detailed human brain simulation.
+<br>
+<p>One may argue that each decade software and hardware tech get better,
+<br>
+enabling us to build more &amp; more complex software systems.  It is true.  But
+<br>
+we do run up against barriers of human psychology and limitations of human
+<br>
+communication.  Novamente is already WAY more complex in its inter-component
+<br>
+interactions than anything ever built... barring an intervining Singularity,
+<br>
+it'll be at least a decade, maybe a few, before software systems of this
+<br>
+complexity are routine in the sense that transaction systems and big OO
+<br>
+systems of other sorts are routine today.
+<br>
+<p><p>-- Ben G
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3731.html">Eliezer S. Yudkowsky: "Re: Complexity of AGI"</a>
+<li><strong>Previous message:</strong> <a href="3729.html">Michael Roy Ames: "Re: AI in &lt;what?&gt;"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3731.html">Eliezer S. Yudkowsky: "Re: Complexity of AGI"</a>
+<li><strong>Reply:</strong> <a href="3731.html">Eliezer S. Yudkowsky: "Re: Complexity of AGI"</a>
+<li><strong>Reply:</strong> <a href="3732.html">Mike & Donna Deering: "Re: Complexity of AGI"</a>
+<li><strong>Reply:</strong> <a href="3748.html">Michael Roy Ames: "Re: Complexity of AGI"</a>
+<li><strong>Maybe reply:</strong> <a href="3774.html">ben goertzel: "RE: Complexity of AGI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3730">[ date ]</a>
+<a href="index.html#3730">[ thread ]</a>
+<a href="subject.html#3730">[ subject ]</a>
+<a href="author.html#3730">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:38 MDT
+</em></small></p>
+</body>
+</html>

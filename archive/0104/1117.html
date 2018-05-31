@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: ARTICLE: Memory bandwidth</title>
+<meta name="Author" content="James Higgins (jameshiggins@earthlink.net)">
+<meta name="Subject" content="Re: ARTICLE: Memory bandwidth">
+<meta name="Date" content="2001-04-15">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: ARTICLE: Memory bandwidth</h1>
+<!-- received="Sun Apr 15 13:35:37 2001" -->
+<!-- isoreceived="20010415193537" -->
+<!-- sent="Sun, 15 Apr 2001 10:39:38 -0700" -->
+<!-- isosent="20010415173938" -->
+<!-- name="James Higgins" -->
+<!-- email="jameshiggins@earthlink.net" -->
+<!-- subject="Re: ARTICLE: Memory bandwidth" -->
+<!-- id="4.3.2.7.2.20010415103001.00b93bc8@mail.earthlink.net" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="B6FD1A96.91C%jamesr@best.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> James Higgins (<a href="mailto:jameshiggins@earthlink.net?Subject=Re:%20ARTICLE:%20Memory%20bandwidth"><em>jameshiggins@earthlink.net</em></a>)<br>
+<strong>Date:</strong> Sun Apr 15 2001 - 11:39:38 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1118.html">Mark Walker: "Re: Webmind Inc."</a>
+<li><strong>Previous message:</strong> <a href="1116.html">Ben Goertzel: "Webmind Inc."</a>
+<li><strong>In reply to:</strong> <a href="1098.html">James Rogers: "Re: ARTICLE: Memory bandwidth"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1101.html">Dale Johnstone: "Re: ARTICLE: Memory bandwidth"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1117">[ date ]</a>
+<a href="index.html#1117">[ thread ]</a>
+<a href="subject.html#1117">[ subject ]</a>
+<a href="author.html#1117">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+At 09:06 PM 4/13/2001 -0700, James Rogers wrote:
+<br>
+<em>&gt;On 4/13/01 6:15 PM, &quot;Brian Atkins&quot; &lt;<a href="mailto:brian@posthuman.com?Subject=Re:%20ARTICLE:%20Memory%20bandwidth">brian@posthuman.com</a>&gt; wrote:
+</em><br>
+<em>&gt;You are somewhat missing the point.  The comparisons are in fact typically
+</em><br>
+<em>&gt;between a 800-MHz P3 and 1.5-GHz P4, but the difference in clock speed is
+</em><br>
+<em>&gt;immaterial if you actually look at the benchmarks (mostly because the
+</em><br>
+<em>&gt;benchmarks show *why* clock speed is immaterial).  In fact, the article
+</em><br>
+<em>&gt;squares perfectly with what I've been hearing on the hardware lists where
+</em><br>
+<em>&gt;people have been running their own benchmarks.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;In short:
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;For fp and vector codes *where the data fits in the cache*, you generally
+</em><br>
+<em>&gt;get much better performance with the P4 than the P3 i.e. Better than
+</em><br>
+<em>&gt;suggested by the clock speed difference.  Since it fits in the cache, memory
+</em><br>
+<em>&gt;bandwidth and latency is mostly irrelevant.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;For fp and vector codes that have data sets substantially larger than the
+</em><br>
+<em>&gt;cache, the speed of the processor is irrelevant: a P3 will be memory limited
+</em><br>
+<em>&gt;and the P4 will be memory limited.  The P4 has a poor memory architecture
+</em><br>
+<em>&gt;and benchmarks as a dog compared to similarly clocked Athlon chips, due
+</em><br>
+<em>&gt;solely to differences in memory architecture; the Athlon has more bandwidth,
+</em><br>
+<em>&gt;so for memory limited problems it is faster, even at slower clock speeds.
+</em><br>
+<em>&gt;Note that the P4 has 15-20% *worse* memory latency than the P3, so cache
+</em><br>
+<em>&gt;efficiency is even more important on the P4 than on the P3.  What the P4
+</em><br>
+<em>&gt;represents is one of the first times where the inter-generational
+</em><br>
+<em>&gt;differences in processor performance are based almost solely on the memory
+</em><br>
+<em>&gt;bus chipsets, not on the processor clock.
+</em><br>
+<p>I got the exact opposite conclusion from the article.  When discussing the 
+<br>
+SWIM benchmark the P4 outperformed the P3 by 2.5x.  The article states this 
+<br>
+is clearly due to the P4s 2.5x higher memory bandwidth.  Thus the P4 does 
+<br>
+much better on tasks which are constrained by memory bandwidth.  It goes on 
+<br>
+to say that such applications are uncommon (thus this result should not 
+<br>
+weigh as heavily).  However, AI software would most likely fall into this 
+<br>
+category since it requires a huge amount of data.  Thus the *should* P4 
+<br>
+perform much better than the P3 for AI software.
+<br>
+<p>Not to say that the P4 is a great chip design.  Reading further it appears 
+<br>
+that if the AI software was really performing well, the dam P4 would cut 
+<br>
+back to 750MHz to reduce heat buildup!
+<br>
+<p><em>&gt;The point to all this being that if you are running an AI, which presumably
+</em><br>
+<em>&gt;will be churning on vast quantities of data, the clock speed doesn't matter.
+</em><br>
+<em>&gt;What the benchmarks between the P3 and P4 show is that memory bandwidth is
+</em><br>
+<em>&gt;already a serious crisis for data hungry apps.  The situation on the P4 is
+</em><br>
+<em>&gt;so bad that they expect faster versions of the P4 to show no performance
+</em><br>
+<em>&gt;improvement for cache killers, whereas it used to be that you got *some*
+</em><br>
+<em>&gt;minor improvement with increased clock speeds even for these apps.
+</em><br>
+<p>Increasing the MHz of the P4 would have little to no effect on &quot;cache 
+<br>
+killer&quot; apps because they are bandwidth limited.  But this does also 
+<br>
+indicate that the P4 with its higher memory bandwidth (significantly higher 
+<br>
+than Athalon) would perform the best.  Plus, depending on which motherboard 
+<br>
+the tests used the P4 can utilize dual RDRAM busses for double the memory 
+<br>
+bandwidth.  I wonder which one the benchmark used.
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1118.html">Mark Walker: "Re: Webmind Inc."</a>
+<li><strong>Previous message:</strong> <a href="1116.html">Ben Goertzel: "Webmind Inc."</a>
+<li><strong>In reply to:</strong> <a href="1098.html">James Rogers: "Re: ARTICLE: Memory bandwidth"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1101.html">Dale Johnstone: "Re: ARTICLE: Memory bandwidth"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1117">[ date ]</a>
+<a href="index.html#1117">[ thread ]</a>
+<a href="subject.html#1117">[ subject ]</a>
+<a href="author.html#1117">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

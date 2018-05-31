@@ -1,0 +1,38 @@
+I actually disagree that the ability to self-modify an AI architecture
+at some fundamental level is even important, at least in the sense that
+I get the strong impression people are using it.
+
+The value of deep self-modifying code is apparently premised on the
+first implementations of AGI being duct-taped architectures that barely
+function, due in no small part to their extreme complexity.  My own take
+is that if AGI is actually as complicated as most believe, then the only
+likely and plausible human engineered implementations will almost have
+to be very close approximations of "optimal intelligence" (read: elegant
+and properly generalized models) as a consequence. Compounding this is
+the probable fragility of AGI architectures with respect to the various
+forms of computational complexity, meaning that most design vectors that
+stray away from optimal architectures may not be able to reach seed AI
+level due to tractability problems.  From this perspective, I don't
+think it is unreasonable to assert that architectural self-modification
+is an unnecessary capability as all likely human implementations of an
+AI will almost have to be optimal (or close approximations) to even be
+practical.
+
+If this is the case and the first "real" AGI architecture is a close
+approximation of optimal, then the qualitative bootstrap process will
+essentially be hardware limited no matter how intelligent the AGI
+actually is.  Obviously there has to be some self-modification at higher
+abstractions or a system couldn't learn, but that doesn't need to impact
+the underlying architecture (and is essentially orthogonal to the
+question in any case).
+
+-James Rogers
+ jamesr@best.com
+
+
+
+
+
+
+
+

@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Computers that improve themselves</title>
+<meta name="Author" content="Samantha Atkins (samantha@objectent.com)">
+<meta name="Subject" content="Re: Computers that improve themselves">
+<meta name="Date" content="2001-04-24">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Computers that improve themselves</h1>
+<!-- received="Tue Apr 24 05:11:39 2001" -->
+<!-- isoreceived="20010424111139" -->
+<!-- sent="Tue, 24 Apr 2001 01:48:42 -0700" -->
+<!-- isosent="20010424084842" -->
+<!-- name="Samantha Atkins" -->
+<!-- email="samantha@objectent.com" -->
+<!-- subject="Re: Computers that improve themselves" -->
+<!-- id="3AE53DEA.C313971@objectent.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="3AE52AAC.FFF97C08@pobox.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Samantha Atkins (<a href="mailto:samantha@objectent.com?Subject=Re:%20Computers%20that%20improve%20themselves"><em>samantha@objectent.com</em></a>)<br>
+<strong>Date:</strong> Tue Apr 24 2001 - 02:48:42 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1200.html">Arona Ndiaye: "Re: Computers that improve themselves"</a>
+<li><strong>Previous message:</strong> <a href="1198.html">Eliezer S. Yudkowsky: "Re: Computers that improve themselves"</a>
+<li><strong>In reply to:</strong> <a href="1198.html">Eliezer S. Yudkowsky: "Re: Computers that improve themselves"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1200.html">Arona Ndiaye: "Re: Computers that improve themselves"</a>
+<li><strong>Reply:</strong> <a href="1200.html">Arona Ndiaye: "Re: Computers that improve themselves"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1199">[ date ]</a>
+<a href="index.html#1199">[ thread ]</a>
+<a href="subject.html#1199">[ subject ]</a>
+<a href="author.html#1199">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+&quot;Eliezer S. Yudkowsky&quot; wrote:
+<br>
+<em>&gt; 
+</em><br>
+<p><em>&gt; If a system is opaque, then your lack of knowledge about the underlying
+</em><br>
+<em>&gt; process means that you know considerably less about whether the observed
+</em><br>
+<em>&gt; behaviors are probably general or probably specific to whatever was used
+</em><br>
+<em>&gt; as a test.  To put it another way, a nonopaque system uses testing to
+</em><br>
+<em>&gt; verify your predictions about the behavior, predictions made using your
+</em><br>
+<em>&gt; understanding of the underlying causes.  In an opaque,
+</em><br>
+<em>&gt; non-intelligently-generated system, &quot;testing&quot; is half testing and half
+</em><br>
+<em>&gt; discovery, so there's more hypothesizing and less verification.
+</em><br>
+<em>&gt; 
+</em><br>
+<p>Can't the SI redesign some of its components in ways that you don't
+<br>
+necessarily follow?  There is a limit to how much complexity humans can
+<br>
+handle that the SI would soon go beyond.  Even without a self-improving
+<br>
+SI
+<br>
+at work, humans quite often design and implement software systems that
+<br>
+they in practice do not understand nearly as well as they thought they
+<br>
+did or would. 
+<br>
+<p>Complex systems tend to grow increasingly opaque even when not
+<br>
+self-improved or evolving.  At some point, usually quite early, the why
+<br>
+of a system's behavior cannot be usefully deduced from modeling how its
+<br>
+components work.  
+<br>
+<p><p><em>&gt; If a system is nonmodular, you can only test system-level behaviors,
+</em><br>
+<em>&gt; rather than being able to test the components.  Whatever component level
+</em><br>
+<em>&gt; is designed by GAs (don't you mean EP or EC?) will not be able to be
+</em><br>
+<em>&gt; broken down further.  If you evolved a module, good luck checking
+</em><br>
+<em>&gt; preconditions and postconditions on individual functions.
+</em><br>
+<em>&gt;
+</em><br>
+<p>If the code is self-modifying then you may not long even know what the
+<br>
+individual functions are, much less what their pre- and post-conditions
+<br>
+have become. 
+<br>
+<p>Even if it is modular and not dynamically self-modifying,  the
+<br>
+interactions between the modules can be extremely complex and nearly
+<br>
+impossible to model well.  It is one of those areas of CS where there is
+<br>
+some theoretical work but not a lot that has been cast into actual
+<br>
+working tools.  
+<br>
+<p>At what level do you model your modules at, along what dimension[s] are
+<br>
+they decomposed and at what level are pre/post-conditions expressed? 
+<br>
+Most systems are decomposed along a single dimension and other
+<br>
+dimensions such as internal represensations and data structures is
+<br>
+hidden behind the exposed dimension's API.  This is bad if your
+<br>
+particular application for that component requires a different internal
+<br>
+representation in order to be efficient and not require a bunch of
+<br>
+really ugly hackery to work at all.  Rewrites of internal implementation
+<br>
+details and/or exposing orthogonal APIs for controlling the internals
+<br>
+are one of the ways modules get optimized in running systems.  But the
+<br>
+entry-exit conditions tend to be bound up to some degree in the
+<br>
+representation.  So there is a second-level problem in suitably
+<br>
+modifying those.  Tests based on pre-, post-conditions would also have
+<br>
+to be evolved for the newly optimized version.   And all of this may
+<br>
+change from invocation to invocation of the same module depending on the
+<br>
+needs of the invoking context.  I believe a system could be build to
+<br>
+change in such a fashion and to self-test but it would be a far stretch
+<br>
+for me to believe that humans are going to know how to test the result
+<br>
+in fine-grained function level detail.  
+<br>
+<p>&nbsp;
+<br>
+<em>&gt; All this applies only to young AIs, of course, but some of your confidence
+</em><br>
+<em>&gt; in the oak tree may depend on your confidence in the acorn.
+</em><br>
+<p>Well, we have confidence in the acorn because we have seen acorns that
+<br>
+look roughly like this one produce oak trees roughly like those over
+<br>
+there often enough.  I don't see how this applies with a brand new kind
+<br>
+seed for an intelligent self-modifying (beyond what current biological
+<br>
+systems can do) system such as has never before existed.  
+<br>
+<p>- samantha
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1200.html">Arona Ndiaye: "Re: Computers that improve themselves"</a>
+<li><strong>Previous message:</strong> <a href="1198.html">Eliezer S. Yudkowsky: "Re: Computers that improve themselves"</a>
+<li><strong>In reply to:</strong> <a href="1198.html">Eliezer S. Yudkowsky: "Re: Computers that improve themselves"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1200.html">Arona Ndiaye: "Re: Computers that improve themselves"</a>
+<li><strong>Reply:</strong> <a href="1200.html">Arona Ndiaye: "Re: Computers that improve themselves"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1199">[ date ]</a>
+<a href="index.html#1199">[ thread ]</a>
+<a href="subject.html#1199">[ subject ]</a>
+<a href="author.html#1199">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

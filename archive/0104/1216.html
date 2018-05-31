@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Hardware Cost</title>
+<meta name="Author" content="Brian Atkins (brian@posthuman.com)">
+<meta name="Subject" content="Re: Hardware Cost">
+<meta name="Date" content="2001-04-25">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Hardware Cost</h1>
+<!-- received="Wed Apr 25 15:35:45 2001" -->
+<!-- isoreceived="20010425213545" -->
+<!-- sent="Wed, 25 Apr 2001 15:13:53 -0400" -->
+<!-- isosent="20010425191353" -->
+<!-- name="Brian Atkins" -->
+<!-- email="brian@posthuman.com" -->
+<!-- subject="Re: Hardware Cost" -->
+<!-- id="3AE721F1.AF09265A@posthuman.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="5.0.2.1.0.20010425104432.00abce20@shell9.ba.best.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Brian Atkins (<a href="mailto:brian@posthuman.com?Subject=Re:%20Hardware%20Cost"><em>brian@posthuman.com</em></a>)<br>
+<strong>Date:</strong> Wed Apr 25 2001 - 13:13:53 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1217.html">Christian L.: "Re: Journalism"</a>
+<li><strong>Previous message:</strong> <a href="1215.html">James Rogers: "Re: Hardware Cost"</a>
+<li><strong>In reply to:</strong> <a href="1215.html">James Rogers: "Re: Hardware Cost"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1216">[ date ]</a>
+<a href="index.html#1216">[ thread ]</a>
+<a href="subject.html#1216">[ subject ]</a>
+<a href="author.html#1216">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+James Rogers wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; At 09:53 AM 4/25/2001 -0700, Dani Eder wrote:
+</em><br>
+<em>&gt; &gt;[...snip...]
+</em><br>
+<em>&gt; &gt;I'm curious how this type of Linux cluster compares
+</em><br>
+<em>&gt; &gt;to the processor requirements for a Web-Brain
+</em><br>
+<em>&gt; &gt;implementation or an estimated size for a seed AI
+</em><br>
+<em>&gt; &gt;(if anyone has taken a stab at that yet).
+</em><br>
+<em>&gt; &gt;[...snip...]
+</em><br>
+<em>&gt; &gt;The cost breakdown is as follows.  Note the cluster
+</em><br>
+<em>&gt; &gt;has 64 compute nodes + 2 supervisory nodes.  Costs
+</em><br>
+<em>&gt; &gt;are current ones from pricewatch.com:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; As a general comment, you don't seem to be considering that these types of
+</em><br>
+<em>&gt; clusters are tuned to solve very specific problems.  Their solution isn't
+</em><br>
+<em>&gt; necessarily your solution.  The choice of hardware is not arbitrary;
+</em><br>
+<em>&gt; interconnects, RAM, switching, and proc/mobo hardware is all carefully
+</em><br>
+<em>&gt; chosen to maximize throughput for the problem in question.  A seemingly
+</em><br>
+<em>&gt; trivial mis-design in your cluster can cost you an order of magnitude in
+</em><br>
+<em>&gt; performance.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Some problems can be solved very cheaply in clusters, with almost perfect
+</em><br>
+<em>&gt; linear scaling (and occasionally, the rare super-linear scaling).  Other
+</em><br>
+<em>&gt; types of problems demonstrate logarithmic scaling, even with very expensive
+</em><br>
+<em>&gt; interconnects.  I expect the AI problem falls somewhere in the middle,
+</em><br>
+<em>&gt; being neither embarrassingly parallel nor excruciatingly serial.
+</em><br>
+<p>James I was looking at the Blue Gene design in more detail (do you know of
+<br>
+anywhere that has more info than the IBM site?) and it actually looks like
+<br>
+it might run in a very similar fashion to a Beowulf. Each chip might be
+<br>
+thought of as 32 nodes in a Beowulf connected together to a switch, or
+<br>
+possibly each chip could be thought of as a single node capable of running
+<br>
+(32 x 8) threads at once using 16MB ram. Since the CPUs will incorporate
+<br>
+simultaneous multithreading they should be able to keep pretty busy even
+<br>
+when some threads are waiting for memory access. The nice thing is that
+<br>
+this design should nicely allow for a lot more embedded RAM per CPU in the
+<br>
+future for Blue Gene 2 or whatever as the transistor size decreases in the
+<br>
+second half of the decade.
+<br>
+<p>What I don't understand is: will there be some kind of micro-OS running
+<br>
+on each of the 32 CPUs per chip, and how much of the 512k RAM/CPU would
+<br>
+it take up? I get the impression that is how it will work since their site
+<br>
+talks of using message passing for inter-CPU communication. Supercomputer
+<br>
+operating systems are something I've never learned much about, and I'm
+<br>
+curious if they are significantly different from normal.
+<br>
+<p>&lt;good Beowulf advice snipped&gt;
+<br>
+<pre>
+-- 
+Brian Atkins
+Director, Singularity Institute for Artificial Intelligence
+<a href="http://www.intelligence.org/">http://www.intelligence.org/</a>
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1217.html">Christian L.: "Re: Journalism"</a>
+<li><strong>Previous message:</strong> <a href="1215.html">James Rogers: "Re: Hardware Cost"</a>
+<li><strong>In reply to:</strong> <a href="1215.html">James Rogers: "Re: Hardware Cost"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1216">[ date ]</a>
+<a href="index.html#1216">[ thread ]</a>
+<a href="subject.html#1216">[ subject ]</a>
+<a href="author.html#1216">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

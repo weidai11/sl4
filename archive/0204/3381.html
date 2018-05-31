@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Hopfield networks as a model of memory?</title>
+<meta name="Author" content="ben goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: Hopfield networks as a model of memory?">
+<meta name="Date" content="2002-04-18">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Hopfield networks as a model of memory?</h1>
+<!-- received="Thu Apr 18 12:44:07 2002" -->
+<!-- isoreceived="20020418184407" -->
+<!-- sent="Thu, 18 Apr 2002 10:33:24 -0600" -->
+<!-- isosent="20020418163324" -->
+<!-- name="ben goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: Hopfield networks as a model of memory?" -->
+<!-- id="01C1E6C4.786C3360.ben@goertzel.org" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="Hopfield networks as a model of memory?" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> ben goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20Hopfield%20networks%20as%20a%20model%20of%20memory?"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Thu Apr 18 2002 - 10:33:24 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3382.html">ben goertzel: "RE: Hopfield networks as a model of memory?"</a>
+<li><strong>Previous message:</strong> <a href="3380.html">ben goertzel: "Mathematical definitions of pattern"</a>
+<li><strong>Maybe in reply to:</strong> <a href="3374.html">Ben Houston: "Hopfield networks as a model of memory?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3382.html">ben goertzel: "RE: Hopfield networks as a model of memory?"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3381">[ date ]</a>
+<a href="index.html#3381">[ thread ]</a>
+<a href="subject.html#3381">[ subject ]</a>
+<a href="author.html#3381">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Daniel Amit's book on Neural Networks (I forget the title) is a very good 
+<br>
+overview of the scope of work in Hopfield nets.  There has been a lot of 
+<br>
+neat stuff done using asymmetric weights, temporal learning, and so forth.
+<br>
+<p>I don't think there is a standard opinion on the biological relevance of 
+<br>
+these models.  There are advocates and there are detractors.  My own view 
+<br>
+is that they are a good conceptual model of how the brain probably stores 
+<br>
+*some types of memories*.  But when you get into the storage of temporal 
+<br>
+sequences of events and so forth, the details of attractor neural nets (the 
+<br>
+other term for hopfield nets) get awfully nasty, and one starts to wonder 
+<br>
+if there's not a better way.
+<br>
+<p>An interesting, too little known variation on this theme is Mikhail Zak's 
+<br>
+work on &quot;terminal chaos.&quot;  He has made some interesting attractor neural 
+<br>
+net models using equations with mathematical singularities in them, 
+<br>
+achieving some favorable practical results in various experiments...
+<br>
+<p>One fact, from an AI engineering point of view, is that hopfield nets are a 
+<br>
+very inefficient way to store memories.  The standard symmetric-weight 
+<br>
+hopfield net stores at most .14n floats worth of  memory using n*n neural 
+<br>
+net links.  Furthermore the networks fill up with memories very quickly, 
+<br>
+and then can't learn anything more.  If you put caps on the link weights, 
+<br>
+you can get a network that continually forgets old memories when its memory 
+<br>
+gets full, so it can learn new things.  But then the memory capacity goes 
+<br>
+down to .05n.   Some good results can be obtained with sparse (not fully 
+<br>
+connected) networks -- Youlian Troyanov and I did some experiments on this 
+<br>
+in 1998 -- but the bottom line is this is not an efficient way to store 
+<br>
+information.   So even if it is roughly analogous to how the brain stores 
+<br>
+some kinds of memories, it is in my view only an appropriate approach in 
+<br>
+cases where one has a HELL of a lot of memory to waste storing information 
+<br>
+redundantly...
+<br>
+<p>The question with such memory schemes is always whether cognitive 
+<br>
+processing is accelerated enough to compensate for the waste of space.  Are 
+<br>
+we just making a time-space tradeoff, and is it a good one?  In the case of 
+<br>
+hopfield nets I don't think there is any adequate compensating cognitive 
+<br>
+advantage however.  One can do partial matching of memories nicely in a 
+<br>
+hopfield net, but there are more efficient ways to do that on a digital 
+<br>
+computer, without so much redundancy of storage.
+<br>
+<p>This sort of reasoning is why we wound up not using attractor neural net 
+<br>
+type knowledge representation in Novamente, although we use NN-style 
+<br>
+dynamics for some other purposes (for adaptively allocating the system's 
+<br>
+attention)
+<br>
+<p>ben g
+<br>
+<p><p>ben
+<br>
+<p><p><p><p>-----Original Message-----
+<br>
+From:	Ben Houston [SMTP:<a href="mailto:ben@exocortex.org?Subject=RE:%20Hopfield%20networks%20as%20a%20model%20of%20memory?">ben@exocortex.org</a>]
+<br>
+Sent:	Wednesday, April 17, 2002 5:23 PM
+<br>
+To:	<a href="mailto:sl4@sysopmind.com?Subject=RE:%20Hopfield%20networks%20as%20a%20model%20of%20memory?">sl4@sysopmind.com</a>
+<br>
+Subject:	Hopfield networks as a model of memory?
+<br>
+<p>Eliezer and I discussed how neural networks could &quot;recognize&quot; a
+<br>
+previously learned stimulus.  We both sort of agreed that &quot;resonance&quot;
+<br>
+was a commonly proposed description for this computation but we sort of
+<br>
+left it there without getting any more specific.  Anyways, I writing up
+<br>
+an assignment for a 4th year AI class and I came across Hopfield
+<br>
+networks -- I would suggest that these networks are probably pretty
+<br>
+decent models, in the abstract sense, of how our neural networks
+<br>
+recognize objects.
+<br>
+<p>I must admit that I only have the chapter on &quot;Associative Memory&quot; from
+<br>
+the fairly standard text &quot;Intro to The Theory of Neural Computation&quot; to
+<br>
+work from at the moment.
+<br>
+<p>What is the standard opinion in more learned circles about this neural
+<br>
+network's similarity to the biological processes?
+<br>
+<p>Cheers,
+<br>
+-ben
+<br>
+<a href="http://www.exocortex.org">http://www.exocortex.org</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3382.html">ben goertzel: "RE: Hopfield networks as a model of memory?"</a>
+<li><strong>Previous message:</strong> <a href="3380.html">ben goertzel: "Mathematical definitions of pattern"</a>
+<li><strong>Maybe in reply to:</strong> <a href="3374.html">Ben Houston: "Hopfield networks as a model of memory?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3382.html">ben goertzel: "RE: Hopfield networks as a model of memory?"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3381">[ date ]</a>
+<a href="index.html#3381">[ thread ]</a>
+<a href="subject.html#3381">[ subject ]</a>
+<a href="author.html#3381">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:38 MDT
+</em></small></p>
+</body>
+</html>

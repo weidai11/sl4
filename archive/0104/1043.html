@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Moravec's estimates?</title>
+<meta name="Author" content="James Rogers (jamesr@best.com)">
+<meta name="Subject" content="Re: Moravec's estimates?">
+<meta name="Date" content="2001-04-09">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Moravec's estimates?</h1>
+<!-- received="Tue Apr 10 12:15:42 2001" -->
+<!-- isoreceived="20010410181542" -->
+<!-- sent="Mon, 09 Apr 2001 18:54:36 -0700" -->
+<!-- isosent="20010410015436" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Re: Moravec's estimates?" -->
+<!-- id="5.0.2.1.0.20010409181639.00abba88@shell9.ba.best.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="3AD25947.72F0AAEE@posthuman.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> James Rogers (<a href="mailto:jamesr@best.com?Subject=Re:%20Moravec's%20estimates?"><em>jamesr@best.com</em></a>)<br>
+<strong>Date:</strong> Mon Apr 09 2001 - 19:54:36 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1044.html">James Higgins: "Re: A Sysop alternative"</a>
+<li><strong>Previous message:</strong> <a href="1042.html">Brian Atkins: "Re: Moravec's estimates?"</a>
+<li><strong>In reply to:</strong> <a href="1042.html">Brian Atkins: "Re: Moravec's estimates?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1036.html">Patrick McCuller: "RE: Moravec's estimates?"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1043">[ date ]</a>
+<a href="index.html#1043">[ thread ]</a>
+<a href="subject.html#1043">[ subject ]</a>
+<a href="author.html#1043">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+At 08:52 PM 4/9/2001 -0400, Brian Atkins wrote:
+<br>
+<em>&gt;The Blue Gene chips will have 16MB RAM on-die last I heard. Now that is
+</em><br>
+<em>&gt;going to be shared I guess by the 32 CPUs that will be on each die, so it
+</em><br>
+<em>&gt;isn't a lot. But it should have fantastic stream numbers. The total machine
+</em><br>
+<em>&gt;should have around 500GB of RAM from what I calculate.
+</em><br>
+<p><p>The stream numbers will be about what you would expect on an average system 
+<br>
+today judging by the memory architecture (which isn't particularly 
+<br>
+remarkable speed-wise).  The Blue Gene architecture is highly optimized for 
+<br>
+extremely parallelizable and computationally intense problems with small 
+<br>
+data sets.  The 512kByte RAM per processor runs slower than the core and 
+<br>
+the core caches are pretty small compared to most ordinary CPUs and even 
+<br>
+many similar DSP offerings by other companies.  The bus is optimized for 
+<br>
+the architecture but isn't particularly fast; the communication between 
+<br>
+processors is a good replacement for communication channels like Myrinet, 
+<br>
+not for true shared memory.  Basically this is a massively parallel number 
+<br>
+cruncher, and not useful for most classes of problem (such as those that 
+<br>
+operate on large data sets), which is not surprising since it is intended 
+<br>
+for protein folding computation.  The aggregate memory doesn't count for 
+<br>
+much because the communication speed between the million little bits of RAM 
+<br>
+are simply too slow.  But for protein folding it kicks ass.
+<br>
+<p>In short, the Blue Gene chip is a fast DSP core that has been optimized for 
+<br>
+extreme parallel usage.  If you look at the product offerings of DSP 
+<br>
+leaders such as Texas Instrument and Analog Devices, you will find that 
+<br>
+they are selling high performance devices today that are strikingly 
+<br>
+similar, though IBM is trying to take parallelization to a new level.  I 
+<br>
+would venture a guess that by the time IBM finishes their Blue Gene chip, 
+<br>
+TI will have a chip that gives very similar results (the TM320C64x series 
+<br>
+offers 3.2-4.8 GigaOps and 8Mb per processor currently, with an expectation 
+<br>
+that this will increase substantially over the next year or two).  Analog 
+<br>
+Devices supports massively parallel communication interconnects that are 
+<br>
+*very* similar to what IBM is suggesting.  In any case, DSPs are generally 
+<br>
+unsuitable for general computation work on large data sets, as it is not 
+<br>
+what they optimized for, otherwise we'd be using these wickedly fast number 
+<br>
+crunchers on our desktops.
+<br>
+<p>Cheers,
+<br>
+<p>-James Rogers
+<br>
+&nbsp;&nbsp;<a href="mailto:jamesr@best.com?Subject=Re:%20Moravec's%20estimates?">jamesr@best.com</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1044.html">James Higgins: "Re: A Sysop alternative"</a>
+<li><strong>Previous message:</strong> <a href="1042.html">Brian Atkins: "Re: Moravec's estimates?"</a>
+<li><strong>In reply to:</strong> <a href="1042.html">Brian Atkins: "Re: Moravec's estimates?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1036.html">Patrick McCuller: "RE: Moravec's estimates?"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1043">[ date ]</a>
+<a href="index.html#1043">[ thread ]</a>
+<a href="subject.html#1043">[ subject ]</a>
+<a href="author.html#1043">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Limiting Internet Access (was Military Friendly AI)</title>
+<meta name="Author" content="James Higgins (jameshiggins@earthlink.net)">
+<meta name="Subject" content="Limiting Internet Access (was Military Friendly AI)">
+<meta name="Date" content="2002-07-02">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Limiting Internet Access (was Military Friendly AI)</h1>
+<!-- received="Tue Jul 02 12:30:08 2002" -->
+<!-- isoreceived="20020702183008" -->
+<!-- sent="Tue, 02 Jul 2002 09:15:49 -0700" -->
+<!-- isosent="20020702161549" -->
+<!-- name="James Higgins" -->
+<!-- email="jameshiggins@earthlink.net" -->
+<!-- subject="Limiting Internet Access (was Military Friendly AI)" -->
+<!-- id="4.3.2.7.2.20020702090159.01aa2110@mail.earthlink.net" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="LAEGJLOGJIOELPNIOOAJOEEDCMAA.ben@goertzel.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> James Higgins (<a href="mailto:jameshiggins@earthlink.net?Subject=Re:%20Limiting%20Internet%20Access%20(was%20Military%20Friendly%20AI)"><em>jameshiggins@earthlink.net</em></a>)<br>
+<strong>Date:</strong> Tue Jul 02 2002 - 10:15:49 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="4653.html">James Higgins: "RE: Military Friendly AI"</a>
+<li><strong>Previous message:</strong> <a href="4651.html">Eliezer S. Yudkowsky: "Re: Seed AI (was: How hard a Singularity?)"</a>
+<li><strong>In reply to:</strong> <a href="../0206/4579.html">Ben Goertzel: "RE: Military Friendly AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="4655.html">Alexander E. Richter: "Re: Limiting Internet Access (was Military Friendly AI)"</a>
+<li><strong>Reply:</strong> <a href="4655.html">Alexander E. Richter: "Re: Limiting Internet Access (was Military Friendly AI)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#4652">[ date ]</a>
+<a href="index.html#4652">[ thread ]</a>
+<a href="subject.html#4652">[ subject ]</a>
+<a href="author.html#4652">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+At 10:41 PM 6/29/2002 -0600, Ben Goertzel wrote:
+<br>
+<p><em>&gt;hi,
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; &gt; &gt; As already stated on this list several times, we intend to give Novababy
+</em><br>
+<em>&gt; &gt; &gt; read but not write access to the Internet, at first, until a
+</em><br>
+<em>&gt; &gt; lot of study
+</em><br>
+<em>&gt; &gt; &gt; has been done.
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; Please describe how this works.. as I'm not sure you know, simply sending
+</em><br>
+<em>&gt; &gt; a request to a vulnerable web server formatted in the proper way will
+</em><br>
+<em>&gt; &gt; result in the potential for a virus or whatever to be implanted.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;I do not have time at the moment to go into details on technical stuff like
+</em><br>
+<em>&gt;this.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;There probably is no way to absolutely create an &quot;anti-firewall&quot;, absolutely
+</em><br>
+<em>&gt;preventing a system from ever doing any small damage.
+</em><br>
+<p>I have lots of various Internet experience and had previously given this 
+<br>
+some thought.  One way to do this would be to use a specially constructed 
+<br>
+proxy.  The AI itself (its code, actually) would have no way of interfacing 
+<br>
+directly with the Internet.  The safest solution would be to not have any 
+<br>
+network protocols installed or accessible on the AI systems 
+<br>
+themselves.  Requests to gather data would be passed to an dedicated 
+<br>
+retrieval system, probably by using a custom protocol on a serial line or 
+<br>
+such.  The AI's software would have no control over how the HTTP request 
+<br>
+was generated or structured.
+<br>
+<p>The ideal system, actually, would completely opaque the retrieval 
+<br>
+method.  So that the AI could request information about X and the retrieval 
+<br>
+system could use multiple protocols (HTTP, NNTP, FTP, WAIS, whatever) to 
+<br>
+fetch information.  Any links (URLs) embedded within the information would 
+<br>
+be translated to a custom hyper-link format (used only by the AI software 
+<br>
+such as a GUID marked as a hyper-link) before being sent to the AI.  The 
+<br>
+retrieval system would then keep a mapping of these custom hyper-links to 
+<br>
+real URLs, but would never communicate this to the AI.  In such a system 
+<br>
+the AI wouldn't even know it was getting information from the Internet and 
+<br>
+definitely not have any idea what protocol specific the information 
+<br>
+actually used.
+<br>
+<p>Once the AI becomes smarter than its designers, or at least much faster 
+<br>
+than them, there may be a chance that it could somehow exploit bugs in the 
+<br>
+software running the serial connection (either side) or something similar 
+<br>
+to gain more control.  There are many ways that such attempts could be 
+<br>
+detected and this would provide an ideal trigger event for a fail safe.
+<br>
+<p>James Higgins
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="4653.html">James Higgins: "RE: Military Friendly AI"</a>
+<li><strong>Previous message:</strong> <a href="4651.html">Eliezer S. Yudkowsky: "Re: Seed AI (was: How hard a Singularity?)"</a>
+<li><strong>In reply to:</strong> <a href="../0206/4579.html">Ben Goertzel: "RE: Military Friendly AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="4655.html">Alexander E. Richter: "Re: Limiting Internet Access (was Military Friendly AI)"</a>
+<li><strong>Reply:</strong> <a href="4655.html">Alexander E. Richter: "Re: Limiting Internet Access (was Military Friendly AI)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#4652">[ date ]</a>
+<a href="index.html#4652">[ thread ]</a>
+<a href="subject.html#4652">[ subject ]</a>
+<a href="author.html#4652">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:40 MDT
+</em></small></p>
+</body>
+</html>

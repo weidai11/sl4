@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: [sl4] The Jaguar Supercomputer</title>
+<meta name="Author" content="Matt Mahoney (matmahoney@yahoo.com)">
+<meta name="Subject" content="Re: [sl4] The Jaguar Supercomputer">
+<meta name="Date" content="2009-11-20">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: [sl4] The Jaguar Supercomputer</h1>
+<!-- received="Fri Nov 20 08:31:07 2009" -->
+<!-- isoreceived="20091120153107" -->
+<!-- sent="Fri, 20 Nov 2009 07:31:02 -0800 (PST)" -->
+<!-- isosent="20091120153102" -->
+<!-- name="Matt Mahoney" -->
+<!-- email="matmahoney@yahoo.com" -->
+<!-- subject="Re: [sl4] The Jaguar Supercomputer" -->
+<!-- id="618846.21363.qm@web51906.mail.re2.yahoo.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="12902e900911191949r21db1d2vd6bf59cf4374151c@mail.gmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Matt Mahoney (<a href="mailto:matmahoney@yahoo.com?Subject=Re:%20[sl4]%20The%20Jaguar%20Supercomputer"><em>matmahoney@yahoo.com</em></a>)<br>
+<strong>Date:</strong> Fri Nov 20 2009 - 08:31:02 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="20649.html">Luke: "Re: [sl4] The Jaguar Supercomputer"</a>
+<li><strong>Previous message:</strong> <a href="20647.html">Luke: "Re: [sl4] The Jaguar Supercomputer"</a>
+<li><strong>In reply to:</strong> <a href="20647.html">Luke: "Re: [sl4] The Jaguar Supercomputer"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="20649.html">Luke: "Re: [sl4] The Jaguar Supercomputer"</a>
+<li><strong>Reply:</strong> <a href="20649.html">Luke: "Re: [sl4] The Jaguar Supercomputer"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#20648">[ date ]</a>
+<a href="index.html#20648">[ thread ]</a>
+<a href="subject.html#20648">[ subject ]</a>
+<a href="author.html#20648">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Some specs on the Jaguar XT5. <a href="http://www.nccs.gov/jaguar/">http://www.nccs.gov/jaguar/</a>
+<br>
+In particular, it has 37,376 6-core AMD Opterons, 299 TB of DDR2-800 memory, and 10,000 TB of disk. Peak speed is 2332 teraflops. Memory bandwidth is 478 GB/s. Interconnect bandwidth is 378 GB/s.
+<br>
+<p>A human brain sized neural network can be roughly modeled by a 10^11 by 10^11 sparse weight matrix with 10^15 nonzero weights. An array would require 10^10 TB, which would not fit on disk. The weight matrix could be represented instead as a list of pointers using 4 x 10^15 bytes = 4000 TB.
+<br>
+<p>A simulation would require matrix addition and multiplication operations on the order of tens of milliseconds. (I am assuming that the signal of interest is the firing rate and not individual spikes.) Unfortunately, memory is optimized for serial access. Random access time is on the order of 50 ns. Thus, one matrix operation would take 10^8 seconds, or 10^9 slower than real time.
+<br>
+<p>Weights are not uniformly distributed. Rather, neurons that are closer together are more likely to be connected. This suggests a more efficient implementation. The brain has a volume of about 1000 cm^3. Axons have a diameter of 10^-6 m. Suppose that 10^6 processors each simulated 1 mm^3 of brain tissue. Each cube would have 10^5 neurons, 10^9 synapses and 10^6 I/O at 10 to 100 bits per second each. The internal weight matrix would be dense. It could be represented as an array of 10^10 elements with 10^11 to 10^12 operations per second. This is not unreasonable for one processor. So it seems that a human brain could be simulated by a million off the shelf processors or a few hundred Jaguars. Furthermore, if a few fail then the simulation will degrade gracefully because the human brain is fault tolerant.
+<br>
+<p>Of course this is a different problem than writing the software or obtaining appropriate training data.
+<br>
+<p>&nbsp;-- Matt Mahoney, <a href="mailto:matmahoney@yahoo.com?Subject=Re:%20[sl4]%20The%20Jaguar%20Supercomputer">matmahoney@yahoo.com</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="20649.html">Luke: "Re: [sl4] The Jaguar Supercomputer"</a>
+<li><strong>Previous message:</strong> <a href="20647.html">Luke: "Re: [sl4] The Jaguar Supercomputer"</a>
+<li><strong>In reply to:</strong> <a href="20647.html">Luke: "Re: [sl4] The Jaguar Supercomputer"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="20649.html">Luke: "Re: [sl4] The Jaguar Supercomputer"</a>
+<li><strong>Reply:</strong> <a href="20649.html">Luke: "Re: [sl4] The Jaguar Supercomputer"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#20648">[ date ]</a>
+<a href="index.html#20648">[ thread ]</a>
+<a href="subject.html#20648">[ subject ]</a>
+<a href="author.html#20648">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:01:05 MDT
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Systems engineering</title>
+<meta name="Author" content="Michael Wilson (mwdestinystar@yahoo.co.uk)">
+<meta name="Subject" content="RE: Systems engineering">
+<meta name="Date" content="2005-05-20">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Systems engineering</h1>
+<!-- received="Fri May 20 11:41:12 2005" -->
+<!-- isoreceived="20050520174112" -->
+<!-- sent="Fri, 20 May 2005 18:41:09 +0100 (BST)" -->
+<!-- isosent="20050520174109" -->
+<!-- name="Michael Wilson" -->
+<!-- email="mwdestinystar@yahoo.co.uk" -->
+<!-- subject="RE: Systems engineering" -->
+<!-- id="20050520174109.25274.qmail@web26710.mail.ukl.yahoo.com" -->
+<!-- charset="iso-8859-1" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Michael Wilson (<a href="mailto:mwdestinystar@yahoo.co.uk?Subject=RE:%20Systems%20engineering"><em>mwdestinystar@yahoo.co.uk</em></a>)<br>
+<strong>Date:</strong> Fri May 20 2005 - 11:41:09 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="11333.html">Jeff Medina: "Update: Online reading/discussion groups"</a>
+<li><strong>Previous message:</strong> <a href="11331.html">Dani Eder: "RE: Systems engineering"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11332">[ date ]</a>
+<a href="index.html#11332">[ thread ]</a>
+<a href="subject.html#11332">[ subject ]</a>
+<a href="author.html#11332">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+The debate about minimum compute power required for AGI in general
+<br>
+and brain simulation in particular is relevant and open, but something
+<br>
+of a dead horse for the SL4 list. However;
+<br>
+<p><em>&gt; 100 to 100,000 Tflops assumes simulating a parallel process on
+</em><br>
+<em>&gt; serial computing substrate correct? How then does the advent of
+</em><br>
+<em>&gt; parallel hardware such as the Cell Processor (2 Tflops each)
+</em><br>
+<em>&gt; factor into the calculation?
+</em><br>
+<p>Firstly absolute compute power is a distinct measurement from the
+<br>
+parallelisability of a particular computation. In a wholly serial
+<br>
+process the dependency between calculations forms a single chain.
+<br>
+In a wholly parallel operation (e.g. vector multiplication) every
+<br>
+calculation can be performed independently. In addition to the
+<br>
+absolute parallelisability of a process (i.e. minimum serial
+<br>
+step count and minimum parallelism required to achieve this),
+<br>
+computational and memory locality is very important as they
+<br>
+determine internode and CPU-memory bandwidth requirements.
+<br>
+<p>Secondly the Cell processor /does not/ have a capability of 2
+<br>
+teraflops. This is the claimed 'total system performance' of the
+<br>
+PS3, the vast majority of which is contributed by the dedicated
+<br>
+graphics processor. The document you linked to only claims 300
+<br>
+gigaflops and that is both out of date (for the PS3 at least the
+<br>
+Cell will have 7 SPEs not 8 and will run at 3.2 GHz not 4.6 GHz)
+<br>
+and wildly optimistic. Looking at the functional units, instruction
+<br>
+set and issue width of the Cell it has a theoretical peak capacity
+<br>
+of around 200 gigaflops, assuming the bulk of your computation
+<br>
+consists of vector operations on 32-bit floats (16-bit data will
+<br>
+double that). However for various reasons the IPC of the cell is
+<br>
+likely to be relatively low, so it's unlikely that any practial
+<br>
+code will exceed 100 gigaflops. That's still very impressive, but
+<br>
+it's 20 times lower than the impression you gave and even that
+<br>
+relies on AGI code being reasonably parallelisable at the vector,
+<br>
+instruction and thread level. I'm excited about the Cell too, but
+<br>
+lets not get carried away by the waves of spin and PR.
+<br>
+<p>&nbsp;* Michael Wilson
+<br>
+<p><p><p><p><p><p><p><p><p><p><p><p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+___________________________________________________________ 
+<br>
+How much free photo storage do you get? Store your holiday 
+<br>
+snaps for FREE with Yahoo! Photos <a href="http://uk.photos.yahoo.com">http://uk.photos.yahoo.com</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="11333.html">Jeff Medina: "Update: Online reading/discussion groups"</a>
+<li><strong>Previous message:</strong> <a href="11331.html">Dani Eder: "RE: Systems engineering"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11332">[ date ]</a>
+<a href="index.html#11332">[ thread ]</a>
+<a href="subject.html#11332">[ subject ]</a>
+<a href="author.html#11332">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:51 MDT
+</em></small></p>
+</body>
+</html>

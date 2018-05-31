@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Hardware Progess: $165/Gflop</title>
+<meta name="Author" content="J. Andrew Rogers (andrew@ceruleansystems.com)">
+<meta name="Subject" content="Re: Hardware Progess: $165/Gflop">
+<meta name="Date" content="2004-01-03">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Hardware Progess: $165/Gflop</h1>
+<!-- received="Sat Jan  3 10:55:19 2004" -->
+<!-- isoreceived="20040103175519" -->
+<!-- sent="Sat, 03 Jan 2004 09:55:06 -0800" -->
+<!-- isosent="20040103175506" -->
+<!-- name="J. Andrew Rogers" -->
+<!-- email="andrew@ceruleansystems.com" -->
+<!-- subject="Re: Hardware Progess: $165/Gflop" -->
+<!-- id="BC1C41FA.89A9%andrew@ceruleansystems.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="1.5.4.32.20040103043031.00904e64@mailer.ran.es" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> J. Andrew Rogers (<a href="mailto:andrew@ceruleansystems.com?Subject=Re:%20Hardware%20Progess:%20$165/Gflop"><em>andrew@ceruleansystems.com</em></a>)<br>
+<strong>Date:</strong> Sat Jan 03 2004 - 10:55:06 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="7556.html">Randall Randall: "Re: An essay I just wrote on the Singularity."</a>
+<li><strong>Previous message:</strong> <a href="7554.html">Lawrence Foard: "Re: An essay I just wrote on the Singularity."</a>
+<li><strong>In reply to:</strong> <a href="7531.html">Marcos Guillen: "Re: Hardware Progess: $165/Gflop"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="7564.html">Dani Eder: "Re: Hardware Progess: $165/Gflop"</a>
+<li><strong>Reply:</strong> <a href="7564.html">Dani Eder: "Re: Hardware Progess: $165/Gflop"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7555">[ date ]</a>
+<a href="index.html#7555">[ thread ]</a>
+<a href="subject.html#7555">[ subject ]</a>
+<a href="author.html#7555">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On 1/2/04 8:30 PM, &quot;Marcos Guillen&quot; &lt;<a href="mailto:marcos@ad.com?Subject=Re:%20Hardware%20Progess:%20$165/Gflop">marcos@ad.com</a>&gt; wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; - Memory throughput is vital, you'll do much better with less memory per
+</em><br>
+<em>&gt; node and a faster processors with a faster bus, preferable capable of 400
+</em><br>
+<em>&gt; Mhz DDRAM.
+</em><br>
+<p><p>While I share a strong preference for the fastest memory possible, having
+<br>
+smaller quantities of faster memory is an untenable trade-off for many
+<br>
+applications.  I would actually trade CPU performance for more and faster
+<br>
+memory.
+<br>
+<p><p><em>&gt; - Giga Ethernet card is not that expensive, and is very handy while working
+</em><br>
+<em>&gt; with fast pathways for visual and auditory cortex related nodes.
+</em><br>
+<p><p>The latency is still problematic though.  Few applications find FastE to
+<br>
+have inadequate bandwidth that also do not find Ethernet (GigE or otherwise)
+<br>
+to have inadequate latency performance.
+<br>
+<p>&nbsp;
+<br>
+<em>&gt; Finally, the &quot;Gflops&quot; figure is tricky. You are not going to be dealing with
+</em><br>
+<em>&gt; 64bit operations, but mostly with 8bit operations, so good old Top500.org
+</em><br>
+<em>&gt; Linpack test becomes almost meaningless.
+</em><br>
+<p><p>Worth repeating.  Linpack is an extremely narrow benchmark that basically
+<br>
+measures a CPUs ability to execute DSP-like operations.  If your application
+<br>
+is not bound by DSP-like instruction throughput, Linpack comparisons mean
+<br>
+almost nothing.
+<br>
+<p>A stark example of this is the recent Virginia Tech PPC970 cluster being
+<br>
+ranked as #3 on the new Top500 list.  For most applications, the AMD64
+<br>
+Opteron systems soundly outperform the G5/PPC970 clock for clock, yet on the
+<br>
+Top500 Linpack benchmark it looks like the PPC970 soundly thrashes the
+<br>
+Opteron.  Why?  Because the PPC970 has native DSP-like instructions in its
+<br>
+ISA, and if you benchmark its performance for DSP-like code it will use this
+<br>
+to great advantage.  For almost anything that does not look like DSP code
+<br>
+(e.g. lots of mult-add matrix operations), the PPC970 is a fair-to-middling
+<br>
+performer clock for clock.
+<br>
+<p>In short, the best benchmark is your own code.  Different architectures have
+<br>
+different strengths, and depending on what you are doing this can make a big
+<br>
+difference.
+<br>
+<p>To sum up mass market CPUs:
+<br>
+<p>Intel:  Very strong integer performance
+<br>
+AMD:  Best memory and GP floating point
+<br>
+PPC:  Best DSP performance
+<br>
+<p><p><pre>
+-- 
+J. Andrew Rogers (<a href="mailto:andrew@ceruleansystems.com?Subject=Re:%20Hardware%20Progess:%20$165/Gflop">andrew@ceruleansystems.com</a>)
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="7556.html">Randall Randall: "Re: An essay I just wrote on the Singularity."</a>
+<li><strong>Previous message:</strong> <a href="7554.html">Lawrence Foard: "Re: An essay I just wrote on the Singularity."</a>
+<li><strong>In reply to:</strong> <a href="7531.html">Marcos Guillen: "Re: Hardware Progess: $165/Gflop"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="7564.html">Dani Eder: "Re: Hardware Progess: $165/Gflop"</a>
+<li><strong>Reply:</strong> <a href="7564.html">Dani Eder: "Re: Hardware Progess: $165/Gflop"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7555">[ date ]</a>
+<a href="index.html#7555">[ thread ]</a>
+<a href="subject.html#7555">[ subject ]</a>
+<a href="author.html#7555">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:43 MDT
+</em></small></p>
+</body>
+</html>

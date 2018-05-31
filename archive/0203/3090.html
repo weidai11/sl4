@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Webmind Solutions - Was: G. Chaitin on AI</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: Webmind Solutions - Was: G. Chaitin on AI">
+<meta name="Date" content="2002-03-03">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Webmind Solutions - Was: G. Chaitin on AI</h1>
+<!-- received="Sun Mar 03 12:41:35 2002" -->
+<!-- isoreceived="20020303194135" -->
+<!-- sent="Sun, 3 Mar 2002 10:45:03 -0700" -->
+<!-- isosent="20020303174503" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: Webmind Solutions - Was: G. Chaitin on AI" -->
+<!-- id="LAEGJLOGJIOELPNIOOAJAEGPCEAA.ben@goertzel.org" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="OE52W8CHjhezylN8IgE0001af71@hotmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20Webmind%20Solutions%20-%20Was:%20G.%20Chaitin%20on%20AI"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Sun Mar 03 2002 - 10:45:03 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3091.html">Ben Goertzel: "RE: Webmind Solutions - Was: G. Chaitin on AI"</a>
+<li><strong>Previous message:</strong> <a href="3089.html">Michael Roy Ames: "Webmind Solutions - Was: G. Chaitin on AI"</a>
+<li><strong>In reply to:</strong> <a href="3089.html">Michael Roy Ames: "Webmind Solutions - Was: G. Chaitin on AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3091.html">Ben Goertzel: "RE: Webmind Solutions - Was: G. Chaitin on AI"</a>
+<li><strong>Reply:</strong> <a href="3091.html">Ben Goertzel: "RE: Webmind Solutions - Was: G. Chaitin on AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3090">[ date ]</a>
+<a href="index.html#3090">[ thread ]</a>
+<a href="subject.html#3090">[ subject ]</a>
+<a href="author.html#3090">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; I have thought on this problem a little - the problem of how to
+</em><br>
+<em>&gt; monitor/track/debug a process distributed across multiple independent
+</em><br>
+<em>&gt; machines.  Most of my 'implementable' ideas (as apposed to 'crazy' ideas)
+</em><br>
+<em>&gt; have been based on the 'transaction' paradigm.  Processes churn away in
+</em><br>
+<em>&gt; multiple threads, multiple machines, at different speeds, and
+</em><br>
+<em>&gt; when they have
+</em><br>
+<em>&gt; a result of some kind, they 'commit' that result to a central
+</em><br>
+<em>&gt; location.  At
+</em><br>
+<em>&gt; this point the result becomes visible to any other process that cares to
+</em><br>
+<em>&gt; look, and also to the operating console - or debug module - whatever it is
+</em><br>
+<em>&gt; you want to call it.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Your reply didn't say how you solved this problem... did you?  Or haven't
+</em><br>
+<em>&gt; you got there yet?
+</em><br>
+<p>We did *not* solve the problem.  We had lots of interesting ideas about it
+<br>
+too.
+<br>
+<p>We decided, for now, to *ignore* the problem by making a system sufficiently
+<br>
+space and time efficient that we could run all the components together on
+<br>
+*one* machine.  However, barring some radical near-term hardware innovation,
+<br>
+this just
+<br>
+defers the problem, it doesn't resolve it.
+<br>
+<p>The transaction paradigm was our most recent and probably best approach,
+<br>
+actually.
+<br>
+The design we had for Webmind AI Engine 1.0 (a system never to be built now
+<br>
+;)
+<br>
+involved:
+<br>
+<p>--&gt; A centralized repository called the MindDB
+<br>
+<p>--&gt; A collection of MindServers, carrying out particular mixes of AI
+<br>
+processes, periodically committing data (and gathering data) from the MindDB
+<br>
+<p>Complications:
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a) it turns out some MindServers really need to be distributed themselves
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b) committing *every* interim result achieved in a MindServer isn't
+<br>
+necessarily realistic performance-wise, so one needs to get artful in
+<br>
+figuring out how often each one should commit
+<br>
+<p><p>The MindDB had many uses besides monitoring and debugging in this
+<br>
+architecture, of course.
+<br>
+<p>We will likely do something like this with Novamente when the time comes (a
+<br>
+year from now?).
+<br>
+<p><em>&gt; This jives with both my own experience building
+</em><br>
+<em>&gt; boring-old-business-applications, also with my study of other's software
+</em><br>
+<em>&gt; solutions to difficult problems, and with personal experimentation.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; My current guestimate as to how CPU cycles will be allocated to run a
+</em><br>
+<em>&gt; General Intelligence is:
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; 40% - What ve's thinking about
+</em><br>
+<em>&gt;          - Keeping track of Data - Basically: Database services
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; 40% - How ve's thinking about it
+</em><br>
+<em>&gt;          - Keeping track of Process - Messaging/IPC, O/S, Load Balancing,
+</em><br>
+<em>&gt;             Clustering/Parallel-Processing
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; 20% - Actual thinking
+</em><br>
+<em>&gt;         - &quot;AI&quot; algorithms - Sensory Modalities, Concept
+</em><br>
+<em>&gt; Manipulation, Goals,
+</em><br>
+<em>&gt;               Predictions, Decisions, Actions.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; It might seem strange/inefficient/just-plain-nuts to expend 5 units of
+</em><br>
+<em>&gt; 'effort' in order to make 1 unit of 'progress'... but I cannot see any way
+</em><br>
+<em>&gt; around it.  &lt;---(Super Geniuses please insert 'Way Around It' here)
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Ben, how closely does this correspond with your experience so far?
+</em><br>
+<p>Well, you left out one interesting category, which is *adaptively optimizing
+<br>
+the parameters
+<br>
+of AI algorithms* ...
+<br>
+<p>I suppose my guess is a little less pessimistic than yours, more like
+<br>
+<p>40% - actual thinking
+<br>
+10% - optimizing parameters of AI algorithms
+<br>
+20% - keeping track of data
+<br>
+30% - managing processing
+<br>
+<p>But this presumes a very specialized, well-tuned system for doing the data
+<br>
+and processing management....
+<br>
+<p>Anyway, I think your basic intuition is realistic.  It's depressing at first
+<br>
+but in the end, maybe that's just what mind is like.  A lot of what goes on
+<br>
+in the brain is not directly &quot;thinking&quot; either.
+<br>
+<p>-- Ben
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3091.html">Ben Goertzel: "RE: Webmind Solutions - Was: G. Chaitin on AI"</a>
+<li><strong>Previous message:</strong> <a href="3089.html">Michael Roy Ames: "Webmind Solutions - Was: G. Chaitin on AI"</a>
+<li><strong>In reply to:</strong> <a href="3089.html">Michael Roy Ames: "Webmind Solutions - Was: G. Chaitin on AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3091.html">Ben Goertzel: "RE: Webmind Solutions - Was: G. Chaitin on AI"</a>
+<li><strong>Reply:</strong> <a href="3091.html">Ben Goertzel: "RE: Webmind Solutions - Was: G. Chaitin on AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3090">[ date ]</a>
+<a href="index.html#3090">[ thread ]</a>
+<a href="subject.html#3090">[ subject ]</a>
+<a href="author.html#3090">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:37 MDT
+</em></small></p>
+</body>
+</html>

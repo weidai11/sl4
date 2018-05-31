@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: A fairly concrete path to the Singularity</title>
+<meta name="Author" content="Patrick McCuller (patrick@kia.net)">
+<meta name="Subject" content="RE: A fairly concrete path to the Singularity">
+<meta name="Date" content="2001-04-26">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: A fairly concrete path to the Singularity</h1>
+<!-- received="Thu Apr 26 12:55:10 2001" -->
+<!-- isoreceived="20010426185510" -->
+<!-- sent="Thu, 26 Apr 2001 12:58:30 -0400" -->
+<!-- isosent="20010426165830" -->
+<!-- name="Patrick McCuller" -->
+<!-- email="patrick@kia.net" -->
+<!-- subject="RE: A fairly concrete path to the Singularity" -->
+<!-- id="LOBBLDGHBFLPJDFBIPFEIEKPGLAA.patrick@kia.net" -->
+<!-- charset="Windows-1252" -->
+<!-- inreplyto="NDBBIBGFAPPPBODIPJMMEEDHFHAA.ben@webmind.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Patrick McCuller (<a href="mailto:patrick@kia.net?Subject=RE:%20A%20fairly%20concrete%20path%20to%20the%20Singularity"><em>patrick@kia.net</em></a>)<br>
+<strong>Date:</strong> Thu Apr 26 2001 - 10:58:30 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1223.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>Previous message:</strong> <a href="1221.html">Ben Goertzel: "A fairly concrete path to the Singularity"</a>
+<li><strong>In reply to:</strong> <a href="1221.html">Ben Goertzel: "A fairly concrete path to the Singularity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1223.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>Reply:</strong> <a href="1223.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1222">[ date ]</a>
+<a href="index.html#1222">[ thread ]</a>
+<a href="subject.html#1222">[ subject ]</a>
+<a href="author.html#1222">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; The first is the creation of a formalized database of knowledge about
+</em><br>
+<em>&gt; algorithms, programming languages and AI.  At www.mizar.org, there is a
+</em><br>
+<em>&gt; formalized database of knowledge about undergraduate and some graduate-level
+</em><br>
+<em>&gt; mathematics.  But it's scanty on CS.  Now, I am well aware that formalized
+</em><br>
+<em>&gt; theorems and proofs are not the essence of mathematics.  But they're an
+</em><br>
+<em>&gt; important component, which a young AI will more easily absorb from
+</em><br>
+<em>&gt; formalized treatments than from journal math articles, which have their own
+</em><br>
+<em>&gt; peculiar social and psychological assumptions underlying them, different
+</em><br>
+<em>&gt; from the patterns underlying the math itself.
+</em><br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I think this is a valid approach. One word of caution is that they've been
+<br>
+working on this for 28 years. Even with 20,000 formalized theorems, they still
+<br>
+have a way to go.
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mizar syntax is not sophisticated enough for codifying CS knowledge
+<br>
+(admittedly, you can accomplish a hell of a lot with it)... and there isn't an
+<br>
+Office of Naval Research funding the project. It's a great idea, but I'm
+<br>
+interested in hearing more ideas on how to accomplish it.
+<br>
+<p><em>&gt;
+</em><br>
+<em>&gt; The second is the creation of an efficient &amp; scalable programming language
+</em><br>
+<em>&gt; with a purely formal semantics.  C# may fulfill this criterion; Peter Voss
+</em><br>
+<em>&gt; is evaluating it for this purpose.  Java is formal but not yet efficient and
+</em><br>
+<em>&gt; scalable enough; an improved JVM could solve the problem, particularly a JVM
+</em><br>
+<em>&gt; specialized for large-scale AI.  C is efficient and scalable but its use of
+</em><br>
+<em>&gt; pointers means that its formal semantics needs to include a formal model of
+</em><br>
+<em>&gt; heap memory, which  makes the task of inference-driven self-modification
+</em><br>
+<em>&gt; MUCH more difficult for a C program.  [When I say C I include C++]
+</em><br>
+<p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I think your concerns about Java's performance are based on two things.
+<br>
+First, your were using it for a high performance application just before it
+<br>
+was really ready for it - you saw a lot of blood. Second, you were trying to
+<br>
+use it on cheap hardware.
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I'm sure based on the bills you paid you don't think x4 processor PCs with
+<br>
+4GB of RAM is cheap, but you are also aware that much better alternatives
+<br>
+exist.
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;These short papers introduce some high performance Java projects:
+<br>
+<p><a href="http://www.developer.ibm.com/java/j2/IBM_Java_2_Intel.pdf">http://www.developer.ibm.com/java/j2/IBM_Java_2_Intel.pdf</a>
+<br>
+<p><a href="http://himalaya.compaq.com/docs/IO/4791/ATT/javaprb.pdf">http://himalaya.compaq.com/docs/IO/4791/ATT/javaprb.pdf</a>
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Building an AI with Java, you have a lot riding on high performance Java. IBM
+<br>
+and COMPAQ have tens of billions riding on high performance Java.
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In truth, I would not rely on x4 PCs to accomplish any difficult task. I
+<br>
+would buy or steal better hardware, namely 64 bit hardware such as alphas.
+<br>
+They have had a functional JVM since, I think, 1996, running at 64 bits with
+<br>
+64 bit memory addressing.
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More work accomplished on each machine means fewer messages between machines
+<br>
+for the same amount of work. That coupled with IBM's (or whoever's) object
+<br>
+serialization performance improvements greatly reduces the problems you met. A
+<br>
+caveat, though, is that distributed object systems always take a performance
+<br>
+hit, there's nothing you can do about this architectural reality.
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Memory space goes to 64 bit. That's more RAM than you're likely to stuff into
+<br>
+a computer.
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Garbage collection is greatly sped up, with options to tweak.
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I would also consider switching from RMI to CORBA for your message-passing
+<br>
+needs (a lot of this work could be done by people who understand RMI and
+<br>
+CORBA, but not AI, saving yourself a lot of trouble finding people.)
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The advantages of staying with Java and switching to CORBA and a 64 bit
+<br>
+architecture are that you keep a lot of your code: you do have many years'
+<br>
+effort already accomplished in terms of code. Write system components in
+<br>
+languages other than Java when you need to.
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A note on C#:
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I am also intrigued with C#. It tests nicely, though there are some problems
+<br>
+and it will take a couple of years before all the kinks are worked out. And
+<br>
+that's one problem you must consider: all the headache you got from going with
+<br>
+Java early, you will get again with C#.
+<br>
+<p><p>Patrick McCuller
+<br>
+<p><em>&gt;
+</em><br>
+<em>&gt; I think that this picture of the path to the Singularity is a little
+</em><br>
+<em>&gt; different from that of Eliezer.  But I'm not sure.  My sense is that he
+</em><br>
+<em>&gt; views self-modification as entering into the picture earlier, perhaps in
+</em><br>
+<em>&gt; stage 1, as the best way of getting to the first &quot;fairly intelligent AI.&quot;
+</em><br>
+<em>&gt; I'm not 100% sure this is wrong, but after a lot of thought I have not seen
+</em><br>
+<em>&gt; a good way to do this, whereas I have a pretty clear picture of how to get
+</em><br>
+<em>&gt; to the Singularity according to the steps I've outlined here.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; -- Ben
+</em><br>
+<em>&gt;
+</em><br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1223.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>Previous message:</strong> <a href="1221.html">Ben Goertzel: "A fairly concrete path to the Singularity"</a>
+<li><strong>In reply to:</strong> <a href="1221.html">Ben Goertzel: "A fairly concrete path to the Singularity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1223.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>Reply:</strong> <a href="1223.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1222">[ date ]</a>
+<a href="index.html#1222">[ thread ]</a>
+<a href="subject.html#1222">[ subject ]</a>
+<a href="author.html#1222">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

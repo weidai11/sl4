@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Compassion vs Respect; Exponential discounting of utility (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)</title>
+<meta name="Author" content="Tim Freeman (tim@fungible.com)">
+<meta name="Subject" content="Compassion vs Respect; Exponential discounting of utility (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)">
+<meta name="Date" content="2007-12-09">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Compassion vs Respect; Exponential discounting of utility (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)</h1>
+<!-- received="Sun Dec  9 10:30:06 2007" -->
+<!-- isoreceived="20071209173006" -->
+<!-- sent="Sun,  9 Dec 2007 07:48:00 -0700" -->
+<!-- isosent="20071209144800" -->
+<!-- name="Tim Freeman" -->
+<!-- email="tim@fungible.com" -->
+<!-- subject="Compassion vs Respect; Exponential discounting of utility (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)" -->
+<!-- id="20071209172714.22097D28BA@fungible.com" -->
+<!-- inreplyto="8760b3f20712030910s3ea04427j9b5695ba80edbdd7@mail.gmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Tim Freeman (<a href="mailto:tim@fungible.com?Subject=Re:%20Compassion%20vs%20Respect;%20Exponential%20discounting%20of%20utility%20(was%20Re:%20Building%20a%20friendly%20AI%20from%20a%20&quot;just%20do%20what%20I%20tell%20you&quot;%20AI)"><em>tim@fungible.com</em></a>)<br>
+<strong>Date:</strong> Sun Dec 09 2007 - 07:48:00 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="17387.html">Tim Freeman: "Re: Compassion vs Respect; Exponential discounting of utility (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)"</a>
+<li><strong>Previous message:</strong> <a href="17385.html">Rick Smith: "Re: Re: How to make a slave (was: Building a friendly AI)"</a>
+<li><strong>In reply to:</strong> <a href="17359.html">Joshua Fox: "Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="17387.html">Tim Freeman: "Re: Compassion vs Respect; Exponential discounting of utility (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)"</a>
+<li><strong>Reply:</strong> <a href="17387.html">Tim Freeman: "Re: Compassion vs Respect; Exponential discounting of utility (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)"</a>
+<li><strong>Reply:</strong> <a href="17391.html">Joshua Fox: "Re: Compassion vs Respect; Exponential discounting of utility (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#17386">[ date ]</a>
+<a href="index.html#17386">[ thread ]</a>
+<a href="subject.html#17386">[ subject ]</a>
+<a href="author.html#17386">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+2007/11/21, Tim Freeman &lt;<a href="mailto:tim@fungible.com?Subject=Re:%20Compassion%20vs%20Respect;%20Exponential%20discounting%20of%20utility%20(was%20Re:%20Building%20a%20friendly%20AI%20from%20a%20&quot;just%20do%20what%20I%20tell%20you&quot;%20AI)">tim@fungible.com</a> &gt;:
+<br>
+<em>&gt; ... <a href="http://www.fungible.com/respect/index.html">http://www.fungible.com/respect/index.html</a>.  Unfortunately the paper
+</em><br>
+<em>&gt; needs revision and hasn't yet made sense to someone who I didn't
+</em><br>
+<em>&gt; explain it to personally.
+</em><br>
+<p>From: &quot;Joshua Fox&quot; &lt;<a href="mailto:joshua@joshuafox.com?Subject=Re:%20Compassion%20vs%20Respect;%20Exponential%20discounting%20of%20utility%20(was%20Re:%20Building%20a%20friendly%20AI%20from%20a%20&quot;just%20do%20what%20I%20tell%20you&quot;%20AI)">joshua@joshuafox.com</a>&gt;
+<br>
+<p>(Tim skips some good stuff for lack of adequate response yet.)
+<br>
+<p><em>&gt;- I [Joshua] don't get why compassion and respect have to be
+</em><br>
+<em>&gt;separated. Both mean that the AI needs a utility function which
+</em><br>
+<em>&gt;matches another agent's. In the case of compassion, positive utility,
+</em><br>
+<em>&gt;and in the case of respect, negative.  Since the AI can give
+</em><br>
+<em>&gt;different weightings to different agent's utility, it seems that we
+</em><br>
+<em>&gt;can cover &quot;compassion&quot; and &quot;respect&quot; with a single concept.
+</em><br>
+<p>To review: compassion coefficients define how much the AI values
+<br>
+helping people.  Roughly speaking, when someone is helped, to compute
+<br>
+the contribution to the AI's utility we multiply the beneficiary's
+<br>
+compassion coefficient by the AI's estimate of how much utility the
+<br>
+beneficiary got from the action.
+<br>
+<p>Similarly, respect coefficients define how much the AI wants to avoid
+<br>
+hurting people.  When someone is harmed, to compute the contribution
+<br>
+of that to the AI's utility (a negative number) we multiply the
+<br>
+beneficiary's respect coefficient (a positive number) by the AI's
+<br>
+estimate of how much the victim was harmed (a negative number).
+<br>
+<p>We have several cases:
+<br>
+<p>Having negative coefficients for either is not Friendly. 
+<br>
+<p>Having respect less than compassion leads to difficult-to-understand
+<br>
+consequences and just does not seem useful.
+<br>
+<p>Having respect much greater than compassion leads to an AI that tends
+<br>
+to do nothing.  Most actions can be interpreted as causing minor harm
+<br>
+to someone else.  For example, my metabolism right now consumes oxygen
+<br>
+that would otherwise be available to you and contributes slightly to
+<br>
+global warming, so if the AI were stuck with a similar metabolism and
+<br>
+it had respect without compassion, it would probably kill itself to
+<br>
+avoid this minor ecological damage.
+<br>
+<p>Having respect equal to compassion (and therefore not having to
+<br>
+distinguish between them) is the alternative Joshua is talking about.
+<br>
+An AI with these settings would tend to do &quot;Robin Hood&quot; type behavior,
+<br>
+taking from one person to give to someone else who needs the resources
+<br>
+a little bit more.  These involuntary transfers could be money,
+<br>
+internal organs, or anything else of value.  Well-informed people who
+<br>
+value having higher status than their neighbors, and who are winning
+<br>
+that game at the moment, would want to get rid of the AI.
+<br>
+<p>I don't want that conflict, so I want the respect-to-compassion rato
+<br>
+be large enough so the vast majority of people would not be worse off
+<br>
+if the AI were built, deployed, and it worked as designed.  I don't
+<br>
+like violent crime, so if it were up to me I'd set the ratio between
+<br>
+respect and compassion to be as high as possible while leaving the AI
+<br>
+still motivated to try to prevent most violent crime.  In the paper I
+<br>
+guessed that that ratio might be around 10 or so, but to get the right
+<br>
+number you'd have to feed the AI some videos of violent crime and get
+<br>
+the ratio between the estimated dysutility for the victims and the
+<br>
+estimated utility for the perpetrators.
+<br>
+<p><em>&gt;- Might issues of horizons, time periods, and transaction demarcation be
+</em><br>
+<em>&gt;handled by introducing time into the utility function -- e.g., with
+</em><br>
+<em>&gt;exponential damping/discounting?
+</em><br>
+<p>Exponential discounting fixes the odd behaviors you list, but it adds
+<br>
+others.  If the AI discounts it's utility at 10% per year, and the
+<br>
+economy measured in dollars is growing at 20% per year, and the dollar
+<br>
+cost of utility is constant, then the AI will defer all gratification
+<br>
+until circumstances change.  The people who the AI is nominally
+<br>
+serving might not like that.
+<br>
+<p>There's also a technical problem with exponential discounting, which
+<br>
+is that I don't know how to bound the search if we don't have a finite
+<br>
+time horizon.
+<br>
+<p>There is probably some reasonable solution to this that has the AI
+<br>
+guessing how to do time-discounting at the same time it's guessing
+<br>
+utilities.  The horizon-free scheme described at pages 4-5 of
+<br>
+<a href="http://www.vetta.org/documents/ui_benelearn.pdf">http://www.vetta.org/documents/ui_benelearn.pdf</a> might be part of that
+<br>
+solution.
+<br>
+<p><pre>
+-- 
+Tim Freeman               <a href="http://www.fungible.com">http://www.fungible.com</a>           <a href="mailto:tim@fungible.com?Subject=Re:%20Compassion%20vs%20Respect;%20Exponential%20discounting%20of%20utility%20(was%20Re:%20Building%20a%20friendly%20AI%20from%20a%20&quot;just%20do%20what%20I%20tell%20you&quot;%20AI)">tim@fungible.com</a>
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="17387.html">Tim Freeman: "Re: Compassion vs Respect; Exponential discounting of utility (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)"</a>
+<li><strong>Previous message:</strong> <a href="17385.html">Rick Smith: "Re: Re: How to make a slave (was: Building a friendly AI)"</a>
+<li><strong>In reply to:</strong> <a href="17359.html">Joshua Fox: "Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="17387.html">Tim Freeman: "Re: Compassion vs Respect; Exponential discounting of utility (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)"</a>
+<li><strong>Reply:</strong> <a href="17387.html">Tim Freeman: "Re: Compassion vs Respect; Exponential discounting of utility (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)"</a>
+<li><strong>Reply:</strong> <a href="17391.html">Joshua Fox: "Re: Compassion vs Respect; Exponential discounting of utility (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#17386">[ date ]</a>
+<a href="index.html#17386">[ thread ]</a>
+<a href="subject.html#17386">[ subject ]</a>
+<a href="author.html#17386">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:01:01 MDT
+</em></small></p>
+</body>
+</html>

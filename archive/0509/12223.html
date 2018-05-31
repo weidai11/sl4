@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Introduction</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: Introduction">
+<meta name="Date" content="2005-09-07">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Introduction</h1>
+<!-- received="Wed Sep  7 15:10:29 2005" -->
+<!-- isoreceived="20050907211029" -->
+<!-- sent="Wed, 7 Sep 2005 17:10:24 -0400" -->
+<!-- isosent="20050907211024" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: Introduction" -->
+<!-- id="JNEIJCJJHIEAILJBFHILIEIEGBAA.ben@goertzel.org" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="BF447E8C.2BA3%andrew@ceruleansystems.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20Introduction"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Wed Sep 07 2005 - 15:10:24 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="12224.html">Eliezer S. Yudkowsky: "Fwd: Re: General Intelligence"</a>
+<li><strong>Previous message:</strong> <a href="12222.html">Ben Goertzel: "RE: Tools for AI and Human Genome Project"</a>
+<li><strong>In reply to:</strong> <a href="12218.html">J. Andrew Rogers: "Re: Introduction"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12235.html">Mikko Särelä: "RE: Introduction"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12223">[ date ]</a>
+<a href="index.html#12223">[ thread ]</a>
+<a href="subject.html#12223">[ subject ]</a>
+<a href="author.html#12223">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; On 9/7/05 8:49 AM, &quot;Ben Goertzel&quot; &lt;<a href="mailto:ben@goertzel.org?Subject=RE:%20Introduction">ben@goertzel.org</a>&gt; wrote:
+</em><br>
+<em>&gt; &gt; 1) higher-order expression power similar to Haskell
+</em><br>
+<em>&gt; &gt; 2) easily customizable / extensible syntax
+</em><br>
+<em>&gt; &gt; 3) high performance at networking and (most critically)
+</em><br>
+<em>&gt; large-scale memory
+</em><br>
+<em>&gt; &gt; management, similar to what's achievable via C++ on Unix
+</em><br>
+<em>&gt; &gt; 5) powerful scripting similar to the Unix command line
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; You can get these with a combination of C and number of languages (I use a
+</em><br>
+<em>&gt; tightly integrated C/Python combo).  It is not ideal in some ivory tower
+</em><br>
+<em>&gt; academic sense, but chasing that last bit of perfection is not worth the
+</em><br>
+<em>&gt; effort for the amount of syntactic elegance you may gain from it.
+</em><br>
+<p>This is not really true.  There is no way to do Haskell-style functional
+<br>
+programming in C, C++ or Python without incurring a huge amount of
+<br>
+inefficiency.
+<br>
+<p>For one thing, Haskell does lazy evaluation, which is quite expensive to
+<br>
+emulate in languages with strict evaluation.
+<br>
+<p>The difference between languages with higher-order functions and lazy
+<br>
+evaluation, and languages without these features, is NOT a matter of
+<br>
+syntactic elegance.  It's a matter of semantic expressiveness.  In Haskell
+<br>
+one can express very compactly things that are extremely complex to express
+<br>
+in C++.  Yes, of course, all programming languages have arbitrary expressive
+<br>
+power given the ability to write arbitrarily long programs, but some
+<br>
+languages have the property that software modules useful for AGI are *short
+<br>
+and
+<br>
+simple* written in them, and some have the property that software modules
+<br>
+useful
+<br>
+for AGI are *long and complex* written in them.
+<br>
+<p>LISP far exceeds C++, Java, etc. as an AI language, but it is far inferior
+<br>
+to Haskell due to the lack of strong higher-order typing and lazy
+<br>
+evaluation.
+<br>
+<p>And although one can make efficient LISP programs, the patterns one must
+<br>
+follow
+<br>
+to do so tend to produce LISP code that looks about as nasty as C++ code.
+<br>
+To
+<br>
+get the efficiency in LISP one tends to sacrifice the elegance that makes
+<br>
+LISP
+<br>
+worthwhile.  (I'm talking about current LISPs, there may be future LISPs
+<br>
+that
+<br>
+avoid such problems.)
+<br>
+<p><em>&gt; &gt; but 3 is quite subtle and involves a lot of
+</em><br>
+<em>&gt; &gt; tricky computer science as well as difficult programming.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; I probably spend more time working on this than any other part
+</em><br>
+<em>&gt; because this
+</em><br>
+<em>&gt; is where most of the complexity is hiding.  Easy to ignore but very
+</em><br>
+<em>&gt; important in practice.  Expressive languages are almost
+</em><br>
+<em>&gt; universally lousy in
+</em><br>
+<em>&gt; this regard, but this can be fixed with relative ease in the more
+</em><br>
+<em>&gt; extensible
+</em><br>
+<em>&gt; ones (in a low-level binary sense) if you know how to do the programming.
+</em><br>
+<p>Yes, the need for effective management of large amounts of information in
+<br>
+RAM
+<br>
+is the reason we use C++ for Novamente.  Otherwise we would use Java, or
+<br>
+something
+<br>
+more adventurous like OCamL.  My favorite is Haskell but there is no
+<br>
+scalable
+<br>
+Haskell implementation.
+<br>
+<p>I continue to believe that development of a truly efficient, scalable,
+<br>
+customizable,
+<br>
+network-friendly language with Haskell-like power would make AGI development
+<br>
+a
+<br>
+hell of a lot easier.
+<br>
+<p>But creating such a language would require many man-years of work, and I
+<br>
+don't see
+<br>
+a lot of resources devoted to the problem.  So I guess if we're going to
+<br>
+have an AGI
+<br>
+in the near term, it'll almost surely be written in C++ ...
+<br>
+<p>-- Ben
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="12224.html">Eliezer S. Yudkowsky: "Fwd: Re: General Intelligence"</a>
+<li><strong>Previous message:</strong> <a href="12222.html">Ben Goertzel: "RE: Tools for AI and Human Genome Project"</a>
+<li><strong>In reply to:</strong> <a href="12218.html">J. Andrew Rogers: "Re: Introduction"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12235.html">Mikko Särelä: "RE: Introduction"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12223">[ date ]</a>
+<a href="index.html#12223">[ thread ]</a>
+<a href="subject.html#12223">[ subject ]</a>
+<a href="author.html#12223">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:52 MDT
+</em></small></p>
+</body>
+</html>

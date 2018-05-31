@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: [sl4] Alan Turing's results are profound, but not relevant here.</title>
+<meta name="Author" content="Robin Lee Powell (rlpowell@digitalkingdom.org)">
+<meta name="Subject" content="[sl4] Alan Turing's results are profound, but not relevant here.">
+<meta name="Date" content="2009-10-14">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>[sl4] Alan Turing's results are profound, but not relevant here.</h1>
+<!-- received="Wed Oct 14 01:22:55 2009" -->
+<!-- isoreceived="20091014072255" -->
+<!-- sent="Wed, 14 Oct 2009 00:22:52 -0700" -->
+<!-- isosent="20091014072252" -->
+<!-- name="Robin Lee Powell" -->
+<!-- email="rlpowell@digitalkingdom.org" -->
+<!-- subject="[sl4] Alan Turing's results are profound, but not relevant here." -->
+<!-- id="20091014072252.GT17517@digitalkingdom.org" -->
+<!-- charset="us-ascii" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Robin Lee Powell (<a href="mailto:rlpowell@digitalkingdom.org?Subject=Re:%20[sl4]%20Alan%20Turing's%20results%20are%20profound,%20but%20not%20relevant%20here."><em>rlpowell@digitalkingdom.org</em></a>)<br>
+<strong>Date:</strong> Wed Oct 14 2009 - 01:22:52 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="20514.html">Jordan Stewart: "Re: [sl4] Alan Turing's results are profound"</a>
+<li><strong>Previous message:</strong> <a href="20512.html">Bradley Thomas: "RE: [sl4] I am a Singularitian who does not believe in the Singularity."</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="20521.html">John K Clark: "Re: [sl4] Alan Turing's results are profound"</a>
+<li><strong>Reply:</strong> <a href="20521.html">John K Clark: "Re: [sl4] Alan Turing's results are profound"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#20513">[ date ]</a>
+<a href="index.html#20513">[ thread ]</a>
+<a href="subject.html#20513">[ subject ]</a>
+<a href="author.html#20513">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+I previously mentioned an ACM paper about this,
+<br>
+<a href="http://portal.acm.org/citation.cfm?id=1052796.1052798">http://portal.acm.org/citation.cfm?id=1052796.1052798</a>
+<br>
+<p>I've got a copy.  It does, in fact, prove that the halting
+<br>
+problem is only undecidable for infinite computers:
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Theorem 1.  On a realistic computer CR a nonhalting computation
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;can in principle be detected.  The Halting Problem is
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unsolvable only for computers which possess an infinite memory. 
+<br>
+<p>I will not actually reproduce the math here; that would be rude to
+<br>
+the authors, at the very least, and copyright violation.  I will,
+<br>
+however, summarize the method:
+<br>
+<p>1.  Enumerate all possible states of both CPU and memory.  Forbid
+<br>
+any weird things outside of the scope of the Turing machine
+<br>
+formalism, like I/O (to things other than memory).  Call the total
+<br>
+number of possible states N.  We're talking about the Turing machine
+<br>
+formalism here, so the algorithm must be reducible to nothing but an
+<br>
+FSM and the memory the FSM acts on.  Note that N is the number of
+<br>
+possible states of both the FSM *and* the memory, so it's (FSM
+<br>
+states) * ( (number of bits in RAM)^2 ).
+<br>
+<p>2.  Run the algorithm for at most N+1 steps.  At every step, mark
+<br>
+the state off in your enumeration.  Stop when:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- You reach a state (of both the FSM and memory) that you've
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;seen before.  Since the Turing machine formalism is entirely
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deterministic, the algorithm is in an infinite loop through
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this state, and you're done: does not halt.
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;- The algorithm halts.  Guaranteed to happen with in N+1 steps,
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;since N is all possible states.
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;- The algorithm runs out of memory.
+<br>
+<p>The authors note:
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;The reader surely has noticed that the above proof is
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;essentially identical to the proof of the Pumping Lemma for
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;regular languages.  Moreover, the same proof as above
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;constitutes a part of the proof of a theorem in the reference
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[Davis-Sigal-Weyuker1994].  Therefore, the abovementioned proof
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;is not novel in theoretical computer science. 
+<br>
+<p>Which was the point many of us have been trying to make: John Clark
+<br>
+clearly has no background in formal CS, or he would not have been
+<br>
+asserting obviously incorect (to someone with such a background)
+<br>
+things like &quot;Yes, so if you have limitations even with infinite
+<br>
+memory you sure as hell are going to have limitations with a real
+<br>
+computer with finite memory.&quot; in response to &quot;The undecidability of
+<br>
+the Halting Problem is predicated on infinite memory.&quot;
+<br>
+<p>He did, correctly, assert that this method isn't usually useful;
+<br>
+the authors of this paper make the same comment:
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Unfortunately,  N will ordinarily be such a huge number that
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this result is only theoretical, it does not lead to a practical
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;algorithm.  And of course the detection of CR returning to Sk
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;requires such gigantic memory and running time capacity from the
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;agent which observes CR that this algorithm cannot be
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;practically implemented. 
+<br>
+<p>However, I disgree on that point.  It is quite possible to break a
+<br>
+program into parts that can be reasoned about formally in this way,
+<br>
+and everything else (I/O, true concurrency, true randomness, etc);
+<br>
+Haskell does this more or less automatically, for example.
+<br>
+<p>Given only the formalizable parts of the code, it is then possible
+<br>
+to break that down into component parts.  The lowest level
+<br>
+components can be tested directly, and the components that hold
+<br>
+those together can be tested with stubs for the lowest level
+<br>
+components.
+<br>
+<p>At that point, it actually becomes pretty tractable; a single
+<br>
+functional (functional in the formal sense; anything that isn't
+<br>
+functional in the formal CS sense isn't reducible to a Turing
+<br>
+machine, so none of this works anyways) function might be a few
+<br>
+thousand machine language instructions, and might be reasonably
+<br>
+expected in non-erroring cases to only take up a few mebibyets of
+<br>
+memory, with an input measured probably in bytes.  Certainly code
+<br>
+can be written in such a way to make that the case, albeit with some
+<br>
+effort.
+<br>
+<p>A that point, we're talking about terabytes or less of possible
+<br>
+states, and you can buy drives that big these days.
+<br>
+<p>It would be entirely reasonable for a machine mind to, as its first
+<br>
+action, decompose and test all its code in this fashion.
+<br>
+<p>And, of course, none of this has anything to do whatsoever with goal
+<br>
+systems; we're talking about features of computation in general.
+<br>
+Having a non-fixed goal system, whatever that means, isn't some kind
+<br>
+of magic want that makes you immune to the halting problem, as John
+<br>
+seems to think.  Choosing to get bored and give up is, from a formal
+<br>
+computational perspective, no different from the seperate thread I
+<br>
+suggested: they're both just methods of noticing that progress isn't
+<br>
+being made, and choosing to try something else.
+<br>
+<p>A mind that responds to goals by always trying the same thing over
+<br>
+and over again, even if that leads to a pointless infinite loop,
+<br>
+which is what John seems to be worried about, isn't a &quot;fixed goal
+<br>
+mind&quot;, it's a moron.
+<br>
+<p>-Robin
+<br>
+<p>PS: I hope that gives those of you who thought I was simply berating
+<br>
+John out of turn a different perspective?  Note that I've tried to
+<br>
+do this with him several times before, and it's never helped.
+<br>
+<p><pre>
+-- 
+They say:  &quot;The first AIs will be built by the military as weapons.&quot;
+And I'm  thinking:  &quot;Does it even occur to you to try for something
+other  than  the default  outcome?&quot;  See <a href="http://shrunklink.com/cdiz">http://shrunklink.com/cdiz</a>
+<a href="http://www.digitalkingdom.org/~rlpowell/">http://www.digitalkingdom.org/~rlpowell/</a> *** <a href="http://www.lojban.org/">http://www.lojban.org/</a>
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="20514.html">Jordan Stewart: "Re: [sl4] Alan Turing's results are profound"</a>
+<li><strong>Previous message:</strong> <a href="20512.html">Bradley Thomas: "RE: [sl4] I am a Singularitian who does not believe in the Singularity."</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="20521.html">John K Clark: "Re: [sl4] Alan Turing's results are profound"</a>
+<li><strong>Reply:</strong> <a href="20521.html">John K Clark: "Re: [sl4] Alan Turing's results are profound"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#20513">[ date ]</a>
+<a href="index.html#20513">[ thread ]</a>
+<a href="subject.html#20513">[ subject ]</a>
+<a href="author.html#20513">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:01:05 MDT
+</em></small></p>
+</body>
+</html>

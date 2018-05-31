@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: &quot;Real&quot; programming and seed AI</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: &quot;Real&quot; programming and seed AI">
+<meta name="Date" content="2002-02-07">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: &quot;Real&quot; programming and seed AI</h1>
+<!-- received="Thu Feb 07 19:59:41 2002" -->
+<!-- isoreceived="20020208025941" -->
+<!-- sent="Thu, 7 Feb 2002 17:59:20 -0700" -->
+<!-- isosent="20020208005920" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: &quot;Real&quot; programming and seed AI" -->
+<!-- id="LAEGJLOGJIOELPNIOOAJIECMCDAA.ben@goertzel.org" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="20020208012511.A30324@pino.selwerd.nl" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20&quot;Real&quot;%20programming%20and%20seed%20AI"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Thu Feb 07 2002 - 17:59:20 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="2920.html">Alan Grimes: "Re: &quot;Real&quot; programming and seed AI"</a>
+<li><strong>Previous message:</strong> <a href="2918.html">Remco Gerlich: "Re: &quot;Real&quot; programming and seed AI"</a>
+<li><strong>In reply to:</strong> <a href="2918.html">Remco Gerlich: "Re: &quot;Real&quot; programming and seed AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="2920.html">Alan Grimes: "Re: &quot;Real&quot; programming and seed AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2919">[ date ]</a>
+<a href="index.html#2919">[ thread ]</a>
+<a href="subject.html#2919">[ subject ]</a>
+<a href="author.html#2919">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+I take a fairly dim view of complaints about hardware, OS's and programming
+<br>
+languages not being suitable for AI.  Of course there is some validity to
+<br>
+the complaint, but it's often used as an excuse for lack of AI progress when
+<br>
+the real problem is lack of conceptual understanding.
+<br>
+<p>One view is:
+<br>
+&quot;If you say you  know how to make an AI, put up or shut up.  Write up the
+<br>
+design in equations.  Write it up in pseudocode.  Write it as a formal
+<br>
+program specification.  Show us an AI design that looks workable, show us
+<br>
+why it can't run efficiently on current hardware, OS's and programming
+<br>
+languages, show us in detail why you think it *would* work on some other
+<br>
+kind of hardware.&quot;
+<br>
+<p>Another contrasting view is:
+<br>
+&quot;No, I don't know exactly how to make an AI, but I have an intuition about
+<br>
+it, and I could flesh out this intuition into a detailed design IF I had the
+<br>
+right kind of hardware/OS/programming-language to experiment with.&quot;
+<br>
+<p>There is no doubt that if I had the right massively parallel hardware to
+<br>
+use, equipped with a suitable OS &amp; programming language and
+<br>
+debugging/testing framework, then the process of arriving at the Novamente
+<br>
+AI design would have been vastly faster.  On the other hand, if I had
+<br>
+started out the (Webmind, the predecessor to Novamente) project with a fully
+<br>
+detailed AI design, then I would have been able to figure out pretty well
+<br>
+from the start how to get it working on the hardware at hand (clusters of
+<br>
+SMP machines).
+<br>
+<p>As it is, we started out implementing Webmind by implementing a really
+<br>
+beautiful distributed agents framework, which was basically an &quot;AI OS&quot;
+<br>
+running on top of Java, suitable conceptually for implementing and
+<br>
+experimenting with our AI designs.
+<br>
+<p>Unfortunately, in spite of a lot of clever ideas, we failed to make this AI
+<br>
+OS adequately efficient.  But experimenting with our AI ideas running on top
+<br>
+of it helped us to create a detailed mathematical AI design (Novamente).
+<br>
+Once we arrived at this, we saw how to implement our design on the
+<br>
+hardware/OS/prog-langs at hand.  Not elegantly but workably.  And that's
+<br>
+what we're doing now -- since April 2001 -- with a loooong way to go since
+<br>
+we only have small team and minimal $$ these days.
+<br>
+<p><p>-- ben
+<br>
+<p><p><em>&gt; -----Original Message-----
+</em><br>
+<em>&gt; From: <a href="mailto:owner-sl4@sysopmind.com?Subject=RE:%20&quot;Real&quot;%20programming%20and%20seed%20AI">owner-sl4@sysopmind.com</a> [mailto:<a href="mailto:owner-sl4@sysopmind.com?Subject=RE:%20&quot;Real&quot;%20programming%20and%20seed%20AI">owner-sl4@sysopmind.com</a>]On Behalf
+</em><br>
+<em>&gt; Of Remco Gerlich
+</em><br>
+<em>&gt; Sent: Thursday, February 07, 2002 5:25 PM
+</em><br>
+<em>&gt; To: <a href="mailto:sl4@sysopmind.com?Subject=RE:%20&quot;Real&quot;%20programming%20and%20seed%20AI">sl4@sysopmind.com</a>
+</em><br>
+<em>&gt; Subject: Re: &quot;Real&quot; programming and seed AI
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; On  0, Alan Grimes &lt;<a href="mailto:alangrimes@starpower.net?Subject=RE:%20&quot;Real&quot;%20programming%20and%20seed%20AI">alangrimes@starpower.net</a>&gt; wrote:
+</em><br>
+<em>&gt; &gt; My biggest problem is that I don't have an OS that I would consider even
+</em><br>
+<em>&gt; &gt; remotely suitable for work in AI.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; I thought that was an interesting statement. You seem to have ideas about
+</em><br>
+<em>&gt; the services that an OS suitable for AI should provide. Could you
+</em><br>
+<em>&gt; elaborate?
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; [ Hi, I'm new here, I'm extremely interested in everything
+</em><br>
+<em>&gt; concerned with AI
+</em><br>
+<em>&gt; but quite skeptical about the singularity/etc thing, I've lurked
+</em><br>
+<em>&gt; for a week
+</em><br>
+<em>&gt; or so and think I'll like this list, I hope I'm welcome despite
+</em><br>
+<em>&gt; the skepticism ]
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; --
+</em><br>
+<em>&gt; Remco Gerlich
+</em><br>
+<em>&gt;
+</em><br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="2920.html">Alan Grimes: "Re: &quot;Real&quot; programming and seed AI"</a>
+<li><strong>Previous message:</strong> <a href="2918.html">Remco Gerlich: "Re: &quot;Real&quot; programming and seed AI"</a>
+<li><strong>In reply to:</strong> <a href="2918.html">Remco Gerlich: "Re: &quot;Real&quot; programming and seed AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="2920.html">Alan Grimes: "Re: &quot;Real&quot; programming and seed AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2919">[ date ]</a>
+<a href="index.html#2919">[ thread ]</a>
+<a href="subject.html#2919">[ subject ]</a>
+<a href="author.html#2919">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:37 MDT
+</em></small></p>
+</body>
+</html>

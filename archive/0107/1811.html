@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Introspection Capabilities in Java (RE: Languages and AI)</title>
+<meta name="Author" content="Ben Goertzel (ben@webmind.com)">
+<meta name="Subject" content="RE: Introspection Capabilities in Java (RE: Languages and AI)">
+<meta name="Date" content="2001-07-20">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Introspection Capabilities in Java (RE: Languages and AI)</h1>
+<!-- received="Fri Jul 20 20:16:51 2001" -->
+<!-- isoreceived="20010721021651" -->
+<!-- sent="Fri, 20 Jul 2001 20:13:02 -0400" -->
+<!-- isosent="20010721001302" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@webmind.com" -->
+<!-- subject="RE: Introspection Capabilities in Java (RE: Languages and AI)" -->
+<!-- id="NDBBIBGFAPPPBODIPJMMMEPFFMAA.ben@webmind.com" -->
+<!-- charset="Windows-1252" -->
+<!-- inreplyto="IPEKIJJJKIMAFKAFMNAEAEIHDDAA.ben@exocortex.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@webmind.com?Subject=RE:%20Introspection%20Capabilities%20in%20Java%20(RE:%20Languages%20and%20AI)"><em>ben@webmind.com</em></a>)<br>
+<strong>Date:</strong> Fri Jul 20 2001 - 18:13:02 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1812.html">Ben Goertzel: "RE: Languages and AI"</a>
+<li><strong>Previous message:</strong> <a href="1810.html">Durant Schoon: "Re: Metacircular interprets and LISP (RE: Languages and AI)"</a>
+<li><strong>In reply to:</strong> <a href="1805.html">Ben Houston: "Introspection Capabilities in Java (RE: Languages and AI)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1795.html">Aaron McBride: "RE: Languages and AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1811">[ date ]</a>
+<a href="index.html#1811">[ thread ]</a>
+<a href="subject.html#1811">[ subject ]</a>
+<a href="author.html#1811">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Very cool, man!!  I guess this is new with 1.3.  I admit I'm showing my age
+<br>
+here... the last time I seriously coded Java was in 1.2 ...
+<br>
+<p>ben
+<br>
+<p><em>&gt; -----Original Message-----
+</em><br>
+<em>&gt; From: <a href="mailto:owner-sl4@sysopmind.com?Subject=RE:%20Introspection%20Capabilities%20in%20Java%20(RE:%20Languages%20and%20AI)">owner-sl4@sysopmind.com</a> [mailto:<a href="mailto:owner-sl4@sysopmind.com?Subject=RE:%20Introspection%20Capabilities%20in%20Java%20(RE:%20Languages%20and%20AI)">owner-sl4@sysopmind.com</a>]On Behalf
+</em><br>
+<em>&gt; Of Ben Houston
+</em><br>
+<em>&gt; Sent: Friday, July 20, 2001 7:10 PM
+</em><br>
+<em>&gt; To: <a href="mailto:sl4@sysopmind.com?Subject=RE:%20Introspection%20Capabilities%20in%20Java%20(RE:%20Languages%20and%20AI)">sl4@sysopmind.com</a>
+</em><br>
+<em>&gt; Subject: Introspection Capabilities in Java (RE: Languages and AI)
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Ben Goertel said:
+</em><br>
+<em>&gt; &gt;In Java, you can't introspect to see the *runtime* state of an individual
+</em><br>
+<em>&gt; &gt;object (the ephemeral values with which local variables are
+</em><br>
+<em>&gt; instantiated).
+</em><br>
+<em>&gt; &gt;For this, we'd need a fundamentally different JVM.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; You can query and modify values of objects in java at runtime.
+</em><br>
+<em>&gt; In fact, we
+</em><br>
+<em>&gt; are doing it in the current project I am working on (this isn't a bluff or
+</em><br>
+<em>&gt; grandstanding, we actually are).  We are using the following classes that
+</em><br>
+<em>&gt; are documented in the standard Java implementation:
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Java.Lang.Class
+</em><br>
+<em>&gt; <a href="http://java.sun.com/j2se/1.3/docs/api/java/lang/Class.html">http://java.sun.com/j2se/1.3/docs/api/java/lang/Class.html</a>
+</em><br>
+<em>&gt;   - can be used to get a complete list of available Classes.
+</em><br>
+<em>&gt;   - can be used to instantiate new Classes of any type.
+</em><br>
+<em>&gt;   - used to query a Class for available Field and Methods
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Java.Lang.Reflect.Method
+</em><br>
+<em>&gt; <a href="http://java.sun.com/j2se/1.3/docs/api/java/lang/reflect/Method.html">http://java.sun.com/j2se/1.3/docs/api/java/lang/reflect/Method.html</a>
+</em><br>
+<em>&gt;  - used to get info on a Method and even invoke it.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Java.Lang.Reflect.Field
+</em><br>
+<em>&gt; <a href="http://java.sun.com/j2se/1.3/docs/api/java/lang/reflect/Field.html">http://java.sun.com/j2se/1.3/docs/api/java/lang/reflect/Field.html</a>
+</em><br>
+<em>&gt;  - used to get info on a Field, get its value or change it.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Cheers,
+</em><br>
+<em>&gt; -ben houston
+</em><br>
+<em>&gt; <a href="http://www.exocortex.org/~ben">http://www.exocortex.org/~ben</a>
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; -----Original Message-----
+</em><br>
+<em>&gt; From: <a href="mailto:owner-sl4@sysopmind.com?Subject=RE:%20Introspection%20Capabilities%20in%20Java%20(RE:%20Languages%20and%20AI)">owner-sl4@sysopmind.com</a> [mailto:<a href="mailto:owner-sl4@sysopmind.com?Subject=RE:%20Introspection%20Capabilities%20in%20Java%20(RE:%20Languages%20and%20AI)">owner-sl4@sysopmind.com</a>]On Behalf Of
+</em><br>
+<em>&gt; Ben Goertzel
+</em><br>
+<em>&gt; Sent: Friday, July 20, 2001 6:28 PM
+</em><br>
+<em>&gt; To: <a href="mailto:sl4@sysopmind.com?Subject=RE:%20Introspection%20Capabilities%20in%20Java%20(RE:%20Languages%20and%20AI)">sl4@sysopmind.com</a>
+</em><br>
+<em>&gt; Subject: RE: Languages and AI
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; &gt; But it wouldn't be that hard to write up an XML parser that can
+</em><br>
+<em>&gt; &gt; modify/execute objects, methods or events using introspection -
+</em><br>
+<em>&gt; &gt; introspection is supported pretty well in both C# or Java.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; In Java, you can't introspect to see the *runtime* state of an individual
+</em><br>
+<em>&gt; object (the ephemeral values with which local variables are instantiated).
+</em><br>
+<em>&gt; For this, we'd need a fundamentally different JVM.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Maybe this will be supplied in Pizza (which adds higher-order functions to
+</em><br>
+<em>&gt; Java) or some other new-wave Java variant
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Ben
+</em><br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1812.html">Ben Goertzel: "RE: Languages and AI"</a>
+<li><strong>Previous message:</strong> <a href="1810.html">Durant Schoon: "Re: Metacircular interprets and LISP (RE: Languages and AI)"</a>
+<li><strong>In reply to:</strong> <a href="1805.html">Ben Houston: "Introspection Capabilities in Java (RE: Languages and AI)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1795.html">Aaron McBride: "RE: Languages and AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1811">[ date ]</a>
+<a href="index.html#1811">[ thread ]</a>
+<a href="subject.html#1811">[ subject ]</a>
+<a href="author.html#1811">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:37 MDT
+</em></small></p>
+</body>
+</html>

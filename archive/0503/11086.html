@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Model Starvation and AI Navel-Gazing</title>
+<meta name="Author" content="J. Andrew Rogers (andrew@ceruleansystems.com)">
+<meta name="Subject" content="Model Starvation and AI Navel-Gazing">
+<meta name="Date" content="2005-03-13">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Model Starvation and AI Navel-Gazing</h1>
+<!-- received="Sun Mar 13 11:56:07 2005" -->
+<!-- isoreceived="20050313185607" -->
+<!-- sent="Sun, 13 Mar 2005 10:55:41 -0800" -->
+<!-- isosent="20050313185541" -->
+<!-- name="J. Andrew Rogers" -->
+<!-- email="andrew@ceruleansystems.com" -->
+<!-- subject="Model Starvation and AI Navel-Gazing" -->
+<!-- id="829cb4f168250c01aff0b5615c0c47e2@ceruleansystems.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="20050308134746.180f6c25.daniel@radray.us" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> J. Andrew Rogers (<a href="mailto:andrew@ceruleansystems.com?Subject=Re:%20Model%20Starvation%20and%20AI%20Navel-Gazing"><em>andrew@ceruleansystems.com</em></a>)<br>
+<strong>Date:</strong> Sun Mar 13 2005 - 11:55:41 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="11087.html">Thomas Buckner: "Re: Model Starvation and AI Navel-Gazing"</a>
+<li><strong>Previous message:</strong> <a href="11085.html">Daniel Radetsky: "Re: Eliezer: unconvinced by your objection to safe boxing of &quot;Minerva AI&quot;"</a>
+<li><strong>In reply to:</strong> <a href="11067.html">Daniel Radetsky: "Re: Eliezer: unconvinced by your objection to safe boxing of &quot;Minerva AI&quot;"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="11087.html">Thomas Buckner: "Re: Model Starvation and AI Navel-Gazing"</a>
+<li><strong>Reply:</strong> <a href="11087.html">Thomas Buckner: "Re: Model Starvation and AI Navel-Gazing"</a>
+<li><strong>Reply:</strong> <a href="11113.html">Eliezer S. Yudkowsky: "Re: Model Starvation and AI Navel-Gazing"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11086">[ date ]</a>
+<a href="index.html#11086">[ thread ]</a>
+<a href="subject.html#11086">[ subject ]</a>
+<a href="author.html#11086">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Mar 8, 2005, at 1:47 PM, Daniel Radetsky wrote:
+<br>
+<em>&gt; &quot;Eliezer S. Yudkowsky&quot; &lt;<a href="mailto:sentience@pobox.com?Subject=Re:%20Model%20Starvation%20and%20AI%20Navel-Gazing">sentience@pobox.com</a>&gt; wrote:
+</em><br>
+<em>&gt;&gt; But the last item will be available, and it and other structural cues
+</em><br>
+<em>&gt;&gt; are sufficient information (given sufficient computing power) to 
+</em><br>
+<em>&gt;&gt; deduce
+</em><br>
+<em>&gt;&gt; that humans are fallible, quite possibly even that humans evolved by
+</em><br>
+<em>&gt;&gt; natural selection.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; I don't see why you believe that there will be that much there to 
+</em><br>
+<em>&gt; find, or that
+</em><br>
+<em>&gt; *any* AI would have to have the right kind of background knowledge to 
+</em><br>
+<em>&gt; make that
+</em><br>
+<em>&gt; inference. Computing power is not a catch-all; you need facts too.
+</em><br>
+<p><p>Yes, precisely, computing power buys very little direct intelligence.  
+<br>
+The idea that an AI will be able to deduce all manner of behavioral 
+<br>
+characteristics of humans in any kind of detail from a few trivial 
+<br>
+samples and interactions is pretty anthropomorphic and essentially 
+<br>
+ignores the vast amount of learned context and patterns that allows 
+<br>
+humans to read the behaviors of other people.  Humans aren't born with 
+<br>
+this knowledge either, nor do we infer it in a vacuum.  It takes humans 
+<br>
+a long time to acquire enough useful samples and experience, and most 
+<br>
+humans are drinking from a fire hose of real data every day.
+<br>
+<p>No amount of navel-gazing will make an AI any smarter than it was a few 
+<br>
+minutes prior, assuming any vaguely efficient design.  Just because the 
+<br>
+secret to all human behavior may exist in the digits of pi does not 
+<br>
+imply that there is any more meaningful knowledge in pi than its 
+<br>
+intrinsic information (which is damn little).  Every argument that I've 
+<br>
+ever seen claiming significant utility from AI navel-gazing and RSI has 
+<br>
+simply moved where the vast body of learned knowledge is hidden to 
+<br>
+somewhere else.  Environmental data is not fungible and you need gobs 
+<br>
+of it to have an internal model that is even loosely valid, and the 
+<br>
+intelligence cannot exceed the total environmental information in the 
+<br>
+system or make meaningful predictions outside its domain of 
+<br>
+applicability.  The amount of data required to usefully 
+<br>
+reverse-engineer in part even most simple algorithmic systems vastly 
+<br>
+exceeds the intrinsic complexity of the systems themselves.
+<br>
+<p>This is the frequently glossed over issue of model starvation.  You 
+<br>
+cannot solve the problem of model starvation by churning on the same 
+<br>
+bits over and over, as no new information (i.e. potential knowledge) is 
+<br>
+added to the system.  Nor can the system automagically obtain more 
+<br>
+information than is intrinsic to what it has been exposed to.  
+<br>
+Intelligence is powerful precisely because it is a reflection of its 
+<br>
+environment and nothing more (except perhaps whatever simple biases 
+<br>
+exist in its machinery).  There is a bootstrap problem here; an AI too 
+<br>
+ignorant to be a threat is too ignorant to become a threat on its own 
+<br>
+without a lot of help from its environment, and computers live in 
+<br>
+sensory deprivation chambers.
+<br>
+<p><p>Could one design a system and environment that allows the AI to quickly 
+<br>
+become adept at understanding and manipulating human behavior?  Sure!  
+<br>
+But the point is that this is not a feature of intelligence but of the 
+<br>
+internal model built via the intelligence, and would require a vast 
+<br>
+quantity of environmental data in support of achieving that model.  A 
+<br>
+sufficiently complex AI system with a rich environment may arrive at 
+<br>
+that capability eventually on its own, but you'll have to wait a while. 
+<br>
+&nbsp;&nbsp;It would be a trivial thing to build domain specific 
+<br>
+super-intelligence via selective model starvation on the part of its 
+<br>
+designers.  Obviously, this would significantly limit some of the 
+<br>
+theoretical utility of such a system.  But the real point is that model 
+<br>
+starvation is the default state for intelligent systems generally, and 
+<br>
+that it is quite expensive to extend knowledge in any given direction, 
+<br>
+something that the designers of the system can easily control; whether 
+<br>
+they actually do or not is another issue.
+<br>
+<p>The idea of a laboratory AGI very rapidly bootstrapping into a human 
+<br>
+manipulating monster makes a *lot* of assumptions about its environment 
+<br>
+that I would assert are not particularly realistic in most cases.  One 
+<br>
+could specifically create an environment where this is likely to 
+<br>
+happen, but it won't be the likely environment even by accident.  It 
+<br>
+will be an eventual problem, but it probably won't be an immediate 
+<br>
+problem.
+<br>
+<p>(some other theoretical problems omitted)
+<br>
+<p><p>j. andrew rogers
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="11087.html">Thomas Buckner: "Re: Model Starvation and AI Navel-Gazing"</a>
+<li><strong>Previous message:</strong> <a href="11085.html">Daniel Radetsky: "Re: Eliezer: unconvinced by your objection to safe boxing of &quot;Minerva AI&quot;"</a>
+<li><strong>In reply to:</strong> <a href="11067.html">Daniel Radetsky: "Re: Eliezer: unconvinced by your objection to safe boxing of &quot;Minerva AI&quot;"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="11087.html">Thomas Buckner: "Re: Model Starvation and AI Navel-Gazing"</a>
+<li><strong>Reply:</strong> <a href="11087.html">Thomas Buckner: "Re: Model Starvation and AI Navel-Gazing"</a>
+<li><strong>Reply:</strong> <a href="11113.html">Eliezer S. Yudkowsky: "Re: Model Starvation and AI Navel-Gazing"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11086">[ date ]</a>
+<a href="index.html#11086">[ thread ]</a>
+<a href="subject.html#11086">[ subject ]</a>
+<a href="author.html#11086">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:50 MDT
+</em></small></p>
+</body>
+</html>

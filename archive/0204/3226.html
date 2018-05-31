@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Simplifying AI</title>
+<meta name="Author" content="ben goertzel (ben@goertzel.org)">
+<meta name="Subject" content="Simplifying AI">
+<meta name="Date" content="2002-04-02">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Simplifying AI</h1>
+<!-- received="Tue Apr 02 11:49:49 2002" -->
+<!-- isoreceived="20020402184949" -->
+<!-- sent="Tue, 2 Apr 2002 09:46:30 -0700" -->
+<!-- isosent="20020402164630" -->
+<!-- name="ben goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="Simplifying AI" -->
+<!-- id="01C1DA2B.451B23E0.ben@goertzel.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> ben goertzel (<a href="mailto:ben@goertzel.org?Subject=Re:%20Simplifying%20AI"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Tue Apr 02 2002 - 09:46:30 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3227.html">ben goertzel: "RE: Deadly Sins of Real AI"</a>
+<li><strong>Previous message:</strong> <a href="3225.html">ben goertzel: "Deadly Sins of Real AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3235.html">James Rogers: "Re: Simplifying AI"</a>
+<li><strong>Reply:</strong> <a href="3235.html">James Rogers: "Re: Simplifying AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3226">[ date ]</a>
+<a href="index.html#3226">[ thread ]</a>
+<a href="subject.html#3226">[ subject ]</a>
+<a href="author.html#3226">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Eliezer wrote:
+<br>
+<p>***
+<br>
+Ben Goertzel wrote:
+<br>
+<em>&gt;
+</em><br>
+<em>&gt; Actually, our estimate of the size of the problem of creating an AI 
+</em><br>
+peaked
+<br>
+<em>&gt; in mid-2000.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Throughout 2001 we kept discovering how to reduce various mind functions 
+</em><br>
+to
+<br>
+<em>&gt; special cases of a moderately small set of mind functions, in what I 
+</em><br>
+think
+<br>
+<em>&gt; is a pragmatic way.
+</em><br>
+<p>Okay, this sounds very exciting, but can you be more specific?  Which mind
+<br>
+functions?  What special cases did you reduce them to?  Special cases of
+<br>
+what?  Are you talking about a wide variety of high-level behaviors 
+<br>
+produced
+<br>
+by a bounded set of interdependent subsystems, or are you talking about
+<br>
+aspects of the subsystem design surprisingly turning out to be a set of
+<br>
+special cases rather than big general cases?
+<br>
+***
+<br>
+<p>Basically what I mean is that in the Webmind AI Engine we had a huge number 
+<br>
+of specialized mind modules, and we now have a much smaller number, used to 
+<br>
+perform the same functions as the large number used to.
+<br>
+<p>I'll give just a few examples.  Unfortunately, to give a complete set of 
+<br>
+details, or to get into these in detail, would require a load of detailed 
+<br>
+background in Novamente design.
+<br>
+<p>1)  A (we hope!) passably efficient way to do &quot;linguistic feature structure 
+<br>
+unification&quot; (a kind of language parsing) as a case of general logical 
+<br>
+unification... this basically eliminates a separate NLP module, reducing it 
+<br>
+to a set of special parameter settings for general cognition methods... as 
+<br>
+it should be...
+<br>
+<p>2)  Complex inference (inference dealing with quantifiers, variables, etc.) 
+<br>
+is reduced to &quot;simple inference on inheritance links&quot; + &quot;complex 
+<br>
+procedures&quot;.  This reduction is carried out using combinatory logic.  I 
+<br>
+suspect the human brain carries out a similar reduction in a very different 
+<br>
+way
+<br>
+<p>3) Causal inference is reduced to &quot;predictive implication&quot; plus a special 
+<br>
+case of &quot;procedure learning&quot; (the latter being the learning of &quot;plausible 
+<br>
+causal mechanisms&quot;)
+<br>
+<p>4)  Association-finding is reduced to simple probabilistic inference plus a 
+<br>
+Hebb rule variant
+<br>
+<p>5)  Goals and feelings are represented as simple wrappers around generic 
+<br>
+CompoundRelationNodes (representing complex combinations of simple 
+<br>
+relationships)
+<br>
+<p>etc.
+<br>
+<p>Overall, what we found is that a lot of mental functions are obtainable as 
+<br>
+combinations or specializations of other mental functions, but not in 
+<br>
+immediately obvious ways.
+<br>
+<p><p>-- Ben G
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3227.html">ben goertzel: "RE: Deadly Sins of Real AI"</a>
+<li><strong>Previous message:</strong> <a href="3225.html">ben goertzel: "Deadly Sins of Real AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3235.html">James Rogers: "Re: Simplifying AI"</a>
+<li><strong>Reply:</strong> <a href="3235.html">James Rogers: "Re: Simplifying AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3226">[ date ]</a>
+<a href="index.html#3226">[ thread ]</a>
+<a href="subject.html#3226">[ subject ]</a>
+<a href="author.html#3226">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:37 MDT
+</em></small></p>
+</body>
+</html>

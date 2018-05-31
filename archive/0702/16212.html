@@ -1,0 +1,311 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Optimality of using probability</title>
+<meta name="Author" content="Eliezer S. Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="Optimality of using probability">
+<meta name="Date" content="2007-02-02">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Optimality of using probability</h1>
+<!-- received="Fri Feb  2 21:24:43 2007" -->
+<!-- isoreceived="20070203042443" -->
+<!-- sent="Fri, 02 Feb 2007 20:23:54 -0800" -->
+<!-- isosent="20070203042354" -->
+<!-- name="Eliezer S. Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Optimality of using probability" -->
+<!-- id="45C40E5A.1080003@pobox.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="F61B9C9A-114A-48C2-BF6B-CCDB460E8A90@goertzel.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eliezer S. Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20Optimality%20of%20using%20probability"><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Fri Feb 02 2007 - 21:23:54 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="16213.html">Ben Goertzel: "Re: [agi] Optimality of using probability"</a>
+<li><strong>Previous message:</strong> <a href="16211.html">Tennessee Leeuwenburg: "nanomachine news"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="16213.html">Ben Goertzel: "Re: [agi] Optimality of using probability"</a>
+<li><strong>Reply:</strong> <a href="16213.html">Ben Goertzel: "Re: [agi] Optimality of using probability"</a>
+<li><strong>Maybe reply:</strong> <a href="16218.html">Mitchell Porter: "Re: Optimality of using probability"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#16212">[ date ]</a>
+<a href="index.html#16212">[ thread ]</a>
+<a href="subject.html#16212">[ subject ]</a>
+<a href="author.html#16212">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Ben Goertzel wrote:
+<br>
+<em> &gt;
+</em><br>
+<em> &gt; Cox's axioms and de Finetti's subjective probability approach,
+</em><br>
+<em> &gt; developed in the first part of the last century, give mathematical
+</em><br>
+<em> &gt; arguments as to why probability theory is the optimal way to reason
+</em><br>
+<em> &gt; under conditions of uncertainty.  However, given limited computational
+</em><br>
+<em> &gt; resources, AI systems cannot always afford to reason optimally.  It is
+</em><br>
+<em> &gt; thus interesting to ask how Cox's or deFinetti's ideas can be extended
+</em><br>
+<em> &gt; to the situation of limited computational resources.  Can one show
+</em><br>
+<em> &gt; that, among all systems with a certain amount of resources, the most
+</em><br>
+<em> &gt; intelligent one will be the one whose reasoning most closely
+</em><br>
+<em> &gt; approximates probability theory?
+</em><br>
+<p>I don't think a mind that evaluates probabilities *is* automatically the 
+<br>
+best way to make use of limited computing resources.  That is: if you 
+<br>
+have limited computing resources, and you want to write a computer 
+<br>
+program that makes the best use of those resources to solve a problem 
+<br>
+you're facing, then only under very *rare* circumstances does it make 
+<br>
+sense to write a program consisting of an intelligent mind that thinks 
+<br>
+in probabilities.  In fact, these rare circumstances are what define AGI 
+<br>
+work.
+<br>
+<p>If you know in advance that the task is to solve a Sudoku puzzle, then 
+<br>
+you'll be better off writing a specialized Sudoku solver.  If you know 
+<br>
+the exact Sudoku puzzle you face, and its solution, you can write an 
+<br>
+even more specialized program: one that just spits out that solution.  A 
+<br>
+rational use of computing power, like any rational plan, is &quot;rational&quot; 
+<br>
+relative to the subjective uncertainty of the programmer about the 
+<br>
+environment.  If you already knew the exact solution, you could write 
+<br>
+down that solution instead of writing a computer program to compute it.
+<br>
+<p>If I know my program will face a problem with known statistical 
+<br>
+structure, then I will write a program that processes probabilities 
+<br>
+using predefined calculations.  That's one circumstance under which you 
+<br>
+would want to use a program that processes probabilities - when you see 
+<br>
+a specific probabilistic calculation that optimizes the problem, 
+<br>
+relative to your beliefs about the environment.
+<br>
+<p>But what if you don't even know whether your program will encounter a 
+<br>
+Sudoku program, or something else entirely?  What if you don't know all 
+<br>
+the environmental entities your program might interact with, or what 
+<br>
+might be a good way to model them?  Then you must somehow write a more 
+<br>
+general program.  Should this program process probabilities, even though 
+<br>
+we don't know all the kinds of events it might discover and attach 
+<br>
+probabilities to?
+<br>
+<p>What state of subjective uncertainty must you, the programmer, be in 
+<br>
+with respect to the environment, before coding a probability-processing 
+<br>
+mind is a rational use of your limited computing resources?  This is how 
+<br>
+I would state the question.
+<br>
+<p>Intuitively, I answer:  When you, the programmer, can identify parts of 
+<br>
+the environmental structure; but you are extremely uncertain about other 
+<br>
+parts of the environment; and yet you do believe there's structure (the 
+<br>
+unknown parts are not believed by you to be pure random noise).  In this 
+<br>
+case, it makes sense to write a Probabilistic Structure Identifier and 
+<br>
+Exploiter, aka, a rational mind.
+<br>
+<p>Note that I specify you must understand *part of* the structure of the 
+<br>
+environment.  You, as the programmer, have some kind of goal you are 
+<br>
+trying to achieve by rationally using your computing power; it is 
+<br>
+difficult to have a utility function over random noise.  Your program 
+<br>
+must *use* the unknown parts of the environmental structure to achieve 
+<br>
+that which you started out to accomplish.  You have to tie in the 
+<br>
+discovered structures to the utility differences you care about.  This 
+<br>
+requires that you understand explicitly how your own utility function 
+<br>
+relates to the environment, so you can reproduce that relation in a 
+<br>
+program; and this requires that you start out with some knowledge of the 
+<br>
+environment already.
+<br>
+<p>I.e:  If you don't know at least some identifying characteristics of 
+<br>
+starving African children, your state of knowledge does not let you 
+<br>
+write a program that has feeding starving African children as a &quot;goal&quot;. 
+<br>
+&nbsp;&nbsp;In fact, there's no sense in which you yourself can be said to know 
+<br>
+that starving African children exist; and no way you could identify them 
+<br>
+as important if you saw them; and no way you could realize that 
+<br>
+*feeding* them might increase expected utility, once you discovered the 
+<br>
+previously unsuspected existence of food.
+<br>
+<p>So that's the intuitive statement.  I can't state this precisely as yet. 
+<br>
+&nbsp;&nbsp;It's relatively simple to make a subjective probabilistic state of 
+<br>
+uncertainty reproduce itself in an exact corresponding calculation - to 
+<br>
+show that if you think a particular specific event is 90% probable, then 
+<br>
+you want your computer program to represent it as 90% probable, given 
+<br>
+that it uses probabilities at all.  As for justifying a generic 
+<br>
+probability-processing system - I won't say that it's a lot harder, 
+<br>
+because I don't actually *know* that it's a lot harder, because I don't 
+<br>
+know exactly how to do it, and therefore I don't know yet how hard or 
+<br>
+easy it will be.  I suspect it's more complicated than the simple case, 
+<br>
+at least.
+<br>
+<p>I tried to solve this problem in 2006, just in case it was easier than 
+<br>
+it looked (it wasn't).  I concluded that the problem required a fairly 
+<br>
+sophisticated mind-system to carry out the reasoning that would justify 
+<br>
+probabilities, so I was blocking on subparts of this mind-system that I 
+<br>
+didn't know how to specify yet.  Thus I put the problem on hold and 
+<br>
+decided to come back to it later.
+<br>
+<p>As a research program, the difficulty would be getting a researcher to 
+<br>
+see that a nontrivial problem exists, and come up with some 
+<br>
+non-totally-ad-hoc interesting solution, without their taking on a 
+<br>
+problem so large that they can't solve it.
+<br>
+<p>One decent-sized research problem would be scenarios in which you the 
+<br>
+programmer could expect utility from a program that used probabilities, 
+<br>
+in a state of programmer knowledge that *didn't* let you calculate those 
+<br>
+probabilities yourself.  One conceptually simple problem, that would 
+<br>
+still be well worth a publication if no one has done it yet, would be 
+<br>
+calculating the expected utilities of using well-known uninformative 
+<br>
+priors in plausible problems.  But the real goal would be to justify 
+<br>
+using probability in cases of structural uncertainty.  A simple case of 
+<br>
+this more difficult problem would be calculating the expected utility of 
+<br>
+inducting a Bayesian network with unknown latent structure, known node 
+<br>
+behaviors (like noisy-or), known priors for network structures, and 
+<br>
+uninformative priors for the parameters.  One might in this way work up 
+<br>
+to Boolean formulas, and maybe even some classes of arbitrary machines, 
+<br>
+that might be in the environment.  I don't think you can do a similar 
+<br>
+calculation for Solomonoff induction, even in principle, because 
+<br>
+Solomonoff is uncomputable and therefore ill-defined.  For, say, Levin 
+<br>
+search, it might be doable; but I would be VERY impressed if anyone 
+<br>
+could actually pull off a calculation of expected utility.
+<br>
+<p>In general, I would suggest starting with the expected utility of simple 
+<br>
+uninformative priors, and working up to more structural forms of 
+<br>
+uncertainty.  Thus, strictly justifying more and more abstract uses of 
+<br>
+probabilistic reasoning, as your knowledge about the environment becomes 
+<br>
+ever more vague.
+<br>
+<p><pre>
+-- 
+Eliezer S. Yudkowsky                          <a href="http://intelligence.org/">http://intelligence.org/</a>
+Research Fellow, Singularity Institute for Artificial Intelligence
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="16213.html">Ben Goertzel: "Re: [agi] Optimality of using probability"</a>
+<li><strong>Previous message:</strong> <a href="16211.html">Tennessee Leeuwenburg: "nanomachine news"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="16213.html">Ben Goertzel: "Re: [agi] Optimality of using probability"</a>
+<li><strong>Reply:</strong> <a href="16213.html">Ben Goertzel: "Re: [agi] Optimality of using probability"</a>
+<li><strong>Maybe reply:</strong> <a href="16218.html">Mitchell Porter: "Re: Optimality of using probability"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#16212">[ date ]</a>
+<a href="index.html#16212">[ thread ]</a>
+<a href="subject.html#16212">[ subject ]</a>
+<a href="author.html#16212">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:57 MDT
+</em></small></p>
+</body>
+</html>

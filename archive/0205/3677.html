@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: So I'm going to start documenting *my* work</title>
+<meta name="Author" content="James Rogers (jamesr@best.com)">
+<meta name="Subject" content="RE: So I'm going to start documenting *my* work">
+<meta name="Date" content="2002-05-15">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: So I'm going to start documenting *my* work</h1>
+<!-- received="Wed May 15 14:46:44 2002" -->
+<!-- isoreceived="20020515204644" -->
+<!-- sent="15 May 2002 11:50:00 -0700" -->
+<!-- isosent="20020515185000" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="RE: So I'm going to start documenting *my* work" -->
+<!-- id="1021488600.21572.102.camel@avalon" -->
+<!-- inreplyto="LAEGJLOGJIOELPNIOOAJAEHKCHAA.ben@goertzel.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> James Rogers (<a href="mailto:jamesr@best.com?Subject=RE:%20So%20I'm%20going%20to%20start%20documenting%20*my*%20work"><em>jamesr@best.com</em></a>)<br>
+<strong>Date:</strong> Wed May 15 2002 - 12:50:00 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3678.html">Eugen Leitl: "Re: Singularity Arrival Estimate"</a>
+<li><strong>Previous message:</strong> <a href="3676.html">Emil Gilliam: "Wolfram review forthcoming"</a>
+<li><strong>In reply to:</strong> <a href="3623.html">Ben Goertzel: "RE: So I'm going to start documenting *my* work"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3693.html">Ben Goertzel: "RE: So I'm going to start documenting *my* work"</a>
+<li><strong>Reply:</strong> <a href="3693.html">Ben Goertzel: "RE: So I'm going to start documenting *my* work"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3677">[ date ]</a>
+<a href="index.html#3677">[ thread ]</a>
+<a href="subject.html#3677">[ subject ]</a>
+<a href="author.html#3677">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Mon, 2002-05-06 at 07:27, Ben Goertzel wrote:
+<br>
+<em>&gt; I think that an efficient way of doing Solomonoff induction for modest
+</em><br>
+<em>&gt; program sizes, can definitely form the core of an AGI.
+</em><br>
+<em>&gt; We do something similar in Novamente, though with a different algorithm (our
+</em><br>
+<em>&gt; design involves the use a hybridization of probabilistic inference and
+</em><br>
+<em>&gt; evolutionary programming for program induction)
+</em><br>
+<p><p>There is another way to look at this that is correct, though I
+<br>
+personally don't really think about it in these terms. Every &quot;model&quot; is
+<br>
+essentially a universal Turing machine (with everything that implies,
+<br>
+except infinite memory) with a very unusual computing architecture
+<br>
+revolving around a structure that is an algorithmic superset (as it
+<br>
+were) of Solomonoff induction. 
+<br>
+<p>One of the generally interesting and useful things I've noticed
+<br>
+relatively recently is that it appears that the Halting Problem can
+<br>
+essentially be ignored. Any problem that exceeds a certain complexity
+<br>
+will stop at a best approximation when it hits the complexity limit of
+<br>
+the model, and infinite loop type situations that fit within the
+<br>
+complexity limit of the model are immediately detected simply as a
+<br>
+consequence of the organization. Everything appears to halt eventually,
+<br>
+though it may be an exception that causes it. I only mention this
+<br>
+because I've had to write code for regular software systems in the past
+<br>
+that could resolve these kinds of things, which was an awkward and ugly
+<br>
+thing at best and not totally reliable either. In this case, I seem to
+<br>
+have gotten those features for free, though it took me a long time to
+<br>
+even notice. Note that I haven't rigorously evaluated this, so I am not
+<br>
+100% certain, but what I described above appears to be the case; it
+<br>
+would certainly be pretty cool if this turned out to be correct in the
+<br>
+general case.
+<br>
+<p><p><em>&gt; However, I also suspect there may be a long path from getting the individual
+</em><br>
+<em>&gt; &quot;model&quot; (in your language) to work well, and figuring out how to piece
+</em><br>
+<em>&gt; together a bunch of models into an overall functional mind....
+</em><br>
+<p><p>Actually, this is one of the easier parts.  I'm still fiddling with
+<br>
+this, but it is really at the point of just picking something I like and
+<br>
+going with it as there are a couple clean and reasonably simple
+<br>
+approaches that are working. As I stated, I can hard merge and turn two
+<br>
+models into one larger model that still has the general capabilities of
+<br>
+the individual models, but there is a loss of efficiency when you do
+<br>
+this with two models that have been built with two very different types
+<br>
+of data input. Clustering unrelated models rather than merging them
+<br>
+really does seem like the optimum pathway. Having short-term/working
+<br>
+memory model goes a long way toward making this work pretty seamlessly.
+<br>
+<p>&nbsp;
+<br>
+<em>&gt; Pei and I long ago made the observation that most of the algorithms
+</em><br>
+<em>&gt; important for mind have exponential time and space complexity, but with a
+</em><br>
+<em>&gt; manageably small exponent for realistic problem sizes.  It's interesting
+</em><br>
+<em>&gt; that you've come up with the same conclusion in your work.
+</em><br>
+<p><p>This became apparent to me quite a while back.  The reason that one of
+<br>
+my long-time favorite rants is about the hardware limitation being
+<br>
+memory rather than CPU is that inadequate CPU will just make things run
+<br>
+slower, but inadequate memory pretty much leaves you hosed.  Inadequate
+<br>
+CPU may make things slow but at least it will get the right answer
+<br>
+eventually; inadequate memory is a &quot;brick wall&quot; limiter on effective
+<br>
+intelligence at any speed, IMO.
+<br>
+<p>I'm really short on time these days, so I apologize if my responses are
+<br>
+a bit belated.
+<br>
+<p>Cheers,
+<br>
+<p>-James Rogers
+<br>
+&nbsp;<a href="mailto:jamesr@best.com?Subject=RE:%20So%20I'm%20going%20to%20start%20documenting%20*my*%20work">jamesr@best.com</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3678.html">Eugen Leitl: "Re: Singularity Arrival Estimate"</a>
+<li><strong>Previous message:</strong> <a href="3676.html">Emil Gilliam: "Wolfram review forthcoming"</a>
+<li><strong>In reply to:</strong> <a href="3623.html">Ben Goertzel: "RE: So I'm going to start documenting *my* work"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3693.html">Ben Goertzel: "RE: So I'm going to start documenting *my* work"</a>
+<li><strong>Reply:</strong> <a href="3693.html">Ben Goertzel: "RE: So I'm going to start documenting *my* work"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3677">[ date ]</a>
+<a href="index.html#3677">[ thread ]</a>
+<a href="subject.html#3677">[ subject ]</a>
+<a href="author.html#3677">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:38 MDT
+</em></small></p>
+</body>
+</html>

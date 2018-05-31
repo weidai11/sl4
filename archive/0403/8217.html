@@ -1,0 +1,252 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: 'Singularity Realism' - A few thoughts</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: 'Singularity Realism' - A few thoughts">
+<meta name="Date" content="2004-03-11">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: 'Singularity Realism' - A few thoughts</h1>
+<!-- received="Thu Mar 11 10:41:10 2004" -->
+<!-- isoreceived="20040311174110" -->
+<!-- sent="Thu, 11 Mar 2004 12:40:49 -0500" -->
+<!-- isosent="20040311174049" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: 'Singularity Realism' - A few thoughts" -->
+<!-- id="009c01c4078f$fea6f990$6701a8c0@ZOMBIETHUSTRA" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="003201c40769$ffd1b330$0100a8c0@FamilyRoom" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20'Singularity%20Realism'%20-%20A%20few%20thoughts"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Thu Mar 11 2004 - 10:40:49 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="8218.html">Ben Goertzel: "RE: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>Previous message:</strong> <a href="8216.html">Alejandro Dubrovsky: "Re: [sing] Alcor Action Alert"</a>
+<li><strong>In reply to:</strong> <a href="8214.html">Mark Waser: "Re: 'Singularity Realism' - A few thoughts"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="8243.html">Samantha Atkins: "Re: 'Singularity Realism' - A few thoughts"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#8217">[ date ]</a>
+<a href="index.html#8217">[ thread ]</a>
+<a href="subject.html#8217">[ subject ]</a>
+<a href="author.html#8217">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Mark,
+<br>
+<p>Perhaps this is not an SL4-ish thread, but it's interesting.
+<br>
+<p>I'm curious what sorts of things you want to do by treating &quot;programs as
+<br>
+data&quot; using an XML representation.
+<br>
+<p>It seems to me that the problem with treating complex programs as data
+<br>
+in an XML sense is that the semantics of complex programs is, well,
+<br>
+complex....
+<br>
+<p>We have designed, but not implemented, a programming language for
+<br>
+Novamente, named Sasha (after the late extropian Sasha Chislenko).
+<br>
+Sasha will compile into Novamente nodes and links, which can be saved as
+<br>
+XML, hence it will be an XML-based programming language.  More comments
+<br>
+on this below.
+<br>
+<p>LISP treats programs as data, in a way that is elegant and workable for
+<br>
+small programs, but never seemed to scale very well for large-scale
+<br>
+software engineering.
+<br>
+<p>FLARE, in my view, had profound usability problems as a programming
+<br>
+language.  It had some cool features but needed a huge amount of work to
+<br>
+be turned into something potentially usable. 
+<br>
+<p>Another comment is that an XML representation of a program will need to
+<br>
+be translated into some far more compact binary representation to enable
+<br>
+execution anyway.
+<br>
+<p>I see two approaches for XML-ization of programs:
+<br>
+<p>1) 
+<br>
+Simply map a program into XML, in a direct way.  This will result in
+<br>
+hideously complex XML that cannot be pragmatically  manipulated.
+<br>
+<p>2)
+<br>
+Separate *efficiency of implementation* from *logical structure of
+<br>
+programs*.  In other words, have a language with two layers: one layer
+<br>
+that is more like a formal specification, and the other layer that is
+<br>
+transformed to be efficiently executiable.  It's the first layer that
+<br>
+can usefully be represented in XML, and potentially manipulated using
+<br>
+XML-manipulation tools.
+<br>
+<p>Sasha takes this second approach, but weakly.  Its syntax is very
+<br>
+high-level, and then for efficient execution, it would require massive
+<br>
+graph rewriting on the back end, in the manner of all functional
+<br>
+languages.
+<br>
+<p>The most easily XML-izable programming language is Refal, developed by
+<br>
+Val Turchin in the 1950's.  This is the Russian LISP, sort of, and its
+<br>
+syntax is more similar to XML syntax than to anything else in the West.
+<br>
+Val tried to get Refal adopted by the XML community as a scripting
+<br>
+language, but it was too weird, and no one got interested.
+<br>
+<p>Refal is tied in with supercompilation, which produces an efficiently
+<br>
+executable program from a compact, easily XML-izable Refal program.
+<br>
+<p>-- Ben Goertzel
+<br>
+<p><p><p><p><em>&gt; -----Original Message-----
+</em><br>
+<em>&gt; From: <a href="mailto:owner-sl4@sl4.org?Subject=RE:%20'Singularity%20Realism'%20-%20A%20few%20thoughts">owner-sl4@sl4.org</a> [mailto:<a href="mailto:owner-sl4@sl4.org?Subject=RE:%20'Singularity%20Realism'%20-%20A%20few%20thoughts">owner-sl4@sl4.org</a>] On Behalf 
+</em><br>
+<em>&gt; Of Mark Waser
+</em><br>
+<em>&gt; Sent: Thursday, March 11, 2004 8:09 AM
+</em><br>
+<em>&gt; To: <a href="mailto:sl4@sl4.org?Subject=RE:%20'Singularity%20Realism'%20-%20A%20few%20thoughts">sl4@sl4.org</a>
+</em><br>
+<em>&gt; Subject: Re: 'Singularity Realism' - A few thoughts
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; &gt; Creating
+</em><br>
+<em>&gt; &gt; a new workable language and proving its viability is hard.   I don't
+</em><br>
+<em>&gt; &gt; believe FLARE ever gained enough momentum to achieve this.  
+</em><br>
+<em>&gt;  I for one
+</em><br>
+<em>&gt; &gt; saw nothing terribly compelling or necessary about the 
+</em><br>
+<em>&gt; language.   It
+</em><br>
+<em>&gt; &gt; was not some huge boon to AI programming in general.  IMHO, 
+</em><br>
+<em>&gt; it was a 
+</em><br>
+<em>&gt; &gt; needless distraction.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;     I disagree.  XML is now pretty much THE premiere data 
+</em><br>
+<em>&gt; language with a lot of programming infrastructure, utilities, 
+</em><br>
+<em>&gt; and, very importantly, standards already created to support 
+</em><br>
+<em>&gt; it.  An XML-based programming language, which allows programs 
+</em><br>
+<em>&gt; to be EASILY treated as data and which would build on all of 
+</em><br>
+<em>&gt; the XML infrastructure already in place, would be a HUGE boon 
+</em><br>
+<em>&gt; to programs that look to analyze and improve their own 
+</em><br>
+<em>&gt; programming.  AI lost a lot when LISP, etc. pretty much fell 
+</em><br>
+<em>&gt; off of the map.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;     Someone once said that the level of civilization is 
+</em><br>
+<em>&gt; determined by what you can do without thinking (i.e. the 
+</em><br>
+<em>&gt; level of infrastructure and common standards).  A 
+</em><br>
+<em>&gt; well-accepted XML-based programming language will be a HUGE 
+</em><br>
+<em>&gt; increase to the existing infrastructure.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;     M$ will eventually fill the gap with their proposed X# 
+</em><br>
+<em>&gt; programming language unless someone else beats them to the 
+</em><br>
+<em>&gt; punch (but I consider that HIGHLY unlikely at this point 
+</em><br>
+<em>&gt; unless FLARE is still alive as a stealth project and near 
+</em><br>
+<em>&gt; release).  I, personally, am looking forward to the day with 
+</em><br>
+<em>&gt; great anticipation and dread.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;         Mark
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; 
+</em><br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="8218.html">Ben Goertzel: "RE: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>Previous message:</strong> <a href="8216.html">Alejandro Dubrovsky: "Re: [sing] Alcor Action Alert"</a>
+<li><strong>In reply to:</strong> <a href="8214.html">Mark Waser: "Re: 'Singularity Realism' - A few thoughts"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="8243.html">Samantha Atkins: "Re: 'Singularity Realism' - A few thoughts"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#8217">[ date ]</a>
+<a href="index.html#8217">[ thread ]</a>
+<a href="subject.html#8217">[ subject ]</a>
+<a href="author.html#8217">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:46 MDT
+</em></small></p>
+</body>
+</html>

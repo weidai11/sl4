@@ -1,0 +1,23 @@
+On Mon, 2002-06-24 at 15:35, James Higgins wrote:
+> It seems to me that there is a reasonable probability that it may be 
+> impossible for a mind to understand its own inner workings.  In other words 
+> a sentient's mind may by beyond the complexity threshold that it itself can 
+> fully comprehend.  
+
+
+A finite state machine (FSM) can perfectly emulate any other FSM with a
+smaller Kolmogorov complexity limit. The KC of the architecture is going
+to be substantially smaller than the KC of the physical state of the
+machine, and therefore there is no theoretical limitation on humans
+understanding the architecture of human intelligence.  We can't
+understand our own state perfectly (though a much bigger machine could),
+but we can understand our architecture.  Most of the complexity of
+machines is in the state, not the machinery architecture itself.
+
+-James Rogers
+ jamesr@best.com
+
+
+
+
+

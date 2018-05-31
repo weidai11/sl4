@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: further newsbit on those new IBM transistors</title>
+<meta name="Author" content="Brian Atkins (brian@posthuman.com)">
+<meta name="Subject" content="Re: further newsbit on those new IBM transistors">
+<meta name="Date" content="2001-06-26">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: further newsbit on those new IBM transistors</h1>
+<!-- received="Tue Jun 26 16:41:34 2001" -->
+<!-- isoreceived="20010626224134" -->
+<!-- sent="Tue, 26 Jun 2001 15:48:11 -0400" -->
+<!-- isosent="20010626194811" -->
+<!-- name="Brian Atkins" -->
+<!-- email="brian@posthuman.com" -->
+<!-- subject="Re: further newsbit on those new IBM transistors" -->
+<!-- id="3B38E6FB.9167A6D1@posthuman.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="20010626172718.11865.qmail@web13304.mail.yahoo.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Brian Atkins (<a href="mailto:brian@posthuman.com?Subject=Re:%20further%20newsbit%20on%20those%20new%20IBM%20transistors"><em>brian@posthuman.com</em></a>)<br>
+<strong>Date:</strong> Tue Jun 26 2001 - 13:48:11 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1665.html">Carl Feynman: "Re: further newsbit on those new IBM transistors"</a>
+<li><strong>Previous message:</strong> <a href="1663.html">Durant Schoon: "Re: SI Jail Morality"</a>
+<li><strong>In reply to:</strong> <a href="1659.html">Dani Eder: "Re: further newsbit on those new IBM transistors"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1665.html">Carl Feynman: "Re: further newsbit on those new IBM transistors"</a>
+<li><strong>Reply:</strong> <a href="1665.html">Carl Feynman: "Re: further newsbit on those new IBM transistors"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1664">[ date ]</a>
+<a href="index.html#1664">[ thread ]</a>
+<a href="subject.html#1664">[ subject ]</a>
+<a href="author.html#1664">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Dani Eder wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; &gt; chips with 100ghz speeds sometime in 2003. These
+</em><br>
+<em>&gt; &gt; chips are currently used
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; You need to keep clear the distinction between the
+</em><br>
+<em>&gt; transistor switching speed, which may be 100 GHz,
+</em><br>
+<p>If you read the article, they say the switching speed is up to 210ghz.
+<br>
+So I don't think the article's claim of 100ghz clock speeds is totally
+<br>
+bogus. High gigahertz speeds are already used for instance in RF chip
+<br>
+components where the chip has to generate microwave radio signals. I'd
+<br>
+have to check to be sure, but I think 5ghz+ clock speeds in SiGe chips
+<br>
+are commonplace nowadays.
+<br>
+<p><em>&gt; and the chip clock speed, which is the transistor
+</em><br>
+<em>&gt; speed divided by the number of transistors in series
+</em><br>
+<em>&gt; involved in one clock cycle.  The very shortest
+</em><br>
+<em>&gt; cycle would be a flip-flop type oscillator, which
+</em><br>
+<em>&gt; would take 2 transistors.  More typically it would
+</em><br>
+<em>&gt; take 5-10 transistors in series to complete a logic
+</em><br>
+<em>&gt; operation.
+</em><br>
+<p>I am not sure this is correct. My (limited) understanding is that the
+<br>
+clock signal is transported through a chip layout in order to &quot;trigger&quot;
+<br>
+the transistors to switch. According to what you are saying it would
+<br>
+mean there would be only one possible clock speed for a given chip
+<br>
+design. i.e. if you have 10ghz transistors and parts of the chip use
+<br>
+10 transistors in series, then the chip is sold as a 1ghz part. This
+<br>
+clearly isn't the case since chips are sold in a wide range of speeds.
+<br>
+I think that the chip can be configured to run the clock lines at a
+<br>
+wide variety of speeds, and the only limitations come in from the fact
+<br>
+that the transistors may require higher voltage levels to be able to
+<br>
+switch quickly enough. Higher voltages eventually run you into heat
+<br>
+dissipation and other problems, putting an upper limit on how fast a
+<br>
+given chip design/substrate combo can operate.
+<br>
+<p><em>&gt; 
+</em><br>
+<em>&gt; Another complication is that modern chips may have
+</em><br>
+<em>&gt; internal units running at different speeds than the
+</em><br>
+<em>&gt; external clock.  If I recall the fixed point
+</em><br>
+<em>&gt; arithmetic
+</em><br>
+<em>&gt; unit in the P4 processor actually runs at _twice_
+</em><br>
+<em>&gt; the clock rate, and some chips run the L1 and L2
+</em><br>
+<em>&gt; caches at less than the external clock rate.
+</em><br>
+<em>&gt; Communication with main memory is around 1/10 the
+</em><br>
+<em>&gt; clock rate.
+</em><br>
+<em>&gt; 
+</em><br>
+<p>Exactly, so you see the clock rate is very controllable. The problem I
+<br>
+see with 100ghz chips is that at that speed the electrical signals
+<br>
+actually can't travel very far. Even in the P4, Intel had to design it
+<br>
+so that it sometimes spends multiple clock cycles simply moving data
+<br>
+from one side of the chip to the other. This is one of the reasons that
+<br>
+the P4 gets lower IPC (instructions per clockcycle) than the P3. So
+<br>
+100ghz chips will require most likely a completely new design ethic.
+<br>
+<p>Not to mention as you say the problem of accessing memory, etc. I read
+<br>
+an article in Wired mag a few years ago about how there are companies
+<br>
+working to integrate optical transport methods into motherboard buses-
+<br>
+but I haven't heard much lately.
+<br>
+<pre>
+-- 
+Brian Atkins
+Director, Singularity Institute for Artificial Intelligence
+<a href="http://www.intelligence.org/">http://www.intelligence.org/</a>
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1665.html">Carl Feynman: "Re: further newsbit on those new IBM transistors"</a>
+<li><strong>Previous message:</strong> <a href="1663.html">Durant Schoon: "Re: SI Jail Morality"</a>
+<li><strong>In reply to:</strong> <a href="1659.html">Dani Eder: "Re: further newsbit on those new IBM transistors"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1665.html">Carl Feynman: "Re: further newsbit on those new IBM transistors"</a>
+<li><strong>Reply:</strong> <a href="1665.html">Carl Feynman: "Re: further newsbit on those new IBM transistors"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1664">[ date ]</a>
+<a href="index.html#1664">[ thread ]</a>
+<a href="subject.html#1664">[ subject ]</a>
+<a href="author.html#1664">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

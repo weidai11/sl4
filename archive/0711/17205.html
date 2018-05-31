@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: UCaRtMaAI paper (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)</title>
+<meta name="Author" content="Wei Dai (weidai@weidai.com)">
+<meta name="Subject" content="Re: UCaRtMaAI paper (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)">
+<meta name="Date" content="2007-11-22">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: UCaRtMaAI paper (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)</h1>
+<!-- received="Thu Nov 22 12:45:54 2007" -->
+<!-- isoreceived="20071122194554" -->
+<!-- sent="Thu, 22 Nov 2007 11:43:41 -0800" -->
+<!-- isosent="20071122194341" -->
+<!-- name="Wei Dai" -->
+<!-- email="weidai@weidai.com" -->
+<!-- subject="Re: UCaRtMaAI paper (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)" -->
+<!-- id="829AAD82866243D1B4DB43A5F196C82B@weidaim1" -->
+<!-- charset="gb2312" -->
+<!-- inreplyto="20071122061222.E4060D27A1@fungible.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Wei Dai (<a href="mailto:weidai@weidai.com?Subject=Re:%20UCaRtMaAI%20paper%20(was%20Re:%20Building%20a%20friendly%20AI%20from%20a%20&quot;just%20do%20what%20I%20tell%20you&quot;%20AI)"><em>weidai@weidai.com</em></a>)<br>
+<strong>Date:</strong> Thu Nov 22 2007 - 12:43:41 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="17206.html">Panu Horsmalahti: "Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI"</a>
+<li><strong>Previous message:</strong> <a href="17204.html">Tim Freeman: "What he really wants (was Re: UCaRtMaAI paper)"</a>
+<li><strong>In reply to:</strong> <a href="17198.html">Tim Freeman: "UCaRtMaAI paper (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="17212.html">Tim Freeman: "Re: UCaRtMaAI paper"</a>
+<li><strong>Reply:</strong> <a href="17212.html">Tim Freeman: "Re: UCaRtMaAI paper"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#17205">[ date ]</a>
+<a href="index.html#17205">[ thread ]</a>
+<a href="subject.html#17205">[ subject ]</a>
+<a href="author.html#17205">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Tim Freeman wrote:
+<br>
+<em>&gt; But you understood it well enough to see the issues.  Maybe it's more
+</em><br>
+<em>&gt; comprehensible than I thought.  Thanks for taking a look.
+</em><br>
+<p>It helps to already have the necessary background knowledge, for example 
+<br>
+what the Speed prior is. (Actually I am not a big fan of the Speed prior. 
+<br>
+See 
+<br>
+<a href="http://groups.google.com/group/everything-list/browse_frm/thread/411eedecc7af80d8/d818a1f516f5a368">http://groups.google.com/group/everything-list/browse_frm/thread/411eedecc7af80d8/d818a1f516f5a368</a> 
+<br>
+for a discussion between Juergen Schmidhuber and myself about it.)
+<br>
+<p><em>&gt; The answer to that question depends on the AI's simplest explanations of
+</em><br>
+<em>&gt; the human's goals.  This depends on the AI's past observations of the
+</em><br>
+<em>&gt; human's previous behaviors (and the behaviors of the other humans,
+</em><br>
+<em>&gt; since the AI explains them all at once).  You didn't specify the past
+</em><br>
+<em>&gt; behaviors, and even if you did I don't have enough brainpower to run
+</em><br>
+<em>&gt; the AI's algorithm, so I don't know the answer to your question.
+</em><br>
+<p>Ok, you don't know what the AI will do exactly, but do you have reason to 
+<br>
+believe that the scheme will work out, in the sense that the AI will be able 
+<br>
+to form accurate estimates of people's utility functions? Let me give 
+<br>
+another example that may be clearer.
+<br>
+<p>First suppose I don't know that the AI exists. If I reach for an apple in a 
+<br>
+store, that is a good indication that I consider the benefit of owning the 
+<br>
+apple higher than the cost of the apple. If the AI observes me reaching for 
+<br>
+an apple without being aware of its existence, it can reasonably deduce that 
+<br>
+fact about my utility function, and pay for the apple for me out of its own 
+<br>
+pocket. But what happens if I do know that the AI exists? In that case I 
+<br>
+might reach for the apple even if the benefit of the apple to me is quite 
+<br>
+small, because I think the AI will pay for me. So then how can the AI figure 
+<br>
+out how much I really value the apple?
+<br>
+<p><em>&gt; That's a reasonable reaction to the paper because I didn't emphasize
+</em><br>
+<em>&gt; in the best place how that issue is dealt with.  The utility is an
+</em><br>
+<em>&gt; integer with a bounded number of bits, so many of the constants you
+</em><br>
+<em>&gt; might want to multiply by will cause overflow and break the
+</em><br>
+<em>&gt; explanation.  Similarly, there's only a finite number of constants you
+</em><br>
+<em>&gt; can add, depending on the range of values.  The broken explanations
+</em><br>
+<em>&gt; don't contribute to the final result.
+</em><br>
+<p>Do you think this will actually result in a *fair* comparison of 
+<br>
+interpersonal utilities? If so why?
+<br>
+<p><em>&gt; Humans do interpersonal comparison of utilities routinely.  I want to
+</em><br>
+<em>&gt; stay alive tomorrow, and you probably want to eat dinner tomorrow.  I
+</em><br>
+<em>&gt; think that in the simplest circumstances consistent with what has been
+</em><br>
+<em>&gt; said so far, we'll all agree that my desire to stay alive tomorrow is
+</em><br>
+<em>&gt; greater than your desire to eat dinner tomorrow.
+</em><br>
+<p>What about my desire for greater support of classical music, versus my 
+<br>
+neighbor's desire for more research into mind-altering drugs? It's not 
+<br>
+always so clear...
+<br>
+<p><em>&gt; Since humans can do
+</em><br>
+<em>&gt; it, if you buy into Church-Turing thesis you have to conclude that
+</em><br>
+<em>&gt; there is an algorithm for it.  If you don't buy into the
+</em><br>
+<em>&gt; Church-Turing thesis, you're reading the wrong mailing list. :-).
+</em><br>
+<p>When I said no &quot;obvious&quot; way, I meant that there isn't an obvious algorithm 
+<br>
+that is fair. There is actually an infinite number of algorithms that can be 
+<br>
+used, and choosing among them is the real problem.
+<br>
+<p><em>&gt; If someone has a better idea, please speak up.  We really do have to
+</em><br>
+<em>&gt; compare utilities between people, since the FAI will routinely have to
+</em><br>
+<em>&gt; choose between helping one person and helping another.  (For a
+</em><br>
+<em>&gt; suitably twisted definition of &quot;Friendly&quot;, one can argue that the
+</em><br>
+<em>&gt; previous sentence is false.  I'd be interested in seeing details if
+</em><br>
+<em>&gt; anyone can fill them in in a way they honestly think makes sense.)
+</em><br>
+<p>You can find plenty of papers if you do a search for &quot;interpersonal 
+<br>
+comparison of utilities&quot; but I'm not sure any of them are good constructive 
+<br>
+solutions.
+<br>
+&nbsp;
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="17206.html">Panu Horsmalahti: "Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI"</a>
+<li><strong>Previous message:</strong> <a href="17204.html">Tim Freeman: "What he really wants (was Re: UCaRtMaAI paper)"</a>
+<li><strong>In reply to:</strong> <a href="17198.html">Tim Freeman: "UCaRtMaAI paper (was Re: Building a friendly AI from a &quot;just do what I tell you&quot; AI)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="17212.html">Tim Freeman: "Re: UCaRtMaAI paper"</a>
+<li><strong>Reply:</strong> <a href="17212.html">Tim Freeman: "Re: UCaRtMaAI paper"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#17205">[ date ]</a>
+<a href="index.html#17205">[ thread ]</a>
+<a href="subject.html#17205">[ subject ]</a>
+<a href="author.html#17205">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:01:00 MDT
+</em></small></p>
+</body>
+</html>

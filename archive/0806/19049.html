@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: [sl4] Is there a model for RSI?</title>
+<meta name="Author" content="J. Andrew Rogers (andrew@ceruleansystems.com)">
+<meta name="Subject" content="Re: [sl4] Is there a model for RSI?">
+<meta name="Date" content="2008-06-23">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: [sl4] Is there a model for RSI?</h1>
+<!-- received="Mon Jun 23 11:19:47 2008" -->
+<!-- isoreceived="20080623171947" -->
+<!-- sent="Mon, 23 Jun 2008 08:10:54 -0700" -->
+<!-- isosent="20080623151054" -->
+<!-- name="J. Andrew Rogers" -->
+<!-- email="andrew@ceruleansystems.com" -->
+<!-- subject="Re: [sl4] Is there a model for RSI?" -->
+<!-- id="E13C28C4-EEAA-4223-825E-C217FF7A77A7@ceruleansystems.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="b54769d90806230403l3bd883f0w12a0cbd87ba7818c@mail.gmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> J. Andrew Rogers (<a href="mailto:andrew@ceruleansystems.com?Subject=Re:%20[sl4]%20Is%20there%20a%20model%20for%20RSI?"><em>andrew@ceruleansystems.com</em></a>)<br>
+<strong>Date:</strong> Mon Jun 23 2008 - 09:10:54 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="19050.html">Peter de Blanc: "Re: [sl4] Is there a model for RSI?"</a>
+<li><strong>Previous message:</strong> <a href="19048.html">Vladimir Nesov: "Re: [sl4] Is there a model for RSI?"</a>
+<li><strong>In reply to:</strong> <a href="19048.html">Vladimir Nesov: "Re: [sl4] Is there a model for RSI?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="19053.html">Peter de Blanc: "Re: [sl4] Is there a model for RSI?"</a>
+<li><strong>Reply:</strong> <a href="19053.html">Peter de Blanc: "Re: [sl4] Is there a model for RSI?"</a>
+<li><strong>Reply:</strong> <a href="19055.html">Vladimir Nesov: "Re: [sl4] Is there a model for RSI?"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#19049">[ date ]</a>
+<a href="index.html#19049">[ thread ]</a>
+<a href="subject.html#19049">[ subject ]</a>
+<a href="author.html#19049">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Jun 23, 2008, at 4:03 AM, Vladimir Nesov wrote:
+<br>
+<em>&gt;
+</em><br>
+<em>&gt; No, Peter is correct, and it is possible to construct even simpler
+</em><br>
+<em>&gt; example. Say, our universal TM that runs the show only stops for two
+</em><br>
+<em>&gt; programs of length less than 10: for P1 of length Len(P1)=3 and for P2
+</em><br>
+<em>&gt; with Len(P2)=4. You can encode any other TM to run on this UTM, but
+</em><br>
+<em>&gt; it'll be at least of length 10: for all P that stop, P&lt;&gt;P1, P&lt;&gt;P2,
+</em><br>
+<em>&gt; Len(P)&gt;=10. Let's say, the output of running P1 is Run(P1)=P3, and
+</em><br>
+<em>&gt; output of P2 is Run(P2)=P4, but we make sure that also Run(P3)=P4.
+</em><br>
+<em>&gt; Then, clearly Kolmogorov complexity of P3 is 3 (length of P1), and of
+</em><br>
+<em>&gt; P4 it's 4 (length of P2), but P3 outputs P4, and P4 has greater
+</em><br>
+<em>&gt; Kolmogorov complexity than P3.
+</em><br>
+<p><p>Yes, the complexity of the state will vary -- a simple counter with no  
+<br>
+other behavior is sufficient to see that this is true -- but that is  
+<br>
+not the complexity of the machine. What does this have to do with  
+<br>
+Peter's original assertion? It was very late when I responded, but he  
+<br>
+did write something like:
+<br>
+<p>&quot;Suppose you have a machine that outputs a copy of itself, except that
+<br>
+somewhere in its memory it contains a model number, and each time it
+<br>
+makes a copy, it increments the model number on the copy.
+<br>
+<p>This machine and all of its descendants comprise an infinite set of
+<br>
+distinct machines...&quot;
+<br>
+<p><p>It looked kind of like someone confusing machine complexity with state  
+<br>
+complexity with some ambiguous handling of the complexity of the  
+<br>
+control function, and it still does to me this morning.  I could be  
+<br>
+wrong, I was having trouble parsing his point.
+<br>
+<p>The focus should have been on the very first line, since that had no  
+<br>
+ambiguity: Exactly how does a machine output a copy of itself (with or  
+<br>
+without the counter)?
+<br>
+<p>J. Andrew Rogers
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="19050.html">Peter de Blanc: "Re: [sl4] Is there a model for RSI?"</a>
+<li><strong>Previous message:</strong> <a href="19048.html">Vladimir Nesov: "Re: [sl4] Is there a model for RSI?"</a>
+<li><strong>In reply to:</strong> <a href="19048.html">Vladimir Nesov: "Re: [sl4] Is there a model for RSI?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="19053.html">Peter de Blanc: "Re: [sl4] Is there a model for RSI?"</a>
+<li><strong>Reply:</strong> <a href="19053.html">Peter de Blanc: "Re: [sl4] Is there a model for RSI?"</a>
+<li><strong>Reply:</strong> <a href="19055.html">Vladimir Nesov: "Re: [sl4] Is there a model for RSI?"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#19049">[ date ]</a>
+<a href="index.html#19049">[ thread ]</a>
+<a href="subject.html#19049">[ subject ]</a>
+<a href="author.html#19049">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:01:03 MDT
+</em></small></p>
+</body>
+</html>

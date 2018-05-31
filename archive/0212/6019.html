@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Curriculum for AI</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: Curriculum for AI">
+<meta name="Date" content="2002-12-30">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Curriculum for AI</h1>
+<!-- received="Mon Dec 30 10:56:59 2002" -->
+<!-- isoreceived="20021230175659" -->
+<!-- sent="Mon, 30 Dec 2002 13:00:22 -0500" -->
+<!-- isosent="20021230180022" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: Curriculum for AI" -->
+<!-- id="LAEGJLOGJIOELPNIOOAJCEKMEAAA.ben@goertzel.org" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="004901c2aef1$8d1af260$6501a8c0@slnt.phub.net.cable.rogers.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20Curriculum%20for%20AI"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Mon Dec 30 2002 - 11:00:22 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="6020.html">Peter Voss: "RE: Curriculum for AI"</a>
+<li><strong>Previous message:</strong> <a href="6018.html">Eliezer S. Yudkowsky: "Re: [agi] Early Apps."</a>
+<li><strong>In reply to:</strong> <a href="6015.html">Michael Roy Ames: "Curriculum for AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6020.html">Peter Voss: "RE: Curriculum for AI"</a>
+<li><strong>Reply:</strong> <a href="6020.html">Peter Voss: "RE: Curriculum for AI"</a>
+<li><strong>Reply:</strong> <a href="6021.html">Michael Roy Ames: "Re: Curriculum for AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6019">[ date ]</a>
+<a href="index.html#6019">[ thread ]</a>
+<a href="subject.html#6019">[ subject ]</a>
+<a href="author.html#6019">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Michael,
+<br>
+<p>I think this is a great direction to be thinking in, and a good .5'th
+<br>
+draft..
+<br>
+<p>Now a few specific comments..
+<br>
+<p>I think that everything up thru section 13 in your document could be done
+<br>
+fairly straightforwardly by a genetic programming system with a reasonable
+<br>
+number of training examples and a reasonable amount of processing power.  By
+<br>
+&quot;reasonable&quot; I mean: Hundreds of training examples for each game, and
+<br>
+perhaps a few dozen machines of processing power.
+<br>
+<p>Where things get a bit more interesting is with your idea of games to teach
+<br>
+conditionals, loops and so forth.  But this part of the document is very
+<br>
+sketchy, and I'm looking forward to seeing some details and examples of this
+<br>
+stuff in the next draft...  For all the games prior to this algorithmic
+<br>
+stuff, I see nothing that distinguishes AGI systems from machine learning
+<br>
+algorithms that learn rules based on training examples.  [Note that it is
+<br>
+precisely the &quot;microworld&quot; nature of the tasks that will, I conjecture,
+<br>
+allow simple ML algorithms to do very well on them.]
+<br>
+<p>I'd like to see more tests specifically intended to require *abstract*
+<br>
+learning.  For instance, suppose one teaches a system to do arithmetic in
+<br>
+bases 2 and 5.  Does it then learn more quickly how to do arithmetic in base
+<br>
+4, if given some training examples?  I.e., when being taught arithmetic in a
+<br>
+number of bases, at what point does it shift from learning a separate model
+<br>
+of arithmetic in each base, to learning a general model of basal arithmetic
+<br>
+with a &quot;base&quot; parameter as an input?  Probably more tests could be
+<br>
+formulated along these lines....
+<br>
+<p>-- Ben G
+<br>
+<p><p><em>&gt; -----Original Message-----
+</em><br>
+<em>&gt; From: <a href="mailto:owner-sl4@sl4.org?Subject=RE:%20Curriculum%20for%20AI">owner-sl4@sl4.org</a> [mailto:<a href="mailto:owner-sl4@sl4.org?Subject=RE:%20Curriculum%20for%20AI">owner-sl4@sl4.org</a>]On Behalf Of Michael
+</em><br>
+<em>&gt; Roy Ames
+</em><br>
+<em>&gt; Sent: Saturday, December 28, 2002 11:20 PM
+</em><br>
+<em>&gt; To: <a href="mailto:sl4@sl4.org?Subject=RE:%20Curriculum%20for%20AI">sl4@sl4.org</a>
+</em><br>
+<em>&gt; Subject: Curriculum for AI
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Let the games begin!
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; A few weeks ago I started trying to put together a teaching curriculum
+</em><br>
+<em>&gt; for Friendly AI.  After making a couple abortive attempts, I realized
+</em><br>
+<em>&gt; (even more than before) that there was one hell of a lot of things that
+</em><br>
+<em>&gt; an AI needed to learn before ve could understand the first thing about
+</em><br>
+<em>&gt; Friendly content.  So, I punted the idea of Friendly content up a level
+</em><br>
+<em>&gt; (or five), and attempted to figure out how to teach an AI what it needs
+</em><br>
+<em>&gt; to know before that.  I created some lesson outlines, game descriptions,
+</em><br>
+<em>&gt; teaching goals and microdomain definitions.  I now have about 40 pages
+</em><br>
+<em>&gt; of (rather incomplete) notes.  They could easily be fleshed-out to 240
+</em><br>
+<em>&gt; pages... but... before doing that perhaps I should take a reality-check.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; These are links to three formats of the notes:
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Word97
+</em><br>
+<em>&gt; <a href="http://www.geocities.com/michaelroyames/Curriculum-for-AI-20021223.doc">http://www.geocities.com/michaelroyames/Curriculum-for-AI-20021223.doc</a>
+</em><br>
+<em>&gt; HTML - Readable stuff starts after a long table of contents.
+</em><br>
+<em>&gt; <a href="http://www.geocities.com/michaelroyames/Curriculum-for-AI-20021223.htm">http://www.geocities.com/michaelroyames/Curriculum-for-AI-20021223.htm</a>
+</em><br>
+<em>&gt; RTF (Works with Abiword)
+</em><br>
+<em>&gt; <a href="http://www.geocities.com/michaelroyames/Curriculum-for-AI-20021223.rtf">http://www.geocities.com/michaelroyames/Curriculum-for-AI-20021223.rtf</a>
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Described within is one way (out of many) to teach an AI from 'scratch'.
+</em><br>
+<em>&gt; The teaching format may seem a little restrictive or 'constrained', but
+</em><br>
+<em>&gt; I made it that way so programming an automated teacher would be fast and
+</em><br>
+<em>&gt; easy.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; The basic idea is to teach an AI through the playing of games.  Starting
+</em><br>
+<em>&gt; with very simple games, and gradually getting more complex.  By playing
+</em><br>
+<em>&gt; the games in various microworlds it is intended that the AI build a
+</em><br>
+<em>&gt; variety of concepts without being overwhelmed with complexity.  These
+</em><br>
+<em>&gt; concepts can then be applied to real-world real-time data, and could be
+</em><br>
+<em>&gt; used to acquire a small subset of human language (and various other
+</em><br>
+<em>&gt; skills).  Education through game playing... hey, it works for kids!
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; What problems do you see with this approach?
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Comments, new game ideas, and new microdomain ideas welcome.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Michael Roy Ames
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="6020.html">Peter Voss: "RE: Curriculum for AI"</a>
+<li><strong>Previous message:</strong> <a href="6018.html">Eliezer S. Yudkowsky: "Re: [agi] Early Apps."</a>
+<li><strong>In reply to:</strong> <a href="6015.html">Michael Roy Ames: "Curriculum for AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6020.html">Peter Voss: "RE: Curriculum for AI"</a>
+<li><strong>Reply:</strong> <a href="6020.html">Peter Voss: "RE: Curriculum for AI"</a>
+<li><strong>Reply:</strong> <a href="6021.html">Michael Roy Ames: "Re: Curriculum for AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6019">[ date ]</a>
+<a href="index.html#6019">[ thread ]</a>
+<a href="subject.html#6019">[ subject ]</a>
+<a href="author.html#6019">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:41 MDT
+</em></small></p>
+</body>
+</html>

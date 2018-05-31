@@ -1,0 +1,308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Hempel's Paradox</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: Hempel's Paradox">
+<meta name="Date" content="2005-09-12">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Hempel's Paradox</h1>
+<!-- received="Mon Sep 12 07:46:55 2005" -->
+<!-- isoreceived="20050912134655" -->
+<!-- sent="Mon, 12 Sep 2005 09:46:50 -0400" -->
+<!-- isosent="20050912134650" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: Hempel's Paradox" -->
+<!-- id="JNEIJCJJHIEAILJBFHILAEFFGCAA.ben@goertzel.org" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="5844e22f0509111941388d0440@mail.gmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20Hempel's%20Paradox"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Mon Sep 12 2005 - 07:46:50 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="12325.html">Phil Goetz: "Complex computer programs"</a>
+<li><strong>Previous message:</strong> <a href="12323.html">David Hart: "Re: Hempel's Paradox"</a>
+<li><strong>In reply to:</strong> <a href="12322.html">Jeff Medina: "Re: Hempel's Paradox"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12329.html">Eliezer S. Yudkowsky: "Re: Hempel's Paradox"</a>
+<li><strong>Reply:</strong> <a href="12329.html">Eliezer S. Yudkowsky: "Re: Hempel's Paradox"</a>
+<li><strong>Reply:</strong> <a href="12331.html">Eliezer S. Yudkowsky: "Re: Hempel's Paradox"</a>
+<li><strong>Reply:</strong> <a href="12419.html">Peter Voss: "sl4 at AC2005"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12324">[ date ]</a>
+<a href="index.html#12324">[ thread ]</a>
+<a href="subject.html#12324">[ subject ]</a>
+<a href="author.html#12324">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Hi Jeff,
+<br>
+<p>First,  a META comment: I'm not sure that this discussion of the philosophy
+<br>
+and algebra of uncertain inference is really within the purview of the SL4
+<br>
+list, is it?  It's a bit of a digression, though it is indirectly relevant
+<br>
+as it's pertinent to the foundations of AI engineering and rational
+<br>
+thinking...
+<br>
+<p>Having said that, I will now continue to make my point until one of the
+<br>
+powers that be requests me to stop ;-)
+<br>
+<p><em>&gt; Ben replied:
+</em><br>
+<em>&gt; &gt;&gt; Suppose you have a population of 10 birds of different colors,
+</em><br>
+<em>&gt; &gt;&gt; and no other knowledge about the population.
+</em><br>
+<em>&gt; &gt;&gt;
+</em><br>
+<em>&gt; &gt;&gt; If you sample one of the birds and find that it's a purple goose,
+</em><br>
+<em>&gt; &gt;&gt; why does this count as information that all the RAVENS in the
+</em><br>
+<em>&gt; &gt;&gt; population are black?&quot;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Because it is evidence that [all non-black objects are non-ravens]. If
+</em><br>
+<em>&gt; we know at least one raven exists, and sampling a non-black object
+</em><br>
+<em>&gt; produces a non-raven on each of N sampling events, then with
+</em><br>
+<em>&gt; increasing N comes increasing certainty that no non-black object is a
+</em><br>
+<em>&gt; raven.
+</em><br>
+<p>I agree so far...
+<br>
+<p><em>&gt; And [no non-black object is a raven] is, of course, logically
+</em><br>
+<em>&gt; and conceptually equivalent to [all ravens are black], given the tiny
+</em><br>
+<em>&gt; extra assumption I left out earlier that at least one raven exists.
+</em><br>
+<p>This is the controversial part.
+<br>
+<p>To get from
+<br>
+<p>NOT(black) ==&gt; NOT(raven)
+<br>
+<p>to
+<br>
+<p>raven ==&gt; black
+<br>
+<p>requires a logical transformation that does not preserve &quot;amount of
+<br>
+evidence&quot;, at least not according to PTL's theory of evidence.  And when you
+<br>
+look at the algebra of evidence transformation that comes along with this
+<br>
+transformation, you find that in fact the amount of evidence about
+<br>
+raven==&gt;black ensuing from NOT(black) ==&gt; NOT(raven) comes out to zero...
+<br>
+<p><p>The key here is that in PTL &quot;amount of evidence&quot; is tabulated separately
+<br>
+from probability and comes with its own parallel inference rules.
+<br>
+<p>The probability of NOT(black) ==&gt; NOT(raven) should be calculated as
+<br>
+<p>P1 =
+<br>
+<p>P( NOT(black) AND NOT(raven) )
+<br>
+------------------------------
+<br>
+P(NOT(black))
+<br>
+<p>with total evidence
+<br>
+<p>N1 =total # of non-black things observed
+<br>
+<p>and positive evidence
+<br>
+<p>N1+ = total # of non-black non-ravens observed
+<br>
+<p>[I say &quot;observed&quot; because for the moment I'm only talking about direct
+<br>
+evaluation of truth values, not about inference.  These numbers may be
+<br>
+modified via speculative inferences of course.]
+<br>
+<p>whereas the probability of raven ==&gt; black should be calculated as
+<br>
+<p>P2 =
+<br>
+<p>P(raven AND black)
+<br>
+__________________
+<br>
+P(raven)
+<br>
+<p>with total evidence
+<br>
+<p>N2 = total # of ravens observed
+<br>
+<p>and positive evidence
+<br>
+<p>N2+ = total # of black ravens observed
+<br>
+<p>(note that these &quot;evidence counts&quot; are not probabilities.  They may be
+<br>
+scaled into probabilities of course, via dividing by the size of the assumed
+<br>
+universe or as we call it in PTL, the assumed context)
+<br>
+<p>Now, ignoring issues related to universal quantification for the sake of
+<br>
+making a simple point, what you're doing in your Bayesian perspective
+<br>
+basically reasoning such as
+<br>
+<p>P2=
+<br>
+P(black|raven) =
+<br>
+1 - P( NOT(black) | raven ) =
+<br>
+1 - P(raven| NOT(black)) P(NOT(black)) / P(raven) =
+<br>
+1 - [1- P(NOT(raven)| NOT(black))] P(NOT(black)) / P(raven) =
+<br>
+1 - [1- P1] P(NOT(black)) / P(raven)
+<br>
+<p>hence using P2 to derive P1.
+<br>
+<p>However, the problem is that Bayes rule (used to obtain the fourth line
+<br>
+above from the third) does not preserve &quot;amount of evidence&quot; in the way that
+<br>
+you seem to be assuming.
+<br>
+<p>Evidence about P(A|B) in general does not count as evidence about P(B|A).
+<br>
+One can derive an estimate of the probability of any one of these from an
+<br>
+estimate of the probability of the other.  But the amount of evidence on
+<br>
+which this estimate is based needs to be separately calculated, and may
+<br>
+sometimes be zero.
+<br>
+<p>In PTL, the evidence about P(A|B) is N_B, the number of B's observed by the
+<br>
+intelligent system in question
+<br>
+<p>The evidence about P(B|A) is N_A, the number of A's observed...
+<br>
+<p>While we can say
+<br>
+<p>P(B|A) = P(A|B) P(B) / P(A)    [Bayes rule]
+<br>
+<p>the corresponding rule for evidence amounts is
+<br>
+<p>N_A = N_B P(A|B)
+<br>
+<p>which in this case means e.g.
+<br>
+<p>N_raven = N_(non-black) P(raven|non-black)
+<br>
+<p>So if we've observed 499 non-black entities and none of them are ravens
+<br>
+(they're all purple geese, or orange orgasmotrons, or whatever), then we
+<br>
+have
+<br>
+<p>N_(non-black) = 499
+<br>
+<p>and
+<br>
+<p>P(raven|non-black) = 0
+<br>
+<p>thus an inferred
+<br>
+<p>N_raven = 0
+<br>
+<p>So, the amount of evidence about P(non-black|raven) [or P(black|raven)]
+<br>
+obtained from P(non-raven|black) is zero.
+<br>
+<p>Elegant, huh?  Hempel's paradox disappears when you move to two-component
+<br>
+truth values and tabulate evidence separately from probability.  It doesn't
+<br>
+just quasi-disappear like in standard Bayesian semantics, it *really*
+<br>
+disappears.
+<br>
+<p>[Note: I derived the idea of two-component truth values from Pei Wang's NARS
+<br>
+framework, but NARS is nonprobabilistic.  PTL is unique in its integration
+<br>
+of this sort of two-component truth value with probability theory.  However,
+<br>
+Walley's interval theory of probabilities also uses two component truth
+<br>
+values of a different sort, and I'm not sure how the Hempel paradox comes
+<br>
+out in Walley's theory.  Potentially, it could give the same sort of result
+<br>
+as PTL, which in Walley's terms would correspond to an interval truth value
+<br>
+spanning the whole interval [0,1], thus being completely uninformative.  I
+<br>
+mention Walley's approach mostly because it's more &quot;mainstream&quot; than PTL,
+<br>
+although it's less comprehensive as an approach to inference for AI.]
+<br>
+<p>-- Ben
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="12325.html">Phil Goetz: "Complex computer programs"</a>
+<li><strong>Previous message:</strong> <a href="12323.html">David Hart: "Re: Hempel's Paradox"</a>
+<li><strong>In reply to:</strong> <a href="12322.html">Jeff Medina: "Re: Hempel's Paradox"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12329.html">Eliezer S. Yudkowsky: "Re: Hempel's Paradox"</a>
+<li><strong>Reply:</strong> <a href="12329.html">Eliezer S. Yudkowsky: "Re: Hempel's Paradox"</a>
+<li><strong>Reply:</strong> <a href="12331.html">Eliezer S. Yudkowsky: "Re: Hempel's Paradox"</a>
+<li><strong>Reply:</strong> <a href="12419.html">Peter Voss: "sl4 at AC2005"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12324">[ date ]</a>
+<a href="index.html#12324">[ thread ]</a>
+<a href="subject.html#12324">[ subject ]</a>
+<a href="author.html#12324">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:52 MDT
+</em></small></p>
+</body>
+</html>

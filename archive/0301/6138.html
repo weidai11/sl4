@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Towards a prototype mini-AI</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: Towards a prototype mini-AI">
+<meta name="Date" content="2003-01-31">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Towards a prototype mini-AI</h1>
+<!-- received="Fri Jan 31 23:06:07 2003" -->
+<!-- isoreceived="20030201060607" -->
+<!-- sent="Sat, 1 Feb 2003 01:07:53 -0500" -->
+<!-- isosent="20030201060753" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: Towards a prototype mini-AI" -->
+<!-- id="LAEGJLOGJIOELPNIOOAJKEKMEEAA.ben@goertzel.org" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="F1558SPIeZeWR5CIvLk0000b91e@hotmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20Towards%20a%20prototype%20mini-AI"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Fri Jan 31 2003 - 23:07:53 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="6139.html">Jonathan Standley: "Re: Towards a prototype mini-AI"</a>
+<li><strong>Previous message:</strong> <a href="6137.html">Mitchell Porter: "RE: Towards a prototype mini-AI"</a>
+<li><strong>In reply to:</strong> <a href="6137.html">Mitchell Porter: "RE: Towards a prototype mini-AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6139.html">Jonathan Standley: "Re: Towards a prototype mini-AI"</a>
+<li><strong>Reply:</strong> <a href="6139.html">Jonathan Standley: "Re: Towards a prototype mini-AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6138">[ date ]</a>
+<a href="index.html#6138">[ thread ]</a>
+<a href="subject.html#6138">[ subject ]</a>
+<a href="author.html#6138">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Hi,
+<br>
+<p><em>&gt; What I want to see is a pseudocode schema for a general AI: the
+</em><br>
+<em>&gt; &quot;Hello, world&quot; of LOGI-compliant programming, something you might
+</em><br>
+<em>&gt; find on page 1 of a SIAI textbook for seed AI programmers. Even
+</em><br>
+<em>&gt; if Novamente meets all the AGI criteria, it's a mature project
+</em><br>
+<em>&gt; and is way too big and sophisticated for a print-out of source
+</em><br>
+<em>&gt; code to be enlightening. I want a minimal example of the proposed
+</em><br>
+<em>&gt; architecture, just a few dozen or a few hundred lines long.
+</em><br>
+<p>Yes, it would be pretty easy to cast the Novamente architecture into a vague
+<br>
+sort of pseudocode in the way you describe.
+<br>
+<p>It would be a full day's work, and I'm not going to do it tonight or this
+<br>
+week, but I can see that it might be a useful mode of exposition.  Maybe
+<br>
+we'll do it in the final version of the Novamente book....
+<br>
+<p>It would look a little different than you're thinking though.
+<br>
+<p>More like:
+<br>
+<p>* Definition of our knowledge representation
+<br>
+* Definition of our &quot;mind OS&quot; scheduling/process control framework
+<br>
+* List of a couple dozen MindAgents acting within the framework on the
+<br>
+knowledge representation
+<br>
+* List of a dozen functionally specialized units, each running the  Mind OS
+<br>
+and with a certain set of MindAgents with certain parameter values
+<br>
+<p>So it'd be *concurrent, agent-system style* pseudocode, not linear
+<br>
+von-Neumman-program-style pseudocode...
+<br>
+<p>And it would be a few hundred lines because there are a couple dozen
+<br>
+MindAgents and a dozen units configuring them in different ways...
+<br>
+<p>I'd stress though, that having this pseudocode does not get you very far
+<br>
+toward having the Novamente design.  The devil is in the details -- in
+<br>
+working out the complex business inside the MindAgents in a way that will
+<br>
+lead to emergent cooperativity.
+<br>
+<p><em>&gt; Again, I want to emphasize: I'm not talking of a schema for a
+</em><br>
+<em>&gt; *seed AI*, but of a schema for a *general AI*. A seed AI is a
+</em><br>
+<em>&gt; highly particular subspecies of general AI, namely one that
+</em><br>
+<em>&gt; is optimized for self-enhancement. A seed AI will necessarily
+</em><br>
+<em>&gt; conform to the general-AI schema, but is likely to have enough
+</em><br>
+<em>&gt; specific architectural properties that it deserves its own
+</em><br>
+<em>&gt; schema (see part 2 of the textbook).
+</em><br>
+<p>In the case of Novamente,
+<br>
+<p>seed AI = general AI + codic modality + tuning of inference MindAgents for
+<br>
+automated theorem-proving
+<br>
+<p>(to oversimplify a little)
+<br>
+<p><p>-- Ben Goertzel
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="6139.html">Jonathan Standley: "Re: Towards a prototype mini-AI"</a>
+<li><strong>Previous message:</strong> <a href="6137.html">Mitchell Porter: "RE: Towards a prototype mini-AI"</a>
+<li><strong>In reply to:</strong> <a href="6137.html">Mitchell Porter: "RE: Towards a prototype mini-AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6139.html">Jonathan Standley: "Re: Towards a prototype mini-AI"</a>
+<li><strong>Reply:</strong> <a href="6139.html">Jonathan Standley: "Re: Towards a prototype mini-AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6138">[ date ]</a>
+<a href="index.html#6138">[ thread ]</a>
+<a href="subject.html#6138">[ subject ]</a>
+<a href="author.html#6138">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:41 MDT
+</em></small></p>
+</body>
+</html>

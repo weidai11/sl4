@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Flare</title>
+<meta name="Author" content="Ben Goertzel (ben@webmind.com)">
+<meta name="Subject" content="RE: Flare">
+<meta name="Date" content="2001-07-17">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Flare</h1>
+<!-- received="Tue Jul 17 21:50:54 2001" -->
+<!-- isoreceived="20010718035054" -->
+<!-- sent="Tue, 17 Jul 2001 21:47:42 -0400" -->
+<!-- isosent="20010718014742" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@webmind.com" -->
+<!-- subject="RE: Flare" -->
+<!-- id="NDBBIBGFAPPPBODIPJMMCEMDFMAA.ben@webmind.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="B77A2BDA.27DD%jamesr@best.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@webmind.com?Subject=RE:%20Flare"><em>ben@webmind.com</em></a>)<br>
+<strong>Date:</strong> Tue Jul 17 2001 - 19:47:42 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1768.html">Eliezer S. Yudkowsky: "Re: PROJ: Flare"</a>
+<li><strong>Previous message:</strong> <a href="1766.html">James Rogers: "Re: Flare"</a>
+<li><strong>In reply to:</strong> <a href="1766.html">James Rogers: "Re: Flare"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1769.html">Ben Goertzel: "RE: Flare"</a>
+<li><strong>Reply:</strong> <a href="1769.html">Ben Goertzel: "RE: Flare"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1767">[ date ]</a>
+<a href="index.html#1767">[ thread ]</a>
+<a href="subject.html#1767">[ subject ]</a>
+<a href="author.html#1767">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+It was true until very recently for all Windows and Linux *and Solaris*
+<br>
+JVM's.  Sun claims they'll have a 64 bit JVM coming out sometime, but the
+<br>
+launch date has been frequently postponed.
+<br>
+<p>I haven't tried IBM's new 64 bit JVM, actually, though I have read about it,
+<br>
+e.g.
+<br>
+<p><a href="http://service2.boulder.ibm.com/devtools/news0101/art14.htm">http://service2.boulder.ibm.com/devtools/news0101/art14.htm</a>
+<br>
+<p>Interesting work at IBM on scalable Java is at
+<br>
+<p><a href="http://www.research.ibm.com/journal/sj39-1.html">http://www.research.ibm.com/journal/sj39-1.html</a>
+<br>
+<p>All this is quite new, and I don't know how well it works.  Experience shows
+<br>
+that marketing literature is a poor guide to actual functionality for such
+<br>
+systems.  I do know IBM has invested a lot of time and money in this.
+<br>
+<p>For us, when we decided to re-implement Webmind to change the *architecture*
+<br>
+(while keeping the mathematical and conceptual basis the same), it was a
+<br>
+tough choice whether to stick with Java (in light of all the progress IBM
+<br>
+and others are making, albeit slowly) or to go with C++.  But ultimately, we
+<br>
+decided that if we were going to re-code the system for efficiency, we might
+<br>
+as well go all the way.
+<br>
+<p>-- ben
+<br>
+<p><em>&gt; -----Original Message-----
+</em><br>
+<em>&gt; From: <a href="mailto:owner-sl4@sysopmind.com?Subject=RE:%20Flare">owner-sl4@sysopmind.com</a> [mailto:<a href="mailto:owner-sl4@sysopmind.com?Subject=RE:%20Flare">owner-sl4@sysopmind.com</a>]On Behalf
+</em><br>
+<em>&gt; Of James Rogers
+</em><br>
+<em>&gt; Sent: Tuesday, July 17, 2001 8:52 PM
+</em><br>
+<em>&gt; To: <a href="mailto:sl4@sysopmind.com?Subject=RE:%20Flare">sl4@sysopmind.com</a>
+</em><br>
+<em>&gt; Subject: Re: Flare
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; On 7/17/01 4:42 PM, &quot;Ben Goertzel&quot; &lt;<a href="mailto:ben@webmind.com?Subject=RE:%20Flare">ben@webmind.com</a>&gt; wrote:
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; A JVM, being 32 bit as all current ones are, has only 2GB max memory
+</em><br>
+<em>&gt; &gt; available to it, no matter how much memory is in the machine itself.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; This might be true if you are using intrinsically 32-bit
+</em><br>
+<em>&gt; platforms, but the
+</em><br>
+<em>&gt; JVMs for higher-end platforms and Big Iron can usually can do 64-bit
+</em><br>
+<em>&gt; addressing internally.  While JVMs run in 32-bit mode by default, some of
+</em><br>
+<em>&gt; the JVMs for 64-bit platforms (e.g. Compaq and IBM) have a switch that
+</em><br>
+<em>&gt; allows you to fly past the 32-bit memory addressing limit.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; -James Rogers
+</em><br>
+<em>&gt;  <a href="mailto:jamesr@best.com?Subject=RE:%20Flare">jamesr@best.com</a>
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1768.html">Eliezer S. Yudkowsky: "Re: PROJ: Flare"</a>
+<li><strong>Previous message:</strong> <a href="1766.html">James Rogers: "Re: Flare"</a>
+<li><strong>In reply to:</strong> <a href="1766.html">James Rogers: "Re: Flare"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1769.html">Ben Goertzel: "RE: Flare"</a>
+<li><strong>Reply:</strong> <a href="1769.html">Ben Goertzel: "RE: Flare"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1767">[ date ]</a>
+<a href="index.html#1767">[ thread ]</a>
+<a href="subject.html#1767">[ subject ]</a>
+<a href="author.html#1767">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: ESSAY: Program length, Omega and Friendliness</title>
+<meta name="Author" content="Nick Hay (nickjhay@hotmail.com)">
+<meta name="Subject" content="Re: ESSAY: Program length, Omega and Friendliness">
+<meta name="Date" content="2006-02-22">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: ESSAY: Program length, Omega and Friendliness</h1>
+<!-- received="Wed Feb 22 14:59:02 2006" -->
+<!-- isoreceived="20060222215902" -->
+<!-- sent="Thu, 23 Feb 2006 10:58:54 +1300" -->
+<!-- isosent="20060222215854" -->
+<!-- name="Nick Hay" -->
+<!-- email="nickjhay@hotmail.com" -->
+<!-- subject="Re: ESSAY: Program length, Omega and Friendliness" -->
+<!-- id="43FCDE9E.1000407@hotmail.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="00ba01c637f4$923088c0$0302a8c0@enterprise" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Nick Hay (<a href="mailto:nickjhay@hotmail.com?Subject=Re:%20ESSAY:%20Program%20length,%20Omega%20and%20Friendliness"><em>nickjhay@hotmail.com</em></a>)<br>
+<strong>Date:</strong> Wed Feb 22 2006 - 14:58:54 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="14191.html">Ben Goertzel: "Re: Singularity Institute: Likely to win the race to build GAI?"</a>
+<li><strong>Previous message:</strong> <a href="14189.html">Eliezer S. Yudkowsky: "Re: ESSAY: Program length, Omega and Friendliness"</a>
+<li><strong>In reply to:</strong> <a href="14187.html">David Picon Alvarez: "Re: ESSAY: Program length, Omega and Friendliness"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="14185.html">Eliezer S. Yudkowsky: "Re: ESSAY: Program length, Omega and Friendliness"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#14190">[ date ]</a>
+<a href="index.html#14190">[ thread ]</a>
+<a href="subject.html#14190">[ subject ]</a>
+<a href="author.html#14190">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+David Picon Alvarez wrote:
+<br>
+<em>&gt; I'm not sure if it's possible to prove things about programs of unbounded
+</em><br>
+<em>&gt; complexity, but your example is wrong. Dead code does not raise the
+</em><br>
+<em>&gt; complexity of the program at all. In fact, the applicable definition of
+</em><br>
+<em>&gt; complexity here is the number of bits which the shortest functionally
+</em><br>
+<em>&gt; equivalent program requires.
+</em><br>
+<p>I'm referring to the complexity of the program's code, not the program's output 
+<br>
+or behaviour.  That is, how many bits you need to describe a program p to 
+<br>
+reference it in a theorem e.g. &quot;program p outputs x&quot; or &quot;program p is 1024 bits 
+<br>
+long&quot;.  Concretely, this is the length of the shortest program that outputs 'p'. 
+<br>
+&nbsp;&nbsp;In practice we are dealing with actual code not the functions they implement. 
+<br>
+&nbsp;&nbsp;It is the programs themselves will write theorems about.
+<br>
+<p>To use a different example, for any string x we can construct a program p_x that 
+<br>
+outputs x.  A print statement will do.  We can construct a Turing machine that 
+<br>
+takes input x and outputs the program p_x (p_x = &quot;print x&quot;; this can be easily 
+<br>
+implemented as a Turing machine).  The set of all such programs {p_x} is both 
+<br>
+infinite and of finite complexity (it's a computable set).
+<br>
+<p>Since it's an infinite set the complexity of p_x, that is the shortest program 
+<br>
+that outputs 'p_x', is unbounded.  The complexity of p_x's output, the shortest 
+<br>
+program that outputs 'x', is likewise unbounded since we can pick an x of 
+<br>
+arbitrarily high complexity.
+<br>
+<p>A theorem which states &quot;for all x, program p_x outputs x&quot; proves a property of 
+<br>
+programs of unbounded complexity in both senses.  The theorem itself is simple 
+<br>
+as the set of programs it refers to is simple.  We can expect such a theorem to 
+<br>
+exist, and be easy (if tedious) to prove.
+<br>
+<p><p><em>&gt; 
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;&gt;Applying this to AGI, we can use theorems such as &quot;self-modifying system X
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; will
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;&gt;remain Friendly regardless of future input&quot; or &quot;self-modifying system X
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; will
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;&gt;remain Friendly if future input is in set L&quot; for a sufficiently simple set
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; L.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; But the informational complexity altogether can't exceed M.
+</em><br>
+<p>The complexity of the theorem itself cannot exceed M, otherwise we couldn't 
+<br>
+refer to it.  For instance, L and X must together have complexity smaller than 
+<br>
+M.  But the set of all possible inputs has inputs of unbounded complexity.
+<br>
+<p>-- Nick
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="14191.html">Ben Goertzel: "Re: Singularity Institute: Likely to win the race to build GAI?"</a>
+<li><strong>Previous message:</strong> <a href="14189.html">Eliezer S. Yudkowsky: "Re: ESSAY: Program length, Omega and Friendliness"</a>
+<li><strong>In reply to:</strong> <a href="14187.html">David Picon Alvarez: "Re: ESSAY: Program length, Omega and Friendliness"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="14185.html">Eliezer S. Yudkowsky: "Re: ESSAY: Program length, Omega and Friendliness"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#14190">[ date ]</a>
+<a href="index.html#14190">[ thread ]</a>
+<a href="subject.html#14190">[ subject ]</a>
+<a href="author.html#14190">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:55 MDT
+</em></small></p>
+</body>
+</html>

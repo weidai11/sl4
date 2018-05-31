@@ -1,0 +1,576 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Languages for AGI  [WAS Re: Syllabus for Seed Developer Qualifications...]</title>
+<meta name="Author" content="Simon Belak (simon@owca.info)">
+<meta name="Subject" content="Re: Languages for AGI  [WAS Re: Syllabus for Seed Developer Qualifications...]">
+<meta name="Date" content="2006-02-02">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Languages for AGI  [WAS Re: Syllabus for Seed Developer Qualifications...]</h1>
+<!-- received="Thu Feb  2 05:17:45 2006" -->
+<!-- isoreceived="20060202121745" -->
+<!-- sent="Thu,  2 Feb 2006 13:17:40 +0100" -->
+<!-- isosent="20060202121740" -->
+<!-- name="Simon Belak" -->
+<!-- email="simon@owca.info" -->
+<!-- subject="Re: Languages for AGI  [WAS Re: Syllabus for Seed Developer Qualifications...]" -->
+<!-- id="20060202131740.b66k1c040gk80cg4@posta.owca.info" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="43E15507.3030803@lightlink.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Simon Belak (<a href="mailto:simon@owca.info?Subject=Re:%20Languages%20for%20AGI%20%20[WAS%20Re:%20Syllabus%20for%20Seed%20Developer%20Qualifications...]"><em>simon@owca.info</em></a>)<br>
+<strong>Date:</strong> Thu Feb 02 2006 - 05:17:40 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="13946.html">Kevin Osborne: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>Previous message:</strong> <a href="13944.html">Patrick Crenshaw: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>In reply to:</strong> <a href="13942.html">Richard Loosemore: "Languages for AGI  [WAS Re: Syllabus for Seed Developer Qualifications...]"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="13948.html">Richard Loosemore: "Re: Languages for AGI  [WAS Re: Syllabus for Seed Developer	Qualifications...]"</a>
+<li><strong>Reply:</strong> <a href="13948.html">Richard Loosemore: "Re: Languages for AGI  [WAS Re: Syllabus for Seed Developer	Qualifications...]"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#13945">[ date ]</a>
+<a href="index.html#13945">[ thread ]</a>
+<a href="subject.html#13945">[ subject ]</a>
+<a href="author.html#13945">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+The way I see it, main requirements are:
+<br>
+<p>1) data=code=data=code abstraction. In other words, there is no difference
+<br>
+between compile-time and run-time.
+<br>
+<p>2) Ability to create domain specific languages (within itself).
+<br>
+<p>3) Lends itself naturally (no programmer intervening needed) to extreme
+<br>
+parallelism (&gt;1M nano-threads) and distributed computing.
+<br>
+<p>probably useful:
+<br>
+<p>a) Formal definition of low complexity (simple grammar, no undefined 
+<br>
+behaviour,
+<br>
+low keyword and symbol count, few built-in types, etc.).
+<br>
+<p>b) No boilerplate (if done right, consequence of a)).
+<br>
+<p><p>Simon
+<br>
+<p><p>Quoting Richard Loosemore &lt;<a href="mailto:rpwl@lightlink.com?Subject=Re:%20Languages%20for%20AGI%20%20[WAS%20Re:%20Syllabus%20for%20Seed%20Developer%20Qualifications...]">rpwl@lightlink.com</a>&gt;:
+<br>
+<p><em>&gt; My answer:  none of the below.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; For what I want to do, I need to build my own language.  It is not easy.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Problem is, I cannot imagine being able to do it in any of the languages
+</em><br>
+<em>&gt; you mention, and I have had too much experience of many of them.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; You forgot to mention occam.  Wicked language, but also wickedly
+</em><br>
+<em>&gt; beautiful.  One of the closest for what I need.  Give me a cross between
+</em><br>
+<em>&gt; Smalltalk and occam and I will be half happy.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Richard Loosemore.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Kevin Osborne wrote:
+</em><br>
+<em>&gt;&gt; without putting a fire under yet another religious programming
+</em><br>
+<em>&gt;&gt; language 'discussion' of attrition, I have what for me is an important
+</em><br>
+<em>&gt;&gt; question in regards to AGI development and seed developer syllabus:
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; what programming language are we going to code an AGI with?
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; when answering this question I probably want to dismiss convoluted
+</em><br>
+<em>&gt;&gt; combinations of systems, specialist languages/compilers that may
+</em><br>
+<em>&gt;&gt; (already?) be developed for AGI purposes and focus on:
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; what's the best language to develop the AGI workhorse code in?
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; 'workhorse' here means the code that will bridge the gap from the
+</em><br>
+<em>&gt;&gt; not-so 'intelligent' systems we have now and be able to bootstrap a
+</em><br>
+<em>&gt;&gt; higher semantic-language/instruction-set that will be part of the
+</em><br>
+<em>&gt;&gt; first steps towards an AGI.
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; Here's a hopefully not-too-biased critique-that-invites-critique of
+</em><br>
+<em>&gt;&gt; some of the choices as they stand:
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; C: I'm separating this from C++ as, well, most of the crack C
+</em><br>
+<em>&gt;&gt; programmers I've worked with view C++ as some kind of leperous cousin;
+</em><br>
+<em>&gt;&gt; they're able to make a host of criticisms of C++ in contrast to C but
+</em><br>
+<em>&gt;&gt; I'm not one to repeat them succinctly I think. In summary;
+</em><br>
+<em>&gt;&gt; positives:
+</em><br>
+<em>&gt;&gt; - it's the fastest; without question. It also runs on every board on
+</em><br>
+<em>&gt;&gt; the planet. There are a host of _great_ tools and compilers from the
+</em><br>
+<em>&gt;&gt; likes of GCC, Sun, Intel, IBM, HP etc. If you want to write your own
+</em><br>
+<em>&gt;&gt; OS kernel then you'll be doing it in C.
+</em><br>
+<em>&gt;&gt; - the #1 choice for RTOS. if you want it to run real-time, it'll be in
+</em><br>
+<em>&gt;&gt; C. I''ve personally had exposure to the VxWorks and Nucleus hard
+</em><br>
+<em>&gt;&gt; real-time systems and a soft real-time Linux (Monta Vista). Even if
+</em><br>
+<em>&gt;&gt; don't end up with
+</em><br>
+<em>&gt;&gt; kernel=observer/ego/consciousness/insert-your-term-here, going
+</em><br>
+<em>&gt;&gt; real-time seems to be an intuitive requirement for replicating a range
+</em><br>
+<em>&gt;&gt; of faculties. That said, real-time code is very limited to what it can
+</em><br>
+<em>&gt;&gt; do; it runs out of puff pretty quickly when climbing the OSI stack.
+</em><br>
+<em>&gt;&gt; - Macros are a great language feature, and can provide some of the
+</em><br>
+<em>&gt;&gt; extensibility and run-time switching needed.
+</em><br>
+<em>&gt;&gt; - great debugging tools and lint collectors like Purify that can
+</em><br>
+<em>&gt;&gt; pretty much guarantee against a number of errors like memory leaks and
+</em><br>
+<em>&gt;&gt; overwrites
+</em><br>
+<em>&gt;&gt; negatives:
+</em><br>
+<em>&gt;&gt; - plumbing code. it just plain sucks to have to call memset, malloc
+</em><br>
+<em>&gt;&gt; and free everywhere. #IFDEF may be damn useful but for me is ugly as
+</em><br>
+<em>&gt;&gt; hell
+</em><br>
+<em>&gt;&gt; - complexity/productivity. add all the plumbing code in; the need to
+</em><br>
+<em>&gt;&gt; track and free all your resources; macros that obfuscate recursive &amp;
+</em><br>
+<em>&gt;&gt; often cyclic function calls to n levels; the need to dick with your
+</em><br>
+<em>&gt;&gt; defines both in the code and in the compiler, and the flag mess that
+</em><br>
+<em>&gt;&gt; ensues when you are linking against every man and his dll and you end
+</em><br>
+<em>&gt;&gt; up with a language great for low-level tweaking of the cpu instruction
+</em><br>
+<em>&gt;&gt; set and a morass once it scales that eats huge amounts of programmer
+</em><br>
+<em>&gt;&gt; time dicking with the maintenance of flags, variables and
+</em><br>
+<em>&gt;&gt; linker/compiler bleats. this inevitibly sucks large amounts of time
+</em><br>
+<em>&gt;&gt; away from higher-level functional work, especially during integration
+</em><br>
+<em>&gt;&gt; with other people's code. I'd posit it as a given that we are going to
+</em><br>
+<em>&gt;&gt; have to write more higher-level functional code than for any other
+</em><br>
+<em>&gt;&gt; project ever attempted. To code the capabilities and faculties of
+</em><br>
+<em>&gt;&gt; smart human is going to be a ridiculously huge endeavour. And once our
+</em><br>
+<em>&gt;&gt; boy is smart enough he'll be rewriting himself bigger and bigger while
+</em><br>
+<em>&gt;&gt; rewriting our code smaller and smaller. we just need to write
+</em><br>
+<em>&gt;&gt; something big enough so that he has the capability to do so.
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; C++: the current language of choice for all large critical systems
+</em><br>
+<em>&gt;&gt; worldwide. The OSes are written in C, but the apps are in C++. When
+</em><br>
+<em>&gt;&gt; your plane lands, it's C++; when the latest NASA space-gadget bleeps,
+</em><br>
+<em>&gt;&gt; it's C++. The vast majority of apps that run global infrastructure are
+</em><br>
+<em>&gt;&gt; in C++.
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; positives:
+</em><br>
+<em>&gt;&gt; - first things first; every VM and interpreter of note for the
+</em><br>
+<em>&gt;&gt; bytecode/interpreted languages is written in C++.  A Java programmer
+</em><br>
+<em>&gt;&gt; bitching about C++ is like a hand bitching about it's forearm. If you
+</em><br>
+<em>&gt;&gt; want to hack your own special JIT or JVM, you'll need to be doing it
+</em><br>
+<em>&gt;&gt; in C++
+</em><br>
+<em>&gt;&gt; - Most of the RTOS vendors provide C++ APIs; so real-time application
+</em><br>
+<em>&gt;&gt; development is available (for a cost)
+</em><br>
+<em>&gt;&gt; - There's a larger body of support libraries available than for C when
+</em><br>
+<em>&gt;&gt; it comes to higher-level functions; the STL is a great example
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; negatives:
+</em><br>
+<em>&gt;&gt; - as noted in one of the posts above, the toolset is awful in
+</em><br>
+<em>&gt;&gt; comparison. g++ is gcc's ugly cousin. linker errors, especially with
+</em><br>
+<em>&gt;&gt; STL code, are even more convoluted than C.
+</em><br>
+<em>&gt;&gt; - complexity/productivity. template soup is a great example. and yes,
+</em><br>
+<em>&gt;&gt; it still has pointers and memory housekeeping requirements, and yes,
+</em><br>
+<em>&gt;&gt; any plumbing work that is programming-language specific is a negative.
+</em><br>
+<em>&gt;&gt; Yes, some programmers thrive in this enviroment; however it is
+</em><br>
+<em>&gt;&gt; defnitely not competing when it comes to the RAD qualities of say,
+</em><br>
+<em>&gt;&gt; Perl or (gasp)VB.
+</em><br>
+<em>&gt;&gt; - Microsoft are dumping C++ like a brazilian baby. For all their
+</em><br>
+<em>&gt;&gt; faults, MS are a cluey bunch, especially when it comes to developers.
+</em><br>
+<em>&gt;&gt; They've got to have seen something plenty nasty in the bathwater to
+</em><br>
+<em>&gt;&gt; eat the cash-outlay gobstopper that is C#/.NET
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; Java: The contender to replace C++ pretty much; the guys behind the
+</em><br>
+<em>&gt;&gt; language came out and said that they created Java to put the kiss of
+</em><br>
+<em>&gt;&gt; death to Bjarne's creation. This puppy is running some crucial
+</em><br>
+<em>&gt;&gt; high-load apps now, especially in finance. Also becoming the app layer
+</em><br>
+<em>&gt;&gt; of choice on mobiles through I doubt that's relevant here.
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; positives:
+</em><br>
+<em>&gt;&gt; - a memory managed language; less programmer time spent playing
+</em><br>
+<em>&gt;&gt; nursemaid to an incomplete toolchain.
+</em><br>
+<em>&gt;&gt; - APIs/Libraries/Tools. The core API is simply enormous; if you want
+</em><br>
+<em>&gt;&gt; to do something, think of a class name that fits, and it'll probably
+</em><br>
+<em>&gt;&gt; be in the VM already. What isn't in their yet is probably either in
+</em><br>
+<em>&gt;&gt; the JSR's, sourceforge or IBM. Ant and JUnit(stack, incl things like
+</em><br>
+<em>&gt;&gt; HTTPUnit &amp; JCoverage) are truly revolutionary in the tool space. They
+</em><br>
+<em>&gt;&gt; make makefiles and test stubs look archaic.
+</em><br>
+<em>&gt;&gt; - developers. every tertiary institution on the planet is pumping them
+</em><br>
+<em>&gt;&gt; out like sperm. we can debate their veracity, but the simple fact is
+</em><br>
+<em>&gt;&gt; most coders (of _any_ langauge) couldn't give a rats' about coding an
+</em><br>
+<em>&gt;&gt; AGI so having a deeper resource pool has got to help
+</em><br>
+<em>&gt;&gt; - reflection. run-time introspection, querying the classloader etc.
+</em><br>
+<em>&gt;&gt; gives more flexibilty than most strong/static typed languages
+</em><br>
+<em>&gt;&gt; - remoting. RMI/EJB have their issues, but you have a distributed
+</em><br>
+<em>&gt;&gt; systems stack in the core API. CORBA for C/C++ is an inferior
+</em><br>
+<em>&gt;&gt; (supported) subset.
+</em><br>
+<em>&gt;&gt; - price. it's all pretty much free as in beer, and free as in open
+</em><br>
+<em>&gt;&gt; source otherwise, apart from the spec. this _does_ matter; thirty
+</em><br>
+<em>&gt;&gt; C/C++ VxWorks/Metrowerks/ADS developer licenses would sting a pretty
+</em><br>
+<em>&gt;&gt; penny.
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; negatives:
+</em><br>
+<em>&gt;&gt; - slowness. Now, this is historically overblown, especially in
+</em><br>
+<em>&gt;&gt; relation to the original GUI (remember applets? anyone?) and I/O
+</em><br>
+<em>&gt;&gt; impementations which have either been superseded or obseleted. Having
+</em><br>
+<em>&gt;&gt; had a look at some of the Sun source code, their C/C++ programmers are
+</em><br>
+<em>&gt;&gt; kickass (think Solaris). They've spent years refactoring every
+</em><br>
+<em>&gt;&gt; bottleneck and apples-for-apples underperformer in comparison to STL
+</em><br>
+<em>&gt;&gt; C++ until the difference is often negligible (check their marketing
+</em><br>
+<em>&gt;&gt; 'fact'oids). And for performance over a longer run, the application
+</em><br>
+<em>&gt;&gt; servers with thier hacked JIT's and pre-loaded code means that Java
+</em><br>
+<em>&gt;&gt; gets quicker the longer you run it (discounting any leaks, which are,
+</em><br>
+<em>&gt;&gt; sadly, still present, though much reducied in comparision to early
+</em><br>
+<em>&gt;&gt; JDKs). Another thing is that slowness seems to pretty much be a
+</em><br>
+<em>&gt;&gt; non-issue where AGI development is concerned; by the time we finish
+</em><br>
+<em>&gt;&gt; hacking at the thing the hardware and tools will be generations
+</em><br>
+<em>&gt;&gt; better. You either need real-time; or you let Moore's law do your work
+</em><br>
+<em>&gt;&gt; for you. My Java apps from 1998 fly on newer RAM-stacked hardware.
+</em><br>
+<em>&gt;&gt; - strong+static typing. my feeling is that writing on-the-fly runtime
+</em><br>
+<em>&gt;&gt; customizable code is going to be needed to replicate what a brain can
+</em><br>
+<em>&gt;&gt; do. Reflection helps but isn't enough; Java is a little too
+</em><br>
+<em>&gt;&gt; monolithically structured when compared to something like Lisp; the
+</em><br>
+<em>&gt;&gt; code is very homogenous, and doesn't seem to have the agility to adapt
+</em><br>
+<em>&gt;&gt; well. I think this is somewhat intended to stop migrating VB
+</em><br>
+<em>&gt;&gt; developers from deciding they now want to be Perl programmers but it
+</em><br>
+<em>&gt;&gt; doesn't aid in dexterity.
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; .NET/C#
+</em><br>
+<em>&gt;&gt; you can pretty much replicate everything said for Java here as it's a
+</em><br>
+<em>&gt;&gt; flat ripoff; that's why I think Sun had no qualms ripping off ASP and
+</em><br>
+<em>&gt;&gt; calling it JSP.
+</em><br>
+<em>&gt;&gt; positives: they've learned their lessons from Java's mistakes; most
+</em><br>
+<em>&gt;&gt; things are less broken in the IL and the CLR. It's early days though
+</em><br>
+<em>&gt;&gt; and some of the apps I've seen behave atrociously.
+</em><br>
+<em>&gt;&gt; negatives: price; no option for CLR hacking. And it's got to be said,
+</em><br>
+<em>&gt;&gt; MS are evil bastards; trying being a chair in Steve Ballmer's office,
+</em><br>
+<em>&gt;&gt; let alone Netscape, Sun or Real.
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; Perl
+</em><br>
+<em>&gt;&gt; OK I'll state my bias here; I've clearly coded in most of the others
+</em><br>
+<em>&gt;&gt; previously mentioned but Perl took my commercial programming virginity
+</em><br>
+<em>&gt;&gt; - and no, not doing CGI. Perl6/Parrot, while unfinished, seem to me to
+</em><br>
+<em>&gt;&gt; be pretty damn compelling. Once they have Parrot out with plugins for
+</em><br>
+<em>&gt;&gt; Lisp/Haskell/Java etc they'll have a pretty damn decent alternative to
+</em><br>
+<em>&gt;&gt; .NET. and having regex support within the syntax is just plain right.
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; positives:
+</em><br>
+<em>&gt;&gt; - libraries. CPAN is huge; there's a module for most everything you
+</em><br>
+<em>&gt;&gt; can find in the Java API and plenty else besides
+</em><br>
+<em>&gt;&gt; - speed. competes tidily with C++, especially in batch processing.
+</em><br>
+<em>&gt;&gt; - typing. weak+dynamic. Perl doesn't care what it is or where it came
+</em><br>
+<em>&gt;&gt; from or what you're trying to do with it. 'use strict' can tighten the
+</em><br>
+<em>&gt;&gt; belt if needed for debugging. the auto/dynaloader magick allows
+</em><br>
+<em>&gt;&gt; run-time composition and execution of completely new
+</em><br>
+<em>&gt;&gt; functions/classes. The things the monks and their kin can do with this
+</em><br>
+<em>&gt;&gt; language is spectacular in a very scary way
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; negatives:
+</em><br>
+<em>&gt;&gt; - oo. people knock their ISA implementation as a bolt-on. has always
+</em><br>
+<em>&gt;&gt; worked fine for me though. but it's definitely not as structured as
+</em><br>
+<em>&gt;&gt; say Java
+</em><br>
+<em>&gt;&gt; - complexity. weak+dynamic gives bad programmers license to kill. some
+</em><br>
+<em>&gt;&gt; perl code is unmaintainable. some wizards also take perverse pleasure
+</em><br>
+<em>&gt;&gt; in writing incredibly obfuscated code, unmatched outside of the
+</em><br>
+<em>&gt;&gt; functional languages I expect
+</em><br>
+<em>&gt;&gt; - toolset. perl is, well, fractured. it's a bit all over the place.
+</em><br>
+<em>&gt;&gt; you can get most anything to work, but just about everything is
+</em><br>
+<em>&gt;&gt; idiosyncratic as hell. Perl6/Parrot should put some kind of nail in
+</em><br>
+<em>&gt;&gt; this, but you never know with these crazy Perl nuts
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; Lisp
+</em><br>
+<em>&gt;&gt; I have no sodding idea about Lisp apart from doing some reading
+</em><br>
+<em>&gt;&gt; recently and downloading a common Lisp compiler. That said, a good
+</em><br>
+<em>&gt;&gt; portion of the brightest minds in programming reserve a special status
+</em><br>
+<em>&gt;&gt; for Lisp.
+</em><br>
+<em>&gt;&gt; positives: functional/macro language right? good for self-evolving code
+</em><br>
+<em>&gt;&gt; negatives: Lisp already failed as the AI coding language of choice.
+</em><br>
+<em>&gt;&gt; Quibble all you like but it's 0 for 1, and AI Winter and the decline
+</em><br>
+<em>&gt;&gt; of Lisp seem interwined. Common Lisp doesn't even come close to
+</em><br>
+<em>&gt;&gt; matching the breadth of the bytecode-based APIs.
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; Candidates dismissed for discussion, and why:
+</em><br>
+<em>&gt;&gt; (these langauges seemed to me to have no standout qualities that
+</em><br>
+<em>&gt;&gt; belied their shortcomings; and basically they just don't compete in
+</em><br>
+<em>&gt;&gt; the same league as the heavyweights)
+</em><br>
+<em>&gt;&gt; Pascal/Delphi etc: subsets of C/C++
+</em><br>
+<em>&gt;&gt; Python/PHP/Ruby: subsets of Perl/Java, with piss all supporting
+</em><br>
+<em>&gt;&gt; libraries for non-web applications in comparison
+</em><br>
+<em>&gt;&gt; Haskell or functional-language-of-choice: Useful past the bootstrap
+</em><br>
+<em>&gt;&gt; level, and mixed in via say Parrot could be useful; but underweight
+</em><br>
+<em>&gt;&gt; for workhorse work in terms of developer-space  footprint
+</em><br>
+<em>&gt;&gt; ADA/Fortran archaic-failed-language-of-choice: nothing better than Lisp.
+</em><br>
+<em>&gt;&gt; Assembler/Machine language: all great, until you leave x86 to go to
+</em><br>
+<em>&gt;&gt; Cell chips; then you're stuffed
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="13946.html">Kevin Osborne: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>Previous message:</strong> <a href="13944.html">Patrick Crenshaw: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>In reply to:</strong> <a href="13942.html">Richard Loosemore: "Languages for AGI  [WAS Re: Syllabus for Seed Developer Qualifications...]"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="13948.html">Richard Loosemore: "Re: Languages for AGI  [WAS Re: Syllabus for Seed Developer	Qualifications...]"</a>
+<li><strong>Reply:</strong> <a href="13948.html">Richard Loosemore: "Re: Languages for AGI  [WAS Re: Syllabus for Seed Developer	Qualifications...]"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#13945">[ date ]</a>
+<a href="index.html#13945">[ thread ]</a>
+<a href="subject.html#13945">[ subject ]</a>
+<a href="author.html#13945">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:55 MDT
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,70 @@
+On Tue, 2002-04-02 at 08:46, ben goertzel wrote:
+> 
+> 1)  A (we hope!) passably efficient way to do "linguistic feature structure 
+> unification" (a kind of language parsing) as a case of general logical 
+> unification... this basically eliminates a separate NLP module, reducing it 
+> to a set of special parameter settings for general cognition methods... as 
+> it should be...
+
+
+I've had good luck taking this approach to NLP, although it is too early
+to say how good that luck actually is. This makes sense in theory, but
+it really taxes the (human) mind when trying to analyze how this would
+work in excruciating detail.
+
+ 
+> 2)  Complex inference (inference dealing with quantifiers, variables, etc.) 
+> is reduced to "simple inference on inheritance links" + "complex 
+> procedures".  This reduction is carried out using combinatory logic.  I 
+> suspect the human brain carries out a similar reduction in a very different 
+> way
+> 
+> 3) Causal inference is reduced to "predictive implication" plus a special 
+> case of "procedure learning" (the latter being the learning of "plausible 
+> causal mechanisms")
+> 
+> 4)  Association-finding is reduced to simple probabilistic inference plus a 
+> Hebb rule variant
+
+
+These are all essentially reducible to the same structure, though with
+slightly different traversal behaviors.  Doing the work to support one
+should essentially provide the structure to support the rest.
+
+ 
+> Overall, what we found is that a lot of mental functions are obtainable as 
+> combinations or specializations of other mental functions, but not in 
+> immediately obvious ways.
+
+
+The "not in immediately obvious ways" is a killer. Part of this is
+because people frequently define intelligence in terms of peculiar
+behaviors that human minds tend to exhibit that may or may not be
+relevant to the actual problem. The "yeah, but can it do <insert some
+quirky human characteristic>?" question can be a problematic one, and
+often requires more a lot more thought than the question may merit
+simply because that is how people relate to "intelligence". There are
+still a couple things that I would rather prove by doing rather than
+completely verifying on paper first.
+
+If we consider the human brain as a model, it is clear that limited
+specialization of functionality at the lower levels must be true, at
+least in the sense that it is one way to do it.  The human mind is an
+extraordinarily complex construct built upon a very small number of
+primitives. I don't think the primitives themselves are particularly
+important beyond the fact that they can be put together efficiently to
+support the basic functional structures.
+
+I've been meaning to provide substantially more documentation for a
+number of things, but these days I don't have time to provide much
+written documentation for anything beyond the code I write (code is
+self-documenting, right? :-) for my own engineering team, never mind the
+rest of the world. Operating a startup has never been conducive to
+having lots of free time... :-)
+
+Cheers,
+
+-James Rogers
+ jamesr@best.com
+
+

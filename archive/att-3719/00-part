@@ -1,0 +1,30 @@
+On Fri, 2002-05-17 at 12:33, ben goertzel wrote:
+> ****
+> One thing that I want to try doing is turning a solid-state disk array
+> (not cheap by any means, but a lot cheaper than buying a box that can
+> support and address, say, 128-Gb of RAM directly) and turning it into a
+> giant swap partition on a 64-bit box. The idea being that this is a back
+> door way to get really large blocks of addressable RAM without buying a
+> mainframe, while being a few orders of magnitude faster than a hard
+> drive.
+> ***
+> 
+> Sounds very interesting...
+> 
+> How much would the solid state disk array you mention cost, roughly?
+
+
+They aren't cheap (around $3-4k per Gb these days), but prices are
+falling and this is still a few times cheaper than getting a machine
+that supports large RAM sizes directly. The bandwidth is also very high
+(e.g. 3Gb/s), and these storage arrays typically have an array of
+interfaces so that you can utilize the bandwidth available.  The
+alternative would be hack a network of cheap PCs into a single address
+space, but to actually achieve the same level of performance, it would
+cost you pretty much the same amount of money as just buying the storage
+array, and less convenient to boot.
+
+-James Rogers
+ jamesr@best.com
+
+

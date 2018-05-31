@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: the virtues of noise</title>
+<meta name="Author" content="Eliezer S. Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="Re: the virtues of noise">
+<meta name="Date" content="2003-12-03">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: the virtues of noise</h1>
+<!-- received="Wed Dec  3 08:38:17 2003" -->
+<!-- isoreceived="20031203153817" -->
+<!-- sent="Wed, 03 Dec 2003 10:38:14 -0500" -->
+<!-- isosent="20031203153814" -->
+<!-- name="Eliezer S. Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Re: the virtues of noise" -->
+<!-- id="3FCE0366.2080804@pobox.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="LAW11-F12pN3C9emLB200005fa4@hotmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eliezer S. Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20the%20virtues%20of%20noise"><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Wed Dec 03 2003 - 08:38:14 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="7344.html">Eliezer S. Yudkowsky: "Re: the virtues of noise"</a>
+<li><strong>Previous message:</strong> <a href="7342.html">Mitchell Porter: "the virtues of noise"</a>
+<li><strong>In reply to:</strong> <a href="7342.html">Mitchell Porter: "the virtues of noise"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="7344.html">Eliezer S. Yudkowsky: "Re: the virtues of noise"</a>
+<li><strong>Reply:</strong> <a href="7344.html">Eliezer S. Yudkowsky: "Re: the virtues of noise"</a>
+<li><strong>Reply:</strong> <a href="7347.html">Perry E.Metzger: "Re: the virtues of noise"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7343">[ date ]</a>
+<a href="index.html#7343">[ thread ]</a>
+<a href="subject.html#7343">[ subject ]</a>
+<a href="author.html#7343">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Mitchell Porter wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; Noise can prevent invalid generalization (&quot;overfitting&quot;):
+</em><br>
+<em>&gt; <a href="http://www.faqs.org/faqs/ai-faq/neural-nets/part3/section-2.html">http://www.faqs.org/faqs/ai-faq/neural-nets/part3/section-2.html</a>
+</em><br>
+<em>&gt; <a href="http://www.inf.ethz.ch/~schraudo/NNcourse/overfitting.html">http://www.inf.ethz.ch/~schraudo/NNcourse/overfitting.html</a>
+</em><br>
+<em>&gt; <a href="http://citeseer.nj.nec.com/bishop94training.html">http://citeseer.nj.nec.com/bishop94training.html</a>
+</em><br>
+<em>&gt; <a href="http://citeseer.nj.nec.com/448824.html">http://citeseer.nj.nec.com/448824.html</a>
+</em><br>
+<p>While I don't know enough about this topic to be an expert, Bayesian 
+<br>
+methods are supposed to automatically prevent overfitting - or rather, 
+<br>
+overfitting results from violation of Bayesian first principles.  On the 
+<br>
+other hand, true Bayesian methods might be too expensive.  My point is 
+<br>
+that noise is not the only possible way of preventing overfitting; there 
+<br>
+are deeper, more powerful, mathematically more elegant ways of preventing 
+<br>
+overfitting, to which the injection of noise is only an approximation.  A 
+<br>
+cheap, good approximation?  Perhaps.  But it isn't magic.  Nor is the 
+<br>
+relation between noise and preventing overfitting as deep as it seems. 
+<br>
+According to Bishop94 above, for example, it amounts to adding an extra 
+<br>
+term in the loss function, and it is possible to get the same benefit 
+<br>
+without some dangers by modifying the algorithm directly instead of 
+<br>
+training with noise.
+<br>
+<p><em>&gt; And noise can make a weak signal detectable (&quot;stochastic resonance&quot;):
+</em><br>
+<em>&gt; <a href="http://mathworld.wolfram.com/StochasticResonance.html">http://mathworld.wolfram.com/StochasticResonance.html</a>
+</em><br>
+<em>&gt; <a href="http://flux.aps.org/meetings/YR9596/BAPSMAR96/mar96/vpr/A5.04.html">http://flux.aps.org/meetings/YR9596/BAPSMAR96/mar96/vpr/A5.04.html</a>
+</em><br>
+<em>&gt; <a href="http://www.umbrars.com/sr/introsr.htm">http://www.umbrars.com/sr/introsr.htm</a>
+</em><br>
+<p>One of these papers describes how adding a noise term to a weak input 
+<br>
+signal to a cricket *neuron* resulted in more information in the spike 
+<br>
+train emerging *from the cell*; it doesn't mean that adding noise to a 
+<br>
+weak signal actually adds information to it!  Furthermore it seems fairly 
+<br>
+obvious how adding to noise to a weak input signal could result in more 
+<br>
+information from the spike train, given the cell's *lossy* processing 
+<br>
+properties; if the noise boosts the weak signal into the steepest part of 
+<br>
+the slope of the cell's response threshold, the resulting spike train may 
+<br>
+contain more information or better temporal information (if previously 
+<br>
+weak signals needed to accumulate before the cell fired).  Perhaps the 
+<br>
+cricket cells evolved to work in the presence of noise, or in the presence 
+<br>
+of sound at a particular threshold value, but that does not mean the noise 
+<br>
+&quot;boosts processing efficiency&quot;; an ab initio algorithm could extract more 
+<br>
+data from the signal without the noise.
+<br>
+<p>Noise is not magic, and for noise to result in any fundamental algorithmic 
+<br>
+improvement would, I maintain, violate the second law of thermodynamics.
+<br>
+<p><pre>
+-- 
+Eliezer S. Yudkowsky                          <a href="http://intelligence.org/">http://intelligence.org/</a>
+Research Fellow, Singularity Institute for Artificial Intelligence
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="7344.html">Eliezer S. Yudkowsky: "Re: the virtues of noise"</a>
+<li><strong>Previous message:</strong> <a href="7342.html">Mitchell Porter: "the virtues of noise"</a>
+<li><strong>In reply to:</strong> <a href="7342.html">Mitchell Porter: "the virtues of noise"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="7344.html">Eliezer S. Yudkowsky: "Re: the virtues of noise"</a>
+<li><strong>Reply:</strong> <a href="7344.html">Eliezer S. Yudkowsky: "Re: the virtues of noise"</a>
+<li><strong>Reply:</strong> <a href="7347.html">Perry E.Metzger: "Re: the virtues of noise"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7343">[ date ]</a>
+<a href="index.html#7343">[ thread ]</a>
+<a href="subject.html#7343">[ subject ]</a>
+<a href="author.html#7343">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:43 MDT
+</em></small></p>
+</body>
+</html>

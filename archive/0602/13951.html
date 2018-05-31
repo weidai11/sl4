@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Languages for AGI [WAS Re: Syllabus for Seed Developer Qualifications...]</title>
+<meta name="Author" content="Kevin Osborne (kevin.osborne@gmail.com)">
+<meta name="Subject" content="Re: Languages for AGI [WAS Re: Syllabus for Seed Developer Qualifications...]">
+<meta name="Date" content="2006-02-02">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Languages for AGI [WAS Re: Syllabus for Seed Developer Qualifications...]</h1>
+<!-- received="Thu Feb  2 08:52:35 2006" -->
+<!-- isoreceived="20060202155235" -->
+<!-- sent="Fri, 3 Feb 2006 01:52:34 +1000" -->
+<!-- isosent="20060202155234" -->
+<!-- name="Kevin Osborne" -->
+<!-- email="kevin.osborne@gmail.com" -->
+<!-- subject="Re: Languages for AGI [WAS Re: Syllabus for Seed Developer Qualifications...]" -->
+<!-- id="3642969c0602020752m75be5bdfvcc48d9c02d9f21fe@mail.gmail.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="43E21C2B.6000509@lightlink.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Kevin Osborne (<a href="mailto:kevin.osborne@gmail.com?Subject=Re:%20Languages%20for%20AGI%20[WAS%20Re:%20Syllabus%20for%20Seed%20Developer%20Qualifications...]"><em>kevin.osborne@gmail.com</em></a>)<br>
+<strong>Date:</strong> Thu Feb 02 2006 - 08:52:34 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="13952.html">Kevin Osborne: "Genetically Modifying other Mammals to be as Smart as Us [WAS Re: Syllabus for Seed Developer Qualifications]"</a>
+<li><strong>Previous message:</strong> <a href="13950.html">entropy@farviolet.com: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>In reply to:</strong> <a href="13948.html">Richard Loosemore: "Re: Languages for AGI  [WAS Re: Syllabus for Seed Developer	Qualifications...]"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="13953.html">Simon Belak: "Re: Languages for AGI  [WAS Re: Syllabus for Seed Developer Qualifications...]"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#13951">[ date ]</a>
+<a href="index.html#13951">[ thread ]</a>
+<a href="subject.html#13951">[ subject ]</a>
+<a href="author.html#13951">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+*...copying/pasting in a palsied effort to be OT
+<br>
+<p>[snip]...examples of what I might in the course of developing 'workhorse'
+<br>
+AGI
+<br>
+code need to do:
+<br>
+<p>- write code that will parse the pixels of a scanned exponential
+<br>
+graph, generate the data model it represents and call various math
+<br>
+functions against the result
+<br>
+<p>- fire off a gazillion threads on multiple servers across the globe
+<br>
+which share resources and scheduling to achieve a given computation
+<br>
+result; the initiation of which can instantaneously load and run new
+<br>
+code segments without requiring user tweaking of the distributed
+<br>
+clients (e.g. stopping the target application server on the
+<br>
+distributed client, updating the class library and restarting - I'd
+<br>
+consider this to be a pretty severe disadvantage)
+<br>
+<p>- parse the source code and OS/chip specific binaries of all known
+<br>
+languages to define a functional model that can be applied against
+<br>
+mathematical proofs and then regenerated in any other language
+<br>
+<p>- text transliteration, conversion and parsing supporting unicode
+<br>
+languages and all known file formats
+<br>
+<p>- web/net spidering to grok every online resource possible via every
+<br>
+known protocol/stream; tcpip, p2p, X.25, SOAP, SNMP, codecs, distillers,
+<br>
+scrapers etc
+<br>
+<p>- mature persistent storage support incl. database connection pooling
+<br>
+and driver/api support for the big rdbms', LDAP,bdb etc
+<br>
+<p>what this comes back to is that I want to leverage the
+<br>
+(give-me-a-better-word-for) infosphere. I want my workhorse code to provide
+<br>
+interfaces for sensors/input streams that will grok and manipulate the
+<br>
+greater planetwide digisphere/infosphere/insert-s
+<br>
+ummary-word-for-all-the-bit-stacks-everywhere-and-the-things-you-c
+<br>
+an-do-with-them.
+<br>
+<p>I believe that it will be absolutely necessary to have the 'brain' code. But
+<br>
+I don't think sitting down and coding up a bunch of sexy self-replicating
+<br>
+algorithms in your academically superior but API library deficient
+<br>
+programming is the way to go about it; at least not initially, not for me.
+<br>
+<p>If we can get code that does all and more of my wishlist above, then we have
+<br>
+filled in a pretty important gap; _input_. i.e.
+<br>
+<p>+-------+   +------------+   +--------+
+<br>
+| input |--&gt;| processing |--&gt;| output |
+<br>
++-------+   +------------+   +--------+
+<br>
+<p>which in our case means:
+<br>
+<p>+--------------------+   +-----+   +---------------------------------+
+<br>
+| everything digital |--&gt;| AGI |--&gt;| stuff that a human would output |
+<br>
+---------------------+   +-----+   +---------------------------------+
+<br>
+<p>I think the right way to go about this is to do the input stage first, or at
+<br>
+least in parallel; because if we can simulate the external sense-world of
+<br>
+our future AGI, then I think we have an easier path to maybe simulating
+<br>
+_him_.
+<br>
+<p>In this way we can provide a framework in which the psynet guys can drop in
+<br>
+their algorithms, pattern builders and
+<br>
+other-stuff-im-way-too-n00b-to-comprehend and start seeing some output.
+<br>
+<p>We can refine the lossiness of our inputs over time until we can be sure
+<br>
+that we're providing the non-workhorse 'thinking' code everything it needs
+<br>
+to be able to simulate the best observations we as humans can make.
+<br>
+<p>I think we can then tweak the little buggers' brain until he starts to think
+<br>
+like we want him to; and then maybe we'll be getting somewhere.
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="13952.html">Kevin Osborne: "Genetically Modifying other Mammals to be as Smart as Us [WAS Re: Syllabus for Seed Developer Qualifications]"</a>
+<li><strong>Previous message:</strong> <a href="13950.html">entropy@farviolet.com: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>In reply to:</strong> <a href="13948.html">Richard Loosemore: "Re: Languages for AGI  [WAS Re: Syllabus for Seed Developer	Qualifications...]"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="13953.html">Simon Belak: "Re: Languages for AGI  [WAS Re: Syllabus for Seed Developer Qualifications...]"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#13951">[ date ]</a>
+<a href="index.html#13951">[ thread ]</a>
+<a href="subject.html#13951">[ subject ]</a>
+<a href="author.html#13951">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:55 MDT
+</em></small></p>
+</body>
+</html>

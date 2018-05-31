@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: FYI:G4's for scientific computing (fwd)</title>
+<meta name="Author" content="Eugen Leitl (eugen@leitl.org)">
+<meta name="Subject" content="FYI:G4's for scientific computing (fwd)">
+<meta name="Date" content="2002-04-15">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>FYI:G4's for scientific computing (fwd)</h1>
+<!-- received="Mon Apr 15 02:41:29 2002" -->
+<!-- isoreceived="20020415084129" -->
+<!-- sent="Mon, 15 Apr 2002 08:24:32 +0200 (CEST)" -->
+<!-- isosent="20020415062432" -->
+<!-- name="Eugen Leitl" -->
+<!-- email="eugen@leitl.org" -->
+<!-- subject="FYI:G4's for scientific computing (fwd)" -->
+<!-- id="Pine.LNX.4.33.0204150823220.18679-100000@hydrogen.leitl.org" -->
+<!-- charset="US-ASCII" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eugen Leitl (<a href="mailto:eugen@leitl.org?Subject=Re:%20FYI:G4's%20for%20scientific%20computing%20(fwd)"><em>eugen@leitl.org</em></a>)<br>
+<strong>Date:</strong> Mon Apr 15 2002 - 00:24:32 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3357.html">Doug Keenan: "Re: Patterns and intelligence (was: DGI paper)"</a>
+<li><strong>Previous message:</strong> <a href="3355.html">Eliezer S. Yudkowsky: "Re: DGI Paper"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3356">[ date ]</a>
+<a href="index.html#3356">[ thread ]</a>
+<a href="subject.html#3356">[ subject ]</a>
+<a href="author.html#3356">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Most users were reporting very poor performance, with a few notable 
+<br>
+exceptions. SIMD on 16x 8 bit integers sounds extremely useful at least 
+<br>
+for me.
+<br>
+<p>---------- Forwarded message ----------
+<br>
+Date: Sun, 14 Apr 2002 21:57:56 -0400 (EDT)
+<br>
+From: William R. Pearson &lt;<a href="mailto:wrp@alpha0.bioch.virginia.edu?Subject=Re:%20FYI:G4's%20for%20scientific%20computing%20(fwd)">wrp@alpha0.bioch.virginia.edu</a>&gt;
+<br>
+To: <a href="mailto:beowulf@beowulf.org?Subject=Re:%20FYI:G4's%20for%20scientific%20computing%20(fwd)">beowulf@beowulf.org</a>
+<br>
+Subject: G4's for scientific computing
+<br>
+<p><p>One of the advantages of the MacOSX gcc compiler is that in line
+<br>
+Altivec instructions are available at a high level.  One can
+<br>
+define vector arrays, and do vector operations from 'C' code, e.g.
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(vec_any_gt(T2, NAUGHT)) {
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T2 = vec_sub(LSHIFT(T2), RR);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FF = vec_max(FF, T2);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br>
+<p>We are testing an Altivec FASTA version; a Altivec BLAST was announced
+<br>
+several months ago.  We like Altivec because we can manipulate 8
+<br>
+16-bit integers or 16 8 bit integers at once - biological sequence
+<br>
+comparison code is essentially all integer.  We see a 6-fold speedups
+<br>
+on when things are done 8-fold parallel.  On our codes a dual 533 G4
+<br>
+and Altivec code is 6X-faster than a dual 1 GHz PIII (we don't have a
+<br>
+GHz G4 yet).  Because of the high level Altivec primitives in the
+<br>
+Apple gcc compiler, vectorizing was very very easy; we would have to
+<br>
+be much more sophisticated to do the same thing on the PIII (and the
+<br>
+potential speed-up would be 1/2 as large, since the vector is 64, not
+<br>
+128 bits).
+<br>
+<p>I might have agreed with the statement that one must have hand-tuned
+<br>
+Altivec code which pretty much excludes general purpose scientific
+<br>
+computing 4 months ago, but our experience has been very positive -
+<br>
+our programs are not specialized signal processing programs, but, in
+<br>
+retrospect, it was easy to get very dramatic speed up.
+<br>
+<p>Bill Pearson
+<br>
+_______________________________________________
+<br>
+Beowulf mailing list, <a href="mailto:Beowulf@beowulf.org?Subject=Re:%20FYI:G4's%20for%20scientific%20computing%20(fwd)">Beowulf@beowulf.org</a>
+<br>
+To change your subscription (digest mode or unsubscribe) visit <a href="http://www.beowulf.org/mailman/listinfo/beowulf">http://www.beowulf.org/mailman/listinfo/beowulf</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3357.html">Doug Keenan: "Re: Patterns and intelligence (was: DGI paper)"</a>
+<li><strong>Previous message:</strong> <a href="3355.html">Eliezer S. Yudkowsky: "Re: DGI Paper"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3356">[ date ]</a>
+<a href="index.html#3356">[ thread ]</a>
+<a href="subject.html#3356">[ subject ]</a>
+<a href="author.html#3356">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:38 MDT
+</em></small></p>
+</body>
+</html>

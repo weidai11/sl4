@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: anonymous collaborative filtering</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: anonymous collaborative filtering">
+<meta name="Date" content="2002-09-24">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: anonymous collaborative filtering</h1>
+<!-- received="Tue Sep 24 16:52:07 2002" -->
+<!-- isoreceived="20020924225207" -->
+<!-- sent="Tue, 24 Sep 2002 16:56:12 -0600" -->
+<!-- isosent="20020924225612" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: anonymous collaborative filtering" -->
+<!-- id="LAEGJLOGJIOELPNIOOAJAEJADKAA.ben@goertzel.org" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="DAEGJDAIEMCEKLOPODAKCEKACJAA.mike99@lascruces.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20anonymous%20collaborative%20filtering"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Tue Sep 24 2002 - 16:56:12 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="5364.html">Ben Goertzel: "RE: anonymous collaborative filtering"</a>
+<li><strong>Previous message:</strong> <a href="5362.html">mike99: "RE: anonymous collaborative filtering"</a>
+<li><strong>In reply to:</strong> <a href="5362.html">mike99: "RE: anonymous collaborative filtering"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="5364.html">Ben Goertzel: "RE: anonymous collaborative filtering"</a>
+<li><strong>Reply:</strong> <a href="5364.html">Ben Goertzel: "RE: anonymous collaborative filtering"</a>
+<li><strong>Reply:</strong> <a href="5365.html">Ben Goertzel: "RE: anonymous collaborative filtering"</a>
+<li><strong>Reply:</strong> <a href="5367.html">mike99: "RE: anonymous collaborative filtering"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#5363">[ date ]</a>
+<a href="index.html#5363">[ thread ]</a>
+<a href="subject.html#5363">[ subject ]</a>
+<a href="author.html#5363">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Hi,
+<br>
+<p>Actually, Webmind Inc. had two different applications analyzing financial
+<br>
+message boards, for two different purposes.
+<br>
+<p>The Webmind Market Predictor looked for statistical patterns relating
+<br>
+<p>-- the words, phrases and concepts expressed in text (daily news,
+<br>
+messageboard posts, etc.) on days (n-k,...,n-1)
+<br>
+-- the prices of various financial instruments on days (n-k,...,n-1)
+<br>
+-- the price of a target financial instrume on day n
+<br>
+<p>In fact, we did not find messageboard posts to be of significant predictive
+<br>
+value in the markets on which our system was most successful.  The only text
+<br>
+source we used consistently was daily news.  That financial prediction
+<br>
+system is now in use by Advanced Prediction Corp. based in Greenwich
+<br>
+Connecticut; I have no connection with it at this time.  It seemed to work
+<br>
+well, but in late 1999 we shifted our business model away from financial
+<br>
+prediction to Internet information retrieval (an error, in hindsight, but it
+<br>
+seemed to make sense at the time).
+<br>
+<p>For those who haven't heard my tale of the end of Webmind Inc. already, see
+<br>
+www.goertzel.org/webmind.htm or
+<br>
+<a href="http://www.goertzel.org/benzine/WakingUpFromTheEconomyOfDreams.htm">http://www.goertzel.org/benzine/WakingUpFromTheEconomyOfDreams.htm</a>
+<br>
+<p><p>The Webmind Classification System, a document categorization engine, was
+<br>
+used in many different context by different customers.  We were working on a
+<br>
+deal with Yahoo! Finance to use it to categorize messageboard postings into
+<br>
+different categories (but our stuff never made it onto the Yahoo! site).  A
+<br>
+company called Netcurrents was using it to survey messageboards and extract
+<br>
+information pertinent to particular companies.  For instance, if the CEO of
+<br>
+HP subscribed to Netcurrents, he'd get a special password-protected Web page
+<br>
+to log onto, which would contain
+<br>
+<p>-- pointers to everything said about him and his company on the
+<br>
+messageboards that day
+<br>
+-- a summary of the &quot;sentiment&quot; of messages (e.g. pos. or neg. about
+<br>
+earnings, pos. or neg. about management, etc. etc.)
+<br>
+<p>Doing automated classification of news articles by topic (as we did for some
+<br>
+customers, such as Screaming Media in New York) is relatively easy; doing
+<br>
+automated classification of messageboard rants by sentiment was a lot
+<br>
+harder, but netcurrents and Yahoo! Finance did not require anywhere near
+<br>
+100% accuracy.
+<br>
+<p>In my current AI project, www.realai.net (Novamente), I am not doing any
+<br>
+text analysis stuff at the moment.  It's a bit of a digression from the path
+<br>
+to real AI, in the sense that the only &quot;real&quot; way to do text analysis is to
+<br>
+have a system that truly understanding linguistic terms via their (direct or
+<br>
+inferential) grounding in its own experience.  On the other hand, from
+<br>
+building these apps and doing other language and text processing research,
+<br>
+we gained a lot of understanding of how language understanding and
+<br>
+production relate to other cognitive functions.
+<br>
+<p>For example, we worked out a very neat reduction of grammar parsing to
+<br>
+probabilistic logical unification (building on the work of many others in
+<br>
+&quot;unification feature structure grammars&quot;), which basically shows that, if
+<br>
+you've got
+<br>
+<p>a) probabilistic logical unification
+<br>
+b) the ability to learn fairly simple schemata for reordering lists
+<br>
+<p>then you've got full syntactic capability.  This is not mathematically deep,
+<br>
+but it was useful to work it out in a very detailed way, seeing that it
+<br>
+works pragmatically on various examples etc.  However, this was R&amp;D stuff
+<br>
+and neither of the two above-mentioned products used our unification feature
+<br>
+structure grammar parser, because it was too slow to meet real-world
+<br>
+response times.  Instead we used simpler methods based on statistical
+<br>
+analysis, machine learning categorization, context-free grammar parsing, and
+<br>
+some simple probabilistic inference.
+<br>
+<p>My work on computational finance in the period 1997-1999 taught me that
+<br>
+there is a LOT of structure out there in the world -- even the human
+<br>
+socioeconomic world -- that humans do not perceive.  Of course, this is old
+<br>
+knowledge in the financial world, which is why such a huge percentage of the
+<br>
+trading going on out there is program trading.  But it's interesting to get
+<br>
+a feel for such things at first hand.
+<br>
+<p>This underlies my intuition that, in the future, an AGI with human-level but
+<br>
+nonhuman intelligence will be able to clean up on the financial markets.  We
+<br>
+may see laws emerging banning such activity, at some point.  Though these
+<br>
+laws may only hold for a short time, if the hard takeoff idea is right and
+<br>
+human-level intelligence is rapidly followed by dramatically superhuman
+<br>
+intelligence.
+<br>
+<p><p>-- Ben G
+<br>
+<p><p><p><p><em>&gt; -----Original Message-----
+</em><br>
+<em>&gt; From: <a href="mailto:owner-sl4@sl4.org?Subject=RE:%20anonymous%20collaborative%20filtering">owner-sl4@sl4.org</a> [mailto:<a href="mailto:owner-sl4@sl4.org?Subject=RE:%20anonymous%20collaborative%20filtering">owner-sl4@sl4.org</a>]On Behalf Of mike99
+</em><br>
+<em>&gt; Sent: Tuesday, September 24, 2002 4:33 PM
+</em><br>
+<em>&gt; To: <a href="mailto:sl4@sl4.org?Subject=RE:%20anonymous%20collaborative%20filtering">sl4@sl4.org</a>
+</em><br>
+<em>&gt; Subject: RE: anonymous collaborative filtering
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; From: Simon McClenahan
+</em><br>
+<em>&gt; ...
+</em><br>
+<em>&gt; &gt; IIRC, WebMind had an application that parsed the stock message boards to
+</em><br>
+<em>&gt; &gt; determine the general consensus on whether people thought a stock
+</em><br>
+<em>&gt; &gt; was a good
+</em><br>
+<em>&gt; &gt; buy or sell. A system that can detect arbitrary ideas from many human
+</em><br>
+<em>&gt; &gt; sources seems to me like a general pattern recognition problem
+</em><br>
+<em>&gt; &gt; rather than a
+</em><br>
+<em>&gt; &gt; specific pattern recognition such as &quot;buy&quot; or &quot;sell&quot;.
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; cheers,
+</em><br>
+<em>&gt; &gt;     Simon
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Could WebMind identify when stocks were being puffed up by
+</em><br>
+<em>&gt; multiple messages
+</em><br>
+<em>&gt; from dummy accounts being used by single individuals trying to &quot;pump then
+</em><br>
+<em>&gt; dump&quot; a stock? Some teenagers were caught doing this and, because of their
+</em><br>
+<em>&gt; age, actually got away with keeping some of their ill-gotten gains and
+</em><br>
+<em>&gt; without doing any jail time.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Michael LaTorra
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="5364.html">Ben Goertzel: "RE: anonymous collaborative filtering"</a>
+<li><strong>Previous message:</strong> <a href="5362.html">mike99: "RE: anonymous collaborative filtering"</a>
+<li><strong>In reply to:</strong> <a href="5362.html">mike99: "RE: anonymous collaborative filtering"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="5364.html">Ben Goertzel: "RE: anonymous collaborative filtering"</a>
+<li><strong>Reply:</strong> <a href="5364.html">Ben Goertzel: "RE: anonymous collaborative filtering"</a>
+<li><strong>Reply:</strong> <a href="5365.html">Ben Goertzel: "RE: anonymous collaborative filtering"</a>
+<li><strong>Reply:</strong> <a href="5367.html">mike99: "RE: anonymous collaborative filtering"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#5363">[ date ]</a>
+<a href="index.html#5363">[ thread ]</a>
+<a href="subject.html#5363">[ subject ]</a>
+<a href="author.html#5363">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:40 MDT
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Fourier computing?</title>
+<meta name="Author" content="my_sunshine (sun@faclib-0119.unh.edu)">
+<meta name="Subject" content="Re: Fourier computing?">
+<meta name="Date" content="2001-05-17">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Fourier computing?</h1>
+<!-- received="Thu May 17 13:55:34 2001" -->
+<!-- isoreceived="20010517195534" -->
+<!-- sent="Thu, 17 May 2001 09:09:04 -0400" -->
+<!-- isosent="20010517130904" -->
+<!-- name="my_sunshine" -->
+<!-- email="sun@faclib-0119.unh.edu" -->
+<!-- subject="Re: Fourier computing?" -->
+<!-- id="200105171309.JAA01078@faclib-0119.unh.edu" -->
+<!-- inreplyto="Fourier computing?" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> my_sunshine (<a href="mailto:sun@faclib-0119.unh.edu?Subject=Re:%20Fourier%20computing?"><em>sun@faclib-0119.unh.edu</em></a>)<br>
+<strong>Date:</strong> Thu May 17 2001 - 07:09:04 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1376.html">Ben Houston: "RE: Fourier computing?"</a>
+<li><strong>Previous message:</strong> <a href="1374.html">Ben Houston: "RE: NEWS: New Light-Based Computer Runs At Quantum Speeds"</a>
+<li><strong>Maybe in reply to:</strong> <a href="1367.html">Ben Houston: "Fourier computing?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1376.html">Ben Houston: "RE: Fourier computing?"</a>
+<li><strong>Reply:</strong> <a href="1376.html">Ben Houston: "RE: Fourier computing?"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1375">[ date ]</a>
+<a href="index.html#1375">[ thread ]</a>
+<a href="subject.html#1375">[ subject ]</a>
+<a href="author.html#1375">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+This still seems (at least borderline) relevant to sl4...
+<br>
+<p>First, let me say two things, then I'll answer your question...
+<br>
+<p><em>&gt;neurons and their respective neural codes.  I have never heard of
+</em><br>
+<em>&gt;Fourier computing though.  And, I was until now unaware that there was a
+</em><br>
+<em>&gt;need to &quot;invent the kind of component which the human brain uses.&quot;  I
+</em><br>
+<em>&gt;guess I have been in the dark about something -- could you fill me in?
+</em><br>
+<p>(1) I did not mean to imply, by my message, that a brain-like computing
+<br>
+component was necessary to implement AI, but merely one option.
+<br>
+<p>(2) I am not a neuroscientist and am not up on cutting-edge knowledge about
+<br>
+neural operations, but this is what I meant by &quot;Fourier computing&quot;...
+<br>
+<p>(3) First, take a look at how the semantics of digital logic are mapped to
+<br>
+voltage levels:
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Operands: binary voltages
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# we map voltage intervals to boolean values...
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(0.5 V &lt;= v &lt;= 1.5 V) -&gt; boolean(v,1)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~(0.5 V &lt;= v &lt;= 1.5 V) -&gt; boolean(v,0)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Operations: logic gates
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# we map the domain (v0,v1), through a logical function, to a range (o).
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boolean(v0,0) A boolean(v1,0) -&gt; boolean(o,0) # logical OR
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boolean(v0,0) A boolean(v1,1) -&gt; boolean(o,1)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boolean(v0,1) A boolean(v1,0) -&gt; boolean(o,1)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boolean(v0,1) A boolean(v1,1) -&gt; boolean(o,1)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;But, neurons don't work like this...
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let's take a first-order fourier decomposition of v:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v(t) = a1 cos w1*t + noise... and disregard the value a1
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remap operands:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(30/s &lt;= w1 &lt;= 40/s) -&gt; boolean(v,1)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~(30/s &lt;= w1 &lt;= 40/s) -&gt; boolean(v,0)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remap operations:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We can symbolically expand any line (all lines) of the logic table:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i.e., boolean(v0,0) A boolean(v1,0) -&gt; boolean(o,0) becomes
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~(0.5 V &lt;= v0 &lt;= 1.5 V) A ~(0.5 V &lt;= v1 &lt;= 1.5 V) -&gt; 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~(0.5 V &lt;= o &lt;= 1.5 V) 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and so on until the truth table has been expressed as a (complicated)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;piecewise function o = logicalOr(v0,v1).
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Likewise can we construct o = logicalOr(v0,v1) using the fourier
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;interperetations of v0, v1, and o. It would look something like:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~(30/s &lt;= w0 &lt;= 40/s) A ~(30/s &lt;= w1 &lt;= 40/s) -&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~(30/s &lt;= o &lt;= 40/s) ....
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The piecewise function o = logicalOr(v0,v1) can thus be constructed
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in which the fundamental frequency of o is a (logical) function of the 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fundamental frequencies of v0 and v1.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the important part: Any variable in the fourier decomposition
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of a function f(x) can be used to carry data, i.e.:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v(t) = a1 cos (w1*t+p1) + a2 cos (w2*t+p2) + ...
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a1, a2, w1, w2, p1, and p2 can all be used to encode inputs and store 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;outputs. Note that, in this perspective, frequency, amplitude, and
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;phase can all be given significance. What we have done is employed a
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;different semantic mapping to v by transforing v(t) into the time
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;domain.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is, in some cases, how the human nervous system puts neurons to
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;use. When sensing heat, for example, (using v = a1 cos w1) it is not
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the value of a1, but the value w1, which conveys to the brain the
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;intensity of the heat. It is *more rapid*, not *more intense*,
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;neuron firing which indicates a sensation of greater heat. Clearly,
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the brain has some way of semantically mapping such frequencies,
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;since I can tell hot from luke warm from scalding....
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By constructing circuits which implement these mathematical functions
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ask any EE), electronics which operate in this manner can be used to
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;build entire computers. This is what I meant by &quot;Fourier computing&quot;.
+<br>
+<p>Dave
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1376.html">Ben Houston: "RE: Fourier computing?"</a>
+<li><strong>Previous message:</strong> <a href="1374.html">Ben Houston: "RE: NEWS: New Light-Based Computer Runs At Quantum Speeds"</a>
+<li><strong>Maybe in reply to:</strong> <a href="1367.html">Ben Houston: "Fourier computing?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1376.html">Ben Houston: "RE: Fourier computing?"</a>
+<li><strong>Reply:</strong> <a href="1376.html">Ben Houston: "RE: Fourier computing?"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1375">[ date ]</a>
+<a href="index.html#1375">[ thread ]</a>
+<a href="subject.html#1375">[ subject ]</a>
+<a href="author.html#1375">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

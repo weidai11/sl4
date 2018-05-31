@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Flare</title>
+<meta name="Author" content="Ben Goertzel (ben@webmind.com)">
+<meta name="Subject" content="RE: Flare">
+<meta name="Date" content="2001-07-17">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Flare</h1>
+<!-- received="Tue Jul 17 23:36:29 2001" -->
+<!-- isoreceived="20010718053629" -->
+<!-- sent="Tue, 17 Jul 2001 22:19:19 -0400" -->
+<!-- isosent="20010718021919" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@webmind.com" -->
+<!-- subject="RE: Flare" -->
+<!-- id="NDBBIBGFAPPPBODIPJMMIEMEFMAA.ben@webmind.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="NDBBIBGFAPPPBODIPJMMCEMDFMAA.ben@webmind.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@webmind.com?Subject=RE:%20Flare"><em>ben@webmind.com</em></a>)<br>
+<strong>Date:</strong> Tue Jul 17 2001 - 20:19:19 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1770.html">Brian Atkins: "Re: Flare"</a>
+<li><strong>Previous message:</strong> <a href="1768.html">Eliezer S. Yudkowsky: "Re: PROJ: Flare"</a>
+<li><strong>In reply to:</strong> <a href="1767.html">Ben Goertzel: "RE: Flare"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1770.html">Brian Atkins: "Re: Flare"</a>
+<li><strong>Reply:</strong> <a href="1770.html">Brian Atkins: "Re: Flare"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1769">[ date ]</a>
+<a href="index.html#1769">[ thread ]</a>
+<a href="subject.html#1769">[ subject ]</a>
+<a href="author.html#1769">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Not to get too far carried away with this thread, but there are a lot of
+<br>
+annoying subtleties here.
+<br>
+<p>For instance, a 64 bit JVM gives you more memory, but it also causes each
+<br>
+object to *consume* more memory, by using 64 bit ints, floats, etc.
+<br>
+<p>Now, one can get around this via cleverness, e.g. by using bit-masking to
+<br>
+store parameters in ints (a 64 bit int stores more parameters this way than
+<br>
+a 32 bit one).  However, if one has to do this kind of &quot;virtual pointer
+<br>
+pushing&quot; to get Java to perform decently, one has to wonder, why not just
+<br>
+use C++?  ;&gt;
+<br>
+<p>ben
+<br>
+<p><p><p><p><em>&gt; It was true until very recently for all Windows and Linux *and
+</em><br>
+<em>&gt; Solaris* JVM's.  Sun claims they'll have a 64 bit JVM coming out
+</em><br>
+<em>&gt; sometime, but the launch date has been frequently postponed.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; I haven't tried IBM's new 64 bit JVM, actually, though I have
+</em><br>
+<em>&gt; read about it, e.g.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; <a href="http://service2.boulder.ibm.com/devtools/news0101/art14.htm">http://service2.boulder.ibm.com/devtools/news0101/art14.htm</a>
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Interesting work at IBM on scalable Java is at
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; <a href="http://www.research.ibm.com/journal/sj39-1.html">http://www.research.ibm.com/journal/sj39-1.html</a>
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; All this is quite new, and I don't know how well it works.
+</em><br>
+<em>&gt; Experience shows that marketing literature is a poor guide to
+</em><br>
+<em>&gt; actual functionality for such systems.  I do know IBM has
+</em><br>
+<em>&gt; invested a lot of time and money in this.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; For us, when we decided to re-implement Webmind to change the
+</em><br>
+<em>&gt; *architecture* (while keeping the mathematical and conceptual
+</em><br>
+<em>&gt; basis the same), it was a tough choice whether to stick with Java
+</em><br>
+<em>&gt; (in light of all the progress IBM and others are making, albeit
+</em><br>
+<em>&gt; slowly) or to go with C++.  But ultimately, we decided that if we
+</em><br>
+<em>&gt; were going to re-code the system for efficiency, we might as well
+</em><br>
+<em>&gt; go all the way.
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1770.html">Brian Atkins: "Re: Flare"</a>
+<li><strong>Previous message:</strong> <a href="1768.html">Eliezer S. Yudkowsky: "Re: PROJ: Flare"</a>
+<li><strong>In reply to:</strong> <a href="1767.html">Ben Goertzel: "RE: Flare"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1770.html">Brian Atkins: "Re: Flare"</a>
+<li><strong>Reply:</strong> <a href="1770.html">Brian Atkins: "Re: Flare"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1769">[ date ]</a>
+<a href="index.html#1769">[ thread ]</a>
+<a href="subject.html#1769">[ subject ]</a>
+<a href="author.html#1769">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

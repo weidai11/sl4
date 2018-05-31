@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Development models.</title>
+<meta name="Author" content="Stephen Reed (reed@cyc.com)">
+<meta name="Subject" content="Re: Development models.">
+<meta name="Date" content="2005-09-07">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Development models.</h1>
+<!-- received="Wed Sep  7 12:03:40 2005" -->
+<!-- isoreceived="20050907180340" -->
+<!-- sent="Wed, 7 Sep 2005 13:03:32 -0500 (CDT)" -->
+<!-- isosent="20050907180332" -->
+<!-- name="Stephen Reed" -->
+<!-- email="reed@cyc.com" -->
+<!-- subject="Re: Development models." -->
+<!-- id="Pine.LNX.4.44.0509071123170.1589-100000@aruba.cyc.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="20050907140215.32454.qmail@web26708.mail.ukl.yahoo.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Stephen Reed (<a href="mailto:reed@cyc.com?Subject=Re:%20Development%20models."><em>reed@cyc.com</em></a>)<br>
+<strong>Date:</strong> Wed Sep 07 2005 - 12:03:32 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="12218.html">J. Andrew Rogers: "Re: Introduction"</a>
+<li><strong>Previous message:</strong> <a href="12216.html">Chris Capel: "Re: Introduction"</a>
+<li><strong>In reply to:</strong> <a href="12208.html">Michael Wilson: "Re: Development models."</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12217">[ date ]</a>
+<a href="index.html#12217">[ thread ]</a>
+<a href="subject.html#12217">[ subject ]</a>
+<a href="author.html#12217">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+The Cyc Project is the largest pure-AI effort, and although most of this 
+<br>
+audience disagrees with our assumptions, approach and accomplishments, I 
+<br>
+would like to share some of our development model in the hope of informing 
+<br>
+skeptics.
+<br>
+<p>Starting as a sponsored research project at MCC, Austin in the mid-1980's, 
+<br>
+Cycorp has been staffed at approximately 50 persons since I joined the 
+<br>
+company in 1999.  We migrated early to open source tools with the notable 
+<br>
+exception of using Allegro Lisp from Franz, which enabled us to move 
+<br>
+cleanly from Symbolics Lisp machines to whitebox Linux workstations (about 
+<br>
+80 in house, one per worker and the rest in server pools or 
+<br>
+administration).  By 1999 the programming team (about one-half of the 
+<br>
+workers) built our own lisp runtime in portable GNU C.  This investment 
+<br>
+was substantial but allows us to deploy Cyc without the Allegro runtime.  
+<br>
+In the last three years, our client applications have migrated from HTML 
+<br>
+to Java.  We had reached the limits of what Javascript could do for the user 
+<br>
+interfaces.
+<br>
+<p>We use Bugzilla to manage our detailed tasks, and use Cyc itself for 
+<br>
+project management. Our tasks are oriented around the particular needs 
+<br>
+of our various sponsored research projects, but our management tries hard 
+<br>
+to align our tasks to enhance our core capability and make progress 
+<br>
+towards our AI goal.  
+<br>
+<p>Here are some of the specialties up to this point:
+<br>
+<p>1. Operating systems level programming expertise to maintain 
+<br>
+our runtime infrastructure, and translate from lisp into efficient C for 
+<br>
+deployment.
+<br>
+<p>2. Lisp programmers for server-side development including object store, 
+<br>
+inference modules, database integration and natural language parsing.
+<br>
+<p>3. Java programmers for client-side development including GUI's and 
+<br>
+enterprise/semantic-web integration.
+<br>
+<p>4. Inference programmers who know about deductive, inductive and abductive 
+<br>
+inference and know how to efficiently support inference in the Cyc 
+<br>
+knowledge base.
+<br>
+<p>5. Linguists (also programmers) whose specialties include natural language 
+<br>
+lexicon, parsing and generation.  We also use third party and open source 
+<br>
+NL tools.
+<br>
+<p>6. Philosophers who know how to represent commonsense objects and their 
+<br>
+relationships in Cyc's predicate calculus language CycL.  They know how to 
+<br>
+formulate facts and rules to get commonsense questions to answer.
+<br>
+<p>7. Managers who are familiar with artificial intelligence in general, who 
+<br>
+have detailed knowledge about the needs of our sponsors, and who can herd 
+<br>
+the rest of us like cats to get projects delivered as contracted.
+<br>
+<p>8. Proposal writers.  Among our managers we have some skilled at writing 
+<br>
+winning proposals.  I attribute our success to our sponsors' satisfaction 
+<br>
+with our performance and deliverables from previous projects.
+<br>
+<p>9. System administrators who can keep state-of-practice Linux boxes 
+<br>
+operating smoothly, with a shared filesystem and secure network.
+<br>
+<p>10. Human resources, finance, general administration and so forth that one 
+<br>
+would expect from a company our size.  We are quite proud that our 
+<br>
+overhead rates are very low compared to other government contractors.
+<br>
+<p>In summary, before 1999 I too had hoped that a single motivated person 
+<br>
+could combine the best published research of others, together with open 
+<br>
+source software components to construct an AGI.  Now that I've been at 
+<br>
+Cycorp for these six years I believe that a large integrated team will be 
+<br>
+required because specialized knowledge is key.  Any one area of 
+<br>
+specialization could entrap the sole inventor.  It's for this reason that 
+<br>
+published AI research is so specialized.
+<br>
+<p>Hope this is helpful.
+<br>
+<p>Cheers.
+<br>
+-Steve
+<br>
+<p><p>My statements are my own opinions and do not represent Cycorp in any way.
+<br>
+<p><p>&nbsp;-- 
+<br>
+===========================================================
+<br>
+Stephen L. Reed                  phone:  512.342.4036
+<br>
+Cycorp, Suite 100                  fax:  512.342.4040
+<br>
+3721 Executive Center Drive      email:  <a href="mailto:reed@cyc.com?Subject=Re:%20Development%20models.">reed@cyc.com</a>
+<br>
+Austin, TX 78731                   web:  <a href="http://www.cyc.com">http://www.cyc.com</a>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;download OpenCyc at <a href="http://www.opencyc.org">http://www.opencyc.org</a>
+<br>
+===========================================================
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="12218.html">J. Andrew Rogers: "Re: Introduction"</a>
+<li><strong>Previous message:</strong> <a href="12216.html">Chris Capel: "Re: Introduction"</a>
+<li><strong>In reply to:</strong> <a href="12208.html">Michael Wilson: "Re: Development models."</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12217">[ date ]</a>
+<a href="index.html#12217">[ thread ]</a>
+<a href="subject.html#12217">[ subject ]</a>
+<a href="author.html#12217">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:52 MDT
+</em></small></p>
+</body>
+</html>

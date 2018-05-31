@@ -1,0 +1,325 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Novamente project progress</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="Novamente project progress">
+<meta name="Date" content="2003-12-24">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Novamente project progress</h1>
+<!-- received="Wed Dec 24 08:06:31 2003" -->
+<!-- isoreceived="20031224150631" -->
+<!-- sent="Wed, 24 Dec 2003 10:05:58 -0500" -->
+<!-- isosent="20031224150558" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="Novamente project progress" -->
+<!-- id="BAEAIIMDCMDAEKHBFGFKEEACCHAA.ben@goertzel.org" -->
+<!-- charset="iso-8859-1" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=Re:%20Novamente%20project%20progress"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Wed Dec 24 2003 - 08:05:58 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="7382.html">Gordon Worley: "Happy Newtonmas"</a>
+<li><strong>Previous message:</strong> <a href="7380.html">Metaqualia: "Erotic computing: Candy bars for the ...."</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7381">[ date ]</a>
+<a href="index.html#7381">[ thread ]</a>
+<a href="subject.html#7381">[ subject ]</a>
+<a href="author.html#7381">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Mike Deering, on the AGI list, asked me for a report on the progress of the
+<br>
+Novamente AI project
+<br>
+<p>I thought this might be of interest to some fraction of the SL4 list as
+<br>
+well, so here it is.
+<br>
+<p>For those who aren't SL4 old-timers: Novamente (www.agiri.org) is an AI
+<br>
+project that's been in progress since mid-2001, with Singularitarian
+<br>
+ambitions, and also with short-term commercial applications in
+<br>
+bioinformatics and other areas.
+<br>
+<p>-- Ben Goertzel
+<br>
+<p><p>-----------------
+<br>
+Hi Mike,
+<br>
+<p>About Novamente project progress...
+<br>
+<p>The reason I haven't given progress updates to this list lately is that I've
+<br>
+been even more insanely busy than usual, due to a combination of AI work and
+<br>
+(Novamente-related) business work and personal-life developments.  So
+<br>
+recreational emailing has fallen by the wayside of late.  Now that Christmas
+<br>
+vacation has come, I have a little time send emails!  [Although I'm going on
+<br>
+vacation for 4 days starting tomorrow, so I'll be offline for a little
+<br>
+while....]
+<br>
+<p>Progress on Novamente has actually stepped up considerably as of September,
+<br>
+when a few new people were brought into the project (in connection with a
+<br>
+commercial application of Novamente), some of them working on language
+<br>
+processing and one working on more fundamental AI stuff (representation of
+<br>
+complex knowledge; and evolutionary learning).
+<br>
+<p>However, our recent progress has been of a technical nature, it hasn't yet
+<br>
+yielded big milestones that are exciting to report the world at large.
+<br>
+<p>Regarding language processing, we have a system that &quot;reads&quot; English text
+<br>
+and outputs semantic relationships contained in the text into Novamente.
+<br>
+This is one way to fill the system's mind up with information, though from
+<br>
+an AGI perspective it must be considered a complement to experiential
+<br>
+interactive learning, rather than as the sole means of providing the system
+<br>
+with knowledge.  However, this &quot;relationship extraction&quot; software is far
+<br>
+from complete; there's probably 6 months of work left on the &quot;syntax&quot; side,
+<br>
+which will proceed in parallel with work on the semantic interpretation of
+<br>
+the extracted relationships.
+<br>
+<p>Regarding reasoning, we've made a lot of progress on probabilistic
+<br>
+inference, in the context of experimenting with inference on biological data
+<br>
+(quantitative experimental data and data from relational DB's), and (more
+<br>
+recently) on linguistic knowledge.  This has involved a lot of technical
+<br>
+math work on my part, working out various details in the inference system.
+<br>
+The results here are very interesting, although there's a lot more testing
+<br>
+and tweaking required, particularly regarding the control of inference.
+<br>
+<p>We've got the code in place for our own generalization of combinatory logic,
+<br>
+which is the scheme we're using to represent complex knowledge in Novamente
+<br>
+(the knowledge that would be represented using variables and quantifiers in
+<br>
+a traditional logic-based system).  And we've generalized the Bayesian
+<br>
+Optimization Algorithm (an extension of genetic algorithms based on
+<br>
+probability theory, invented by Martin Pelikan and David Goldberg) to learn
+<br>
+complex combinatory logic expressions.   Experimentation with this is
+<br>
+ongoing actively, and during the first half of 2004 this code will be
+<br>
+integrated with the probabilistic reasoning code.  I spent a lot of time
+<br>
+last month working out the nasty software-design details of integrating
+<br>
+inferential processing with combinatory logic; that design will be
+<br>
+implemented in January.
+<br>
+<p>I redesigned our previous &quot;attention allocation&quot; subsystem, which used to
+<br>
+use neural net based ideas, to use a different approach based on
+<br>
+probabilistic inference, thus simplifying the system and (I hope) inducing
+<br>
+more emergence among components.  This hasn't been implemented yet though.
+<br>
+<p>Yes, we STILL are not at the phase where we've hooked up Novamente to a
+<br>
+&quot;simulated body&quot; in a simulated world and started teaching it
+<br>
+experientially.  We're very much looking forward to that day!  As of this
+<br>
+point, I can at least say there are no major components that are
+<br>
+unengineered ... the coding of the generalized-combinatory-logic framework w
+<br>
+as the biggest beast AI-wise.  However, there's a lot of integration,
+<br>
+testing and tuning work ahead, and some moderate-sized beasts remain uncoded
+<br>
+(like probabilistic attention allocation, and probabilistic logical
+<br>
+unification).  Also, there is some nitty-gritty work as yet undone, such as
+<br>
+extending the Novamente core to run on multiple machines as a distributed
+<br>
+system (the design was made to support extension to distributed processing,
+<br>
+but the work hasn't been done yet).  And, we've ordered our first 64-bit
+<br>
+machine, and in early 2004 will undertake the task of porting the core to
+<br>
+64-bit Linux on 64-bit hardware....  Depending on how much attention we can
+<br>
+give to AGI as opposed to commercial Novamente applications, we could get to
+<br>
+the &quot;teaching the baby&quot; phase in mid or late 2004, or it might not be till
+<br>
+2005.
+<br>
+<p>Next, some comments on funding.
+<br>
+<p>Our strategy of funding AGI work via commercial applications of the
+<br>
+in-progress AI system is working, in the sense that we're making progress
+<br>
+implementing and testing the AI system, while getting paid for it at a
+<br>
+reasonable level.  Some of the commercial applications are also very
+<br>
+interesting in themselves; for instance, in our bioinformatics work we've
+<br>
+made some real progress in creating original diagnostic tools for a couple
+<br>
+diseases (publications on this will come out in early 2004; in one case we
+<br>
+found a diagnostic using Novamente, and in another case using a simpler,
+<br>
+more specialized software system whose construction was inspired by parts of
+<br>
+Novamente).
+<br>
+<p>On the other hand, there's no doubt that if we had some funding purely
+<br>
+oriented toward AGI research, we'd be progressing significantly faster.  It
+<br>
+wouldn't take too much either.   Funding on the order of $10,000/month would
+<br>
+enable us to hire 3 programmer/scientists exclusively oriented toward AGI
+<br>
+rather than commercial applications, which would drastically accelerate our
+<br>
+progress, as opposed to the current situation where nearly everyone's time
+<br>
+is either devoted to commercial apps, or fragmented between commercial apps
+<br>
+and AGI.
+<br>
+<p>However, I'm not complaining (though I complained a lot yesterday after an
+<br>
+entire day spent conferring with intellectual property lawyers! ;p) -- I'm
+<br>
+happy that it's proved possible to continue the AGI work in an economically
+<br>
+sustainable way.
+<br>
+<p>Regarding the long-delayed &quot;Novamente book&quot;, it got too big and messy and so
+<br>
+it was trifurcated into three books
+<br>
+<p>* Probablistic Term Logic (an in-depth treatment of this one component of
+<br>
+Novamente, which is the most mathematically involved component)
+<br>
+* Novamente: Design for an Artificial General Intelligence
+<br>
+* Mind Patterns (a semi-technical review of the conceptual foundations of
+<br>
+Novamente)
+<br>
+<p>I haven't had much time for writing lately, but the PTL manuscript is
+<br>
+largely done, awaiting only some proofreading and a couple final chapters
+<br>
+covering practical applications, to be added in early '04.   Now that
+<br>
+Christmas vacation is here and the business world is in a lull, I've been
+<br>
+digging into the main &quot;Novamente Design&quot; manuscript again, and am happily
+<br>
+updating it in accordance with recent simplifications and improvements in
+<br>
+the design.  It seems likely that, even with everything else on my plate,
+<br>
+I'll manage to get these manuscripts submitted for publication in 2004,
+<br>
+hopefully by early fall.  Once these books are published, we'll probably
+<br>
+make a big push to get some pure-AGI funding to accelerate progress.  Unless
+<br>
+we've made soooo much progress by then (due to my delays in finishing the
+<br>
+books!) that more funding isn't needed ;-)
+<br>
+<p>And that's the capsule summary regarding Novamente.  Could be better ... but
+<br>
+could also be a lot worse.  I've never been more confident of the capability
+<br>
+of the Novamente design to yield AGI, but I've also become more acutely
+<br>
+aware of the time and effort taken to tune and tweak and refine the various
+<br>
+parts of the design to really work as intended.  The commercial work we're
+<br>
+doing can be frustrating in that it distracts from pure AGI work, but it has
+<br>
+its rewards in itself (intellectual and human rewards as well as paying the
+<br>
+bills), and it also provides excellent contexts in which to test, tune and
+<br>
+refine various system components as they develop.
+<br>
+<p>-- Ben G
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="7382.html">Gordon Worley: "Happy Newtonmas"</a>
+<li><strong>Previous message:</strong> <a href="7380.html">Metaqualia: "Erotic computing: Candy bars for the ...."</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7381">[ date ]</a>
+<a href="index.html#7381">[ thread ]</a>
+<a href="subject.html#7381">[ subject ]</a>
+<a href="author.html#7381">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:43 MDT
+</em></small></p>
+</body>
+</html>

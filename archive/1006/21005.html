@@ -1,0 +1,259 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: [sl4] A new way to search through text</title>
+<meta name="Author" content="lispunit_benrayfield@audivolv.com (lispunit_benrayfield@audivolv.com)">
+<meta name="Subject" content="[sl4] A new way to search through text">
+<meta name="Date" content="2010-06-13">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>[sl4] A new way to search through text</h1>
+<!-- received="Sun Jun 13 15:14:43 2010" -->
+<!-- isoreceived="20100613211443" -->
+<!-- sent="Sun, 13 Jun 2010 17:14:35 -0400 (EDT)" -->
+<!-- isosent="20100613211435" -->
+<!-- name="lispunit_benrayfield@audivolv.com" -->
+<!-- email="lispunit_benrayfield@audivolv.com" -->
+<!-- subject="[sl4] A new way to search through text" -->
+<!-- id="435868552.151431.1276463675391.JavaMail.open-xchange@oxusltgw07.schlund.de" -->
+<!-- charset="UTF-8" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> <a href="mailto:lispunit_benrayfield@audivolv.com?Subject=Re:%20[sl4]%20A%20new%20way%20to%20search%20through%20text"><em>lispunit_benrayfield@audivolv.com</em></a><br>
+<strong>Date:</strong> Sun Jun 13 2010 - 15:14:35 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="21006.html">John K Clark: "[sl4] Jeopardy and AI"</a>
+<li><strong>Previous message:</strong> <a href="21004.html">Bryan Bishop: "[sl4] Fwd: [singularity] Singularity Summit 2010 Announcement"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="21006.html">John K Clark: "[sl4] Jeopardy and AI"</a>
+<li><strong>Reply:</strong> <a href="21006.html">John K Clark: "[sl4] Jeopardy and AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#21005">[ date ]</a>
+<a href="index.html#21005">[ thread ]</a>
+<a href="subject.html#21005">[ subject ]</a>
+<a href="author.html#21005">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Its open-source GNU GPL 3, unless I grant multilicenses.
+<br>
+ 
+<br>
+<a href="http://MouseSearch3d.com">http://MouseSearch3d.com</a>
+<br>
+ 
+<br>
+I started with 1.3 million Wikipedia pages, chosen by not having any numbers in
+<br>
+the name and short names.
+<br>
+ 
+<br>
+Then I used the following algorithm to reduce those to around 10000 pages:
+<br>
+ 
+<br>
+Each iteration, count how many incoming links and outgoing links are left, and
+<br>
+keep only the pages that have more incoming links than outgoing links and have
+<br>
+at least 5 of each.
+<br>
+ 
+<br>
+It generates a very high quality and well spread out and well connected set of
+<br>
+pages.
+<br>
+ 
+<br>
+I wrote Javascript code to use it as a simulated brain. I wouldn't call it a
+<br>
+neural-network because it has continuous neural-activation (calculated a few
+<br>
+times per second), and a node only changes its own neural activation (based on
+<br>
+its forward and reverse links' neural activation).
+<br>
+ 
+<br>
+Exclude reverse links that are also forward links, and forward links that are
+<br>
+also reverse links.
+<br>
+ 
+<br>
+Similarly to how I narrowed down the 1.3 million pages, for each node, if the
+<br>
+sum of the reverse links neural activation is more than the sum of the forward
+<br>
+links neural activation, then decay that node's neural activation toward 3, else
+<br>
+decay toward -3.
+<br>
+ 
+<br>
+A few times per second, normalize all neural activation levels on a bell curve,
+<br>
+average 0, standard deviation 1.
+<br>
+ 
+<br>
+Increase neural activation when mouse touches a word on screen or gets closer or
+<br>
+stays close longer. Make the word flash and decay slowly.
+<br>
+ 
+<br>
+Remove words with neural activation too close to 0, and add some more words
+<br>
+(with forward and reverse links) loaded from the internet (of those 10000).
+<br>
+ 
+<br>
+Process words with very high or very low neural activation more often.
+<br>
+ 
+<br>
+ 
+<br>
+For now, the 3d part is just so you can move the words around and touch only the
+<br>
+words you want to touch with the mouse. It includes evolution of AffineTransform
+<br>
+matrixes, but the fitness function is arbitrary, just something to make it move
+<br>
+in interesting ways for now. Its a 6x6 matrix of x y z red green blue, and 1
+<br>
+offset matrix size 6.
+<br>
+ 
+<br>
+ 
+<br>
+Its simple algorithms, but it beats the other 3d search-engines that are being
+<br>
+created. They're building on the assumption that it should display the results
+<br>
+from their existing system. I built <a href="http://MouseSearch3d.com">http://MouseSearch3d.com</a> specificly for 3d
+<br>
+mouse interaction, as you can see in the history at
+<br>
+<a href="http://sourceforge.net/projects/natlangmouse">http://sourceforge.net/projects/natlangmouse</a>
+<br>
+ 
+<br>
+ 
+<br>
+I started it as more complex code in my server, but the simple code written
+<br>
+above works better, so I uploaded a version that is only 1 html and
+<br>
+approximately 10000 text files. Why? So the people who only know Javascript can
+<br>
+learn AI, so it might spread to thousands of people, kind of like Mentifex's
+<br>
+MindForth is in an HTML file for. Almost all softwares are too complex for the
+<br>
+complexity of the problems they solve. Maybe if people see that small and simple
+<br>
+code can do complex things, they will stop buildingo n their huge ancient
+<br>
+infrastructure that has more problems than it solves. Most of the jobs it
+<br>
+appears I could get are doing the same old mindless work. That's what our
+<br>
+society has become. They don't know why they do it anymore. They just know it
+<br>
+pays the best.
+<br>
+ 
+<br>
+ 
+<br>
+Please try <a href="http://MouseSearch3d.com">http://MouseSearch3d.com</a> and tell me what you think of the
+<br>
+user-interface and the way it has conversations with you (with moving words
+<br>
+appearing and disappearing).
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="21006.html">John K Clark: "[sl4] Jeopardy and AI"</a>
+<li><strong>Previous message:</strong> <a href="21004.html">Bryan Bishop: "[sl4] Fwd: [singularity] Singularity Summit 2010 Announcement"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="21006.html">John K Clark: "[sl4] Jeopardy and AI"</a>
+<li><strong>Reply:</strong> <a href="21006.html">John K Clark: "[sl4] Jeopardy and AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#21005">[ date ]</a>
+<a href="index.html#21005">[ thread ]</a>
+<a href="subject.html#21005">[ subject ]</a>
+<a href="author.html#21005">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:01:05 MDT
+</em></small></p>
+</body>
+</html>

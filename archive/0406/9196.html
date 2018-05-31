@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: About &quot;safe&quot; AGI architecture</title>
+<meta name="Author" content="Samantha Atkins (samantha@objectent.com)">
+<meta name="Subject" content="Re: About &quot;safe&quot; AGI architecture">
+<meta name="Date" content="2004-06-13">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: About &quot;safe&quot; AGI architecture</h1>
+<!-- received="Sun Jun 13 15:43:20 2004" -->
+<!-- isoreceived="20040613214320" -->
+<!-- sent="Sun, 13 Jun 2004 14:43:14 -0700" -->
+<!-- isosent="20040613214314" -->
+<!-- name="Samantha Atkins" -->
+<!-- email="samantha@objectent.com" -->
+<!-- subject="Re: About &quot;safe&quot; AGI architecture" -->
+<!-- id="AC81A798-BD82-11D8-85E5-000A95B1AFDE@objectent.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="003101c45160$93563ff0$6501a8c0@ZOMBIETHUSTRA" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Samantha Atkins (<a href="mailto:samantha@objectent.com?Subject=Re:%20About%20&quot;safe&quot;%20AGI%20architecture"><em>samantha@objectent.com</em></a>)<br>
+<strong>Date:</strong> Sun Jun 13 2004 - 15:43:14 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="9197.html">Eliezer Yudkowsky: "Re: Collective Volition: Wanting vs Doing."</a>
+<li><strong>Previous message:</strong> <a href="9195.html">Samantha Atkins: "Re: Collective Volition: Wanting vs Doing."</a>
+<li><strong>In reply to:</strong> <a href="9181.html">Ben Goertzel: "RE: About &quot;safe&quot; AGI architecture"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="9199.html">Ben Goertzel: "RE: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Reply:</strong> <a href="9199.html">Ben Goertzel: "RE: About &quot;safe&quot; AGI architecture"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#9196">[ date ]</a>
+<a href="index.html#9196">[ thread ]</a>
+<a href="subject.html#9196">[ subject ]</a>
+<a href="author.html#9196">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Jun 13, 2004, at 9:07 AM, Ben Goertzel wrote:
+<br>
+<p><em>&gt;
+</em><br>
+<em>&gt; Hi,
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;&gt; I don't see how &quot;formal verification of Java programs&quot; can be
+</em><br>
+<em>&gt;&gt; done.  Or
+</em><br>
+<em>&gt;&gt; at least, I would assume that the specification of what the
+</em><br>
+<em>&gt;&gt; program is
+</em><br>
+<em>&gt;&gt; supposed to do is  where much of the trick takes place.   If the
+</em><br>
+<em>&gt;&gt; specification is detailed enough and is itself provably correct (why
+</em><br>
+<em>&gt;&gt; don't we get an infinite recurse?) then it might well be a
+</em><br>
+<em>&gt;&gt; better form
+</em><br>
+<em>&gt;&gt; of the program than the Java one was anyway.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Formal specification may take place in a mathematical specification
+</em><br>
+<em>&gt; language such as Z.  This is not a good form for a practical software
+</em><br>
+<em>&gt; program, because it doesn't deal with issues of memory or processing
+</em><br>
+<em>&gt; efficiency, except at the very abstract level of the 
+</em><br>
+<em>&gt; order-of-complexity
+</em><br>
+<em>&gt; of algorithms and the design of data structures.  Currently there is no
+</em><br>
+<em>&gt; technology for taking a Z specification and turning it into an 
+</em><br>
+<em>&gt; efficient
+</em><br>
+<em>&gt; software program.  However, the supercompiler technology may eventually
+</em><br>
+<em>&gt; lead to such a capability, in which case, indeed, the specification 
+</em><br>
+<em>&gt; will
+</em><br>
+<em>&gt; be the program.
+</em><br>
+<em>&gt;
+</em><br>
+<p>This is what I suspected.  Unfortunately Z will not handle the POC of 
+<br>
+the underlying mechanisms of Java/C##.  It is precisely in those 
+<br>
+mechanisms that unaddressed opportunities for failure or exploitation 
+<br>
+of weaknesses are found.
+<br>
+<p><em>&gt; The point is that the specification is much smaller and simpler than a
+</em><br>
+<em>&gt; program, and hence can be more thoroughly checed my humans.  We don't
+</em><br>
+<em>&gt; get an infinite recursion because the recursion stops with human
+</em><br>
+<em>&gt; judgment.  The problem is that software programs that are too big and
+</em><br>
+<em>&gt; complex are hard for humans to reliably verify as correct by direct
+</em><br>
+<em>&gt; inspection.
+</em><br>
+<em>&gt;
+</em><br>
+<p>So now sufficient POC to guarantee the SI will not take off and do 
+<br>
+terrible things depends on humans reading and verifying a specification 
+<br>
+of the intent of the programming?   This doesn't look very &quot;safe&quot; to 
+<br>
+me.
+<br>
+<p><em>&gt;&gt;  The things
+</em><br>
+<em>&gt;&gt; Java removed
+</em><br>
+<em>&gt;&gt; from C++ do not afaik make it any more powerful, certainly not more
+</em><br>
+<em>&gt;&gt; succinct, and arguably no easier to prove a program is correct in.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; This is not true.  Java lacks pointers and explicit heap memory
+</em><br>
+<em>&gt; management, and this is what makes it orders of magnitude more feasible
+</em><br>
+<em>&gt; to analyze Java programs mathematically, than C++ programs.  C# 
+</em><br>
+<em>&gt; programs
+</em><br>
+<em>&gt; are tractable in the sense that Java programs are, if one doesn't use
+</em><br>
+<em>&gt; unsafe blocks of code and the pointer-manipulation that they permit.
+</em><br>
+<em>&gt;
+</em><br>
+<p>What is not true?  Mere pointer arithmetic and memory allocation being 
+<br>
+out of the hands of programmers means that bugs in that stuff coded by 
+<br>
+the application programmers will not eat your lunch.  But it does not 
+<br>
+mean there are no bugs in the underlying Java/C# implementation.  It 
+<br>
+also doesn't mean that the code itself is more easily proven correct 
+<br>
+except in the narrow dimensions of pointers and memory management and 
+<br>
+then only when we assume the correctness of the implementation.   Most 
+<br>
+of what programs are written for is outside these areas which are 
+<br>
+simply means to some end.  That end is no more verifiable than it was 
+<br>
+before as actually being what the code will do in all possible 
+<br>
+circumstances.
+<br>
+<p><em>&gt; The existing, partially functional Java supercompiler -- and the
+</em><br>
+<em>&gt; existing C# partial-evaluator made by the same team under a research
+</em><br>
+<em>&gt; grant from Microsoft -- could not have feasibly been made for C#.
+</em><br>
+<p>I am not sure I parse your intent there.
+<br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<p>- samantha
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="9197.html">Eliezer Yudkowsky: "Re: Collective Volition: Wanting vs Doing."</a>
+<li><strong>Previous message:</strong> <a href="9195.html">Samantha Atkins: "Re: Collective Volition: Wanting vs Doing."</a>
+<li><strong>In reply to:</strong> <a href="9181.html">Ben Goertzel: "RE: About &quot;safe&quot; AGI architecture"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="9199.html">Ben Goertzel: "RE: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Reply:</strong> <a href="9199.html">Ben Goertzel: "RE: About &quot;safe&quot; AGI architecture"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#9196">[ date ]</a>
+<a href="index.html#9196">[ thread ]</a>
+<a href="subject.html#9196">[ subject ]</a>
+<a href="author.html#9196">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:47 MDT
+</em></small></p>
+</body>
+</html>

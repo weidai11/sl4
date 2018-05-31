@@ -1,0 +1,303 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Learning to intelligently self-modify...</title>
+<meta name="Author" content="Ben Goertzel (ben@webmind.com)">
+<meta name="Subject" content="Learning to intelligently self-modify...">
+<meta name="Date" content="2001-08-11">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Learning to intelligently self-modify...</h1>
+<!-- received="Sat Aug 11 13:32:40 2001" -->
+<!-- isoreceived="20010811193240" -->
+<!-- sent="Sat, 11 Aug 2001 09:21:39 -0400" -->
+<!-- isosent="20010811132139" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@webmind.com" -->
+<!-- subject="Learning to intelligently self-modify..." -->
+<!-- id="NDBBIBGFAPPPBODIPJMMAEBFGEAA.ben@webmind.com" -->
+<!-- charset="Windows-1252" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@webmind.com?Subject=Re:%20Learning%20to%20intelligently%20self-modify..."><em>ben@webmind.com</em></a>)<br>
+<strong>Date:</strong> Sat Aug 11 2001 - 07:21:39 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="2112.html">Brian Atkins: "Re: Opting out of the Sysop scenario?"</a>
+<li><strong>Previous message:</strong> <a href="2110.html">James Higgins: "Re: Sysops, volition, and opting out"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="2126.html">Durant Schoon: "Re: Learning to intelligently self-modify..."</a>
+<li><strong>Reply:</strong> <a href="2126.html">Durant Schoon: "Re: Learning to intelligently self-modify..."</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2111">[ date ]</a>
+<a href="index.html#2111">[ thread ]</a>
+<a href="subject.html#2111">[ subject ]</a>
+<a href="author.html#2111">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+here are some musings on intelligent self-modification, based on past
+<br>
+experience prototyping similar things in Webmind Inc., and our plans for the
+<br>
+future with the Webmind AI Engine
+<br>
+<p>It's a long and winding train of thought, but if you follow it to the end,
+<br>
+you may find it interesting...
+<br>
+<p>In Webmind, the approach we use to schema learning (procedure learning,
+<br>
+program learning) is unique, but the best way to cast it in non-Webmindish
+<br>
+terms is to call it &quot;a fusion of evolutionary programming and probabilistic
+<br>
+inference and neural-nettish association spreading.&quot;  Of course it's really
+<br>
+nothing so awkward as a pasting-together of these three things, but it does
+<br>
+involve these three aspects.
+<br>
+<p>In ev. comp. terms, one of the issues that arises is schema learning is
+<br>
+brittleness.  Mutating and crossing over most working programs leads to
+<br>
+useless or even meaningless programs.  Of course, some programming languages
+<br>
+are brittler than others; LISP is much less brittle in this sense than C++,
+<br>
+for example.
+<br>
+<p>On the other hand, DNA, which is the programming language that is used to
+<br>
+encode living organisms on Earth, is remarkably robust and un-brittle in
+<br>
+this sense.  DNA programs can be mutated and crossed over relatively freely
+<br>
+(yes, there are constraints, there are 'hot spots' where crossover is more
+<br>
+likely, etc.) with a decent probability of producing a functioning, though
+<br>
+different offspring.  The reason for the robustness here is that the
+<br>
+&quot;compiler&quot; (the network of protein-protein interactions that build cells,
+<br>
+cell interactions that build bodies, etc.) is very, very tolerant of errors,
+<br>
+and has a lot of clever ways to make things work and come out interestingly
+<br>
+instead of erroneously.  The DNA program is fairly interpretable as the
+<br>
+initial condition of a complex self-organizing system (the developing cell)
+<br>
+rather than as a series of instructions for a logical system.  (Both
+<br>
+interpretations shed some light, actually.)
+<br>
+<p>How is this kind of robustness to be achieved in the mind, in the context of
+<br>
+schema learning?
+<br>
+<p>I believe that in the mind there needs to be at least 2 levels of
+<br>
+representation for procedures.  This is not a new idea, it occurs in various
+<br>
+forms in the &quot;AI planning&quot; literature, but it's usually mixed up with
+<br>
+various other things.
+<br>
+<p>1) &quot;pseudocode&quot; level, where the basic procedure being carried out is
+<br>
+outlined in &quot;almost precise&quot; terms
+<br>
+2) &quot;program code&quot; level, where everything is really laid out in detail
+<br>
+<p>The analogy I wish to draw is:
+<br>
+<p>Thinking Mind			Developing organism
+<br>
+--------------------------------------------------
+<br>
+Pseudocode					DNA
+<br>
+Program code				organism
+<br>
+Procedural refinement			epigenesis/development
+<br>
+<p>Of course, this is a very limited and flawed analogy, but there may be
+<br>
+something to be learned from it.  That is, there may be some small aspects
+<br>
+in which the analogy is valid.
+<br>
+<p>The idea is that, on the pseudocode level, mutations and crossovers lead to
+<br>
+algorithms that may be useless, but are generally semantically meaningful.
+<br>
+One can freely play around with pseudocode.
+<br>
+<p>Getting from pseudocode to program code is a matter of &quot;procedural
+<br>
+refinement&quot;, one aspect of procedural cognition -- and this can be very hard
+<br>
+thinking, of course, involving invocation of relevant experiences, formal
+<br>
+knowledge of algorithms, knowledge of the operating conditions of the
+<br>
+program, etc...
+<br>
+<p>My feeling is that, in the human mind, we
+<br>
+<p>a) come equipped at birth with the shell of a &quot;pseudocode&quot; representation of
+<br>
+procedures
+<br>
+b) fill out this shell into a complete internal pseudocode framework through
+<br>
+experimentation with procedures of physical action
+<br>
+c) through the experience of translating pseudocode representations of
+<br>
+real-world actions into detailed real-world action programs, we gain an
+<br>
+intuition for procedural cognition (including procedural refinement, as well
+<br>
+as the learning of new pseudocode programs)
+<br>
+d) later on, take our pseudocode and procedural cognition frameworks and
+<br>
+extend them to abstract procedural domains
+<br>
+<p>A very common example of the distinction between what I'm calling the
+<br>
+pseudocode level and the program code level is *timing*.  A plan, in the AI
+<br>
+literature, rarely includes precise timing of events; a schedule, on the
+<br>
+other hand, does.  Planning involves figuring out what steps to take whereas
+<br>
+scheduling involves figuring out exactly when to take them.  Filling in
+<br>
+timings is one example of something that happens during the transformation
+<br>
+from pseudocode to program code.
+<br>
+<p>In Webmind terms, the pseudocode level basically consists of a node-and-link
+<br>
+representation of schema *without* any of the schema-specific bells and
+<br>
+whistles (like token-passing to indicate that one procedure can't start
+<br>
+until another has finished, etc.).   The program code level consists of a
+<br>
+fully-specified node-and-link representation of a schema.
+<br>
+<p>*IF* one had a procedural refinement approach that worked -- i.e. a set of
+<br>
+mind-processes that take in pseudocode and spit out program code (in the WM
+<br>
+case, the program code is a fully specified schema) -- then one would be
+<br>
+well-positioned to tune the system to learn new pseudocode to approach new
+<br>
+problems.  Because for each new candidate bit of pseudocode, the system
+<br>
+would know how to create a new program code embodying the ideas outlines in
+<br>
+the pseudocode, thus being able to test the pragmatic validity of the
+<br>
+pseudocode.
+<br>
+<p>If we're to use the human case as an analogy, then procedural refinement is
+<br>
+going to have to be learned or minimally parameter-tuned by the system via
+<br>
+experimentation in a simple action domain (simpler than the domain of
+<br>
+modifying its own source code for example).  Here is where all the classic
+<br>
+AI problems of playing games, moving blocks around, etc., become potentially
+<br>
+interesting.  If a system can't translate pseudocode into program code in
+<br>
+simple contexts like this, having it do so in the context of modifying its
+<br>
+own behavioral schema is obviously pretty hopeless...
+<br>
+<p>The difference between these thoughts and our past WM work on schema
+<br>
+learning is basically the strictness of the breakdown into two levels.
+<br>
+Before we had
+<br>
+<p>--&gt; SchemaConceptNodes, an abstract level for reasoning about procedures
+<br>
+--&gt; SchemaNodes, for actually carrying out procedures
+<br>
+<p>and we actually had relations between SCN's and SN's on different levels of
+<br>
+granularity, but we hadn't formalized a distinction between two granularity
+<br>
+levels of schema relationships (here posited as pseudocode-ish and
+<br>
+program-code-ish)
+<br>
+<p>This is actually a point that was raised many times in past (WM-internal)
+<br>
+discussions on schema learning, in the guise of the need for a &quot;plan
+<br>
+optimization&quot; phase.  But the idea there, I think, was that the first phase
+<br>
+of schema learning would result in an inefficient but detailed program, to
+<br>
+be refined into an efficient one.  what I'm suggesting here is that the
+<br>
+first phase actually doesn't result in the learning of a detailed program at
+<br>
+all, but just a pseudocode sketch.
+<br>
+<p>OK -- that's all for now.  The next step in the train of thought goes into
+<br>
+the details of pseudocode versus program code for WM schema, and I won't
+<br>
+type that stuff in now.
+<br>
+<p><p>-- Ben
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="2112.html">Brian Atkins: "Re: Opting out of the Sysop scenario?"</a>
+<li><strong>Previous message:</strong> <a href="2110.html">James Higgins: "Re: Sysops, volition, and opting out"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="2126.html">Durant Schoon: "Re: Learning to intelligently self-modify..."</a>
+<li><strong>Reply:</strong> <a href="2126.html">Durant Schoon: "Re: Learning to intelligently self-modify..."</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2111">[ date ]</a>
+<a href="index.html#2111">[ thread ]</a>
+<a href="subject.html#2111">[ subject ]</a>
+<a href="author.html#2111">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:37 MDT
+</em></small></p>
+</body>
+</html>

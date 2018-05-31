@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Cognitive priming</title>
+<meta name="Author" content="Charles Hixson (charleshixsn@earthlink.net)">
+<meta name="Subject" content="Re: Cognitive priming">
+<meta name="Date" content="2002-11-03">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Cognitive priming</h1>
+<!-- received="Sun Nov  3 11:59:43 2002" -->
+<!-- isoreceived="20021103185943" -->
+<!-- sent="Sun, 3 Nov 2002 10:47:31 -0800" -->
+<!-- isosent="20021103184731" -->
+<!-- name="Charles Hixson" -->
+<!-- email="charleshixsn@earthlink.net" -->
+<!-- subject="Re: Cognitive priming" -->
+<!-- id="200211031047.31545.charleshixsn@earthlink.net" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="3AB28B9A-EEEB-11D6-9E5F-000A27D7C5CE@emilgilliam.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Charles Hixson (<a href="mailto:charleshixsn@earthlink.net?Subject=Re:%20Cognitive%20priming"><em>charleshixsn@earthlink.net</em></a>)<br>
+<strong>Date:</strong> Sun Nov 03 2002 - 11:47:31 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="5653.html">Cole Kitchen: "Fwd from Charlie Stross: Re: Time travel--&gt;fast algorithms--&gt;Singularity??"</a>
+<li><strong>Previous message:</strong> <a href="5651.html">Emil Gilliam: "Cognitive priming"</a>
+<li><strong>In reply to:</strong> <a href="5651.html">Emil Gilliam: "Cognitive priming"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#5652">[ date ]</a>
+<a href="index.html#5652">[ thread ]</a>
+<a href="subject.html#5652">[ subject ]</a>
+<a href="author.html#5652">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Saturday 02 November 2002 21:15, Emil Gilliam wrote:
+<br>
+<em>&gt; Quoting LOGI:
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;     [Matching imagery against stored memories is going to be very
+</em><br>
+<em>&gt; computationally expensive,
+</em><br>
+<em>&gt;     but...] One hopeful sign is the phenomenon of cognitive priming on
+</em><br>
+<em>&gt; related concepts
+</em><br>
+<em>&gt;     [Meyer71], which suggests that humans, despite their parallelism,
+</em><br>
+<em>&gt; are not using pure brute
+</em><br>
+<em>&gt;     force. 
+</em><br>
+<em>&gt;...
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; - Emil
+</em><br>
+<p>Yes, it will be expensive.  But one can limit the amount of data that needs to 
+<br>
+be processed in various ways.  One was is by converting pixelated images into 
+<br>
+vector images.  This has the additional advantage if rendering itself 
+<br>
+independant of scale.  One way is by keeping a chronfile index.  This lets 
+<br>
+you filter out anything that happened at an inappropriate time.  One way is 
+<br>
+by indexing the imagery with various feature codes.  Again, this allows for 
+<br>
+lots of stuff to be filtered out.  And finally composit objects (almost 
+<br>
+everything) should have some kind of fancy hashing algorithm, to allow 
+<br>
+filtering out of anything that didn't have the appropriate features.
+<br>
+This would allow one to retrieve, e.g., only images that had a red circle and 
+<br>
+a blue square relatively cheaply.
+<br>
+<p>This entire image would then be input into a model that indicated the 3-D 
+<br>
+relationships between the parts, and this would be what was stored.  
+<br>
+Otherwise perspective can seriously damage the ability to associate similar 
+<br>
+images.  But note that the model has lost a lot of detail along the way.  It 
+<br>
+is instances of this model that are indexed.  And the model allows additional 
+<br>
+data to be added as time goes by.  E.g., when you first see someone's back, 
+<br>
+that information is used to update the model that you had of their front.  
+<br>
+Ditto for side views.  Not a simple process, but a lot less computationally 
+<br>
+expensive than, say, ray-tracing.
+<br>
+<p>Also, somehow the pieces of this model will need to be able to be extracted 
+<br>
+and named separately.  E.g., a huge plaster hand is seen to be the same (in 
+<br>
+some sense) as the thing at the end of your wrist.  This is because of the 
+<br>
+ability of the various gross features to be put into a &quot;sort of&quot; one-to-one 
+<br>
+relationship.  It has fingers is more important than, e.g., how many fingers 
+<br>
+it has.  Again, within limits.  And we clearly understand (model) the deep 
+<br>
+connection between a left hand and a right hand.  So this probably means that 
+<br>
+most of their model is shared.
+<br>
+<p>Perhaps what I'm saying is that imagery is rarely directly compared with other 
+<br>
+imagery.  What are compared are the models via which they are understood.
+<br>
+<p>N.B.:  A lot of work would need to be done during the original conversion of 
+<br>
+pixelated images to vectors.  You probably need not just basic shape codes, 
+<br>
+but also surface texture codes.  You probably shouldn't expect to get enough 
+<br>
+information to code things properly out of just one still image.  You are 
+<br>
+likely to need to know how things normally move in relation to each other, so 
+<br>
+that you can determine natural boundaries.  Also stereoscopic images are 
+<br>
+quite useful in determining how the bumps and hollows of the surface work.  
+<br>
+(Camoflage is used to render simple color based assumptions ... dubious.)
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="5653.html">Cole Kitchen: "Fwd from Charlie Stross: Re: Time travel--&gt;fast algorithms--&gt;Singularity??"</a>
+<li><strong>Previous message:</strong> <a href="5651.html">Emil Gilliam: "Cognitive priming"</a>
+<li><strong>In reply to:</strong> <a href="5651.html">Emil Gilliam: "Cognitive priming"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#5652">[ date ]</a>
+<a href="index.html#5652">[ thread ]</a>
+<a href="subject.html#5652">[ subject ]</a>
+<a href="author.html#5652">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:41 MDT
+</em></small></p>
+</body>
+</html>

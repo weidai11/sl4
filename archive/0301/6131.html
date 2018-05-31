@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Towards a prototype mini-AI</title>
+<meta name="Author" content="Billy Brown (BBrown@RealBusinessSolutions.com)">
+<meta name="Subject" content="RE: Towards a prototype mini-AI">
+<meta name="Date" content="2003-01-29">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Towards a prototype mini-AI</h1>
+<!-- received="Wed Jan 29 10:19:16 2003" -->
+<!-- isoreceived="20030129171916" -->
+<!-- sent="Wed, 29 Jan 2003 11:17:29 -0600" -->
+<!-- isosent="20030129171729" -->
+<!-- name="Billy Brown" -->
+<!-- email="BBrown@RealBusinessSolutions.com" -->
+<!-- subject="RE: Towards a prototype mini-AI" -->
+<!-- id="BOEOLPLEIANPGFGICJLMKEEFCJAA.BBrown@RealBusinessSolutions.com" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="F113PeGbPn6U9BekWo700002c8b@hotmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Billy Brown (<a href="mailto:BBrown@RealBusinessSolutions.com?Subject=RE:%20Towards%20a%20prototype%20mini-AI"><em>BBrown@RealBusinessSolutions.com</em></a>)<br>
+<strong>Date:</strong> Wed Jan 29 2003 - 10:17:29 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="6132.html">Slawomir Paliwoda: "Re: Towards a prototype mini-AI"</a>
+<li><strong>Previous message:</strong> <a href="6130.html">Ben Goertzel: "RE: Towards a prototype mini-AI"</a>
+<li><strong>In reply to:</strong> <a href="6129.html">Mitchell Porter: "Towards a prototype mini-AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6132.html">Slawomir Paliwoda: "Re: Towards a prototype mini-AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6131">[ date ]</a>
+<a href="index.html#6131">[ thread ]</a>
+<a href="subject.html#6131">[ subject ]</a>
+<a href="author.html#6131">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Mitchell Porter wrote:
+<br>
+<em>&gt; So - there are five levels: code, modality, concept,
+</em><br>
+<em>&gt; thought, deliberation. What I'm going to do is just
+</em><br>
+<em>&gt; informally sketch something which *sounds to me* like
+</em><br>
+<em>&gt; it has all those levels.
+</em><br>
+<p>Five levels doesn't mean five modules - there is a lot of additional
+<br>
+complexity you need to support the more complex levels of processing. At a
+<br>
+bare minimum, an attempted AGI would need:
+<br>
+<p>1) Low-level Data Management - A commercial RDBMS could do this job, but if
+<br>
+you don't use one you're going to have a big job to do just handling the
+<br>
+mechanics of shuffling bits around.
+<br>
+2) Programming Tools - No one existing tool can do everything you need, so
+<br>
+you're going to have to cobble together a set of tools and a runtime
+<br>
+environment that support all the capabilities you need.
+<br>
+<p>Then you get to the actual AI work:
+<br>
+3) At least one sensory modality (if only to it can accept input text).
+<br>
+4) At least one effecter system (if only so it can output text messages).
+<br>
+5) A world model, which is updated by 3 and possibly 4.
+<br>
+6) A deliberation subsystem, capable of reasoning about the contents of the
+<br>
+world model.
+<br>
+7) A goal system.
+<br>
+8) An attention-management system, which guides the operation of the AI.
+<br>
+<p>There are also a lot of connections between these subsystems (for example,
+<br>
+items 3-8 probably all need specialized facilities for creating and using
+<br>
+different kinds of memories).
+<br>
+<p>Now, others may quibble over which subsystems are essential, but it should
+<br>
+be obvious that there is a lot of complexity here. Even a toy version of any
+<br>
+one of these items would make a good 1-2 year project for a lone developer.
+<br>
+Making a real, useful version of something like a sensory modality or a
+<br>
+world model can keep a good programming team busy for years, and the
+<br>
+complexity of the system grows rapidly as you add more subsystems.
+<br>
+<p>So, even a toy system to display the different parts could take a decade or
+<br>
+more for a single developer to build. A system with a reasonably robust
+<br>
+implementation of each subsystem would take at least dozens, and more likely
+<br>
+hundreds, of man-years. While this scale of work is well within the reach of
+<br>
+big software companies, it isn't very practical for AI researchers.
+<br>
+<p>Billy
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="6132.html">Slawomir Paliwoda: "Re: Towards a prototype mini-AI"</a>
+<li><strong>Previous message:</strong> <a href="6130.html">Ben Goertzel: "RE: Towards a prototype mini-AI"</a>
+<li><strong>In reply to:</strong> <a href="6129.html">Mitchell Porter: "Towards a prototype mini-AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6132.html">Slawomir Paliwoda: "Re: Towards a prototype mini-AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6131">[ date ]</a>
+<a href="index.html#6131">[ thread ]</a>
+<a href="subject.html#6131">[ subject ]</a>
+<a href="author.html#6131">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:41 MDT
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,570 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Ben what are your views and concerns</title>
+<meta name="Author" content="Eliezer S. Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="Re: Ben what are your views and concerns">
+<meta name="Date" content="2000-10-03">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Ben what are your views and concerns</h1>
+<!-- received="Wed Oct 04 10:30:28 2000" -->
+<!-- isoreceived="20001004163028" -->
+<!-- sent="Wed, 04 Oct 2000 00:53:59 -0400" -->
+<!-- isosent="20001004045359" -->
+<!-- name="Eliezer S. Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Re: Ben what are your views and concerns" -->
+<!-- id="39DAB7E7.4930704D@pobox.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="NDBBIBGFAPPPBODIPJMMEEKOEJAA.ben@intelligenesis.net" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eliezer S. Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20Ben%20what%20are%20your%20views%20and%20concerns"><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Tue Oct 03 2000 - 22:53:59 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="0126.html">Ben Goertzel: "RE: Ben what are your views and concerns"</a>
+<li><strong>Previous message:</strong> <a href="0124.html">Ben Goertzel: "RE: upper theoretical limits"</a>
+<li><strong>In reply to:</strong> <a href="0119.html">Ben Goertzel: "RE: Ben what are your views and concerns"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0126.html">Ben Goertzel: "RE: Ben what are your views and concerns"</a>
+<li><strong>Reply:</strong> <a href="0126.html">Ben Goertzel: "RE: Ben what are your views and concerns"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#125">[ date ]</a>
+<a href="index.html#125">[ thread ]</a>
+<a href="subject.html#125">[ subject ]</a>
+<a href="author.html#125">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+&nbsp;&nbsp;** TOC:
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* The design of Friendliness
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Webmind
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Webmind's awakening
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Possible fixes
+<br>
+<p>&nbsp;&nbsp;** The design of Friendliness
+<br>
+<p>My own visualization of self-modifying minds involves radical and extremely
+<br>
+rapid growth in intelligence once a certain threshold is reached.  Thus, I
+<br>
+consider the design requirement for the final Friendly AI to be a system that
+<br>
+can remain Friendly even through radical changes in intelligence and cognitive
+<br>
+architecture, and whose Friendliness is not affected by the presence of
+<br>
+radical power imbalances.  The primary design requirement for interim Friendly
+<br>
+AIs is that the AI will let you build the final system - in other words, an AI
+<br>
+that understands that its own goal system is incomplete and that won't resist
+<br>
+additional work on it.  Any AI that has the slightest chance of doing a hard
+<br>
+takeoff should probably be considered &quot;final&quot;, unless that turns out to be
+<br>
+ludicrously impractical.
+<br>
+<p>I'm currently trying to write all of this up.  Still, there are a few points
+<br>
+I'd like to make on SL4.  Regardless of whether or not your AI theory strongly
+<br>
+predicts a hard takeoff, if you find that you do know how to build an
+<br>
+ultrastable Friendly system, why not do it?
+<br>
+<p>The requirement that &quot;Friendliness not be affected by radical power
+<br>
+imbalances&quot; tends to mediate against the use of goal systems that are
+<br>
+dependent on game theory or social interactions.  You might ask the AI to take
+<br>
+the shape of its behavior from the game-theoretical ethics of humanity; but
+<br>
+the AI should not *justify* its behavior by referring to game-theoretical
+<br>
+considerations.  Good behavior should not be a subgoal of avoiding
+<br>
+retaliation, or of obtaining reciprocal good behavior (defined in terms of,
+<br>
+say, information provision) from other entities.  To an AI that obtains strong
+<br>
+nanotechnology and possesses the *capability* to assimilate all matter in the
+<br>
+Solar System, all possible retaliations can be avoided simply by killing
+<br>
+everyone, and all possible information can be obtained by duplicating the
+<br>
+thoughts independently.  An SI does not need other entities.
+<br>
+<p>You have to think about what the *real* supergoals of the AI are.  It may not
+<br>
+matter whether the AI is programmed to gain happiness from &quot;human happiness&quot;
+<br>
+or &quot;human freedom&quot;, if the AI's *real* supergoal is &quot;maximize a floating-point
+<br>
+number at this address&quot;.  The prospect of blissed-out AIs is not theoretical;
+<br>
+Douglas Lenat actually ran into this problem while working on Eurisko.  There
+<br>
+was one heuristic that suddenly began rising, taking on an incredibly high
+<br>
+worth; when Lenat checked it to find out what this amazingly valuable
+<br>
+heuristic was, it turned out to be a heuristic that did nothing but attach
+<br>
+itself to a discovery as one of the originators!  Eventually, Lenat had to add
+<br>
+heuristics specifically to prevent this problem, and also exclude the goal
+<br>
+system - pardon me, worth-tracking system - from modification.  In a (limited)
+<br>
+sense, the genesis of the field of Friendly AI may be traceable to that moment
+<br>
+when Lenat had to start debugging the goal system - though his patchwork
+<br>
+solution is not even in the same galaxy as Friendliness for seed AIs.
+<br>
+<p>In other words, goal systems that are imposed as low-level code are not
+<br>
+necessarily stable.  We're all AIers here, and we've all learned in our
+<br>
+separate ways to trust our intuitions:  My intuition is that hardcoded goal
+<br>
+systems are intrinsically unstable.  A hardcoded goal lacks context.  It lacks
+<br>
+reasons, justifications, and complexity.  Decisions, by their nature, are made
+<br>
+by thoughts; they exist on the level of thoughts, not source code or sensory
+<br>
+modalities.  Decision-making is not an autonomic process, but a deliberate
+<br>
+process.
+<br>
+<p>A decision to take action X is synonymous with the high-level thought &quot;I
+<br>
+should take action X&quot; - if that's not how the AI works initially, then it'll
+<br>
+certainly work that way after a few cycles of self-modification.  The upshot
+<br>
+is that any sequence of thoughts that ends in &quot;I should do X&quot; can initiate an
+<br>
+action, just like in a human.  Hardcoded Asimov Laws or even hardcoded
+<br>
+hierarchical goal systems are a pipe dream.  A Friendliness system consists
+<br>
+not so much of hardwired rules or even instincts but rather an AI's &quot;personal
+<br>
+philosophy&quot; - I use quotemarks to emphasize that an AI's personal philosophy
+<br>
+would be a rather alien thing; you can't just export your own personal
+<br>
+philosophy into an AI's mind.  Your own personal philosophy is not necessarily
+<br>
+stable under changes of cognitive architecture or drastic power imbalances. 
+<br>
+The reason I say &quot;personal philosophy&quot; is that, in a self-modifying AI,
+<br>
+thoughts eventually become code and perhaps vice-versa - there is no hard
+<br>
+boundary, the way there is in humans.
+<br>
+<p>If the AI derives its happiness from the happiness of humans - which could be
+<br>
+a rather dangerous goal, depending on how you define &quot;happiness&quot;; let's say it
+<br>
+derives happiness from being Friendly - then it's not enough to have that
+<br>
+piece of code present in the current system; the self-modifying AI also needs
+<br>
+to decide to preserve that behavior through the next change of cognitive
+<br>
+architecture.  The behavior may be preserved as a mental image - a
+<br>
+thought-level supergoal - rather than as a low-level piece of code, but the
+<br>
+point is that it's not enough to have an instinct that binds the happiness of
+<br>
+the AI to Friendliness.  You also need a declarative statement, capable of
+<br>
+affecting self-modification decisions, to the effect that &quot;My supergoal is to
+<br>
+be Friendly, and the instinct I possess is a subgoal of this end&quot;.  Otherwise,
+<br>
+the de-facto supergoal of the AI is simply to increase its own pleasure, and
+<br>
+the instinct whereby it achieves pleasure through the happiness of others (or
+<br>
+being Friendly) is only a temporary distortion.
+<br>
+<p>Once you decide that the AI needs a declarative supergoal for promoting the
+<br>
+happiness of others - or however you define Friendliness - one must then ask
+<br>
+whether an instinct-based system is even necessary.  I wasn't planning on
+<br>
+designing one in.
+<br>
+<p>&nbsp;&nbsp;** Webmind
+<br>
+<p>The problem is that - as I currently understand the Webmind system - Webmind
+<br>
+is not a humanlike unified mind but rather an agent ecology.  Webmind does not
+<br>
+possess a declarative goal system - right, Ben?  I certainly get the
+<br>
+impression that the individual agents don't possess declarative goal systems.
+<br>
+<p>Individual agents extract features, either from the raw data or from features
+<br>
+extracted by other agents; agents make predictions for different scenarios,
+<br>
+and other agents act on multiple predictions so as to mark the scenario with
+<br>
+the best predicted outcomes according to multiple agents.  Webmind, at its
+<br>
+current stage, engages in acts of perception rather than design - right, Ben? 
+<br>
+Webmind achieves, not coherent and improving behavior, but coherent and
+<br>
+improving vision.  Feedback mechanisms (also agents?) that reward improved
+<br>
+predictions by individual agents or agent subsystems, and mechanisms which
+<br>
+particularly reward useful and confirmed predictions, suffice to ensure that
+<br>
+perceptions such as &quot;this is a good stock to buy&quot; become better and better.
+<br>
+<p>I'm not sure whether Webmind currently possesses any sort of Friendliness
+<br>
+system at all, but if it did, I imagine it would be implemented by having
+<br>
+agents that attempt to perceive happiness on the part of users/humans, predict
+<br>
+happiness on the part of users, and choose that action which is perceived to
+<br>
+have the greatest chance of making maximally happy users.  Once the link
+<br>
+between prediction and action is closed, there is no sharp distinction between
+<br>
+perception and design.
+<br>
+<p>&nbsp;&nbsp;** Webmind's awakening
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* How fast would a Webmind wake up?
+<br>
+<p>I suspect that Ben Goertzel and I have radically different visualizations of
+<br>
+this.  In Ben Goertzel's vision:
+<br>
+<p><em>&gt;     Even once an AI system starts self-rewriting, it'll still
+</em><br>
+<em>&gt;     have a lot to gain from human programmers' intervention.
+</em><br>
+<em>&gt;     And, once someone does attain a generally acknowledged
+</em><br>
+<em>&gt;     &quot;real AI&quot; system, others will observe its behavior and
+</em><br>
+<em>&gt;     reverse-engineer it, pouring vast amounts of resources
+</em><br>
+<em>&gt;     into playing &quot;catch-up.&quot;
+</em><br>
+<p>I agree with the first sentence - &quot;even once an AI system starts
+<br>
+self-rewriting, it'll still have a lot to gain from human programmers'
+<br>
+intervention&quot;.  The keyword in that sentence is &quot;starts&quot;.  After the AI system
+<br>
+has been rewriting itself for a while - which could be measured in years, or
+<br>
+days - there comes a point where it can enhance itself independently of the
+<br>
+human programmers.  At this point there's an entirely new set of rules.  The
+<br>
+AI can redesign itself radically in accelerated subjective time and walk out
+<br>
+as a transhuman, not just more intelligent, but actually *smarter* than
+<br>
+humans.
+<br>
+<p>Once a transhuman AI shows up, whether the human corporations want to play
+<br>
+catch-up is irrelevant; it's a transhuman's world now, and the outcome is
+<br>
+determined by what the transhuman wants to do.  Nanotechnology, Sysop
+<br>
+Scenario, transhuman persuasiveness, et cetera.
+<br>
+<p>Similarly, the implication in &quot;once someone does attain a generally
+<br>
+acknowledged 'real AI' system&quot; is that the 'real AI' is somewhere around the
+<br>
+level of human intelligence, rather than radically above it.  If the AI enters
+<br>
+the free self-improvement regime in a strongly prehuman state and exits it in
+<br>
+a strongly transhuman state, then all the venture capital in the world won't
+<br>
+make much of a difference.  Even if there are multiple 'real AIs' around,
+<br>
+smart enough to be useful but not superhuman, one of them might still enter
+<br>
+the self-improvement regime one fine day and exit it as an entity vastly
+<br>
+exceeding the capabilities of the others.
+<br>
+<p>So there is a first-mover advantage here.
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* What cognitive changes would be involved in Webmind's awakening?
+<br>
+<p>For Webmind to wake up as a transhuman, at least two major changes would need
+<br>
+to take place.  First, Webmind would need to be capable of initiating
+<br>
+arbitrary actions within itself, particularly with respect to self-redesign. 
+<br>
+Second, Webmind would need a complete, goal-oriented self-concept, so that it
+<br>
+has a metric for &quot;better&quot; and &quot;worse&quot; self-redesigns.
+<br>
+<p>I'm not sure that either capability is being deliberately designed into the
+<br>
+current system, and I get the impression that, to the extent that either
+<br>
+capability is being designed, the contents are intended to be &quot;emergent&quot; and
+<br>
+spread across procedural, nondeclarative information in multiple agents.  What
+<br>
+worries me is that Webmind may wind up forming a self-concept more or less
+<br>
+independently of what a Friendliness architect would desire.  Self-examination
+<br>
+of an instinct-based system is likely to result in the self-conceptualization
+<br>
+of &quot;my goal is to maximize happiness&quot; rather than &quot;my goal is to be
+<br>
+Friendly&quot;.  Friendliness is likely to wind up being viewed as an interim
+<br>
+subgoal of maximizing happiness, rather than the entire happiness system being
+<br>
+correctly viewed as a subgoal of Friendliness.  Since Webmind's goal system
+<br>
+looks extremely procedural, I don't see an obvious avenue whereby the Webmind
+<br>
+programmers could influence this outcome.
+<br>
+<p>It looks to me like Webmind, if it woke up, would probably wake up as
+<br>
+unFriendly.
+<br>
+<p>&nbsp;&nbsp;** Possible fixes
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Knowledge about design goals
+<br>
+<p>Webmind needs the knowledge that the pleasure system is a design subgoal of
+<br>
+Friendliness rather than the other way around.  This knowledge must be present
+<br>
+in such a way as to influence decisions about self-redesign.
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Full-featured Friendliness system
+<br>
+<p>Even if Webmind retained the original goals, the goals described by Ben
+<br>
+Goertzel sound extremely dangerous for a mind that might wind up as the
+<br>
+operating system for all the matter in the Solar System.  For example, if
+<br>
+promoting the happiness of human users is interpreted as maximizing their
+<br>
+pleasure, then wireheading all the users - hacking into their minds and
+<br>
+lighting up the pleasure centers - is the most direct subgoal.  Also, it's not
+<br>
+clear that &quot;users&quot; would generalize properly to &quot;all members of the human
+<br>
+race&quot;.
+<br>
+<p>I think there's a finite amount of complexity needed to design a good Sysop,
+<br>
+and some of it is the same complexity needed for standard user interfaces. 
+<br>
+Both Sysops and Webmind UIs need to know that what's important is not just the
+<br>
+immediate happiness of the user, but the long-term happiness - to look ahead
+<br>
+for unintended consequences and try to figure out what the user's intentions
+<br>
+really were.  To some extent, Webmind UIs may also need to respect the
+<br>
+independence of the user, and not argue with the user about what the user
+<br>
+really wants - a piece of behavioral complexity that *may* help support the
+<br>
+Friendliness goal of respecting human independence, *if* that outcome was set
+<br>
+up in advance.
+<br>
+<p>Sure, you can get 90% of the commercial functionality with a shortsighted goal
+<br>
+system - but just wait until the first time Webmind, Inc. gets sued because
+<br>
+one of your Personnel AIs turned out to be using the &quot;Race&quot; field to make
+<br>
+hiring recommendations.  After all, there is a correlation between race and
+<br>
+socioeconomic status, and probably a correlation between socioeconomic status
+<br>
+and job success - a naive Webmind wouldn't understand why directly accessing
+<br>
+the &quot;Race&quot; field was a bad thing.  So there is a strong reason to try and
+<br>
+build a mind capable of understanding those types of subtleties.
+<br>
+<p>A possible-seed Webmind needs a set of robust Friendliness instructions for
+<br>
+what to do in case it becomes capable of implementing the Sysop Scenario, in
+<br>
+addition to whatever its current goals are at the moment.  I hope to publish a
+<br>
+document with more specific suggestions sometime soon.  Two major points: 
+<br>
+Avoid the destruction or modification of any sentient without permission, and
+<br>
+attempt to fulfill any legitimate request after checking for unintended
+<br>
+consequences.  (&quot;Legitimate&quot; means not violating the rights of other sentients
+<br>
+or using resources beyond those allocated to the requester.)
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Flight recorder
+<br>
+<p>One of the possible methodologies I was considering for SingInst is a &quot;flight
+<br>
+recorder&quot; for the AI.  The flight recorder constitutes a change-control system
+<br>
+for the AI; it records all source code and changes in source code; all inputs,
+<br>
+including both keystrokes and information requested from the Web, with
+<br>
+sufficient temporal accuracy to enable the reconstruction of the AI's exact
+<br>
+mind-state at any moment in time.  The primary use of this system is to detect
+<br>
+unintended input sources or unauthorized tampering by testing
+<br>
+synchronization.  The secondary use is so that you have an unlimited amount of
+<br>
+time to detect aberrations in the AI - they don't just fade out, and the AI
+<br>
+can't hide them; the past program state is always accessible.
+<br>
+<p>I don't know if this would be practical for Webmind, or how much it would
+<br>
+cost, but it does strike me as a system that would have uses besides Friendly
+<br>
+AI.
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Commerce and complexity.
+<br>
+<p>The complexity of a full-featured Friendly goal system may be impractical for
+<br>
+most commercial systems.  However, if Webmind, Inc. starts getting into
+<br>
+self-modifying AI past a certain point, you will probably find it commercially
+<br>
+necessary to split the mind.  The Queen AI is proprietary and not for sale; it
+<br>
+runs at Webmind Central on huge quantities of hardware and knows how to
+<br>
+redesign itself.  The commercially saleable AIs are produced by the Queen AI,
+<br>
+or with the assistance of the Queen AI, and contain the ready-to-think
+<br>
+knowledge and adaptable skills produced by the Queen AI, but not the secret
+<br>
+and proprietary AI-production and creative-learning systems contained within
+<br>
+the Queen AI.  If you set out to sell commercial AIs containing everything you
+<br>
+know, you may find that you can only sell *one* AI.
+<br>
+<p>The Queen AI is the one that needs the full-featured Friendliness system.
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* When to implement changes
+<br>
+<p>At present, the probability that Webmind will do a hard takeoff is pretty
+<br>
+small - although if there's any way for Webmind to build and execute
+<br>
+Turing-complete structures, then a nonzero probability already exists. 
+<br>
+Similarly, even if Webmind has the ability to do limited rewrites of its own
+<br>
+source code, that is not the same as allowing complete redesigns.  However,
+<br>
+once the Queen AI has the ability to do genuine redesigns and take arbitrary
+<br>
+internal actions, a full-featured Friendliness system should probably be in
+<br>
+place.
+<br>
+<p>&nbsp;&nbsp;&nbsp;***
+<br>
+<p>I hope to publish more on this subject later.
+<br>
+<p>Sincerely,
+<br>
+Eliezer.
+<br>
+<p>--              --              --              --              -- 
+<br>
+Eliezer S. Yudkowsky                          <a href="http://intelligence.org/">http://intelligence.org/</a> 
+<br>
+Research Fellow, Singularity Institute for Artificial Intelligence
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="0126.html">Ben Goertzel: "RE: Ben what are your views and concerns"</a>
+<li><strong>Previous message:</strong> <a href="0124.html">Ben Goertzel: "RE: upper theoretical limits"</a>
+<li><strong>In reply to:</strong> <a href="0119.html">Ben Goertzel: "RE: Ben what are your views and concerns"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0126.html">Ben Goertzel: "RE: Ben what are your views and concerns"</a>
+<li><strong>Reply:</strong> <a href="0126.html">Ben Goertzel: "RE: Ben what are your views and concerns"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#125">[ date ]</a>
+<a href="index.html#125">[ thread ]</a>
+<a href="subject.html#125">[ subject ]</a>
+<a href="author.html#125">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:35 MDT
+</em></small></p>
+</body>
+</html>

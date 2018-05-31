@@ -1,0 +1,330 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: ARTICLE: Memory bandwidth</title>
+<meta name="Author" content="Samantha Atkins (samantha@objectent.com)">
+<meta name="Subject" content="Re: ARTICLE: Memory bandwidth">
+<meta name="Date" content="2001-04-16">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: ARTICLE: Memory bandwidth</h1>
+<!-- received="Mon Apr 16 23:14:39 2001" -->
+<!-- isoreceived="20010417051439" -->
+<!-- sent="Mon, 16 Apr 2001 19:58:58 -0700" -->
+<!-- isosent="20010417025858" -->
+<!-- name="Samantha Atkins" -->
+<!-- email="samantha@objectent.com" -->
+<!-- subject="Re: ARTICLE: Memory bandwidth" -->
+<!-- id="3ADBB172.28A24A7A@objectent.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="NDBBIBGFAPPPBODIPJMMOEBCFGAA.ben@webmind.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Samantha Atkins (<a href="mailto:samantha@objectent.com?Subject=Re:%20ARTICLE:%20Memory%20bandwidth"><em>samantha@objectent.com</em></a>)<br>
+<strong>Date:</strong> Mon Apr 16 2001 - 20:58:58 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1150.html">Samantha Atkins: "Re: ARTICLE: Memory bandwidth"</a>
+<li><strong>Previous message:</strong> <a href="1148.html">Eliezer S. Yudkowsky: "HUMOR 2: The other artifacts"</a>
+<li><strong>In reply to:</strong> <a href="1138.html">Ben Goertzel: "RE: ARTICLE: Memory bandwidth"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1150.html">Samantha Atkins: "Re: ARTICLE: Memory bandwidth"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1149">[ date ]</a>
+<a href="index.html#1149">[ thread ]</a>
+<a href="subject.html#1149">[ subject ]</a>
+<a href="author.html#1149">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Ben Goertzel wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; hi,
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; &gt;Do you have much experience with C++?
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Yes, and I fucking hate it.  It's an awkward, oversized, nasty language,
+</em><br>
+<em>&gt; which is intensely painful to debug.  That's why i chose Java for Webmind.
+</em><br>
+<em>&gt; What a disappointment to find that, all in all, for large-scale projects
+</em><br>
+<em>&gt; Java is even ~worse~ ;(
+</em><br>
+<em>&gt; 
+</em><br>
+<p>They are both inelegant languages to express ideas and patterns of much
+<br>
+interest.  Java reminds me of Pascal in how much I have to hold the poor
+<br>
+brain-dead compiler's hand before it deigns to admit that it can do some
+<br>
+small part of what I wished it to do.  It is not reflective and dynamic
+<br>
+enough byfar to suit me.  I need a language that I can hack to fit the
+<br>
+work rather than hacking the work to fit the language.  Lisp and Scheme
+<br>
+are
+<br>
+the closest I've seen.  Ruby is great for small to medium programs and
+<br>
+for protyping and for &quot;glue&quot;.  It is a much cleaner, fully OO scripting
+<br>
+language with full GC and many lisp-ish features thrown in.  
+<br>
+<p><p><em>&gt; &gt;       What did you find was more of a problem: memory
+</em><br>
+<em>&gt; &gt; consumption, execution speed,
+</em><br>
+<em>&gt; &gt; or distributed interfaces?
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Execution speed was only a problem in one sense: the strict OO nature of
+</em><br>
+<em>&gt; Java forces you to use design patterns that create a lot of objects all the
+</em><br>
+<em>&gt; time.  
+</em><br>
+<p>It would help if their library was written a bit more efficiently or
+<br>
+with tunability (implementation) interfaces also available.  It would
+<br>
+also help if the JVM could just concede that a primitive type could be
+<br>
+used like an object for many methods that take an object as parameter.  
+<br>
+<p>And why the compiler cannot admit it knows what you wish when you assign
+<br>
+to a variable of a particular type and insert the dumb casting
+<br>
+constructs for you is beyond me.  It is also beyond me why more
+<br>
+reasonable protection and visibility constructs where not included and
+<br>
+why synchronization is not something that can be specified in an
+<br>
+interface contract.
+<br>
+<p><em>&gt;Implementing a similar design in C++ and in Java, and using Hotspot
+</em><br>
+<em>&gt; to optimize Java, there isn't much speed difference.  But C++ is a larger
+</em><br>
+<em>&gt; and nastier language, and as a consequence gives you more design flexibility
+</em><br>
+<em>&gt; to use an object-less, down-and-dirty pure C approach to implementing some
+</em><br>
+<p>It also gives you the flexibility to create real pluggable frameworks
+<br>
+(with a bit too much finagling).  This is much harder in Java and far
+<br>
+less efficient.
+<br>
+<p><em>&gt; things, when it's really necessary.  In this sense, sometimes, the optimal
+</em><br>
+<em>&gt; Java program for solving a problem can be slower than the optimal C++
+</em><br>
+<em>&gt; program.  Because  in C++ you always have the option to revert to the most
+</em><br>
+<em>&gt; nasty and efficient type of C when you need to.
+</em><br>
+<em>&gt;
+</em><br>
+<p>C is the universal assembly language.  This is good and bad. 
+<br>
+<p>&nbsp;
+<br>
+<em>&gt; Memory consumption is a really big problem with Java, and there's no way to
+</em><br>
+<em>&gt; get around it.  You can mitigate it by using object pools and other fancy
+</em><br>
+<em>&gt; design patterns, but even so, Java uses at least 4 times as much memory as
+</em><br>
+<em>&gt; C++ for doing the same things.  And that's a comparison with OO C++, not
+</em><br>
+<em>&gt; with down-and-dirty C written with a view toward memory conservations.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; &gt; Even more mature languages only have a
+</em><br>
+<em>&gt; &gt; few years on
+</em><br>
+<em>&gt; &gt; Java in terms of distributed architectures, so I suspect that
+</em><br>
+<em>&gt; &gt; while you had a
+</em><br>
+<em>&gt; &gt; challenge on your hands with that, it wasn't the limiting factor.
+</em><br>
+<em>&gt; &gt; Am I wrong
+</em><br>
+<em>&gt; &gt; about that?
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Doing distributed programming in Java is REALLY REALLY NICE.
+</em><br>
+<em>&gt;
+</em><br>
+<p>Did you use RMI or CORBA or ???  If CORBA (which has more capabilities)
+<br>
+then you could do that from multiple languages and/or implement
+<br>
+different parts of the system in whatever language most was most
+<br>
+efficient and palatable. 
+<br>
+<p>For an AI I would suspect that many things would be most elegantly and
+<br>
+quickly coded, debugged and easily (relatively) maintained in Lisp or
+<br>
+some variant. Was everyting in Java?  If so, why? 
+<br>
+&nbsp;
+<br>
+<em>&gt; The main problem is that Java's obscene memory consumption, combined with
+</em><br>
+<em>&gt; the 1.2 GB memory limit on every existing JVM, forces you into distributed
+</em><br>
+<em>&gt; programming when dealing with relatively small datasets (&quot;relatively&quot;
+</em><br>
+<em>&gt; meaning &quot;relative to all human knowledge&quot; ;).
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; There are some other technical issues too.  For instance, RMI is elegant and
+</em><br>
+<em>&gt; easy to use, but, it wasn't made for high-volume message throughput, and
+</em><br>
+<em>&gt; this shows sometimes.
+</em><br>
+<em>&gt;
+</em><br>
+<p>And it is synchronous only and language bigoted and too rooted in clinet
+<br>
+vs. server. 
+<br>
+&nbsp;
+<br>
+<em>&gt; Also, if you need to send messages between machines really fast, the
+</em><br>
+<em>&gt; serialization/deserialization of objects becomes your main bottleneck --
+</em><br>
+<em>&gt; it's much slower than sending messages across cables these days.  And
+</em><br>
+<em>&gt; there's no way to fix this without going inside the JVM.
+</em><br>
+<em>&gt;
+</em><br>
+<p>Or using CORBA or rolling your own message passing across sockets and so
+<br>
+on. 
+<br>
+<p>&nbsp;
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; Now we have a few quads left, and some smaller machines... running in the
+</em><br>
+<em>&gt; basement of another WM die-hard along with the  mailserver, intranet, etc.
+</em><br>
+<em>&gt; 
+</em><br>
+<p>Under Linux, windoze or what?
+<br>
+<p><em>&gt; In practice, we rarely ran a Webmind with more than 7-10 of the quads at
+</em><br>
+<em>&gt; once
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; &gt;       How many JVMs did you run on each machine, and how many
+</em><br>
+<em>&gt; &gt; threads in each JVM?
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; 1-3 JVM's per machine, depending on all sorts of things
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; In terms of threads, generally less than half a dozen per process.  We used
+</em><br>
+<em>&gt; to have an architecture that used more threads than that, but that was
+</em><br>
+<em>&gt; before we implemented our own internal scheduler.
+</em><br>
+<em>&gt; 
+</em><br>
+<p>I would be very interested in what this scheduler was like if it isn't
+<br>
+all tied up in the bankruptcy stuff
+<br>
+<p><em>&gt; 
+</em><br>
+<em>&gt; Millions of nodes, billions of links between them.  All in RAM, on a cluster
+</em><br>
+<em>&gt; of machines.
+</em><br>
+<em>&gt; That's what it takes to make an object-oriented mind!
+</em><br>
+<em>&gt; 
+</em><br>
+<p>Interesting.  So was there an ability to migrate nodes and links around
+<br>
+to get improved locality of reference?   It looks from the sidelines
+<br>
+like having your own message protocol and distribution system would have
+<br>
+been a win. 
+<br>
+<p>How much of this is either Open Source or do you and the others have
+<br>
+continuing rights to work with?
+<br>
+<p>- samantha
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1150.html">Samantha Atkins: "Re: ARTICLE: Memory bandwidth"</a>
+<li><strong>Previous message:</strong> <a href="1148.html">Eliezer S. Yudkowsky: "HUMOR 2: The other artifacts"</a>
+<li><strong>In reply to:</strong> <a href="1138.html">Ben Goertzel: "RE: ARTICLE: Memory bandwidth"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1150.html">Samantha Atkins: "Re: ARTICLE: Memory bandwidth"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1149">[ date ]</a>
+<a href="index.html#1149">[ thread ]</a>
+<a href="subject.html#1149">[ subject ]</a>
+<a href="author.html#1149">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

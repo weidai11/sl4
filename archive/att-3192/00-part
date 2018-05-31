@@ -1,0 +1,26 @@
+On Wed, 2002-03-27 at 20:18, Ben Houston wrote:
+> of mine posted to the web [5,6].  I've been using
+> runtime-code-generation, reflection and xml to a fair degree but I
+> haven't yet got into the XML-RPC/SOAP stuff yet.
+
+
+Instead of SOAP, you also might want to look at some of the other
+messaging protocols (e.g. JMS or MQSeries); SOAP has some deficiencies
+in architecture that make it a nuisance to work with for some
+applications. I've recently been involved in the design of a powerful
+protocol suite and SDK for distributed application development that is
+built on top of the JMS protocol (after looking at several) that does
+some very nice things.  There are some fledgling products in this area
+(solid distributed application frameworks built on top of message
+queuing protocols), but I needed it yesterday and therefore built it
+in-house.  There is plenty of room for people to do framework design on
+top of messaging architectures outside of SOAP.  I think my only real
+point was that SOAP isn't a great foundation for such things, and if you
+want to look into such things I would suggest something OTHER than SOAP.
+
+Cheers,
+
+-James Rogers
+ jamesr@best.com
+
+

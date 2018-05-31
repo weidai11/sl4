@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Friendliness not an Add-on</title>
+<meta name="Author" content="J. Andrew Rogers (andrew@ceruleansystems.com)">
+<meta name="Subject" content="Re: Friendliness not an Add-on">
+<meta name="Date" content="2006-02-19">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Friendliness not an Add-on</h1>
+<!-- received="Sun Feb 19 12:57:08 2006" -->
+<!-- isoreceived="20060219195708" -->
+<!-- sent="Sun, 19 Feb 2006 11:57:03 -0800" -->
+<!-- isosent="20060219195703" -->
+<!-- name="J. Andrew Rogers" -->
+<!-- email="andrew@ceruleansystems.com" -->
+<!-- subject="Re: Friendliness not an Add-on" -->
+<!-- id="B8D20ED9-FF4C-4442-B0F1-E1217A6075CD@ceruleansystems.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="638d4e150602190612j68b92c42uc9d05d4f96f5affe@mail.gmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> J. Andrew Rogers (<a href="mailto:andrew@ceruleansystems.com?Subject=Re:%20Friendliness%20not%20an%20Add-on"><em>andrew@ceruleansystems.com</em></a>)<br>
+<strong>Date:</strong> Sun Feb 19 2006 - 12:57:03 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="14156.html">Phillip Huggan: "Re: Think of it as AGI suiciding, not boxing"</a>
+<li><strong>Previous message:</strong> <a href="14154.html">Eliezer S. Yudkowsky: "Re: Genetically Modifying other Mammals to be as Smart as Us [WAS Re: Syllabus for Seed Developer Qualifications]"</a>
+<li><strong>In reply to:</strong> <a href="14152.html">Ben Goertzel: "Re: Friendliness not an Add-on"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="14157.html">Ben Goertzel: "Re: Friendliness not an Add-on"</a>
+<li><strong>Reply:</strong> <a href="14157.html">Ben Goertzel: "Re: Friendliness not an Add-on"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#14155">[ date ]</a>
+<a href="index.html#14155">[ thread ]</a>
+<a href="subject.html#14155">[ subject ]</a>
+<a href="author.html#14155">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Feb 19, 2006, at 6:12 AM, Ben Goertzel wrote:
+<br>
+<em>&gt; Of course, there is the following problem: If one has an AI system
+</em><br>
+<em>&gt; that is able to self-improve via adding new physical resources to
+</em><br>
+<em>&gt; itself as well as revising its code, THEN the future algorithmic
+</em><br>
+<em>&gt; information of this AI system may vastly exceed the algorithmic
+</em><br>
+<em>&gt; information of the initial version, plus the algorithmic information
+</em><br>
+<em>&gt; of the human society creating the AI system and all its other
+</em><br>
+<em>&gt; computers, etc.  In this case, it would seem there is fundamentally no
+</em><br>
+<em>&gt; way for the human AI-creators and the initial AI to prove the
+</em><br>
+<em>&gt; Friendliness of the future AI system, because of the &quot;10 pound formal
+</em><br>
+<em>&gt; system can't prove a 20 pound theorem&quot; problem.  (In the language of
+</em><br>
+<em>&gt; the above discussion of Rice's Theorem, when one allows the addition
+</em><br>
+<em>&gt; of a lot of new physical compute power, this  makes it too hard to
+</em><br>
+<em>&gt; delimite the class of possible &quot;algorithms&quot; to be verified in
+</em><br>
+<em>&gt; advance.)
+</em><br>
+<p><p>There is a general argument against bolt-on Friendliness that uses  
+<br>
+this line of reasoning, the self-modeling Godel problem.
+<br>
+<p>Any external Friendliness Verifier will be more complex than the AI  
+<br>
+it is verifying (in which case, we are only shifting the problem) or  
+<br>
+it will not work.  If the external FV has imperfect information, it  
+<br>
+can be gamed by exploiting the asymmetries in the Godel problem  
+<br>
+mentioned above.  Effective counter-measures against trivial FV are  
+<br>
+computationally *much* cheaper than maintaining the integrity and  
+<br>
+quality of the FV.  It can be something as simple as dumping tons of  
+<br>
+low-order information through the FV (which may happen anyway as a  
+<br>
+consequence of basic AI function) such that the FV quickly hits its  
+<br>
+resource limits with a disconcertingly high error bound on false  
+<br>
+positives.  There are alternative ways of constructing this scenario,  
+<br>
+but they all lead to the result that either the FV can be gamed at  
+<br>
+modest expense to the AI or the FV itself is a bigger threat than the  
+<br>
+AI it is verifying.  One could argue that for very simple and  
+<br>
+primitive AI implementations, external FV is a &quot;good enough&quot;  
+<br>
+temporary measure if sufficiently clever in implementation.
+<br>
+<p>Integrating Friendliness directly in the control function of the  
+<br>
+machinery does not avoid this issue, but it does change the nature of  
+<br>
+the game.  With a trivial external FV, the AI can play a game of  
+<br>
+resource chicken in which it has the advantage until the FV breaks,  
+<br>
+and an FV will not &quot;fail safe&quot; by definition.  With Friendliness  
+<br>
+Verification integrated into the machinery and not being distinct  
+<br>
+from it, the AI is at a permanent disadvantage because the AI would  
+<br>
+have to game itself, with the asymmetries of the Godel problem  
+<br>
+working against it rather than for it.  The AI will essentially be  
+<br>
+verifying itself as a precondition for action, bounding the actions  
+<br>
+at a low level to those it has the resources to verify.  This does  
+<br>
+not necessarily guarantee Friendliness over the long term and  
+<br>
+&quot;verify&quot; is somewhat undefined here, but as a model it does prevent  
+<br>
+some trivial exploits.  I will add that I am not attempting to  
+<br>
+proscribe any particular implementation theory here or even saying  
+<br>
+robust integrated Friendliness is possible, just characterizing the  
+<br>
+problem of the problem.
+<br>
+<p><p>In short, putting Friendliness Verification in some approximation of  
+<br>
+an external machine context appears to be a generally exploitable  
+<br>
+vulnerability.  It needs to be a property of the AI machinery itself  
+<br>
+to have some semblance of robustness.  Most AI researchers are  
+<br>
+counting on this not being the case, but it does not appear to be a  
+<br>
+reasonable assumption as far as I can see.
+<br>
+<p><p>J. Andrew Rogers
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="14156.html">Phillip Huggan: "Re: Think of it as AGI suiciding, not boxing"</a>
+<li><strong>Previous message:</strong> <a href="14154.html">Eliezer S. Yudkowsky: "Re: Genetically Modifying other Mammals to be as Smart as Us [WAS Re: Syllabus for Seed Developer Qualifications]"</a>
+<li><strong>In reply to:</strong> <a href="14152.html">Ben Goertzel: "Re: Friendliness not an Add-on"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="14157.html">Ben Goertzel: "Re: Friendliness not an Add-on"</a>
+<li><strong>Reply:</strong> <a href="14157.html">Ben Goertzel: "Re: Friendliness not an Add-on"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#14155">[ date ]</a>
+<a href="index.html#14155">[ thread ]</a>
+<a href="subject.html#14155">[ subject ]</a>
+<a href="author.html#14155">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:55 MDT
+</em></small></p>
+</body>
+</html>

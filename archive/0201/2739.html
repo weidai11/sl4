@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: obstacles to unbounded intelligence</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="obstacles to unbounded intelligence">
+<meta name="Date" content="2002-01-26">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>obstacles to unbounded intelligence</h1>
+<!-- received="Sat Jan 26 20:14:07 2002" -->
+<!-- isoreceived="20020127031407" -->
+<!-- sent="Sat, 26 Jan 2002 18:13:16 -0700" -->
+<!-- isosent="20020127011316" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="obstacles to unbounded intelligence" -->
+<!-- id="LAEGJLOGJIOELPNIOOAJGELBCCAA.ben@goertzel.org" -->
+<!-- charset="iso-8859-1" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=Re:%20obstacles%20to%20unbounded%20intelligence"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Sat Jan 26 2002 - 18:13:16 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="2740.html">Michael Roy Ames: "Re: Ethics and the Public"</a>
+<li><strong>Previous message:</strong> <a href="2738.html">Michael Roy Ames: "Singulatarian Images"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="2742.html">Dan Clemmensen: "Re: obstacles to unbounded intelligence"</a>
+<li><strong>Reply:</strong> <a href="2742.html">Dan Clemmensen: "Re: obstacles to unbounded intelligence"</a>
+<li><strong>Reply:</strong> <a href="2754.html">James Rogers: "Re: obstacles to unbounded intelligence"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2739">[ date ]</a>
+<a href="index.html#2739">[ thread ]</a>
+<a href="subject.html#2739">[ subject ]</a>
+<a href="author.html#2739">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Hi all,
+<br>
+<p>I was explaining some Singularity stuff to my kids this morning, and my
+<br>
+12 year old said &quot;Yes, but what if after a machine gets ten times as
+<br>
+smart as people, IT figures out a reason why it's incredibly hard to make
+<br>
+machines any smarter than that... a reason that we can't understand because
+<br>
+we're too dumb.&quot;
+<br>
+<p>Coincidentally, last night I was doing some simple calculations regarding
+<br>
+the
+<br>
+time complexity of learning computer programs and I obtained some results
+<br>
+that sort of point in this direction.  Of course, it's all very heuristic
+<br>
+and inconclusive, but it's food for thought...
+<br>
+<p>The question I was addressing was the *expected time complexity* of
+<br>
+*learning programs expressed as binary function trees* via focused Monte
+<br>
+Carlo
+<br>
+search or genetic programming (which shares some properties with focused
+<br>
+Monte Carlo search).
+<br>
+<p>Roughly speaking, the time complexity of these program learning methods
+<br>
+is logarithmic in the size of the search space.
+<br>
+<p>On the other hand, the number of program trees on n nodes is roughly
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K^n C(n)
+<br>
+<p>where K is the number of functions that can occur at the nodes, and C(n)
+<br>
+is the n'th Catalan number.
+<br>
+<p>For small n, C(n) behaves roughly like c^n, which means that GP or focused
+<br>
+Monte Carlo type methods are going to have a time complexity *linear* in
+<br>
+n (linear in the program size).
+<br>
+<p>But when n gets big enough (say, n &gt; 100 trillion according to my
+<br>
+calculations),
+<br>
+C(n) behaves roughly like c^(n^2), which means that these learning methods
+<br>
+are
+<br>
+going to have a time complexity *quadratic* in n.
+<br>
+<p>It's interesting how big this number is.  The human brain has around a
+<br>
+trillion
+<br>
+neurons....  Of course, the mapping from neurons into function nodes in
+<br>
+program
+<br>
+trees is incredibly rough, but the order of magnitude agreement is still
+<br>
+interesting, especially since, in a sense, the brain was learned by a kind
+<br>
+of
+<br>
+&quot;genetic programming.&quot;
+<br>
+<p>As I said, this little narrow calculation is in no way conclusive about
+<br>
+anything
+<br>
+general.  It's not even directly relevant to my own AI work, since both
+<br>
+Webmind
+<br>
+and Novamente use evolutionary methods only to create *small* program trees,
+<br>
+which are then pieced together using other techniques (association-finding,
+<br>
+probabilistic inference).  But I share it because it's a concrete example of
+<br>
+a general *type* of result that we've been vagely talking about on this list
+<br>
+for a while: Results showing that after a brain/mind reaches a certain *
+<br>
+very
+<br>
+large* size, learning and adapting it becomes significantly more difficult.
+<br>
+<p><p>-- Ben G
+<br>
+<p><p><p>, and came across something that reminded me of all
+<br>
+this Singularity talk...
+<br>
+<p>The conclusion I found is that the learning of program trees by Monte Carlo
+<br>
+or evolutionary type methods begins to get *radically more difficult* when
+<br>
+the program trees exceed around 10^14 in size....  The reason is that when
+<br>
+the number of nodes N exceeds around 10^14, the number of possible program
+<br>
+trees begins to grow like e^(N^2) rather than just e^N .
+<br>
+<p>The attached file contains my calculations, which are really just rough
+<br>
+notes, not written for comprehensibility or expository purposes...
+<br>
+<p>What this indicates is that there *may* be tricky mathematical issues that
+<br>
+arise when one tries to make programs vastly  exceeding the human brain in
+<br>
+intelligence.   The human brain has about 10^12 neurons which is interesting
+<br>
+in the light of this calculation....
+<br>
+<p>Of course I'm not claiming to have shown anything with any definitiveness
+<br>
+here... just more food for thought..
+<br>
+<p><p>-- ben g
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="2740.html">Michael Roy Ames: "Re: Ethics and the Public"</a>
+<li><strong>Previous message:</strong> <a href="2738.html">Michael Roy Ames: "Singulatarian Images"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="2742.html">Dan Clemmensen: "Re: obstacles to unbounded intelligence"</a>
+<li><strong>Reply:</strong> <a href="2742.html">Dan Clemmensen: "Re: obstacles to unbounded intelligence"</a>
+<li><strong>Reply:</strong> <a href="2754.html">James Rogers: "Re: obstacles to unbounded intelligence"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2739">[ date ]</a>
+<a href="index.html#2739">[ thread ]</a>
+<a href="subject.html#2739">[ subject ]</a>
+<a href="author.html#2739">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:37 MDT
+</em></small></p>
+</body>
+</html>

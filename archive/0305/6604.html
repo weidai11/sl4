@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Singularity Institute - update</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: Singularity Institute - update">
+<meta name="Date" content="2003-05-04">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Singularity Institute - update</h1>
+<!-- received="Sun May  4 16:15:25 2003" -->
+<!-- isoreceived="20030504221525" -->
+<!-- sent="Sun, 4 May 2003 18:14:57 -0400" -->
+<!-- isosent="20030504221457" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: Singularity Institute - update" -->
+<!-- id="LAEGJLOGJIOELPNIOOAJGEBNEOAA.ben@goertzel.org" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="3EB58AE6.9030608@objectent.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20Singularity%20Institute%20-%20update"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Sun May 04 2003 - 16:14:57 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="6605.html">Brian Phillips: "Re: Singularity Institute - update"</a>
+<li><strong>Previous message:</strong> <a href="6603.html">Samantha Atkins: "Re: Singularity Institute - update"</a>
+<li><strong>In reply to:</strong> <a href="6603.html">Samantha Atkins: "Re: Singularity Institute - update"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6600.html">Brian Atkins: "Re: Singularity Institute - update"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6604">[ date ]</a>
+<a href="index.html#6604">[ thread ]</a>
+<a href="subject.html#6604">[ subject ]</a>
+<a href="author.html#6604">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; Ben Goertzel wrote:
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; &gt; *
+</em><br>
+<em>&gt; &gt; an easy to use &quot;distributed processing framework&quot; allowing Novamente or
+</em><br>
+<em>&gt; &gt; other AGI systems to farm out certain types of processing
+</em><br>
+<em>&gt; across millions of
+</em><br>
+<em>&gt; &gt; processors, distributed.net / SETI@home style....  Again, such
+</em><br>
+<em>&gt; tools exist,
+</em><br>
+<em>&gt; &gt; but when you look at the details none of them are flexible enough to use
+</em><br>
+<em>&gt; &gt; directly off the shelf for Novamente AGI purposes, or for other
+</em><br>
+<em>&gt; AGI purposes
+</em><br>
+<em>&gt; &gt; either I suspect
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; All of the things you mentioned are very much what I had in mind
+</em><br>
+<em>&gt; for useful modules that could be developed via OS.  This one I
+</em><br>
+<em>&gt; singled out is one I would be interested in exploring further.
+</em><br>
+<em>&gt; Please say more, online or off, about what the requirements
+</em><br>
+<em>&gt; would be that are not satisfiable with current tools.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; - samantha
+</em><br>
+<p>Well, let's discuss it on-list unless/until Eliezer deems it too irrelevant
+<br>
+;)
+<br>
+<p>The system I'm thinking of is something we used to call Webworld, back in
+<br>
+the Webmind Inc. days, so I'll call it that here, until a better name
+<br>
+emerges.  A fair bit of design work went into Webworld, and a partial
+<br>
+prototype was built &amp; tested at Webmind inc., but is no longer available (as
+<br>
+it's lost in the bizarre legal IP mess that was once Webmind Inc.)
+<br>
+<p>A paper Stephan Bugaj and I wrote on Webworld is available at
+<br>
+<p><a href="http://citeseer.nj.nec.com/395030.html">http://citeseer.nj.nec.com/395030.html</a>
+<br>
+<p>That is a conceptual paper with a few tech details toward the end.  It is
+<br>
+focused on Alife rather than AI (as it was presented at the Alife 7
+<br>
+conference), but the Webworld design supports either.  The key section is
+<br>
+halfway through or a little more: &quot;Webworld: an internet Alife OS.&quot;
+<br>
+<p>Actually we don't need the whole Webworld design for Novamente, but Webworld
+<br>
+was designed to support pretty much any kind of Alife or AI activity, not
+<br>
+just the requirements of one particular Ai system.
+<br>
+<p>In a nutshell, Webworld involves a very generic piece of software, which
+<br>
+runs in the background on a computer a la distributed.net.  A Webworld
+<br>
+&quot;location&quot; (the word for a local instance of Webworld) is basically just an
+<br>
+&quot;environment&quot; in which artificial agents can live.  Any agent fulfilling a
+<br>
+certain simple API can live in a webworld location, and can send messages to
+<br>
+other agents living in other webworld locations.  Distributed
+<br>
+problem-solving is one application of this sort of setup.  The various
+<br>
+control objects for Webworld locations are also implemented as particular
+<br>
+kinds of agents, so they can be updated dynamically if this is desired.
+<br>
+<p>The main point is the generality of the agent API, and, the fact that a
+<br>
+variety of distributed processing paradigms are supported.  Yeah, you can
+<br>
+use it to dispatch jobs from a central server and collect the results
+<br>
+later -- the easiest paradigm.  But you can also use it to run algorithms
+<br>
+that involve P2P interactions -- say, a distributed GP population using an
+<br>
+islands model, where agents migrate from one machine to another within the
+<br>
+same multi-machine evolving population; or, a problem-solving method that is
+<br>
+mostly carried out in the background of a large number of machines around
+<br>
+the world - but, that requires moderately frequent calls into a central DB
+<br>
+for information in the course of problem solving... etc.  The Webworld
+<br>
+architecture does not impose narrow restrictions on the style of distributed
+<br>
+processing, which is important for Novamente because Novamente can make use
+<br>
+of a lot of different styles of distributed processing for different
+<br>
+purposes.
+<br>
+<p>Webworld would be very useful for Novamente because procedure learning and
+<br>
+probabilistic logical unification, two of the most difficult and
+<br>
+processing-intensive aspects of Novamente cognition, are very well-suited
+<br>
+for Webworld-style distributed processing.
+<br>
+<p>Webworld as previously designed was intended to run Java agents only.  Since
+<br>
+Novamente is in C++, it would be nice if it were possible to use C++ agents
+<br>
+too (could be done with Java wrappers and JNI, of course). Or Webworld could
+<br>
+be done in all C++, forgetting Java... of course there are many
+<br>
+possibilities on this level...
+<br>
+<p>We will implement something like this for Novamente someday, but it's not
+<br>
+high on our priority list because there is still a lot more we can do on our
+<br>
+local network of machines... we have not yet reached the point where
+<br>
+processing power is our main obstacle.  However, WebWorld work could be done
+<br>
+in parallel with Novamente work, so that WebWorld will be ready when
+<br>
+Novamente needs it.  And there may be other Ai projects that could make use
+<br>
+of it right now.  In fact we could use it right now for some of our Biomind
+<br>
+(biology data analysis &amp; database integration) work, quite apart from its
+<br>
+potential applications to deep Novamente cognition....
+<br>
+<p><p>-- Ben G
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="6605.html">Brian Phillips: "Re: Singularity Institute - update"</a>
+<li><strong>Previous message:</strong> <a href="6603.html">Samantha Atkins: "Re: Singularity Institute - update"</a>
+<li><strong>In reply to:</strong> <a href="6603.html">Samantha Atkins: "Re: Singularity Institute - update"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6600.html">Brian Atkins: "Re: Singularity Institute - update"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6604">[ date ]</a>
+<a href="index.html#6604">[ thread ]</a>
+<a href="subject.html#6604">[ subject ]</a>
+<a href="author.html#6604">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:42 MDT
+</em></small></p>
+</body>
+</html>

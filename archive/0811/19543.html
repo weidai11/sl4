@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: [sl4] How much do languages matter for AGI programming?</title>
+<meta name="Author" content="Philip Hunt (cabalamat@googlemail.com)">
+<meta name="Subject" content="Re: [sl4] How much do languages matter for AGI programming?">
+<meta name="Date" content="2008-11-29">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: [sl4] How much do languages matter for AGI programming?</h1>
+<!-- received="Sat Nov 29 22:39:54 2008" -->
+<!-- isoreceived="20081130053954" -->
+<!-- sent="Sun, 30 Nov 2008 05:39:52 +0000" -->
+<!-- isosent="20081130053952" -->
+<!-- name="Philip Hunt" -->
+<!-- email="cabalamat@googlemail.com" -->
+<!-- subject="Re: [sl4] How much do languages matter for AGI programming?" -->
+<!-- id="823293b50811292139k5329f989i4f246c5e1c1104bb@mail.gmail.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="72C696AE-C020-4FC7-90CF-FC71DD4CFEFD@ceruleansystems.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Philip Hunt (<a href="mailto:cabalamat@googlemail.com?Subject=Re:%20[sl4]%20How%20much%20do%20languages%20matter%20for%20AGI%20programming?"><em>cabalamat@googlemail.com</em></a>)<br>
+<strong>Date:</strong> Sat Nov 29 2008 - 22:39:52 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="19544.html">Philip Hunt: "Re: [sl4] How much do languages matter for AGI programming?"</a>
+<li><strong>Previous message:</strong> <a href="19542.html">Nick Tarleton: "Re: [sl4] Comparative Advantage Doesn't Ensure Survival"</a>
+<li><strong>In reply to:</strong> <a href="19539.html">J. Andrew Rogers: "Re: [sl4] How much do languages matter for AGI programming?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="19547.html">J. Andrew Rogers: "Re: [sl4] How much do languages matter for AGI programming?"</a>
+<li><strong>Reply:</strong> <a href="19547.html">J. Andrew Rogers: "Re: [sl4] How much do languages matter for AGI programming?"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#19543">[ date ]</a>
+<a href="index.html#19543">[ thread ]</a>
+<a href="subject.html#19543">[ subject ]</a>
+<a href="author.html#19543">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+2008/11/29 J. Andrew Rogers &lt;<a href="mailto:andrew@ceruleansystems.com?Subject=Re:%20[sl4]%20How%20much%20do%20languages%20matter%20for%20AGI%20programming?">andrew@ceruleansystems.com</a>&gt;:
+<br>
+<em>&gt; On Nov 29, 2008, at 2:29 AM, Philip Hunt wrote:
+</em><br>
+<em>&gt;&gt; 2008/11/28 J. Andrew Rogers &lt;<a href="mailto:andrew@ceruleansystems.com?Subject=Re:%20[sl4]%20How%20much%20do%20languages%20matter%20for%20AGI%20programming?">andrew@ceruleansystems.com</a>&gt;:
+</em><br>
+<em>&gt;&gt;&gt; How do you know what paradigms are needed for AI?  And what about the
+</em><br>
+<em>&gt;&gt;&gt; paradigms LISP does not do well?  Why not use a more paradigm-agile
+</em><br>
+<em>&gt;&gt;&gt; language
+</em><br>
+<em>&gt;&gt;&gt; (e.g. Python)?
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; Surely Lisp is more paradigm-agile than Python, because if Lisp
+</em><br>
+<em>&gt;&gt; doesn't support a paradigm, you can extend it until it does, using
+</em><br>
+<em>&gt;&gt; macros.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; This is essentially true of most languages, as they are all capable of
+</em><br>
+<em>&gt; supporting whatever paradigm or idiom one wants to use with thick enough
+</em><br>
+<em>&gt; abstraction layer -- most programming languages have been implemented in C,
+</em><br>
+<em>&gt; after all.
+</em><br>
+<p>It's true that any Turing-complete language can emulate any other, but
+<br>
+that's not what I was talking about. The advantage of Lisp is that
+<br>
+it's *very easy* to implement another language in it, a lot easier
+<br>
+than going to the trouble of writing a compiler/interpreter.
+<br>
+<p><em>&gt; By &quot;paradigm-agile&quot; I really meant &quot;idiom-agile&quot;, observing that the
+</em><br>
+<em>&gt; efficient idiomatic expressiveness of Python is broader than most common
+</em><br>
+<em>&gt; languages, and most simple, elegant languages (LISP, FORTH, etc) can be
+</em><br>
+<em>&gt; implemented in a page of Python code as a result even though, for example,
+</em><br>
+<em>&gt; some FORTH-like idioms are ugly in LISP-like languages and vice versa.
+</em><br>
+<p>When you talk of implementing a Forth-like language in Python, I
+<br>
+assume you mean something like this:
+<br>
+<p>forthlikeProgram = [3, 4, '+']   # adds 3 and 4
+<br>
+runForth(forthlikeProgram)
+<br>
+<p>def runForth(program):
+<br>
+&nbsp;&nbsp;&nbsp;#... runs 'program' in a stack-based language
+<br>
+<p>Now obviously the same thing could be done in Lisp. However, Lisp
+<br>
+s-expressions are a less verbose encoding than Python lists, so the
+<br>
+forth program would look like:
+<br>
+<p>(3 4 +)
+<br>
+<p>This isn't a big deal when the program only has 3 elements, but if it
+<br>
+was bigger, it would be an issue.
+<br>
+<p>So I would say that Lisp is better than Python at working in the Forth idiom.
+<br>
+<p><em>&gt;  Useful, if a problem is so poorly defined that the most efficient idiomatic
+</em><br>
+<em>&gt; expression is not obvious.
+</em><br>
+<p>Which for hard problems will often be the case. AI programming vcan be
+<br>
+thought of as a special case of explotratory programming, where you
+<br>
+don't know what the solution will be when you shart coding. Therefore
+<br>
+it helps if the language is flexible, e.g. if a variable's type is
+<br>
+determined at run time not compile time.
+<br>
+<p><pre>
+-- 
+Philip Hunt, &lt;<a href="mailto:cabalamat@googlemail.com?Subject=Re:%20[sl4]%20How%20much%20do%20languages%20matter%20for%20AGI%20programming?">cabalamat@googlemail.com</a>&gt;
+Please avoid sending me Word or PowerPoint attachments.
+See <a href="http://www.gnu.org/philosophy/no-word-attachments.html">http://www.gnu.org/philosophy/no-word-attachments.html</a>
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="19544.html">Philip Hunt: "Re: [sl4] How much do languages matter for AGI programming?"</a>
+<li><strong>Previous message:</strong> <a href="19542.html">Nick Tarleton: "Re: [sl4] Comparative Advantage Doesn't Ensure Survival"</a>
+<li><strong>In reply to:</strong> <a href="19539.html">J. Andrew Rogers: "Re: [sl4] How much do languages matter for AGI programming?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="19547.html">J. Andrew Rogers: "Re: [sl4] How much do languages matter for AGI programming?"</a>
+<li><strong>Reply:</strong> <a href="19547.html">J. Andrew Rogers: "Re: [sl4] How much do languages matter for AGI programming?"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#19543">[ date ]</a>
+<a href="index.html#19543">[ thread ]</a>
+<a href="subject.html#19543">[ subject ]</a>
+<a href="author.html#19543">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:01:03 MDT
+</em></small></p>
+</body>
+</html>

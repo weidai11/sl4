@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Coding from Scratch: Jaron Lanier</title>
+<meta name="Author" content="Cliff Stabbert (cps46@earthlink.net)">
+<meta name="Subject" content="Re: Coding from Scratch: Jaron Lanier">
+<meta name="Date" content="2003-01-25">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Coding from Scratch: Jaron Lanier</h1>
+<!-- received="Sat Jan 25 18:16:21 2003" -->
+<!-- isoreceived="20030126011621" -->
+<!-- sent="Sat, 25 Jan 2003 20:21:04 -0500" -->
+<!-- isosent="20030126012104" -->
+<!-- name="Cliff Stabbert" -->
+<!-- email="cps46@earthlink.net" -->
+<!-- subject="Re: Coding from Scratch: Jaron Lanier" -->
+<!-- id="1245573464.20030125202104@earthlink.net" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="LAEGJLOGJIOELPNIOOAJOEPMEDAA.ben@goertzel.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Cliff Stabbert (<a href="mailto:cps46@earthlink.net?Subject=Re:%20Coding%20from%20Scratch:%20Jaron%20Lanier"><em>cps46@earthlink.net</em></a>)<br>
+<strong>Date:</strong> Sat Jan 25 2003 - 18:21:04 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="6119.html">Ben Goertzel: "RE: Coding from Scratch: Jaron Lanier"</a>
+<li><strong>Previous message:</strong> <a href="6117.html">Eliezer S. Yudkowsky: "OOPS: Re: Stones of Significance"</a>
+<li><strong>In reply to:</strong> <a href="6107.html">Ben Goertzel: "RE: Coding from Scratch: Jaron Lanier"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6120.html">Michael Roy Ames: "Re: Coding from Scratch: Jaron Lanier"</a>
+<li><strong>Reply:</strong> <a href="6120.html">Michael Roy Ames: "Re: Coding from Scratch: Jaron Lanier"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6118">[ date ]</a>
+<a href="index.html#6118">[ thread ]</a>
+<a href="subject.html#6118">[ subject ]</a>
+<a href="author.html#6118">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Saturday, January 25, 2003, 2:54:42 PM, Ben Goertzel wrote:
+<br>
+<p>BG&gt; Well, Jaron is right that standard software development processes don't work
+<br>
+BG&gt; well for large projects.  We discovered this at Webmind Inc. trying to build
+<br>
+BG&gt; the Webmind AI Engine!  Testing and debugging that system was the bitch to
+<br>
+BG&gt; end all bitches.... As a result, we tried really hard to make the Novamente
+<br>
+BG&gt; design smaller (though it's still much bigger than we'd like... we're always
+<br>
+BG&gt; looking for things to eliminate from it ;)
+<br>
+<p>BG&gt; I agree that a radically different approach to programming would help a lot.
+<br>
+<p>BG&gt; And I have a candidate for such an approach: Supercompilation.  See
+<br>
+BG&gt; www.supercompilers.com.  A fully functional supercompiler for Java or C# or
+<br>
+BG&gt; even LISP would allow programmers to
+<br>
+<p>BG&gt; 1) write code for simplicity and transparency and maintainability
+<br>
+BG&gt; 2) have the supercompiler turn it into plausibly efficient code
+<br>
+<p>I agree that being able to write code &quot;just for functionality&quot;
+<br>
+(without concern for efficiency) simplifies matters -- it can surely
+<br>
+result in much more transparent code, and I'm honestly surprised that
+<br>
+the general approach of separating the code representation from the
+<br>
+implementation hasn't been more widely pursued.
+<br>
+&nbsp;
+<br>
+But, I don't think this is the real problem with *large systems*.  The
+<br>
+real problem with large systems is that they're too large to hold in
+<br>
+anyone's mind at once.  Holding a high-level design in your mind while
+<br>
+working on a bit of code that's levels of magnitude lower down in your
+<br>
+concept hierarchy is common in programming, and becomes more difficult
+<br>
+as the number of levels of magnitude in the system increases.
+<br>
+<p>Breaking a large system into chunks (for multiple programmers to work
+<br>
+on, or a single programmer to work on at different times) doesn't
+<br>
+really help, because the interdependencies generally increase in a
+<br>
+non-linear way (e.g., the number of calls between modules might grow
+<br>
+exponentially with the number of modules the system is broken up
+<br>
+into). 
+<br>
+<p>It's really a matter of levels of abstraction...abstraction always
+<br>
+leaves out the details, and right now either a) you, the programmer,
+<br>
+fill them in or b) they get encoded from your abstraction (higher
+<br>
+level language) in an *entirely strict, and thus brittle* way.  Right
+<br>
+now, the person with access to the highest level programming interface
+<br>
+might be Bill Gates, because he could say &quot;make me a Space Invaders
+<br>
+with students and desks instead of aliens and bases&quot; -- and the
+<br>
+programmers can fill out some details without him specifying them,
+<br>
+e.g., the students are throwing pieces of chalk.  Or he could say
+<br>
+&quot;make me a Java, but without the suck&quot; and the programmers could fill
+<br>
+in the details...
+<br>
+<p>I don't think supercompilation or formal computing, valuable as they
+<br>
+are in their own right, are sufficient to make the task of programming
+<br>
+a complex system any less complex.  Hard is hard.
+<br>
+<p>So I strongly suspect it will take good AI approaches to write reliable
+<br>
+large systems in reasonable timeframes (i.e. in timeframes people are
+<br>
+willing to spend the money on).  I'm not sure a near-human-equivalent
+<br>
+AGI is necessary for this, however -- IMO, a limited domain trainable
+<br>
+AI interfacing between the user and the OS might be a valuable initial
+<br>
+approach to this problem. 
+<br>
+<p>(In fact, you could describe today's GUIs as very brittle, very
+<br>
+narrow, untrainable AI systems -- initially more intuitive visually,
+<br>
+but using metaphors that break unintuitively.  I think bringing some
+<br>
+existing trainable but relatively narrow AI technology, existing NLP
+<br>
+technology, and existing speech-recognition technology together in an
+<br>
+interface layer between user and OS/GUI could result in a much nicer
+<br>
+user experience.  But I digress.) 
+<br>
+<p>The formal programming approach may give near-100% reliability, but
+<br>
+for really large systems the writing of the *specification itself*
+<br>
+becomes the problem, IMO...
+<br>
+<p>Suppose you have to implement a nationwide payroll system, and the new
+<br>
+tax code has come out.  You still have to have people figuring out how
+<br>
+to encode it all -- people who know that the ST field contains the
+<br>
+&quot;state&quot;, say (in order to look it up to apply that state's rules);
+<br>
+people who know that a negative payroll tax isn't possible (so that
+<br>
+they'll immediately catch that as a bug), etc.  The only way I see of
+<br>
+really reducing the overall complexity of the programming task is if
+<br>
+the system has some domain knowledge, some knowledge of business
+<br>
+rules, and the like. 
+<br>
+<p>I don't think you need full AGI or full &quot;concept grounding&quot; to make at
+<br>
+least marginal inroads, e.g., for a system to have some
+<br>
+pseudo-abstract concept of State such that it can recognize that data
+<br>
+field ST in this table corresponds with data field PAYOR_STATE in
+<br>
+that table it downloaded from elsewhere (perhaps by comparing the
+<br>
+different values cross-referenced with a state abbreviation list --
+<br>
+e.g., doing some pattern matching -- and then asking the programmer
+<br>
+for confirmation).  There are limited tools along these lines (e.g.,
+<br>
+&quot;automated&quot; Y2K conversion tools that would trawl through COBOL code
+<br>
+looking for stuff which might be dates) but nothing AFAIK that tries
+<br>
+to approach programming in general as an AI/UI problem.
+<br>
+<p><p><pre>
+--
+Cliff
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="6119.html">Ben Goertzel: "RE: Coding from Scratch: Jaron Lanier"</a>
+<li><strong>Previous message:</strong> <a href="6117.html">Eliezer S. Yudkowsky: "OOPS: Re: Stones of Significance"</a>
+<li><strong>In reply to:</strong> <a href="6107.html">Ben Goertzel: "RE: Coding from Scratch: Jaron Lanier"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6120.html">Michael Roy Ames: "Re: Coding from Scratch: Jaron Lanier"</a>
+<li><strong>Reply:</strong> <a href="6120.html">Michael Roy Ames: "Re: Coding from Scratch: Jaron Lanier"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6118">[ date ]</a>
+<a href="index.html#6118">[ thread ]</a>
+<a href="subject.html#6118">[ subject ]</a>
+<a href="author.html#6118">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:41 MDT
+</em></small></p>
+</body>
+</html>

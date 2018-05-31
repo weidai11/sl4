@@ -1,0 +1,79 @@
+On Sun, 2002-05-19 at 17:02, Eliezer S. Yudkowsky wrote:
+> It's not a question of
+> solving enormous engineering problems through Incredible Dauntless Efforts
+> but of creating designs that are So Impossibly Clever they don't run into
+> those enormous engineering problems.  I think many of the problems you're
+> running into are symptoms of trying to solve the problem too simply.
+[...]
+> Engineering problems will be greater for DGI because DGI contains more
+> complexity, but I consider it a critical, unavoidable problem that the
+> overall system design should enable *adequate solutions* to work.  Usually,
+> when you add pieces to a system, it becomes easier to break.  This is
+> because people aren't thinking in terms of creating smooth fitness
+> landscapes, oversolving problems, and creating multiple routes to
+> solutions.  If you oversimplify a mind design, you concentrate too much
+> functionality into individual pieces of the system.  There aren't multiple
+> routes around things and each individual piece has to do a lot of work.
+
+
+This implies a rather strange view of engineering. Engineering of all
+types is about generating the Minimum Description Length of a set of
+parameters. All engineers ever do is massage the system they are given
+into a physical MDL of the problem. Impossibly Clever designs in any
+type of engineering sense only means that you've discovered regional
+minima in a design space by intuition or accident that you would have
+found by rigorously reducing the apparent complexity of the system using
+normal iterative methods.  The result is the same either way.
+Engineering is Occam's Razor in a nutshell.  If you get the wrong
+result, it is because you forgot a relevant parameter or changed the
+spec in the middle of the design process.
+
+Eliezer, it sounds very much like you are arguing in favor of Ptolemic
+epicycles, adding unnecessary parameters to the design space rather than
+searching for a solution that represents the MDL for the parameters and
+specification given.  The MDL is pretty much the definition of clever
+and elegant design; whether or not a solution meets subjective aesthetic
+criteria is irrelevant. Engineering complexity is not a merit badge, it
+is the hallmark of bad design. I realize that AI is more open-ended than
+your typical engineering project, but I would very strongly question any
+claim that folding capabilities into a smaller number of unified
+constructs is poor engineering; I don't see how anyone can call this
+"oversimplification" unless one can also demonstrate which critical
+parameters have necessarily been dropped in the simplification process.
+
+Proper engineering requires designing from the essential mathematics and
+facts and trying to get them to intersect with the specification.  Far
+too often, especially in AI, people design from the spec, adding the
+essential mathematics to the function points as required to meet the
+spec and attempting to tie it together later. Most engineering failures
+can be attributed to not making this distinction. Both cases will yield
+valid results, but the latter case will be vastly more complicated than
+the former as rule and therefore much more likely to be intractable as
+an engineering problem. Much of the iterative reduction that is
+engineering is necessary primarily because people often design from the
+spec. Unfortunately, if the "design from spec" approach proves to be
+intractable, you'll never have a starting point from which to reduce the
+problem to the elegant solution. This all applies to AI just as much as
+it does from any other engineering discipline.
+
+Ben obviously has a good grasp of the pragmatic engineering issues. This
+not a big deal when arguing on an emailing list, but trying to ignore
+engineering tenets in practice will kill a project just as quickly as
+ignoring the tenets of economics, regardless of how theoretically
+correct your design is. Virtually all "adequate solutions" to Seed AI
+are essentially intractable as engineering problems, and it is therefore
+paramount that the solution attempted be as "engineer-able" as possible.
+This also means not making any tangential design decisions until the
+core parameters have been reduced to their essentials. Bad engineering
+and unnecessary complexity becomes a crushing weight much faster than
+most people expect in practice.
+
+I'm not trying to be accusatory, just making an observation and giving
+some third party feedback on this banter.
+
+Cheers,
+
+-James Rogers
+ jamesr@best.com
+
+

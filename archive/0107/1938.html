@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: flare and SIAI</title>
+<meta name="Author" content="Ben Goertzel (ben@webmind.com)">
+<meta name="Subject" content="RE: flare and SIAI">
+<meta name="Date" content="2001-07-29">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: flare and SIAI</h1>
+<!-- received="Mon Jul 30 02:37:56 2001" -->
+<!-- isoreceived="20010730083756" -->
+<!-- sent="Mon, 30 Jul 2001 01:56:37 -0400" -->
+<!-- isosent="20010730055637" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@webmind.com" -->
+<!-- subject="RE: flare and SIAI" -->
+<!-- id="NDBBIBGFAPPPBODIPJMMAEKEFNAA.ben@webmind.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="3B64E4C9.DB3B089@pobox.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@webmind.com?Subject=RE:%20flare%20and%20SIAI"><em>ben@webmind.com</em></a>)<br>
+<strong>Date:</strong> Sun Jul 29 2001 - 23:56:37 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1939.html">Ben Goertzel: "RE: flare and SIAI"</a>
+<li><strong>Previous message:</strong> <a href="1937.html">Eliezer S. Yudkowsky: "Re: flare and SIAI"</a>
+<li><strong>In reply to:</strong> <a href="1937.html">Eliezer S. Yudkowsky: "Re: flare and SIAI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1939.html">Ben Goertzel: "RE: flare and SIAI"</a>
+<li><strong>Reply:</strong> <a href="1939.html">Ben Goertzel: "RE: flare and SIAI"</a>
+<li><strong>Reply:</strong> <a href="1941.html">Eliezer S. Yudkowsky: "Re: flare and SIAI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1938">[ date ]</a>
+<a href="index.html#1938">[ thread ]</a>
+<a href="subject.html#1938">[ subject ]</a>
+<a href="author.html#1938">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; Ben Goertzel wrote:
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; From what I understand about Eli's approach, the problem of
+</em><br>
+<em>&gt; getting to phase
+</em><br>
+<em>&gt; &gt; two modification isn't broken down into parts in the same way
+</em><br>
+<em>&gt; as I propose
+</em><br>
+<em>&gt; &gt; to do.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Actually, it pretty much is.  The point where we disagree is about how
+</em><br>
+<em>&gt; hard it is to get to what you call &quot;phase one&quot;.  The reason why &quot;phase
+</em><br>
+<em>&gt; one&quot; takes Flare or something like it is that initially the AI will be
+</em><br>
+<em>&gt; extremely stupid and the alterations to the code will be more like
+</em><br>
+<em>&gt; mutations and less like general reasoning.  General reasoning would work
+</em><br>
+<em>&gt; about equally well with Flare, C++, or assembly.  The usefulness of
+</em><br>
+<em>&gt; relatively &quot;stupid&quot; action is *extremely* dependent on programming
+</em><br>
+<em>&gt; language.  Thus, Flare is needed so that we can build a stupid AI.
+</em><br>
+<p>This is a very good conversation.  We are getting finally to the crux of
+<br>
+things!
+<br>
+<p>The role that you want Flare to play, in Webmind is played by &quot;schema&quot; --
+<br>
+our representation of procedures in terms of nodes and links.
+<br>
+<p>Schema, in Webmind, are effectively programs, and the subset of KNOW used to
+<br>
+represent schema is effectively a programming language, although humans will
+<br>
+rarely write programs in it.
+<br>
+<p>Essentially, in Webmind we are inserting an additional level into the
+<br>
+picture, as compared to your view of things.
+<br>
+<p>Diagrammatically, the comparison goes like this:
+<br>
+<p>****
+<br>
+<p>Webmind						Eli-mind
+<br>
+-----------------------------------------------------
+<br>
+WM core						Computer OS
+<br>
+schema framework					Flare
+<br>
+particular collection of schema		AI program
+<br>
+<p>****
+<br>
+<p>The schema framework is designed to be learnable, designed so that WM
+<br>
+cognition can easily modify existing schema and learn new ones.
+<br>
+<p>The step to phase 2 self-modification is the consideration of the WM core
+<br>
+itself as a big bad schema...
+<br>
+<p>The schema framework is &quot;annotative&quot; and has all the other nice properties
+<br>
+you'd like Flare's internals to have, and more.
+<br>
+<p>In effect, instead of making a new programming language running on the
+<br>
+standard OS, we're creating a new &quot;virtual OS&quot;, the Webmind core, and then
+<br>
+making a new programming language (the schema framework) running on this
+<br>
+virtual OS.
+<br>
+<p>[Is it really a virtual OS?  Sure.  It does equivalent things to memory
+<br>
+management (loading and saving of nodes/links), scheduling of activities,
+<br>
+communication between processes, etc.)
+<br>
+<p>Is it easier to make a virtual OS than to make a new programming language?
+<br>
+I think so.  But I'm not 100% sure.  Both are very hard.  Our first attempt
+<br>
+to make the virtual OS fucked up -- it was elegant but not efficient enough,
+<br>
+because of Java's inefficient memory management and because of its
+<br>
+agent-system architecture.  Our second attempt seems pretty damn good right
+<br>
+now, but it's the result of several years of learning on our part.  It sure
+<br>
+didn't come easy.
+<br>
+<p>We underestimated the difficult of the task of making this &quot;virtual OS&quot; work
+<br>
+with adequate efficiency for real AI, as opposed to just working for simple
+<br>
+example cases.   If you indeed are underestimating the difficulty of the
+<br>
+task of making a robust, efficient Flare, then you are making an error very
+<br>
+closely parallel to the one we made.  But even if you are making such an
+<br>
+underestimation error, I'm sure you can overcome it with a combination of
+<br>
+cleverness, inspiration and stubbornness, as are we.
+<br>
+<p>All in all, I'm not sure that the Flare approach and the schema-learning
+<br>
+approach are conceptually that different.  They seems to me to represent
+<br>
+different software-architectural approaches to the same high-level
+<br>
+conceptual design.
+<br>
+<p><p>-- Ben G
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1939.html">Ben Goertzel: "RE: flare and SIAI"</a>
+<li><strong>Previous message:</strong> <a href="1937.html">Eliezer S. Yudkowsky: "Re: flare and SIAI"</a>
+<li><strong>In reply to:</strong> <a href="1937.html">Eliezer S. Yudkowsky: "Re: flare and SIAI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1939.html">Ben Goertzel: "RE: flare and SIAI"</a>
+<li><strong>Reply:</strong> <a href="1939.html">Ben Goertzel: "RE: flare and SIAI"</a>
+<li><strong>Reply:</strong> <a href="1941.html">Eliezer S. Yudkowsky: "Re: flare and SIAI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1938">[ date ]</a>
+<a href="index.html#1938">[ thread ]</a>
+<a href="subject.html#1938">[ subject ]</a>
+<a href="author.html#1938">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:37 MDT
+</em></small></p>
+</body>
+</html>

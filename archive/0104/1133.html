@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: ARTICLE: Memory bandwidth</title>
+<meta name="Author" content="Patrick McCuller (patrick@kia.net)">
+<meta name="Subject" content="RE: ARTICLE: Memory bandwidth">
+<meta name="Date" content="2001-04-15">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: ARTICLE: Memory bandwidth</h1>
+<!-- received="Sun Apr 15 23:34:25 2001" -->
+<!-- isoreceived="20010416053425" -->
+<!-- sent="Sun, 15 Apr 2001 22:03:10 -0400" -->
+<!-- isosent="20010416020310" -->
+<!-- name="Patrick McCuller" -->
+<!-- email="patrick@kia.net" -->
+<!-- subject="RE: ARTICLE: Memory bandwidth" -->
+<!-- id="LOBBLDGHBFLPJDFBIPFEKEHJGKAA.patrick@kia.net" -->
+<!-- charset="Windows-1252" -->
+<!-- inreplyto="NDBBIBGFAPPPBODIPJMMMEAKFGAA.ben@webmind.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Patrick McCuller (<a href="mailto:patrick@kia.net?Subject=RE:%20ARTICLE:%20Memory%20bandwidth"><em>patrick@kia.net</em></a>)<br>
+<strong>Date:</strong> Sun Apr 15 2001 - 20:03:10 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1134.html">James Rogers: "Re: PAPER: Theory of Universal AI based on Algorithmic Complexity"</a>
+<li><strong>Previous message:</strong> <a href="1132.html">Eliezer S. Yudkowsky: "HUMOR: &quot;The Onion&quot;, SL2 version"</a>
+<li><strong>In reply to:</strong> <a href="1131.html">Ben Goertzel: "RE: ARTICLE: Memory bandwidth"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1138.html">Ben Goertzel: "RE: ARTICLE: Memory bandwidth"</a>
+<li><strong>Reply:</strong> <a href="1138.html">Ben Goertzel: "RE: ARTICLE: Memory bandwidth"</a>
+<li><strong>Reply:</strong> <a href="1150.html">Samantha Atkins: "Re: ARTICLE: Memory bandwidth"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1133">[ date ]</a>
+<a href="index.html#1133">[ thread ]</a>
+<a href="subject.html#1133">[ subject ]</a>
+<a href="author.html#1133">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt;
+</em><br>
+<em>&gt; &gt; 	I suspect, very much suspect, that you would have had
+</em><br>
+<em>&gt; &gt; nearly identical
+</em><br>
+<em>&gt; &gt; performance problems regardless of what language you used, and if you had
+</em><br>
+<em>&gt; &gt; spent man-hours debugging malloc(), you wouldn't have gotten so far into
+</em><br>
+<em>&gt; &gt; actual AI.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; This is ~exactly~ the mindset I had a year and a half ago.  Now, after much
+</em><br>
+<em>&gt; practical experience with large-scale Java, I know better.  Webmind is
+</em><br>
+<em>&gt; probably the most complex and intensive Java program ever written in terms
+</em><br>
+<em>&gt; of having vast numbers of different types of objects on different machines
+</em><br>
+<em>&gt; in different threads.  We studied everything ever written about JVM's and OO
+</em><br>
+<em>&gt; programming, and used every design pattern known to man, and many new ones.
+</em><br>
+<em>&gt; We arrived at amazingly efficient design patterns using arrays in tricky
+</em><br>
+<em>&gt; ways to store data (int arrays storing various values accessed through bit
+</em><br>
+<em>&gt; masking), and accessing these through elegant interfaces.  Even so,
+</em><br>
+<em>&gt; ultimately, we keep running up against the terrible inefficiency of the JVM
+</em><br>
+<em>&gt; when used for a program of this scale.  I really believe that the JVM simply
+</em><br>
+<em>&gt; was never tested/tuned/tweaked on programs of this scale.  C/C++ has been
+</em><br>
+<em>&gt; used for really massive and intensive programs before, and is just plain
+</em><br>
+<em>&gt; more robust in this regard.
+</em><br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thanks for clarifying this. You obviously speak from a great store of
+<br>
+experience on the matter. Do you have much experience with C++? If not, I
+<br>
+caution you not to be oversold on it: it's not THAT much better, and it has
+<br>
+its own issues. If I had a nickel for every hour I spent debugging
+<br>
+multithreading problems in C++, I would have to get a bigger piggy bank.   :)
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What did you find was more of a problem: memory consumption, execution speed,
+<br>
+or distributed interfaces? Even more mature languages only have a few years on
+<br>
+Java in terms of distributed architectures, so I suspect that while you had a
+<br>
+challenge on your hands with that, it wasn't the limiting factor. Am I wrong
+<br>
+about that?
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do you mind if I ask a few more questions?
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How many machines are we talking about - five, fifty, five hundred?
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How many JVMs did you run on each machine, and how many threads in each JVM?
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You mentioned billions of objects - are you serious about that? I've never
+<br>
+worked with a system with so many active objects. Rows in databases, yes. But
+<br>
+for running objects, even in a distributed C++ architecture, I've never seen
+<br>
+anything like that many. Were they active (Runnable), serving as data storage,
+<br>
+or what?
+<br>
+<p><p><em>&gt;
+</em><br>
+<em>&gt; Man-hours debugging malloc() suck.  But we've spent numerous man-hours
+</em><br>
+<em>&gt; working around Java's undocumented inefficiencies and limitations, and the
+</em><br>
+<em>&gt; lack of adequate debuggers or working profilers, and in the end, we still
+</em><br>
+<em>&gt; haven't solved the problems.  The solutions are
+</em><br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Many of them are documented, somewhere - you just have to go look where
+<br>
+people bash on Java. They can be astoundingly specific, which is often really
+<br>
+helpful.  :)
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Still, I agree, there are always problems with the tools.
+<br>
+<p><em>&gt;
+</em><br>
+<em>&gt; -- give up on java for the performance-intensive, RAM-hogging parts of the
+</em><br>
+<em>&gt; code, or
+</em><br>
+<em>&gt; -- improve the JVM itself
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; I'd love to do the latter, we have plenty of ideas for how, but we lack the
+</em><br>
+<em>&gt; resources ;p
+</em><br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ultimately, the latter would be better, but I understand the resource
+<br>
+limitation. I take it you tried every available JVM?
+<br>
+<p><p>Patrick McCuller
+<br>
+<p><em>&gt;
+</em><br>
+<em>&gt; ben
+</em><br>
+<em>&gt;
+</em><br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1134.html">James Rogers: "Re: PAPER: Theory of Universal AI based on Algorithmic Complexity"</a>
+<li><strong>Previous message:</strong> <a href="1132.html">Eliezer S. Yudkowsky: "HUMOR: &quot;The Onion&quot;, SL2 version"</a>
+<li><strong>In reply to:</strong> <a href="1131.html">Ben Goertzel: "RE: ARTICLE: Memory bandwidth"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1138.html">Ben Goertzel: "RE: ARTICLE: Memory bandwidth"</a>
+<li><strong>Reply:</strong> <a href="1138.html">Ben Goertzel: "RE: ARTICLE: Memory bandwidth"</a>
+<li><strong>Reply:</strong> <a href="1150.html">Samantha Atkins: "Re: ARTICLE: Memory bandwidth"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1133">[ date ]</a>
+<a href="index.html#1133">[ thread ]</a>
+<a href="subject.html#1133">[ subject ]</a>
+<a href="author.html#1133">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

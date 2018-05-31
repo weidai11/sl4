@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: ITSSIM (was Some new ideas on Friendly AI)</title>
+<meta name="Author" content="Tennessee Leeuwenburg (tennessee@tennessee.id.au)">
+<meta name="Subject" content="Re: ITSSIM (was Some new ideas on Friendly AI)">
+<meta name="Date" content="2005-02-22">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: ITSSIM (was Some new ideas on Friendly AI)</h1>
+<!-- received="Tue Feb 22 21:39:35 2005" -->
+<!-- isoreceived="20050223043935" -->
+<!-- sent="Wed, 23 Feb 2005 15:37:10 +1100" -->
+<!-- isosent="20050223043710" -->
+<!-- name="Tennessee Leeuwenburg" -->
+<!-- email="tennessee@tennessee.id.au" -->
+<!-- subject="Re: ITSSIM (was Some new ideas on Friendly AI)" -->
+<!-- id="421C0876.9090304@tennessee.id.au" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="JNEIJCJJHIEAILJBFHILEEDAEAAA.ben@goertzel.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Tennessee Leeuwenburg (<a href="mailto:tennessee@tennessee.id.au?Subject=Re:%20ITSSIM%20(was%20Some%20new%20ideas%20on%20Friendly%20AI)"><em>tennessee@tennessee.id.au</em></a>)<br>
+<strong>Date:</strong> Tue Feb 22 2005 - 21:37:10 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="10992.html">Ben Goertzel: "RE: ITSSIM (was Some new ideas on Friendly AI)"</a>
+<li><strong>Previous message:</strong> <a href="10990.html">Russell Wallace: "Re: AGI Prototying Project"</a>
+<li><strong>In reply to:</strong> <a href="10988.html">Ben Goertzel: "RE: ITSSIM (was Some new ideas on Friendly AI)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="10992.html">Ben Goertzel: "RE: ITSSIM (was Some new ideas on Friendly AI)"</a>
+<li><strong>Reply:</strong> <a href="10992.html">Ben Goertzel: "RE: ITSSIM (was Some new ideas on Friendly AI)"</a>
+<li><strong>Reply:</strong> <a href="10999.html">Phil Goetz: "Re: ITSSIM (was Some new ideas on Friendly AI)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#10991">[ date ]</a>
+<a href="index.html#10991">[ thread ]</a>
+<a href="subject.html#10991">[ subject ]</a>
+<a href="author.html#10991">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+-----BEGIN PGP SIGNED MESSAGE-----
+<br>
+Hash: SHA1
+<br>
+<p>Ben,
+<br>
+<p>I read your idea on actions based on proven theories, subject to a
+<br>
+blacklist against which unsafe options are blocked. You seemed to be
+<br>
+worried that such a system would be susceptible to improve itself to a
+<br>
+local minima - that is, it would be hill-climbing to a potentially
+<br>
+limiting endpoint.
+<br>
+<p>Well, here is a possible way out. (I am attempting to express myself
+<br>
+formally for the first time in a long time, sorry if I make a hash of it)
+<br>
+<p><p><p>Let IQ(AGI) be the intelligence of AGI.
+<br>
+Let OPTIONS be the set of future actions known to the AI, including
+<br>
+doing nothing
+<br>
+Let V(X) be the heuristic value of option X upon evaluation, including
+<br>
+safety margin
+<br>
+Let V(now) be the heuristic value of doing nothing
+<br>
+Let Max(Options) be the option within OPTIONS whose V(X) is greater
+<br>
+than all other options
+<br>
+<p>Let us assume that V(X) = M(X) * S(X)
+<br>
+Let M(X) represent the motive value of X - a representation of the
+<br>
+distance towards AGI's goals it is able to move
+<br>
+Let S(X) represent the safety factor.
+<br>
+<p>Now, I am assuming that *increasing intelligence* is a factor in the
+<br>
+motive value of X.
+<br>
+<p>Proposition : A more intelligent AGI will be able to percieve more
+<br>
+options than a less intelligent one - in your parlance, perhaps it
+<br>
+will be able to evaluate more theorems, have better heuristics where
+<br>
+heuristics are necessary, evaluate more complex heuristics etc.
+<br>
+<p>Let Mag(OPTIONS) represent the number of elements contained in the set
+<br>
+OPTIONS.
+<br>
+<p>Mag(OPTIONS) is proportional to IQ(AGI).
+<br>
+<p>Here's my argument :
+<br>
+<p>X = Max(OPTIONS)
+<br>
+If X != now &amp; V(X) &gt; V(now) then IQ(AGI,X) &gt; IQ(AGI,now) which implies
+<br>
+Mag(OPTIONS,AGI, X) &gt; Mag(OPTIONS, AGI, now).
+<br>
+<p>Corrolary : Regardless of the speed at which the intelligence of the
+<br>
+AGI grows, the options available to the AGI increase with the
+<br>
+intelligence of AGI. Incremental increases to IQ do not result in
+<br>
+local minima, because the horizon of the AGI is pushed wider with each
+<br>
+improvement.
+<br>
+<p>Cheers,
+<br>
+- -T
+<br>
+-----BEGIN PGP SIGNATURE-----
+<br>
+Version: GnuPG v1.2.4 (GNU/Linux)
+<br>
+Comment: Using GnuPG with Thunderbird - <a href="http://enigmail.mozdev.org">http://enigmail.mozdev.org</a>
+<br>
+<p>iD8DBQFCHAh1Fp/Peux6TnIRAr1kAJ96+htwpPz51V3gL+kvX+DFDjgukQCbBmI8
+<br>
+eVztR1qOhjJzeAmpDF/Iq5Q=
+<br>
+=GCKO
+<br>
+-----END PGP SIGNATURE-----
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="10992.html">Ben Goertzel: "RE: ITSSIM (was Some new ideas on Friendly AI)"</a>
+<li><strong>Previous message:</strong> <a href="10990.html">Russell Wallace: "Re: AGI Prototying Project"</a>
+<li><strong>In reply to:</strong> <a href="10988.html">Ben Goertzel: "RE: ITSSIM (was Some new ideas on Friendly AI)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="10992.html">Ben Goertzel: "RE: ITSSIM (was Some new ideas on Friendly AI)"</a>
+<li><strong>Reply:</strong> <a href="10992.html">Ben Goertzel: "RE: ITSSIM (was Some new ideas on Friendly AI)"</a>
+<li><strong>Reply:</strong> <a href="10999.html">Phil Goetz: "Re: ITSSIM (was Some new ideas on Friendly AI)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#10991">[ date ]</a>
+<a href="index.html#10991">[ thread ]</a>
+<a href="subject.html#10991">[ subject ]</a>
+<a href="author.html#10991">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:50 MDT
+</em></small></p>
+</body>
+</html>

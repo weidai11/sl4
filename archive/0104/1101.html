@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: ARTICLE: Memory bandwidth</title>
+<meta name="Author" content="Dale Johnstone (DaleJohnstone@email.com)">
+<meta name="Subject" content="Re: ARTICLE: Memory bandwidth">
+<meta name="Date" content="2001-04-14">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: ARTICLE: Memory bandwidth</h1>
+<!-- received="Sat Apr 14 11:48:27 2001" -->
+<!-- isoreceived="20010414174827" -->
+<!-- sent="Sat, 14 Apr 2001 16:41:18 BST" -->
+<!-- isosent="20010414154118" -->
+<!-- name="Dale Johnstone" -->
+<!-- email="DaleJohnstone@email.com" -->
+<!-- subject="Re: ARTICLE: Memory bandwidth" -->
+<!-- id="200104141545.f3EFjQP05884@zeus.kia.net" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="ARTICLE: Memory bandwidth" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Dale Johnstone (<a href="mailto:DaleJohnstone@email.com?Subject=Re:%20ARTICLE:%20Memory%20bandwidth"><em>DaleJohnstone@email.com</em></a>)<br>
+<strong>Date:</strong> Sat Apr 14 2001 - 09:41:18 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1102.html">Patrick McCuller: "RE: ARTICLE: Memory bandwidth"</a>
+<li><strong>Previous message:</strong> <a href="1100.html">Brian Atkins: "Re: ARTICLE: Memory bandwidth"</a>
+<li><strong>Maybe in reply to:</strong> <a href="1093.html">James Rogers: "ARTICLE: Memory bandwidth"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1102.html">Patrick McCuller: "RE: ARTICLE: Memory bandwidth"</a>
+<li><strong>Reply:</strong> <a href="1102.html">Patrick McCuller: "RE: ARTICLE: Memory bandwidth"</a>
+<li><strong>Reply:</strong> <a href="1105.html">Samantha Atkins: "Re: ARTICLE: Memory bandwidth"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1101">[ date ]</a>
+<a href="index.html#1101">[ thread ]</a>
+<a href="subject.html#1101">[ subject ]</a>
+<a href="author.html#1101">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt;If things really are bandwidth-limited, then that actually moves the
+</em><br>
+<em>&gt;project into a rather interesting software space.  Go ahead and write the
+</em><br>
+<em>&gt;extra debugging check; perform all kinds of pattern-checking operations on
+</em><br>
+<em>&gt;the data as long as you've got in in memory; and, why not, do the whole
+</em><br>
+<em>&gt;thing in an interpreted language since there's no real speed advantage for
+</em><br>
+<em>&gt;C++.  Could be fun.
+</em><br>
+<p>That would be fun, but the picture isn't quite so black and white. You can always get performance gains by rearranging *when* you access your data. It's a balancing act of keeping the bus busy, yet not too busy your app is waiting for data.
+<br>
+<p>If you add those extra frills you'll wind up with even worse memory access patterns and worse performance. Since processors are more and more dependent on their caches for performance, it pays to keep your data sizes down to an absolute minimum and use algorithms with cache friendly access patterns.
+<br>
+<p>Being bandwidth-limited means your app can't go any faster because it's waiting for memory. This doesn't mean you app won't go any slower if you try doing more stuff - it will, especially if it uses more memory.
+<br>
+<p>Of course execution speed has to be balanced with development speed. Since developing a seed AI is far from being a well-worn path, I would suggest you concentrate effort on the development issues (like flexibility) rather than speed issues. After you've nailed down exactly what various components will be doing, you can rewrite them later (or they can themselves). But just watch your memory consumption (e.g. no Java).
+<br>
+<p>Many developers these days seem to take the speed of development approach but never finish (or start) the optimization stage, which is fine if you've got a business to run, but you can take that attitude too far and more often than not it's simply an excuse for sloppy coding. Over the years, during my transition from assembly right through to Java, and back again to C, I've argued the optimization case from all points on this spectrum. There is no single correct answer for all situations. As ever, the problem dictates the solution. In this case it's complex, demands speed, uses lots of memory, needs flexibility and wants to be done by yesterday. I would expect a wide range of tools, languages and innovative techniques to match each problem domain as part of the solution.
+<br>
+<p>Sounds like even more fun.
+<br>
+<p>Regards,
+<br>
+Dale Johnstone.
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1102.html">Patrick McCuller: "RE: ARTICLE: Memory bandwidth"</a>
+<li><strong>Previous message:</strong> <a href="1100.html">Brian Atkins: "Re: ARTICLE: Memory bandwidth"</a>
+<li><strong>Maybe in reply to:</strong> <a href="1093.html">James Rogers: "ARTICLE: Memory bandwidth"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1102.html">Patrick McCuller: "RE: ARTICLE: Memory bandwidth"</a>
+<li><strong>Reply:</strong> <a href="1102.html">Patrick McCuller: "RE: ARTICLE: Memory bandwidth"</a>
+<li><strong>Reply:</strong> <a href="1105.html">Samantha Atkins: "Re: ARTICLE: Memory bandwidth"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1101">[ date ]</a>
+<a href="index.html#1101">[ thread ]</a>
+<a href="subject.html#1101">[ subject ]</a>
+<a href="author.html#1101">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

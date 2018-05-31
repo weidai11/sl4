@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Detailed Explanation re: PAPER: Theory of Universal AI based on Algorithmic Complexity</title>
+<meta name="Author" content="James Rogers (jamesr@best.com)">
+<meta name="Subject" content="Detailed Explanation re: PAPER: Theory of Universal AI based on Algorithmic Complexity">
+<meta name="Date" content="2001-04-17">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Detailed Explanation re: PAPER: Theory of Universal AI based on Algorithmic Complexity</h1>
+<!-- received="Tue Apr 17 22:01:06 2001" -->
+<!-- isoreceived="20010418040106" -->
+<!-- sent="Tue, 17 Apr 2001 18:00:15 -0700" -->
+<!-- isosent="20010418010015" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Detailed Explanation re: PAPER: Theory of Universal AI based on Algorithmic Complexity" -->
+<!-- id="5.0.2.1.0.20010417143742.00ac7e10@shell9.ba.best.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="NDBBIBGFAPPPBODIPJMMCEBCFGAA.ben@webmind.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> James Rogers (<a href="mailto:jamesr@best.com?Subject=Re:%20Detailed%20Explanation%20re:%20PAPER:%20Theory%20of%20Universal%20AI%20based%20on%20Algorithmic%20Complexity"><em>jamesr@best.com</em></a>)<br>
+<strong>Date:</strong> Tue Apr 17 2001 - 19:00:15 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1154.html">Declan McCullagh: "Re: HYPE: &quot;Russians create 'artificial human brain'&quot;"</a>
+<li><strong>Previous message:</strong> <a href="1152.html">Peter Voss: "Friendly AI at Foresight"</a>
+<li><strong>In reply to:</strong> <a href="1137.html">Ben Goertzel: "RE: PAPER: Theory of Universal AI based on Algorithmic Complexity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1142.html">James Rogers: "Re: PAPER: Theory of Universal AI based on Algorithmic Complexity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1153">[ date ]</a>
+<a href="index.html#1153">[ thread ]</a>
+<a href="subject.html#1153">[ subject ]</a>
+<a href="author.html#1153">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Well, semi-detailed perhaps.  I'm short on time as always.  I am not so 
+<br>
+interested in the guy's implementation ideas as I am in the mathematics, at 
+<br>
+least insofar as the mathematics provide something resembling a foundation 
+<br>
+for AI -- it serves as a basis for a hard discussion of limits and 
+<br>
+possibilities.
+<br>
+<p>The non-computability aspect of the general UI model is overplayed and not 
+<br>
+particularly relevant.  Resource bounded UI variants are provably optimal 
+<br>
+within the given constraints (it isn't clear to the extent that the author 
+<br>
+is aware of work in this area) and demonstrably very doable on modern 
+<br>
+silicon.  Since all practical implementations will be resource bounded, I 
+<br>
+don't see a problem with this as long as you approach it as such.
+<br>
+<p><p>At 07:24 AM 4/16/2001 -0400, Ben Goertzel wrote:
+<br>
+<em>&gt;At the end of the paper, after lots of nice math, the author suggests that
+</em><br>
+<em>&gt;in order to get a realistic AI to work, one will have to introduce lots of
+</em><br>
+<em>&gt;specialized algorithms to deal with different particular types of learning
+</em><br>
+<em>&gt;confronted by the mind.  But he doesn't go into details.
+</em><br>
+<p><p>His math is good, but I don't feel that his implementation ideas are very 
+<br>
+mature.  Which is fine, I was only really referring to the math.  He comes 
+<br>
+up short in a few areas due to lack of breadth, but I think it was meant to 
+<br>
+be an overview-ish paper of a specific aspect anyway.  The biggest 
+<br>
+shortcoming is that he doesn't seem to be very knowledgeable on the topic 
+<br>
+of bounded models, which while only peripherally related to his particular 
+<br>
+paper, are really pretty important in the context of tractable AI 
+<br>
+implementations using UI.
+<br>
+<p><p><em>&gt;With this small comment at the end, he's ~starting~ -- just barely -- to
+</em><br>
+<em>&gt;veer toward the really interesting part of AI.  The next step to observe is
+</em><br>
+<em>&gt;that you need a bunch of specialized methods, all able to learn from each
+</em><br>
+<em>&gt;other rather than working against each other.  This is what I've called
+</em><br>
+<em>&gt;&quot;emergent intelligence.&quot;
+</em><br>
+<p><p>I am strongly in favor of large-scale specialization like you describe 
+<br>
+above myself (which I go into somewhat below).  However, I model it as a 
+<br>
+vast clusters of bounded, specialized UI components.  More importantly, 
+<br>
+environmentally-driven self-specializing components (excepting those times 
+<br>
+where you don't want to wait for UI convergence).
+<br>
+<p><p><em>&gt;As for the mind having a Universal Intelligence core, I believe that it
+</em><br>
+<em>&gt;really works like this.  Among the many specialized modules in the mind,
+</em><br>
+<em>&gt;there are some (more than one) with universal intelligence ability, as well
+</em><br>
+<em>&gt;as some without it.  Since universal intelligence is only definable up to an
+</em><br>
+<em>&gt;arbitrary constant, it's of at best ~heuristic~ value  in thinking about the
+</em><br>
+<em>&gt;constructure of real AI systems.  In reality, different universally
+</em><br>
+<em>&gt;intelligent modules may be practically applicable to different types of
+</em><br>
+<em>&gt;problems.
+</em><br>
+<p><p>Although one can actually demonstrate that all intelligence can be realized 
+<br>
+in a UI core, some specializations are extremely inefficient when done this 
+<br>
+way.  Numerical computation is a good example of this; silicon does it very 
+<br>
+well natively, so I am easily persuaded that an engineered solution is 
+<br>
+better than waiting for a useful convergence of a UI core to do the same 
+<br>
+(and even then, it will be very, very slow at run-time).  The poor number 
+<br>
+crunching ability of humans may be related to this.
+<br>
+<p>The upside to this is that one can always use a UI to implement 
+<br>
+capabilities that we don't care to implement in a hardware optimal 
+<br>
+way.  Alternatively, one could explicitly engineer the relationship between 
+<br>
+multiple UIs to partially optimize performance for a particular specialization.
+<br>
+<p>Personally, I believe that resource-bounded UIs are the fundamental 
+<br>
+building blocks of intelligence with the exact organization of any 
+<br>
+particular UI being the consequence of its specialization and 
+<br>
+environment.  I have strong evidence (though no proof yet -- no one has 
+<br>
+attempted to formally characterize anything like this to my knowledge) that 
+<br>
+the re-synthesis of vast clusters of specialized and bounded UIs optimally 
+<br>
+approximates the enormous single UI model used by the author of the 
+<br>
+paper.  (Note that this is only true if the specialization in question was 
+<br>
+self-generated due to environmental stimulus.)  The difference being that, 
+<br>
+unlike the authors general UI model, convergence is demonstrably tractable.
+<br>
+<p>The concepts and mechanisms of adaptive partitioning are potentially too 
+<br>
+lengthy to approach in email (there is a fair bit of background to 
+<br>
+cover).  Maybe if we cross paths I can spend some time on it.
+<br>
+<p><p><em>&gt; &gt; Now it looks as if the UI-core architecture
+</em><br>
+<em>&gt; &gt; is just too slow to plausibly be an SI architecture.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;I think that the space of UI algorithms is pretty large.
+</em><br>
+<p><p>As a minor nitpick, UI *is* an algorithm (a meta-algorithm?).
+<br>
+<p>If you use UI like the author seems to suggest, it would take a very long 
+<br>
+time for you to get useful convergence.  However, there are a lot of ways 
+<br>
+to use it where you can get convergence in a &quot;reasonable&quot; amount of time, 
+<br>
+particularly in cases of small, specialized UIs.
+<br>
+<p>Something else to consider:  For tightly bounded problems, non-optimal UI 
+<br>
+implementations can actually offer better approximations than optimal ones, 
+<br>
+but they don't scale as well with resource availability.
+<br>
+<p><p><em>&gt;One might say that the UI concept is valuable in a theoretical sense: It
+</em><br>
+<em>&gt;helps us clarify the nature of the problem of intelligence.  One the other
+</em><br>
+<em>&gt;hand, I have found that what it mostly does is to make explicit what those
+</em><br>
+<em>&gt;of us with a strong AI  predisposition already feel.  In many discussions
+</em><br>
+<em>&gt;with AI skeptics, I have not found the UI arguments to help me to convince
+</em><br>
+<em>&gt;them that AI is possible.  They'll reject the  mathematical definition of
+</em><br>
+<em>&gt;intelligence underlying the UI approach, just as surely as they'll reject
+</em><br>
+<em>&gt;the statement &quot;AI is possible.&quot;
+</em><br>
+<p><p>I concur; I had made a similar conjecture long before I was able to come up 
+<br>
+with a formal mathematical model.  The nice thing about having a formal 
+<br>
+mathematical basis is that it gives one substantially more confidence that 
+<br>
+derivations are at least footed on solid ground.
+<br>
+<p>One of the things I really dislike about AI research in general is that it 
+<br>
+is chock full of really shaky conjecture, which makes it hard discuss these 
+<br>
+things as they approximate religious doctrine at times.  Oh well.
+<br>
+<p>Cheers,
+<br>
+<p>-James Rogers
+<br>
+&nbsp;&nbsp;<a href="mailto:jamesr@best.com?Subject=Re:%20Detailed%20Explanation%20re:%20PAPER:%20Theory%20of%20Universal%20AI%20based%20on%20Algorithmic%20Complexity">jamesr@best.com</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1154.html">Declan McCullagh: "Re: HYPE: &quot;Russians create 'artificial human brain'&quot;"</a>
+<li><strong>Previous message:</strong> <a href="1152.html">Peter Voss: "Friendly AI at Foresight"</a>
+<li><strong>In reply to:</strong> <a href="1137.html">Ben Goertzel: "RE: PAPER: Theory of Universal AI based on Algorithmic Complexity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1142.html">James Rogers: "Re: PAPER: Theory of Universal AI based on Algorithmic Complexity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1153">[ date ]</a>
+<a href="index.html#1153">[ thread ]</a>
+<a href="subject.html#1153">[ subject ]</a>
+<a href="author.html#1153">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

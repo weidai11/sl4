@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: neural nets</title>
+<meta name="Author" content="Richard Loosemore (rpwl@lightlink.com)">
+<meta name="Subject" content="Re: neural nets">
+<meta name="Date" content="2006-01-12">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: neural nets</h1>
+<!-- received="Thu Jan 12 09:28:42 2006" -->
+<!-- isoreceived="20060112162842" -->
+<!-- sent="Thu, 12 Jan 2006 11:26:44 -0500" -->
+<!-- isosent="20060112162644" -->
+<!-- name="Richard Loosemore" -->
+<!-- email="rpwl@lightlink.com" -->
+<!-- subject="Re: neural nets" -->
+<!-- id="43C68344.5020007@lightlink.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="ce299b890601120601x26151010u4a34e994e7e0082f@mail.gmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Richard Loosemore (<a href="mailto:rpwl@lightlink.com?Subject=Re:%20neural%20nets"><em>rpwl@lightlink.com</em></a>)<br>
+<strong>Date:</strong> Thu Jan 12 2006 - 09:26:44 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="13500.html">turin: "Re: Short story"</a>
+<li><strong>Previous message:</strong> <a href="13498.html">Dani Eder: "Re: neural nets"</a>
+<li><strong>In reply to:</strong> <a href="13497.html">CyTG: "neural nets"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="13501.html">H C: "RE: neural nets"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#13499">[ date ]</a>
+<a href="index.html#13499">[ thread ]</a>
+<a href="subject.html#13499">[ subject ]</a>
+<a href="author.html#13499">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Such comparisons have very little to teach us, because (among other 
+<br>
+things) the kind of ANNs people have been playing with for the last 
+<br>
+couple of decades are a really dumb way to go about building an 
+<br>
+artificial mind.
+<br>
+<p>It might turn out, for example, that a functional unit (say a cortical 
+<br>
+colummn if you want to talk neuroscience, or a concept-instantiation 
+<br>
+unit if you want to go the cognitive systems route) can be implemented 
+<br>
+by either a million neurons or by a hundred lines of code that can run 
+<br>
+as one of a thousand parallel threads on a single blade in a roomful of 
+<br>
+hardware.
+<br>
+<p>The crucial question is *what* is the best functional unit to emulate in 
+<br>
+a human brain:  somthing tiny and horrible numerous, like neurons, or 
+<br>
+somethinh pretty huge, like a concept-instantiation module (I am making 
+<br>
+that phrase up, but you get what I mean).
+<br>
+<p>Me, I am firmly convinced that we would do best by getting inspiration 
+<br>
+from what neurons do, but not even think about emulating them as if they 
+<br>
+were the highest functional units.
+<br>
+<p>Richard Loosemore.
+<br>
+<p><p>CyTG wrote:
+<br>
+<em>&gt; SL4
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Hello.
+</em><br>
+<em>&gt; Im trying to wrap my head around this AI thing, and entirely how far 
+</em><br>
+<em>&gt; along we are in measures of computational power compared to whats going 
+</em><br>
+<em>&gt; on in the human body.
+</em><br>
+<em>&gt; I know many believes that there's shortcuts to be made, even 
+</em><br>
+<em>&gt; improvements of that model nature has provided us with, the biological 
+</em><br>
+<em>&gt; neural network.
+</em><br>
+<em>&gt; Still. Humor me.
+</em><br>
+<em>&gt; Here's my approximated assumptions, based on practical experience with 
+</em><br>
+<em>&gt; ann's and some wiki.
+</em><br>
+<em>&gt; Computational power of the human mind ;
+</em><br>
+<em>&gt; 100*10^9 neurons, 1000 connections each gives about 100*10^12 operations 
+</em><br>
+<em>&gt; _at the same time_ .. now on average a neuron fires about 80 times each 
+</em><br>
+<em>&gt; second, that gives us a whopping ~10^14 operations/computations each 
+</em><br>
+<em>&gt; second.
+</em><br>
+<em>&gt; On my machine, a 3GHz workstation, im able to run a feedforward network 
+</em><br>
+<em>&gt; at about 150.000 operations /second WITH training(backprop) .. take 
+</em><br>
+<em>&gt; training out of the equation and we may, lets shoot high, land on 1 
+</em><br>
+<em>&gt; million 'touched' neurons/second .. now from 10^6 -&gt; 10^14 .. that's one 
+</em><br>
+<em>&gt; hell of a big number!!
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Also .. thinking about training over several training sets (as is usual 
+</em><br>
+<em>&gt; the case) wouldn't I be correct at making an analogy to linear algebra ? 
+</em><br>
+<em>&gt; thinking of each training set as a vector, each set having their own 
+</em><br>
+<em>&gt; direction. In essense, two identical training sets would be linear 
+</em><br>
+<em>&gt; 'depended' on each other and subject for elimination? (thinking there 
+</em><br>
+<em>&gt; could be an mathematical sound approach here towards eliminating 
+</em><br>
+<em>&gt; semi-redundant training data!)
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Hope its not too far off topic!
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Best regards
+</em><br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="13500.html">turin: "Re: Short story"</a>
+<li><strong>Previous message:</strong> <a href="13498.html">Dani Eder: "Re: neural nets"</a>
+<li><strong>In reply to:</strong> <a href="13497.html">CyTG: "neural nets"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="13501.html">H C: "RE: neural nets"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#13499">[ date ]</a>
+<a href="index.html#13499">[ thread ]</a>
+<a href="subject.html#13499">[ subject ]</a>
+<a href="author.html#13499">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:55 MDT
+</em></small></p>
+</body>
+</html>

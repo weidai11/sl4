@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: [agi] A difficulty with AI reflectivity</title>
+<meta name="Author" content="Eliezer Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="Re: [agi] A difficulty with AI reflectivity">
+<meta name="Date" content="2004-10-21">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: [agi] A difficulty with AI reflectivity</h1>
+<!-- received="Thu Oct 21 02:11:08 2004" -->
+<!-- isoreceived="20041021081108" -->
+<!-- sent="Thu, 21 Oct 2004 04:10:57 -0400" -->
+<!-- isosent="20041021081057" -->
+<!-- name="Eliezer Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Re: [agi] A difficulty with AI reflectivity" -->
+<!-- id="41776F11.7050800@pobox.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="JNEIJCJJHIEAILJBFHILIEHACIAA.ben@goertzel.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eliezer Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20[agi]%20A%20difficulty%20with%20AI%20reflectivity"><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Thu Oct 21 2004 - 02:10:57 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="10005.html">Christian Szegedy: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Previous message:</strong> <a href="10003.html">Marc Geddes: "Re: A difficulty with AI reflectivity"</a>
+<li><strong>In reply to:</strong> <a href="9997.html">Ben Goertzel: "RE: [agi] A difficulty with AI reflectivity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="10005.html">Christian Szegedy: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="10005.html">Christian Szegedy: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="10008.html">Christian Szegedy: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Maybe reply:</strong> <a href="10022.html">Yan King Yin: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="10024.html">Wei Dai: "Re: [agi] A difficulty with AI reflectivity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#10004">[ date ]</a>
+<a href="index.html#10004">[ thread ]</a>
+<a href="subject.html#10004">[ subject ]</a>
+<a href="author.html#10004">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Ben Goertzel wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt;&gt; Leaving aside other qualms I have about the Gödel Machine, it appears 
+</em><br>
+<em>&gt;&gt; to me that for the Gödel Machine to execute a change that switches to 
+</em><br>
+<em>&gt;&gt; a new theorem-prover or proof-verifier, the Gödel Machine must prove 
+</em><br>
+<em>&gt;&gt; that if the proof-verifier accepts P, then P.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Hmmm... I haven't read that paper for a while, but my intuitive response
+</em><br>
+<em>&gt; is that you're asking the Godel machine to do more than it needs to do.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Doesn't it just have to prove that:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; &quot;If the proof verifier accepts P, then either P is true or the old 
+</em><br>
+<em>&gt; proof-verifier would have accepted P&quot;
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; or something like that?
+</em><br>
+<p>Wei Dai wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; I think you probably misunderstood the paper. The purpose of searching
+</em><br>
+<em>&gt; for new theorem provers is to speed up the theorem proving, not to be
+</em><br>
+<em>&gt; able to prove new theorems that were unprovable using the old theorem
+</em><br>
+<em>&gt; prover.  So the Gödel Machine only needs to prove that the new prover
+</em><br>
+<em>&gt; will prove a theorem if and only if the current prover will. I don't
+</em><br>
+<em>&gt; think this should be a problem.
+</em><br>
+<p>It looks to me like this would require a special amendment to Schmidhuber's 
+<br>
+architectural specification - Schmidhuber spoke of proving only that the 
+<br>
+code modification had greater expected utility.  Even if you proved the new 
+<br>
+system would do exactly what the old system did, only faster, it would not 
+<br>
+follow that the new system was an *improvement* - it might be generating 
+<br>
+dreadfully wrong answers even faster - unless you included some kind of 
+<br>
+assumption about the system working.  For example, suppose that we start 
+<br>
+with a Godel Machine that, meta-level aside, starts with an object-level 
+<br>
+program that repeatedly presses a button delivering the equivalent of a 
+<br>
+nasty electrical shock.  If the meta-level speeds up the object level so 
+<br>
+that we get nasty electrical shocks twice as fast, this is not an expected 
+<br>
+utility improvement.  If you build the assumption into the meta-system that 
+<br>
+the object-system works, this is good knowledge if the object-system *does* 
+<br>
+work, but not otherwise.  Correspondingly, if the meta-system does work, 
+<br>
+but the meta-system cannot prove that the meta-system works, you will need 
+<br>
+to include an assumption in the meta-system that the meta-system works. 
+<br>
+Even presuming the basic strategy is correct, the next question is how to 
+<br>
+do this without trashing the meta-system due to Godel and Lob.
+<br>
+<p>One way that might succeed in salvaging the Godel-Machine formalism would 
+<br>
+be to isolate the rewriting of the theorem verifier from the rewriting of 
+<br>
+the rest of the Godel Machine.  When rewriting the remainder of the Godel 
+<br>
+Machine, we try to prove that the remainder rewrite improves expected 
+<br>
+utility, assuming that the verifier admits correct object-level theorems 
+<br>
+(I'm not sure you can get away with this).  When rewriting the verifier, 
+<br>
+the verifier has to pass a different test: proving that the new verifier 
+<br>
+accepts only theorems that are admissible under the old verifier.  I.e., 
+<br>
+any acceptable proof according to the new verifier, is an acceptable proof 
+<br>
+according to the old verifier.  We would not concern ourselves with whether 
+<br>
+the proofs are correct - no object-level questions of expected utility - 
+<br>
+just with proving an embedding of the new formal system in the old formal 
+<br>
+system.  But this requires a compartmentalization of the Godel Machine; it 
+<br>
+can no longer rewrite every part of itself using the same criterion of 
+<br>
+success, and there must be several hardcoded, non-modifiable aspects of the 
+<br>
+architecture (such as the interface between the proof verifier and the rest 
+<br>
+of the system).  This would weaken Schmidhuber's original claim that the 
+<br>
+Godel Machine was fully self-modifying.  It would also require some kind of 
+<br>
+diagonalization in the old formal system so that it can possess a full copy 
+<br>
+of itself, and prove embedding of the new formal system in &quot;the old formal 
+<br>
+system plus a copy of itself as an embedding criterion&quot;.  You'd have to 
+<br>
+prove an embedding of a new diagonalized formal system in the old 
+<br>
+diagonalized formal system.  This is all new math that doesn't appear in 
+<br>
+Schmidhuber's original paper, nor anywhere else I have yet encountered in 
+<br>
+reading about reflective formal systems.  And since I have not formalized 
+<br>
+this entire argument, the whole thing could contain some catastrophic flaw 
+<br>
+that isn't apparent in verbal discussion.
+<br>
+<p>Hence my request to see if there was anything on this in the existing 
+<br>
+literature.
+<br>
+<p>I would not be satisfied with the solution as given above for a true seed 
+<br>
+AI.  It seems to me that the difficulty with the Godel Machine reflects a 
+<br>
+very deep AI challenge, and I gave the example of the Godel Machine only to 
+<br>
+clarify the nature of the challenge, not to ask how to patch the Godel 
+<br>
+Machine specifically.  Hardcoding that all new proof-verifiers must embed 
+<br>
+their admissible sentences in the set of admissible sentences of the old 
+<br>
+proof-verifier is an interesting solution, but not as interesting as, say, 
+<br>
+an AI that could ponder the relative merit of intuitionistic versus 
+<br>
+classical mathematics, which is where I think the deep problem is heading.
+<br>
+<p><pre>
+-- 
+Eliezer S. Yudkowsky                          <a href="http://intelligence.org/">http://intelligence.org/</a>
+Research Fellow, Singularity Institute for Artificial Intelligence
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="10005.html">Christian Szegedy: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Previous message:</strong> <a href="10003.html">Marc Geddes: "Re: A difficulty with AI reflectivity"</a>
+<li><strong>In reply to:</strong> <a href="9997.html">Ben Goertzel: "RE: [agi] A difficulty with AI reflectivity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="10005.html">Christian Szegedy: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="10005.html">Christian Szegedy: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="10008.html">Christian Szegedy: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Maybe reply:</strong> <a href="10022.html">Yan King Yin: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="10024.html">Wei Dai: "Re: [agi] A difficulty with AI reflectivity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#10004">[ date ]</a>
+<a href="index.html#10004">[ thread ]</a>
+<a href="subject.html#10004">[ subject ]</a>
+<a href="author.html#10004">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:49 MDT
+</em></small></p>
+</body>
+</html>

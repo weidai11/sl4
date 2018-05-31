@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: project COSA</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: project COSA">
+<meta name="Date" content="2002-08-09">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: project COSA</h1>
+<!-- received="Fri Aug 09 23:41:02 2002" -->
+<!-- isoreceived="20020810054102" -->
+<!-- sent="Fri, 9 Aug 2002 21:40:44 -0600" -->
+<!-- isosent="20020810034044" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: project COSA" -->
+<!-- id="LAEGJLOGJIOELPNIOOAJMEMCDGAA.ben@goertzel.org" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="3D5481C7.7000702@atlantisblue.com.au" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20project%20COSA"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Fri Aug 09 2002 - 21:40:44 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="5029.html">Samantha Atkins: "Re: Are we Gods yet?"</a>
+<li><strong>Previous message:</strong> <a href="5027.html">David Hart: "project COSA"</a>
+<li><strong>In reply to:</strong> <a href="5027.html">David Hart: "project COSA"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="5030.html">Samantha Atkins: "Re: project COSA"</a>
+<li><strong>Reply:</strong> <a href="5030.html">Samantha Atkins: "Re: project COSA"</a>
+<li><strong>Reply:</strong> <a href="5031.html">David Hart: "Re: project COSA + Novamente &amp; Cyc"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#5028">[ date ]</a>
+<a href="index.html#5028">[ thread ]</a>
+<a href="subject.html#5028">[ subject ]</a>
+<a href="author.html#5028">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Having read the web page, but NOT studied the code or tried to use the
+<br>
+system, I think the approach is badly wrong-headed...
+<br>
+<p>The argument that massively parallel brainlike systems are more &quot;reliable&quot;
+<br>
+than algorithmic systems is a play on the multiple senses of the word
+<br>
+&quot;reliable.&quot;
+<br>
+<p>Simple, toy systems of this nature may display nice failure-recovery
+<br>
+properties.  But really complex massively parallel agent systems can be
+<br>
+terribly hard to debug, as I know from long experience.  And the kind of
+<br>
+reliability that brains have is not the kind we want from software systems,
+<br>
+in a mission-critical context.  Actually, brains have bad unreliability
+<br>
+problems: they go nuts, they die, they delude themselves, they react
+<br>
+terribly to minor modifications in their chemical substrate, etc.
+<br>
+<p>Also, he claims that algorithmic programming can be replaced by simple
+<br>
+visual programming using his interface.  Yeah, right.  It's OK for
+<br>
+UI-focused or physical-simulation-focused stuff I guess, but not for serious
+<br>
+AI coding for instance...
+<br>
+<p>I think that the solution to the software reliability problem is clear,
+<br>
+well-known, and less sexy than COSA.
+<br>
+<p>1) Formalize the requirements for the program using mathematics
+<br>
+<p>2) Formalize the software design using a specification language like Z
+<br>
+<p>3) Prove that the specification fulfills the requirements, mathematically
+<br>
+<p>4) Translate the software design into a mathematically simple language like
+<br>
+Haskell or Scheme or ML
+<br>
+<p>5) Prove that the software design correctly implements the formal design
+<br>
+spec
+<br>
+<p>These proofs can be carried out by humans together with automated
+<br>
+theorem-proving tools
+<br>
+<p>All this is known technology.  It is not used much in practice, because it
+<br>
+takes more time (hence more money) than doing software development the
+<br>
+standard way.
+<br>
+<p>We have not taken this approach for Novamente, because we don't consider it
+<br>
+worth the time; we don't need a provably correct system right now.  However,
+<br>
+I would like to take this approach for Novamente 2, if there is one (if
+<br>
+Novamente 1 doesn't end up writing Novamente 2 ;).
+<br>
+<p>You'll find this sort of method is used for mission-critical military
+<br>
+software more often than anywhere else, which is sensible.
+<br>
+<p>As AI advances, it'll be possible to efficiently do this kind of
+<br>
+theorem-proving for regular software projects, hence software reliability
+<br>
+should increase due to AI's contributions, even before AI's render human
+<br>
+software engineering obsolete...
+<br>
+<p>-- Ben Goertzel
+<br>
+<p><p><p><em>&gt; -----Original Message-----
+</em><br>
+<em>&gt; From: <a href="mailto:owner-sl4@sysopmind.com?Subject=RE:%20project%20COSA">owner-sl4@sysopmind.com</a> [mailto:<a href="mailto:owner-sl4@sysopmind.com?Subject=RE:%20project%20COSA">owner-sl4@sysopmind.com</a>]On Behalf
+</em><br>
+<em>&gt; Of David Hart
+</em><br>
+<em>&gt; Sent: Friday, August 09, 2002 9:00 PM
+</em><br>
+<em>&gt; To: <a href="mailto:sl4@sysopmind.com?Subject=RE:%20project%20COSA">sl4@sysopmind.com</a>
+</em><br>
+<em>&gt; Subject: project COSA
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; From: <a href="http://home1.gte.net/res02khr/Cosas/COSA.htm">http://home1.gte.net/res02khr/Cosas/COSA.htm</a>
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; &quot;COSA is a reactive, signal-based software construction and execution
+</em><br>
+<em>&gt; environment. The goal of Project COSA is to improve software reliability
+</em><br>
+<em>&gt; and productivity by at least one order of magnitude ... Software
+</em><br>
+<em>&gt; creation consists of connecting elementary concurrent objects (cells)
+</em><br>
+<em>&gt; together ... Cells can be combined into high-level, plug-compatible
+</em><br>
+<em>&gt; components and/or applications...&quot;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Self-examination, introspection and self-modification are design
+</em><br>
+<em>&gt; considerations of COSA.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; What are SL4 list members' opinions on the approach and technical merits
+</em><br>
+<em>&gt; of COSA? (&quot;Silver Bullet&quot; and other emotive arguments aside)
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; --
+</em><br>
+<em>&gt; David Hart
+</em><br>
+<em>&gt; CTO, Atlantis Blue
+</em><br>
+<em>&gt;
+</em><br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="5029.html">Samantha Atkins: "Re: Are we Gods yet?"</a>
+<li><strong>Previous message:</strong> <a href="5027.html">David Hart: "project COSA"</a>
+<li><strong>In reply to:</strong> <a href="5027.html">David Hart: "project COSA"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="5030.html">Samantha Atkins: "Re: project COSA"</a>
+<li><strong>Reply:</strong> <a href="5030.html">Samantha Atkins: "Re: project COSA"</a>
+<li><strong>Reply:</strong> <a href="5031.html">David Hart: "Re: project COSA + Novamente &amp; Cyc"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#5028">[ date ]</a>
+<a href="index.html#5028">[ thread ]</a>
+<a href="subject.html#5028">[ subject ]</a>
+<a href="author.html#5028">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:40 MDT
+</em></small></p>
+</body>
+</html>

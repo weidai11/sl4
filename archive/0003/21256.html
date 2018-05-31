@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: [SL4] Flare, and the need for it.</title>
+<meta name="Author" content="Eliezer S. Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="Re: [SL4] Flare, and the need for it.">
+<meta name="Date" content="2000-03-04">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: [SL4] Flare, and the need for it.</h1>
+<!-- received="Sun Mar  5 12:02:25 2000" -->
+<!-- isoreceived="20000305190225" -->
+<!-- sent="Sun, 05 Mar 2000 00:54:37 -0600" -->
+<!-- isosent="20000305065437" -->
+<!-- name="Eliezer S. Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Re: [SL4] Flare, and the need for it." -->
+<!-- id="38C20499.705CC228@pobox.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="38C1F2A4.514255AF@pobox.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eliezer S. Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20[SL4]%20Flare,%20and%20the%20need%20for%20it."><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Sat Mar 04 2000 - 23:54:37 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="21257.html">Randall Randall: "Re: [SL4] Flare, and the need for it."</a>
+<li><strong>Previous message:</strong> <a href="21255.html">Eliezer S. Yudkowsky: "Re: [SL4] Flare, and the need for it."</a>
+<li><strong>In reply to:</strong> <a href="21255.html">Eliezer S. Yudkowsky: "Re: [SL4] Flare, and the need for it."</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="21257.html">Randall Randall: "Re: [SL4] Flare, and the need for it."</a>
+<li><strong>Reply:</strong> <a href="21257.html">Randall Randall: "Re: [SL4] Flare, and the need for it."</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#21256">[ date ]</a>
+<a href="index.html#21256">[ thread ]</a>
+<a href="subject.html#21256">[ subject ]</a>
+<a href="author.html#21256">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+From: &quot;Eliezer S. Yudkowsky&quot; &lt;<a href="mailto:sentience@pobox.com?Subject=Re:%20[SL4]%20Flare,%20and%20the%20need%20for%20it.">sentience@pobox.com</a>&gt;
+<br>
+<p>&quot;Eliezer S. Yudkowsky&quot; wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; It's possible to write shallow LISP programs in C, but not deep ones.
+</em><br>
+<em>&gt; Same goes for writing Flare programs in LISP.
+</em><br>
+<p>Let me amplify on that:  It's possible to, for example, write shallow
+<br>
+Flare programs in, say, LISP, by using property lists as basic Flare
+<br>
+symbols.  For example, one could represent:
+<br>
+<p>&lt;foo&gt;4
+<br>
+&nbsp;&lt;green&gt;5&lt;/green&gt;
+<br>
+&nbsp;&lt;red&gt;snap&lt;/red&gt;
+<br>
+&lt;/foo&gt;
+<br>
+<p>as
+<br>
+<p>(&quot;foo&quot;
+<br>
+&nbsp;(&quot;.value&quot; 4)
+<br>
+&nbsp;(&quot;.metadata&quot; reference-to-whatever)
+<br>
+&nbsp;(&quot;green&quot; (&quot;.value&quot; 5)      (&quot;.metadata&quot; reference-to-whatever) )
+<br>
+&nbsp;(&quot;red&quot;   (&quot;.value&quot; &quot;snap&quot;) (&quot;.metadata&quot; reference-to-whatever) )
+<br>
+)
+<br>
+<p>And then go on to write tortuous code that, in essence, carries out the
+<br>
+motions of a Flare interpreter by hand.  It would be analogous to
+<br>
+writing C++ programs in C by writing, say:
+<br>
+<p>(*reinterpret_cast&lt;FOO_FUNC_PTR&gt;(item-&gt;vtab[FOO_FUNC_INDEX]))(arg1, arg2)
+<br>
+<p>&nbsp;instead of
+<br>
+<p>item-&gt;foo(arg1, arg2)
+<br>
+<p>with all inheritance and such done by whatever hacked-up functions your
+<br>
+mind cares to imagine.
+<br>
+<p>You can always write the low-level elements of a high-level language as
+<br>
+high-level structures in a lower-level language.  A high-level structure
+<br>
+in a high-level language generally cannot be developed in any simpler form.
+<br>
+<pre>
+-- 
+       <a href="mailto:sentience@pobox.com?Subject=Re:%20[SL4]%20Flare,%20and%20the%20need%20for%20it.">sentience@pobox.com</a>      Eliezer S. Yudkowsky
+          <a href="http://pobox.com/~sentience/beyond.html">http://pobox.com/~sentience/beyond.html</a>
+                 Member, Extropy Institute
+           Senior Associate, Foresight Institute
+------------------------------------------------------------------------
+MAXIMIZE YOUR CARD, MINIMIZE YOUR RATE!
+Get a NextCard Visa, in 30 seconds!  Get rates as low as 
+0.0% Intro or 9.9% Fixed APR and no hidden fees.
+Apply NOW!
+<a href="http://click.egroups.com/1/2122/5/_/626675/_/952239218/">http://click.egroups.com/1/2122/5/_/626675/_/952239218/</a>
+------------------------------------------------------------------------
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="21257.html">Randall Randall: "Re: [SL4] Flare, and the need for it."</a>
+<li><strong>Previous message:</strong> <a href="21255.html">Eliezer S. Yudkowsky: "Re: [SL4] Flare, and the need for it."</a>
+<li><strong>In reply to:</strong> <a href="21255.html">Eliezer S. Yudkowsky: "Re: [SL4] Flare, and the need for it."</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="21257.html">Randall Randall: "Re: [SL4] Flare, and the need for it."</a>
+<li><strong>Reply:</strong> <a href="21257.html">Randall Randall: "Re: [SL4] Flare, and the need for it."</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#21256">[ date ]</a>
+<a href="index.html#21256">[ thread ]</a>
+<a href="subject.html#21256">[ subject ]</a>
+<a href="author.html#21256">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:01:06 MDT
+</em></small></p>
+</body>
+</html>

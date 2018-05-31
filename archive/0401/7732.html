@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Friendliness and blank-slate goal bootstrap</title>
+<meta name="Author" content="Charles Hixson (charleshixsn@earthlink.net)">
+<meta name="Subject" content="Re: Friendliness and blank-slate goal bootstrap">
+<meta name="Date" content="2004-01-10">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Friendliness and blank-slate goal bootstrap</h1>
+<!-- received="Sat Jan 10 19:51:41 2004" -->
+<!-- isoreceived="20040111025141" -->
+<!-- sent="Sat, 10 Jan 2004 18:51:00 -0800" -->
+<!-- isosent="20040111025100" -->
+<!-- name="Charles Hixson" -->
+<!-- email="charleshixsn@earthlink.net" -->
+<!-- subject="Re: Friendliness and blank-slate goal bootstrap" -->
+<!-- id="4000BA14.1000301@earthlink.net" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="20040110234938.GA371@nickh" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Charles Hixson (<a href="mailto:charleshixsn@earthlink.net?Subject=Re:%20Friendliness%20and%20blank-slate%20goal%20bootstrap"><em>charleshixsn@earthlink.net</em></a>)<br>
+<strong>Date:</strong> Sat Jan 10 2004 - 19:51:00 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="7733.html">Metaqualia: "Re: Friendliness and blank-slate goal bootstrap"</a>
+<li><strong>Previous message:</strong> <a href="7731.html">Nick Hay: "Re: Friendliness and blank-slate goal bootstrap"</a>
+<li><strong>In reply to:</strong> <a href="7731.html">Nick Hay: "Re: Friendliness and blank-slate goal bootstrap"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="../0310/7213.html">EvolverTCB@aol.com: "Re: Friendliness and blank-slate goal bootstrap"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7732">[ date ]</a>
+<a href="index.html#7732">[ thread ]</a>
+<a href="subject.html#7732">[ subject ]</a>
+<a href="author.html#7732">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Nick Hay wrote:
+<br>
+<p><em>&gt; On 10/01/04 15:55:57, Charles Hixson wrote:
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;&gt; Nick Hay wrote:
+</em><br>
+<em>&gt;&gt; &gt; Metaqualia wrote:
+</em><br>
+<em>&gt;&gt; &gt; &gt; ...
+</em><br>
+<em>&gt;&gt; &gt; ...
+</em><br>
+<em>&gt;&gt; &gt; You could go with &quot;reduce undesirable qualia, increase desirable
+</em><br>
+<em>&gt;&gt; &gt; ones&quot; if you liked.
+</em><br>
+<em>&gt;&gt;
+</em><br>
+<em>&gt;&gt; Be very careful here! The easiest way to reduce undesirable qualia 
+</em><br>
+<em>&gt;&gt; is   to kill off everyone who has the potential for experiencing them.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; ...
+</em><br>
+<em>&gt; It seems like you're thinking in terms of &quot;picking the best morality  
+</em><br>
+<em>&gt; for an AI&quot; (an AI assumed to have the structure humans use to 
+</em><br>
+<em>&gt; implement  moralities) rather than, say, &quot;engineering an AI that can 
+</em><br>
+<em>&gt; understand  morality, along with the arguments and philosophies we use 
+</em><br>
+<em>&gt; to decide  which actions we should or shouldn't take&quot;.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; - Nick Hay
+</em><br>
+<p>Actually, I'm trying to figure out what could be described as a basic 
+<br>
+goal (or, I suppose, supergoal).  The problem is that when this is 
+<br>
+described, the AI will have no world model to speak of, so most things 
+<br>
+that one would want to put in as a goal are impossible to describe to 
+<br>
+the AI.  I can think of how to define visual primitives (I'm thinking of 
+<br>
+writing a recognizer based around a superspecified *.xpm file format ... 
+<br>
+well, actually the original form will be an internal Python data 
+<br>
+structure that can be fed to gtk primitives, and can also be handled in 
+<br>
+Python.  I plan to start with vertical and horizontal line recognizers, 
+<br>
+and then work on corner recognizers.  Etc.)  I'm planning on useing 
+<br>
+Python for the introspective layer with Pyrex as an intermediate layer 
+<br>
+that connects to &quot;understood&quot; (i.e., compiled C code) modules.  I have a 
+<br>
+plan that evaluations (i.e., things which can be &quot;summarized as a single 
+<br>
+number of desireability&quot; ) should be in a topologically sorted list.  
+<br>
+(That's a bit of an oversimplification, which is why the topological sort.)
+<br>
+<p>I'm a bit more at sea about how to do the world models.  Direct sensory 
+<br>
+experience would be (eventually) anything that touched a port, but I 
+<br>
+intend to start of simple, with having it read e-mail.  I expect that 
+<br>
+I'll build in some initial guidance along the lines of &quot;thought chunks 
+<br>
+tend to split at white spaces, connections of thought chunks tend to 
+<br>
+split after periods that follow something that has been previously 
+<br>
+recognized as a though chunk.  Carriage returns are more definite 
+<br>
+splits, and two or more Carriage returns in succession are a very 
+<br>
+definite split.  And I'll probably build in a rule that lets it 
+<br>
+automatically peel the headers away from the body.  But all of these 
+<br>
+will be in a &quot;variable code&quot; section.  What the alternatives will be I 
+<br>
+don't know, but everything needs to be arranged so that switchable lists 
+<br>
+of routines that make sense can have simple substitutions.  The 
+<br>
+intention is that it will be amenable to genetic programming, either by 
+<br>
+me, if I get around to learning it first, or by the AI after it figures 
+<br>
+out how to do things.
+<br>
+<p>But how to structure the goals is something I haven't figures out the 
+<br>
+first thing on.  Except that:
+<br>
+1) They've got to be teleological
+<br>
+2) They've got to be rankable (that topological list again)
+<br>
+3) They've got to be callable as processes.  Either there will be a Goal 
+<br>
+class with methods, so some other way.
+<br>
+<p>In my view of things there are four basic processes of thought.  I could 
+<br>
+swipe terminology from CGJung, but I prefer to not carry his baggage, so 
+<br>
+I call them Earth, Air, Fire, and Water.
+<br>
+Air the computations that mimic the kinds of things Fortran was designed 
+<br>
+to handle.  Logic. 
+<br>
+Fire is the management of the sorted lists, letting you quickly 
+<br>
+determine whether you have previously decided that something is either 
+<br>
+very good or very bad.  (More complicated decisions, of course, take 
+<br>
+longer.)
+<br>
+Earth is modeling.  E.g., an xpm file as an analog of a retina... well, 
+<br>
+of visual perception, anyway.  This would also cover the transformation 
+<br>
+of such things into vector expressions and various manipulations (e.g., 
+<br>
+scaling, rotation, etc.)  But the actual techinques for doing the 
+<br>
+manipulations would be earth (this probably means &quot;they're expressed as 
+<br>
+programs rather than as data&quot;).
+<br>
+Water is goal seeking.  And here I get lost.  I know that in some sense 
+<br>
+Water is the opposite of Earth, as Air and Fire are opposites...but note 
+<br>
+that opposite doesn't mean that they directly conflict.  It's more like 
+<br>
+they use different data structures to represent the same things handled 
+<br>
+for different purposes.  (Fire makes decisions a lot more quickly than 
+<br>
+Air, but it has to &quot;know&quot; the decisions ahead of time.)
+<br>
+<p>Water's basics clearly need to be built in.  I.e., the first level goals 
+<br>
+have to exist, or, e.g., Fire can have no basis on which to order it's 
+<br>
+lists.  Air can evaluate probabilities of result based on data from 
+<br>
+Earth (here sensory perception), but it can't choose that one choice 
+<br>
+should be adopted rather than another without having some goal to 
+<br>
+measure it against.
+<br>
+<p>A lot of the basic work of Air has been done explicitly during the 
+<br>
+development of mathematics.  Ah, but how to apply it in any  particular 
+<br>
+environment!  Sensory perception (Earth) and the models that involve it 
+<br>
+(Earth + Air) can yield predictions as to likely outcomes.  But without 
+<br>
+goals to measure things against, it's meaningless.   If we have goals, 
+<br>
+intelligible goals, then we can use the predicted results and try to 
+<br>
+guess whether that brings us closer or sends us further from them.  This 
+<br>
+allows us to place actions/results in the desireable/undesireable 
+<br>
+rankings. 
+<br>
+<p>A tabula rasa may not be formally impossible, but it seems so nearly so 
+<br>
+as for the difference to be meaningless.  But I can't figure out how to 
+<br>
+start decent goals for an intelligent entity based on nothing but the 
+<br>
+information perceivable from inside a computer.    I think I could make 
+<br>
+a stab at goals for a specialized entity, say one that categorizes mail 
+<br>
+into self-similar groups.  But this is a different order of goal.
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="7733.html">Metaqualia: "Re: Friendliness and blank-slate goal bootstrap"</a>
+<li><strong>Previous message:</strong> <a href="7731.html">Nick Hay: "Re: Friendliness and blank-slate goal bootstrap"</a>
+<li><strong>In reply to:</strong> <a href="7731.html">Nick Hay: "Re: Friendliness and blank-slate goal bootstrap"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="../0310/7213.html">EvolverTCB@aol.com: "Re: Friendliness and blank-slate goal bootstrap"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7732">[ date ]</a>
+<a href="index.html#7732">[ thread ]</a>
+<a href="subject.html#7732">[ subject ]</a>
+<a href="author.html#7732">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:45 MDT
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,76 @@
+On Mon, 2002-05-06 at 07:27, Ben Goertzel wrote:
+> I think that an efficient way of doing Solomonoff induction for modest
+> program sizes, can definitely form the core of an AGI.
+> We do something similar in Novamente, though with a different algorithm (our
+> design involves the use a hybridization of probabilistic inference and
+> evolutionary programming for program induction)
+
+
+There is another way to look at this that is correct, though I
+personally don't really think about it in these terms. Every "model" is
+essentially a universal Turing machine (with everything that implies,
+except infinite memory) with a very unusual computing architecture
+revolving around a structure that is an algorithmic superset (as it
+were) of Solomonoff induction. 
+
+One of the generally interesting and useful things I've noticed
+relatively recently is that it appears that the Halting Problem can
+essentially be ignored. Any problem that exceeds a certain complexity
+will stop at a best approximation when it hits the complexity limit of
+the model, and infinite loop type situations that fit within the
+complexity limit of the model are immediately detected simply as a
+consequence of the organization. Everything appears to halt eventually,
+though it may be an exception that causes it. I only mention this
+because I've had to write code for regular software systems in the past
+that could resolve these kinds of things, which was an awkward and ugly
+thing at best and not totally reliable either. In this case, I seem to
+have gotten those features for free, though it took me a long time to
+even notice. Note that I haven't rigorously evaluated this, so I am not
+100% certain, but what I described above appears to be the case; it
+would certainly be pretty cool if this turned out to be correct in the
+general case.
+
+
+> However, I also suspect there may be a long path from getting the individual
+> "model" (in your language) to work well, and figuring out how to piece
+> together a bunch of models into an overall functional mind....
+
+
+Actually, this is one of the easier parts.  I'm still fiddling with
+this, but it is really at the point of just picking something I like and
+going with it as there are a couple clean and reasonably simple
+approaches that are working. As I stated, I can hard merge and turn two
+models into one larger model that still has the general capabilities of
+the individual models, but there is a loss of efficiency when you do
+this with two models that have been built with two very different types
+of data input. Clustering unrelated models rather than merging them
+really does seem like the optimum pathway. Having short-term/working
+memory model goes a long way toward making this work pretty seamlessly.
+
+ 
+> Pei and I long ago made the observation that most of the algorithms
+> important for mind have exponential time and space complexity, but with a
+> manageably small exponent for realistic problem sizes.  It's interesting
+> that you've come up with the same conclusion in your work.
+
+
+This became apparent to me quite a while back.  The reason that one of
+my long-time favorite rants is about the hardware limitation being
+memory rather than CPU is that inadequate CPU will just make things run
+slower, but inadequate memory pretty much leaves you hosed.  Inadequate
+CPU may make things slow but at least it will get the right answer
+eventually; inadequate memory is a "brick wall" limiter on effective
+intelligence at any speed, IMO.
+
+I'm really short on time these days, so I apologize if my responses are
+a bit belated.
+
+Cheers,
+
+-James Rogers
+ jamesr@best.com
+
+
+
+
+

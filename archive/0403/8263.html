@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: 'Singularity Realism' - A few thoughts</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: 'Singularity Realism' - A few thoughts">
+<meta name="Date" content="2004-03-15">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: 'Singularity Realism' - A few thoughts</h1>
+<!-- received="Mon Mar 15 19:44:07 2004" -->
+<!-- isoreceived="20040316024407" -->
+<!-- sent="Mon, 15 Mar 2004 21:43:40 -0500" -->
+<!-- isosent="20040316024340" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: 'Singularity Realism' - A few thoughts" -->
+<!-- id="033601c40b00$7d7c9a40$7601a8c0@ZOMBIETHUSTRA" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="001e01c40afe$236ea040$0100a8c0@FamilyRoom" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20'Singularity%20Realism'%20-%20A%20few%20thoughts"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Mon Mar 15 2004 - 19:43:40 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="8264.html">Ben Goertzel: "RE: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>Previous message:</strong> <a href="8262.html">Mark Waser: "RE: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>In reply to:</strong> <a href="8262.html">Mark Waser: "RE: 'Singularity Realism' - A few thoughts"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="8264.html">Ben Goertzel: "RE: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>Reply:</strong> <a href="8264.html">Ben Goertzel: "RE: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>Reply:</strong> <a href="8266.html">Mark Waser: "Re: 'Singularity Realism' - A few thoughts"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#8263">[ date ]</a>
+<a href="index.html#8263">[ thread ]</a>
+<a href="subject.html#8263">[ subject ]</a>
+<a href="author.html#8263">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; The short answer - I want an environment where a program is 
+</em><br>
+<em>&gt; also data so that automatic program generation and 
+</em><br>
+<em>&gt; manipulation is facilitated.  Making a programming language 
+</em><br>
+<em>&gt; XML-compliant pretty much guarantees this 
+</em><br>
+<p>I guess this is what Samantha questions....  
+<br>
+<p>The problem is that unless this XML/prog-lang mapping is done in a very
+<br>
+simple, manageable, compact way, it's not of any practical use...
+<br>
+<p>Honestly, I think what you want is Refal.NET (which doesn't exist of
+<br>
+course, but would be a fun port to make.  Some friends of mine have now
+<br>
+ported OCaML, another weird functional language, to .NET ... The port is
+<br>
+called Nemerle)
+<br>
+<p><em>&gt; IMPORTANT POINT:  If I were Ben and working on Novamente, I 
+</em><br>
+<em>&gt; would be making sure that my freezing and thawing (storage 
+</em><br>
+<em>&gt; and retrieval) of schemas, atomspaces, etc. was available 
+</em><br>
+<em>&gt; through XML and that Sasha 2's syntax was XML compliant.
+</em><br>
+<p>Yes, we use XML as one option for saving/loading.  However, it's very
+<br>
+very slow to load large XML files into Novamente, so for repeatedly
+<br>
+loading the same data we load it in from XML *once* and then save a
+<br>
+binary &quot;net image&quot; file, which can be loaded and reloaded much faster.
+<br>
+&nbsp;
+<br>
+<em>&gt; Note to Ben:  A couple of things that I would hope for but 
+</em><br>
+<em>&gt; don't yet see in Novamente are a) ways to take recognize and 
+</em><br>
+<em>&gt; advantage of the scale invariance of many activities through 
+</em><br>
+<em>&gt; encapsulation 
+</em><br>
+<p>There are processes for &quot;encapsulation&quot; but none that specifically
+<br>
+address scale-invariance; I'm not sure what you mean...
+<br>
+<p><em>&gt;and b) a way to compile specific time-critical 
+</em><br>
+<em>&gt; schemas from more general schemas (and the reverse, allowing 
+</em><br>
+<em>&gt; for subsequent description of currently compiled code, like 
+</em><br>
+<em>&gt; CIM-dynamics, WITHOUT affecting the system).
+</em><br>
+<p>This is something that we know we need, but have not yet thought about
+<br>
+in detail.  This would take the form of specific &quot;graph rewriting&quot;
+<br>
+algorithms acting on CombinatorTrees and CombinatorDAGs ... Comparable
+<br>
+to what exists inside some functional language interpreters.  But this
+<br>
+is not a good discussion for SL4, I suppose -- too narrowly technical...
+<br>
+<p>-- Ben
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="8264.html">Ben Goertzel: "RE: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>Previous message:</strong> <a href="8262.html">Mark Waser: "RE: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>In reply to:</strong> <a href="8262.html">Mark Waser: "RE: 'Singularity Realism' - A few thoughts"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="8264.html">Ben Goertzel: "RE: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>Reply:</strong> <a href="8264.html">Ben Goertzel: "RE: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>Reply:</strong> <a href="8266.html">Mark Waser: "Re: 'Singularity Realism' - A few thoughts"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#8263">[ date ]</a>
+<a href="index.html#8263">[ thread ]</a>
+<a href="subject.html#8263">[ subject ]</a>
+<a href="author.html#8263">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:46 MDT
+</em></small></p>
+</body>
+</html>

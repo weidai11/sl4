@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: flare and SIAI</title>
+<meta name="Author" content="Ben Goertzel (ben@webmind.com)">
+<meta name="Subject" content="RE: flare and SIAI">
+<meta name="Date" content="2001-07-29">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: flare and SIAI</h1>
+<!-- received="Mon Jul 30 00:20:34 2001" -->
+<!-- isoreceived="20010730062034" -->
+<!-- sent="Sun, 29 Jul 2001 22:11:16 -0400" -->
+<!-- isosent="20010730021116" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@webmind.com" -->
+<!-- subject="RE: flare and SIAI" -->
+<!-- id="NDBBIBGFAPPPBODIPJMMMEKAFNAA.ben@webmind.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="3B64AE48.214389E7@pobox.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@webmind.com?Subject=RE:%20flare%20and%20SIAI"><em>ben@webmind.com</em></a>)<br>
+<strong>Date:</strong> Sun Jul 29 2001 - 20:11:16 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1935.html">Jack Richardson: "Open AI"</a>
+<li><strong>Previous message:</strong> <a href="1933.html">Xavier Lumine: "RE: flare and SIAI"</a>
+<li><strong>Maybe in reply to:</strong> <a href="1915.html">Xavier Lumine: "flare and SIAI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1937.html">Eliezer S. Yudkowsky: "Re: flare and SIAI"</a>
+<li><strong>Reply:</strong> <a href="1937.html">Eliezer S. Yudkowsky: "Re: flare and SIAI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1934">[ date ]</a>
+<a href="index.html#1934">[ thread ]</a>
+<a href="subject.html#1934">[ subject ]</a>
+<a href="author.html#1934">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+As an aside to all this stuff about Flare, I thought I'd add a little bit
+<br>
+about the Webmind approach to early-stage self-modification.
+<br>
+<p>The first phase of self-modification in Webmind won't involve rewriting of
+<br>
+the actual C++ source for Webmind.
+<br>
+<p>Rather, we have something in Webmind called a &quot;schema&quot; -- a procedure that
+<br>
+the system can follow, which is expressed entirely as a pattern of nodes and
+<br>
+links in the system.  Schema can be learned by a variety of methods,
+<br>
+reasoned on, forgotten, mutated, blah blah blah.
+<br>
+<p>Right now, some of Webmind's thought processes are represented as C++
+<br>
+objects called AIProcesses, and others are represented as schema.  Only the
+<br>
+ones represented as schema can be improved and adapted.
+<br>
+<p>Once the system gets smart enough, we'll rewrite all the AIProcesses in
+<br>
+terms of schema (not hard, but there's a performance penalty; we need to
+<br>
+make a really fast schema module first and we haven't done that yet).  Then,
+<br>
+the system will be able to observe and study and modify or replace all its
+<br>
+thought processes.  I call this Phase One WM self-modification.
+<br>
+<p>What the system *won't* be able to do, in this phase, is rewrite the
+<br>
+infrastructure underlying the AIProcesses: the definition of nodes and links
+<br>
+(though it will be able to add and delete variables from the node and link
+<br>
+objects, effectively), the fact that WM is a system with a bunch of
+<br>
+AIProcesses acting on a distributed table of nodes and links, the fact that
+<br>
+it caches memory to disk periodically, etc.
+<br>
+<p>Still, in phase One self-modification, the system will learn what its
+<br>
+reasoning, associating, feeling, etc. processes are doing, and how to
+<br>
+improve these processes.
+<br>
+<p>IN parallel with phase one self-modification, we'll have to do some basic
+<br>
+*teaching of programming*.  The system will be given the syntax for the
+<br>
+programming language it's written in, and some knowledge about the semantics
+<br>
+of the language.  It can then automatically represent (say) C++ programs as
+<br>
+schema and experiment with them given its knowledge about schema.  It  must
+<br>
+be led through a series of exercises in programming, involving simple &quot;CS
+<br>
+101&quot; programs, until it can improve and modify simple programs, etc.
+<br>
+<p>Now, once phase one self-modification is working well, AND the system knows
+<br>
+the programming language it's written in, THEN,
+<br>
+*then* it's time for Phase Two self-modification, where the two pieces are
+<br>
+put together, and the system tries to understand itself as an AI program
+<br>
+written in a real programming language.
+<br>
+<p>A language like Flare would make the &quot;teaching of programming&quot; phase a bit
+<br>
+easier.  But my feeling is that phase one self-modification is significantly
+<br>
+harder than &quot;teaching of programming&quot;, because understanding what makes a
+<br>
+reasoning rule better than another is harder than understanding what makes a
+<br>
+simple C++ program work.  So I feel that having flare would really only help
+<br>
+with the easier part of the problem....
+<br>
+<p><em>&gt;From what I understand about Eli's approach, the problem of getting to phase
+</em><br>
+two modification isn't broken down into parts in the same way as I propose
+<br>
+to do.  But I don't understand his approach very well, so I won't say more
+<br>
+about it.
+<br>
+<p><p>-- Ben G
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1935.html">Jack Richardson: "Open AI"</a>
+<li><strong>Previous message:</strong> <a href="1933.html">Xavier Lumine: "RE: flare and SIAI"</a>
+<li><strong>Maybe in reply to:</strong> <a href="1915.html">Xavier Lumine: "flare and SIAI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1937.html">Eliezer S. Yudkowsky: "Re: flare and SIAI"</a>
+<li><strong>Reply:</strong> <a href="1937.html">Eliezer S. Yudkowsky: "Re: flare and SIAI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1934">[ date ]</a>
+<a href="index.html#1934">[ thread ]</a>
+<a href="subject.html#1934">[ subject ]</a>
+<a href="author.html#1934">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:37 MDT
+</em></small></p>
+</body>
+</html>

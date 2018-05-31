@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Hardware Progress: $319/GF</title>
+<meta name="Author" content="Stephen Reed (reed@cyc.com)">
+<meta name="Subject" content="Re: Hardware Progress: $319/GF">
+<meta name="Date" content="2002-05-31">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Hardware Progress: $319/GF</h1>
+<!-- received="Fri May 31 17:27:00 2002" -->
+<!-- isoreceived="20020531232700" -->
+<!-- sent="Fri, 31 May 2002 13:10:37 -0500 (CDT)" -->
+<!-- isosent="20020531181037" -->
+<!-- name="Stephen Reed" -->
+<!-- email="reed@cyc.com" -->
+<!-- subject="Re: Hardware Progress: $319/GF" -->
+<!-- id="Pine.LNX.4.21.0205311138080.28807-100000@balrog.cyc.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="20020531155259.39669.qmail@web13301.mail.yahoo.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Stephen Reed (<a href="mailto:reed@cyc.com?Subject=Re:%20Hardware%20Progress:%20$319/GF"><em>reed@cyc.com</em></a>)<br>
+<strong>Date:</strong> Fri May 31 2002 - 12:10:37 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3848.html">Ben Goertzel: "RE: Hardware Progress: $319/GF"</a>
+<li><strong>Previous message:</strong> <a href="3846.html">Dani Eder: "Re: Hardware Progress: $319/GF"</a>
+<li><strong>In reply to:</strong> <a href="3846.html">Dani Eder: "Re: Hardware Progress: $319/GF"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3848.html">Ben Goertzel: "RE: Hardware Progress: $319/GF"</a>
+<li><strong>Reply:</strong> <a href="3848.html">Ben Goertzel: "RE: Hardware Progress: $319/GF"</a>
+<li><strong>Reply:</strong> <a href="3849.html">Mike & Donna Deering: "Re: Hardware Progress: $319/GF"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3847">[ date ]</a>
+<a href="index.html#3847">[ thread ]</a>
+<a href="subject.html#3847">[ subject ]</a>
+<a href="author.html#3847">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Fri, 31 May 2002, Dani Eder wrote:
+<br>
+<p><em>&gt; I've been tracking the cost of a node in
+</em><br>
+<em>&gt; a Beowulf-type cluster of commodity computers, where
+</em><br>
+<em>&gt; the memory is kept at a ratio of 1 byte/flop/sec,
+</em><br>
+<em>&gt; and storage is 100 bytes/flop/sec.
+</em><br>
+<p>I likewise have been keeping track of hardware and Moore's law curve. But
+<br>
+for Cyc-style processing I use integer operations, not floating-point. Cyc
+<br>
+runs on a lisp runtime system that we wrote in portable C (gcc).  Very few
+<br>
+floating point operations are used; mainly our runtime is pointer chasing,
+<br>
+and type bit-stripping.  So I use SpecINT2000 benchmarks which are
+<br>
+available for many current and historical CPUs.  Then I set mips =
+<br>
+4*SpecINT2000 and plot mips on a log chart for CPU by year
+<br>
+introduced.  Hans Morovac has published his belief that the human brain
+<br>
+runs at 100 million mips. 
+<br>
+<p>Regarding disk storage, Cyc-style systems are memory bound and would
+<br>
+operate with modest shared network storage.  I would drop storage from the
+<br>
+unit cluster computation, because as you know a linux cluster does not
+<br>
+require disk storage for each node.  I would also drop the networking cost
+<br>
+from each unit because you can use a motherboard with an internal
+<br>
+NIC.  You can (if you wish) add in a fixed cost for racks, hubs and UPS.
+<br>
+<p><em>&gt; If optimistic estimates of the required computer
+</em><br>
+<em>&gt; power for human-level AI are correct at 100 TFlop/s,
+</em><br>
+<em>&gt; it presently costs $31.9M to buy a human's worth
+</em><br>
+<em>&gt; of computers. 
+</em><br>
+<p>Here is my calculation assuming AMD Athlon 2000+, boot-up from
+<br>
+network, and omitting fixed costs (not a recommended system, just
+<br>
+low-price parts):
+<br>
+<p>Case:         $25 Generic Mid-ATX w/300W power supply
+<br>
+Motherboard + CPU + NIC:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$185 830LR, Athlon 2000+, onboard NIC
+<br>
+DRAM         $216 qty 2 PC2700 DDR
+<br>
+<p>total        $426/node
+<br>
+<p>$426 / 2896 mips per node = $.147 / mips per node
+<br>
+100 mil mips / 2896 mips per node = 34,530 nodes per 100 mil mips
+<br>
+$426 * 34,530 nodes = $14.7 mil per full time Human Equivalent Computing 
+<br>
+<p><em>&gt; I have estimated an 'economic
+</em><br>
+<em>&gt; crossover' of $3M for 100 TFlop/s when computers
+</em><br>
+<em>&gt; become generally cheaper than humans.  This is
+</em><br>
+<em>&gt; based on a computer being able to put in 5x as
+</em><br>
+<em>&gt; many productive hours as an average human, a 5 year
+</em><br>
+<em>&gt; payback time on the hardware, and $120K as the total
+</em><br>
+<em>&gt; cost per year of a technical professional.  We are
+</em><br>
+<em>&gt; therefore about 3.4 doublings in performance/$
+</em><br>
+<em>&gt; away from economic crossover.  At current rates of
+</em><br>
+<em>&gt; cost reduction, that would be reached in early 2004.
+</em><br>
+<p>$120K x 5 x 5 = $3 mil crossover.
+<br>
+<p>$14.7 mil is approximately five times your crossover, which by Moore's law
+<br>
+is about four years away (somewhat more than two halvings in cost for
+<br>
+similar performance), about the year 2006.
+<br>
+<p>In the near future the hardware extrapolation is upset by AMD's
+<br>
+introduction of the Opteron AMD32-64 architecture.  Kurzweil has argued
+<br>
+that Moore's law will accelerate and this may be evidence.  Cyc will use
+<br>
+the 64-bit architecture to contain much larger knowledge bases in RAM. By
+<br>
+this time next year, I expect a hypothetical Opteron single CPU cluster to
+<br>
+achieve Human Equivalent Computing with half the number of nodes,
+<br>
+approximately 17,000.  By 2006 (roughly) only 4,000 nodes would be
+<br>
+required, using more powerful CPUs projected to be available.  A cube 16
+<br>
+nodes per side would yield 4096 nodes to give you an idea of the physical
+<br>
+space requirement.  And because AMD Opterons are designed for N-way
+<br>
+multiprocessor implementations, one might imagine constructing a cluster
+<br>
+in which each node is a 4-way Opteron.  Thus 1000 nodes (containing the
+<br>
+4000 CPUs) would occupy a cube only 10 nodes per side.
+<br>
+<p>Note that Human Equivalent Computing is only a comparison between
+<br>
+benchmarked computer performance and theorized human brain computational
+<br>
+power - not any measure of Artificial General Intelligence (AGI). 
+<br>
+<p>-Steve
+<br>
+<p><pre>
+-- 
+===========================================================
+Stephen L. Reed                  phone:  512.342.4036
+Cycorp, Suite 100                  fax:  512.342.4040
+3721 Executive Center Drive      email:  <a href="mailto:reed@cyc.com?Subject=Re:%20Hardware%20Progress:%20$319/GF">reed@cyc.com</a>
+Austin, TX 78731                   web:  <a href="http://www.cyc.com">http://www.cyc.com</a>
+         download OpenCyc at <a href="http://www.opencyc.org">http://www.opencyc.org</a>
+===========================================================
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3848.html">Ben Goertzel: "RE: Hardware Progress: $319/GF"</a>
+<li><strong>Previous message:</strong> <a href="3846.html">Dani Eder: "Re: Hardware Progress: $319/GF"</a>
+<li><strong>In reply to:</strong> <a href="3846.html">Dani Eder: "Re: Hardware Progress: $319/GF"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3848.html">Ben Goertzel: "RE: Hardware Progress: $319/GF"</a>
+<li><strong>Reply:</strong> <a href="3848.html">Ben Goertzel: "RE: Hardware Progress: $319/GF"</a>
+<li><strong>Reply:</strong> <a href="3849.html">Mike & Donna Deering: "Re: Hardware Progress: $319/GF"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3847">[ date ]</a>
+<a href="index.html#3847">[ thread ]</a>
+<a href="subject.html#3847">[ subject ]</a>
+<a href="author.html#3847">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:39 MDT
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: read/write on parse tree program representation (RE: Languages and AI)</title>
+<meta name="Author" content="James Rogers (jamesr@best.com)">
+<meta name="Subject" content="Re: read/write on parse tree program representation (RE: Languages and AI)">
+<meta name="Date" content="2001-07-20">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: read/write on parse tree program representation (RE: Languages and AI)</h1>
+<!-- received="Fri Jul 20 20:01:30 2001" -->
+<!-- isoreceived="20010721020130" -->
+<!-- sent="Fri, 20 Jul 2001 16:31:19 -0700" -->
+<!-- isosent="20010720233119" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Re: read/write on parse tree program representation (RE: Languages and AI)" -->
+<!-- id="B77E0D56.29B2%jamesr@best.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="IPEKIJJJKIMAFKAFMNAECEIFDDAA.ben@exocortex.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> James Rogers (<a href="mailto:jamesr@best.com?Subject=Re:%20read/write%20on%20parse%20tree%20program%20representation%20(RE:%20Languages%20and%20AI)"><em>jamesr@best.com</em></a>)<br>
+<strong>Date:</strong> Fri Jul 20 2001 - 17:31:19 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1808.html">Jordan Dimov: "Re: Languages and AI"</a>
+<li><strong>Previous message:</strong> <a href="1806.html">Eliezer S. Yudkowsky: "Flare improvements"</a>
+<li><strong>In reply to:</strong> <a href="1802.html">Ben Houston: "read/write on parse tree program representation (RE: Languages and AI)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1808.html">Jordan Dimov: "Re: Languages and AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1807">[ date ]</a>
+<a href="index.html#1807">[ thread ]</a>
+<a href="subject.html#1807">[ subject ]</a>
+<a href="author.html#1807">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On 7/20/01 3:38 PM, &quot;Ben Houston&quot; &lt;<a href="mailto:ben@exocortex.org?Subject=Re:%20read/write%20on%20parse%20tree%20program%20representation%20(RE:%20Languages%20and%20AI)">ben@exocortex.org</a>&gt; wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; How to implement this programmatically?  I would suggest a &quot;function lock&quot;
+</em><br>
+<em>&gt; or an &quot;object lock&quot; mechanisms kind to how one locks memory in a shared
+</em><br>
+<em>&gt; memory system (although you could get the parse tree without locking it,
+</em><br>
+<em>&gt; locking is only required for modifying it).  During the time it is locked if
+</em><br>
+<em>&gt; one tries to execute it an exception will be thrown.  Soon as you unlock a
+</em><br>
+<em>&gt; function or object it will be re-compiled.  This would require a little
+</em><br>
+<em>&gt; modification of the VM but not a huge amount.  Java with it's introspection
+</em><br>
+<em>&gt; capabilities already supports querying for an Objects exposed functions or
+</em><br>
+<em>&gt; variables, this is just an extension to that.
+</em><br>
+<p><p>I don't think you've fully thought through the consequences of what you are
+<br>
+suggesting.  Making this work well in the general case would be more
+<br>
+difficult than it appears you think it would, particularly inside the
+<br>
+framework of the existing Java VMs.
+<br>
+<p>An easier way to implement this would be to store the sequence of
+<br>
+programmatic bits in a properly isolated transactional database engine.  You
+<br>
+then read your program by fetching some sequence of record ids and doing an
+<br>
+eval of the code.  With sufficient isolation, you can keep your threads from
+<br>
+stepping on each other and using an existing transactional engine you don't
+<br>
+have to reinvent some of the rather complicated logic required to implement
+<br>
+such things well.  A mildly custom fitted solution of this type would have
+<br>
+some intrinsic scalability characteristics that a lot of other solutions
+<br>
+don't.  (This is hardly an original idea by any means -- I've done some &quot;for
+<br>
+fun&quot; work on Python to adapt it in similar fashion and I'm sure others have
+<br>
+too.)
+<br>
+<p>This actually sounds kind of Forth-ish, though I don't have much expertise
+<br>
+in that particular language.
+<br>
+<p>-James Rogers
+<br>
+&nbsp;<a href="mailto:jamesr@best.com?Subject=Re:%20read/write%20on%20parse%20tree%20program%20representation%20(RE:%20Languages%20and%20AI)">jamesr@best.com</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1808.html">Jordan Dimov: "Re: Languages and AI"</a>
+<li><strong>Previous message:</strong> <a href="1806.html">Eliezer S. Yudkowsky: "Flare improvements"</a>
+<li><strong>In reply to:</strong> <a href="1802.html">Ben Houston: "read/write on parse tree program representation (RE: Languages and AI)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1808.html">Jordan Dimov: "Re: Languages and AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1807">[ date ]</a>
+<a href="index.html#1807">[ thread ]</a>
+<a href="subject.html#1807">[ subject ]</a>
+<a href="author.html#1807">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:37 MDT
+</em></small></p>
+</body>
+</html>

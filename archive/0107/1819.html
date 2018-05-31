@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Flare</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="Flare">
+<meta name="Date" content="2001-07-21">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Flare</h1>
+<!-- received="Sat Jul 21 12:13:16 2001" -->
+<!-- isoreceived="20010721181316" -->
+<!-- sent="Sat, 21 Jul 2001 11:02:37 -0400" -->
+<!-- isosent="20010721150237" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="Flare" -->
+<!-- id="NDBBIBGFAPPPBODIPJMMKEPNFMAA.ben@goertzel.org" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="3B5334BD.C6BE1E4E@pobox.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=Re:%20Flare"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Sat Jul 21 2001 - 09:02:37 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1820.html">Eliezer S. Yudkowsky: "The Quest for Singularity (was: Flare)"</a>
+<li><strong>Previous message:</strong> <a href="1818.html">Simon McClenahan: "JOIN: Simon McClenahan"</a>
+<li><strong>In reply to:</strong> <a href="1752.html">Eliezer S. Yudkowsky: "PROJ: Flare"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1821.html">Peter Voss: "RE: Flare"</a>
+<li><strong>Reply:</strong> <a href="1821.html">Peter Voss: "RE: Flare"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1819">[ date ]</a>
+<a href="index.html#1819">[ thread ]</a>
+<a href="subject.html#1819">[ subject ]</a>
+<a href="author.html#1819">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Hi all,
+<br>
+<p>I re-read the Flare docs and thought hard about
+<br>
+<p>1) what is extremely valuable and what is peripheral in this proposal,
+<br>
+<p>2) how best to achieve what is extremely valuable
+<br>
+<p>I don't think Eli will like my conclusion, but I'll present it anyway.
+<br>
+<p>I think that the idea of annotative programming is a valuable and
+<br>
+fascinating one.  I'm not sure how necessary it is for AI, but it certainly
+<br>
+would be a useful tool to play with.
+<br>
+<p>One way to make annotative programming a reality in a reasonably short
+<br>
+period of time (say, a year or 2 instead of 5 years) would be to simply
+<br>
+modify an existing programming language to have the annotative-ness
+<br>
+property.
+<br>
+<p>In terms of existing languages, the two most plausible choices would seem to
+<br>
+be LISP and Java.
+<br>
+<p>My own preference is for Java, as this is more widely used and is the
+<br>
+subject of large-scale development at the moment.  Although currently we've
+<br>
+moved to C++ for Webmind, I still believe that Java and similar languages
+<br>
+are the future, and I suspect WM will be back in Java or something like it
+<br>
+one day.
+<br>
+<p>The Pizza and GJ projects extend Java to have higher-order functions and
+<br>
+generic types
+<br>
+<p><a href="http://www.cis.unisa.edu.au/~pizza/">http://www.cis.unisa.edu.au/~pizza/</a>
+<br>
+<a href="http://www.cis.unisa.edu.au/~pizza/gj/">http://www.cis.unisa.edu.au/~pizza/gj/</a>
+<br>
+<p>Similarly extending Java to handle general annotations in Eli's sense
+<br>
+shouldn't be too problematic, though certainly it will require a lot of
+<br>
+work.
+<br>
+<p>Java is far from perfect in how it handles garbage collection, threading and
+<br>
+lots of other issues.  But I have to believe that the many resources and
+<br>
+minds being thrown at solving these problems in Java, are going to yield
+<br>
+better results than a small team focusing on Flare, at least over the next
+<br>
+couple years.  (In the long run, yeah, Flare could conceivably build up into
+<br>
+a large-scale open-source initiative like Linux, but this would take quite a
+<br>
+long while.  Linux had a lot more of an obvious hook for attracting
+<br>
+worldwide coders.)
+<br>
+<p>In sum, and to be quite blunt and direct about it, my suggestion is:
+<br>
+<p>1) back-burner Flare
+<br>
+<p>2) focus on identifying exactly what &quot;annotative&quot; properties are
+<br>
+definitively valuable for implementing self-modifying AI, and create a
+<br>
+specification describing how these properties would manifest themselves in
+<br>
+an easily modifiable existing language such as Java or LISP
+<br>
+<p>3) modify the JVM or LISP interpreter appropriately
+<br>
+<p><p>Of course, making totally new programming languages is fun, and we all have
+<br>
+pet ideas about how to make a better programming language.  History shows
+<br>
+that most of these ideas don't come out as well as their creators think they
+<br>
+will.  The current Flare proposal strikes me as a mixture of &quot;cool pet ideas
+<br>
+about a programming language&quot; with &quot;really groundbreaking ideas about how to
+<br>
+make programming languages better for self-modifying AI.&quot;  If we take only
+<br>
+the latter and leave behind the former, we may be left with Annotative Java,
+<br>
+Pepperoni Pizza, or whatever...
+<br>
+<p>I can give more details later as time permits.  Or if someone else would
+<br>
+care to fill in some details on the &quot;Annotative Java&quot; idea that would be
+<br>
+great.
+<br>
+<p>Finally, I think the repeated mention of XML in the Flare documentation is
+<br>
+basically a distraction.  Yeah, XML is a nice standard to use, but let's
+<br>
+face it, we can take the run-time representation of a Java program and dump
+<br>
+it into XML if we want to.  Representability in XML is not the key point,
+<br>
+annotativity is the key point and XML is just a convenient textual
+<br>
+expression of annotative internal structures.  I think the documentation,
+<br>
+before it is presented to the &quot;real world&quot;, should be revised to reflect
+<br>
+this.
+<br>
+<p>-- Ben
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1820.html">Eliezer S. Yudkowsky: "The Quest for Singularity (was: Flare)"</a>
+<li><strong>Previous message:</strong> <a href="1818.html">Simon McClenahan: "JOIN: Simon McClenahan"</a>
+<li><strong>In reply to:</strong> <a href="1752.html">Eliezer S. Yudkowsky: "PROJ: Flare"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1821.html">Peter Voss: "RE: Flare"</a>
+<li><strong>Reply:</strong> <a href="1821.html">Peter Voss: "RE: Flare"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1819">[ date ]</a>
+<a href="index.html#1819">[ thread ]</a>
+<a href="subject.html#1819">[ subject ]</a>
+<a href="author.html#1819">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:37 MDT
+</em></small></p>
+</body>
+</html>

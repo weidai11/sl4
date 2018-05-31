@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Bayesian Pop Quiz</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: Bayesian Pop Quiz">
+<meta name="Date" content="2002-08-30">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Bayesian Pop Quiz</h1>
+<!-- received="Fri Aug 30 11:47:50 2002" -->
+<!-- isoreceived="20020830174750" -->
+<!-- sent="Fri, 30 Aug 2002 09:43:38 -0600" -->
+<!-- isosent="20020830154338" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: Bayesian Pop Quiz" -->
+<!-- id="LAEGJLOGJIOELPNIOOAJMELDDIAA.ben@goertzel.org" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="F12SOzNCWbzwWJv3zOd00000b56@hotmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20Bayesian%20Pop%20Quiz"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Fri Aug 30 2002 - 09:43:38 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="5241.html">Ben Goertzel: "RE: Metarationality (was: JOIN: Alden Streeter)"</a>
+<li><strong>Previous message:</strong> <a href="5239.html">Christian L.: "Autistic savants (was: Metarationality)"</a>
+<li><strong>In reply to:</strong> <a href="5237.html">Christian L.: "RE: Bayesian Pop Quiz"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#5240">[ date ]</a>
+<a href="index.html#5240">[ thread ]</a>
+<a href="subject.html#5240">[ subject ]</a>
+<a href="author.html#5240">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Christian wrote:
+<br>
+<em>&gt; Bayes' Theorem supposes that we have a universal set U which is
+</em><br>
+<em>&gt; subdivided
+</em><br>
+<em>&gt; into disjunct subsets H_1, ..., H_n. Then, given an event A,
+</em><br>
+<em>&gt; the probability of H_i when A has happened, P(H_i | A), can be
+</em><br>
+<em>&gt; calculated as
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; P(H_i | A) = P(H_i)*P(A | H_i) / (\sum_j P(H_j)*P(A | H_j))
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; What I have heard, the controversy that sometimes arises out of
+</em><br>
+<em>&gt; the use of
+</em><br>
+<em>&gt; this theorem is due to the fact that the probabilities P(H_j) are
+</em><br>
+<em>&gt; often very
+</em><br>
+<em>&gt; difficult to calculate, so you can distort your data by setting the
+</em><br>
+<em>&gt; probabilities P(H_j) in a sloppy fashion.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Am I correct in saying that the different Bayesian philosophies are
+</em><br>
+<em>&gt; concerned with methods of setting these probabilities (are these the
+</em><br>
+<em>&gt; &quot;priors&quot; you discuss?) in a careful way? Or is this too simplistic?
+</em><br>
+<p>From
+<br>
+<a href="http://ic.arc.nasa.gov/ic/projects/bayes-group/html/bayes-theorem-long.html">http://ic.arc.nasa.gov/ic/projects/bayes-group/html/bayes-theorem-long.html</a>
+<br>
+<p>&quot;Bayes' theorem gives the rule for updating belief in a Hypothesis H (i.e.
+<br>
+the probability of H) given additional evidence E, and background
+<br>
+information (context) I:
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p(H|E,I) = p(H|I)*p(E|H,I)/p(E|I)         [Bayes Rule]
+<br>
+<p>The left-hand term, p(H|E,I), is called the posterior probability, and it
+<br>
+gives the probability of the hypothesis H after considering the effect of
+<br>
+evidence E in context I. The p(H|I) term is just the prior probability of H
+<br>
+given I alone; that is, the belief in H before the evidence E is considered.
+<br>
+The term p(E|H,I) is called the likelihood, and it gives the probability of
+<br>
+the evidence assuming the hypothesis H and background information I is true.
+<br>
+The last term, 1/p(E|I), is independent of H, and can be regarded as a
+<br>
+normalizing or scaling constant. The information I is a conjunction of (at
+<br>
+least) all of the other statements relevant to determining p(H|I) and
+<br>
+p(E|I).&quot;
+<br>
+<p>So, yeah, it's often the setting of the priors P(H_i)  [in your multivariate
+<br>
+example] that is controversial.  MaxEnt is one way of doing this.
+<br>
+<p>Choice of Bayesian versus parametric stats methods often comes down to a
+<br>
+matter of taste: does one make heuristic assumptions about priors (MaxEnt,
+<br>
+invariance-principle-based assumptions, etc.), or does one make a heuristic
+<br>
+assumption regarding what pdf one is dealing with (Gaussian, hypergeometric,
+<br>
+whatever...).
+<br>
+<p>Another controversial point is the making conditional independence
+<br>
+assumtpions, for instance it's handy to simplify
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p(H|E1,E2,E3,I) = p(H|I)*p(E1,E2,E3|H,I)/p(E1,E2,E3|I)
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p(H|I)*p(E1|H,I)*p(E2|E1,H,I)*p(E3|E2,E1,H,I)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= ---------------------------------------------
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p(E1|I)*p(E2|E1,I)*p(E3|E2,E1,I)
+<br>
+<p>by assuming
+<br>
+<p>p(E2|E1,I) = p(E2|I)    and    p(E1|E2,I) = p(E1|I).
+<br>
+<p>but it's not always correct...
+<br>
+<p>This leads one into Bayesian networks, a popular AI technique in which one
+<br>
+constructs a directed acyclic graph (dag) of events, so that any two events
+<br>
+in the graph are independent conditional on their ancestors in the graph.
+<br>
+<p>See
+<br>
+<p>&nbsp;<a href="http://www.cs.berkeley.edu/~murphyk/Bayes/bayes.html">http://www.cs.berkeley.edu/~murphyk/Bayes/bayes.html</a>
+<br>
+<p>for basic Bayes nets info.
+<br>
+<p>Cyc, for example, uses Bayes nets ideas to make parts of their knowledge
+<br>
+base probabilistic.
+<br>
+<p>A problem with Bayes nets is that real knowledge bases often aren't easily
+<br>
+decomposable into dag hierarchies.  Thus, there have arisen things like
+<br>
+&quot;loopy Bayes nets.&quot;  My own AI system Novamente uses a variant of prob.
+<br>
+inference called Probabilistic Term Logic (PTL), which we created ourselves,
+<br>
+and which is vaguely along the lines of loopy Bayes nets, but fits better
+<br>
+into an integrative AI framework.
+<br>
+<p>Specifically, whereas Bayes nets (even loopy ones) assume all inference
+<br>
+occur within a single universal set U, PTL allows for a distributed network
+<br>
+of inferences, each of which may occur within a different U.  So it doesn't
+<br>
+assume a consistent probability model, rather a family of overlapping
+<br>
+probability models.
+<br>
+<p>In Novamente, some probabilities are detected by &quot;direct evaluation of
+<br>
+evidence&quot; (which includes the results of some nonprobabilistic cognitive
+<br>
+methods).  Then other probabilities are extrapolated from these using
+<br>
+probability theoretic rules (which incorporate Bayes rule among other
+<br>
+algebraic identities...).   The &quot;nonprobabilistic cognitive methods&quot;, from a
+<br>
+Bayesian perspective, could be interpreted as setting prior probabilities.
+<br>
+This is not how we usually think about the system's operations though....
+<br>
+We usually think as though there are a family of cognitive, perceptual and
+<br>
+action processes going on in the system, cooperating in revising the same
+<br>
+pool of procedural and declarative knowledge, and explicitly probabilistic
+<br>
+methods are just one member of the family.  Eliezer points out that all the
+<br>
+members of the family can in principle be viewed in probabilistic terms, and
+<br>
+it's true, but I don't find this observation all that useful.
+<br>
+<p><p>-- Ben G
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="5241.html">Ben Goertzel: "RE: Metarationality (was: JOIN: Alden Streeter)"</a>
+<li><strong>Previous message:</strong> <a href="5239.html">Christian L.: "Autistic savants (was: Metarationality)"</a>
+<li><strong>In reply to:</strong> <a href="5237.html">Christian L.: "RE: Bayesian Pop Quiz"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#5240">[ date ]</a>
+<a href="index.html#5240">[ thread ]</a>
+<a href="subject.html#5240">[ subject ]</a>
+<a href="author.html#5240">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:40 MDT
+</em></small></p>
+</body>
+</html>

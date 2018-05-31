@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Not the only way to build an AI [WAS: Please Re-read CAFAI]</title>
+<meta name="Author" content="Richard Loosemore (rpwl@lightlink.com)">
+<meta name="Subject" content="Not the only way to build an AI [WAS: Please Re-read CAFAI]">
+<meta name="Date" content="2005-12-14">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Not the only way to build an AI [WAS: Please Re-read CAFAI]</h1>
+<!-- received="Wed Dec 14 06:18:19 2005" -->
+<!-- isoreceived="20051214131819" -->
+<!-- sent="Wed, 14 Dec 2005 08:17:13 -0500" -->
+<!-- isosent="20051214131713" -->
+<!-- name="Richard Loosemore" -->
+<!-- email="rpwl@lightlink.com" -->
+<!-- subject="Not the only way to build an AI [WAS: Please Re-read CAFAI]" -->
+<!-- id="43A01B59.7070602@lightlink.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="BAY101-F1034E5083A0C798E0CEEE1AC380@phx.gbl" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Richard Loosemore (<a href="mailto:rpwl@lightlink.com?Subject=Re:%20Not%20the%20only%20way%20to%20build%20an%20AI%20[WAS:%20Please%20Re-read%20CAFAI]"><em>rpwl@lightlink.com</em></a>)<br>
+<strong>Date:</strong> Wed Dec 14 2005 - 06:17:13 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="13157.html">Eric Rauch: "Re: Not the only way to build an AI [WAS: Please Re-read CAFAI]"</a>
+<li><strong>Previous message:</strong> <a href="13155.html">Jef Allbright: "Re: Please Re-read CAFAI"</a>
+<li><strong>In reply to:</strong> <a href="13144.html">Michael Vassar: "Please Re-read CAFAI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="13157.html">Eric Rauch: "Re: Not the only way to build an AI [WAS: Please Re-read CAFAI]"</a>
+<li><strong>Reply:</strong> <a href="13157.html">Eric Rauch: "Re: Not the only way to build an AI [WAS: Please Re-read CAFAI]"</a>
+<li><strong>Reply:</strong> <a href="13162.html">Jef Allbright: "Re: Not the only way to build an AI [WAS: Please Re-read CAFAI]"</a>
+<li><strong>Reply:</strong> <a href="13180.html">nuzz604: "Re: Not the only way to build an AI [WAS: Please Re-read CAFAI]"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#13156">[ date ]</a>
+<a href="index.html#13156">[ thread ]</a>
+<a href="subject.html#13156">[ subject ]</a>
+<a href="author.html#13156">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Michael Vassar wrote:
+<br>
+<em>&gt; Some posters seem to be very seriously unaware of what was said in 
+</em><br>
+<em>&gt; CAFAI, but having read and understood it should be a prerequisite to 
+</em><br>
+<em>&gt; posting here.
+</em><br>
+<em>&gt; My complaints
+</em><br>
+<em>&gt; Friendly AIs are explicitly NOT prevented from messing with their 
+</em><br>
+<em>&gt; source-code or with their goal systems.  However, they act according to 
+</em><br>
+<em>&gt; decision theory.  .... 
+</em><br>
+&nbsp;&nbsp;&nbsp;^^^^^^^^^^^^^^^
+<br>
+<p>I have to go on record here as saying that I (and others who are poorly 
+<br>
+represented on this list) fundamentally disagree with this statement.  I 
+<br>
+would not want readers of these posts to get the idea that this is THE 
+<br>
+universally agreed way to build an artificial intelligence.  Moreover, 
+<br>
+many of the recent debates on this list are utterly dependent on the 
+<br>
+assumption that you state above, so to people like me these debates are 
+<br>
+just wheel-spinning built on nonsensical premises.
+<br>
+<p>Here is why.
+<br>
+<p>Friendly AIs built on decision theory have goal systems that specify 
+<br>
+their goals:   but in what form are the goals represented, and how are 
+<br>
+they interpreted?  Here is a nice example of a goal:
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Put the blue block on top of the red block&quot;
+<br>
+<p>In a Blocks World, the semantics of this goal - its &quot;meaning&quot; - are not 
+<br>
+at all difficult.  All fine and good: standard 1970's-issue artificial 
+<br>
+intelligence, etc.
+<br>
+<p>But what happens when the goals become more abstract:
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Maximize the utility function, where the utility function 
+<br>
+specifies that thinking is good&quot;
+<br>
+<p>I've deliberately chosen a silly UF (thinking is good) because people on 
+<br>
+this list frequently talk as if a goal like that has a meaning that is 
+<br>
+just as transparent as the meaning of &quot;put the blue block on top of the 
+<br>
+red block&quot;.  The semantics of &quot;thinking is good&quot; is clearly not trivial, 
+<br>
+and in fact it is by no means obvious that the phrase can be given a 
+<br>
+clear enough semantics to enable it to be used as a sensible input to a 
+<br>
+decision-theory-driven AGI.
+<br>
+<p>The behavior of an AGI with such a goal would depend crucially on what 
+<br>
+mechanisms it used to interpret the meaning of &quot;thinking is good&quot;.  So 
+<br>
+much so, in fact, that it becomes stupid to talk of the system as being 
+<br>
+governed by the decision theory component:  it is not, it is governed by 
+<br>
+whatever mechanisms you can cobble together to interpret that vague goal 
+<br>
+statement.  What initially looked like the dog's tail (the mechanisms 
+<br>
+that govern the interpretation of goals) starts to wag the dog (the 
+<br>
+decision-theory-based goal engine).
+<br>
+<p>The standard response to this criticism is that while the semantics are 
+<br>
+not obvious, the whole point of modern AI research is to build systems 
+<br>
+that do rigorously interpret the semantics in some kind of compositional 
+<br>
+way, even in the cases of abstract goals like &quot;thinking is good&quot;.  In 
+<br>
+other words, the claim is that I am seeing a fundamental problem where 
+<br>
+others only see a bunch of complex implementation details.
+<br>
+<p>This is infuriating nonsense:  there are many people out there who 
+<br>
+utterly disagree with this position, and who have solid reasons for 
+<br>
+doing so.  I am one of them.
+<br>
+<p>So when you say &quot;Friendly AIs [...] act according to decision theory.&quot; 
+<br>
+you mean &quot;The particular interpretation of how to build a Friendly AI 
+<br>
+that is common on this list, acts according to decision theory.&quot;
+<br>
+<p>And, as I say, much of the recent discussion about passive AI and goal 
+<br>
+systems is just content-free speculation, from my point of view.
+<br>
+<p>Richard Loosemore
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="13157.html">Eric Rauch: "Re: Not the only way to build an AI [WAS: Please Re-read CAFAI]"</a>
+<li><strong>Previous message:</strong> <a href="13155.html">Jef Allbright: "Re: Please Re-read CAFAI"</a>
+<li><strong>In reply to:</strong> <a href="13144.html">Michael Vassar: "Please Re-read CAFAI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="13157.html">Eric Rauch: "Re: Not the only way to build an AI [WAS: Please Re-read CAFAI]"</a>
+<li><strong>Reply:</strong> <a href="13157.html">Eric Rauch: "Re: Not the only way to build an AI [WAS: Please Re-read CAFAI]"</a>
+<li><strong>Reply:</strong> <a href="13162.html">Jef Allbright: "Re: Not the only way to build an AI [WAS: Please Re-read CAFAI]"</a>
+<li><strong>Reply:</strong> <a href="13180.html">nuzz604: "Re: Not the only way to build an AI [WAS: Please Re-read CAFAI]"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#13156">[ date ]</a>
+<a href="index.html#13156">[ thread ]</a>
+<a href="subject.html#13156">[ subject ]</a>
+<a href="author.html#13156">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:54 MDT
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Coding from Scratch: Jaron Lanier</title>
+<meta name="Author" content="Gordon Worley (redbird@rbisland.cx)">
+<meta name="Subject" content="Re: Coding from Scratch: Jaron Lanier">
+<meta name="Date" content="2003-01-26">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Coding from Scratch: Jaron Lanier</h1>
+<!-- received="Sun Jan 26 16:58:21 2003" -->
+<!-- isoreceived="20030126235821" -->
+<!-- sent="Sun, 26 Jan 2003 18:58:16 -0500" -->
+<!-- isosent="20030126235816" -->
+<!-- name="Gordon Worley" -->
+<!-- email="redbird@rbisland.cx" -->
+<!-- subject="Re: Coding from Scratch: Jaron Lanier" -->
+<!-- id="098C1A80-318A-11D7-97D1-000A27B4DEFC@rbisland.cx" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="00be01c2c4ea$bf57f840$6501a8c0@slnt.phub.net.cable.rogers.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Gordon Worley (<a href="mailto:redbird@rbisland.cx?Subject=Re:%20Coding%20from%20Scratch:%20Jaron%20Lanier"><em>redbird@rbisland.cx</em></a>)<br>
+<strong>Date:</strong> Sun Jan 26 2003 - 16:58:16 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="6123.html">Christian Rovner: "SL4 Wiki News"</a>
+<li><strong>Previous message:</strong> <a href="6121.html">Jonathan Standley: "Re: Coding from Scratch: Jaron Lanier"</a>
+<li><strong>In reply to:</strong> <a href="6120.html">Michael Roy Ames: "Re: Coding from Scratch: Jaron Lanier"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6124.html">Gordon Worley: "Re: Coding from Scratch: Jaron Lanier"</a>
+<li><strong>Reply:</strong> <a href="6124.html">Gordon Worley: "Re: Coding from Scratch: Jaron Lanier"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6122">[ date ]</a>
+<a href="index.html#6122">[ thread ]</a>
+<a href="subject.html#6122">[ subject ]</a>
+<a href="author.html#6122">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Saturday, January 25, 2003, at 10:26  PM, Michael Roy Ames wrote:
+<br>
+<p><em>&gt; I think this is what Lanier was getting at in his comments: creating
+</em><br>
+<em>&gt; interfaces that are:
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; a) self configuring and
+</em><br>
+<em>&gt; b) self recognising
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; So that programs could be assembled like building blocks with generic
+</em><br>
+<em>&gt; interfaces, rather than as gestalt crystals.
+</em><br>
+<p>While all of this is true, look at what happens when you write, say, a 
+<br>
+C program.
+<br>
+<p>1.)  Write a bit of C code into a file.
+<br>
+2.)  Send that file to a compiler.
+<br>
+3.)  You find out if your code was grammatically correct or not.  If 
+<br>
+not, you go back to step 1.
+<br>
+4.)  Test your program, debug.
+<br>
+<p>Steps 3 and 4 are where a lot of problems come in.  For example,
+<br>
+<p>if (a == b)
+<br>
+<p>is correct code but
+<br>
+<p>fi (a == b)
+<br>
+<p>will completely prevent your program from compiling.  A simple typo of 
+<br>
+this sort puts your program out of commission.  Biologically this is 
+<br>
+like putting a nerve a few nanometers off of where it's supposed to be, 
+<br>
+yet to the compiler this is a fatal error.
+<br>
+<p>This is just a simple example, though.  You have further problems like 
+<br>
+this:
+<br>
+<p>//...
+<br>
+if (i &amp;&amp; i-&gt;x)
+<br>
+//...
+<br>
+<p>will not crash if i == NULL, but
+<br>
+<p>//...
+<br>
+if (i &amp; i-&gt;x)
+<br>
+//...
+<br>
+<p>will crash if i == NULL.  But the compiler doesn't say anything.  Of 
+<br>
+course, we'd expect the program to not crash but a typo can, once 
+<br>
+again, cause a difficult to track error.  What we'd expect is for the 
+<br>
+program not to crash even if we make a typo, so it would be smart 
+<br>
+enough to know that NULL-&gt;x doesn't exist either (some languages handle 
+<br>
+this by treating the null pointer as pointing to a special null object).
+<br>
+<p>HTML is a good example of the direction programming should be heading.  
+<br>
+For example, if I forget to type a closing tag for a block element the 
+<br>
+rendering engine is smart enough to figure out that the block element 
+<br>
+ended or, if it can't, will still display the information, though in a 
+<br>
+fashion that may not have been expected.  HTML fails gracefully and 
+<br>
+still gets the job done, displaying information to the user.  Of 
+<br>
+course, you can cause HTML errors that result in serious problems, but 
+<br>
+usually this involves screwing up something pretty seriously.  A typo 
+<br>
+won't cause big problems, but giving the wrong values to several 
+<br>
+attributes may culminate in serious problems (misshapen tables, 
+<br>
+images).  HTML isn't perfect and it can be hard to track down errors in 
+<br>
+your code, but it does do some good things that C, Java, and the 
+<br>
+plethora of other languages never even come close to.
+<br>
+<p><pre>
+--
+Gordon Worley                      &quot;It requires a very unusual mind
+<a href="http://www.rbisland.cx/">http://www.rbisland.cx/</a>               to undertake the analysis of
+<a href="mailto:redbird@rbisland.cx?Subject=Re:%20Coding%20from%20Scratch:%20Jaron%20Lanier">redbird@rbisland.cx</a>                           the obvious.&quot;
+PGP:  0xBBD3B003                        --Alfred North Whitehead
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="6123.html">Christian Rovner: "SL4 Wiki News"</a>
+<li><strong>Previous message:</strong> <a href="6121.html">Jonathan Standley: "Re: Coding from Scratch: Jaron Lanier"</a>
+<li><strong>In reply to:</strong> <a href="6120.html">Michael Roy Ames: "Re: Coding from Scratch: Jaron Lanier"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6124.html">Gordon Worley: "Re: Coding from Scratch: Jaron Lanier"</a>
+<li><strong>Reply:</strong> <a href="6124.html">Gordon Worley: "Re: Coding from Scratch: Jaron Lanier"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6122">[ date ]</a>
+<a href="index.html#6122">[ thread ]</a>
+<a href="subject.html#6122">[ subject ]</a>
+<a href="author.html#6122">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:41 MDT
+</em></small></p>
+</body>
+</html>

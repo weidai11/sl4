@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Webmind Solutions</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: Webmind Solutions">
+<meta name="Date" content="2002-03-03">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Webmind Solutions</h1>
+<!-- received="Sun Mar 03 17:34:44 2002" -->
+<!-- isoreceived="20020304003444" -->
+<!-- sent="Sun, 3 Mar 2002 15:31:27 -0700" -->
+<!-- isosent="20020303223127" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: Webmind Solutions" -->
+<!-- id="LAEGJLOGJIOELPNIOOAJIEHCCEAA.ben@goertzel.org" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="OE29CiP0bbbppvDUmD40000c19c@hotmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20Webmind%20Solutions"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Sun Mar 03 2002 - 15:31:27 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3096.html">Justin Corwin: "Re: Date of Singularity"</a>
+<li><strong>Previous message:</strong> <a href="3094.html">Michael Roy Ames: "Re: Webmind Solutions"</a>
+<li><strong>In reply to:</strong> <a href="3094.html">Michael Roy Ames: "Re: Webmind Solutions"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3095">[ date ]</a>
+<a href="index.html#3095">[ thread ]</a>
+<a href="subject.html#3095">[ subject ]</a>
+<a href="author.html#3095">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Hi,
+<br>
+<p><em>&gt; (Referring to a transactional paradigm for AI)
+</em><br>
+<em>&gt; This is same conclusion I came to when 'playing' with AI designs.  Once I
+</em><br>
+<em>&gt; got down to actually imagining how I was going to monitor, to debug, to
+</em><br>
+<em>&gt; adjust the parameters on-the-fly, to recover-from-failure, etc.
+</em><br>
+<em>&gt; ...  well, a
+</em><br>
+<em>&gt; lot of unworkable 'mind' ideas got tossed out.  What was left had an - how
+</em><br>
+<em>&gt; can I say it - unglamorous overhead.  But I thought it was *doable*.
+</em><br>
+<p>Yup.  So one winds up with a multilayered design approach.  An unglamorous,
+<br>
+contemporary-software-engineering-ish layer, and then on top of that, a
+<br>
+layer that does implement the structures and dynamics of mind.  For us to
+<br>
+get the relationship and interaction between these layers &quot;right&quot; (for our
+<br>
+AI design) took a long time.
+<br>
+<p><em>&gt; &gt; Of course, the transaction architecture is just a start, right?
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Yeah... but an important start.  Without that start, you would
+</em><br>
+<em>&gt; just have to
+</em><br>
+<em>&gt; backtrack and retrofit everything once you tried to 'go distributed'.
+</em><br>
+<p>Yes, because of our past experience building a distributed Webmind, now we
+<br>
+have built our 1-machine Novamente in such a way that only a very small
+<br>
+number of objects will need to be modified when Novamente goes the way of
+<br>
+Webmind and gets distributed...
+<br>
+<p><em>&gt; &gt; The bottom line seems to be: No one is going to supply an off-the-shelf
+</em><br>
+<em>&gt; &gt; testing/monitoring package suitable for distributed Real AI
+</em><br>
+<em>&gt; purposes.  We
+</em><br>
+<em>&gt; &gt; will have to build one ourselves.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Yep.  A &quot;Console&quot; for Real AI.  Gotta have it.
+</em><br>
+<p>I agree that an AIConsole or something like it is a must-have, and we had a
+<br>
+graphical tool like this for use with the Webmind AI Engine.  It was very
+<br>
+cool, and made playing with the system much easier.  (&quot;Webmind Explorer&quot;, we
+<br>
+called it.)
+<br>
+<p>What we have now isn't exactly a AIConsole but serves a similar purpose.  We
+<br>
+call it wmshell (should be nmshell I guess, but the name is historical ;).
+<br>
+<p>It's a Linux shell customized for experimenting with Novamente.  So you can
+<br>
+send commands to a Novamente instance in real-time, get information back,
+<br>
+etc.
+<br>
+<p>In our architecture, one would implement a graphical AIConsole by having it
+<br>
+issue and receive wmshell commands, I suppose.
+<br>
+<p><em>&gt; It would be a good idea to make this as 'general' a solution as
+</em><br>
+<em>&gt; possible, to
+</em><br>
+<em>&gt; allow flexibility in adapting as our AI theories of 'what works'
+</em><br>
+<em>&gt; get tested
+</em><br>
+<em>&gt; (and thrown out 8D).
+</em><br>
+<p>Well, my main point in this regard is: The first version of a tool like this
+<br>
+is inevitably going to be only half-usable.
+<br>
+<p>It's *interaction with the developers using the tool in the context of
+<br>
+creating and running and debugging an AI system* that will allow the second
+<br>
+version to be really good.
+<br>
+<p>So, a *general* tool of this type will only be creatable if, while creating
+<br>
+it, there are *teams associated with more than one AI project* actively
+<br>
+using the tool.
+<br>
+<p>Another way to say this is: The detailed requirements for such a tool are
+<br>
+hard to articulate.  They're essentially *impossible* to articulate until
+<br>
+one has a largely-designed, partially-completed AI system on one's hands,
+<br>
+demanding the tool for its development.  And even so, one will always fail
+<br>
+in articulating them completely at first; new and important requirements
+<br>
+will always come out in the course of using the tool's first version.
+<br>
+<p>If it were possible to coordinate the development of an AIConsole between
+<br>
+two Real AI projects ... well, that might be a bigger miracle than actually
+<br>
+creating Real AI ;) ... but who knows!!
+<br>
+<p>On a less nitty-gritty level, Eliezer and I have talked before about
+<br>
+creating a series of &quot;IQ tests&quot; for different phases of seed AI development,
+<br>
+which would be applicable to both of our AI systems.  I've also talked to
+<br>
+Shane Legg, currently involved with Peter Voss's Adaptive Intelligence
+<br>
+project, about this.  This seems to me more likely to happen than the
+<br>
+development of a general-purpose testing tool, but... who knows... ;&gt;
+<br>
+<p><em>&gt; Not to mention it being easier to start a commercial
+</em><br>
+<em>&gt; off-shoot of the product if it is coded fairly generally.
+</em><br>
+<p>Well, I have enough painful business experience to know that making a
+<br>
+commercial product to be broadly marketed is a whole different task from
+<br>
+building a tool for use within 1 or 2 or 3 particular projects....
+<br>
+<p>However, I agree that if a specialized AIConsole tool is well-built, it may
+<br>
+be possible to take core components of it, and use them to fill out the back
+<br>
+end of a subsequent product, whose overall design is based on an analysis of
+<br>
+the requirements of a broader range of customers.
+<br>
+<p>Generally, though, starting a business based on a technology rather than a
+<br>
+concretely observed pressing customer need is a recipe for trouble (of a
+<br>
+type with which I'm very familiar!)
+<br>
+<p><em>&gt; &gt; Hence, it seems likely that each would-be Real AI project, as it goes
+</em><br>
+<em>&gt; &gt; distributed, will have to tackle this problem on its own!
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; The sooner we tackle it the better IMO.  You mentioned many times, when
+</em><br>
+<em>&gt; recounting the difficulties/fun of the Webmind project, that 'parameter
+</em><br>
+<em>&gt; tuning' was difficult and time-consuming.  The Console concept is
+</em><br>
+<em>&gt; just-the-thing to make this easy(ier).  You could also use it to
+</em><br>
+<em>&gt; pound-away
+</em><br>
+<em>&gt; at the models with thousands of test scenarios.  And as a
+</em><br>
+<em>&gt; debugging tool: to
+</em><br>
+<p>I agree, this stuff is important.  Our wmshell tool is a start, for our
+<br>
+specialized purposes, but we're well aware that it's only a start!
+<br>
+<p>&nbsp;-- Ben G
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3096.html">Justin Corwin: "Re: Date of Singularity"</a>
+<li><strong>Previous message:</strong> <a href="3094.html">Michael Roy Ames: "Re: Webmind Solutions"</a>
+<li><strong>In reply to:</strong> <a href="3094.html">Michael Roy Ames: "Re: Webmind Solutions"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3095">[ date ]</a>
+<a href="index.html#3095">[ thread ]</a>
+<a href="subject.html#3095">[ subject ]</a>
+<a href="author.html#3095">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:37 MDT
+</em></small></p>
+</body>
+</html>

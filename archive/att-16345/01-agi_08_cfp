@@ -1,0 +1,105 @@
+                                                                     
+                                                                     
+                                                                     
+                                             
+
+First Call for Papers
+The First Conference on Artificial General Intelligence (AGI-08)
+March 1-3, 2008, at Memphis, Tennessee, USA
+http://www.agi-08.org
+Paper submission deadline: September 30, 2007
+---------------------------
+
+The field of Artificial Intelligence (AI) was initially directly aimed at the construction of "thinking machines" – that is, computer systems with human-like general intelligence. But this task proved very difficult, and so as steps in this direction, AI researchers focused on producing AI systems displaying intelligence regarding specific tasks in relatively narrow domains. In recent years, however, the situation has been changing. More and more researchers have recognized the necessity – and feasibility – of returning to the original goals of the field. Increasingly, there is a call for a transition from the current focus on highly specialized "narrow AI" problem solving systems, back to confronting the more difficult issues of "human level intelligence" and more broadly "artificial general intelligence (AGI)."
+
+Encouraged by the recent success of several smaller-scale AGI-Related Meetings (www.agi-08.org/related.php) we have taken the initiative to facilitate the very first international conference on AGI. The AGI-08 conference will give AGI researchers the opportunity for presenting research results and exchanging ideas on topics of common interest. During the conference, we will also discuss the possibility of creating a new organization to promote and coordinate AGI research.
+
+The conference is explicitly open to all the various techniques used in seeking to realize general intelligence – for instance, symbolic, connectionist, evolutionary, robotic, mathematical, or integrative approaches (... or new approaches that the conference organizers have never heard of!). We are particularly interested in papers describing concrete, reasonably well-fleshed-out AGI projects – meaning, research projects that:
+
+- are based on a coherent theory about "intelligence" as a whole
+- involve a concrete engineering plan oriented toward implementing the relevant conception of general intelligence in a computer system
+- have already produced some concrete results, either practical or theoretical
+
+However, we are also open to high-quality submissions that address key aspects of AGI from a purely theoretical perspective, or that discuss AGI projects at an earlier stage of development. There is a list of Suggested Topics (www.agi-08.org/suggested.php) at the conference website, though other topics are also welcomed, so long as there is a recognizable relation to AGI, as defined above.
+
+AGI-08 will be an inter-disciplinary meeting. Besides computer scientists and engineers, we also welcome researchers from cognitive science, psychology, linguistics, neuroscience, philosophy, and other allied fields.
+
+Conference Format
+---------------------------
+A tentative schedule (www.agi-08.org/schedule.php) is available at the conference website.
+
+Briefly speaking, the conference will consist of several technical sessions, a poster session, and a few special sessions as well. Each technical session will be organized around a topic, and have time for talks, panel discussion, and general discussion.
+
+Paper Submission
+---------------------------
+AGI-08 will accept two types of submissions: full-length papers (12 pages) and short position statements (5 pages). All submissions should be prepared using the IOS templates (www.iospress.nl/authco/instruction_crc.html), either in LaTeX or in MS Word.
+
+All the papers will be submitted electronically. The details of the submission procedure will be announced before the due date at the conference website.
+
+AGI-08 Proceedings will be published by IOS Press, a major AI publisher. All accepted papers will also be available on-line for open access.
+
+Whether an accepted paper (of either length) will be presented as a talk or as a poster will be determined by the Program Committee, in part based on paper quality as assessed by the anonymous reviewers, and in part according to the extent the paper addresses a topic of core interest to the AGI community.
+
+The acceptance of a paper is based on the assumption that one of the authors will attend the conference to present the paper.
+
+Important Due Dates
+---------------------------
+- September 30, 2007: Paper submission
+- November 30, 2007: Acceptance notification
+- December 20, 2007: Camera-ready copy submission
+
+Organizing Committee
+---------------------------
+  Stan Franklin (Chair), franklin -at- memphis.edu
+  Sidney D'Mello, sdmello -at- memphis.edu
+  Ben Goertzel, ben -at- novamente.net
+  Bruce Klein, bruce -at- novamente.net
+  Lee McCauley, mccauley -at- memphis.edu
+  Pei Wang, pei.wang -at- temple.edu
+
+Program Committee
+---------------------------
+  Ben Goertzel (Co-Chair), Novamente LLC
+  Pei Wang (Co-Chair), Temple University
+  Sam S. Adams, IBM Research
+  James Anderson, Brown University
+  Mike Anderson, Franklin & Marshall College
+  Mark H. Bickhard, Lehigh University
+  Yaneer Bar-Yam, New England Complex Systems Institute
+  Eric Baum, Baum Research Enterprises
+  Henry Brighton, Max Planck Institute for Human Development
+  Nick Cassimatis, Rensselaer Polytechnic Institute
+  Hernan Castro, Intel Corporation
+  Andrew Coward, Australian National University
+  Hugo de Garis, Wuhan University
+  Debbie Duong, Science Applications International Corporation
+  Wlodzislaw Duch, Nicolaus Copernicus University
+  Richard Duro, Universidade da Coruña
+  Stan Franklin, University of Memphis
+  David Friedlander, Behavior Recognition Systems
+  Phil Goetz, National Library of Medicine
+  Josh Storrs Hall, Institute for Molecular Manufacturing
+  Marcus Hutter, Australian National University
+  Cliff Joslyn, Los Alamos National Laboratory
+  Nikola Kasabov, Auckland University of Technology
+  Randal Koene, Boston University
+  Christian Lebiere, Carnegie Mellon University
+  Soo-Young Lee, Korea Advanced Institute of Science & Technology
+  Douglas Lenat, Cycorp
+  Moshe Looks, Science Applications International Corporation
+  Bruce MacLennan, University of Tennessee
+  Don Perlis, University of Maryland
+  Matthias Scheutz, University of Notre Dame
+  Juergen Schmidhuber, Dalle Molle Institute for Artificial Intelligence
+  Lokendra Shastri, International Computer Science Institute
+  Aaron Sloman, University of Birmingham
+  David G. Stork, Ricoh Innovations
+  John Gerald Taylor, King's College London
+  Karin Verspoor, Los Alamos National Laboratory
+  Paul Vogt, Tilburg University
+  Mark Waser, Books International
+  Mary-Anne William, University of Technology, Sydney
+
+More information
+---------------------------
+http://www.agi-08.org

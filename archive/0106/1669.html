@@ -1,0 +1,252 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: further newsbit on those new IBM transistors</title>
+<meta name="Author" content="Brian Atkins (brian@posthuman.com)">
+<meta name="Subject" content="Re: further newsbit on those new IBM transistors">
+<meta name="Date" content="2001-06-26">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: further newsbit on those new IBM transistors</h1>
+<!-- received="Wed Jun 27 00:20:09 2001" -->
+<!-- isoreceived="20010627062009" -->
+<!-- sent="Tue, 26 Jun 2001 23:44:53 -0400" -->
+<!-- isosent="20010627034453" -->
+<!-- name="Brian Atkins" -->
+<!-- email="brian@posthuman.com" -->
+<!-- subject="Re: further newsbit on those new IBM transistors" -->
+<!-- id="3B3956B5.DD585E99@posthuman.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="3B38F9BD.AFDC13DC@abinitio.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Brian Atkins (<a href="mailto:brian@posthuman.com?Subject=Re:%20further%20newsbit%20on%20those%20new%20IBM%20transistors"><em>brian@posthuman.com</em></a>)<br>
+<strong>Date:</strong> Tue Jun 26 2001 - 21:44:53 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1670.html">gabriel C: "Re: SI Jail"</a>
+<li><strong>Previous message:</strong> <a href="1668.html">Brian Atkins: "Re: further newsbit on those new IBM transistors"</a>
+<li><strong>In reply to:</strong> <a href="1665.html">Carl Feynman: "Re: further newsbit on those new IBM transistors"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1669">[ date ]</a>
+<a href="index.html#1669">[ thread ]</a>
+<a href="subject.html#1669">[ subject ]</a>
+<a href="author.html#1669">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Carl Feynman wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; Brian Atkins wrote:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; My (limited) understanding is that the
+</em><br>
+<em>&gt; &gt; clock signal is transported through a chip layout in order to &quot;trigger&quot;
+</em><br>
+<em>&gt; &gt; the transistors to switch.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Not every transistor has a clock input.  Typically there are between four
+</em><br>
+<em>&gt; and ten unclocked transistors in series, and then a &quot;latch&quot;, which is a
+</em><br>
+<em>&gt; pair of transistors that switch synchronously with the clock.  It is up to
+</em><br>
+<em>&gt; the chip architect to decide how many transistors there are between
+</em><br>
+<em>&gt; latches, and then the logic of the chip has to be designed to fit that
+</em><br>
+<em>&gt; constraint. If you want to be fancy, the architect can decide that part of
+</em><br>
+<em>&gt; the chip will have 10 transistors between latches, and run at 1 GHz, and
+</em><br>
+<em>&gt; part will have five transistors between stages, and run at 2 GHz.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; &gt; According to what you are saying it would
+</em><br>
+<em>&gt; &gt; mean there would be only one possible clock speed for a given chip
+</em><br>
+<em>&gt; &gt; design. i.e. if you have 10ghz transistors and parts of the chip use
+</em><br>
+<em>&gt; &gt; 10 transistors in series, then the chip is sold as a 1ghz part.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; This is exactly what happens.
+</em><br>
+<p>Well that sounds like a completely asynchronous design. The point I'm
+<br>
+getting at is the clock can be modified...
+<br>
+<p><em>&gt; 
+</em><br>
+<em>&gt; &gt; This
+</em><br>
+<em>&gt; &gt; clearly isn't the case since chips are sold in a wide range of speeds.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; I'm puzzled by what you mean here.  Let me take a stab at it...
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Some Pentiums are fast, some Pentiums are slow, but this is because they
+</em><br>
+<em>&gt; are manufactured using different processes, and in some cases, using
+</em><br>
+<em>&gt; different logic designs.  From an engineering point of view, they are not
+</em><br>
+<em>&gt; &quot;one chip sold in a wide range of speeds.&quot;  They are different chips, that
+</em><br>
+<em>&gt; are all labeled &quot;the same&quot; by the marketing department.
+</em><br>
+<p>I disagree here. I know that there is a &quot;natural&quot; variation in the max
+<br>
+clock speed achievable for a set of &quot;identical&quot; chips that come off of
+<br>
+a wafer. The manufacturers test them and do a &quot;bin split&quot; where all of
+<br>
+the chips capable of a specific speed grade are sorted together. For
+<br>
+instance, the current AMD Athlon 4 chip produced in Germany on their
+<br>
+copper process might have a &quot;sweet spot&quot; of 1.4ghz, but off a given
+<br>
+wafer you may have some chips that can operate up to 1.8ghz, and some
+<br>
+that only work at 1.2ghz and below. This is due simply to errors and
+<br>
+flaws in the manufacturing process. AMD marks them all according to
+<br>
+what they can handle, and may even mark some of them lower if there is
+<br>
+currently big demand for a lower speed grade.
+<br>
+<p><em>&gt; 
+</em><br>
+<em>&gt; You can make a chip run faster by upping the input voltage, as you say, and
+</em><br>
+<em>&gt; also by cooling it.  But these modifications typically produce less than a
+</em><br>
+<em>&gt; 50% gain, and aren't what account for the speed differences between
+</em><br>
+<em>&gt; different versions of the &quot;same chip&quot;.  Changes in voltage and temperature
+</em><br>
+<em>&gt; give the engineers that designed the chip the heebie-jeebies, and are not a
+</em><br>
+<em>&gt; robust way of improving performance.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; I think that the chip can be configured to run the clock lines at a
+</em><br>
+<em>&gt; &gt; wide variety of speeds, and the only limitations come in from the fact
+</em><br>
+<em>&gt; &gt; that the transistors may require higher voltage levels to be able to
+</em><br>
+<em>&gt; &gt; switch quickly enough. Higher voltages eventually run you into heat
+</em><br>
+<em>&gt; &gt; dissipation and other problems, putting an upper limit on how fast a
+</em><br>
+<em>&gt; &gt; given chip design/substrate combo can operate.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Actually, chips are usually run near their maximum tolerable voltage.  The
+</em><br>
+<em>&gt; limit is set by various kinds of short-circuts being induced by electrons
+</em><br>
+<em>&gt; arcing across a gap or tunneling through an insulator.  Heat disspation is
+</em><br>
+<em>&gt; a problem for the packaging engineer.  At the high end, we're not pushing
+</em><br>
+<em>&gt; the limits of cooling technology.
+</em><br>
+<p>Hmm, well I've read about Pentium 4 &quot;hotspots&quot; that are already causing
+<br>
+thermal throttling problems in real world benchmarks... Some of these
+<br>
+CPUs are putting out over 75 watts. But that is not the high end :-)
+<br>
+<p>Anyway, what I was saying was simply that the CPU manufacturers can
+<br>
+&quot;lock&quot; the CPU clock to operate only at a given frequency. Intel has
+<br>
+done this in the past to try and defeat overclockers.
+<br>
+<p>So can we sum up: what are the factors that limit the max clockspeed of
+<br>
+a given chip design? transistor switching speed is only one apparently
+<br>
+minor factor. If we already have transistors in .18 processes that can
+<br>
+switch at over 100ghz speeds, why are our CPU designs limited to speeds
+<br>
+under 2ghz? Will clockless designs allow higher speeds and better
+<br>
+performance?
+<br>
+<p><em>&gt; 
+</em><br>
+<em>&gt; I designed chips for supercomputers from '84 to '92, so what I say above is
+</em><br>
+<em>&gt; nine years out of date.  But I don't think much has changed.
+</em><br>
+<em>&gt; 
+</em><br>
+<p>Thanks for the details!
+<br>
+<pre>
+-- 
+Brian Atkins
+Director, Singularity Institute for Artificial Intelligence
+<a href="http://www.intelligence.org/">http://www.intelligence.org/</a>
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1670.html">gabriel C: "Re: SI Jail"</a>
+<li><strong>Previous message:</strong> <a href="1668.html">Brian Atkins: "Re: further newsbit on those new IBM transistors"</a>
+<li><strong>In reply to:</strong> <a href="1665.html">Carl Feynman: "Re: further newsbit on those new IBM transistors"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1669">[ date ]</a>
+<a href="index.html#1669">[ thread ]</a>
+<a href="subject.html#1669">[ subject ]</a>
+<a href="author.html#1669">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: ARTICLE: Memory bandwidth</title>
+<meta name="Author" content="Ben Goertzel (ben@webmind.com)">
+<meta name="Subject" content="RE: ARTICLE: Memory bandwidth">
+<meta name="Date" content="2001-04-15">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: ARTICLE: Memory bandwidth</h1>
+<!-- received="Sun Apr 15 22:27:25 2001" -->
+<!-- isoreceived="20010416042725" -->
+<!-- sent="Sun, 15 Apr 2001 21:34:25 -0400" -->
+<!-- isosent="20010416013425" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@webmind.com" -->
+<!-- subject="RE: ARTICLE: Memory bandwidth" -->
+<!-- id="NDBBIBGFAPPPBODIPJMMMEAKFGAA.ben@webmind.com" -->
+<!-- charset="Windows-1252" -->
+<!-- inreplyto="LOBBLDGHBFLPJDFBIPFEOEHGGKAA.patrick@kia.net" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@webmind.com?Subject=RE:%20ARTICLE:%20Memory%20bandwidth"><em>ben@webmind.com</em></a>)<br>
+<strong>Date:</strong> Sun Apr 15 2001 - 19:34:25 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1132.html">Eliezer S. Yudkowsky: "HUMOR: &quot;The Onion&quot;, SL2 version"</a>
+<li><strong>Previous message:</strong> <a href="1130.html">Mitchell Porter: "HYPE: &quot;Russians create 'artificial human brain'&quot;"</a>
+<li><strong>In reply to:</strong> <a href="1129.html">Patrick McCuller: "RE: ARTICLE: Memory bandwidth"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1133.html">Patrick McCuller: "RE: ARTICLE: Memory bandwidth"</a>
+<li><strong>Reply:</strong> <a href="1133.html">Patrick McCuller: "RE: ARTICLE: Memory bandwidth"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1131">[ date ]</a>
+<a href="index.html#1131">[ thread ]</a>
+<a href="subject.html#1131">[ subject ]</a>
+<a href="author.html#1131">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; 	I suspect, very much suspect, that you would have had
+</em><br>
+<em>&gt; nearly identical
+</em><br>
+<em>&gt; performance problems regardless of what language you used, and if you had
+</em><br>
+<em>&gt; spent man-hours debugging malloc(), you wouldn't have gotten so far into
+</em><br>
+<em>&gt; actual AI.
+</em><br>
+<p>This is ~exactly~ the mindset I had a year and a half ago.  Now, after much
+<br>
+practical experience with large-scale Java, I know better.  Webmind is
+<br>
+probably the most complex and intensive Java program ever written in terms
+<br>
+of having vast numbers of different types of objects on different machines
+<br>
+in different threads.  We studied everything ever written about JVM's and OO
+<br>
+programming, and used every design pattern known to man, and many new ones.
+<br>
+We arrived at amazingly efficient design patterns using arrays in tricky
+<br>
+ways to store data (int arrays storing various values accessed through bit
+<br>
+masking), and accessing these through elegant interfaces.  Even so,
+<br>
+ultimately, we keep running up against the terrible inefficiency of the JVM
+<br>
+when used for a program of this scale.  I really believe that the JVM simply
+<br>
+was never tested/tuned/tweaked on programs of this scale.  C/C++ has been
+<br>
+used for really massive and intensive programs before, and is just plain
+<br>
+more robust in this regard.
+<br>
+<p>Man-hours debugging malloc() suck.  But we've spent numerous man-hours
+<br>
+working around Java's undocumented inefficiencies and limitations, and the
+<br>
+lack of adequate debuggers or working profilers, and in the end, we still
+<br>
+haven't solved the problems.  The solutions are
+<br>
+<p>-- give up on java for the performance-intensive, RAM-hogging parts of the
+<br>
+code, or
+<br>
+-- improve the JVM itself
+<br>
+<p>I'd love to do the latter, we have plenty of ideas for how, but we lack the
+<br>
+resources ;p
+<br>
+<p>ben
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1132.html">Eliezer S. Yudkowsky: "HUMOR: &quot;The Onion&quot;, SL2 version"</a>
+<li><strong>Previous message:</strong> <a href="1130.html">Mitchell Porter: "HYPE: &quot;Russians create 'artificial human brain'&quot;"</a>
+<li><strong>In reply to:</strong> <a href="1129.html">Patrick McCuller: "RE: ARTICLE: Memory bandwidth"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1133.html">Patrick McCuller: "RE: ARTICLE: Memory bandwidth"</a>
+<li><strong>Reply:</strong> <a href="1133.html">Patrick McCuller: "RE: ARTICLE: Memory bandwidth"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1131">[ date ]</a>
+<a href="index.html#1131">[ thread ]</a>
+<a href="subject.html#1131">[ subject ]</a>
+<a href="author.html#1131">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

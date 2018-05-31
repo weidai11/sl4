@@ -1,0 +1,236 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]</title>
+<meta name="Author" content="J. Andrew Rogers (andrew@ceruleansystems.com)">
+<meta name="Subject" content="Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]">
+<meta name="Date" content="2006-01-31">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]</h1>
+<!-- received="Tue Jan 31 19:07:19 2006" -->
+<!-- isoreceived="20060201020719" -->
+<!-- sent="Tue, 31 Jan 2006 18:07:13 -0800" -->
+<!-- isosent="20060201020713" -->
+<!-- name="J. Andrew Rogers" -->
+<!-- email="andrew@ceruleansystems.com" -->
+<!-- subject="Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]" -->
+<!-- id="16B00E05-015B-4700-ABAE-27F424E79199@ceruleansystems.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="20060201001745.GQ5913@chain.digitalkingdom.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> J. Andrew Rogers (<a href="mailto:andrew@ceruleansystems.com?Subject=Re:%20Syllabus%20for%20Seed%20Developer%20Qualifications%20[WAS%20Re:%20Some%20considerations%20about%20AGI]"><em>andrew@ceruleansystems.com</em></a>)<br>
+<strong>Date:</strong> Tue Jan 31 2006 - 19:07:13 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="13937.html">Mitchell Porter: "Re: Chris McKinstry (1967-2006)"</a>
+<li><strong>Previous message:</strong> <a href="13935.html">Robin Lee Powell: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>In reply to:</strong> <a href="13935.html">Robin Lee Powell: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="../0602/13939.html">Kevin Osborne: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>Reply:</strong> <a href="../0602/13939.html">Kevin Osborne: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#13936">[ date ]</a>
+<a href="index.html#13936">[ thread ]</a>
+<a href="subject.html#13936">[ subject ]</a>
+<a href="author.html#13936">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Jan 31, 2006, at 4:17 PM, Robin Lee Powell wrote:
+<br>
+<em>&gt; This seems to break down to:
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; 1.  People familiar with C will have no real problems with pointers.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;     Absolute rubbish.  I programmed C for *years*, and they never
+</em><br>
+<em>&gt;     stopped causing me trouble.  This is true for 9/10ths of the
+</em><br>
+<em>&gt;     programmers I've discussed this with.
+</em><br>
+<p><p>It is a good thing that the really important code is written by the  
+<br>
+other 10% then, isn't it? ;-)
+<br>
+<p>I never said that programmers do not have problems with pointers  
+<br>
+(clearly many do), but that there is nothing intrinsic about pointers  
+<br>
+in C that means they *will* cause trouble.  I programmed C for many  
+<br>
+years too, and any problems I did have disappeared after a couple  
+<br>
+years simply by learning proper practice.  The primary problem is not  
+<br>
+pointers but memory management -- reference counting languages have  
+<br>
+similar issues in the hands of careless programmers.  I was really  
+<br>
+reacting to how some people recoil in horror at the thought of  
+<br>
+programming in C, as though all C code is unavoidably saddled with  
+<br>
+memory leaks and similar.  It requires a little extra discipline and  
+<br>
+a clue, which is not an insurmountable sacrifice if you need or want  
+<br>
+the benefits of C.  Writing bulletproof C *is* painfully verbose.
+<br>
+<p>There are many reasons to use GC languages or other memory management  
+<br>
+schemes notably lazy, careless, or bad programmers.  I use languages  
+<br>
+like Python because I am lazy, not because pointers have ever caused  
+<br>
+me problems, and much of the C I have written is for server processes  
+<br>
+that require years of nonstop operation -- if there were problems,  
+<br>
+they would have become apparent.  Maybe I am special, but I doubt it.
+<br>
+<p><p><em>&gt; 2.  Using pointers directly increases code speed.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;     Even more incorrect.
+</em><br>
+<p><p>You did not comprehend what I was stating.  Direct access to memory  
+<br>
+management (which pretty much requires pointers) *allows* very  
+<br>
+significant performance improvements that are not accessible  
+<br>
+otherwise.  No language is immune to naive code.
+<br>
+<p><p><em>&gt;     In the long run, performance is a factor
+</em><br>
+<em>&gt;     of the big-O of the code, and I am, in general, *guaranteed* to
+</em><br>
+<em>&gt;     come up with a worse (in terms of big-O) piece of code than
+</em><br>
+<em>&gt;     someone who has, say, been studying sorting algorithms for their
+</em><br>
+<em>&gt;     entire career.  Thus, if I use a language that has such a
+</em><br>
+<em>&gt;     sorting algorithm built into it, I am guaranteed to be better
+</em><br>
+<em>&gt;     off.
+</em><br>
+<p><p>Not necessarily true; the designer of the generic sorting algorithm  
+<br>
+has no idea what you are going to do with it.  This issue comes up  
+<br>
+pretty frequently in the real world when using &quot;highly optimized&quot; but  
+<br>
+generic libraries for performance sensitive code.  But what do you do  
+<br>
+after you've squeezed out all the big-O you can?  There is usually  
+<br>
+integer factors of potential improvement left over in direct memory  
+<br>
+management and memory layout, even for natively compiled languages.
+<br>
+<p>In fact, the performance improvement gained by direct memory  
+<br>
+management is nothing more than optimizing the big-O of memory access/ 
+<br>
+management algorithms.  Big-O optimization applies as much to what is  
+<br>
+under the hood as what is on top of it.
+<br>
+<p><p><em>&gt;     This is not to say that all languages without pointers are
+</em><br>
+<em>&gt;     faster than all languages with them, but the idea that having
+</em><br>
+<em>&gt;     direct access to memory pointers in a language *necessarily*
+</em><br>
+<em>&gt;     makes things faster is preposterous.
+</em><br>
+<p><p>No, it necessarily *allows* a programmer to make things faster, at  
+<br>
+least with the programming technologies we have today.  Direct memory  
+<br>
+management in all its guises will buy integer factors performance  
+<br>
+improvement for many types of codes if you know what you are doing,  
+<br>
+which is pretty significant.  Compilers and garbage collectors still  
+<br>
+have pretty crude ideas on how to keep the cache lines full.
+<br>
+<p>Do what you gotta do.  If speed is important above all else, direct  
+<br>
+memory management will buy you a hell of a lot of it in many cases,  
+<br>
+and that requires pointers.  If speed is not so important in the  
+<br>
+calculus, use anything that appeals and reduces line count.  I use  
+<br>
+Python most of the time myself for screwing around with AI stuff, but  
+<br>
+the highly optimized C versions of the same complex algorithms are  
+<br>
+about 10^2 - 10^3 times faster and use about 10x less memory.   
+<br>
+Languages like Java can be somewhere in the middle when optimized.
+<br>
+<p>I was not saying that C was great for everything, just that C is hard  
+<br>
+to touch for raw performance potential if you bother to spend some  
+<br>
+time with it.  For many things, raw performance does not matter  
+<br>
+enough to be worth the time.  TANSTAAFL.  Pick the right tool for the  
+<br>
+right job and realize that sometimes you cannot have your cake and  
+<br>
+eat it too.
+<br>
+<p>Cheers,
+<br>
+<p><p>J. Andrew Rogers
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="13937.html">Mitchell Porter: "Re: Chris McKinstry (1967-2006)"</a>
+<li><strong>Previous message:</strong> <a href="13935.html">Robin Lee Powell: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>In reply to:</strong> <a href="13935.html">Robin Lee Powell: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="../0602/13939.html">Kevin Osborne: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>Reply:</strong> <a href="../0602/13939.html">Kevin Osborne: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#13936">[ date ]</a>
+<a href="index.html#13936">[ thread ]</a>
+<a href="subject.html#13936">[ subject ]</a>
+<a href="author.html#13936">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:55 MDT
+</em></small></p>
+</body>
+</html>

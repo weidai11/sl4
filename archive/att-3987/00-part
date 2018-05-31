@@ -1,0 +1,49 @@
+On Thu, 2002-06-13 at 13:37, Stephen Reed wrote:
+> Cyc, which falls very short of AGI, is 1.4 million lines of translated C
+> code and the result of an 18 year project addressing only classical
+> symbolic knowledge representation and deductive N-order reasoning.
+
+
+I don't think this is representative of the actual requirements though.
+I'd be willing to bet that the capabilities of the above system could be
+reproduced in an order of magnitude fewer lines of C code if
+re-architected from the ground up. That is a lot of lines of code for
+something that doesn't do that much in an algorithmic sense.
+
+ 
+> The KB (knowledge base) content can be roughly considered as source code
+> if the system could use its knowledge to improve itself (and it cannot
+> yet).  Cyc has about 1.6 million assertions.
+
+
+Again, I doubt this is particularly representative of the real problem,
+although I expect the data portion of an AGI will require a lot more
+effort to build than the compilable code.  I don't disagree that a
+really useful system would require millions of raw data nodes.
+
+For the purposes of AGI at this point, I don't think we are really
+calling this "code".  People are still working on the compilable
+substrate portion, never mind the data layers. 
+
+ 
+> So I believe that the creation of Seed AI is far beyond the capability of
+> a single individual, and that belief is my motivation for working at
+> Cycorp.
+
+
+This is a flawed belief in that it appears to be based solely on the
+premise of your experience with Cyc. If you don't think the Cyc
+architecture is directly pertinent to AGI (and many don't), then it
+becomes a null data point.
+
+My personal meaningless guess with respect to the ceiling for the number
+of lines of compiler code required to generate an AGI is about 50,000. 
+Any more than this and you are almost certainly doing things in the
+source code that should be pushed up a layer. Of course, my data point
+is as useful as most everyone else's at this point.
+
+-James Rogers
+ jamesr@best.com
+
+
+

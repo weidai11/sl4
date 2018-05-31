@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Questions about any Would-Be AGI</title>
+<meta name="Author" content="Stephen Reed (reed@cyc.com)">
+<meta name="Subject" content="Re: Questions about any Would-Be AGI">
+<meta name="Date" content="2002-05-21">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Questions about any Would-Be AGI</h1>
+<!-- received="Tue May 21 17:56:43 2002" -->
+<!-- isoreceived="20020521235643" -->
+<!-- sent="Tue, 21 May 2002 16:38:44 -0500 (CDT)" -->
+<!-- isosent="20020521213844" -->
+<!-- name="Stephen Reed" -->
+<!-- email="reed@cyc.com" -->
+<!-- subject="Re: Questions about any Would-Be AGI" -->
+<!-- id="Pine.LNX.4.21.0205211552200.11503-100000@balrog.cyc.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="3CEA9C7B.9BDB671D@pobox.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Stephen Reed (<a href="mailto:reed@cyc.com?Subject=Re:%20Questions%20about%20any%20Would-Be%20AGI"><em>reed@cyc.com</em></a>)<br>
+<strong>Date:</strong> Tue May 21 2002 - 15:38:44 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3802.html">Christian L.: "Re: [JOIN] Stephen Reed"</a>
+<li><strong>Previous message:</strong> <a href="3800.html">ben goertzel: "RE: Questions about any Would-Be AGI"</a>
+<li><strong>In reply to:</strong> <a href="3797.html">Eliezer S. Yudkowsky: "Re: Questions about any Would-Be AGI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3805.html">Ben Goertzel: "Cyc + Albus + Novamente =  cheap and simple murder of third world citizens [was RE: Questions about any Would-Be AGI]"</a>
+<li><strong>Reply:</strong> <a href="3805.html">Ben Goertzel: "Cyc + Albus + Novamente =  cheap and simple murder of third world citizens [was RE: Questions about any Would-Be AGI]"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3801">[ date ]</a>
+<a href="index.html#3801">[ thread ]</a>
+<a href="subject.html#3801">[ subject ]</a>
+<a href="author.html#3801">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Tue, 21 May 2002, Eliezer S. Yudkowsky wrote:
+<br>
+<p><em>&gt; GOFAI philosophers are famous for insisting that the relations between words
+</em><br>
+<em>&gt; constitute the whole of any one word's meaning, but as you know, I think
+</em><br>
+<em>&gt; that the perceptual patterns invoked by words also have something to do with
+</em><br>
+<em>&gt; it.
+</em><br>
+<p>Yes, Cyc operates from the assumption that meaning can be expressed
+<br>
+as relationships among concepts, insofar as passing tests of understanding
+<br>
+-- for example question answering.  
+<br>
+<p>We do draw a distinction between words and concepts, according to GOFCL
+<br>
+(Good Old Fashioned Computational Linguistics).  Words are elements of
+<br>
+natural language and concepts are the elements of the (Cyc) knowledge
+<br>
+base. 
+<br>
+<p>I suppose that given a sufficient model (or lots of instances) of what you
+<br>
+call perceptual patterns, I would try to determine a vocabulary to assert
+<br>
+relationships among the objects in the perception. Fuzzy terms could be
+<br>
+used to collapse the (overly precise) features from visual
+<br>
+perceptions.  So if the system were shown enough pictures of Apples,
+<br>
+then the assertions might of the form: &quot;Apples are approximately red in
+<br>
+color&quot; &quot;Apples are about 5 cm in diameter&quot;.  Given a KB containing such
+<br>
+assertions, and a vision system extracting those features, I believe that
+<br>
+Cyc could classify a new picture as an Apple picture or not.
+<br>
+<p><em>&gt; I also think that being able to reconstruct a scrambled concept
+</em><br>
+<em>&gt; net, in this way, is a necessary condition for saying that the AI possesses
+</em><br>
+<em>&gt; knowledge about the concept behind the word, and not just knowledge about
+</em><br>
+<em>&gt; how the word is likely to be used in proximity to other words.
+</em><br>
+<p>Yes, we will face a smaller problem of the same sort, when OpenCyc is
+<br>
+positioned as a Semantic Web Server.  How does one Cyc understand concepts
+<br>
+created by another peer Cyc?  We allow the term names to be created in the
+<br>
+natural language of the author.  Likewise comments may be in languages
+<br>
+other than English.  Term names and comments are opaque to Cyc's current
+<br>
+reasoning, so our plan is to perform analogical reasoning and
+<br>
+classification to fit new knowledge (semi) automatically into the Cyc
+<br>
+reference ontology.   [&quot;Chien&quot; is a small domestic animal that
+<br>
+barks.  Maybe it is the same thing as Cyc's reference Dog.]
+<br>
+<p><em>&gt; I think that from a Cyc's-eye-view, Cyc may know
+</em><br>
+<em>&gt; something about the grammatical structure of English strings; it knows which
+</em><br>
+<em>&gt; English strings are synonyms for English strings, and which English strings
+</em><br>
+<em>&gt; are properties of English strings that describe categories, and which
+</em><br>
+<em>&gt; English strings denote events that cause events denoted by other English
+</em><br>
+<em>&gt; strings to occur, and so on, but it doesn't have any idea which events and
+</em><br>
+<em>&gt; categories the English strings correspond to.
+</em><br>
+<p>As far as question answering is concerned, I would say there are many
+<br>
+cases in which Cyc's understanding of the concepts denoted by English
+<br>
+words is testable.  For example &quot;World War II&quot; denotes the term
+<br>
+c0fd5d2b-9c29-11b1-9dad-c379636f7270 which has the name WorldWarII. Cyc
+<br>
+knows (has the assertion): The Nuremberg Trials starts after the end
+<br>
+of World War II. In CycL: (startsAfterEndingOf NurembergTrials WorldWarII)
+<br>
+Cyc could be asked (in the CycL equivalent to) &quot;Did the Nurenburg Trials
+<br>
+occur before World War II?&quot; and respond &quot;No&quot; and give the justification.
+<br>
+<p><em>&gt; If I had to pick an incremental direction for Cyc (as opposed to a complete philosophical
+</em><br>
+<em>&gt; revision), I think it would be focusing on those Cyc concepts that can be
+</em><br>
+<em>&gt; grounded in the complex data of Cyc's internals - i.e., teaching Cyc
+</em><br>
+<em>&gt; perceptual concepts for its own internals.
+</em><br>
+<p>Agreed, as that is a path to Seed AI.
+<br>
+<p>-Steve
+<br>
+<p><pre>
+-- 
+===========================================================
+Stephen L. Reed                  phone:  512.342.4036
+Cycorp, Suite 100                  fax:  512.342.4040
+3721 Executive Center Drive      email:  <a href="mailto:reed@cyc.com?Subject=Re:%20Questions%20about%20any%20Would-Be%20AGI">reed@cyc.com</a>
+Austin, TX 78731                   web:  <a href="http://www.cyc.com">http://www.cyc.com</a>
+         download OpenCyc at <a href="http://www.opencyc.org">http://www.opencyc.org</a>
+===========================================================
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3802.html">Christian L.: "Re: [JOIN] Stephen Reed"</a>
+<li><strong>Previous message:</strong> <a href="3800.html">ben goertzel: "RE: Questions about any Would-Be AGI"</a>
+<li><strong>In reply to:</strong> <a href="3797.html">Eliezer S. Yudkowsky: "Re: Questions about any Would-Be AGI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3805.html">Ben Goertzel: "Cyc + Albus + Novamente =  cheap and simple murder of third world citizens [was RE: Questions about any Would-Be AGI]"</a>
+<li><strong>Reply:</strong> <a href="3805.html">Ben Goertzel: "Cyc + Albus + Novamente =  cheap and simple murder of third world citizens [was RE: Questions about any Would-Be AGI]"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3801">[ date ]</a>
+<a href="index.html#3801">[ thread ]</a>
+<a href="subject.html#3801">[ subject ]</a>
+<a href="author.html#3801">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:39 MDT
+</em></small></p>
+</body>
+</html>

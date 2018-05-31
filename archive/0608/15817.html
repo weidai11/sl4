@@ -1,0 +1,339 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Loosemore's Collected Writings on SL4 - Part 7</title>
+<meta name="Author" content="Richard Loosemore (rpwl@lightlink.com)">
+<meta name="Subject" content="Loosemore's Collected Writings on SL4 - Part 7">
+<meta name="Date" content="2006-08-26">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Loosemore's Collected Writings on SL4 - Part 7</h1>
+<!-- received="Sat Aug 26 20:41:04 2006" -->
+<!-- isoreceived="20060827024104" -->
+<!-- sent="Sat, 26 Aug 2006 22:37:56 -0400" -->
+<!-- isosent="20060827023756" -->
+<!-- name="Richard Loosemore" -->
+<!-- email="rpwl@lightlink.com" -->
+<!-- subject="Loosemore's Collected Writings on SL4 - Part 7" -->
+<!-- id="44F10584.4000608@lightlink.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Richard Loosemore (<a href="mailto:rpwl@lightlink.com?Subject=Re:%20Loosemore's%20Collected%20Writings%20on%20SL4%20-%20Part%207"><em>rpwl@lightlink.com</em></a>)<br>
+<strong>Date:</strong> Sat Aug 26 2006 - 20:37:56 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="15818.html">Richard Loosemore: "Loosemore's Collected Writings on SL4 - Part 6"</a>
+<li><strong>Previous message:</strong> <a href="15816.html">Richard Loosemore: "Loosemore's Collected Writings on SL4 - Part 4"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#15817">[ date ]</a>
+<a href="index.html#15817">[ thread ]</a>
+<a href="subject.html#15817">[ subject ]</a>
+<a href="author.html#15817">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+[begin part 7]
+<br>
+<p>************************************************************
+<br>
+*                                                          *
+<br>
+* Software Development Environments for AGI                *
+<br>
+*                                                          *
+<br>
+************************************************************
+<br>
+<p>Ben Goertzel wrote:
+<br>
+<em>&gt; Richard,
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; It's true that making an AGI, given current software
+</em><br>
+<em>&gt; technology, is a big pain, and it takes a long time to
+</em><br>
+<em>&gt; get from vision to implementation.
+</em><br>
+<p><em>&gt; I agree that better software tools would help make
+</em><br>
+<em>&gt; the process a lot easier, even though I have a feeling
+</em><br>
+<em>&gt; your vision of better software tools is a bit
+</em><br>
+<em>&gt; overidealistic.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; However, I have chosen to focus on AGI itself rather
+</em><br>
+<em>&gt; than on building better tools, because I've judged
+</em><br>
+<em>&gt; that given my limited resources, I'll probably
+</em><br>
+<em>&gt; get to AGI faster via focusing on AGI than via
+</em><br>
+<em>&gt; focusing on tools first.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; While tools work is conceptually easier than AGI
+</em><br>
+<em>&gt; work by far, it still requires a lot of thought and
+</em><br>
+<em>&gt; a lot of manpower.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; I would be more interested in your tools ideas if
+</em><br>
+<em>&gt; they were presented in a more concrete way.
+</em><br>
+<p>But it would be a misunderstanding to treat my suggestion as &quot;here is a
+<br>
+a possible good way to build an AGI.&quot; If it were that sort of
+<br>
+suggestion, I would be just one of a hundred tool designers with (what
+<br>
+they thought were) great ideas.
+<br>
+<p>I am saying something much more serious. I am saying that we *need* to
+<br>
+do things this way. We will eventually realise that anything else is not
+<br>
+going to work.
+<br>
+<p>We have to build systems that grow their own representations, we cannot
+<br>
+presuppose those representations and then, later, tack on some learning
+<br>
+mechanisms that will feed those representations with new knowledge. This
+<br>
+fundamental point is crucial to my argument, so make sure that you are
+<br>
+absolutely clear about that before we discuss fine details about the
+<br>
+environment.
+<br>
+<p>Richard Loosemore
+<br>
+<p><p>************************************************************
+<br>
+*                                                          *
+<br>
+* The Complex Systems Critique (Again)                     *
+<br>
+*                                                          *
+<br>
+************************************************************
+<br>
+<p>This reply is primarily directed at HC and Ben Goertzel, who have given
+<br>
+two of the most insightful responses to what I wrote.
+<br>
+<p>I won't quote your specific posts back at you, because I am trying not
+<br>
+to pollute the discussion with too many n-th order quotes. Instead, I
+<br>
+have read what you say and I will try to reply to the spirit of it.
+<br>
+<p>There are a couple of subtle traps that we are falling into sometimes
+<br>
+when we talk about the relevance of &quot;complex systems&quot; to AGI design. The
+<br>
+second brings us right to the heart of the issue; the first is easier,
+<br>
+so I'll deal with that first.
+<br>
+<p>The first trap is to think that I am advocating something at the level
+<br>
+of using specific mathematics, or known CAS systems, or accepted CAS
+<br>
+theories (such as they are) to be the new basis of AGI research.
+<br>
+<p>Not at all: I am merely taking a fairly simple result, applying it to
+<br>
+cognitive systems, and coming to a conclusion about strategy. Then I'm
+<br>
+outa there: bye bye Santa Fe, back to work.
+<br>
+<p>The second trap is much harder to state, but I'll try. It involves a
+<br>
+distinction between three things that I might be saying, only one of
+<br>
+which is true:
+<br>
+<p>(1) Am I saying that the thinking and reasoning mechanisms (the ones to
+<br>
+be found in an adult system) are acting as a complex system on a moment
+<br>
+by moment basis? In other words, if we could look at the local,
+<br>
+low-level functioning of those mechanisms would we find a complex
+<br>
+systems disconnect between that level and (global) thinking and
+<br>
+reasoning behavior? NO! I am not saying that. I think this is possible,
+<br>
+but that is not my claim at the moment: Iam neutral about this issue.
+<br>
+<p>(2) Am I saying .... exactly ditto, but about the learning mechanisms
+<br>
+(the things that build new concepts as a result of experience)? If we
+<br>
+looked at the concept-building mechanisms, would we find that we could
+<br>
+not relate local to global? Again: NO! I am not saying that; I am
+<br>
+neutral about that also.
+<br>
+<p>(3) What I am trying to talk about is the way that the learning
+<br>
+mechanisms interact with a real world environment over the course of the
+<br>
+system's lifetime learning, generating all the knowledge that the system
+<br>
+has as an adult. This is a long-term process, and the outcome, the end
+<br>
+result of this process is going to be governed by the cumulative result
+<br>
+of some very CAS-like mechanisms (the learning mechanisms) interacting
+<br>
+with the world. Here is where I find the trouble. This process,
+<br>
+considered as a system, contains at least the possibility of a
+<br>
+complex-systems-like disconnect between local mechanisms (the learning
+<br>
+mechanisms proper) and global behavior (the knowledge generated by the
+<br>
+mechanisms, by the time system gets to be an adult). It is not a matter
+<br>
+of moment by moment disconnect, it is a lifetime disconnect.
+<br>
+<p>To illustrate with an example of what might happen: you could insert
+<br>
+your chosen learning mechanisms, let them interact with the world, and
+<br>
+then be surprised at the end of the day to find that, say, the system
+<br>
+just never managed to get certain kinds of abstraction; and when you
+<br>
+tried to figure out why this was happening, there might be nothing local
+<br>
+that you could put your finger on. You would simply be getting something
+<br>
+wrong at the end of the process, but because it was a result of a
+<br>
+long-term interaction (i.e. a complex system effect), you might not be
+<br>
+able to attack it directly.
+<br>
+<p>Now, in one sense all I want to do is get people to discuss this latter
+<br>
+possibility. Just the possibility! I want someone to acknowledge that
+<br>
+this might turn out to the way things happen. We might not have
+<br>
+seriously run up against the problem yet, because enobody has subjected
+<br>
+their AGI model to the test of getting it to build almost all of its
+<br>
+knowledge using just the combination of learning mechanisms and messy
+<br>
+real-world experience. Is that not also agreed? That no one has really
+<br>
+done an end-to-end test of a real, non-toy, general knowledge-
+<br>
+acquisition mechanism yet?
+<br>
+<p>And if this is true (that nobody has done such a test yet), is it not
+<br>
+true that if my hypothesis is true, the only way we might to start to
+<br>
+really notice the effect is after we had done a few long-term learning
+<br>
+runs and noticed that the learning mechanisms were simply not working?
+<br>
+<p>You might say: why expect trouble when we have no reason to believe that
+<br>
+there will be trouble. My response has been: if the learning mechanisms
+<br>
+have the characteristics we generally think of them as having, and if as
+<br>
+a result they look like they will display the usual complex systems
+<br>
+disconnect between local and global, the experience of the complex
+<br>
+systems community is that it would be truly astonishing if we did not
+<br>
+have trouble.
+<br>
+<p>Finally, I am using this argument as a reason to adopt a new research
+<br>
+*paradigm* (exemplified by my suggested development environment and
+<br>
+methodology), not a particular *model of cognition*. I was very clear
+<br>
+about this, but a number of people have persistently and viciously
+<br>
+slammed my words because they say the model [sic] I have proposed is
+<br>
+stupidly vague. There was never any such model.
+<br>
+<p>I think this is the clearest I have managed to state the argument.
+<br>
+<p>I might add that anyone who advances a thesis in this kind of forum is
+<br>
+always caught between a rock and a hard place: if I am brief, my wording
+<br>
+is so concise that it lends itself nicely to misinterpretation by people
+<br>
+who take one paragraph at a time and criticise out of context; but if I
+<br>
+give a long, detailed account I am accused of being long-winded. Damned
+<br>
+if I do, damned if I don't.
+<br>
+<p>Richard Loosemore.
+<br>
+<p><p><p>[end part 7]
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="15818.html">Richard Loosemore: "Loosemore's Collected Writings on SL4 - Part 6"</a>
+<li><strong>Previous message:</strong> <a href="15816.html">Richard Loosemore: "Loosemore's Collected Writings on SL4 - Part 4"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#15817">[ date ]</a>
+<a href="index.html#15817">[ thread ]</a>
+<a href="subject.html#15817">[ subject ]</a>
+<a href="author.html#15817">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:57 MDT
+</em></small></p>
+</body>
+</html>

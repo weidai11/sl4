@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]</title>
+<meta name="Author" content="Charles D Hixson (charleshixsn@earthlink.net)">
+<meta name="Subject" content="Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]">
+<meta name="Date" content="2006-02-02">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]</h1>
+<!-- received="Thu Feb  2 16:38:54 2006" -->
+<!-- isoreceived="20060202233854" -->
+<!-- sent="Thu, 2 Feb 2006 23:38:30 +0000" -->
+<!-- isosent="20060202233830" -->
+<!-- name="Charles D Hixson" -->
+<!-- email="charleshixsn@earthlink.net" -->
+<!-- subject="Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]" -->
+<!-- id="200602022338.30883.charleshixsn@earthlink.net" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="Pine.LNX.4.60.0602020741360.348@farviolet.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Charles D Hixson (<a href="mailto:charleshixsn@earthlink.net?Subject=Re:%20Syllabus%20for%20Seed%20Developer%20Qualifications%20[WAS%20Re:%20Some%20considerations%20about%20AGI]"><em>charleshixsn@earthlink.net</em></a>)<br>
+<strong>Date:</strong> Thu Feb 02 2006 - 16:38:30 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="13956.html">Mike Dougherty: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>Previous message:</strong> <a href="13954.html">Patrick Crenshaw: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>In reply to:</strong> <a href="13950.html">entropy@farviolet.com: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="13956.html">Mike Dougherty: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>Reply:</strong> <a href="13956.html">Mike Dougherty: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#13955">[ date ]</a>
+<a href="index.html#13955">[ thread ]</a>
+<a href="subject.html#13955">[ subject ]</a>
+<a href="author.html#13955">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Thursday 02 February 2006 03:44 pm, <a href="mailto:entropy@farviolet.com?Subject=Re:%20Syllabus%20for%20Seed%20Developer%20Qualifications%20[WAS%20Re:%20Some%20considerations%20about%20AGI]">entropy@farviolet.com</a> wrote:
+<br>
+<em>&gt; On Fri, 3 Feb 2006, Kevin Osborne wrote:
+</em><br>
+<em>&gt; &gt;&gt; Have you looked at Alice, from Stanford University?  Still in the early
+</em><br>
+<em>&gt; &gt;&gt; stages, but it looks like it supports parallelism in a quite interesting
+</em><br>
+<em>&gt; &gt;&gt; fashion.  Check out &quot;Promises&quot;.  Nice!
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; will do; though new/experimental languages have certain advantages
+</em><br>
+<em>&gt; &gt; (evolution says they'll be better) they also have certian
+</em><br>
+<em>&gt; &gt; disadvantages; like the necessity to write your own API modules for
+</em><br>
+<em>&gt; &gt; solved problems (sorts, collections, tcp/ip, unicode, math, remoting,
+</em><br>
+<em>&gt; &gt; etc) - this is not to say that any newer-language-of-your-choice
+</em><br>
+<em>&gt; &gt; doesn't have some or all of these features; but does in have
+</em><br>
+<em>&gt; &gt; <a href="http://cpan.org/authors/id/D/DC/DCANTRELL/Acme-Scurvy-Whoreson-BilgeRat-1">http://cpan.org/authors/id/D/DC/DCANTRELL/Acme-Scurvy-Whoreson-BilgeRat-1</a>
+</em><br>
+<em>&gt; &gt;.0.readme ? :-)
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; One problem with most experimental languages is that they arn't compiled,
+</em><br>
+<em>&gt; or if are don't have the low level access to the machine that C++ does.
+</em><br>
+<em>&gt; I say C++ because the inline methods/functions give you high level
+</em><br>
+<em>&gt; abstract code that can compile directly down to an instruction or two of
+</em><br>
+<em>&gt; assembly. GCC these days is quite good at peeling away the layers of
+</em><br>
+<em>&gt; abstraction. For example an inline getter/setter method usually produces
+</em><br>
+<em>&gt; exactly the same code that a direct assignment does.
+</em><br>
+<p>To me this sounds like &quot;premature optimization&quot;.  Almost all of the languages 
+<br>
+either have or develop an FFI interface that lets one get down to C (not 
+<br>
+usually C++) code, and developing at a higher lever is much faster.  You can 
+<br>
+often pay a price in speed of execution, but usually a profiler will let you 
+<br>
+trace that to small pieces of the code that can then be optimized.  (One of 
+<br>
+the great disappointments that I had with Pyrex is that even though it links 
+<br>
+Python and C in a very nice way, it was specifically announced that the 
+<br>
+developer had no intention in using this to create optimized code.  So you 
+<br>
+still need to optimize in C and then link it into Python.)  What I'm 
+<br>
+currently experimenting with is Ruby (in my opinion the nicest of the 
+<br>
+languages...but SLOW [so you need a faster machine]).  Ruby has a way of 
+<br>
+embedding C code within it (small chunks only, probably, but that's enough to 
+<br>
+handle the calls), so when an application gets to the point of optimizing, 
+<br>
+then you can profile &amp; optimize.  (AFTER checking your algorithms!)
+<br>
+<p>I've also started wondering about using Apache to handle parallelism.  I 
+<br>
+haven't looked into the process at all, so this may be totally unreasonable 
+<br>
+(or have unreasonable overhead), but Apache is noted for handling lots of 
+<br>
+requests at once with unpredictable synchronization between the requests.  A 
+<br>
+lot of things can be served over the web, not just html, and the mechanism 
+<br>
+for dispatching dynamically created web pages could probably be used in lots 
+<br>
+of other ways (XML is used to represent entire databases...I generally think 
+<br>
+of this as a bad idea, but it would make a dandy method for communicating 
+<br>
+between processes that weren't necessarily physically connected...and someone 
+<br>
+else has already *done* most of the work).
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="13956.html">Mike Dougherty: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>Previous message:</strong> <a href="13954.html">Patrick Crenshaw: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>In reply to:</strong> <a href="13950.html">entropy@farviolet.com: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="13956.html">Mike Dougherty: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>Reply:</strong> <a href="13956.html">Mike Dougherty: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#13955">[ date ]</a>
+<a href="index.html#13955">[ thread ]</a>
+<a href="subject.html#13955">[ subject ]</a>
+<a href="author.html#13955">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:55 MDT
+</em></small></p>
+</body>
+</html>

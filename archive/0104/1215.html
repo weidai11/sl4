@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Hardware Cost</title>
+<meta name="Author" content="James Rogers (jamesr@best.com)">
+<meta name="Subject" content="Re: Hardware Cost">
+<meta name="Date" content="2001-04-25">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Hardware Cost</h1>
+<!-- received="Wed Apr 25 15:11:40 2001" -->
+<!-- isoreceived="20010425211140" -->
+<!-- sent="Wed, 25 Apr 2001 11:39:48 -0700" -->
+<!-- isosent="20010425183948" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Re: Hardware Cost" -->
+<!-- id="5.0.2.1.0.20010425104432.00abce20@shell9.ba.best.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="20010425165319.53566.qmail@web13306.mail.yahoo.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> James Rogers (<a href="mailto:jamesr@best.com?Subject=Re:%20Hardware%20Cost"><em>jamesr@best.com</em></a>)<br>
+<strong>Date:</strong> Wed Apr 25 2001 - 12:39:48 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1216.html">Brian Atkins: "Re: Hardware Cost"</a>
+<li><strong>Previous message:</strong> <a href="1214.html">Brian Atkins: "Re: Hardware Cost"</a>
+<li><strong>In reply to:</strong> <a href="1213.html">Dani Eder: "Hardware Cost"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1216.html">Brian Atkins: "Re: Hardware Cost"</a>
+<li><strong>Reply:</strong> <a href="1216.html">Brian Atkins: "Re: Hardware Cost"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1215">[ date ]</a>
+<a href="index.html#1215">[ thread ]</a>
+<a href="subject.html#1215">[ subject ]</a>
+<a href="author.html#1215">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+At 09:53 AM 4/25/2001 -0700, Dani Eder wrote:
+<br>
+<em>&gt;[...snip...]
+</em><br>
+<em>&gt;I'm curious how this type of Linux cluster compares
+</em><br>
+<em>&gt;to the processor requirements for a Web-Brain
+</em><br>
+<em>&gt;implementation or an estimated size for a seed AI
+</em><br>
+<em>&gt;(if anyone has taken a stab at that yet).
+</em><br>
+<em>&gt;[...snip...]
+</em><br>
+<em>&gt;The cost breakdown is as follows.  Note the cluster
+</em><br>
+<em>&gt;has 64 compute nodes + 2 supervisory nodes.  Costs
+</em><br>
+<em>&gt;are current ones from pricewatch.com:
+</em><br>
+<p><p>As a general comment, you don't seem to be considering that these types of 
+<br>
+clusters are tuned to solve very specific problems.  Their solution isn't 
+<br>
+necessarily your solution.  The choice of hardware is not arbitrary; 
+<br>
+interconnects, RAM, switching, and proc/mobo hardware is all carefully 
+<br>
+chosen to maximize throughput for the problem in question.  A seemingly 
+<br>
+trivial mis-design in your cluster can cost you an order of magnitude in 
+<br>
+performance.
+<br>
+<p>Some problems can be solved very cheaply in clusters, with almost perfect 
+<br>
+linear scaling (and occasionally, the rare super-linear scaling).  Other 
+<br>
+types of problems demonstrate logarithmic scaling, even with very expensive 
+<br>
+interconnects.  I expect the AI problem falls somewhere in the middle, 
+<br>
+being neither embarrassingly parallel nor excruciatingly serial.
+<br>
+<p><p><em>&gt;1.33 GHz Athlon CPU:  $227 x 66 units
+</em><br>
+<p><p>Excellent choice for clusters in general -- the bang/buck king.
+<br>
+<p><p><em>&gt;256 MB PC133 SDRAM: $51 x 66 units
+</em><br>
+<p><p>Just a practical word of warning about RAM: reliable RAM can make or break 
+<br>
+your cluster, and it is usually considered to be a good idea to pay a 
+<br>
+little more to get better RAM.  Why?  Because when you have several Gb of 
+<br>
+RAM under heavy use for days on end, you *will* get the occasional bit-flip 
+<br>
+error or RAM behavior anomaly.  In computational clusters, this frequently 
+<br>
+manifests itself as anomalous computational results, not just system 
+<br>
+failures, and can cause very subtle problems that can take a long time to 
+<br>
+fully manifest.  Very bad ju ju, and generally more expensive than paying 
+<br>
+for better RAM in the long run.
+<br>
+<p><p><em>&gt;Athlon Motherboards: $80 x 66 units
+</em><br>
+<p><p>The chipsets on the board can make a substantial difference as far as I/O 
+<br>
+and memory performance go.  Know what you are buying.
+<br>
+<p><p><em>&gt;24 port x 100 MB/s ethernet hubs: $210 x 15 units
+</em><br>
+<em>&gt;LAN cards : $5 x 66 units
+</em><br>
+<p><p>This is inadequate as an interconnect fabric unless your problem is 
+<br>
+embarrassingly parallel.
+<br>
+<p>1.)  Buy a *switch*, not a hub, and make sure that it has a high-bandwidth 
+<br>
+low-latency bus.
+<br>
+<p>2.)  Which LAN cards you use can be very important, especially under 
+<br>
+load.  The difference between very good (e.g. 3C9xx and Tulip) and bad 
+<br>
+(e.g. RealTek and Intel) chipsets is substantial.
+<br>
+<p>3.)  If you are doing any type of problem that is not embarrassingly 
+<br>
+parallel (specifically, anything that has dependencies scattered across the 
+<br>
+cluster), you'll very likely want faster node interconnects i.e. 
+<br>
+channel-bonded 100TX, Gigabit Ethernet, or Myrinet.
+<br>
+<p>4.)  For applications that are network intensive, it is highly advisable to 
+<br>
+use dual processor motherboards.  Why?  Because high-throughput network 
+<br>
+traffic will generate so many interrupts that your CPU won't get any work 
+<br>
+done.  On a dual processor system, one processor can spend most of its time 
+<br>
+servicing the network interrupts and the other CPU can devote itself to the 
+<br>
+actual problem.  (This is one of those cases where a multiple processors 
+<br>
+may actually show super-linear scalability over single processors for a 
+<br>
+specific application.)
+<br>
+<p><p>Just some stuff to think about.  It is never as easy as it sounds. :^)
+<br>
+<p>-James Rogers
+<br>
+&nbsp;&nbsp;<a href="mailto:jamesr@best.com?Subject=Re:%20Hardware%20Cost">jamesr@best.com</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1216.html">Brian Atkins: "Re: Hardware Cost"</a>
+<li><strong>Previous message:</strong> <a href="1214.html">Brian Atkins: "Re: Hardware Cost"</a>
+<li><strong>In reply to:</strong> <a href="1213.html">Dani Eder: "Hardware Cost"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1216.html">Brian Atkins: "Re: Hardware Cost"</a>
+<li><strong>Reply:</strong> <a href="1216.html">Brian Atkins: "Re: Hardware Cost"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1215">[ date ]</a>
+<a href="index.html#1215">[ thread ]</a>
+<a href="subject.html#1215">[ subject ]</a>
+<a href="author.html#1215">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

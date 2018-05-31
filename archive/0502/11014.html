@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Progams which can create efficient programs</title>
+<meta name="Author" content="Stephen Reed (reed@cyc.com)">
+<meta name="Subject" content="Re: Progams which can create efficient programs">
+<meta name="Date" content="2005-02-25">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Progams which can create efficient programs</h1>
+<!-- received="Fri Feb 25 06:08:48 2005" -->
+<!-- isoreceived="20050225130848" -->
+<!-- sent="Fri, 25 Feb 2005 07:08:00 -0600 (CST)" -->
+<!-- isosent="20050225130800" -->
+<!-- name="Stephen Reed" -->
+<!-- email="reed@cyc.com" -->
+<!-- subject="Re: Progams which can create efficient programs" -->
+<!-- id="Pine.LNX.4.44.0502250635220.17636-100000@aruba.cyc.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="131C1A687F41D94B8D19E67B782F90B38DEEFA@UM-EMAIL01.um.umsystem.edu" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Stephen Reed (<a href="mailto:reed@cyc.com?Subject=Re:%20Progams%20which%20can%20create%20efficient%20programs"><em>reed@cyc.com</em></a>)<br>
+<strong>Date:</strong> Fri Feb 25 2005 - 06:08:00 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="11015.html">Ben Goertzel: "ITSSIM etc."</a>
+<li><strong>Previous message:</strong> <a href="11013.html">Tomaz Kristan: "Improving algorithms with EA"</a>
+<li><strong>In reply to:</strong> <a href="11009.html">Bantz, Michael S \(UMC-Student\): "Progams which can create efficient programs"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11014">[ date ]</a>
+<a href="index.html#11014">[ thread ]</a>
+<a href="subject.html#11014">[ subject ]</a>
+<a href="author.html#11014">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Michael,
+<br>
+<p>Interesting that you should ask.  At Cycorp, my recent presentation on a 
+<br>
+behavior engine for Cyc described Cyc Behavior Language, a new AI 
+<br>
+procedural language rooted in the Cyc event vocabulary.  CBL is 
+<br>
+specialized for creating James Albus-style nodes in a hierarchical 
+<br>
+task/perception network. However, my senior manager criticized the need 
+<br>
+for yet another new language, as we already program in SubL (a lisp 
+<br>
+dialect) and java for applications.  I was challenged to find a way not 
+<br>
+to need a new computer language when authoring intelligent behaviors for 
+<br>
+Cyc.
+<br>
+<p>You may know that automatic programming, program synthesis, program 
+<br>
+refinement, aspect-oriented programming, and most recently generative 
+<br>
+programming (see <a href="http://www.generative-programming.org">http://www.generative-programming.org</a> ) are fields of 
+<br>
+study about programs creating programs.  After a survey, I began  
+<br>
+developing a way to create Cyc Behavior Language deductively by 
+<br>
+factoring out every syntactic and semantic feature of the language along 
+<br>
+the dimensions of domain, application, and problem-solving methods.  My 
+<br>
+goal is to create a minimal number of Cyc Behavior Language routines 
+<br>
+that deduce general program structure top-down (like a hierarchical task 
+<br>
+network planner), then via many cross-cutting features, fill in the 
+<br>
+domain, application and problem-solving method details.  
+<br>
+While Aspect-oriented programming does this tailoring at compilation or 
+<br>
+runtime, in contrast my idea employs the techniques of generative 
+<br>
+programming to do this at program composition (authoring) time.  The 
+<br>
+advantage of using Cyc for this effort is that the knowledge base 
+<br>
+provides a rich vocabulary for describing features, which I will 
+<br>
+specialize for the features of Cyc Behavior Language, and I can easily 
+<br>
+bottom out the composition routines in KB asks (first order queries).  
+<br>
+<p>Although this work is just beginning, and it is an extra-effort activity 
+<br>
+among my sponsored tasks, I aspire to complete a bootstrap by year end 
+<br>
+2005.  By bootstrap I mean a full characterization of the composition 
+<br>
+routines as generative features, so that the composition routines 
+<br>
+themselves can be automatically composed from domain, application, and 
+<br>
+problem-solving method requirements, constraints and preferences that are 
+<br>
+declaratively stated in the Cyc knowledge base.  One can imagine a likely 
+<br>
+elaboration in which Cyc dialog enables a developer to incrementally 
+<br>
+prototype and refine a Cyc application implemented by the Cyc behavior 
+<br>
+engine.
+<br>
+<p>Cheers,
+<br>
+-Steve
+<br>
+<p>On Thu, 24 Feb 2005, Bantz, Michael S \(UMC-Student\) wrote:
+<br>
+<p><em>&gt; Just a curious question. I know that people have been very successful at writing programs which can play chess more or less perfectly. Would it be possible to write a program which can write chess playing programs? Has anyone tried this or some equivalent?
+</em><br>
+<em>&gt;  
+</em><br>
+<em>&gt; Thanks, 
+</em><br>
+<em>&gt; Michael
+</em><br>
+<em>&gt;  
+</em><br>
+<em>&gt; 
+</em><br>
+<p><pre>
+-- 
+===========================================================
+Stephen L. Reed                  phone:  512.342.4036
+Cycorp, Suite 100                  fax:  512.342.4040
+3721 Executive Center Drive      email:  <a href="mailto:reed@cyc.com?Subject=Re:%20Progams%20which%20can%20create%20efficient%20programs">reed@cyc.com</a>
+Austin, TX 78731                   web:  <a href="http://www.cyc.com">http://www.cyc.com</a>
+         download OpenCyc at <a href="http://www.opencyc.org">http://www.opencyc.org</a>
+===========================================================
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="11015.html">Ben Goertzel: "ITSSIM etc."</a>
+<li><strong>Previous message:</strong> <a href="11013.html">Tomaz Kristan: "Improving algorithms with EA"</a>
+<li><strong>In reply to:</strong> <a href="11009.html">Bantz, Michael S \(UMC-Student\): "Progams which can create efficient programs"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11014">[ date ]</a>
+<a href="index.html#11014">[ thread ]</a>
+<a href="subject.html#11014">[ subject ]</a>
+<a href="author.html#11014">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:50 MDT
+</em></small></p>
+</body>
+</html>

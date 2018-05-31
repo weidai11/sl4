@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: [agi] A difficulty with AI reflectivity</title>
+<meta name="Author" content="Eliezer Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="Re: [agi] A difficulty with AI reflectivity">
+<meta name="Date" content="2004-10-21">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: [agi] A difficulty with AI reflectivity</h1>
+<!-- received="Thu Oct 21 09:52:30 2004" -->
+<!-- isoreceived="20041021155230" -->
+<!-- sent="Thu, 21 Oct 2004 11:52:21 -0400" -->
+<!-- isosent="20041021155221" -->
+<!-- name="Eliezer Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Re: [agi] A difficulty with AI reflectivity" -->
+<!-- id="4177DB35.5040207@pobox.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="5844e22f04102105577c49aae2@mail.gmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eliezer Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20[agi]%20A%20difficulty%20with%20AI%20reflectivity"><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Thu Oct 21 2004 - 09:52:21 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="10013.html">Eliezer Yudkowsky: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Previous message:</strong> <a href="10011.html">Michael Roy Ames: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>In reply to:</strong> <a href="10010.html">Jeff Medina: "Re: [agi] A difficulty with AI reflectivity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="10014.html">Jeff Medina: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="10014.html">Jeff Medina: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="10015.html">Paul Fidika: "Re: [agi] A difficulty with AI reflectivity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#10012">[ date ]</a>
+<a href="index.html#10012">[ thread ]</a>
+<a href="subject.html#10012">[ subject ]</a>
+<a href="author.html#10012">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Jeff Medina, Christian Szegedy:
+<br>
+<p>Thank you for your suggested reading, but I'm already quite extremely aware 
+<br>
+that no consistent formal system can prove its own consistency.  If you're 
+<br>
+not clear on why this presents a unique challenge for reflective theorem 
+<br>
+provers, I recommend John Harrison's &quot;Metatheory and Reflection in Theorem 
+<br>
+Proving: A Survey and Critique.&quot;
+<br>
+<p>Mostly Harrison concludes that reflection is not needed in modern 
+<br>
+engineering theorem-provers (he doesn't consider it as an AGI problem). 
+<br>
+Insofar as Harrison does suggest a solution, he suggests taking a theory 
+<br>
+Theory-0 and then creating a new system, Theory-1, which has the new rule 
+<br>
+that if a theorem is proved provable in Theory-0, then it is proved in 
+<br>
+Theory-1.  This is not exactly the same as adjoining the assumption of 
+<br>
+Theory-0's consistency to Theory-0 to form a new Theory-1 - the new theorem 
+<br>
+prover cannot prove that the old theorem prover is consistent, for example.
+<br>
+<p>The new theorem prover is not inconsistent because it does not contain the 
+<br>
+rule that any theorem proved provable in Theory-1 may be added as a theorem 
+<br>
+in Theory-1; this would run straight into Lob.  Instead, the new theorem 
+<br>
+prover only contains a rule that whatever is provably provable in the *old* 
+<br>
+theorem prover may be added as a theorem in the *new* theorem prover.  This 
+<br>
+does not change the set of admissible theorems if Theory-0 is consistent. 
+<br>
+What it does is enable *much shorter proofs* of some theorems.
+<br>
+<p>The unique, new problem comes when we ask the theorem prover to rewrite 
+<br>
+itself entirely.  Even if we adjoin to Theory-1 the assumption that 
+<br>
+Theory-0 is consistent, if a Theory-1 prover were to write a provably 
+<br>
+consistent (in Theory-1) prover, it would write a Theory-0 prover.  This 
+<br>
+prover would then be unable to approve any further rewrites.
+<br>
+<p>We may be able to rescue Schmidhuber's Godel Machine by compartmentalizing 
+<br>
+it into an object system that provably has expected utility for solving 
+<br>
+problems, and a meta-system that can only be rewritten if the rewrite 
+<br>
+provably admits only theorems admissable in the original meta-system.  That 
+<br>
+is, we use *two different* criteria for modifying *two different* 
+<br>
+components of the Godel Machine.  I don't regard this as a good solution to 
+<br>
+the deep AGI problem, since I wasn't planning to build a Godel Machine.  It 
+<br>
+would also be an additional requirement over and above the strategy given 
+<br>
+in Schmidhuber's original paper, which claimed total self-modifiability 
+<br>
+including modifiability of the proof-verifier or even the fact that the 
+<br>
+system contained a proof-verifier.  It is furthermore unclear as to how a 
+<br>
+rewrite of the meta-system would be adjudged *superior* to the prior 
+<br>
+system, even if it were proven admissible.
+<br>
+<p><pre>
+-- 
+Eliezer S. Yudkowsky                          <a href="http://intelligence.org/">http://intelligence.org/</a>
+Research Fellow, Singularity Institute for Artificial Intelligence
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="10013.html">Eliezer Yudkowsky: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Previous message:</strong> <a href="10011.html">Michael Roy Ames: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>In reply to:</strong> <a href="10010.html">Jeff Medina: "Re: [agi] A difficulty with AI reflectivity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="10014.html">Jeff Medina: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="10014.html">Jeff Medina: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="10015.html">Paul Fidika: "Re: [agi] A difficulty with AI reflectivity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#10012">[ date ]</a>
+<a href="index.html#10012">[ thread ]</a>
+<a href="subject.html#10012">[ subject ]</a>
+<a href="author.html#10012">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:49 MDT
+</em></small></p>
+</body>
+</html>

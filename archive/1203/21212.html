@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: [sl4] Math magic script</title>
+<meta name="Author" content="Eric Burton (brilanon@gmail.com)">
+<meta name="Subject" content="[sl4] Math magic script">
+<meta name="Date" content="2012-03-12">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>[sl4] Math magic script</h1>
+<!-- received="Mon Mar 12 11:07:10 2012" -->
+<!-- isoreceived="20120312170710" -->
+<!-- sent="Mon, 12 Mar 2012 13:07:02 -0400" -->
+<!-- isosent="20120312170702" -->
+<!-- name="Eric Burton" -->
+<!-- email="brilanon@gmail.com" -->
+<!-- subject="[sl4] Math magic script" -->
+<!-- id="CAMEFeSBd+YYJBkdSYCPyt2M0P-tAaym2OEoj+_aLS0HjoeEu6w@mail.gmail.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eric Burton (<a href="mailto:brilanon@gmail.com?Subject=Re:%20[sl4]%20Math%20magic%20script"><em>brilanon@gmail.com</em></a>)<br>
+<strong>Date:</strong> Mon Mar 12 2012 - 11:07:02 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="21213.html">Eric Burton: "[sl4] Re: Math magic script"</a>
+<li><strong>Previous message:</strong> <a href="21211.html">Eric Burton: "[sl4] Re: Math: It's like in Contact the book not the movie"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="21213.html">Eric Burton: "[sl4] Re: Math magic script"</a>
+<li><strong>Reply:</strong> <a href="21213.html">Eric Burton: "[sl4] Re: Math magic script"</a>
+<li><strong>Reply:</strong> <a href="21217.html">Eric Burton: "[sl4] Re: Math magic script"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#21212">[ date ]</a>
+<a href="index.html#21212">[ thread ]</a>
+<a href="subject.html#21212">[ subject ]</a>
+<a href="author.html#21212">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<a href="http://ansistego.sf.net/series.py">http://ansistego.sf.net/series.py</a>
+<br>
+<p>What you do is give it some numbers. It does what I was doing before
+<br>
+<p>Here's an example
+<br>
+<p>&nbsp;Possible add/subtract outputs of digits in number in series:
+<br>
+12: [1/3] 	  23: [1/5] 	  34: [1/7] 	
+<br>
+<em>&gt; lowest
+</em><br>
+&nbsp;Lowest outputs of last series:
+<br>
+12: 1 	 23: 1 	 34: 1 	
+<br>
+<em>&gt; highest
+</em><br>
+&nbsp;Highest outputs of last series:
+<br>
+12: 3 	 23: 5 	 34: 7 	
+<br>
+<p>Good eh. So I'll show you how this weird way of mangling digits spells
+<br>
+512 over and over
+<br>
+<p>Using this. Which I encourage you to play with yourself. Hahaha
+<br>
+<p>OK. Here goes. Don't read through the noise before I say &quot;run&quot; it's
+<br>
+just showing its work.
+<br>
+<p><em>&gt; 1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192
+</em><br>
+&nbsp;Possible add/subtract outputs of digits in number in series:
+<br>
+1: 1 	  2: 2 	  4: 4 	  8: 8 	  16: [5/7] 	  32: [1/5] 	  64: [2/10] 	
+<br>
+&nbsp;128: [5/7/9/11] 	  256: [1/3/9/13] 	  512: [2/4/6/8] 	  1024:
+<br>
+[1/3/5/7] 	  2048: [2/6/10/14] 	  4096: [1/7/11/19] 	  8192:
+<br>
+[2/4/14/16/18/20]
+<br>
+<em>&gt; lowest
+</em><br>
+&nbsp;Lowest outputs of last series:
+<br>
+1: 1 	 2: 2 	 4: 4 	 8: 8 	 16: 5 	 32: 1 	 64: 2 	 128: 5 	 256: 1	
+<br>
+512: 2 	 1024: 1 	 2048: 2 	 4096: 1 	 8192: 2
+<br>
+<em>&gt; run
+</em><br>
+&nbsp;1  2  4  8  5  1  2  5  1  2  1  2  1  2
+<br>
+<p><p>There it is again guys, one two four eight five-twelve five-twelve.
+<br>
+And look it breaks after that and says 12-12. Fuck, I'm sure going to
+<br>
+put more powers of two through it. And primes! Here, here's the run of
+<br>
+-high- results for that last one
+<br>
+<p>&nbsp;1  2  4  8  7  5  10  11  13  8  7  14  19  20
+<br>
+<p>Very interesting, but stupid. OK I generated 100 powers of two let's
+<br>
+do the low ones again
+<br>
+<p>It hung at 1099511627776. Trying again...
+<br>
+<p>OK I got em up to 137438953472 this time. Low-series says,
+<br>
+<p>&nbsp;1  2  4  8  5  1  2  5  1  2  1  2  1  2  2  2  1  2  1  1  1  2  1
+<br>
+3  1  1  2  1  1  1  1  1  2  2  1  1  2  2
+<br>
+<p>I did it for you dudes. Look how the tape just runs off after actually
+<br>
+saying five-twelve twice. Well let's try it with some primes
+<br>
+<p>Low series
+<br>
+<p>&nbsp;2  3  5  7  2  2  6  8  1  7  2  4  3  1  3  2  4  5  1  6  4  2  5
+<br>
+1  2  2  2  6  8  1  4  1  3  5  4  3  1  2  2  3  1  6  7  5  1  1  2
+<br>
+&nbsp;1  3  5  2  4  1  2  4  1  1  4  2  5  3  4  4  1  1  3  1  1  6  2
+<br>
+1  1  2  1  1  2  2  1  3  5  4  1  2  2  2  3  1  2  1  1  3  2  3  4
+<br>
+&nbsp;4  2  4  2  4  2  2  3  2  2  1  5  4  1  5  5  1  2  2  2  2  1  1
+<br>
+3  2  2  1  2  6  1  2  6  2  1  2  1  1  6  1  5  2  4  3  6  5  1  6
+<br>
+&nbsp;5  3  1  1  2  6  4  4  1  6  1  3  7  2  7  1  2  1  4  2  1  4  1
+<br>
+5  2  1  7
+<br>
+<p>High series
+<br>
+<p>&nbsp;2  3  5  7  2  4  8  10  5  11  4  10  5  7  11  8  14  7  13  8  10
+<br>
+16  11  17  16  2  4  8  10  5  10  5  11  13  14  7  13  10  14  11
+<br>
+17  10  11  13  17  19  4  7  11  13  8  14  7  8  14  11  17  10  16
+<br>
+11  13  14  10  5  7  11  7  13  14  16  11  17  16  13  19  14  20
+<br>
+19  5  13  14  7  8  10  16  11  17  16  11  13  17  20  19  14  22  8
+<br>
+&nbsp;14  8  10  10  16  17  14  20  13  19  20  17  23  7  13  10  14  16
+<br>
+10  11  13  17  14  20  13  16  20  17  16  8  16  17  16  13  19  14
+<br>
+13  19  14  22  17  22  23  17  10  11  13  17  19  20  16  20  22  17
+<br>
+&nbsp;22  17  19  23  16  11  19  20  19  14  20  17  22  17  23  20  19
+<br>
+25
+<br>
+<p>WHY DID I DO THAT
+<br>
+<p>flamoot
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="21213.html">Eric Burton: "[sl4] Re: Math magic script"</a>
+<li><strong>Previous message:</strong> <a href="21211.html">Eric Burton: "[sl4] Re: Math: It's like in Contact the book not the movie"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="21213.html">Eric Burton: "[sl4] Re: Math magic script"</a>
+<li><strong>Reply:</strong> <a href="21213.html">Eric Burton: "[sl4] Re: Math magic script"</a>
+<li><strong>Reply:</strong> <a href="21217.html">Eric Burton: "[sl4] Re: Math magic script"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#21212">[ date ]</a>
+<a href="index.html#21212">[ thread ]</a>
+<a href="subject.html#21212">[ subject ]</a>
+<a href="author.html#21212">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:01:06 MDT
+</em></small></p>
+</body>
+</html>

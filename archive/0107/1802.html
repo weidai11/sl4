@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: read/write on parse tree program representation (RE: Languages and AI)</title>
+<meta name="Author" content="Ben Houston (ben@exocortex.org)">
+<meta name="Subject" content="read/write on parse tree program representation (RE: Languages and AI)">
+<meta name="Date" content="2001-07-20">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>read/write on parse tree program representation (RE: Languages and AI)</h1>
+<!-- received="Fri Jul 20 18:41:36 2001" -->
+<!-- isoreceived="20010721004136" -->
+<!-- sent="Fri, 20 Jul 2001 18:38:59 -0400" -->
+<!-- isosent="20010720223859" -->
+<!-- name="Ben Houston" -->
+<!-- email="ben@exocortex.org" -->
+<!-- subject="read/write on parse tree program representation (RE: Languages and AI)" -->
+<!-- id="IPEKIJJJKIMAFKAFMNAECEIFDDAA.ben@exocortex.org" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="3B58A951.97F43A59@pobox.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Houston (<a href="mailto:ben@exocortex.org?Subject=Re:%20read/write%20on%20parse%20tree%20program%20representation%20(RE:%20Languages%20and%20AI)"><em>ben@exocortex.org</em></a>)<br>
+<strong>Date:</strong> Fri Jul 20 2001 - 16:38:59 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1803.html">Ben Houston: "Metacircular interprets and LISP (RE: Languages and AI)"</a>
+<li><strong>Previous message:</strong> <a href="1801.html">Ben Goertzel: "RE: Languages and AI"</a>
+<li><strong>In reply to:</strong> <a href="1792.html">Eliezer S. Yudkowsky: "Re: Languages and AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1804.html">Eliezer S. Yudkowsky: "Re: read/write on parse tree program representation (RE: Languages and  AI)"</a>
+<li><strong>Reply:</strong> <a href="1804.html">Eliezer S. Yudkowsky: "Re: read/write on parse tree program representation (RE: Languages and  AI)"</a>
+<li><strong>Reply:</strong> <a href="1807.html">James Rogers: "Re: read/write on parse tree program representation (RE: Languages and AI)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1802">[ date ]</a>
+<a href="index.html#1802">[ thread ]</a>
+<a href="subject.html#1802">[ subject ]</a>
+<a href="author.html#1802">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+You're not going to like my response.
+<br>
+<p><em>&gt;Really?  Fine.  I want to be able to access the PARSED source code, not
+</em><br>
+<em>&gt;the plaintext, from inside the program.  Furthermore, I want to be able to
+</em><br>
+<em>&gt;alter the parsed source code, represented in a natural way (i.e., an
+</em><br>
+<em>&gt;expression is a tree and not a series of machine instructions).  I want to
+</em><br>
+<em>&gt;be able to annotate any element in this tree, whether a branch or a leaf,
+</em><br>
+<em>&gt;with complex data structures of my own devising, including new data types
+</em><br>
+<em>&gt;of my own devising, without destroying the integrity of the existing data
+</em><br>
+<em>&gt;or preventing the code from executing.  Any existing languages got that
+</em><br>
+<em>&gt;feature, which is simply first on the list?
+</em><br>
+<p>You can add this feature to Java with a little work.
+<br>
+<p>Basically you would need into integrate a Java decompiler and a Java
+<br>
+compiler into your program so that it can decompile and compile you programs
+<br>
+at run-time but that shouldn't be too hard - there are a lot of open source
+<br>
+Java decompilers and compilers.  Without any changes to the Java compiler
+<br>
+you might lose the names of the non-exposed variables and functions but I
+<br>
+think that if you have control of the Java compiler you can keep them.
+<br>
+You'll probably want to turn off all the optimizations that the compiler can
+<br>
+do in order that the decompiled code looks like the original code.
+<br>
+<p>How to implement this programmatically?  I would suggest a &quot;function lock&quot;
+<br>
+or an &quot;object lock&quot; mechanisms kind to how one locks memory in a shared
+<br>
+memory system (although you could get the parse tree without locking it,
+<br>
+locking is only required for modifying it).  During the time it is locked if
+<br>
+one tries to execute it an exception will be thrown.  Soon as you unlock a
+<br>
+function or object it will be re-compiled.  This would require a little
+<br>
+modification of the VM but not a huge amount.  Java with it's introspection
+<br>
+capabilities already supports querying for an Objects exposed functions or
+<br>
+variables, this is just an extension to that.
+<br>
+<p>I suspect that you can do this modification to C# as well but I am not
+<br>
+totally sure about that yet.  They might have more protection against
+<br>
+de-compilers that Java did.
+<br>
+<p>Cheers,
+<br>
+-ben houston
+<br>
+<a href="http://www.exocortex.org">http://www.exocortex.org</a>
+<br>
+<p><p>-----Original Message-----
+<br>
+From: <a href="mailto:owner-sl4@sysopmind.com?Subject=Re:%20read/write%20on%20parse%20tree%20program%20representation%20(RE:%20Languages%20and%20AI)">owner-sl4@sysopmind.com</a> [mailto:<a href="mailto:owner-sl4@sysopmind.com?Subject=Re:%20read/write%20on%20parse%20tree%20program%20representation%20(RE:%20Languages%20and%20AI)">owner-sl4@sysopmind.com</a>]On Behalf Of
+<br>
+Eliezer S. Yudkowsky
+<br>
+Sent: Friday, July 20, 2001 5:58 PM
+<br>
+To: <a href="mailto:sl4@sysopmind.com?Subject=Re:%20read/write%20on%20parse%20tree%20program%20representation%20(RE:%20Languages%20and%20AI)">sl4@sysopmind.com</a>
+<br>
+Subject: Re: Languages and AI
+<br>
+<p>Ben Houston wrote:
+<br>
+<em>&gt;
+</em><br>
+<em>&gt; Hi Eliezer,
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; I'd strongly recommend against creating a language.  It will take way too
+</em><br>
+<em>&gt; much work and more probably will never get done.  Also I have not yet seen
+</em><br>
+<em>&gt; any new features that are really driving you towards a new language.
+</em><br>
+<p>Thanks for all the well-meant naysaying (he said, seething quietly), but I
+<br>
+know what I need and why, from several years' worth of wishing in routine
+<br>
+programming (not just for AI), and it can be done inside a programming
+<br>
+language that will benefit the community at large and not just SIAI.  The
+<br>
+programming language will be forked off as a separate open-source project
+<br>
+that will rendezvous with the AI side when it reaches production quality
+<br>
+or becomes so cool that it's worth using the beta.
+<br>
+<p>Flare really is an entirely different kettle of fish, and no, I CAN'T live
+<br>
+without it.  Some things in Flare are cool, but other things are things
+<br>
+that we can either do poorly in Python (or, heaven help us, C++) on our
+<br>
+lonesome, or do elegantly in Flare with the support of the open-source
+<br>
+community.  There's a section of the language space that we need to
+<br>
+explore, and Flare is the first, fundamental step into that language
+<br>
+space, the step that makes it possible for us to take the next steps.
+<br>
+<p><em>&gt; Describe the feature that you want and I'll bet that I can find an
+</em><br>
+existing
+<br>
+<em>&gt; language that has that feature.
+</em><br>
+<p>Really?  Fine.  I want to be able to access the PARSED source code, not
+<br>
+the plaintext, from inside the program.  Furthermore, I want to be able to
+<br>
+alter the parsed source code, represented in a natural way (i.e., an
+<br>
+expression is a tree and not a series of machine instructions).  I want to
+<br>
+be able to annotate any element in this tree, whether a branch or a leaf,
+<br>
+with complex data structures of my own devising, including new data types
+<br>
+of my own devising, without destroying the integrity of the existing data
+<br>
+or preventing the code from executing.  Any existing languages got that
+<br>
+feature, which is simply first on the list?
+<br>
+<p>--              --              --              --              --
+<br>
+Eliezer S. Yudkowsky                          <a href="http://intelligence.org/">http://intelligence.org/</a>
+<br>
+Research Fellow, Singularity Institute for Artificial Intelligence
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1803.html">Ben Houston: "Metacircular interprets and LISP (RE: Languages and AI)"</a>
+<li><strong>Previous message:</strong> <a href="1801.html">Ben Goertzel: "RE: Languages and AI"</a>
+<li><strong>In reply to:</strong> <a href="1792.html">Eliezer S. Yudkowsky: "Re: Languages and AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1804.html">Eliezer S. Yudkowsky: "Re: read/write on parse tree program representation (RE: Languages and  AI)"</a>
+<li><strong>Reply:</strong> <a href="1804.html">Eliezer S. Yudkowsky: "Re: read/write on parse tree program representation (RE: Languages and  AI)"</a>
+<li><strong>Reply:</strong> <a href="1807.html">James Rogers: "Re: read/write on parse tree program representation (RE: Languages and AI)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1802">[ date ]</a>
+<a href="index.html#1802">[ thread ]</a>
+<a href="subject.html#1802">[ subject ]</a>
+<a href="author.html#1802">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

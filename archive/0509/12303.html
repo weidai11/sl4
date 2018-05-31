@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Parallelizing attention and credit-assignment</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: Parallelizing attention and credit-assignment">
+<meta name="Date" content="2005-09-09">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Parallelizing attention and credit-assignment</h1>
+<!-- received="Fri Sep  9 15:02:26 2005" -->
+<!-- isoreceived="20050909210226" -->
+<!-- sent="Fri, 9 Sep 2005 17:02:07 -0400" -->
+<!-- isosent="20050909210207" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: Parallelizing attention and credit-assignment" -->
+<!-- id="JNEIJCJJHIEAILJBFHILOEABGCAA.ben@goertzel.org" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="20050909173611.61123.qmail@web54509.mail.yahoo.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20Parallelizing%20attention%20and%20credit-assignment"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Fri Sep 09 2005 - 15:02:07 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="12304.html">Phil Goetz: "RE: Parallelizing attention and credit-assignment"</a>
+<li><strong>Previous message:</strong> <a href="12302.html">Phil Goetz: "Re: Heterogenous Complex Systems"</a>
+<li><strong>In reply to:</strong> <a href="12295.html">Phil Goetz: "Parallelizing attention and credit-assignment"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12304.html">Phil Goetz: "RE: Parallelizing attention and credit-assignment"</a>
+<li><strong>Reply:</strong> <a href="12304.html">Phil Goetz: "RE: Parallelizing attention and credit-assignment"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12303">[ date ]</a>
+<a href="index.html#12303">[ thread ]</a>
+<a href="subject.html#12303">[ subject ]</a>
+<a href="author.html#12303">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; &gt; IMO assigment of credit is a good example of an AI problem that no
+</em><br>
+<em>&gt; &gt; one has figured out how to parallelize effectively yet.
+</em><br>
+<em>&gt; &gt; Traditional AI
+</em><br>
+<em>&gt; &gt; approaches to assignment of credit such as Q-learning, Holland's
+</em><br>
+<em>&gt; &gt; classifiers, or Baum's Hayek are elegantly parallel in nature, yet
+</em><br>
+<em>&gt; &gt; highly ineffective.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Can you give some reason why you say this?
+</em><br>
+<em>&gt; This is important.
+</em><br>
+<p>That these methods are highly ineffective is well-known.  None of them
+<br>
+really works, which is why none has been used as the foundation of any
+<br>
+reasonably functional narrow AI system let alone AGI system.
+<br>
+<p>The hypothesis that centralized techniques can work better is the
+<br>
+controversial one, and I haven't yet proved it.
+<br>
+<p>The basic concept is that assignment of credit should be treated as a
+<br>
+data-mining problem.  Keep a centralized record of all activities within a
+<br>
+system, including goal achievement.  Then mine this record to learn patterns
+<br>
+of activity that are predictive of goal achievement, and do inference on the
+<br>
+mined patterns to guess better patterns than the data-mining algorithm is
+<br>
+able to find.  The details regard what sort of data mining and reasoning
+<br>
+algorithms to use, and what sort of data structure to use for the
+<br>
+centralized record; the Novamente design contains specifics in this regard.
+<br>
+<p>Basically, parallel, self-organizing assignment of credit algorithms are
+<br>
+trying to do this kind of data mining, but they're doing a bad job even
+<br>
+compared to traditional data mining algorithms, because they are trying to
+<br>
+do it via funky massively parallel self-organizing methods that don't work
+<br>
+and IMO make the problem seem harder than it really is.
+<br>
+<p>The brain may well use some funky massively parallel self-organizing method,
+<br>
+but it has a lot of neurons to waste ;-)
+<br>
+<p>-- Ben G
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="12304.html">Phil Goetz: "RE: Parallelizing attention and credit-assignment"</a>
+<li><strong>Previous message:</strong> <a href="12302.html">Phil Goetz: "Re: Heterogenous Complex Systems"</a>
+<li><strong>In reply to:</strong> <a href="12295.html">Phil Goetz: "Parallelizing attention and credit-assignment"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12304.html">Phil Goetz: "RE: Parallelizing attention and credit-assignment"</a>
+<li><strong>Reply:</strong> <a href="12304.html">Phil Goetz: "RE: Parallelizing attention and credit-assignment"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12303">[ date ]</a>
+<a href="index.html#12303">[ thread ]</a>
+<a href="subject.html#12303">[ subject ]</a>
+<a href="author.html#12303">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:52 MDT
+</em></small></p>
+</body>
+</html>

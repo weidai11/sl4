@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: 'Singularity Realism' - A few thoughts</title>
+<meta name="Author" content="Mark Waser (mwaser@cox.net)">
+<meta name="Subject" content="Re: 'Singularity Realism' - A few thoughts">
+<meta name="Date" content="2004-03-15">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: 'Singularity Realism' - A few thoughts</h1>
+<!-- received="Mon Mar 15 21:01:25 2004" -->
+<!-- isoreceived="20040316040125" -->
+<!-- sent="Mon, 15 Mar 2004 23:01:54 -0500" -->
+<!-- isosent="20040316040154" -->
+<!-- name="Mark Waser" -->
+<!-- email="mwaser@cox.net" -->
+<!-- subject="Re: 'Singularity Realism' - A few thoughts" -->
+<!-- id="005f01c40b0b$6b21f5b0$0100a8c0@FamilyRoom" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="033601c40b00$7d7c9a40$7601a8c0@ZOMBIETHUSTRA" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Mark Waser (<a href="mailto:mwaser@cox.net?Subject=Re:%20'Singularity%20Realism'%20-%20A%20few%20thoughts"><em>mwaser@cox.net</em></a>)<br>
+<strong>Date:</strong> Mon Mar 15 2004 - 21:01:54 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="8267.html">Mark Waser: "Re: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>Previous message:</strong> <a href="8265.html">Philip Sutton: "What would implications be for Singularity if US a theocratic state?"</a>
+<li><strong>In reply to:</strong> <a href="8263.html">Ben Goertzel: "RE: 'Singularity Realism' - A few thoughts"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="8269.html">Samantha Atkins: "Re: 'Singularity Realism' - A few thoughts"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#8266">[ date ]</a>
+<a href="index.html#8266">[ thread ]</a>
+<a href="subject.html#8266">[ subject ]</a>
+<a href="author.html#8266">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; The problem is that unless this XML/prog-lang mapping is done in a very
+</em><br>
+<em>&gt; simple, manageable, compact way, it's not of any practical use...
+</em><br>
+<p>Agreed but I don't actually see much complexity here.  Fundamentally, most
+<br>
+programming languages are actually very small.  It's only when you consider
+<br>
+functions and function libraries as a part of the language that they seem
+<br>
+large.
+<br>
+<p><em>&gt; Honestly, I think what you want is Refal.NET (which doesn't exist of
+</em><br>
+<em>&gt; course, but would be a fun port to make.  Some friends of mine have now
+</em><br>
+<em>&gt; ported OCaML, another weird functional language, to .NET ... The port is
+</em><br>
+<em>&gt; called Nemerle)
+</em><br>
+<p>Actually, Sasha2(the XML version).NET would be pretty cool if you added a
+<br>
+couple of the features discussed below to Novamente.
+<br>
+<p><em>&gt; Yes, we use XML as one option for saving/loading.  However, it's very
+</em><br>
+<em>&gt; very slow to load large XML files into Novamente, so for repeatedly
+</em><br>
+<em>&gt; loading the same data we load it in from XML *once* and then save a
+</em><br>
+<em>&gt; binary &quot;net image&quot; file, which can be loaded and reloaded much faster.
+</em><br>
+<p>I agree.  For &quot;internal use only&quot; saving and retrieving, using a binary &quot;net
+<br>
+image&quot; file makes the same sense that using compiled code rather than the
+<br>
+original XML schema makes.  For transferring knowledge to somewhere else,
+<br>
+XML is probably what is needed.
+<br>
+<p><em>&gt; There are processes for &quot;encapsulation&quot; but none that specifically
+</em><br>
+<em>&gt; address scale-invariance; I'm not sure what you mean...
+</em><br>
+<p>The encapsulation that I'd like to see first is the ability to represent the
+<br>
+specification of a schema (as opposed to it's entire operation) merely by
+<br>
+it's signature and functionality so that it can be more easily analyzed and
+<br>
+operated on by higher level schema and also so that it can easily be
+<br>
+replaced by other versions as discussed in the next paragraph.
+<br>
+<p>Scale invariance is probably a long discussion but I'll try to hit a few
+<br>
+high points to give a general idea.  In nature, there are a lot of
+<br>
+fundamental equations (like the power law) that occur at all scale levels.
+<br>
+Similarly, there are functions and operations that do the same fundamentally
+<br>
+similar things at wildly different scale levels OR in wildly different
+<br>
+domains.  In the real world, we tend to recognize these things because they
+<br>
+have the same names and often serve as metaphors for each other (side
+<br>
+comment - it is probably worthwhile to look further into the importance of
+<br>
+naming in concept mapping, metaphor recognition, etc. as a way for Novamente
+<br>
+to better utilize learning and concept formation that was done in the real
+<br>
+world).  I think that there is a lot of information that can be leveraged
+<br>
+for learning from this.
+<br>
+<p><em>&gt; &gt;and b) a way to compile specific time-critical
+</em><br>
+<em>&gt; &gt; schemas from more general schemas (and the reverse, allowing
+</em><br>
+<em>&gt; &gt; for subsequent description of currently compiled code, like
+</em><br>
+<em>&gt; &gt; CIM-dynamics, WITHOUT affecting the system).
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; This is something that we know we need, but have not yet thought about
+</em><br>
+<em>&gt; in detail.  This would take the form of specific &quot;graph rewriting&quot;
+</em><br>
+<em>&gt; algorithms acting on CombinatorTrees and CombinatorDAGs ... Comparable
+</em><br>
+<em>&gt; to what exists inside some functional language interpreters.  But this
+</em><br>
+<em>&gt; is not a good discussion for SL4, I suppose -- too narrowly technical...
+</em><br>
+<p>Graph rewriting is awfully vague, generic, and covers a lot of ground.  I
+<br>
+think that one important trick (that will take a long time) is recognizing
+<br>
+when you have a generic function that can be generalized, compiled and added
+<br>
+to your toolbox.  Another trick (that should happen sooner) is recognizing
+<br>
+when all that is needed is a subset of a slow algorithm and when you can
+<br>
+constrain the algorithm and use variable folding to transform an overly
+<br>
+time-intensive algorithm into a supportable one.  Another trick (that you've
+<br>
+already used) is to be willing to replace whole graph sections with
+<br>
+human-created code where appropriate.  Actually, an example is probably
+<br>
+appropriate here since this also feeds into the encapsulation/scale
+<br>
+discussion.  For example, sorting/sorted is a generic operation/concept that
+<br>
+CAN be represented in combinatorial logic - - but I would prefer to have it
+<br>
+generally encapsulated as a description with the actual code being compiled
+<br>
+from some nice hand-crafted C++.  Your CIM-dynamics are clearly already this
+<br>
+type of code but you want to be able to, eventually, also allow the system
+<br>
+to see the Combinator version of the algorithms.  At some point, the full
+<br>
+transition from Combinator to compiled code should be possible . . . .
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="8267.html">Mark Waser: "Re: 'Singularity Realism' - A few thoughts"</a>
+<li><strong>Previous message:</strong> <a href="8265.html">Philip Sutton: "What would implications be for Singularity if US a theocratic state?"</a>
+<li><strong>In reply to:</strong> <a href="8263.html">Ben Goertzel: "RE: 'Singularity Realism' - A few thoughts"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="8269.html">Samantha Atkins: "Re: 'Singularity Realism' - A few thoughts"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#8266">[ date ]</a>
+<a href="index.html#8266">[ thread ]</a>
+<a href="subject.html#8266">[ subject ]</a>
+<a href="author.html#8266">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:46 MDT
+</em></small></p>
+</body>
+</html>

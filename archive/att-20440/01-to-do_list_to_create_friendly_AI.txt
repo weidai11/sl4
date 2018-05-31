@@ -1,0 +1,12 @@
+This document implies dependencies only insofar as each step's dependencies should appear before that step.  Note that other sequential orderings are possible while maintaining this constraint. 
+
+
+[ ] Compile design requirements for "friendly AI".  When will we know we have succeeded?
+
+[ ] Develop automated tests which will determine whether a given system is friendly to humans or not
+[ ] Develop automated tests which will determine whether a given system is intelligent or not (IQ, whatever)
+	(these tests should reflect the requirements laid out in the first step: "compile design requirements")
+
+[ ] Develop prototype systems and apply these tests to them.  Refactor tests as necessary in the case we find that some requirement is not specified in the tests.
+
+[ ] Continue refactoring prototypes until we have a system which passes both the intelligence tests and friendliness tests.  

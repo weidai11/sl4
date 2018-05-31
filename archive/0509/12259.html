@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: The Relevance of Complex Systems</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: The Relevance of Complex Systems">
+<meta name="Date" content="2005-09-08">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: The Relevance of Complex Systems</h1>
+<!-- received="Thu Sep  8 17:45:29 2005" -->
+<!-- isoreceived="20050908234529" -->
+<!-- sent="Thu, 8 Sep 2005 19:45:23 -0400" -->
+<!-- isosent="20050908234523" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: The Relevance of Complex Systems" -->
+<!-- id="JNEIJCJJHIEAILJBFHILIENEGBAA.ben@goertzel.org" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="20050908230448.82323.qmail@web26705.mail.ukl.yahoo.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20The%20Relevance%20of%20Complex%20Systems"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Thu Sep 08 2005 - 17:45:23 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="12260.html">Phil Goetz: "Re: The Relevance of Complex Systems [was: Re: Retrenchment]"</a>
+<li><strong>Previous message:</strong> <a href="12258.html">Michael Wilson: "RE: The Relevance of Complex Systems"</a>
+<li><strong>In reply to:</strong> <a href="12258.html">Michael Wilson: "RE: The Relevance of Complex Systems"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12268.html">Eliezer S. Yudkowsky: "Re: The Relevance of Complex Systems"</a>
+<li><strong>Reply:</strong> <a href="12268.html">Eliezer S. Yudkowsky: "Re: The Relevance of Complex Systems"</a>
+<li><strong>Reply:</strong> <a href="12269.html">Eliezer S. Yudkowsky: "Re: The Relevance of Complex Systems"</a>
+<li><strong>Reply:</strong> <a href="12270.html">Jef Allbright: "Re: The Relevance of Complex Systems"</a>
+<li><strong>Reply:</strong> <a href="12306.html">Phil Goetz: "RE: Inference control"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12259">[ date ]</a>
+<a href="index.html#12259">[ thread ]</a>
+<a href="subject.html#12259">[ subject ]</a>
+<a href="author.html#12259">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; &gt; But what about hypothesis formation? The space of possible hypotheses
+</em><br>
+<em>&gt; &gt; is very large.  Most of AI is devoted to search techniques for
+</em><br>
+<em>&gt; &gt; searching hypothesis space, and these techniques suck in an AGI context.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Again, very important question, wish I could discuss it more. But for
+</em><br>
+<em>&gt; the purposes of this argument the question is whether any useful
+</em><br>
+<em>&gt; mechanism of hypothesis search would inevitably introduce 'Complexity'
+</em><br>
+<em>&gt; that would render the system thoroughly impossible to predict. I am
+</em><br>
+<em>&gt; not aware of any such mechanism.
+</em><br>
+<p>Here is my specific hypothesis.
+<br>
+<p>Among the many probabilistic inference problems facing an intelligent system
+<br>
+is one particularly critical problem: the problem of attention allocation.
+<br>
+That is: the problem of what to pay attention to at a given point in time.
+<br>
+<p>And, one particular aspect of this problem is the problem of &quot;inference
+<br>
+control&quot; -- i.e., of the many different paths an inference system may take
+<br>
+from any given knowledge base, given its set of inference rules, it must
+<br>
+choose a small subset of these paths to actually pursue, given its resource
+<br>
+limitations.
+<br>
+<p>Inference control and other attention allocation problems are easily
+<br>
+formulated as probabilistic inference problems -- and they are not easy
+<br>
+ones.  To solve these probabilistic inference problems effectively in
+<br>
+nontrivial situations requires a robust hypothesis formation approach.
+<br>
+<p>My conjecture is that any useful mechanism of hypothesis search inserted
+<br>
+specifically into the inference mechanism involved in attention allocation /
+<br>
+inference control, is going to introduce complex dynamics that render the
+<br>
+system extremely difficult to predict.
+<br>
+<p>The same problem occurs even worse when one steps beyond inference control
+<br>
+to deal with the issue of automated learning of new approximate inference
+<br>
+heuristics.  The learning of such heuristics requires probabilistic
+<br>
+reasoning coupled with creative hypothesis formation, and again, any useful
+<br>
+hypothesis formation heuristic inserted here is likely to lead to
+<br>
+unpredictable dynamics on the part of the whole system.
+<br>
+<p>The unpredictability in these cases comes from the recursiveness of the
+<br>
+situation and the existence of a positive Liapunov exponent: I.e.,
+<br>
+uncertainty of amount x regarding the dynamics of the hypothesis formation
+<br>
+component of &quot;attention allocation / inference control / inference rule
+<br>
+learning&quot; will generally lead to uncertainty of amount &gt; x in the rest of
+<br>
+the system.  Thus small uncertainties will propagate and increase over
+<br>
+time -- and small uncertainties WILL exist because all useful hypothesis
+<br>
+formation heuristics are going to be stochastic to some extent.
+<br>
+<p>THIS is &quot;chaos theory&quot;, or at least, a qualitative heuristic argument
+<br>
+inspired by chaos theory.  I am curious to know how you folks intend to get
+<br>
+around it.
+<br>
+<p>-- Ben Goertzel
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="12260.html">Phil Goetz: "Re: The Relevance of Complex Systems [was: Re: Retrenchment]"</a>
+<li><strong>Previous message:</strong> <a href="12258.html">Michael Wilson: "RE: The Relevance of Complex Systems"</a>
+<li><strong>In reply to:</strong> <a href="12258.html">Michael Wilson: "RE: The Relevance of Complex Systems"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12268.html">Eliezer S. Yudkowsky: "Re: The Relevance of Complex Systems"</a>
+<li><strong>Reply:</strong> <a href="12268.html">Eliezer S. Yudkowsky: "Re: The Relevance of Complex Systems"</a>
+<li><strong>Reply:</strong> <a href="12269.html">Eliezer S. Yudkowsky: "Re: The Relevance of Complex Systems"</a>
+<li><strong>Reply:</strong> <a href="12270.html">Jef Allbright: "Re: The Relevance of Complex Systems"</a>
+<li><strong>Reply:</strong> <a href="12306.html">Phil Goetz: "RE: Inference control"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12259">[ date ]</a>
+<a href="index.html#12259">[ thread ]</a>
+<a href="subject.html#12259">[ subject ]</a>
+<a href="author.html#12259">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:52 MDT
+</em></small></p>
+</body>
+</html>

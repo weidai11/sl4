@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: About &quot;safe&quot; AGI architecture</title>
+<meta name="Author" content="Harvey Newstrom (mail@HarveyNewstrom.com)">
+<meta name="Subject" content="Re: About &quot;safe&quot; AGI architecture">
+<meta name="Date" content="2004-06-13">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: About &quot;safe&quot; AGI architecture</h1>
+<!-- received="Sun Jun 13 10:42:28 2004" -->
+<!-- isoreceived="20040613164228" -->
+<!-- sent="Sun, 13 Jun 2004 12:42:23 -0400" -->
+<!-- isosent="20040613164223" -->
+<!-- name="Harvey Newstrom" -->
+<!-- email="mail@HarveyNewstrom.com" -->
+<!-- subject="Re: About &quot;safe&quot; AGI architecture" -->
+<!-- id="A533BC10-BD58-11D8-902E-0030654881D2@HarveyNewstrom.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="8A6AC64D-BD0C-11D8-85E5-000A95B1AFDE@objectent.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Harvey Newstrom (<a href="mailto:mail@HarveyNewstrom.com?Subject=Re:%20About%20&quot;safe&quot;%20AGI%20architecture"><em>mail@HarveyNewstrom.com</em></a>)<br>
+<strong>Date:</strong> Sun Jun 13 2004 - 10:42:23 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="9184.html">Harvey Newstrom: "Re: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Previous message:</strong> <a href="9182.html">Philip Sutton: "Re: Where does friendliness come from before Collective Volition"</a>
+<li><strong>In reply to:</strong> <a href="9179.html">Samantha Atkins: "Re: About &quot;safe&quot; AGI architecture"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="9186.html">Brian Atkins: "Re: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Reply:</strong> <a href="9186.html">Brian Atkins: "Re: About &quot;safe&quot; AGI architecture"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#9183">[ date ]</a>
+<a href="index.html#9183">[ thread ]</a>
+<a href="subject.html#9183">[ subject ]</a>
+<a href="author.html#9183">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Sunday, June 13, 2004, at 03:37 am, Samantha Atkins wrote:
+<br>
+<p><em>&gt; I don't see how &quot;formal verification of Java programs&quot; can be done.  
+</em><br>
+<em>&gt; Or at least, I would assume that the specification of what the program 
+</em><br>
+<em>&gt; is supposed to do is  where much of the trick takes place.
+</em><br>
+<p>There are formal techniques for verifying, or at least, reviewing and 
+<br>
+checking whether a program is doing what it should.  &quot;Safety&quot;, or in my 
+<br>
+field, &quot;Security&quot; is much harder to do because it deals with &quot;aspects&quot; 
+<br>
+of a system.  An &quot;aspect&quot; is an emergent property of a system that does 
+<br>
+not derive from any particular Java object.  Even if every object does 
+<br>
+everything exactly right, the overall system may not be safe or secure. 
+<br>
+&nbsp;&nbsp;This is where Information Assurance comes in.  It involves testing, 
+<br>
+review, auditing, and all sorts of processes that most developers never 
+<br>
+do in a formal way.
+<br>
+<p><em>&gt;    If the specification is detailed enough and is itself provably 
+</em><br>
+<em>&gt; correct (why don't we get an infinite recurse?) then it might well be 
+</em><br>
+<em>&gt; a better form of the program than the Java one was anyway.    The 
+</em><br>
+<em>&gt; things Java removed from C++ do not afaik make it any more powerful, 
+</em><br>
+<em>&gt; certainly not more succinct, and arguably no easier to prove a program 
+</em><br>
+<em>&gt; is correct in.
+</em><br>
+<p>You are exactly correct here!  Java is a high-level language (or a 
+<br>
+medium-level language according to some people).  It still compiles 
+<br>
+down to the same machine code that C does.  What this means is that the 
+<br>
+differences between C++ and Java are merely at the human readable 
+<br>
+abstraction layer.  These differences do not exist in the executable 
+<br>
+binaries themselves.  Security people often run into these &quot;gotchas&quot; 
+<br>
+where Java programmers can't understand how they are getting the same 
+<br>
+errors as C programmers:
+<br>
+<p>- Pointer errors.  Just because Java doesn't show pointers to the 
+<br>
+humans in the syntax layer does not mean they don't exist.  Just as in 
+<br>
+C, Java can get pointer problems.  Make a string (which is really a 
+<br>
+character array) called A.  Give it a value of &quot;This is A&quot;.  Assign B 
+<br>
+to equal A.  B is really a pointer to the same physical memory space as 
+<br>
+A, even though Java hides this from you.  Change B to &quot;This is B&quot;.  
+<br>
+Guess what value A has in it now?  Yep, it says &quot;This is B&quot;.  A C 
+<br>
+programmer expects this.  A Java programmer does not.
+<br>
+<p>- Similarly, Java can abort with null pointer exceptions, even though 
+<br>
+the syntax language does not define pointers, the compiler does.
+<br>
+<p>- Java does garbage collection for you, so the language doesn't provide 
+<br>
+this feature.  This just means that Java doesn't control it of 
+<br>
+understand it, not that it doesn't have it.  Java will fill up memory 
+<br>
+until it runs out, and then the entire program freezes while garbage 
+<br>
+collection occurs.  The program will continue after a brief pause.  
+<br>
+This makes Java unacceptable for real-time or critical operations, 
+<br>
+because it can unpredictably freeze in an uncontrolled manner where C++ 
+<br>
+can be controlled.
+<br>
+<p>- Also Java security is at the syntax layer.  You can define an object 
+<br>
+class to be private, and the compiler won't let other people access it. 
+<br>
+&nbsp;&nbsp;But the executable doesn't do this.  Binaries can read anything they 
+<br>
+want and will not get the compiler error.  Also, the compiler only 
+<br>
+forbids it if your header files tells it to.  If you redefine your 
+<br>
+PRIVATE to be compiled as PUBLIC, you can access anything you want.  To 
+<br>
+a security person, there is no Java security.  The Java protections are 
+<br>
+suggestions only and are not enforced or controlled.  For auditing 
+<br>
+purpose, these are not controls.
+<br>
+<p>Just some nitpicks, to show where things can go wrong in the final 
+<br>
+system that are not detectable in the individual objects or from the 
+<br>
+source code.  Every object can function perfectly, while the entire 
+<br>
+system fails.  This is where security and safety become difficult to 
+<br>
+enforce.
+<br>
+<p><em>&gt;   I believe you can do this type of formalism for fairly small 
+</em><br>
+<em>&gt; programs.   If it works for larger software systems then your friends 
+</em><br>
+<em>&gt; should practically own the server software space.
+</em><br>
+<p>People like me try to do this formal assurance for large systems.  My 
+<br>
+new job in Washington DC is as Principle Security Architect for the 
+<br>
+National Archives and Records Administration.  It is my job to define 
+<br>
+the architecture that will keep government records safe.  This even 
+<br>
+includes classified records.  It is huge and it does require formal 
+<br>
+assurance that will take years.  Security, Assurance, and Safety must 
+<br>
+be full-time jobs within the design team from the beginning, or else 
+<br>
+the system won't be secure, assured or safe.
+<br>
+<p><pre>
+--
+Harvey Newstrom, CISSP, CISA, CISM, IAM, IBMCP, GSEC
+&lt;HarveyNewstrom.com&gt;
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="9184.html">Harvey Newstrom: "Re: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Previous message:</strong> <a href="9182.html">Philip Sutton: "Re: Where does friendliness come from before Collective Volition"</a>
+<li><strong>In reply to:</strong> <a href="9179.html">Samantha Atkins: "Re: About &quot;safe&quot; AGI architecture"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="9186.html">Brian Atkins: "Re: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Reply:</strong> <a href="9186.html">Brian Atkins: "Re: About &quot;safe&quot; AGI architecture"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#9183">[ date ]</a>
+<a href="index.html#9183">[ thread ]</a>
+<a href="subject.html#9183">[ subject ]</a>
+<a href="author.html#9183">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:47 MDT
+</em></small></p>
+</body>
+</html>

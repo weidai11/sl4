@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: [agi] A difficulty with AI reflectivity</title>
+<meta name="Author" content="Eliezer Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="Re: [agi] A difficulty with AI reflectivity">
+<meta name="Date" content="2004-10-22">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: [agi] A difficulty with AI reflectivity</h1>
+<!-- received="Fri Oct 22 06:55:37 2004" -->
+<!-- isoreceived="20041022125537" -->
+<!-- sent="Fri, 22 Oct 2004 08:55:28 -0400" -->
+<!-- isosent="20041022125528" -->
+<!-- name="Eliezer Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Re: [agi] A difficulty with AI reflectivity" -->
+<!-- id="41790340.2080903@pobox.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="20041022070446.B30196@weidai.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eliezer Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20[agi]%20A%20difficulty%20with%20AI%20reflectivity"><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Fri Oct 22 2004 - 06:55:28 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="10028.html">Christian Szegedy: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Previous message:</strong> <a href="10026.html">Ben Goertzel: "RE: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>In reply to:</strong> <a href="10024.html">Wei Dai: "Re: [agi] A difficulty with AI reflectivity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="10062.html">Wei Dai: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="10062.html">Wei Dai: "Re: [agi] A difficulty with AI reflectivity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#10027">[ date ]</a>
+<a href="index.html#10027">[ thread ]</a>
+<a href="subject.html#10027">[ subject ]</a>
+<a href="author.html#10027">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Wei Dai wrote:
+<br>
+<em>&gt; On Thu, Oct 21, 2004 at 04:10:57AM -0400, Eliezer Yudkowsky wrote:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;&gt;One way that might succeed in salvaging the Godel-Machine formalism would 
+</em><br>
+<em>&gt;&gt;be to isolate the rewriting of the theorem verifier from the rewriting of 
+</em><br>
+<em>&gt;&gt;the rest of the Godel Machine. [...]
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; I don't think this is necessary. Everything you describe can be
+</em><br>
+<em>&gt; accomplished by carefully choosing the axioms built into the initial
+</em><br>
+<em>&gt; theorem verifier, without changing the formalism itself. The utility
+</em><br>
+<em>&gt; function would be built into the axioms. The verifier will only accept a
+</em><br>
+<em>&gt; proposed rewrite if it comes with a proof that expected utility is
+</em><br>
+<em>&gt; increased, and the axioms could be chosen so that the only way to prove
+</em><br>
+<em>&gt; that a rewrite of the verifier increases expected utility is to prove that
+</em><br>
+<em>&gt; the new verifier accepts exactly the same set of proofs that the old
+</em><br>
+<em>&gt; verifier does, but faster.
+</em><br>
+<p>How do you do this?  Expected utility runs on chained conditional 
+<br>
+probabilities:  p(B|A), p(C|AB), p(D|ABC).  I can imagine proving theorems 
+<br>
+about an axiomatically specified environment's chained probabilities, 
+<br>
+theorems which avoid the need to evaluate each and every joint outcome 
+<br>
+individually - deterministic theorems, akin to proving that the outcome of 
+<br>
+alpha-beta search is exactly the same as full minimax search.  Proving the 
+<br>
+*probable* utility of a computational shortcut, i.e., proving that a 
+<br>
+shortcut for guessing expected utility may work some of the time but not 
+<br>
+all of the time, strikes me as a whole new class of problem from proving 
+<br>
+deterministic theorems - if anyone has any literature on it, I'd love to 
+<br>
+see it.  In effect, you would be taking axioms about expected utility and 
+<br>
+probability and the environment and formally proving that something was 
+<br>
+*probably* true.  As far as I know, that's a new idea, which Schmidhuber 
+<br>
+doesn't explicitly point out as new.  Of course, it may not be a new idea. 
+<br>
+&nbsp;&nbsp;The problem with this planet is that you can't read even a millionth of 
+<br>
+the relevant literature, which is why I'm often annoyed when someone says 
+<br>
+&quot;Science doesn't know X&quot;.  How can any one human being know what science 
+<br>
+does or does not know?
+<br>
+<p>Still, I've never run across a formal system for expected utility.  I know 
+<br>
+that expected utility started with the von Neumann-Morgenstern axioms, but 
+<br>
+I'm not sure if expected utility as a mathematical field has ever been 
+<br>
+systematically formalized like set theory and geometry and so on.  (Vide 
+<br>
+the Metamath project, Mizar, etc.)  Proving abstract facts about expected 
+<br>
+utility, or evaluating expected utility over abstract world-models, is 
+<br>
+another problem.  Proving reflective facts about utility, i.e., that a 
+<br>
+theorem prover which rewrites game-playing functions has expected utility, 
+<br>
+is another new class of problem, and one into which it seems likely that 
+<br>
+Godelian considerations would enter.  I haven't read anything on abstract 
+<br>
+expected utility or reflective expected utility - as far as I know they're 
+<br>
+unsolved, perhaps even unconsidered problems.
+<br>
+<p>We're not talking about a trivial amendment of the axioms, and I would like 
+<br>
+to know which axioms will do the trick.
+<br>
+<p><em>&gt; Such a system will likely miss a lot of opportunities for improvement
+</em><br>
+<em>&gt; (i.e., those that can't be proved using the built-in axioms). I think
+</em><br>
+<em>&gt; Schmidhuber acknowledged this in his paper. The axioms might also have
+</em><br>
+<em>&gt; bugs leading to unintended consequences, which the AI would not be able to
+</em><br>
+<em>&gt; fix. For example the utility function could be defined carelessly. (And
+</em><br>
+<em>&gt; for a general AI I don't see how it could be defined safely.)
+</em><br>
+<p>That's the entire problem of Friendly AI in a nutshell, isn't it?
+<br>
+<p>(Though subtract the assumption that the FAI must use a utility function. 
+<br>
+CV needs to approximate a general decision system, 
+<br>
+something-that-outputs-decisions, without assuming that the decision system 
+<br>
+obeys expected utility axioms.)
+<br>
+<p><em>&gt; This is a
+</em><br>
+<em>&gt; problem inherited from AIXI which Schmidhuber doesn't seem to address.
+</em><br>
+<p>Yes, but then the FAI problem is generally overlooked or treated as a 
+<br>
+casual afterthought, and journal referees aren't likely to point this out 
+<br>
+as a problem.  Hardly fair to Schmidhuber to zap him on that one, unless 
+<br>
+he's planning to actually build a Godel Machine.
+<br>
+<p><pre>
+-- 
+Eliezer S. Yudkowsky                          <a href="http://intelligence.org/">http://intelligence.org/</a>
+Research Fellow, Singularity Institute for Artificial Intelligence
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="10028.html">Christian Szegedy: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Previous message:</strong> <a href="10026.html">Ben Goertzel: "RE: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>In reply to:</strong> <a href="10024.html">Wei Dai: "Re: [agi] A difficulty with AI reflectivity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="10062.html">Wei Dai: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Reply:</strong> <a href="10062.html">Wei Dai: "Re: [agi] A difficulty with AI reflectivity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#10027">[ date ]</a>
+<a href="index.html#10027">[ thread ]</a>
+<a href="subject.html#10027">[ subject ]</a>
+<a href="author.html#10027">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:49 MDT
+</em></small></p>
+</body>
+</html>

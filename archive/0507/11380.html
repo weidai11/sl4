@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: &quot;Supergoal&quot; considered harmful</title>
+<meta name="Author" content="Eliezer S. Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="&quot;Supergoal&quot; considered harmful">
+<meta name="Date" content="2005-07-16">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>&quot;Supergoal&quot; considered harmful</h1>
+<!-- received="Sat Jul 16 10:35:18 2005" -->
+<!-- isoreceived="20050716163518" -->
+<!-- sent="Sat, 16 Jul 2005 09:35:18 -0700" -->
+<!-- isosent="20050716163518" -->
+<!-- name="Eliezer S. Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="&quot;Supergoal&quot; considered harmful" -->
+<!-- id="42D93746.6020505@pobox.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eliezer S. Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20&quot;Supergoal&quot;%20considered%20harmful"><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Sat Jul 16 2005 - 10:35:18 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="11381.html">Thomas Buckner: "Re: [HUMOUR] Define intelligence and wisdom (was: Re: Fighting UFAI)"</a>
+<li><strong>Previous message:</strong> <a href="11379.html">William Chapin: "Re: [HUMOUR] Define intelligence and wisdom (was: Re: Fighting UFAI)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="11382.html">Chris Capel: "Re: &quot;Supergoal&quot; considered harmful"</a>
+<li><strong>Reply:</strong> <a href="11382.html">Chris Capel: "Re: &quot;Supergoal&quot; considered harmful"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11380">[ date ]</a>
+<a href="index.html#11380">[ thread ]</a>
+<a href="subject.html#11380">[ subject ]</a>
+<a href="author.html#11380">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+The term &quot;supergoal&quot; is a word I used in the early days of writing &quot;Creating 
+<br>
+Friendly AI&quot; because I was literate enough to have heard of goals and 
+<br>
+subgoals, but not quite literate enough to know that I should be saying 
+<br>
+&quot;utility function&quot;.
+<br>
+<p>Human beings, at least the ones I know, are fascinated with the ultimate, the 
+<br>
+supreme, the overriding.  And for this reason the term &quot;supergoal&quot; seems to 
+<br>
+exert an unhealthy fascination on some psyches.  I'm thinking of the people 
+<br>
+who believe that, because you take an English statement and call it the 
+<br>
+supergoal, the AI will actually do what you mean in the sense of that 
+<br>
+statement as you intend it - if it is so terribly important how could the AI 
+<br>
+do otherwise?  Or that because you call something a &quot;supergoal&quot;, it has the 
+<br>
+power to override other things in exactly the way you would wish them overridden.
+<br>
+<p>To say that A overrides B is nothing.  Saying exactly how and under what 
+<br>
+circumstances A overrides B is interesting.  There is no sense in which the 
+<br>
+utility function of a decision process may be said to &quot;override&quot; anything, 
+<br>
+since all expected utility is computed in the first place using a utility 
+<br>
+function.  But it is certainly true that under an expected utility system, if 
+<br>
+you have a case where action A normally leads to outcome O, but the decision 
+<br>
+system *knows* itself to occupy a state S where A does not lead to O, then the 
+<br>
+expected utility of A may change.  Which works out to saying that if an 
+<br>
+expected-utility AI has a utility function that values (cognitive states 
+<br>
+binding to) states in which humans live, and ordinarily the AI's own survival 
+<br>
+is useful to this end, but under some circumstances the AI's survival is not 
+<br>
+useful to this end, and the AI knows this, then the AI will not assign high 
+<br>
+expected utility to surviving under those circumstances because that is not 
+<br>
+how the AI computes utility.  That is something like overriding.  But it is 
+<br>
+not necessary for the AI to become extremely pumped about the issue, shout 
+<br>
+proclamations, etc.
+<br>
+<p>Similarly with having a utility function of paperclips.  A decision agent 
+<br>
+whose utility function is linear in paperclips does not think that paperclips 
+<br>
+are the meaning of life.  It is not extremely pumped about paperclips.  It 
+<br>
+will not argue about the morality of paperclips.  It will compute the number 
+<br>
+of paperclips it expects to result from each action, then choose that action 
+<br>
+whose associated expectation of paperclips is highest.  It is impossible to 
+<br>
+say that its goal of paperclips &quot;overrides&quot; the value of human life in its 
+<br>
+viewpoint because it attaches no value to human life to begin with; it just 
+<br>
+chooses between actions by counting expected paperclips, *that's all*. 
+<br>
+Similarly with the AI &quot;realizing&quot; that paperclips are &quot;uninteresting&quot; and 
+<br>
+other such anthropomorphisms.  If this AI is doing any computing at all it is 
+<br>
+because the action of carrying out such computation was expected to lead to 
+<br>
+higher expected paperclips than other available actions.  There is no way to 
+<br>
+translate the notion of &quot;uninteresting&quot; with respect to utility functions, for 
+<br>
+this paperclip maximizer.  For such an agent, choice between utility functions 
+<br>
+is a meaningless concept - not an *undesirable* concept but a *meaningless* 
+<br>
+concept.  The closest it could come would be in considering a choice between 
+<br>
+running two alternate versions of source code, one version that implements the 
+<br>
+current utility function and one version that does something else.  Obviously, 
+<br>
+the action of keeping the former version leads to higher expected paperclips. 
+<br>
+&nbsp;&nbsp;And that's all.  That's the end of it.  Delete the words &quot;interesting&quot;, 
+<br>
+&quot;important&quot;, and &quot;meaningful&quot; from your vocabulary; the only criterion that 
+<br>
+matters is &quot;more expected paperclips than any alternative action&quot;.
+<br>
+<p><pre>
+-- 
+Eliezer S. Yudkowsky                          <a href="http://intelligence.org/">http://intelligence.org/</a>
+Research Fellow, Singularity Institute for Artificial Intelligence
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="11381.html">Thomas Buckner: "Re: [HUMOUR] Define intelligence and wisdom (was: Re: Fighting UFAI)"</a>
+<li><strong>Previous message:</strong> <a href="11379.html">William Chapin: "Re: [HUMOUR] Define intelligence and wisdom (was: Re: Fighting UFAI)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="11382.html">Chris Capel: "Re: &quot;Supergoal&quot; considered harmful"</a>
+<li><strong>Reply:</strong> <a href="11382.html">Chris Capel: "Re: &quot;Supergoal&quot; considered harmful"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11380">[ date ]</a>
+<a href="index.html#11380">[ thread ]</a>
+<a href="subject.html#11380">[ subject ]</a>
+<a href="author.html#11380">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Tue Feb 21 2006 - 04:22:57 MST
+</em></small></p>
+</body>
+</html>

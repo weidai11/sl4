@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Parallel computing, AGI, assignment of credit [was RE: Introduction]</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="Parallel computing, AGI, assignment of credit [was RE: Introduction]">
+<meta name="Date" content="2005-09-09">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Parallel computing, AGI, assignment of credit [was RE: Introduction]</h1>
+<!-- received="Fri Sep  9 04:57:12 2005" -->
+<!-- isoreceived="20050909105712" -->
+<!-- sent="Fri, 9 Sep 2005 06:57:03 -0400" -->
+<!-- isosent="20050909105703" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="Parallel computing, AGI, assignment of credit [was RE: Introduction]" -->
+<!-- id="JNEIJCJJHIEAILJBFHILOEOFGBAA.ben@goertzel.org" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="BF469362.2DE8%andrew@ceruleansystems.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=Re:%20Parallel%20computing,%20AGI,%20assignment%20of%20credit%20[was%20RE:%20Introduction]"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Fri Sep 09 2005 - 04:57:03 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="12289.html">Tennessee Leeuwenburg: "Re: Parallelism (Re: Introduction)"</a>
+<li><strong>Previous message:</strong> <a href="12287.html">Ben Goertzel: "RE: The Relevance of Complex Systems [was: Re: Retrenchment]"</a>
+<li><strong>In reply to:</strong> <a href="12284.html">J. Andrew Rogers: "Re: Introduction"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12290.html">Stephen Reed: "Re: Parallel computing, AGI, assignment of credit [was RE: Introduction]"</a>
+<li><strong>Reply:</strong> <a href="12290.html">Stephen Reed: "Re: Parallel computing, AGI, assignment of credit [was RE: Introduction]"</a>
+<li><strong>Reply:</strong> <a href="12293.html">H C: "Immorally optimized? - alternate observation points"</a>
+<li><strong>Reply:</strong> <a href="12295.html">Phil Goetz: "Parallelizing attention and credit-assignment"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12288">[ date ]</a>
+<a href="index.html#12288">[ thread ]</a>
+<a href="subject.html#12288">[ subject ]</a>
+<a href="author.html#12288">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Hi,
+<br>
+<p><em>&gt; Off-the-shelf distributed systems that you can put together for 
+</em><br>
+<em>&gt; modest cash
+</em><br>
+<em>&gt; today will spank the bejeezus out of a Thinking Machines CM-5 in terms of
+</em><br>
+<em>&gt; bandwidth, latency, and of course raw crunch.  Moore's law and all that.
+</em><br>
+<em>&gt; You can replicate the model in your basement for not much money, given a
+</em><br>
+<em>&gt; good reason to.
+</em><br>
+<p>Yes, of course this is true.  And of course, this is not the most effective
+<br>
+way of using modern computing hardware.
+<br>
+&nbsp;
+<br>
+<em>&gt; Obviously, people designing MP-based MIMD infrastructure systems will be
+</em><br>
+<em>&gt; solving the same kinds of problems you were solving on a 
+</em><br>
+<em>&gt; Connection Machine,
+</em><br>
+<em>&gt; particularly since the MP fabric is actually more capable than those old
+</em><br>
+<em>&gt; machines.
+</em><br>
+<p>As it happens, the things I was doing with the CM-5 were fairly simple,
+<br>
+basically involving solving numerical analysis problems.  This was the 
+<br>
+case with most CM applications, the killer app was fluid dynamics 
+<br>
+simulation.
+<br>
+<p>However, the problems involved with implementing numerical analysis
+<br>
+algorithms OR infrastructure-type problems on an MIMD parallel substrate
+<br>
+are quite different from those involved with implementing AGI on an MIMD
+<br>
+parallel substrate.
+<br>
+<p>Having said that, I should add that it would not be hard at all to modify
+<br>
+the Novamente architecture for an MIMD substrate.  This would involve
+<br>
+many changes but most of them would be for the better.  In fact we've had
+<br>
+to bend over backward to make the Novamente math and concepts match up 
+<br>
+with the distributed-computing-over-a-small-network-of-von-Neumann-machines
+<br>
+hardware we have available.  The math and concepts would mostly match up
+<br>
+more simply with an MIMD parallel infrastructure.  Although an ideal
+<br>
+practical hardware infrastructure would have a mixture, with a large MIMD 
+<br>
+component as well as a very powerful traditional serial-computing 
+<br>
+component (because there are some parts of the design that don't 
+<br>
+parallelize as nicely as others).
+<br>
+<p>Specifically, hypothesis formation in Novamente is done via evolutionary
+<br>
+methods that are extremely easily and effectively parallelized.  On the 
+<br>
+other hand, for purposes of attention allocation and assignment of credit,
+<br>
+it's more effective to have centralized information-integration and
+<br>
+modeling (though parallelization is possible there is a moderately high
+<br>
+cost involved).
+<br>
+<p>IMO assigment of credit is a good example of an AI problem that no one
+<br>
+has figured out how to parallelize effectively yet.  Traditional AI
+<br>
+approaches to assignment of credit such as Q-learning, Holland's 
+<br>
+classifiers, or Baum's Hayek are elegantly parallel in nature, yet
+<br>
+highly ineffective.  In Novamente we have opted for a more centralized
+<br>
+and probabilistic solution, which I believe will prove much more
+<br>
+effective, though this aspect of the Novamente design remains mainly
+<br>
+unexplored in practice so far (our current work with Novamente requires
+<br>
+only very simple assignment of credit).  I don't know of any efficient
+<br>
+parallel algorithm for doing credit assignment in the context of 
+<br>
+adaptive learning of complex behaviors in a complex environment.  The
+<br>
+probabilistic approach we are using in Novamente contains some aspects
+<br>
+that are not all that easily parallelized, although I'm sure good
+<br>
+approaches to parallelization would present themselves if we had the
+<br>
+hardware demanding us to come up with such approaches...
+<br>
+<p>-- Ben G
+<br>
+<p><p>&nbsp;
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="12289.html">Tennessee Leeuwenburg: "Re: Parallelism (Re: Introduction)"</a>
+<li><strong>Previous message:</strong> <a href="12287.html">Ben Goertzel: "RE: The Relevance of Complex Systems [was: Re: Retrenchment]"</a>
+<li><strong>In reply to:</strong> <a href="12284.html">J. Andrew Rogers: "Re: Introduction"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12290.html">Stephen Reed: "Re: Parallel computing, AGI, assignment of credit [was RE: Introduction]"</a>
+<li><strong>Reply:</strong> <a href="12290.html">Stephen Reed: "Re: Parallel computing, AGI, assignment of credit [was RE: Introduction]"</a>
+<li><strong>Reply:</strong> <a href="12293.html">H C: "Immorally optimized? - alternate observation points"</a>
+<li><strong>Reply:</strong> <a href="12295.html">Phil Goetz: "Parallelizing attention and credit-assignment"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12288">[ date ]</a>
+<a href="index.html#12288">[ thread ]</a>
+<a href="subject.html#12288">[ subject ]</a>
+<a href="author.html#12288">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:52 MDT
+</em></small></p>
+</body>
+</html>

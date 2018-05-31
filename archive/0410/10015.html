@@ -1,0 +1,354 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: [agi] A difficulty with AI reflectivity</title>
+<meta name="Author" content="Paul Fidika (fidika@gmail.com)">
+<meta name="Subject" content="Re: [agi] A difficulty with AI reflectivity">
+<meta name="Date" content="2004-10-21">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: [agi] A difficulty with AI reflectivity</h1>
+<!-- received="Thu Oct 21 14:38:57 2004" -->
+<!-- isoreceived="20041021203857" -->
+<!-- sent="Thu, 21 Oct 2004 15:38:54 -0500" -->
+<!-- isosent="20041021203854" -->
+<!-- name="Paul Fidika" -->
+<!-- email="fidika@gmail.com" -->
+<!-- subject="Re: [agi] A difficulty with AI reflectivity" -->
+<!-- id="249bf04f04102113385ae2910b@mail.gmail.com" -->
+<!-- charset="UTF-8" -->
+<!-- inreplyto="4177DB35.5040207@pobox.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Paul Fidika (<a href="mailto:fidika@gmail.com?Subject=Re:%20[agi]%20A%20difficulty%20with%20AI%20reflectivity"><em>fidika@gmail.com</em></a>)<br>
+<strong>Date:</strong> Thu Oct 21 2004 - 14:38:54 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="10016.html">Eliezer Yudkowsky: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Previous message:</strong> <a href="10014.html">Jeff Medina: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>In reply to:</strong> <a href="10012.html">Eliezer Yudkowsky: "Re: [agi] A difficulty with AI reflectivity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="10016.html">Eliezer Yudkowsky: "Re: [agi] A difficulty with AI reflectivity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#10015">[ date ]</a>
+<a href="index.html#10015">[ thread ]</a>
+<a href="subject.html#10015">[ subject ]</a>
+<a href="author.html#10015">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Well I'm afraid your problem is a bit beyond me at the moment, but
+<br>
+after thinking about it for two days here are my thoughts.
+<br>
+<p>First of all, it may be helpful to rephrase and clarify Eliezer's
+<br>
+problem in more concrete terms. (Disclaimer: the following discussion
+<br>
+makes use of Algorithmic Information theory, a topic which I barely
+<br>
+understand, and as such may be incorrect.) Suppose we have a Seed-AI
+<br>
+and a particular problem which we want the Seed AI to solve for us,
+<br>
+namely:
+<br>
+<p>(P)	Find and output (and only output) the first random bit-string of
+<br>
+length n, and then halt,
+<br>
+<p>where by &quot;first&quot; we mean the usual ordering over binary strings, and
+<br>
+by &quot;random&quot; we mean random in the sense of incompressibility; a
+<br>
+bit-string B of length n is random if the Kolmogorov-complexity of the
+<br>
+smallest program which prints B is greater than or equal to n.
+<br>
+(Intuitively this means that the smallest program which prints B is
+<br>
+just the program &quot;print 0011101…&quot;, where 0011101… is B.)
+<br>
+<p>Now our problem P is very simple and may be encoded in a fixed number
+<br>
+of bits, so that the complexity of P, that is, K(P), is a fixed
+<br>
+constant. Our Seed AI can also be encoded in a fixed number of bits,
+<br>
+K(S), and n (the n made reference to in P) may be encoded in log(n)
+<br>
+bits. Now choose an n such that
+<br>
+<p>n &gt; K(S) + K(P) + log(n).
+<br>
+<p>Such an n exists since K(S) and K(P) are both constants. Now if our
+<br>
+Seed AI were to output a bit-string as an answer to P, then our Seed
+<br>
+AI would be provably wrong, because, by definition, the bit-string
+<br>
+being asked for by P must be of complexity n or greater, whereas we
+<br>
+have program of complexity less than n which has printed it out,
+<br>
+meaning the string our Seed AI has printed out in fact has complexity
+<br>
+less than n, and hence cannot be the string requested in P. Thus we
+<br>
+have constructed a problem which is IMPOSSIBLE for our Seed AI to
+<br>
+solve, NO MATTER WHAT. Our Seed AI may shuffle around its bits all it
+<br>
+wants, it will be to no avail.
+<br>
+<p>Notice that this construction works for ANY computable-intelligence;
+<br>
+given any computable-intelligence, we can ALWAYS construct a problem
+<br>
+which this intelligence provably cannot solve. (Yes Penrose, that
+<br>
+INCLUDES humans.) A few properties of P are worth noting:
+<br>
+<p>-There are a finite number of candidate-solutions to P (2^n, to be exact).
+<br>
+-A unique solution exists.
+<br>
+-If we weaken P to &quot;print any (but only) one random binary string of
+<br>
+length n&quot;, then most of the candidate-solutions are in fact solutions
+<br>
+to this weakened P (most strings of length n are random)
+<br>
+-Whatever bit-string the Seed AI returns, it will provably be the incorrect one.
+<br>
+-P can be thought of as a type of Gödel sentence.
+<br>
+<p>The problem is that our Seed AI is of fixed complexity, and cannot
+<br>
+increase its complexity by internally rewriting its program (though it
+<br>
+can decrease its complexity), and its current complexity is not
+<br>
+sufficient to solve P. What if however our Seed AI turns to the
+<br>
+environment to gain complexity? Suppose that our environment contains
+<br>
+some complicated mechanism which proposes possible changes to the Seed
+<br>
+AI architecture; the Seed AI reviews the proposed architecture, and
+<br>
+then either decides (in a finite amount of time) whether or not to
+<br>
+change to the suggested architecture or stay the way it is. One such
+<br>
+proposed architecture-change must be powerful enough to solve a given
+<br>
+instance of P, so all our Seed AI needs to do is be capable of
+<br>
+recognizing such an architecture when it sees one (it needn't be able
+<br>
+to generate that architecture internally). Suppose that whenever our
+<br>
+Seed AI accepts an architecture change when considering solving an
+<br>
+instance of P, then this new architecture can indeed solve P (note
+<br>
+that the converse needn't hold—our Seed AI may reject architectures
+<br>
+which would have otherwise solved the instance of P, and the following
+<br>
+argument holds even if you insert a finite number of meta-architecture
+<br>
+changes, that is you propose changes to the Seed AI which will enable
+<br>
+it to better recognize architectures useful for better recognizing
+<br>
+architectures useful for solving P, and so on).
+<br>
+<p>If our Seed AI did accept some such architecture change, changed to
+<br>
+the new architecture, and correctly printed out the string requested
+<br>
+by P, then, prima facie, there appears to be no contradiction, because
+<br>
+K(S) + K(A), where A is the new architecture, may be much larger than
+<br>
+n. However, then we can create a program G which takes our Seed AI and
+<br>
+proposes to it EVERY possible architecture-change in some standard
+<br>
+order of enumeration, and then, if the Seed AI accepts a new
+<br>
+architecture, this new architecture is run and presumably prints the
+<br>
+string requested by P. But this program can also be specified in K(G)
+<br>
+bits, so for all n &gt; K(S) + K(G) + K(P) + log(n) not only can our Seed
+<br>
+AI not solve P, our Seed AI is incapable of recognizing an
+<br>
+architecture which CAN solve P when it sees one.
+<br>
+<p>Also, Marc Geddes's suggestion of weakening our requirements from &quot;the
+<br>
+Seed AI outputs the string specified by P&quot; to &quot;the Seed AI outputs a
+<br>
+string which is probably the string specified by P&quot; does not help at
+<br>
+all. If our Seed AI approximates the Kolmogorov-Complexity function
+<br>
+for all strings of length n (this is possible—though the
+<br>
+Kolmogorov-complexity function is uncomputable, it is semi-computable
+<br>
+from above), and, after a certain amount of time (as determined by the
+<br>
+AI), the Seed AI halts and outputs the string which is most likely to
+<br>
+be the string requested by P as determined by the
+<br>
+approximation-thus-far, then one would think that the Seed AI's answer
+<br>
+would become &quot;more likely correct&quot; if it spent a longer amount of time
+<br>
+approximating the Kolmogorov-Complexity function. But in fact whatever
+<br>
+string the Seed AI outputs will always be PROVABLY wrong, for the same
+<br>
+reasons mentioned above.
+<br>
+<p>(Note: If however the time at which the Seed AI halts and outputs is
+<br>
+determined by some external mechanism of complexity greater than the
+<br>
+difference between n and K(S) + K(P) + log(n), it might be possible
+<br>
+for the Seed AI to output the correct string. Furthermore, if the Seed
+<br>
+AI is given a large enough random string as input initially, then it
+<br>
+is possible for the Seed AI to solve P by transforming this string
+<br>
+into a string of length n and outputting it, which might be the
+<br>
+correct answer. I'm not sure if, no matter how much random-input we
+<br>
+give the Seed AI, the Seed AI can do much better than this, that is,
+<br>
+much better than random-guessing, for an arbitrary instance of P. Any
+<br>
+ideas?)
+<br>
+<p>Eliezer Wrote:
+<br>
+<p><em>&gt; The unique, new problem comes when we ask the theorem prover to rewrite
+</em><br>
+<em>&gt; itself entirely.  Even if we adjoin to Theory-1 the assumption that
+</em><br>
+<em>&gt; Theory-0 is consistent, if a Theory-1 prover were to write a provably
+</em><br>
+<em>&gt; consistent (in Theory-1) prover, it would write a Theory-0 prover.  This
+</em><br>
+<em>&gt; prover would then be unable to approve any further rewrites.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; We may be able to rescue Schmidhuber's Godel Machine by compartmentalizing
+</em><br>
+<em>&gt; it into an object system that provably has expected utility for solving
+</em><br>
+<em>&gt; problems, and a meta-system that can only be rewritten if the rewrite
+</em><br>
+<em>&gt; provably admits only theorems admissable in the original meta-system.  That
+</em><br>
+<em>&gt; is, we use *two different* criteria for modifying *two different*
+</em><br>
+<em>&gt; components of the Godel Machine.  I don't regard this as a good solution to
+</em><br>
+<em>&gt; the deep AGI problem [...] It is furthermore unclear as to how a
+</em><br>
+<em>&gt; rewrite of the meta-system would be adjudged *superior* to the prior
+</em><br>
+<em>&gt; system, even if it were proven admissible.
+</em><br>
+<p>Your problem appears to be that the Seed AI can never (internally)
+<br>
+increase its complexity, whereas it can decrease it. Also, the Seed AI
+<br>
+will not, in general, have sufficient complexity to recognize an
+<br>
+improvement when it sees one. This is a problem you fundamentally
+<br>
+cannot solve by introducing compartmentalizations or meta-levels into
+<br>
+the Seed AI.
+<br>
+<p>I can think of at least two ways to possibly partially-solve this:
+<br>
+<p>(1) Scale back your ambition; rather than worrying about problems such
+<br>
+as P, you could concentrate instead solely upon building a Seed AI
+<br>
+which can solve, and learn to solve, a broad, but not too broad, class
+<br>
+of problems, such as, say the problems in NP. The problem with P is
+<br>
+that there is apparently no way for the person requesting the string
+<br>
+to verify that the answer received is in fact correct…
+<br>
+<p>(2) Forget some of the more extreme ambitions of Seed AI; a Seed AI
+<br>
+alone cannot always solely determine which changes will be useful, but
+<br>
+must rely upon the environment to choose (the Seed AI is borrowing
+<br>
+complexity from the environment to make its decision—this is essential
+<br>
+for problems such as P), i.e., a &quot;hard-takeoff&quot; would be impossible
+<br>
+due to the delay imposed by feedback from the environment.
+<br>
+Furthermore, the Seed AI may be incapable of doing much better than
+<br>
+evolution or random-guessing in some cases.
+<br>
+<p>~Paul Fidika
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="10016.html">Eliezer Yudkowsky: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>Previous message:</strong> <a href="10014.html">Jeff Medina: "Re: [agi] A difficulty with AI reflectivity"</a>
+<li><strong>In reply to:</strong> <a href="10012.html">Eliezer Yudkowsky: "Re: [agi] A difficulty with AI reflectivity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="10016.html">Eliezer Yudkowsky: "Re: [agi] A difficulty with AI reflectivity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#10015">[ date ]</a>
+<a href="index.html#10015">[ thread ]</a>
+<a href="subject.html#10015">[ subject ]</a>
+<a href="author.html#10015">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:49 MDT
+</em></small></p>
+</body>
+</html>

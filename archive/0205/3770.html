@@ -1,0 +1,288 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: [JOIN] Stephen Reed</title>
+<meta name="Author" content="ben goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: [JOIN] Stephen Reed">
+<meta name="Date" content="2002-05-20">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: [JOIN] Stephen Reed</h1>
+<!-- received="Mon May 20 12:09:07 2002" -->
+<!-- isoreceived="20020520180907" -->
+<!-- sent="Mon, 20 May 2002 09:57:21 -0600" -->
+<!-- isosent="20020520155721" -->
+<!-- name="ben goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: [JOIN] Stephen Reed" -->
+<!-- id="01C1FFE4.BD898FE0.ben@goertzel.org" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="[JOIN] Stephen Reed" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> ben goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20[JOIN]%20Stephen%20Reed"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Mon May 20 2002 - 09:57:21 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3771.html">Stephen Reed: "Re: Funding for SIAI"</a>
+<li><strong>Previous message:</strong> <a href="3769.html">Mike & Donna Deering: "Re: Complexity of AGI"</a>
+<li><strong>Maybe in reply to:</strong> <a href="3761.html">Stephen Reed: "[JOIN] Stephen Reed"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3776.html">Stephen Reed: "RE: [JOIN] Stephen Reed"</a>
+<li><strong>Reply:</strong> <a href="3776.html">Stephen Reed: "RE: [JOIN] Stephen Reed"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3770">[ date ]</a>
+<a href="index.html#3770">[ thread ]</a>
+<a href="subject.html#3770">[ subject ]</a>
+<a href="author.html#3770">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+***
+<br>
+Cycorp is fairly well known but as an employee I can tell our story from
+<br>
+the perspective of the members of this mail list.  We are working hard to
+<br>
+create a real AI.  Along the way we have created a solid deductive
+<br>
+inference engine, the world's largest commonsense knowledge base,
+<br>
+incorporated a planner, and with a staff of computational linguists, made
+<br>
+a good start towards a hookup of Natural Language processing and the Cyc
+<br>
+KB.
+<br>
+***
+<br>
+<p>Welcome to the list!  I am very pleased to see someone from the Cyc project 
+<br>
+join up!
+<br>
+<p>I have studied Cyc somewhat closely -- I taught CycL in my AI class this 
+<br>
+semester; and talked to Lenat as well as the Cycorp CEO (I forget his name 
+<br>
+at the moment!) about a year ago, when I was considering the possibility of 
+<br>
+going to work there.
+<br>
+<p>But I decided the &quot;philosophical mismatch&quot; was too great... and I think 
+<br>
+they decided so as well... we both kind of let the conversation drop...
+<br>
+<p>I think the Cyc database will be a useful resource for an AGI someday, but 
+<br>
+I personally don't have much optimism that the AI approach being taken at 
+<br>
+Cycorp is going to lead to an AGI of any robustness and real generality, 
+<br>
+flexibility and creativity....
+<br>
+<p>My main objection is not to the CycL language -- I would use a different 
+<br>
+knowledge representation formalism, but the CycL language is largely 
+<br>
+convertible into the formalisms I prefer.
+<br>
+<p>I'd frame my main objections as follows:
+<br>
+<p>1) The knowledge being entered to the Cyc DB in is of a fairly restricted 
+<br>
+nature, by and large.  Crisp, clean propositions about named concepts are 
+<br>
+useful but may not get you that far in terms of representing all the 
+<br>
+knowledge needed by a mind.  Compared to the knowledge in Cyc, I think that 
+<br>
+most knowledge in a real mind is either
+<br>
+<p>a) a lot more closely grounded in perception and action, OR
+<br>
+b) a lot more abstract and nebulous, involving complex concepts that are 
+<br>
+difficult to name in single words or brief phrases.
+<br>
+<p>These types of knowledge are hard for human encoders to encode in explicit 
+<br>
+formulas, even though *in principle* they can be expressed in logical form.
+<br>
+<p>2) I don't like the way you represent uncertainty in CycL.  Compared to 1, 
+<br>
+this is a very minor conceptual point.  But I think that imposing a Bayes 
+<br>
+net on each small, localized subset of knowledge just doesn't come close to 
+<br>
+capturing the way uncertainty is used in the human mnd, or must be used in 
+<br>
+any robust AGI.  For one thing, I think that a single-number truth value 
+<br>
+won't do it; for another thing, I think that the dag structure of a Bayes 
+<br>
+net is too restrictive for a lot of knowledge domains.  I don't think that 
+<br>
+one pdf can be imposed on the whole knowledge base of a mind, nor do I 
+<br>
+think that the mind can be segmented into little sections and a pdf imposed 
+<br>
+on each one.  I think that richer information about uncertainty must be 
+<br>
+stored, and this must be used to construct pdf's on the fly, in a 
+<br>
+goal-directed way, in the course of reasoning.
+<br>
+<p>3)  I worry that the predicate logic based reasoning engines you guys have 
+<br>
+are far too &quot;brittle&quot; and not adequate to carrying out creative, complex 
+<br>
+trains of thought that lead significantly beyond what's explicitly there in 
+<br>
+the axioms.  This is the area I know least about, because there is not as 
+<br>
+much published on Cycorp's reasoning engines as on CycL.  I think that any 
+<br>
+approach that takes logical reasoning as the center of mental activity, and 
+<br>
+views other things as ancillary to logical reasoning, is bound to fail.  I 
+<br>
+think that a reasoning engine has to be designed based on its behavior 
+<br>
+*integrated with other mental subsystems* such as imaginative concept 
+<br>
+creation, context-appropriate control of inference and concept creation, 
+<br>
+communication, noninferential association formation, etc.  Of course I 
+<br>
+understand that Lenat and others on the Cyc team have *thought* about these 
+<br>
+things, but my impression is that the vast majority of work has gone into 
+<br>
+logical inference, and I think this is very unlikely to lead to an infer  
+<br>
+ence engine that will work properly in the context of a whole mind.  (I 
+<br>
+could go on about this point in a huge amount of detail, of course -- it 
+<br>
+leads to a lot of very interesting technical issues -- but this is intended 
+<br>
+to be a brief e-mail)
+<br>
+<p>4) Regarding NLP, it is good that Cyc is finally taking an interest in 
+<br>
+this.  When my friend Karin Verspoor, a computational linguist, interviewed 
+<br>
+there about 5 years ago, there seemed to be no significant work in this 
+<br>
+direction going on at Cycorp (hence she took a different job, at M$ 
+<br>
+Research in fact).   I can see how Cyc is well positioned to exceed current 
+<br>
+computational NLP approaches, by hybridizing (now-)standard corpus 
+<br>
+linguistics approaches with lookups into the Cyc DB.  This can be very 
+<br>
+helpful for such things as semantic disambiguation, reference resolution of 
+<br>
+various sorts, etc.  However, I think that getting the semantic/syntax 
+<br>
+interface right (the hard part of NLP) is not possible in a system that 
+<br>
+focuses so narrowly on *logical inference from crisp or (Bayes net) 
+<br>
+probabilistic propositions about named concepts*.  I think that a lot of 
+<br>
+the syntax/semantics interface has to be done by *a combination of logical 
+<br>
+inference with other cognitive processes*, acting on *crisp, concise 
+<br>
+propositions about named concepts, together with knowledge more closely 
+<br>
+grounded in perception/action, together with more abstract and nebulous 
+<br>
+intuitive knowledge*.
+<br>
+<p><p>Of course, one reaction you might have to this is &quot;Sure, I kind of agree 
+<br>
+with your points, but our current system is not supposed to be a true AGI, 
+<br>
+just a partway-there system....  We're approaching the problem from the 
+<br>
+direction of 'crisp, concise propositions about named concepts' and 
+<br>
+'logical inference with predicate logic &amp; bayesian probabilities'.   We 
+<br>
+know we're far from a true AGI, but so is everybody else, and we think what 
+<br>
+we're doing now may be a good platform for future work in directions 
+<br>
+similar to the ones you suggest.&quot;
+<br>
+<p>If this is your reaction, then what I would like to see is a paper or book 
+<br>
+addressing the &quot;grand Cyc vision&quot; -- i.e. what do you (or Lenat etc.) 
+<br>
+envision Cyc (the database and the AI system) looking like in, say, 5-20 
+<br>
+years, when you have overcome limitations like the ones I've cited above 
+<br>
+and made a more fully fleshed out AI system?  Are there internal Cycorp 
+<br>
+documents addressing this sort of thing?
+<br>
+<p>In terms of my own work, I think the Cyc DB could potentially be 
+<br>
+interesting to feed into Novamente (my own AI system, which is more 
+<br>
+integrative in nature and less strictly focused on logic, although it does 
+<br>
+have a probabilistic inference component; see www.realai.net for some 
+<br>
+nontechnical info).   I suspect I could also learn something from the way 
+<br>
+you've specialized Cyc's inference engines to deal with particular types of 
+<br>
+information, even though Novamente's inference engine does not use a 
+<br>
+predicate logic foundation.
+<br>
+<p><p>-- Ben Goertzel
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3771.html">Stephen Reed: "Re: Funding for SIAI"</a>
+<li><strong>Previous message:</strong> <a href="3769.html">Mike & Donna Deering: "Re: Complexity of AGI"</a>
+<li><strong>Maybe in reply to:</strong> <a href="3761.html">Stephen Reed: "[JOIN] Stephen Reed"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3776.html">Stephen Reed: "RE: [JOIN] Stephen Reed"</a>
+<li><strong>Reply:</strong> <a href="3776.html">Stephen Reed: "RE: [JOIN] Stephen Reed"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3770">[ date ]</a>
+<a href="index.html#3770">[ thread ]</a>
+<a href="subject.html#3770">[ subject ]</a>
+<a href="author.html#3770">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:39 MDT
+</em></small></p>
+</body>
+</html>

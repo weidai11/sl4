@@ -1,0 +1,259 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Emergence</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="Emergence">
+<meta name="Date" content="2005-10-08">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Emergence</h1>
+<!-- received="Sat Oct  8 09:25:22 2005" -->
+<!-- isoreceived="20051008152522" -->
+<!-- sent="Sat, 8 Oct 2005 11:25:17 -0400" -->
+<!-- isosent="20051008152517" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="Emergence" -->
+<!-- id="JNEIJCJJHIEAILJBFHILIEPJGGAA.ben@goertzel.org" -->
+<!-- charset="iso-8859-1" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=Re:%20Emergence"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Sat Oct 08 2005 - 09:25:17 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="12469.html">rpwl@lightlink.com: "Re: Emergence"</a>
+<li><strong>Previous message:</strong> <a href="12467.html">Ben Goertzel: "Novamente/AGISIM presentations online"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12469.html">rpwl@lightlink.com: "Re: Emergence"</a>
+<li><strong>Maybe reply:</strong> <a href="12469.html">rpwl@lightlink.com: "Re: Emergence"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12468">[ date ]</a>
+<a href="index.html#12468">[ thread ]</a>
+<a href="subject.html#12468">[ subject ]</a>
+<a href="author.html#12468">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Hi,
+<br>
+<p>I remember there was some discussion on this list a while back regarding
+<br>
+complex-systems concepts like &quot;emergence&quot; and their utility (or otherwise)
+<br>
+for understanding AI and the world in general.
+<br>
+<p>Well, I stupidly left the lights on in my car yesterday (while it was parked
+<br>
+for a few hours) and wound up sitting for 90 minutes waiting for AAA to come
+<br>
+give me a jumpstart.  In the meantime I sketched out (literally) on the back
+<br>
+of an envelope what seems to be an elegant definition of &quot;emergence&quot; in
+<br>
+terms of basic computational concepts.
+<br>
+<p>The p.s. to this email presents this definition.  It's math-y so
+<br>
+non-math-happy readers should just ignore it!
+<br>
+<p>The main point is to show that the notion of emergence can be formulated in
+<br>
+a precise and elegant way.  I have made efforts in this direction in some of
+<br>
+my prior writings but I think this one is a little nicer.
+<br>
+<p>The basic intuitive notion pursued is that emergence occurs when one has a
+<br>
+situation so that:
+<br>
+<p>·	f is a pattern in the combination of x and y
+<br>
+·	There is no g similar to f so that g is a pattern in x or g is a pattern
+<br>
+in y
+<br>
+<p>I just introduce what seems to be the minimal math formalism (or close to
+<br>
+it) needed to make the above two sentences precise.
+<br>
+<p>The next step would be to try to do some real math modeling and see if the
+<br>
+intuitive examples of emergence observed in complex systems can be easily
+<br>
+cast into this kind of formal perspective
+<br>
+<p>-- Ben G
+<br>
+<p>******
+<br>
+<p>P.S.
+<br>
+<p>OK, here goes...
+<br>
+<p>Suppose we have a set E of entities with an operation + defined on it.  (For
+<br>
+instance, E might be the set of subsets of some other set of elementary
+<br>
+entities; or it might be the set of multisets formed from some other set of
+<br>
+elementary entities.)
+<br>
+<p>The + operator may be assumed commutative and associative.  Examples of
+<br>
+suitable + operators would be operations of set or multiset union.
+<br>
+<p>Consider also a set F of function mapping E into E.  Elements of E may be
+<br>
+mapped into elements of F via considering them as “constant functions.”
+<br>
+Define an operation * on F as function composition.  Of course, * is neither
+<br>
+commutative nor associative.
+<br>
+<p>The operation + may be extended from E onto F in an obvious way, so that we
+<br>
+may now think about {+,*} as algebraic operations on F.
+<br>
+<p>Distributivity may be assumed with regard to function application, i.e.
+<br>
+<p>(f+g)(x) = f(x) + g(x)
+<br>
+<p>Within F, we may assume there is a zero element (the constant function
+<br>
+mapping everything to zero) so that
+<br>
+<p>x+0=0+x=x
+<br>
+<p>0*f = 0
+<br>
+<p>and a 1 element (the identity function) so that
+<br>
+<p>1*f = f*1 = f
+<br>
+<p>Finally, let us assume there is a valuation measure H on E, meaning that for
+<br>
+any x in E, H(x) is defined as some nonnegative real number.   Also assume a
+<br>
+two-component valuation measure H(x,y) so that H(x,0) = H(x).
+<br>
+<p>Intuitively, H(x) is to be thought of as the complexity of producing x, and
+<br>
+H(x,y) is to be thought of as the complexity of producing x given y as
+<br>
+input.  This interpretation makes it plausible to assume that
+<br>
+<p>H(f*g) &lt;= H(f) + H(g,f)
+<br>
+<p>We may now define the notion of pattern as follows:
+<br>
+<p>f is a pattern in x iff:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f(0) = x and H(f) &lt; H(x)
+<br>
+<p>That is, f is a pattern in x if f produces x and yet f is simpler than x.
+<br>
+<p>As a consequence, it follows that
+<br>
+<p>f*g is a pattern in x if:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(f*g)(0) = x and H(f)+H(g,f) &lt; H(x)
+<br>
+<p>(note that this is if, not iff).
+<br>
+<p>We may define a distance measure between elements of F as follows:
+<br>
+<p>D(f,g) = (H(f,g) + H(g,f))/2
+<br>
+<p>If H(f,g) is interpreted as the complexity of producing f from g as an
+<br>
+input, then this is a metric (a mathematically valid measure of distance)
+<br>
+since
+<br>
+<p>H(f,g) &lt;= H(f,w) + H(w,g)
+<br>
+<p>from which it follows that D also obeys the triangle inequality.  We may
+<br>
+produce a similarity measure from this by normalizing D to [0,1] via
+<br>
+<p>D1(f,g) = D(f,g) / [1+D(f,g)]
+<br>
+<p>and then setting
+<br>
+<p>sim(f,g) = 1 – D1(f,g)
+<br>
+<p>Now, what about emergence?  Emergence occurs when we have a pattern in a
+<br>
+combination of two things, that does not occur in either of the two things
+<br>
+individually.  That is, it occurs when one has a situation so that:
+<br>
+<p>·	f is a pattern in x + y
+<br>
+·	There is no g similar to f so that g is a pattern in x or g is a pattern
+<br>
+in y
+<br>
+<p>Thus we see that a natural notion of emergence arises from simple notions of
+<br>
+computation.
+<br>
+<p>This account can be made probabilistic if we introduce a “reference
+<br>
+dynamical system” and define H(f,g) as the probability of f being produced
+<br>
+within time T by the dynamical system beginning from initial condition g.
+<br>
+For instance, if the reference dynamical system for computing H(f,g)
+<br>
+consists of a system that creates random computer programs taking g as
+<br>
+input, choosing each program with probability proportional to 2-(program
+<br>
+length)  , then this probabilistic-dynamic perspective recovers an
+<br>
+approximation of what one gets from defining H(f,g) as relative Kolmogorov
+<br>
+complexity.
+<br>
+<p>-- Ben
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="12469.html">rpwl@lightlink.com: "Re: Emergence"</a>
+<li><strong>Previous message:</strong> <a href="12467.html">Ben Goertzel: "Novamente/AGISIM presentations online"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12469.html">rpwl@lightlink.com: "Re: Emergence"</a>
+<li><strong>Maybe reply:</strong> <a href="12469.html">rpwl@lightlink.com: "Re: Emergence"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12468">[ date ]</a>
+<a href="index.html#12468">[ thread ]</a>
+<a href="subject.html#12468">[ subject ]</a>
+<a href="author.html#12468">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:52 MDT
+</em></small></p>
+</body>
+</html>

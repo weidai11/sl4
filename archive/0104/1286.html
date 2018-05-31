@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: A fairly concrete path to the Singularity</title>
+<meta name="Author" content="Carl Feynman (carlf@shore.net)">
+<meta name="Subject" content="Re: A fairly concrete path to the Singularity">
+<meta name="Date" content="2001-04-28">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: A fairly concrete path to the Singularity</h1>
+<!-- received="Sun Apr 29 00:51:55 2001" -->
+<!-- isoreceived="20010429065155" -->
+<!-- sent="Sun, 29 Apr 2001 00:41:20 -0400" -->
+<!-- isosent="20010429044120" -->
+<!-- name="Carl Feynman" -->
+<!-- email="carlf@shore.net" -->
+<!-- subject="Re: A fairly concrete path to the Singularity" -->
+<!-- id="3AEB9B70.14311354@shore.net" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="NDBBIBGFAPPPBODIPJMMEEDHFHAA.ben@webmind.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Carl Feynman (<a href="mailto:carlf@shore.net?Subject=Re:%20A%20fairly%20concrete%20path%20to%20the%20Singularity"><em>carlf@shore.net</em></a>)<br>
+<strong>Date:</strong> Sat Apr 28 2001 - 22:41:20 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1287.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>Previous message:</strong> <a href="1285.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>In reply to:</strong> <a href="1221.html">Ben Goertzel: "A fairly concrete path to the Singularity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1287.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>Reply:</strong> <a href="1287.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1286">[ date ]</a>
+<a href="index.html#1286">[ thread ]</a>
+<a href="subject.html#1286">[ subject ]</a>
+<a href="author.html#1286">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Ben Goertzel wrote:
+<br>
+<p><em>&gt;
+</em><br>
+<em>&gt; ...
+</em><br>
+<em>&gt; The second is the creation of an efficient &amp; scalable programming language
+</em><br>
+<em>&gt; with a purely formal semantics.  C# may fulfill this criterion; Peter Voss
+</em><br>
+<em>&gt; is evaluating it for this purpose.  Java is formal but not yet efficient and
+</em><br>
+<em>&gt; scalable enough; an improved JVM could solve the problem, particularly a JVM
+</em><br>
+<em>&gt; specialized for large-scale AI.  C is efficient and scalable but its use of
+</em><br>
+<em>&gt; pointers means that its formal semantics needs to include a formal model of
+</em><br>
+<em>&gt; heap memory, which  makes the task of inference-driven self-modification
+</em><br>
+<em>&gt; MUCH more difficult for a C program.  [When I say C I include C++]
+</em><br>
+<p>Actually, a subset of a language that met this criterion would suffice.  For
+<br>
+example, you could define a subset of C++ that had roughly the semantic power of
+<br>
+Java or Eiffel or some other formalizable language.  By writing the system in
+<br>
+that subset, you get to use the good compilers available for C++, but keep the
+<br>
+programs possible to reason about.  One problem is that you may want to use
+<br>
+substantial bodies of existing code (libraries and the like) that won't fit in
+<br>
+the subset.
+<br>
+<p>I suspect that Python is a particularly good substrate for this trick of
+<br>
+defining a tractable subset.  It's already got fairly clean semantics, and its
+<br>
+metaobject protocol introduces additional semantic flexibility that can be used
+<br>
+to warp parts of the language that don't fit into your favorite model.
+<br>
+<p>In fact, subsetting is a reasonable strategy even for non-self-rewriting
+<br>
+programs: if you insist on using C++, it is wise to confine yourself to a
+<br>
+carefully chosen subset, to ease human comprehension of the programs.  I know
+<br>
+shops that follow rules like these:
+<br>
+--No multiple inheritance.
+<br>
+--No pointers, only references.
+<br>
+--No references, only pointers.
+<br>
+--All objects must support reference-counted garbage collection.
+<br>
+--Don't use char* for strings, use some better locally developed class.
+<br>
+--No RTTI.
+<br>
+--No &lt;dynamic_cast&gt;.
+<br>
+<p>The problem is that C++ is such a huge and unwieldy language that simply to
+<br>
+maintain sanity, you have to come up with a set of rules and customs like these
+<br>
+at the beginning of a project.  If you allow yourself free use of all of C++'s
+<br>
+features in a large program, you will run into compiler bugs and weird
+<br>
+interactions between features, and the program will be hell to debug.  On the
+<br>
+other hand, at the beginning of a project is the worst time to have to decide on
+<br>
+such rules, since it is when you know the least about the problems you will run
+<br>
+into.
+<br>
+<p>Thinking about things like this makes me say &quot;C++!  Aargh, what a horrible
+<br>
+language! I will confine myself to Java, Python, and snippets of C henceforth!&quot;
+<br>
+But then I look at the system my company builds, which involves some big-time
+<br>
+hairy distributed programming, mostly in C++, and compare it to a similar system
+<br>
+written in Java, and jobs dominated by interprocess communication run thousands
+<br>
+of times faster.  And then I get all tossed up and conflicted and have to go
+<br>
+write some EMACS macros until I feel better.
+<br>
+<p>--Carl Feynman
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1287.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>Previous message:</strong> <a href="1285.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>In reply to:</strong> <a href="1221.html">Ben Goertzel: "A fairly concrete path to the Singularity"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1287.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<li><strong>Reply:</strong> <a href="1287.html">Ben Goertzel: "RE: A fairly concrete path to the Singularity"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1286">[ date ]</a>
+<a href="index.html#1286">[ thread ]</a>
+<a href="subject.html#1286">[ subject ]</a>
+<a href="author.html#1286">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

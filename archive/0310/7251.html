@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: universal pattern detector</title>
+<meta name="Author" content="Metaqualia (metaqualia@mynichi.com)">
+<meta name="Subject" content="universal pattern detector">
+<meta name="Date" content="2003-10-30">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>universal pattern detector</h1>
+<!-- received="Thu Oct 30 17:01:08 2003" -->
+<!-- isoreceived="20031031000108" -->
+<!-- sent="Fri, 31 Oct 2003 09:00:45 +0900" -->
+<!-- isosent="20031031000045" -->
+<!-- name="Metaqualia" -->
+<!-- email="metaqualia@mynichi.com" -->
+<!-- subject="universal pattern detector" -->
+<!-- id="00a401c39f42$0cb285b0$0b01a8c0@curziolaptop" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="ALEJKGLLBAKOPAAIKCDNEEOPDGAA.peter@optimal.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Metaqualia (<a href="mailto:metaqualia@mynichi.com?Subject=Re:%20universal%20pattern%20detector"><em>metaqualia@mynichi.com</em></a>)<br>
+<strong>Date:</strong> Thu Oct 30 2003 - 17:00:45 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="../0311/7252.html">Perry E.Metzger: "Re: universal pattern detector"</a>
+<li><strong>Previous message:</strong> <a href="7250.html">Peter Voss: "FW: a2i2 project update"</a>
+<li><strong>In reply to:</strong> <a href="7250.html">Peter Voss: "FW: a2i2 project update"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="../0311/7252.html">Perry E.Metzger: "Re: universal pattern detector"</a>
+<li><strong>Reply:</strong> <a href="../0311/7252.html">Perry E.Metzger: "Re: universal pattern detector"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7251">[ date ]</a>
+<a href="index.html#7251">[ thread ]</a>
+<a href="subject.html#7251">[ subject ]</a>
+<a href="author.html#7251">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+I was thinking of a universal pattern recognition machine, something that
+<br>
+will work to recognize whatever, no matter the stimulus. it will recognize
+<br>
+automatically configurations with low entropy and high organization in the
+<br>
+sensory input. The same machine could learn to do audio or video analysis or
+<br>
+solve problems, whatever.
+<br>
+<p>I asked myself, in the simplest case, what would it take for a basic layer
+<br>
+of neurons that are activated with light intensity, to make the next layer
+<br>
+wire itself to detect edges? It would be great if there was a way to let
+<br>
+white noise filter itself out and for low entropy configurations to emerge
+<br>
+spontaneously! This way layer by layer the system would adapt to the
+<br>
+external reality, modeling anything in it.
+<br>
+<p>So this is how it would work (!!)...
+<br>
+<p>1
+<br>
+let's say we have two adjacent neurons a and b.
+<br>
+most times the difference between their input will be little since they are
+<br>
+very close. but at times the difference will be large because there is an
+<br>
+edge there. so the trick would be, let the next layer rearrange itself so
+<br>
+that only this unlikely configuration can get through.
+<br>
+<p>2
+<br>
+let's say we have two adjacent bits of the image, one has an edge detection,
+<br>
+the other also has an edge detection. This configuration is quite uncommon,
+<br>
+because if you take a random point just around an edge detector that fired,
+<br>
+unless you pick a point that is also on the edge line, this second point
+<br>
+won't be firing (assuming the edge is sharp). So locally, for a bit of line
+<br>
+to exist, this is an unlikely situation.
+<br>
+<p>3.
+<br>
+let's say we have a spot at which a bit of a line was detected. It is very
+<br>
+unlikely that from the center point another line will be going in another
+<br>
+direction. In other words, the neighborhood will contain more empty space
+<br>
+than space containing bits of lines. Locally, the occurrence of an edge is
+<br>
+not likely. So an edge filter is what comes out of this stage
+<br>
+<p>4.
+<br>
+When we have detected a corner, or a feature, then right next to it there
+<br>
+will be features and non-features (think of the edge of a cube; in three
+<br>
+directions we will find more edges, but not in the other directions). Very
+<br>
+unlikely that in the proximity of a feature there will be another feature,
+<br>
+so features are grouped together forming superfeatures (imagine the corner
+<br>
+of a cube plus the three adjacent edges).
+<br>
+<p>Of course levels can communicate with each other so that if a 3d corner + a
+<br>
+bit of line for some reason form a low entropy configuration then the system
+<br>
+will detect this pattern in some way.
+<br>
+<p>So.... would this algorithm work? Provided there was a way to physically
+<br>
+filter out the locally commonly occurring configurations and only keep the
+<br>
+rare ones, of course.
+<br>
+<p>What if neuron connections were actually weakened by activation? Then,
+<br>
+during sleep, all connections were strengthened. In this case, rare stuff
+<br>
+would build strong connections because it wouldn't be so depleted during the
+<br>
+day time. But very frequently occurring patterns (such as two adjacent
+<br>
+pixels of nearly the same color) would get weaker and weaker. This would
+<br>
+explain the need for sleep by the way.
+<br>
+<p>When we see something every day we stop noticing it; could this mechanism be
+<br>
+the reason? I am not pushing too hard the neuron weakening hypothesis, but
+<br>
+the important part is, if there was a way to filter out locally common
+<br>
+percepts, could a universal pattern detector be built? With many layers,
+<br>
+would it automatically learn to detect 3d shapes from 2d pictures, to
+<br>
+account for shadows, occlusions etc?
+<br>
+<p>This same algorithm could be used to create a mind, I haven't had enough
+<br>
+time to think about how the layer structure would work, but it would
+<br>
+probably get its first input from the high level 3d percepts which include
+<br>
+objects, actions, actors, transformations.... patterns would be detected in
+<br>
+time between actions and objects, between transformations of objects and
+<br>
+serotonin release, so that actions probably leading to pleasure would be
+<br>
+linked all the way down to the steps needed to achieve the pleasure, and
+<br>
+that's visually based human-style planning.
+<br>
+<p>So things occurring less often *locally*, are the most important, such as
+<br>
+any two random things being cause and effect. Things occurring more often,
+<br>
+such as any two random things being completely unrelated, these are white
+<br>
+noise and cancel out.
+<br>
+<p>I will give it some more thought....
+<br>
+<p><p>curzio
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="../0311/7252.html">Perry E.Metzger: "Re: universal pattern detector"</a>
+<li><strong>Previous message:</strong> <a href="7250.html">Peter Voss: "FW: a2i2 project update"</a>
+<li><strong>In reply to:</strong> <a href="7250.html">Peter Voss: "FW: a2i2 project update"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="../0311/7252.html">Perry E.Metzger: "Re: universal pattern detector"</a>
+<li><strong>Reply:</strong> <a href="../0311/7252.html">Perry E.Metzger: "Re: universal pattern detector"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7251">[ date ]</a>
+<a href="index.html#7251">[ thread ]</a>
+<a href="subject.html#7251">[ subject ]</a>
+<a href="author.html#7251">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:43 MDT
+</em></small></p>
+</body>
+</html>

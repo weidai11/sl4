@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Curriculum for AI</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: Curriculum for AI">
+<meta name="Date" content="2002-12-31">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Curriculum for AI</h1>
+<!-- received="Tue Dec 31 19:16:44 2002" -->
+<!-- isoreceived="20030101021644" -->
+<!-- sent="Tue, 31 Dec 2002 21:20:13 -0500" -->
+<!-- isosent="20030101022013" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: Curriculum for AI" -->
+<!-- id="LAEGJLOGJIOELPNIOOAJMEMKEAAA.ben@goertzel.org" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="002001c2b134$4facdde0$0100a8c0@Pc2" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20Curriculum%20for%20AI"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Tue Dec 31 2002 - 19:20:13 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="6033.html">Gordon Worley: "Re: moral symmetry"</a>
+<li><strong>Previous message:</strong> <a href="6031.html">Colin Hales: "RE: Curriculum for AI"</a>
+<li><strong>In reply to:</strong> <a href="6031.html">Colin Hales: "RE: Curriculum for AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6034.html">Ben Goertzel: "RE: Curriculum for AI"</a>
+<li><strong>Reply:</strong> <a href="6034.html">Ben Goertzel: "RE: Curriculum for AI"</a>
+<li><strong>Reply:</strong> <a href="6035.html">Gordon Worley: "Re: Curriculum for AI"</a>
+<li><strong>Reply:</strong> <a href="../0301/6044.html">Michael Roy Ames: "Re: Curriculum for AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6032">[ date ]</a>
+<a href="index.html#6032">[ thread ]</a>
+<a href="subject.html#6032">[ subject ]</a>
+<a href="author.html#6032">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Colin Hales wrote:
+<br>
+<em>&gt; I have had a look at your doc. Two issues, IMO:
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Issue a. Learner Type
+</em><br>
+<em>&gt; -------------------------------------
+</em><br>
+<em>&gt; The issue of 'intuition' and other comments in the doc about
+</em><br>
+<em>&gt; pre-configured
+</em><br>
+<em>&gt; knowledge indicates that there is something in need of more
+</em><br>
+<em>&gt; attention. Can I
+</em><br>
+<em>&gt; suggest explicitly recognising it? The choices are roughly classes like
+</em><br>
+<em>&gt; 'shock levels' :-)
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; 1) Automaton. Fixed learning about X,Y,Z...No training.
+</em><br>
+<em>&gt; 2) Learner. Learns X,Y,Z.....
+</em><br>
+<em>&gt; 3) Meta Learner. Learns to learn X,Y,Y....
+</em><br>
+<em>&gt; 4) Meta-Meta Learner. This machine is Eliezer's  SL4 self-modifying
+</em><br>
+<em>&gt; subliming beastie! Perfoms brain surgery on itself. Too hard for my poor
+</em><br>
+<em>&gt; brain.
+</em><br>
+<p>These very closely resemble the &quot;levels of learning&quot; introduced by Gregory
+<br>
+Bateson in his book &quot;Mind and Nature&quot; and his earlier writings.
+<br>
+<p>He discusses learning, learning how to learn, and learning how to learn how
+<br>
+to learn.  He gives examples of each in human thinking, and posits that the
+<br>
+human brain doesn't extend to &quot;learning how to learn how to learn how to
+<br>
+learn&quot; in significant ways.
+<br>
+<p><em>&gt; The assumption in the given training course is class 2). At least
+</em><br>
+<em>&gt; it appears
+</em><br>
+<em>&gt; to be.
+</em><br>
+<p>Well, it's true that Michael's tests do not explicitly seek to distinguish
+<br>
+learning from metalearning etc.
+<br>
+<p>However, I think they can be used to test metalearning ability, with a
+<br>
+little cleverness...
+<br>
+<p>If a system is able to &quot;learn how to learn&quot;, then it should be able to carry
+<br>
+over learning from one test to the next in the test suite.
+<br>
+<p>So, one could test metalearning as follows, using his test suite of tests
+<br>
+T(1),...,T(N).  Given a particular AI system S, for each test T(K) one could
+<br>
+<p>a) test S on the test T(K)
+<br>
+<p>b) test S on a number of prior tests drawn from {T(1),...,T(K-1)} , and then
+<br>
+test it on the test K
+<br>
+<p>[One would want to choose prior tests T(i) so that knowledge of how to pass
+<br>
+T(i) does not obviously provide material assistance in knowing how to pass
+<br>
+T(K).]
+<br>
+<p>If the system can learn how to learn, then it should learn to pass the test
+<br>
+K *significantly faster* in case b) than in case a).  Because it should have
+<br>
+learned how to learn, to some extent, from its experience with the prior
+<br>
+tests.
+<br>
+<p>One could construct a similar regime to test learning how to learn how to
+<br>
+learn, though it would be a lot more elaborate and time-consuming.
+<br>
+<p><em>&gt; Like Peter, I see assumptions (in the intro) that belie an implicit and
+</em><br>
+<em>&gt; specific philosophical/design position.
+</em><br>
+<p>Peter Voss did not say anything nearly this strong, as I interpreted his
+<br>
+e-mail.
+<br>
+<p>Of course, he can clarify his opinion for himself if he so wishes ;)
+<br>
+<p><em>&gt; Renamed, say, &quot;Training
+</em><br>
+<em>&gt; for a Class
+</em><br>
+<em>&gt; 2) , Human-grounded unembodied AI&quot;,
+</em><br>
+<p>The problem with making a test suite for an embodied AI, is that the test
+<br>
+suite is inevitably very body-dependent.
+<br>
+<p>Humans would fail a test suite created for dolphins, and vice versa -- etc.
+<br>
+etc. etc.
+<br>
+<p>I note that IQ tests, SAT tests, and the like, do not take explicit account
+<br>
+of embodiment.
+<br>
+<p>I think that tests involving embodiment are interesting.  But I don't think
+<br>
+that a test NOT involving embodiment is intrinsically inapplicable to
+<br>
+embodied AI's.
+<br>
+<p>Indeed, if the &quot;embodiment is necessary for AI&quot; theory is correct, then
+<br>
+embodied AI's should do far better on tests NOT involving embodiment in any
+<br>
+explicit way.  No?
+<br>
+<p>I do not think Michael's tests are anywhere near adequate as a training
+<br>
+regime for a baby AI.  I tend to agree with Peter on one point: I think that
+<br>
+learning in a noisy, rich environment is probably necessary for the easy
+<br>
+development of robust cognition.  I also think that learning in a context
+<br>
+encouraging spontaneous non-goal-directed behavior is important -- not just
+<br>
+testable, goal-oriented behavior.
+<br>
+<p>However, I think that tests like Michael's can serve as an important
+<br>
+component of a baby AI training regimen.  And they do have the advantage of
+<br>
+being relatively AI-approach-independent.  Whereas spontaneous behaviors and
+<br>
+rich-environment-oriented behaviors are going to be a lot more dependent on
+<br>
+the sort of sensors and actuators and body that an AI has...
+<br>
+<p>-- Ben Goertzel
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="6033.html">Gordon Worley: "Re: moral symmetry"</a>
+<li><strong>Previous message:</strong> <a href="6031.html">Colin Hales: "RE: Curriculum for AI"</a>
+<li><strong>In reply to:</strong> <a href="6031.html">Colin Hales: "RE: Curriculum for AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6034.html">Ben Goertzel: "RE: Curriculum for AI"</a>
+<li><strong>Reply:</strong> <a href="6034.html">Ben Goertzel: "RE: Curriculum for AI"</a>
+<li><strong>Reply:</strong> <a href="6035.html">Gordon Worley: "Re: Curriculum for AI"</a>
+<li><strong>Reply:</strong> <a href="../0301/6044.html">Michael Roy Ames: "Re: Curriculum for AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6032">[ date ]</a>
+<a href="index.html#6032">[ thread ]</a>
+<a href="subject.html#6032">[ subject ]</a>
+<a href="author.html#6032">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:41 MDT
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Languages and AI</title>
+<meta name="Author" content="Eliezer S. Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="Re: Languages and AI">
+<meta name="Date" content="2001-07-20">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Languages and AI</h1>
+<!-- received="Fri Jul 20 18:26:36 2001" -->
+<!-- isoreceived="20010721002636" -->
+<!-- sent="Fri, 20 Jul 2001 18:20:15 -0400" -->
+<!-- isosent="20010720222015" -->
+<!-- name="Eliezer S. Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Re: Languages and AI" -->
+<!-- id="3B58AE9F.B430AD79@pobox.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="NDBBIBGFAPPPBODIPJMMKEPBFMAA.ben@webmind.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eliezer S. Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20Languages%20and%20AI"><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Fri Jul 20 2001 - 16:20:15 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1801.html">Ben Goertzel: "RE: Languages and AI"</a>
+<li><strong>Previous message:</strong> <a href="1799.html">Eliezer S. Yudkowsky: "Re: Languages and AI"</a>
+<li><strong>In reply to:</strong> <a href="1796.html">Ben Goertzel: "RE: Languages and AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1803.html">Ben Houston: "Metacircular interprets and LISP (RE: Languages and AI)"</a>
+<li><strong>Reply:</strong> <a href="1803.html">Ben Houston: "Metacircular interprets and LISP (RE: Languages and AI)"</a>
+<li><strong>Reply:</strong> <a href="1812.html">Ben Goertzel: "RE: Languages and AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1800">[ date ]</a>
+<a href="index.html#1800">[ thread ]</a>
+<a href="subject.html#1800">[ subject ]</a>
+<a href="author.html#1800">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Ben Goertzel wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; &gt; Really?  Fine.  I want to be able to access the PARSED source code, not
+</em><br>
+<em>&gt; &gt; the plaintext, from inside the program.  Furthermore, I want to be able to
+</em><br>
+<em>&gt; &gt; alter the parsed source code, represented in a natural way (i.e., an
+</em><br>
+<em>&gt; &gt; expression is a tree and not a series of machine instructions).  I want to
+</em><br>
+<em>&gt; &gt; be able to annotate any element in this tree, whether a branch or a leaf,
+</em><br>
+<em>&gt; &gt; with complex data structures of my own devising, including new data types
+</em><br>
+<em>&gt; &gt; of my own devising, without destroying the integrity of the existing data
+</em><br>
+<em>&gt; &gt; or preventing the code from executing.  Any existing languages got that
+</em><br>
+<em>&gt; &gt; feature, which is simply first on the list?
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; If I understand what you're asking correctly, I believe this sort of thing
+</em><br>
+<em>&gt; is fairly easy to do in LISP, but not in other standard languages
+</em><br>
+<p>Unless there's been a fairly major improvement to LISP recently, it's not
+<br>
+possible to do even what I just quoted above, much less the other features
+<br>
+of Flare.  I checked out a whole mess of languages (admittedly, back in
+<br>
+1999), including Common LISP, Scheme, and a couple of other LISP dialects
+<br>
+whose names I forget.
+<br>
+<p>Not to mention that coding in lists is awkward, especially if you're used
+<br>
+to Python.  (Several attempts to build a language with more reasonable
+<br>
+syntax, that could be compiled to LISP, failed.)
+<br>
+<p>Ben Goertzel wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; Do you actually want
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; a) Flare to *use* XML internally, or
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; b) just for there to exist a 1-1 mapping between the space of its internal
+</em><br>
+<em>&gt; representation and some subspace of the space of well-formed XML
+</em><br>
+<em>&gt; expressions?
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; [Hint: the right answer is b  ;) ]
+</em><br>
+<p>&quot;B&quot;, of course.  There is no conceivable benefit to internally
+<br>
+representing the brackets and so on.  &quot;XML&quot;, for our purpose, means &quot;tree
+<br>
+structure in which adding new nodes or new node types does not destroy the
+<br>
+integrity of existing data&quot;.
+<br>
+<p>--              --              --              --              -- 
+<br>
+Eliezer S. Yudkowsky                          <a href="http://intelligence.org/">http://intelligence.org/</a> 
+<br>
+Research Fellow, Singularity Institute for Artificial Intelligence
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1801.html">Ben Goertzel: "RE: Languages and AI"</a>
+<li><strong>Previous message:</strong> <a href="1799.html">Eliezer S. Yudkowsky: "Re: Languages and AI"</a>
+<li><strong>In reply to:</strong> <a href="1796.html">Ben Goertzel: "RE: Languages and AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1803.html">Ben Houston: "Metacircular interprets and LISP (RE: Languages and AI)"</a>
+<li><strong>Reply:</strong> <a href="1803.html">Ben Houston: "Metacircular interprets and LISP (RE: Languages and AI)"</a>
+<li><strong>Reply:</strong> <a href="1812.html">Ben Goertzel: "RE: Languages and AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1800">[ date ]</a>
+<a href="index.html#1800">[ thread ]</a>
+<a href="subject.html#1800">[ subject ]</a>
+<a href="author.html#1800">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

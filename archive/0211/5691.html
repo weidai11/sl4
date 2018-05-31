@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: early AGI apps</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: early AGI apps">
+<meta name="Date" content="2002-11-09">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: early AGI apps</h1>
+<!-- received="Sat Nov  9 10:06:59 2002" -->
+<!-- isoreceived="20021109170659" -->
+<!-- sent="Sat, 9 Nov 2002 12:06:30 -0500" -->
+<!-- isosent="20021109170630" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: early AGI apps" -->
+<!-- id="LAEGJLOGJIOELPNIOOAJKEAADNAA.ben@goertzel.org" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="ALEJKGLLBAKOPAAIKCDNGEINCGAA.peter@optimal.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20early%20AGI%20apps"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Sat Nov 09 2002 - 10:06:30 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="5692.html">Slawomir Paliwoda: "Re: AGI funding (was Re: Some bad news)"</a>
+<li><strong>Previous message:</strong> <a href="5690.html">Ben Goertzel: "RE: early AGI apps"</a>
+<li><strong>In reply to:</strong> <a href="5681.html">Peter Voss: "early AGI apps"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="5670.html">Gary Miller: "RE: AGI funding (was Re: Some bad news)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#5691">[ date ]</a>
+<a href="index.html#5691">[ thread ]</a>
+<a href="subject.html#5691">[ subject ]</a>
+<a href="author.html#5691">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; I'm interested in any and all potential early applications for
+</em><br>
+<em>&gt; AGI - both to
+</em><br>
+<em>&gt; evaluate the performance of our a2i2 system, and for possible
+</em><br>
+<em>&gt; implementation.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Any ideas?
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Peter
+</em><br>
+<p>First, I have a general observation about early AGI applications.  Then I'll
+<br>
+try to answer your question..
+<br>
+<p>An advanced AGI will be able to observe a new application area, and figure
+<br>
+out how to apply itself to that area, and connect itself to other
+<br>
+appropriate software programs, etc.
+<br>
+<p>Until we're at that stage, setting up a concrete application of a proto-AGI
+<br>
+software system is a *lot of work*.
+<br>
+<p>There are two factors here:
+<br>
+<p>1) setting up any software application is a lot of work
+<br>
+<p>2)  Creating an AGI-based application can actually be more work than just
+<br>
+setting up a narrow-AI-based software application, even not counting the
+<br>
+work involved in creating the AGI system itself.
+<br>
+<p>The reason for 2 is as follows.  AGI systems are created for autonomy and
+<br>
+flexibility and nondeterminism, whereas in a software application context,
+<br>
+one often needs different virtues instead: repeatable efficient behavior in
+<br>
+particular contexts.  There is of course no intrinsic reason a software
+<br>
+system can't have both AGI virtues and software application virtues... but
+<br>
+in practice, early-stage AGI systems often aren't created with software
+<br>
+application virtues in mind.  We specifically architected Novamente so that
+<br>
+it could support both the autonomy &amp; flexibility &amp; nondeterminism required
+<br>
+for AGI, AND also so that one could create highly constrained &amp; efficient
+<br>
+Novamente-based software apps.  But not all AGI's will be this way; Webmind
+<br>
+AI Engine, for instance, did not have this property at all, and so building
+<br>
+practical apps on top of it was like pulling teeth (and we wound up
+<br>
+primarily pulling objects out of it to use in narrow-AI apps, rather than
+<br>
+actually using Webmind AI Engine in practical apps).
+<br>
+<p>So, my experience is, it's possible to make a simple prototype application
+<br>
+of an AGI system in a particular area by having a strong programmer work on
+<br>
+it for 6 months or so.  But to actually  make an AGI-based product that can
+<br>
+be sold or used in some domain, is a huge amount of work, even more than
+<br>
+building an analogous product without AGI involved.
+<br>
+<p>Another bit of general wisdom, which you surely know already: The most
+<br>
+important thing is to pick an app area where you have a lot of domain
+<br>
+expertise....
+<br>
+<p>Now, having gotten that blather out of the way, what are good app areas for
+<br>
+AGI systems?
+<br>
+<p>We're now working in bioinformatics.  There are loads of subfields here...
+<br>
+we're working mostly on genomics &amp; proteomics data analysis.
+<br>
+<p>At Webmind Inc., we worked in computational finance, and information
+<br>
+retrieval (document categorization, document retrieval).  Big uses for AGI
+<br>
+here....  And in the info. retrieval case, one can often outperform existing
+<br>
+apps without any real NLP in one's system, just treating documents as
+<br>
+patterned character-sequences ...
+<br>
+<p>Gaming has been mentioned by Reason; I think gaming is an OK application if
+<br>
+one has a very fast AGI or if one has a gaming idea &amp; biz model that
+<br>
+supports running game-interacting AGI's on a server farm...
+<br>
+<p>System administration is a wide open market... in desperate need of smart
+<br>
+automation tools...
+<br>
+<p>Knowledge management is a huge market.  So many diverse DB's out there, with
+<br>
+incompatible DB schemas, waiting for a system to come along and reconcile
+<br>
+them ...
+<br>
+<p>Robot control is another big area.  Basic robot arm control issues are
+<br>
+handled by standard engineering methods.  But no one knows how to deal with
+<br>
+mobile robotics yet, hardly at all....  The problem with mobile robotics is
+<br>
+decision making based on data integration.  See Albus's work at NIST, on a
+<br>
+robot-controlled tank.  Very interesting.  this area is begging for AGI.  Of
+<br>
+course, the military applications may be disturbing...
+<br>
+<p>Data mining in general is in great need of AGI.  It is hard to make a LOT of
+<br>
+money as a datamining company, but plenty of small companies seem to survive
+<br>
+in this way, often via a handful of contracts with large firms.
+<br>
+<p>The biomedical area incorporates aspects of robot control automation,
+<br>
+datamining, and bioinformatics, knowledge management, and system
+<br>
+administration....  And you get to deal with a huge bureaucracy too ;)
+<br>
+<p>Well, I could go on further, but there's work to do ;)
+<br>
+<p>If anyone wants to explore one of these topics further, I'll be happy to do
+<br>
+so.
+<br>
+<p>Or, Eliezer, if you feel this thread wanders too far from SL4's intended
+<br>
+focus, we could move this to the AGI list.
+<br>
+<p><p>-- Ben
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="5692.html">Slawomir Paliwoda: "Re: AGI funding (was Re: Some bad news)"</a>
+<li><strong>Previous message:</strong> <a href="5690.html">Ben Goertzel: "RE: early AGI apps"</a>
+<li><strong>In reply to:</strong> <a href="5681.html">Peter Voss: "early AGI apps"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="5670.html">Gary Miller: "RE: AGI funding (was Re: Some bad news)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#5691">[ date ]</a>
+<a href="index.html#5691">[ thread ]</a>
+<a href="subject.html#5691">[ subject ]</a>
+<a href="author.html#5691">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:41 MDT
+</em></small></p>
+</body>
+</html>

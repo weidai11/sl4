@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: About &quot;safe&quot; AGI architecture</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: About &quot;safe&quot; AGI architecture">
+<meta name="Date" content="2004-06-13">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: About &quot;safe&quot; AGI architecture</h1>
+<!-- received="Sun Jun 13 11:20:51 2004" -->
+<!-- isoreceived="20040613172051" -->
+<!-- sent="Sun, 13 Jun 2004 13:20:41 -0400" -->
+<!-- isosent="20040613172041" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: About &quot;safe&quot; AGI architecture" -->
+<!-- id="004601c4516a$c12c0f90$6501a8c0@ZOMBIETHUSTRA" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="FD89C5C9-BD5B-11D8-902E-0030654881D2@HarveyNewstrom.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20About%20&quot;safe&quot;%20AGI%20architecture"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Sun Jun 13 2004 - 11:20:41 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="9188.html">Ben Goertzel: "RE: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Previous message:</strong> <a href="9186.html">Brian Atkins: "Re: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>In reply to:</strong> <a href="9185.html">Harvey Newstrom: "Re: About &quot;safe&quot; AGI architecture"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="9189.html">Metaqualia: "Re: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Reply:</strong> <a href="9189.html">Metaqualia: "Re: About &quot;safe&quot; AGI architecture"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#9187">[ date ]</a>
+<a href="index.html#9187">[ thread ]</a>
+<a href="subject.html#9187">[ subject ]</a>
+<a href="author.html#9187">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; As I pointed out in my other note, this is not true.  The Java syntax 
+</em><br>
+<em>&gt; does not give human programmers control over pointers or memory 
+</em><br>
+<em>&gt; management.  But the binaries produced still have pointers and memory 
+</em><br>
+<em>&gt; management.  It is just that they were programmed into the 
+</em><br>
+<em>&gt; Java runtime 
+</em><br>
+<em>&gt; system programmers rather than the Java source code 
+</em><br>
+<em>&gt; programmers.  This 
+</em><br>
+<em>&gt; just moved the problem, it technically didn't solve anything.
+</em><br>
+<p>It means that, in verifying a Java program, you don't have to deal with
+<br>
+pointer errors.
+<br>
+<p>However, you have a point in that the Java interpreter/compiler and the
+<br>
+operating system, themselves, still need to be checked for correctness.
+<br>
+<p><p>An AGI, in principle, could find a way to exploit flaws in the OS to
+<br>
+allow it to break the controls that its software framework places upon
+<br>
+it.  In fact, if the AGI were implemented in Windows (which Novamente is
+<br>
+not), this would be a pretty easy problem for an AGI....
+<br>
+<p>For even greater safety, we'd want to have a formally verifiable
+<br>
+*operating system*, where the OS code could be formally proved to
+<br>
+fulfill its mathematical specifications.  There has been work done on
+<br>
+this as well, but I'm not as familiar with it.  The most interesting
+<br>
+work in this direction, that I've read, pertained to funky alternative
+<br>
+chip designs in which the basic chip operations were based on graph
+<br>
+rewriting rather than numerical arithmetic.  Such chips would be
+<br>
+beautiful for Novamente, which relies heavily on
+<br>
+functional-programming-type ideas.
+<br>
+<p>-- Ben G
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="9188.html">Ben Goertzel: "RE: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Previous message:</strong> <a href="9186.html">Brian Atkins: "Re: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>In reply to:</strong> <a href="9185.html">Harvey Newstrom: "Re: About &quot;safe&quot; AGI architecture"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="9189.html">Metaqualia: "Re: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Reply:</strong> <a href="9189.html">Metaqualia: "Re: About &quot;safe&quot; AGI architecture"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#9187">[ date ]</a>
+<a href="index.html#9187">[ thread ]</a>
+<a href="subject.html#9187">[ subject ]</a>
+<a href="author.html#9187">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:47 MDT
+</em></small></p>
+</body>
+</html>

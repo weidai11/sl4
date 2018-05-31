@@ -1,0 +1,34 @@
+On Sun, 2002-06-23 at 11:47, Eliezer S. Yudkowsky wrote:
+> 
+> In my experience, your instincts are correct; this doesn't apply to AI, but
+> applies to everything else.  Excessive complexity usually arises from a lack
+> of true understanding of the problem domain, and simple systems with good
+> architectures are usually far better than complex ones.  Except in AI, where
+> the problem is far more complex than your brain "wants" to think - in part
+> because of all the complexity of thinking is invisible to you, and in part
+> because usually humans just don't deal with things that complex.
+
+
+This is a bizarre comment, and I am having difficulty interpreting it in
+a way that makes sense.  Complexity does not have a subjective
+interpretation in proper engineering, and it doesn't follow that AI is
+in some special category of problem.  Bad engineering practice reflects
+on the engineer, not the problem.  Or to put it another way, regardless
+of how complex the problem actually is, how do you know your perception
+of the complexity is even remotely correct without going through the
+rigorous theoretical normalization required to safely make that
+assertion?  This is a particularly relevant point if we are premising a
+problem space that we are hypothesizing to be complex as such things go.
+
+The proper engineering sequence is normalization and then intentional
+denormalization to meet spec. It requires a lot of work, but any other
+methodology is highly likely to result in poor design for all but the
+most trivial problems.
+
+-James Rogers
+ jamesr@best.com
+
+
+
+
+

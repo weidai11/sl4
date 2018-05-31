@@ -1,0 +1,15 @@
+Sergei S Markoff, author of SmarThink (chess program) just updated his
+program.  Changes include:
+
+- attack-extensions on pre-leaf nodes added;
+- new search-extensions mechanism called "controlled singularity" added;
+Eliezer and others might want to have a chat with him for a few hints. 
+Or maybe just wait for the effects to hit, although, if it is
+controlled, someone might have turned the speed dial right down.
+alejandro
+
+
+
+
+
+

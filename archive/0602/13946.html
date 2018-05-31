@@ -1,0 +1,394 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]</title>
+<meta name="Author" content="Kevin Osborne (kevin.osborne@gmail.com)">
+<meta name="Subject" content="Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]">
+<meta name="Date" content="2006-02-02">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]</h1>
+<!-- received="Thu Feb  2 07:21:59 2006" -->
+<!-- isoreceived="20060202142159" -->
+<!-- sent="Fri, 3 Feb 2006 00:21:57 +1000" -->
+<!-- isosent="20060202142157" -->
+<!-- name="Kevin Osborne" -->
+<!-- email="kevin.osborne@gmail.com" -->
+<!-- subject="Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]" -->
+<!-- id="3642969c0602020621l4134bf8w41cdb20ce3783f0d@mail.gmail.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="200602020459.41774.charleshixsn@earthlink.net" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Kevin Osborne (<a href="mailto:kevin.osborne@gmail.com?Subject=Re:%20Syllabus%20for%20Seed%20Developer%20Qualifications%20[WAS%20Re:%20Some%20considerations%20about%20AGI]"><em>kevin.osborne@gmail.com</em></a>)<br>
+<strong>Date:</strong> Thu Feb 02 2006 - 07:21:57 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="13947.html">Richard Loosemore: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>Previous message:</strong> <a href="13945.html">Simon Belak: "Re: Languages for AGI  [WAS Re: Syllabus for Seed Developer Qualifications...]"</a>
+<li><strong>In reply to:</strong> <a href="13943.html">Charles D Hixson: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="13950.html">entropy@farviolet.com: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>Reply:</strong> <a href="13950.html">entropy@farviolet.com: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#13946">[ date ]</a>
+<a href="index.html#13946">[ thread ]</a>
+<a href="subject.html#13946">[ subject ]</a>
+<a href="author.html#13946">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; OCaML is one plausible candidate.  Pretty fast, compileable &amp; interpretable.
+</em><br>
+<em>&gt; It's an Object Oriented dialect of CaML which is a dialect of ML.  SML
+</em><br>
+<em>&gt; doesn't have lots of nice features, like variables, but OCaML (and CaML?)
+</em><br>
+<em>&gt; slips them back in.  Also, ANSI C can be embedded into the code.  (So the
+</em><br>
+<em>&gt; docs say.  I'm not familiar enough to judge.)
+</em><br>
+<p>Must say I use a nice p2p app written in Objective CaML, but I thought
+<br>
+it would be too obscure to mention - my bad!
+<br>
+<p><p><em>&gt; Have you looked at Alice, from Stanford University?  Still in the early
+</em><br>
+<em>&gt; stages, but it looks like it supports parallelism in a quite interesting
+</em><br>
+<em>&gt; fashion.  Check out &quot;Promises&quot;.  Nice!
+</em><br>
+<p>will do; though new/experimental languages have certain advantages
+<br>
+(evolution says they'll be better) they also have certian
+<br>
+disadvantages; like the necessity to write your own API modules for
+<br>
+solved problems (sorts, collections, tcp/ip, unicode, math, remoting,
+<br>
+etc) - this is not to say that any newer-language-of-your-choice
+<br>
+doesn't have some or all of these features; but does in have
+<br>
+<a href="http://cpan.org/authors/id/D/DC/DCANTRELL/Acme-Scurvy-Whoreson-BilgeRat-1.0.readme">http://cpan.org/authors/id/D/DC/DCANTRELL/Acme-Scurvy-Whoreson-BilgeRat-1.0.readme</a>
+<br>
+&nbsp;? :-)
+<br>
+<p><em>&gt; Also:  If you think of &quot;subsets of some other language&quot; as not worth
+</em><br>
+<em>&gt; considering, please think again.  Languages can be made much better by
+</em><br>
+<em>&gt; removing some feature that's just too dangerous.
+</em><br>
+<p>subset as I'm meaning it refers to the available API. What I'm trying
+<br>
+to get at is that I might in the course of developing 'workhorse' AGI
+<br>
+code need to:
+<br>
+- write code that will parse the pixels of a scanned exponential
+<br>
+graph, generate the data model it represents and call various math
+<br>
+functions against the result
+<br>
+- fire off a gazillion threads on multiple servers across the globe
+<br>
+which share resources and scheduling to achieve a given computation
+<br>
+result; the initiation of which can instantaneously load and run new
+<br>
+code segments without requiring user tweaking of the distributed
+<br>
+clients (e.g. stopping the target application server on the
+<br>
+distributed client, updating the class library and restarting - I'd
+<br>
+consider this to be a pretty severe disadvantage)
+<br>
+- parse the source code and OS/chip specific binaries of all known
+<br>
+langauges to define a functional model that can be applied against
+<br>
+mathematical proofs and then regenerated in any other language
+<br>
+- text transliteration, conversion and parsing supporting unicode
+<br>
+languages and all known file formats
+<br>
+- web/net spidering to grok every online resouce possible via every
+<br>
+known protocol; tcpip, p2p, X.25, SOAP, SNMP etc
+<br>
+- mature persistent storage support incl. database connection pooling
+<br>
+and driver/api support for the big rdbms', LDAP,bdb etc
+<br>
+<p>For the above examples a language like say Java has pretty much all
+<br>
+the prerequisites in the API or free, stable 3rd party libraries; I
+<br>
+wouldn't need to write any workhorse code for the operations
+<br>
+themselves (e.g. the Java 2D API could parse an image of a graph from
+<br>
+any one a host of image file formats and could generate pixel plot
+<br>
+metadata with relative ease) - just the higher functional code for
+<br>
+achieving the result. When I say one language is a subset of another,
+<br>
+I mean it's available module library for solving known tasks is not as
+<br>
+broad. So when I say 'Python is a subset of Java', I'm saying is
+<br>
+doesn't have the breadth of API that Java does - I think this is a
+<br>
+fair comment. Python definitely does more than just web operations,
+<br>
+and has it's champions (Google is a great example) but as a programmer
+<br>
+who favours his LAMP flavoured in Perl I'm always going to be a little
+<br>
+biased :-)
+<br>
+<p>And in regards to 'dangerous' language features, I could posit that
+<br>
+our future code-writing AGI will have no problem using such features
+<br>
+very, very effectively. Backing away from something because of a
+<br>
+percieved lack of skills, especially in others, belies a certain
+<br>
+neurotic attitude that could well be holding the development timeline
+<br>
+back. If our AGI will be able to do it, we should be trying to improve
+<br>
+our collective engieering skills until we can do it too.
+<br>
+<p>... the next few paragraphs go _way_ OT; search to ':skip' to, well, ...
+<br>
+<p>side note: I find myself calling 'bullshit' whenever anyone denegrates
+<br>
+thier peers and/or society in this implicit way - e.g 'most
+<br>
+programmers can't do pointers/gotos/language-feature-x' or 'most
+<br>
+people are stupid, useless bovines'.   It's not the fault of the
+<br>
+greater group that your message stinks - sometimes we all get to be
+<br>
+the Crazy Person. I have a host of things I feel all sorts of
+<br>
+inclinations to believe in (AGI,
+<br>
+Rationality-as-a-replacement-for-religion (Dawkins), Aether,
+<br>
+agrav=FTL, nationalism-is-evil,
+<br>
+all-humans-can-be-considered-biologically-equivalent) but I realise
+<br>
+that some of my cherished favourites are probably hokum,and that if
+<br>
+they're not gaining any kind of traction with the majority then
+<br>
+there's a good chance I'm flat wrong. We've got where we are today via
+<br>
+a collective effort, and the world is full of nutty, beautiful little
+<br>
+fruits from the tree-of-humanity and that the vast majority are
+<br>
+affable and sensible sorts with just as much curiostiy and wonder as
+<br>
+me. Denigrating the intelligence others also calls into question where
+<br>
+you fit in the bell curve; and that maybe in certain areas it is *you*
+<br>
+(and me) who are 'blissfully incompetent'
+<br>
+(<a href="http://abcnews.go.com/Technology/DyeHard/story?id=1291826">http://abcnews.go.com/Technology/DyeHard/story?id=1291826</a>)
+<br>
+<p>further, _very_ OT comment, while I have the inclinatation to
+<br>
+braindump: have we previosuly considered genetically modifiying other
+<br>
+mammals to achieve a greater level of global intelligence? Big Cats,
+<br>
+Dolphins &amp; Elephants (others anyone?) all have certain faculties that
+<br>
+are almost certainly more highly evolved than ours (Elpahant memory?)
+<br>
+and these 'lower' mammals could show great promise in being
+<br>
+genetically modified to talk, think and have usable digits or
+<br>
+(possibly bio-mechanic/electronic) actuators. Also, we can do this
+<br>
+modification, including cloning, without breaking any kind of law or
+<br>
+statute as is the case with genetically modifying humans. It could be
+<br>
+that a super-intelligent talking Tiger could be genetically
+<br>
+predisposed to solving FTL; That enchanced dolphins could be
+<br>
+quantum-math savants, and that elephants could be unparalled
+<br>
+estimators and correct-judgement perceivers. We all have kidneys,
+<br>
+right? Would it be so hard so 'hoist' them? Could the payoff be worth
+<br>
+it? surely the more heterogenous the thought spectrum the greater the
+<br>
+chance of breakthroughs? And yes, I want to boink leopard-head girl
+<br>
+:-)
+<br>
+<p>:skip
+<br>
+<p><em>&gt; However, the real problem is:  &quot;Where are you going to get your programmers?&quot;.
+</em><br>
+<em>&gt; This is why so many projects settle on C or Java, despite all their many
+</em><br>
+<em>&gt; problems.  Even when you're paying good money most people are reluctant to
+</em><br>
+<em>&gt; learn a new language.  (I'm currently finding myself reluctant to learn OCaML
+</em><br>
+<em>&gt; for a somewhat similar reason.  It looks like a lot of effort for an
+</em><br>
+<em>&gt; uncertain return.)
+</em><br>
+<p>this is a fair point; while we all need a Linus (Ben Goertzel seems to
+<br>
+be our version of &quot;Pimpin' T&quot; here) we also need a development
+<br>
+community. Taking the Linux kernel as an example of a huge community
+<br>
+project, here's some stats for us all to think about:
+<br>
+# of Kernel contributors: 418 (2002,. from
+<br>
+<a href="http://www.firstmonday.org/issues/issue9_6/tuomi/#t5">http://www.firstmonday.org/issues/issue9_6/tuomi/#t5</a>. Contrast this
+<br>
+however with significantly fewer at
+<br>
+<a href="http://www.kernel.org/pub/linux/kernel/people/">http://www.kernel.org/pub/linux/kernel/people/</a>; can anyone elaborate?)
+<br>
+# of SLOC: 6,000,000 (kernel; 2.6, from
+<br>
+<a href="http://en.wikipedia.org/wiki/Source_lines_of_code">http://en.wikipedia.org/wiki/Source_lines_of_code</a>; take note that of
+<br>
+the Vista count: 50M!)
+<br>
+# of Linux kernel testers: google was not forthcoming - anyone?.
+<br>
+another interesting stat would be how many testers Microsoft employs
+<br>
+(I read an older Mac figure of 500) and how many beta testers they
+<br>
+supply CTP's to
+<br>
+<p><p><em>&gt; Unfortunately, they're a bit slow.  If you use them, figure you'll need
+</em><br>
+<em>&gt; twice the CPU cycles to reach breakthrough as with an efficient language,
+</em><br>
+<em>&gt; like C, D, or SML.
+</em><br>
+<p>Moore's law makes efficency kind of irrelevant. If the language has
+<br>
+the potential to deliver the goods in terms of 'it turns out to be so
+<br>
+much easier to develop AGI bootstrap code in language x' then it
+<br>
+should be considered.
+<br>
+<p><em>&gt; Also, why include Perl?  It deserves to be dismissed for
+</em><br>
+<em>&gt; the same reasons, and to the same degree, as Python and Ruby.
+</em><br>
+<p>Perl does have a pretty impressive API; even outside the standard
+<br>
+distribution there's another 10,000 modules on CPAN
+<br>
+(<a href="http://cpan.org/modules/01modules.index.html">http://cpan.org/modules/01modules.index.html</a>). Also, the Parrot VM
+<br>
+they're building for Perl6 has lofty goals both for the language
+<br>
+(check out the Synopses, Apocalypses and Exegeses) and for the Parrot
+<br>
+VM the interpretable language list includes Python &amp; Lisp and would
+<br>
+you know it - Basic :-) (from: <a href="http://www.parrotcode.org/languages/">http://www.parrotcode.org/languages/</a>)
+<br>
+and it's also been implemented in Haskell (<a href="http://www.pugscode.org/">http://www.pugscode.org/</a>)
+<br>
+<p><em>&gt; No comments on C#, but if you don't consider programmer availability, then I'd
+</em><br>
+<em>&gt; plunk clearly for D (unless you go for something experimental like Alice).
+</em><br>
+<em>&gt; If you do... SIGH ... it's pretty much GOT to be C, C++, or Java.  Perhaps
+</em><br>
+<em>&gt; the gcj subset of Java (so it's actually compileable to native code).
+</em><br>
+<p>I'd posit there a plenty of perl hackers out there; remember when it
+<br>
+was the only 'write (carefully) once, run anywhere' game in town
+<br>
+before Java came along? And if Parrot can eventually run all the
+<br>
+languages it says it will (these include .NET/Java bytecode) then
+<br>
+maybe we _don't_ need to select a langauge per se as opposed to a VM
+<br>
+or framework.
+<br>
+<p>Having said that, .NET supports 40 languages, including pretty much
+<br>
+_all_ the usual suspects
+<br>
+(<a href="http://en.wikipedia.org/wiki/Microsoft_.NET#.NET_languages">http://en.wikipedia.org/wiki/Microsoft_.NET#.NET_languages</a>) and the
+<br>
+number of coders who can write windows apps must outnumber non-windows
+<br>
+developers by some kind of ridiculous margin, significantly increasing
+<br>
+the potential developer pool...
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="13947.html">Richard Loosemore: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>Previous message:</strong> <a href="13945.html">Simon Belak: "Re: Languages for AGI  [WAS Re: Syllabus for Seed Developer Qualifications...]"</a>
+<li><strong>In reply to:</strong> <a href="13943.html">Charles D Hixson: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="13950.html">entropy@farviolet.com: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<li><strong>Reply:</strong> <a href="13950.html">entropy@farviolet.com: "Re: Syllabus for Seed Developer Qualifications [WAS Re: Some considerations about AGI]"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#13946">[ date ]</a>
+<a href="index.html#13946">[ thread ]</a>
+<a href="subject.html#13946">[ subject ]</a>
+<a href="author.html#13946">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:55 MDT
+</em></small></p>
+</body>
+</html>

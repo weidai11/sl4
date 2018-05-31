@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: PROJ: Flare</title>
+<meta name="Author" content="Durant Schoon (durant@ilm.com)">
+<meta name="Subject" content="Re: PROJ: Flare">
+<meta name="Date" content="2001-07-17">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: PROJ: Flare</h1>
+<!-- received="Tue Jul 17 20:15:59 2001" -->
+<!-- isoreceived="20010718021559" -->
+<!-- sent="Tue, 17 Jul 2001 16:30:34 -0700 (PDT)" -->
+<!-- isosent="20010717233034" -->
+<!-- name="Durant Schoon" -->
+<!-- email="durant@ilm.com" -->
+<!-- subject="Re: PROJ: Flare" -->
+<!-- id="durant-1010717163033.A17335663@sleeper" -->
+<!-- inreplyto="3B54B7AC.4CC0452@pobox.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Durant Schoon (<a href="mailto:durant@ilm.com?Subject=Re:%20PROJ:%20Flare"><em>durant@ilm.com</em></a>)<br>
+<strong>Date:</strong> Tue Jul 17 2001 - 17:30:34 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1765.html">Ben Goertzel: "RE: Flare"</a>
+<li><strong>Previous message:</strong> <a href="1763.html">Gordon Worley: "Re: Notification of offlist threads"</a>
+<li><strong>In reply to:</strong> <a href="1761.html">Eliezer S. Yudkowsky: "Re: PROJ: Flare"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1768.html">Eliezer S. Yudkowsky: "Re: PROJ: Flare"</a>
+<li><strong>Reply:</strong> <a href="1768.html">Eliezer S. Yudkowsky: "Re: PROJ: Flare"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1764">[ date ]</a>
+<a href="index.html#1764">[ thread ]</a>
+<a href="subject.html#1764">[ subject ]</a>
+<a href="author.html#1764">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; From: &quot;Eliezer S. Yudkowsky&quot; &lt;<a href="mailto:sentience@pobox.com?Subject=Re:%20PROJ:%20Flare">sentience@pobox.com</a>&gt;
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Well, back when I was first writing my design notes on Flare, there were
+</em><br>
+<em>&gt; no XML Schema.  I need to investigate XML Schema in more detail, but my
+</em><br>
+<em>&gt; preliminary investigations seem to show that they don't match the natural
+</em><br>
+<em>&gt; idioms for Flare modules and Flare planes.  It looks to me like XML Schema
+</em><br>
+<em>&gt; are based around the idea that every &lt;xyz:arms&gt; tag means the same thing
+</em><br>
+<em>&gt; everywhere in the document.  In Flare, &lt;arms&gt; means &quot;appendage&quot; in the
+</em><br>
+<em>&gt; &lt;human&gt; class and &lt;arms&gt; means &quot;ammunition&quot; in the &lt;quakegunner&gt; class,
+</em><br>
+<em>&gt; which is the way that almost every object-oriented language works it.
+</em><br>
+<p>I don't know if this should be taken to an sl4-flare, list, but...
+<br>
+<p>If Sally is a human and a quakegunner (or a groud soldier), 
+<br>
+wouldn't you want something like this (being extra verbose):
+<br>
+<p>&lt;human:sally&gt;
+<br>
+<p>&nbsp;&lt;appendage:arms&gt;
+<br>
+&nbsp;&nbsp;&lt;quantity:number&gt; 2 &lt;/quantity:number&gt;
+<br>
+&nbsp;&lt;/appendage:arms&gt;
+<br>
+<p>&nbsp;&lt;quakegunner:arms&gt; 
+<br>
+&nbsp;&nbsp;&lt;weapon:bfg&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&lt;quantity:number&gt; 1 &lt;/quantity:number&gt;
+<br>
+&nbsp;&nbsp;&lt;/weapon:bfg&gt;
+<br>
+&nbsp;&lt;/quakegunner:arms&gt;
+<br>
+<p>&lt;/human:sally&gt;
+<br>
+<p>You can still collect all the &quot;arms&quot; and sort them out later or
+<br>
+treat them all as &quot;arms&quot;. 
+<br>
+<p>Also Schema have nice notions for limiting, say, how many of something
+<br>
+you want (an octopus can have 0 to 8 tentacles). You can also say
+<br>
+Sally has two hands. One is of type lefthand the other is of type
+<br>
+righthand. Kind of like invariants if and when you want them for 
+<br>
+Flare's programming-by-contract.
+<br>
+<p>(ok, maybe this is getting way too detailed and these things should
+<br>
+be decided later).
+<br>
+<p><pre>
+--
+Durant Schoon
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1765.html">Ben Goertzel: "RE: Flare"</a>
+<li><strong>Previous message:</strong> <a href="1763.html">Gordon Worley: "Re: Notification of offlist threads"</a>
+<li><strong>In reply to:</strong> <a href="1761.html">Eliezer S. Yudkowsky: "Re: PROJ: Flare"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1768.html">Eliezer S. Yudkowsky: "Re: PROJ: Flare"</a>
+<li><strong>Reply:</strong> <a href="1768.html">Eliezer S. Yudkowsky: "Re: PROJ: Flare"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1764">[ date ]</a>
+<a href="index.html#1764">[ thread ]</a>
+<a href="subject.html#1764">[ subject ]</a>
+<a href="author.html#1764">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

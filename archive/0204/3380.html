@@ -1,0 +1,259 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Mathematical definitions of pattern</title>
+<meta name="Author" content="ben goertzel (ben@goertzel.org)">
+<meta name="Subject" content="Mathematical definitions of pattern">
+<meta name="Date" content="2002-04-18">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Mathematical definitions of pattern</h1>
+<!-- received="Thu Apr 18 12:14:03 2002" -->
+<!-- isoreceived="20020418181403" -->
+<!-- sent="Thu, 18 Apr 2002 10:03:16 -0600" -->
+<!-- isosent="20020418160316" -->
+<!-- name="ben goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="Mathematical definitions of pattern" -->
+<!-- id="01C1E6C0.433683C0.ben@goertzel.org" -->
+<!-- charset="us-ascii" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> ben goertzel (<a href="mailto:ben@goertzel.org?Subject=Re:%20Mathematical%20definitions%20of%20pattern"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Thu Apr 18 2002 - 10:03:16 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3381.html">ben goertzel: "RE: Hopfield networks as a model of memory?"</a>
+<li><strong>Previous message:</strong> <a href="3379.html">jg nlb: "Re: about sl4"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3380">[ date ]</a>
+<a href="index.html#3380">[ thread ]</a>
+<a href="subject.html#3380">[ subject ]</a>
+<a href="author.html#3380">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; The most straightforward mathematical definition is &quot;brevity of program
+</em><br>
+<em>&gt; size&quot;, but as I state explicitly, another valuable definition is &quot;brevity 
+</em><br>
+of
+<br>
+<em>&gt; runtime&quot;.
+</em><br>
+<p>Not in the stuff I'm reading... maybe one of your other works? Anyway,
+<br>
+brevity of program size is a special case of brevity of runtime, not the
+<br>
+other way around. This should become clear shortly...
+<br>
+***
+<br>
+I discussed this stuff in The STructure of Intelligence in 1993. I guess I 
+<br>
+should be more general about it in the Novamente book.
+<br>
+Neither brevity of prog. size nor brevity of runtime are special cases of 
+<br>
+each other, actually. Both are special cases of the general notion of 
+<br>
+&quot;simplicity measure&quot; though.
+<br>
+***
+<br>
+<em>&gt; -- similarity defined relative to the knowledge base K defined by the 
+</em><br>
+system
+<br>
+<em>&gt; in question
+</em><br>
+<p>(Not &quot;similarity&quot; defined relative to the knowledge base K - what would 
+<br>
+that
+<br>
+mean? - but &quot;similarity&quot; defined relative to a goal-oriented role. That's
+<br>
+why you need a surrounding AI for the definition to make sense.)
+<br>
+***
+<br>
+But a given AI may have many different goals. In each goal, in each 
+<br>
+context, there may be a different goal &amp; context - dependent similarity 
+<br>
+measure. This is true. Then the notion of pattern can be applied especially 
+<br>
+in the context of that goal/context pair.
+<br>
+***
+<br>
+I think it makes a big difference, in practice, whether you call what 
+<br>
+you're
+<br>
+looking for &quot;simplicity&quot; or &quot;useful complexity&quot;. It makes a big difference
+<br>
+whether you're looking for a &quot;representation as something simpler&quot; or
+<br>
+&quot;complexity that renders a problem tractable&quot;. It makes a big difference
+<br>
+whether you're looking for &quot;similarity&quot;, what I would call a correspondence
+<br>
+mapping, or for &quot;utility&quot; in a goal context. These concepts may be related
+<br>
+mathematically but their intuitive surface manifestations are different. So
+<br>
+psychologically there is a definite difference, one that IMHO shows a 
+<br>
+strong
+<br>
+surface correspondence with our respective beliefs about how AI should be
+<br>
+pursued.
+<br>
+***
+<br>
+I disagree, I think you read way too much into a difference in verbiage. 
+<br>
+The fact that I use a language of &quot;representation&quot; in defining pattern 
+<br>
+doesn't say anything about the relevanct of goals and contexts to 
+<br>
+Novamente.
+<br>
+I settled on that language in 1990 or so and it may say a little more about 
+<br>
+my frame of mind then than about my frame of mind now, also.
+<br>
+***
+<br>
+How can we mathematically define tractability? It will come as no surprise
+<br>
+to any reader of DGI that I want to define it in terms of fitness
+<br>
+landscapes. Suppose that a system S is at a point P within a landscape L,
+<br>
+and you want to get from P to Q. What is the distance between P and Q? One
+<br>
+way is to define &quot;distance&quot; as inversely proportional to the probability of
+<br>
+system S taking the step to Q from P. Another way is to define distance as
+<br>
+the amount of computing power that needs to be expended to get from P to Q. 
+<br>
+***
+<br>
+But this latter definition is just the algorithmic infomration of Q 
+<br>
+relative to P, where you use both program size &amp; runtime to gauge 
+<br>
+simplicity. You're just giving a new word, &quot;tractability&quot;, to something 
+<br>
+quite familiar.
+<br>
+It's fine if you like your choice of word better, but a new name doesn't 
+<br>
+make it a new concept!!
+<br>
+it's not MY original concept either. I think William Bennett from IBM in 
+<br>
+the 1970's was the one who started using runtime complexity along with 
+<br>
+prog. length in this context
+<br>
+**
+<br>
+&quot;Useful complexity&quot;, or complexity that contributes to tractability, is a
+<br>
+pattern that, when added to the system S, tends to decrease the distance
+<br>
+between P and Q. If the pattern decreases the distance between a very broad
+<br>
+range of Ps and Qs, then the pattern might be said to have something to do
+<br>
+with &quot;general intelligence&quot;, as above.
+<br>
+**
+<br>
+I( P | Q and R) &lt; I(P|Q)
+<br>
+***
+<br>
+But I will say that when you look at AI from this perspective, it does shed
+<br>
+another spotlight on why AI projects tend to fail. The tractability of the
+<br>
+problem is merely the zeroth step. The manageability of the problem space
+<br>
+is the first derivative. The manageability of the expertise space is the
+<br>
+second derivative. Coding an AI, or an AI modifying itself, is the third
+<br>
+derivative. Strongly recursive seed AI is the fourth derivative. If all
+<br>
+you see of that is the immediate problem, the zeroth derivative, and you
+<br>
+write some piece of code that solves it directly, then naturally you're
+<br>
+going to do a comical bounce off the problem of Real AI - like backing up,
+<br>
+getting a good wind, and running headlong into a thirty-mile wall of rubber
+<br>
+cement.
+<br>
+***
+<br>
+It seems very clear to me that what you are doing is attaching a different 
+<br>
+verbiage to some old &amp; familiar ideas.
+<br>
+If you &amp; others find your new verbiage more intuitive, that's great. But 
+<br>
+formally, these ideas are nothing new really. They're there in my 1993 book 
+<br>
+and they're there in various papers from the alg. inf. theory literature 
+<br>
+from the 70's and 80's.
+<br>
+However, I think the ideas are correct, so I'm not going to complain too 
+<br>
+much ;-&gt;
+<br>
+ben
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3381.html">ben goertzel: "RE: Hopfield networks as a model of memory?"</a>
+<li><strong>Previous message:</strong> <a href="3379.html">jg nlb: "Re: about sl4"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3380">[ date ]</a>
+<a href="index.html#3380">[ thread ]</a>
+<a href="subject.html#3380">[ subject ]</a>
+<a href="author.html#3380">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:38 MDT
+</em></small></p>
+</body>
+</html>

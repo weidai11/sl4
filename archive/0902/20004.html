@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: [sl4] An attempt at empathic AI</title>
+<meta name="Author" content="Matt Mahoney (matmahoney@yahoo.com)">
+<meta name="Subject" content="Re: [sl4] An attempt at empathic AI">
+<meta name="Date" content="2009-02-20">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: [sl4] An attempt at empathic AI</h1>
+<!-- received="Fri Feb 20 09:40:10 2009" -->
+<!-- isoreceived="20090220164010" -->
+<!-- sent="Fri, 20 Feb 2009 08:40:02 -0800 (PST)" -->
+<!-- isosent="20090220164002" -->
+<!-- name="Matt Mahoney" -->
+<!-- email="matmahoney@yahoo.com" -->
+<!-- subject="Re: [sl4] An attempt at empathic AI" -->
+<!-- id="404450.66132.qm@web51911.mail.re2.yahoo.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="add7caae0902200639g2e8d103ah64c25ca7546a0f62@mail.gmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Matt Mahoney (<a href="mailto:matmahoney@yahoo.com?Subject=Re:%20[sl4]%20An%20attempt%20at%20empathic%20AI"><em>matmahoney@yahoo.com</em></a>)<br>
+<strong>Date:</strong> Fri Feb 20 2009 - 09:40:02 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="20005.html">Petter Wingren-Rasmussen: "Re: [sl4] An attempt at empathic AI"</a>
+<li><strong>Previous message:</strong> <a href="20003.html">Matt Mahoney: "Re: [sl4] Re: Uploads coming first would be good, right?"</a>
+<li><strong>In reply to:</strong> <a href="20002.html">Petter Wingren-Rasmussen: "[sl4] An attempt at empathic AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="20005.html">Petter Wingren-Rasmussen: "Re: [sl4] An attempt at empathic AI"</a>
+<li><strong>Reply:</strong> <a href="20005.html">Petter Wingren-Rasmussen: "Re: [sl4] An attempt at empathic AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#20004">[ date ]</a>
+<a href="index.html#20004">[ thread ]</a>
+<a href="subject.html#20004">[ subject ]</a>
+<a href="author.html#20004">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+--- On Fri, 2/20/09, Petter Wingren-Rasmussen &lt;<a href="mailto:petterwr@gmail.com?Subject=Re:%20[sl4]%20An%20attempt%20at%20empathic%20AI">petterwr@gmail.com</a>&gt; wrote:
+<br>
+<p><em>&gt; As I mentioned in *this
+</em><br>
+<em>&gt; &lt;<a href="http://www.sl4.org/archive/0902/19805.html">http://www.sl4.org/archive/0902/19805.html</a>&gt;* thread
+</em><br>
+<em>&gt; i think an AGI with hardcoded dogmatic rules will have some
+</em><br>
+<em>&gt; serious
+</em><br>
+<em>&gt; drawbacks in the long run. I will try to show an
+</em><br>
+<em>&gt; alternative here, that
+</em><br>
+<em>&gt; still will remain
+</em><br>
+<em>&gt; friendly to humans.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; I base this on previous work with AIs in gaming theory such
+</em><br>
+<em>&gt; as the tit for
+</em><br>
+<em>&gt; tat tournaments
+</em><br>
+<em>&gt; &lt;<a href="http://en.wikipedia.org/wiki/Tit_for_tat">http://en.wikipedia.org/wiki/Tit_for_tat</a>&gt;
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Note that the ideas below are rough outlines and that my
+</em><br>
+<em>&gt; programming skills
+</em><br>
+<em>&gt; are rudimentary.
+</em><br>
+<em>&gt; (Cognivitive-behavioural theory is my field.) My reason for
+</em><br>
+<em>&gt; posting this is
+</em><br>
+<em>&gt; that you hopefully will point out problems/faults that I
+</em><br>
+<em>&gt; havent noticed
+</em><br>
+<em>&gt; myself, and maybe even refer me to similar work that's
+</em><br>
+<em>&gt; already been done.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Now lets start with a lot of simple Ais (semirandom neural
+</em><br>
+<em>&gt; networks) in a 2
+</em><br>
+<em>&gt; dimensional virtual landscape, arranged like a checkerboard
+</em><br>
+<em>&gt; (but a lot more
+</em><br>
+<em>&gt; squares) where each ai take up one randomly assigned slot
+</em><br>
+<em>&gt; and can move one
+</em><br>
+<em>&gt; step at a time in any of the eight directions (like the
+</em><br>
+<em>&gt; king in chess).
+</em><br>
+<em>&gt; The Ais are able to move around freely and detect if they
+</em><br>
+<em>&gt; get close to
+</em><br>
+<em>&gt; another AI. Each AI also has zero points from the start.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Input channels: direction and distance to nearby Ais,
+</em><br>
+<em>&gt; detecting output from
+</em><br>
+<em>&gt; adjacent Ais, change of current points. They will also be
+</em><br>
+<em>&gt; able to recognize
+</em><br>
+<em>&gt; and remember each individual AI.
+</em><br>
+<em>&gt; Output channels: movement command, some kind of output,
+</em><br>
+<em>&gt; binary string will
+</em><br>
+<em>&gt; be sufficient.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Rough outline of points:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Using a certain amount of cpu will cost 1 point. (To avoid
+</em><br>
+<em>&gt; slowing down the
+</em><br>
+<em>&gt; whole system unnecessarily with meaningless loops.)
+</em><br>
+<em>&gt; Creating output will cost 10 points.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Detecting output from adjacent Ais: will give a lot of
+</em><br>
+<em>&gt; points 1st time its
+</em><br>
+<em>&gt; detected from every individual AI, but will decrease
+</em><br>
+<em>&gt; rapidly if detected
+</em><br>
+<em>&gt; from the same AI several times.
+</em><br>
+<em>&gt; Say 1000 points for the first time, 100 second,10 3rd and 0
+</em><br>
+<em>&gt; for the fourth
+</em><br>
+<em>&gt; time. The points received will increase by 1 point per turn
+</em><br>
+<em>&gt; that no input is
+</em><br>
+<em>&gt; received from that particular AI.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Let's take the 10% that reach 100 000 points first and
+</em><br>
+<em>&gt; make 10 new versions
+</em><br>
+<em>&gt; of each with slight variations(through some kind of genetic
+</em><br>
+<em>&gt; algorithm). Then
+</em><br>
+<em>&gt; repeat the experiment for a few generations.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; A behaviour similar to the winners of the tit for tat
+</em><br>
+<em>&gt; tournaments can be
+</em><br>
+<em>&gt; expected to develop.
+</em><br>
+<em>&gt; It is important that similar rewardsystems are kept
+</em><br>
+<em>&gt; throughout the
+</em><br>
+<em>&gt; development (ie you earn a lot from recieving and only
+</em><br>
+<em>&gt; loose a little from
+</em><br>
+<em>&gt; giving).
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; After a while the Ais can be expanded to be more complex
+</em><br>
+<em>&gt; and criterias for
+</em><br>
+<em>&gt; points can be tougher both socially (partial imitation
+</em><br>
+<em>&gt; (which is the
+</em><br>
+<em>&gt; simplest form of empathy behaviouristically speaking),
+</em><br>
+<em>&gt; linguistically(greeting phrases, farewell phrases,
+</em><br>
+<em>&gt; eventually learning
+</em><br>
+<em>&gt; speech) and spatially (ability to navigate around obstacles
+</em><br>
+<em>&gt; and through
+</em><br>
+<em>&gt; labyrinths, adding more dimensions, manipulating objects
+</em><br>
+<em>&gt; etc.)
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; When the tasks differs in this way, one thing will remain
+</em><br>
+<em>&gt; constant - the AIs
+</em><br>
+<em>&gt; that keep on doing what they do when they get points will
+</em><br>
+<em>&gt; prosper and a
+</em><br>
+<em>&gt; mechanism for encouragement/happiness has been implemented.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Eventually it might be possible to introduce them into a
+</em><br>
+<em>&gt; virtual world like
+</em><br>
+<em>&gt; second life and evolve more complex rating systems (ie
+</em><br>
+<em>&gt; ratings by human
+</em><br>
+<em>&gt; avatars, moneys earned, objecs created). After that,
+</em><br>
+<em>&gt; anything would be
+</em><br>
+<em>&gt; possible.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; The whole point of this venture is that I believe it will
+</em><br>
+<em>&gt; result in a
+</em><br>
+<em>&gt; social AI that intuitively reacts and thinks in the same
+</em><br>
+<em>&gt; way that we do.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Im looking forward to your criticism.
+</em><br>
+<p>I think your initial approach to evolving tit-for-tat strategies in simple environments should work. However, when AI reaches human level intelligence (they can do everything the human brain can do) then you are in danger of no longer controlling the awarding of points. When the AI can interact with you through language, it could convince you to modify the program that controls their evolution. If the AI knows everything that you do, then there is no way for you to tell if it is helping you achieve your goals or not. It knows exactly which lies it can get away with. It might be following tit-for-tat with you, or it might realize that eliminating humanity would be its final move with you.
+<br>
+<p>-- Matt Mahoney, <a href="mailto:matmahoney@yahoo.com?Subject=Re:%20[sl4]%20An%20attempt%20at%20empathic%20AI">matmahoney@yahoo.com</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="20005.html">Petter Wingren-Rasmussen: "Re: [sl4] An attempt at empathic AI"</a>
+<li><strong>Previous message:</strong> <a href="20003.html">Matt Mahoney: "Re: [sl4] Re: Uploads coming first would be good, right?"</a>
+<li><strong>In reply to:</strong> <a href="20002.html">Petter Wingren-Rasmussen: "[sl4] An attempt at empathic AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="20005.html">Petter Wingren-Rasmussen: "Re: [sl4] An attempt at empathic AI"</a>
+<li><strong>Reply:</strong> <a href="20005.html">Petter Wingren-Rasmussen: "Re: [sl4] An attempt at empathic AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#20004">[ date ]</a>
+<a href="index.html#20004">[ thread ]</a>
+<a href="subject.html#20004">[ subject ]</a>
+<a href="author.html#20004">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:01:04 MDT
+</em></small></p>
+</body>
+</html>

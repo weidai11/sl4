@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: &quot;Supergoal&quot; considered harmful</title>
+<meta name="Author" content="Eliezer S. Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="Re: &quot;Supergoal&quot; considered harmful">
+<meta name="Date" content="2005-07-16">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: &quot;Supergoal&quot; considered harmful</h1>
+<!-- received="Sat Jul 16 20:18:03 2005" -->
+<!-- isoreceived="20050717021803" -->
+<!-- sent="Sat, 16 Jul 2005 19:18:02 -0700" -->
+<!-- isosent="20050717021802" -->
+<!-- name="Eliezer S. Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Re: &quot;Supergoal&quot; considered harmful" -->
+<!-- id="42D9BFDA.1020101@pobox.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="737b61f305071618502855412d@mail.gmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eliezer S. Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20&quot;Supergoal&quot;%20considered%20harmful"><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Sat Jul 16 2005 - 20:18:02 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="11384.html">Thomas Buckner: "&quot;Supergoal&quot; considered harmful; New term: &quot;Quality Function&quot;"</a>
+<li><strong>Previous message:</strong> <a href="11382.html">Chris Capel: "Re: &quot;Supergoal&quot; considered harmful"</a>
+<li><strong>In reply to:</strong> <a href="11382.html">Chris Capel: "Re: &quot;Supergoal&quot; considered harmful"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="11384.html">Thomas Buckner: "&quot;Supergoal&quot; considered harmful; New term: &quot;Quality Function&quot;"</a>
+<li><strong>Reply:</strong> <a href="11384.html">Thomas Buckner: "&quot;Supergoal&quot; considered harmful; New term: &quot;Quality Function&quot;"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11383">[ date ]</a>
+<a href="index.html#11383">[ thread ]</a>
+<a href="subject.html#11383">[ subject ]</a>
+<a href="author.html#11383">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Chris Capel wrote:
+<br>
+<em>&gt; On 7/16/05, Eliezer S. Yudkowsky &lt;<a href="mailto:sentience@pobox.com?Subject=Re:%20&quot;Supergoal&quot;%20considered%20harmful">sentience@pobox.com</a>&gt; wrote:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;&gt;The term &quot;supergoal&quot; is a word I used in the early days of writing &quot;Creating
+</em><br>
+<em>&gt;&gt;Friendly AI&quot; because I was literate enough to have heard of goals and
+</em><br>
+<em>&gt;&gt;subgoals, but not quite literate enough to know that I should be saying
+</em><br>
+<em>&gt;&gt;&quot;utility function&quot;.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Granted all this, surely the term &quot;supergoal&quot; is still useful. I think
+</em><br>
+<em>&gt; it has a meaning distinct from &quot;utility function&quot;, even when it's not
+</em><br>
+<em>&gt; misused. (Has it been misused in any recent posts? I haven't noticed.)
+</em><br>
+<em>&gt; Whereas the utility function is the process or algorithm by which the
+</em><br>
+<em>&gt; AI decides the expected utility of any given action, the supergoal is
+</em><br>
+<em>&gt; the overall direction that the AI's actions tends to bring the world
+</em><br>
+<em>&gt; to be like. In a real AI system, it's possible that the utility
+</em><br>
+<em>&gt; function could be coded without ever referencing any sort of
+</em><br>
+<em>&gt; supergoal, (indeed, bringing terminology as vague and metaphorical as
+</em><br>
+<em>&gt; &quot;supergoal&quot; into discussions about the low-level architecture of an AI
+</em><br>
+<em>&gt; is probably meaningless in most designs,) but &quot;supergoal&quot; can still be
+</em><br>
+<em>&gt; used to describe the real-world effects of the utility function.
+</em><br>
+<p>No.  &quot;Decision process&quot; is the process or algorithm by which the AI ranks 
+<br>
+actions according to preference; or just the process that selects an action, 
+<br>
+if they possess no well-defined preference ordering.
+<br>
+<p>A &quot;utility function&quot; plays a particular role in a particular kind of algorithm 
+<br>
+for ordering actions.
+<br>
+<p>The role of a utility function is that it assigns real numbers to *outcomes*. 
+<br>
+&nbsp;&nbsp;Then a predictive mechanism associates probability distributions over 
+<br>
+outcomes with particular actions.  (Note that this predictive mechanism is 
+<br>
+purely factual, purely testable and falsifiable, since it only predicts the 
+<br>
+probability of an outcome conditional on an action being performed.)  A real 
+<br>
+number is then associated with the action, the action's expectation of utility 
+<br>
+- &quot;expectation&quot; here having its customary mathematical sense of a weighted 
+<br>
+average.  This latter real number we might call &quot;expected utility&quot; and is 
+<br>
+quite distinct from a &quot;utility&quot; assigned by a utility function to a fixed 
+<br>
+outcome.  The decision system then orders preferences over actions using the 
+<br>
+standard ordering over the real numbers with respect to their associated 
+<br>
+expected utilities.  Then the decision system selects a greatest action 
+<br>
+(usually there will be only one greatest action).
+<br>
+<p>So an &quot;expected utility maximizer&quot; is an AI that predicts the probable 
+<br>
+consequences of actions, assigns utilities over outcomes via a utility 
+<br>
+function, and then chooses an action with maximal expectation of utility, that 
+<br>
+is, a maximal weighted average of utilities over probable outcomes.
+<br>
+<p>Similarly a &quot;paperclip maximizer&quot; is an AI that estimates the probable number 
+<br>
+of paperclips associated with different outcomes, assigns probabilities to 
+<br>
+outcomes given actions, and chooses an action with maximal expectation of 
+<br>
+paperclips.
+<br>
+<p><em>&gt; So is this usage of supergoal valid? And since you dislike the word,
+</em><br>
+<em>&gt; is there a less misleading word that captures this sense distinct from
+</em><br>
+<em>&gt; &quot;utility function&quot;? It seems that most of the words we use to describe
+</em><br>
+<em>&gt; the same orientation in humans (things like the &quot;purpose&quot;, &quot;meaning&quot;,
+</em><br>
+<em>&gt; or &quot;direction&quot; of one's life) are too anthropocentric to be more
+</em><br>
+<em>&gt; useful. &quot;Supergoal&quot; certainly avoids this problem, and the
+</em><br>
+<em>&gt; misconception it does lead to--the idea that it makes sense to say
+</em><br>
+<em>&gt; this or that goal &quot;overrides&quot; one or another goal, or that the
+</em><br>
+<em>&gt; supergoal somehow represents a constraint on the behavior of the AI
+</em><br>
+<em>&gt; instead of a simple specification of its behavior--might be less
+</em><br>
+<em>&gt; pernicious than the mistakes associated with more anthropocentric
+</em><br>
+<em>&gt; terminology. But if you have an ever better term, I, for one, will
+</em><br>
+<em>&gt; certainly use it.
+</em><br>
+<p>Should the AI be a good predictor, it will systematically steer reality into 
+<br>
+regions which its utility function assigns high utilities.  Thus, the term 
+<br>
+&quot;supergoal&quot; that I used in CFAI means simply &quot;utility function&quot;.  And if the 
+<br>
+AI is a good predictor, its utility function also serves as a good description 
+<br>
+of the target of the optimization process, the regions of reality into which 
+<br>
+the AI does in fact steer the future.
+<br>
+<p><pre>
+-- 
+Eliezer S. Yudkowsky                          <a href="http://intelligence.org/">http://intelligence.org/</a>
+Research Fellow, Singularity Institute for Artificial Intelligence
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="11384.html">Thomas Buckner: "&quot;Supergoal&quot; considered harmful; New term: &quot;Quality Function&quot;"</a>
+<li><strong>Previous message:</strong> <a href="11382.html">Chris Capel: "Re: &quot;Supergoal&quot; considered harmful"</a>
+<li><strong>In reply to:</strong> <a href="11382.html">Chris Capel: "Re: &quot;Supergoal&quot; considered harmful"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="11384.html">Thomas Buckner: "&quot;Supergoal&quot; considered harmful; New term: &quot;Quality Function&quot;"</a>
+<li><strong>Reply:</strong> <a href="11384.html">Thomas Buckner: "&quot;Supergoal&quot; considered harmful; New term: &quot;Quality Function&quot;"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11383">[ date ]</a>
+<a href="index.html#11383">[ thread ]</a>
+<a href="subject.html#11383">[ subject ]</a>
+<a href="author.html#11383">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Tue Feb 21 2006 - 04:22:57 MST
+</em></small></p>
+</body>
+</html>

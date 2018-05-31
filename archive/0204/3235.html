@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Simplifying AI</title>
+<meta name="Author" content="James Rogers (jamesr@best.com)">
+<meta name="Subject" content="Re: Simplifying AI">
+<meta name="Date" content="2002-04-02">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Simplifying AI</h1>
+<!-- received="Tue Apr 02 22:16:23 2002" -->
+<!-- isoreceived="20020403051623" -->
+<!-- sent="02 Apr 2002 19:03:54 -0800" -->
+<!-- isosent="20020403030354" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Re: Simplifying AI" -->
+<!-- id="1017803034.15316.76.camel@avalon" -->
+<!-- inreplyto="01C1DA2B.451B23E0.ben@goertzel.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> James Rogers (<a href="mailto:jamesr@best.com?Subject=Re:%20Simplifying%20AI"><em>jamesr@best.com</em></a>)<br>
+<strong>Date:</strong> Tue Apr 02 2002 - 20:03:54 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3236.html">Nathan Russell: "Re: Introducing myself"</a>
+<li><strong>Previous message:</strong> <a href="3234.html">Eliezer S. Yudkowsky: "Re: Deadly Sins of Real AI"</a>
+<li><strong>In reply to:</strong> <a href="3226.html">ben goertzel: "Simplifying AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3240.html">Ben Goertzel: "RE: Simplifying AI"</a>
+<li><strong>Reply:</strong> <a href="3240.html">Ben Goertzel: "RE: Simplifying AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3235">[ date ]</a>
+<a href="index.html#3235">[ thread ]</a>
+<a href="subject.html#3235">[ subject ]</a>
+<a href="author.html#3235">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Tue, 2002-04-02 at 08:46, ben goertzel wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; 1)  A (we hope!) passably efficient way to do &quot;linguistic feature structure 
+</em><br>
+<em>&gt; unification&quot; (a kind of language parsing) as a case of general logical 
+</em><br>
+<em>&gt; unification... this basically eliminates a separate NLP module, reducing it 
+</em><br>
+<em>&gt; to a set of special parameter settings for general cognition methods... as 
+</em><br>
+<em>&gt; it should be...
+</em><br>
+<p><p>I've had good luck taking this approach to NLP, although it is too early
+<br>
+to say how good that luck actually is. This makes sense in theory, but
+<br>
+it really taxes the (human) mind when trying to analyze how this would
+<br>
+work in excruciating detail.
+<br>
+<p>&nbsp;
+<br>
+<em>&gt; 2)  Complex inference (inference dealing with quantifiers, variables, etc.) 
+</em><br>
+<em>&gt; is reduced to &quot;simple inference on inheritance links&quot; + &quot;complex 
+</em><br>
+<em>&gt; procedures&quot;.  This reduction is carried out using combinatory logic.  I 
+</em><br>
+<em>&gt; suspect the human brain carries out a similar reduction in a very different 
+</em><br>
+<em>&gt; way
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; 3) Causal inference is reduced to &quot;predictive implication&quot; plus a special 
+</em><br>
+<em>&gt; case of &quot;procedure learning&quot; (the latter being the learning of &quot;plausible 
+</em><br>
+<em>&gt; causal mechanisms&quot;)
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; 4)  Association-finding is reduced to simple probabilistic inference plus a 
+</em><br>
+<em>&gt; Hebb rule variant
+</em><br>
+<p><p>These are all essentially reducible to the same structure, though with
+<br>
+slightly different traversal behaviors.  Doing the work to support one
+<br>
+should essentially provide the structure to support the rest.
+<br>
+<p>&nbsp;
+<br>
+<em>&gt; Overall, what we found is that a lot of mental functions are obtainable as 
+</em><br>
+<em>&gt; combinations or specializations of other mental functions, but not in 
+</em><br>
+<em>&gt; immediately obvious ways.
+</em><br>
+<p><p>The &quot;not in immediately obvious ways&quot; is a killer. Part of this is
+<br>
+because people frequently define intelligence in terms of peculiar
+<br>
+behaviors that human minds tend to exhibit that may or may not be
+<br>
+relevant to the actual problem. The &quot;yeah, but can it do &lt;insert some
+<br>
+quirky human characteristic&gt;?&quot; question can be a problematic one, and
+<br>
+often requires more a lot more thought than the question may merit
+<br>
+simply because that is how people relate to &quot;intelligence&quot;. There are
+<br>
+still a couple things that I would rather prove by doing rather than
+<br>
+completely verifying on paper first.
+<br>
+<p>If we consider the human brain as a model, it is clear that limited
+<br>
+specialization of functionality at the lower levels must be true, at
+<br>
+least in the sense that it is one way to do it.  The human mind is an
+<br>
+extraordinarily complex construct built upon a very small number of
+<br>
+primitives. I don't think the primitives themselves are particularly
+<br>
+important beyond the fact that they can be put together efficiently to
+<br>
+support the basic functional structures.
+<br>
+<p>I've been meaning to provide substantially more documentation for a
+<br>
+number of things, but these days I don't have time to provide much
+<br>
+written documentation for anything beyond the code I write (code is
+<br>
+self-documenting, right? :-) for my own engineering team, never mind the
+<br>
+rest of the world. Operating a startup has never been conducive to
+<br>
+having lots of free time... :-)
+<br>
+<p>Cheers,
+<br>
+<p>-James Rogers
+<br>
+&nbsp;<a href="mailto:jamesr@best.com?Subject=Re:%20Simplifying%20AI">jamesr@best.com</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3236.html">Nathan Russell: "Re: Introducing myself"</a>
+<li><strong>Previous message:</strong> <a href="3234.html">Eliezer S. Yudkowsky: "Re: Deadly Sins of Real AI"</a>
+<li><strong>In reply to:</strong> <a href="3226.html">ben goertzel: "Simplifying AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3240.html">Ben Goertzel: "RE: Simplifying AI"</a>
+<li><strong>Reply:</strong> <a href="3240.html">Ben Goertzel: "RE: Simplifying AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3235">[ date ]</a>
+<a href="index.html#3235">[ thread ]</a>
+<a href="subject.html#3235">[ subject ]</a>
+<a href="author.html#3235">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:38 MDT
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,9 @@
+Reporting-MTA: dns;mail.sail-technology.com
+
+Final-Recipient: rfc822;Norbert.Pfannerer@sail-labs.at
+Action: failed
+Status: 5.0.0
+Diagnostic-Code: X-Notes; Error delivering to Norbert.Pfannerer; Database is corrupt -- Cannot allocate space
+
+ace
+

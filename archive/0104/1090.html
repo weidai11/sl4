@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Balanced brainchip design</title>
+<meta name="Author" content="Dani Eder (danielravennest@yahoo.com)">
+<meta name="Subject" content="Balanced brainchip design">
+<meta name="Date" content="2001-04-13">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Balanced brainchip design</h1>
+<!-- received="Fri Apr 13 17:59:34 2001" -->
+<!-- isoreceived="20010413235934" -->
+<!-- sent="Fri, 13 Apr 2001 12:29:14 -0700 (PDT)" -->
+<!-- isosent="20010413192914" -->
+<!-- name="Dani Eder" -->
+<!-- email="danielravennest@yahoo.com" -->
+<!-- subject="Balanced brainchip design" -->
+<!-- id="20010413192914.39386.qmail@web13305.mail.yahoo.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="20010413134017.B26247@cluebot.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Dani Eder (<a href="mailto:danielravennest@yahoo.com?Subject=Re:%20Balanced%20brainchip%20design"><em>danielravennest@yahoo.com</em></a>)<br>
+<strong>Date:</strong> Fri Apr 13 2001 - 13:29:14 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1091.html">Ben Goertzel: "RE: Open Source Friendly AI? (was Singularity and the generalpublic)"</a>
+<li><strong>Previous message:</strong> <a href="1089.html">Ben Goertzel: "RE: Open Source Friendly AI? (was Singularity and the general public)"</a>
+<li><strong>In reply to:</strong> <a href="1085.html">Declan McCullagh: "Re: Open Source Friendly AI? (was Singularity and the generalpublic)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1087.html">James Rogers: "Re: Open Source Friendly AI? (was Singularity and the general public)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1090">[ date ]</a>
+<a href="index.html#1090">[ thread ]</a>
+<a href="subject.html#1090">[ subject ]</a>
+<a href="author.html#1090">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+I've been giving some thought to what a balanced
+<br>
+design for a future 'brainchip' would be.  By about
+<br>
+2014, the Semiconductor Industry Association projects
+<br>
+technology would allow a single chip with about 8
+<br>
+Gbytes of memory and 8 simple CPU cores that put out
+<br>
+about 8 GFlop each.  Such a chip should cost about
+<br>
+$12 (the same as a high end memory chip today), and
+<br>
+a complete system built with these chips could cost
+<br>
+around $30 per chip.
+<br>
+<p>I previously determined that an engineer-replacing
+<br>
+system would be worth around $3M, so we can afford
+<br>
+to incorporate about 100K of these chips in a system.
+<br>
+If we are running a simulated human cortex type AI,
+<br>
+allow 3 bytes of description per synapse.  Then each
+<br>
+neuron would require about 32K, and therefore each
+<br>
+chip would model 0.25 million neurons.  The whole
+<br>
+system would model 25 billion neurons, or roughly
+<br>
+a human cortex's worth.
+<br>
+<p>Simulating 2.5 billion synapses at 100 Hz with 1 byte
+<br>
+of calculation per synapse requires 64 GFlops, which
+<br>
+is what our 8 processor cores can provide.
+<br>
+<p>To get an idea of off-chip I/O requirements, assume
+<br>
+that neurons are arranged in a block of 63 x 63 x 63
+<br>
+units (63 being the cube root of 250,000).  And
+<br>
+assume that all 10,000 synapses of the surface neurons
+<br>
+are connected to neurons outside the block.  This
+<br>
+requires off chip I/O in the model.  The minimal
+<br>
+data carried off chip is &quot;I'm firing now&quot;, which
+<br>
+requires 1 bit per synapse.  Therefore 24 Gbits of
+<br>
+data need to move off chip, and presumably the same
+<br>
+coming in.
+<br>
+<p>The SIA projects being able to support up to 1500
+<br>
+data lines per chip package, so each data line would
+<br>
+be running at 32 Mhz, which is well within current
+<br>
+technology.  Even if every synapse of every neuron
+<br>
+leads off chip, the data lines would need to run at
+<br>
+333 Mhz, which is only slightly above current data
+<br>
+bus speeds.
+<br>
+<p>It may be required to carry more than 1 bit of data
+<br>
+per synapse firing off chip, or it may be possible
+<br>
+to do some data compression, but at least the numbers
+<br>
+seem to indicate a brain-simulating AI is not
+<br>
+completely out of the question for 2014 technology.
+<br>
+<p>Daniel  
+<br>
+<p><p><p><p>__________________________________________________
+<br>
+Do You Yahoo!?
+<br>
+Get email at your own domain with Yahoo! Mail. 
+<br>
+<a href="http://personal.mail.yahoo.com/">http://personal.mail.yahoo.com/</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1091.html">Ben Goertzel: "RE: Open Source Friendly AI? (was Singularity and the generalpublic)"</a>
+<li><strong>Previous message:</strong> <a href="1089.html">Ben Goertzel: "RE: Open Source Friendly AI? (was Singularity and the general public)"</a>
+<li><strong>In reply to:</strong> <a href="1085.html">Declan McCullagh: "Re: Open Source Friendly AI? (was Singularity and the generalpublic)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1087.html">James Rogers: "Re: Open Source Friendly AI? (was Singularity and the general public)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1090">[ date ]</a>
+<a href="index.html#1090">[ thread ]</a>
+<a href="subject.html#1090">[ subject ]</a>
+<a href="author.html#1090">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

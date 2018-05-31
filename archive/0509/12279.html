@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Parallelism (Re: Introduction)</title>
+<meta name="Author" content="J. Andrew Rogers (andrew@ceruleansystems.com)">
+<meta name="Subject" content="Re: Parallelism (Re: Introduction)">
+<meta name="Date" content="2005-09-08">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Parallelism (Re: Introduction)</h1>
+<!-- received="Thu Sep  8 23:48:30 2005" -->
+<!-- isoreceived="20050909054830" -->
+<!-- sent="Thu, 08 Sep 2005 22:48:24 -0700" -->
+<!-- isosent="20050909054824" -->
+<!-- name="J. Andrew Rogers" -->
+<!-- email="andrew@ceruleansystems.com" -->
+<!-- subject="Re: Parallelism (Re: Introduction)" -->
+<!-- id="BF467038.2DB8%andrew@ceruleansystems.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="20050908235557.35640.qmail@web54503.mail.yahoo.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> J. Andrew Rogers (<a href="mailto:andrew@ceruleansystems.com?Subject=Re:%20Parallelism%20(Re:%20Introduction)"><em>andrew@ceruleansystems.com</em></a>)<br>
+<strong>Date:</strong> Thu Sep 08 2005 - 23:48:24 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="12280.html">Tennessee Leeuwenburg: "Re: The Relevance of Complex Systems"</a>
+<li><strong>Previous message:</strong> <a href="12278.html">Michael Wilson: "Re: The Relevance of Complex Systems"</a>
+<li><strong>In reply to:</strong> <a href="12261.html">Phil Goetz: "Parallelism (Re: Introduction)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12281.html">Tennessee Leeuwenburg: "Re: Parallelism (Re: Introduction)"</a>
+<li><strong>Reply:</strong> <a href="12281.html">Tennessee Leeuwenburg: "Re: Parallelism (Re: Introduction)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12279">[ date ]</a>
+<a href="index.html#12279">[ thread ]</a>
+<a href="subject.html#12279">[ subject ]</a>
+<a href="author.html#12279">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On 9/8/05 4:55 PM, &quot;Phil Goetz&quot; &lt;<a href="mailto:philgoetz@yahoo.com?Subject=Re:%20Parallelism%20(Re:%20Introduction)">philgoetz@yahoo.com</a>&gt; wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; Parallelizing serial algorithms is not that hard.
+</em><br>
+<p><p>To the extent it is practical, that is.  Sometimes, just decoupling
+<br>
+artificial dependencies does not buy much.
+<br>
+<p><p><em>&gt; Distributing serial algorithms so that there is no central
+</em><br>
+<em>&gt; memory, clock, or administrator is hard.
+</em><br>
+<p><p>The real trick for humans when designing these types of things is realizing
+<br>
+that determinism is an illusion and that absolutes do not reasonably exist.
+<br>
+It is not so obvious when talking nano- or femto-second latencies, but when
+<br>
+the communication latencies creep into the high nanosecond or microsecond
+<br>
+range the lie becomes hard to disguise convincingly on current hardware.  I
+<br>
+can't remember how many times I've had to explain that you cannot have
+<br>
+geographically distributed ACID transactions that are highly reliable *and*
+<br>
+scalable.  But then, I've also had to explain more than once why it is not
+<br>
+possible to guarantee 10ms RTT latency in a transcontinental fiber network
+<br>
+to people who should know better.  It is good to see that the education
+<br>
+system is doing its usual fine job. :-)
+<br>
+<p>Letting go of the idea of global state, embracing the idea that time is
+<br>
+local and relative in the transaction graph, and accepting that one can only
+<br>
+speak of correctness in terms of probability is difficult for computer
+<br>
+scientists used to thinking in terms of absolutes and strict determinism.
+<br>
+<p>While it is not too difficult to design a geographically distributed system
+<br>
+that is genuinely decentralized with a high probability of being in a
+<br>
+correct (though not synchronous) state at any point in the system, the
+<br>
+difficult part is defending the system from intentional attacks against the
+<br>
+inherent weak points of such designs without the system becoming too heavy.
+<br>
+This latter issue often tilts real implementations toward locality and
+<br>
+centralization even if the decentralization model is perfectly acceptable in
+<br>
+a theoretical transaction theory kind of sense.
+<br>
+<p><p><em>&gt; Conceiving of algorithms that are parallel, asynchronous,
+</em><br>
+<em>&gt; and error-tolerant from the beginning, and have no
+</em><br>
+<em>&gt; conceptually equivalent serial algorithm, is very hard.
+</em><br>
+<p><p>Heh -- &quot;very hard&quot;.  Understatement of the year...
+<br>
+<p><p>J. Andrew Rogers
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="12280.html">Tennessee Leeuwenburg: "Re: The Relevance of Complex Systems"</a>
+<li><strong>Previous message:</strong> <a href="12278.html">Michael Wilson: "Re: The Relevance of Complex Systems"</a>
+<li><strong>In reply to:</strong> <a href="12261.html">Phil Goetz: "Parallelism (Re: Introduction)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12281.html">Tennessee Leeuwenburg: "Re: Parallelism (Re: Introduction)"</a>
+<li><strong>Reply:</strong> <a href="12281.html">Tennessee Leeuwenburg: "Re: Parallelism (Re: Introduction)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12279">[ date ]</a>
+<a href="index.html#12279">[ thread ]</a>
+<a href="subject.html#12279">[ subject ]</a>
+<a href="author.html#12279">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:52 MDT
+</em></small></p>
+</body>
+</html>

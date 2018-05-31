@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: further newsbit on those new IBM transistors</title>
+<meta name="Author" content="Carl Feynman (carlf@abinitio.com)">
+<meta name="Subject" content="Re: further newsbit on those new IBM transistors">
+<meta name="Date" content="2001-06-26">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: further newsbit on those new IBM transistors</h1>
+<!-- received="Tue Jun 26 17:16:48 2001" -->
+<!-- isoreceived="20010626231648" -->
+<!-- sent="Tue, 26 Jun 2001 17:08:13 -0400" -->
+<!-- isosent="20010626210813" -->
+<!-- name="Carl Feynman" -->
+<!-- email="carlf@abinitio.com" -->
+<!-- subject="Re: further newsbit on those new IBM transistors" -->
+<!-- id="3B38F9BD.AFDC13DC@abinitio.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="3B38E6FB.9167A6D1@posthuman.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Carl Feynman (<a href="mailto:carlf@abinitio.com?Subject=Re:%20further%20newsbit%20on%20those%20new%20IBM%20transistors"><em>carlf@abinitio.com</em></a>)<br>
+<strong>Date:</strong> Tue Jun 26 2001 - 15:08:13 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1666.html">Jack Richardson: "Enjoying the controlled ascent"</a>
+<li><strong>Previous message:</strong> <a href="1664.html">Brian Atkins: "Re: further newsbit on those new IBM transistors"</a>
+<li><strong>In reply to:</strong> <a href="1664.html">Brian Atkins: "Re: further newsbit on those new IBM transistors"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1669.html">Brian Atkins: "Re: further newsbit on those new IBM transistors"</a>
+<li><strong>Reply:</strong> <a href="1669.html">Brian Atkins: "Re: further newsbit on those new IBM transistors"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1665">[ date ]</a>
+<a href="index.html#1665">[ thread ]</a>
+<a href="subject.html#1665">[ subject ]</a>
+<a href="author.html#1665">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Brian Atkins wrote:
+<br>
+<p><em>&gt;
+</em><br>
+<em>&gt; My (limited) understanding is that the
+</em><br>
+<em>&gt; clock signal is transported through a chip layout in order to &quot;trigger&quot;
+</em><br>
+<em>&gt; the transistors to switch.
+</em><br>
+<p>Not every transistor has a clock input.  Typically there are between four
+<br>
+and ten unclocked transistors in series, and then a &quot;latch&quot;, which is a
+<br>
+pair of transistors that switch synchronously with the clock.  It is up to
+<br>
+the chip architect to decide how many transistors there are between
+<br>
+latches, and then the logic of the chip has to be designed to fit that
+<br>
+constraint. If you want to be fancy, the architect can decide that part of
+<br>
+the chip will have 10 transistors between latches, and run at 1 GHz, and
+<br>
+part will have five transistors between stages, and run at 2 GHz.
+<br>
+<p><em>&gt; According to what you are saying it would
+</em><br>
+<em>&gt; mean there would be only one possible clock speed for a given chip
+</em><br>
+<em>&gt; design. i.e. if you have 10ghz transistors and parts of the chip use
+</em><br>
+<em>&gt; 10 transistors in series, then the chip is sold as a 1ghz part.
+</em><br>
+<p>This is exactly what happens.
+<br>
+<p><em>&gt; This
+</em><br>
+<em>&gt; clearly isn't the case since chips are sold in a wide range of speeds.
+</em><br>
+<p>I'm puzzled by what you mean here.  Let me take a stab at it...
+<br>
+<p>Some Pentiums are fast, some Pentiums are slow, but this is because they
+<br>
+are manufactured using different processes, and in some cases, using
+<br>
+different logic designs.  From an engineering point of view, they are not
+<br>
+&quot;one chip sold in a wide range of speeds.&quot;  They are different chips, that
+<br>
+are all labeled &quot;the same&quot; by the marketing department.
+<br>
+<p>You can make a chip run faster by upping the input voltage, as you say, and
+<br>
+also by cooling it.  But these modifications typically produce less than a
+<br>
+50% gain, and aren't what account for the speed differences between
+<br>
+different versions of the &quot;same chip&quot;.  Changes in voltage and temperature
+<br>
+give the engineers that designed the chip the heebie-jeebies, and are not a
+<br>
+robust way of improving performance.
+<br>
+<p><em>&gt;
+</em><br>
+<em>&gt; I think that the chip can be configured to run the clock lines at a
+</em><br>
+<em>&gt; wide variety of speeds, and the only limitations come in from the fact
+</em><br>
+<em>&gt; that the transistors may require higher voltage levels to be able to
+</em><br>
+<em>&gt; switch quickly enough. Higher voltages eventually run you into heat
+</em><br>
+<em>&gt; dissipation and other problems, putting an upper limit on how fast a
+</em><br>
+<em>&gt; given chip design/substrate combo can operate.
+</em><br>
+<p>Actually, chips are usually run near their maximum tolerable voltage.  The
+<br>
+limit is set by various kinds of short-circuts being induced by electrons
+<br>
+arcing across a gap or tunneling through an insulator.  Heat disspation is
+<br>
+a problem for the packaging engineer.  At the high end, we're not pushing
+<br>
+the limits of cooling technology.
+<br>
+<p>I designed chips for supercomputers from '84 to '92, so what I say above is
+<br>
+nine years out of date.  But I don't think much has changed.
+<br>
+<p>--CarlF
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1666.html">Jack Richardson: "Enjoying the controlled ascent"</a>
+<li><strong>Previous message:</strong> <a href="1664.html">Brian Atkins: "Re: further newsbit on those new IBM transistors"</a>
+<li><strong>In reply to:</strong> <a href="1664.html">Brian Atkins: "Re: further newsbit on those new IBM transistors"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1669.html">Brian Atkins: "Re: further newsbit on those new IBM transistors"</a>
+<li><strong>Reply:</strong> <a href="1669.html">Brian Atkins: "Re: further newsbit on those new IBM transistors"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1665">[ date ]</a>
+<a href="index.html#1665">[ thread ]</a>
+<a href="subject.html#1665">[ subject ]</a>
+<a href="author.html#1665">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

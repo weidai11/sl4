@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: ITSSIM etc.</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="ITSSIM etc.">
+<meta name="Date" content="2005-02-25">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>ITSSIM etc.</h1>
+<!-- received="Fri Feb 25 23:09:34 2005" -->
+<!-- isoreceived="20050226060934" -->
+<!-- sent="Sat, 26 Feb 2005 01:09:01 -0500" -->
+<!-- isosent="20050226060901" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="ITSSIM etc." -->
+<!-- id="JNEIJCJJHIEAILJBFHILMEOIEAAA.ben@goertzel.org" -->
+<!-- charset="iso-8859-1" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=Re:%20ITSSIM%20etc."><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Fri Feb 25 2005 - 23:09:01 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="11016.html">p3: "Future Shock, by Alvin Toffler"</a>
+<li><strong>Previous message:</strong> <a href="11014.html">Stephen Reed: "Re: Progams which can create efficient programs"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11015">[ date ]</a>
+<a href="index.html#11015">[ thread ]</a>
+<a href="subject.html#11015">[ subject ]</a>
+<a href="author.html#11015">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Hi,
+<br>
+<p>Having absorbed a bunch of commentary on my ITSSIM and GoalGeneralization
+<br>
+draft papers, here are my current thoughts.  Part of this is summary, but
+<br>
+there are some new ideas at the end.
+<br>
+<p>1)
+<br>
+I continue to think ITSSIM is a valid method for providing a reasonable
+<br>
+degree of assurance that an AI will continue to be careful as it
+<br>
+self-modifies and self-improves.  Of course, there are no guarantees with
+<br>
+such things, as proved by the possibility that when an AI gets smarter than
+<br>
+some particular value, superintelligent aliens will contact it and modify
+<br>
+it.  An interesting question to explore is how stable ITSSIM is if hardware
+<br>
+errors or the like occur; I think the answer will be &quot;quite stable.&quot;
+<br>
+<p>2)
+<br>
+I also think that it makes sense to impose a criterion of &quot;Careful Supergoal
+<br>
+Generalization&quot; (which I now see is a better name than Goal Generalization).
+<br>
+The issue here is, if an AI has an overarching supergoal, and then modifies
+<br>
+itself to as to change its supergoal, what restrictions can we make as to
+<br>
+how the new supergoal relates to the prior supergoal?  My suggestion is that
+<br>
+one could (and perhaps should) intentionally restrict this relationship to
+<br>
+one of &quot;careful generalization&quot;, in a certain sense.  My definition of
+<br>
+generalization in this context seems sound but may end up needing some
+<br>
+refinement.
+<br>
+<p>3)
+<br>
+These two ideas can be combined naturally, if one assumes that the initial
+<br>
+supergoal includes ITSSIM.  I didn't quite say this in either of the papers
+<br>
+but I now think this is a good way to phrase things.
+<br>
+<p>4)
+<br>
+I now agree with several commentators that the inclusion of explicit
+<br>
+&quot;emergency measures&quot;, as I suggested in the Goal Generalization essay, is a
+<br>
+bad hack.  Rather, I think it's better to use either
+<br>
+a) pure ITSSIM, or
+<br>
+b) careful supergoal generalization, with an initial supergoal that includes
+<br>
+ITSSIM, and also includes emergency measures covering all known existential
+<br>
+risks
+<br>
+<p>In case b, we are counting on the AI to generalize ITSSIM as seems
+<br>
+appropriate, and also to carefully generalize its initial emergency measures
+<br>
+as seems appropriate.
+<br>
+<p>5)
+<br>
+After reading Pei Wang's commentary, I see that the use of &quot;theorem proving&quot;
+<br>
+in the context of proving theorems about empirical reality needs more
+<br>
+elaboration.  Specifically, it needs to be emphasized that the axioms of
+<br>
+one's formal system must include an assumptive solution to the Humean
+<br>
+&quot;problem of induction&quot;.  This is implicit in Schmidhuber's Godel Machine
+<br>
+work but he doesn't elaborate on the point at all, so far as I can recall.
+<br>
+<p><p>I will product a new version of the paper (with the best parts of the goal
+<br>
+generalization paper fused into the ITSSIM paper), when I get a chance,
+<br>
+probably sometime late next week.
+<br>
+<p>Further constructive criticism is appreciated.
+<br>
+<p>I have also put a little thought into how these ideas could be explored
+<br>
+using current AI technologies, prior to the advent of amazingly powerful
+<br>
+theorem-provers.
+<br>
+<p>It seems to me that one could implement preliminary versions of both ITSSIM
+<br>
+and careful supergoal generalization, by substituting &quot;guessing&quot; for
+<br>
+&quot;proving&quot; in both algorithms.  Of course this results in rather different
+<br>
+algorithms -- but the qualitative nature of the dynamics of the evolving AI
+<br>
+system might not be so different.  At very least it would be an interesting
+<br>
+sort of experiment.
+<br>
+<p>This kind of experiment could be done using an only moderately improved
+<br>
+version of the current Novamente AI codebase.  But of course, the Novamente
+<br>
+project is in a pretty severe financial situation at this moment, so we have
+<br>
+no resources to  play with this sort of thing.  Maybe next year ;-p
+<br>
+<p>-- Ben G
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="11016.html">p3: "Future Shock, by Alvin Toffler"</a>
+<li><strong>Previous message:</strong> <a href="11014.html">Stephen Reed: "Re: Progams which can create efficient programs"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11015">[ date ]</a>
+<a href="index.html#11015">[ thread ]</a>
+<a href="subject.html#11015">[ subject ]</a>
+<a href="author.html#11015">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:50 MDT
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: software progress (RE: Hardware Progress: $319/GF)</title>
+<meta name="Author" content="Stephen Reed (reed@cyc.com)">
+<meta name="Subject" content="Re: software progress (RE: Hardware Progress: $319/GF)">
+<meta name="Date" content="2002-06-01">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: software progress (RE: Hardware Progress: $319/GF)</h1>
+<!-- received="Sun Jun 02 09:02:03 2002" -->
+<!-- isoreceived="20020602150203" -->
+<!-- sent="Sat, 1 Jun 2002 19:10:59 -0500 (CDT)" -->
+<!-- isosent="20020602001059" -->
+<!-- name="Stephen Reed" -->
+<!-- email="reed@cyc.com" -->
+<!-- subject="Re: software progress (RE: Hardware Progress: $319/GF)" -->
+<!-- id="Pine.LNX.4.21.0206011800410.31810-100000@balrog.cyc.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="Pine.LNX.4.33.0206012059380.27884-100000@hydrogen.leitl.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Stephen Reed (<a href="mailto:reed@cyc.com?Subject=Re:%20software%20progress%20(RE:%20Hardware%20Progress:%20$319/GF)"><em>reed@cyc.com</em></a>)<br>
+<strong>Date:</strong> Sat Jun 01 2002 - 18:10:59 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3870.html">Ben Goertzel: "RE: software progress (RE: Hardware Progress: $319/GF)"</a>
+<li><strong>Previous message:</strong> <a href="3868.html">Ben Houston: "RE: software progress (RE: Hardware Progress: $319/GF)"</a>
+<li><strong>In reply to:</strong> <a href="3864.html">Eugen Leitl: "Re: software progress (RE: Hardware Progress: $319/GF)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3872.html">Michael Roy Ames: "Action Plans For Cyc (Was: software progress)"</a>
+<li><strong>Reply:</strong> <a href="3872.html">Michael Roy Ames: "Action Plans For Cyc (Was: software progress)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3869">[ date ]</a>
+<a href="index.html#3869">[ thread ]</a>
+<a href="subject.html#3869">[ subject ]</a>
+<a href="author.html#3869">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Sat, 1 Jun 2002, Eugen Leitl wrote:
+<br>
+<p><em>&gt; Lisp was invented in late 50s of last century. Common Lisp by 1984. Since
+</em><br>
+<em>&gt; when can I buy a mature C# compiler, again? (Assuming, I'm dumb enough to
+</em><br>
+<em>&gt; trust a single-source &quot;standard&quot;, especially considered the source it is
+</em><br>
+<em>&gt; coming from).
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Please demonstrate any advances in C#, Java, Eiffel or any language which
+</em><br>
+<em>&gt; have not been there in Lisp years to decades before.
+</em><br>
+<p>The Cyc knowledge base was developed on Symbolics Lisp machines. Now we
+<br>
+perform development with Franz Allegro Lisp developement software on
+<br>
+Linux. We actually program in SubL (Subset of Lisp) which is a
+<br>
+simplified lisp dialect of our own design which trivially translates into
+<br>
+C code for compilation and deployment on any gcc-supported platform.  Our
+<br>
+SubL system compiled into C contains a complete SubL interpreter and every
+<br>
+feature required to port arbitrary Common Lisp into SubL with the notable
+<br>
+exceptions:
+<br>
+<p>Graphics (Cyc uses HTML almost exclusively for GUI).
+<br>
+Lambda closures (write functions instead)
+<br>
+SubL requires explicit returns from all functions via RET function
+<br>
+<p>Two years ago I ported the open-source SHOP planner from Common Lisp to
+<br>
+SubL and it is now a part of Cyc's deductive inference engine.
+<br>
+<p>So our experience at Cycorp building a Good Old Fashioned AI system proves
+<br>
+your assertions about the preference of Lisp for our activities.  If we
+<br>
+represented our object store in Java rather than in our own SubL
+<br>
+(lisp) implementation, the storage requirements would balloon, because
+<br>
+Java has about a one hundred byte overhead for representing an object
+<br>
+instance. Regarding performance, Java doesn't know for example that the
+<br>
+great majority of KB objects are not going to be garbage collected, and
+<br>
+will have long interruptions dealing with a 400MB image.  And like
+<br>
+Smalltalk and Allegro Common Lisp, but unlike Java, our KB is implemented
+<br>
+as a memory-mapped file in Linux/Win32, so you save your state by saving
+<br>
+the file.  Java requires the creation or import of individual objects upon
+<br>
+application startup.  Java is fine for the applications to which Cyc
+<br>
+interacts and I have written the Cyc Java API to facilitate system
+<br>
+integration.
+<br>
+<p>I don't really care about whether software science has made substantial
+<br>
+progress in my (long) career, because my study of software engineering led
+<br>
+me back to the idea that AI is what software engineering needs to make
+<br>
+breakthrough progress.  My idea for Cyc, which I will soon circulate among
+<br>
+my Cycorp co-workers and OpenCyc collaborators, is to represent large
+<br>
+grained functional activities as Actions in the KB according to the
+<br>
+requirements of our Planner.  So each action has preconditions and
+<br>
+effects, and methods for accomplishing useful tasks are decomposed in a
+<br>
+hierarchy of sub-methods that bottom out at operations having direct code
+<br>
+support.  Then an interpreter can use the sequence of actions generated
+<br>
+from the planner (or a precomputed action sequence template retrieved
+<br>
+from a case library), to provided the desired behavior.  So the
+<br>
+software science advance would be the use of KB modifications alone to
+<br>
+produce changes in Cyc's behavior, rather than further enlarge the 1.5M
+<br>
+lines of generated C code.
+<br>
+<p>Regarding hardware progress, our compiled C runtime produces execution
+<br>
+traces that use the expected RISC-like handful of integer memory and
+<br>
+register instructions on the x86 architecture.  We use few floating point
+<br>
+operations.  So in my opinion, processor speed/performance improvements
+<br>
+following Moore's Law, are just fine.  Our Cyc benchmarks show speed
+<br>
+improvements directly proportional to the CPU MHz ratings.  There is some
+<br>
+debate here as to how to use multiple CPU/clusters/loose peer-to-peer
+<br>
+configurations.  I expect that Cyc would use multithreading on a multi-cpu
+<br>
+system, and server-to-server message-passing on clusters or P2P.  Most of
+<br>
+the research applications for which Cyc has been used would benefit from
+<br>
+parallel delegation of work.
+<br>
+<p>-Steve
+<br>
+<p><pre>
+-- 
+===========================================================
+Stephen L. Reed                  phone:  512.342.4036
+Cycorp, Suite 100                  fax:  512.342.4040
+3721 Executive Center Drive      email:  <a href="mailto:reed@cyc.com?Subject=Re:%20software%20progress%20(RE:%20Hardware%20Progress:%20$319/GF)">reed@cyc.com</a>
+Austin, TX 78731                   web:  <a href="http://www.cyc.com">http://www.cyc.com</a>
+         download OpenCyc at <a href="http://www.opencyc.org">http://www.opencyc.org</a>
+===========================================================
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3870.html">Ben Goertzel: "RE: software progress (RE: Hardware Progress: $319/GF)"</a>
+<li><strong>Previous message:</strong> <a href="3868.html">Ben Houston: "RE: software progress (RE: Hardware Progress: $319/GF)"</a>
+<li><strong>In reply to:</strong> <a href="3864.html">Eugen Leitl: "Re: software progress (RE: Hardware Progress: $319/GF)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3872.html">Michael Roy Ames: "Action Plans For Cyc (Was: software progress)"</a>
+<li><strong>Reply:</strong> <a href="3872.html">Michael Roy Ames: "Action Plans For Cyc (Was: software progress)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3869">[ date ]</a>
+<a href="index.html#3869">[ thread ]</a>
+<a href="subject.html#3869">[ subject ]</a>
+<a href="author.html#3869">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:39 MDT
+</em></small></p>
+</body>
+</html>

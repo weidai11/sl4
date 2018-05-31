@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Human-level CPU power crossover date</title>
+<meta name="Author" content="Dani Eder (danielravennest@yahoo.com)">
+<meta name="Subject" content="RE: Human-level CPU power crossover date">
+<meta name="Date" content="2001-04-11">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Human-level CPU power crossover date</h1>
+<!-- received="Wed Apr 11 15:46:59 2001" -->
+<!-- isoreceived="20010411214659" -->
+<!-- sent="Wed, 11 Apr 2001 11:39:25 -0700 (PDT)" -->
+<!-- isosent="20010411183925" -->
+<!-- name="Dani Eder" -->
+<!-- email="danielravennest@yahoo.com" -->
+<!-- subject="RE: Human-level CPU power crossover date" -->
+<!-- id="20010411183925.14617.qmail@web13307.mail.yahoo.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="LOBBLDGHBFLPJDFBIPFEMEABGKAA.patrick@kia.net" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Dani Eder (<a href="mailto:danielravennest@yahoo.com?Subject=RE:%20Human-level%20CPU%20power%20crossover%20date"><em>danielravennest@yahoo.com</em></a>)<br>
+<strong>Date:</strong> Wed Apr 11 2001 - 12:39:25 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1054.html">James Rogers: "Re: Human-level CPU power crossover date"</a>
+<li><strong>Previous message:</strong> <a href="1052.html">James Higgins: "Re: Human-level CPU power crossover date"</a>
+<li><strong>In reply to:</strong> <a href="1050.html">Patrick McCuller: "RE: Human-level CPU power crossover date"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1040.html">James Rogers: "Re: Human-level CPU power crossover date"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1053">[ date ]</a>
+<a href="index.html#1053">[ thread ]</a>
+<a href="subject.html#1053">[ subject ]</a>
+<a href="author.html#1053">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; 	Fascinating. The intersynaptic cleft is a storm of
+</em><br>
+<em>&gt; neurotransmitters and
+</em><br>
+<em>&gt; assorted ions diffusing back and forth, not to
+</em><br>
+<em>&gt; mention the complex enzyme
+</em><br>
+<em>&gt; cycles inside the cells that affect and are affected
+</em><br>
+<em>&gt; by 'firing'. How do you
+</em><br>
+<em>&gt; collapse all that down to one bit?
+</em><br>
+<em>&gt; 
+</em><br>
+<p>The nature of the synapse (whether it is exitatory
+<br>
+or inhibatory, strength of the connection, etc.
+<br>
+Is probably more like a byte of data, but this value
+<br>
+changes slowly - the wiring pattern of the brain
+<br>
+does not change on a 10 ms time scale.  A table of
+<br>
+synapse connections for a given neuron would take
+<br>
+a few bytes/synapse - mainly distance down the axon
+<br>
+in milliseconds and what target neuron the synapse
+<br>
+leads to, and what type of synapse connection.
+<br>
+<p>The computation cycle would be something like:
+<br>
+&nbsp;&nbsp;for each neuron
+<br>
+&nbsp;&nbsp;&nbsp;-sum up synapse firings received from other
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;neurons and determine whether to generate
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;action potential
+<br>
+&nbsp;&nbsp;&nbsp;-propagate action potential (if any)down axon,
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;which amounts to updating a variable that
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tracks where the action potential is currently
+<br>
+&nbsp;&nbsp;&nbsp;-set synapse firing to 1 if action potential
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;has got to a particular synapse.  Reset to
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0 if previously 1.
+<br>
+<p>My estimate deals in order of magnitude values
+<br>
+of number of neurons in the brain, number of
+<br>
+synapses/neuron, and average firing rate.  If it
+<br>
+really takes a byte of data per synapse firing
+<br>
+rather than a bit, that's within the tolerance
+<br>
+of my estimate.  You might not have to model every
+<br>
+neuron and synapse in a human brain because of
+<br>
+built-in redundancy, and the fact that a lot of the
+<br>
+brain runs the body at levels below intelligence.
+<br>
+Maybe you have to model the whole brain plus the
+<br>
+rest of the central nervous system, and give it
+<br>
+a stream of inputs (sound, sight, touch, etc.) for
+<br>
+intelligence to work.  Maybe the best way to build
+<br>
+an intelligence has nothing to do with modeling
+<br>
+neurons.  So take my estimate as
+<br>
+being something like:
+<br>
+<p>Dani Eder's guesstimate at the processing power
+<br>
+needed for a human-level AI is 
+<br>
+10^17 bits/second +/- about 2 orders of magnitude.
+<br>
+<p><p><p>__________________________________________________
+<br>
+Do You Yahoo!?
+<br>
+Get email at your own domain with Yahoo! Mail. 
+<br>
+<a href="http://personal.mail.yahoo.com/">http://personal.mail.yahoo.com/</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1054.html">James Rogers: "Re: Human-level CPU power crossover date"</a>
+<li><strong>Previous message:</strong> <a href="1052.html">James Higgins: "Re: Human-level CPU power crossover date"</a>
+<li><strong>In reply to:</strong> <a href="1050.html">Patrick McCuller: "RE: Human-level CPU power crossover date"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1040.html">James Rogers: "Re: Human-level CPU power crossover date"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1053">[ date ]</a>
+<a href="index.html#1053">[ thread ]</a>
+<a href="subject.html#1053">[ subject ]</a>
+<a href="author.html#1053">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

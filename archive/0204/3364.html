@@ -1,0 +1,340 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: definitions of pattern</title>
+<meta name="Author" content="Eliezer S. Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="Re: definitions of pattern">
+<meta name="Date" content="2002-04-15">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: definitions of pattern</h1>
+<!-- received="Mon Apr 15 21:15:54 2002" -->
+<!-- isoreceived="20020416031554" -->
+<!-- sent="Mon, 15 Apr 2002 20:56:36 -0400" -->
+<!-- isosent="20020416005636" -->
+<!-- name="Eliezer S. Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Re: definitions of pattern" -->
+<!-- id="3CBB76C4.853A1BA5@pobox.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="JBEPKOGDDIKKAHFPOEFIIELECMAA.ben@goertzel.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eliezer S. Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20definitions%20of%20pattern"><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Mon Apr 15 2002 - 18:56:36 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3365.html">mcomess@ucla.edu: "Re: MW QT AI please phone home; another path to a Singularity?"</a>
+<li><strong>Previous message:</strong> <a href="3363.html">Emil Gilliam: "ARTICLE: Non-Turing computation"</a>
+<li><strong>In reply to:</strong> <a href="3362.html">Ben Goertzel: "definitions of pattern"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3364">[ date ]</a>
+<a href="index.html#3364">[ thread ]</a>
+<a href="subject.html#3364">[ subject ]</a>
+<a href="author.html#3364">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Ben Goertzel wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; Actually, my definition of pattern allows for a variety of definitions of
+</em><br>
+<em>&gt; &quot;simplicity&quot;.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; The most straightforward mathematical definition is &quot;brevity of program
+</em><br>
+<em>&gt; size&quot;, but as I state explicitly, another valuable definition is &quot;brevity of
+</em><br>
+<em>&gt; runtime&quot;.
+</em><br>
+<p>Not in the stuff I'm reading... maybe one of your other works?  Anyway,
+<br>
+brevity of program size is a special case of brevity of runtime, not the
+<br>
+other way around.  This should become clear shortly...
+<br>
+<p><em>&gt; I think that the perspective you outline here can be seen as special case of
+</em><br>
+<em>&gt; the general framework I've defined.
+</em><br>
+<p>I'm about to argue that it's the other way around.  :)
+<br>
+<p><em>&gt; So, your definition is  my definition with:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; -- simplicity defined as some sort of average of space and time cost
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; -- similarity defined relative to the knowledge base K defined by the system
+</em><br>
+<em>&gt; in question
+</em><br>
+<p>(Not &quot;similarity&quot; defined relative to the knowledge base K - what would that
+<br>
+mean? - but &quot;similarity&quot; defined relative to a goal-oriented role.  That's
+<br>
+why you need a surrounding AI for the definition to make sense.)
+<br>
+<p>I think it makes a big difference, in practice, whether you call what you're
+<br>
+looking for &quot;simplicity&quot; or &quot;useful complexity&quot;.  It makes a big difference
+<br>
+whether you're looking for a &quot;representation as something simpler&quot; or
+<br>
+&quot;complexity that renders a problem tractable&quot;.  It makes a big difference
+<br>
+whether you're looking for &quot;similarity&quot;, what I would call a correspondence
+<br>
+mapping, or for &quot;utility&quot; in a goal context.  These concepts may be related
+<br>
+mathematically but their intuitive surface manifestations are different.  So
+<br>
+psychologically there is a definite difference, one that IMHO shows a strong
+<br>
+surface correspondence with our respective beliefs about how AI should be
+<br>
+pursued.
+<br>
+<p>There are also good mathematical reasons to define simplicity as a special
+<br>
+case of tractability rather than the other way around, especially if you
+<br>
+want to match your intuitions to seed AI (or evolutionary psychology, for
+<br>
+that matter).
+<br>
+<p>How can we mathematically define tractability?  It will come as no surprise
+<br>
+to any reader of DGI that I want to define it in terms of fitness
+<br>
+landscapes.  Suppose that a system S is at a point P within a landscape L,
+<br>
+and you want to get from P to Q.  What is the distance between P and Q?  One
+<br>
+way is to define &quot;distance&quot; as inversely proportional to the probability of
+<br>
+system S taking the step to Q from P.  Another way is to define distance as
+<br>
+the amount of computing power that needs to be expended to get from P to Q. 
+<br>
+The first definition is a special case of the second, since if taking a step
+<br>
+is highly improbable, it means that you need to try out a large number of
+<br>
+steps in order to hit on the right one - that is, you can convert a measure
+<br>
+of improbability into a measure of the amount of computing power required,
+<br>
+although not always vice versa.  The utility of the first definition's
+<br>
+phrasing - distance as inversely proportional to probability - is that a
+<br>
+bias in the right direction can be as good as cash; Deacon fans take note.
+<br>
+<p>This basic unit of tractability - the computational distance between P and Q
+<br>
+for a system S - can be deconstructed from below in a number of ways; &quot;Q&quot;
+<br>
+may represent a class of targets having some minimum utility, any one of
+<br>
+which would be acceptable, and so on.  But it will do as a building block
+<br>
+for the other concepts needed.
+<br>
+<p>&quot;Useful complexity&quot;, or complexity that contributes to tractability, is a
+<br>
+pattern that, when added to the system S, tends to decrease the distance
+<br>
+between P and Q.  If the pattern decreases the distance between a very broad
+<br>
+range of Ps and Qs, then the pattern might be said to have something to do
+<br>
+with &quot;general intelligence&quot;, as above.
+<br>
+<p>&quot;Manageability&quot; becomes the ability to reach a final target through a series
+<br>
+of interim steps of incrementally increasing perceived utility.  If the
+<br>
+distance between P and Q is inversely proportional to probability, then it's
+<br>
+important to break up the journey from P to Q into as many incremental steps
+<br>
+as possible.  In other words, if the system needs to go from P to Q to R
+<br>
+without Q having any perceived utility of its own, it needs to launch a
+<br>
+two-ply search, and the total distance from P to R is the distance from P to
+<br>
+Q *times* the distance from Q to R.  If the system can break up the problem
+<br>
+into two steps, by seeing Q as incrementally closer to a solution, then the
+<br>
+total distance from P to R is the distance from P to Q *plus* the distance
+<br>
+from Q to R.
+<br>
+<p>The simplicity c(P) of a pattern P, and the simplicity of Q given P, c(P|Q),
+<br>
+respectively become the amount of computational power the system must expend
+<br>
+to arrive at solution P, and the amount of computational power the system
+<br>
+must expend to arrive at solution Q given solution P.  &quot;Simplicity&quot; is a
+<br>
+special case of tractability.  Usually, if Q is simple given P under the
+<br>
+complexity-theory definition, then it means that it takes less computational
+<br>
+power to arrive at Q given P.  But this is not always the case.  When it is
+<br>
+not the case, then the greater simplicity of Q given P does not make Q more
+<br>
+accessible to the AI given P.  The tractability definition is the one that
+<br>
+is of immediate use in AI.  The simplicity definition sometimes, but not in
+<br>
+always, produces useful tractability.
+<br>
+<p>The simplicity definition is less complex, but the tractability definition
+<br>
+is more useful...
+<br>
+<p>For seed AI, it is useful to distinguish between solution complexity and
+<br>
+system complexity.  The manageability of a problem X, for a given system, is
+<br>
+determined by the structure of X, St(X), which in this case becomes
+<br>
+analogous to the fitness landscape of X.  X is manageable if the simpler
+<br>
+solutions in St(X), or the perceived &quot;good intermediates&quot; for partial
+<br>
+solutions, render tractable the complex high-utility solutions in St(X). 
+<br>
+However, the distance between any given P and Q is relative to the system S
+<br>
+and its knowledge base K.  The accumulation of expertise can render a single
+<br>
+problem tractable if the expertise decreases the distance between P and Q,
+<br>
+or increases the system's ability to perceive goodness in partial solutions
+<br>
+so that the problem can be broken down into a larger number of smaller
+<br>
+steps.  In turn, the acquisition of *expertise* is manageable if acquiring
+<br>
+tractable simple expertise enables the system to acquire complex useful
+<br>
+expertise!  *This* is what you're looking for in an environment for baby AIs
+<br>
+- not just an environment with manageable problems, but also an environment
+<br>
+with manageable expertise, so that the AI can manageably acquire the
+<br>
+expertise that makes larger and more complex problems manageable!
+<br>
+<p>The complexity that goes into intelligence is the complexity that renders
+<br>
+manageable (a) the problem space and (b) the expertise/content space. 
+<br>
+&quot;General intelligence&quot; is system complexity and knowledge that renders
+<br>
+tractable a wide variety of problem spaces and expertise spaces.  An AI
+<br>
+begins to mature as a &quot;seed AI&quot; when &quot;adding system complexity that renders
+<br>
+problems and expertise tractable and manageable&quot; first becomes tractable. 
+<br>
+Of course that's only the start of the problem.  If you see the System
+<br>
+Complexity Space as the problem, and the AI's underlying system at any time
+<br>
+as the P and Q, then just jumping from P to Q for the first time may
+<br>
+inaugurate the AI's career as a seed, but it hardly finishes it.  As with
+<br>
+any fitness landscape there's the problem of not getting stuck in local
+<br>
+optima and so on; there are distinctions between mere optimizations that get
+<br>
+from P to Q faster and true systemic changes that alter which Ps and Qs are
+<br>
+explored.  &quot;Recursive self-improvement&quot; is when seed AI becomes
+<br>
+&quot;manageable&quot;, in the sense given, as well as being &quot;tractable&quot;.  There's
+<br>
+also a good way to define &quot;hard takeoff&quot; using these definitions, but I
+<br>
+think I'd better stop here for the day.
+<br>
+<p>But I will say that when you look at AI from this perspective, it does shed
+<br>
+another spotlight on why AI projects tend to fail.  The tractability of the
+<br>
+problem is merely the zeroth step.  The manageability of the problem space
+<br>
+is the first derivative.  The manageability of the expertise space is the
+<br>
+second derivative.  Coding an AI, or an AI modifying itself, is the third
+<br>
+derivative.  Strongly recursive seed AI is the fourth derivative.  If all
+<br>
+you see of that is the immediate problem, the zeroth derivative, and you
+<br>
+write some piece of code that solves it directly, then naturally you're
+<br>
+going to do a comical bounce off the problem of Real AI - like backing up,
+<br>
+getting a good wind, and running headlong into a thirty-mile wall of rubber
+<br>
+cement.
+<br>
+<p>--              --              --              --              -- 
+<br>
+Eliezer S. Yudkowsky                          <a href="http://intelligence.org/">http://intelligence.org/</a> 
+<br>
+Research Fellow, Singularity Institute for Artificial Intelligence
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3365.html">mcomess@ucla.edu: "Re: MW QT AI please phone home; another path to a Singularity?"</a>
+<li><strong>Previous message:</strong> <a href="3363.html">Emil Gilliam: "ARTICLE: Non-Turing computation"</a>
+<li><strong>In reply to:</strong> <a href="3362.html">Ben Goertzel: "definitions of pattern"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3364">[ date ]</a>
+<a href="index.html#3364">[ thread ]</a>
+<a href="subject.html#3364">[ subject ]</a>
+<a href="author.html#3364">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:38 MDT
+</em></small></p>
+</body>
+</html>

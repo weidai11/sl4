@@ -1,0 +1,33 @@
+I think your premise is incorrect, though I agree that the amount of
+hardware required is probably overstated. The flaw I see is that you are
+assuming that all neural functions map to silicon with the roughly the
+same efficiency.  This is almost certainly not the case. Audio and
+visual processing are the same class of problem i.e. they are both very
+similar types of signal processing functionality, and I would therefore
+expect them to have roughly the same relative relationship to silicon in
+terms of processing efficiency. Something like language functionality,
+which does not appear to be terribly analogous to signal processing, may
+have a substantially different relative processing efficiency for better
+or worse.
+
+My intuition would be that signal processing type functionality is
+actually one of the least efficient processes in the brain with relation
+to its silicon counterpart, and would therefore stand to gain the most
+by mapping it into silicon.
+
+-James Rogers
+ jamesr@best.com
+
+--------------------------------------------------------
+On Fri, 2002-05-31 at 12:31, Mike & Donna Deering wrote:
+The experts have grossly over estimated the computational requirements
+for GAI.  We have a way of calculating it precisely.  Kurzweil says we
+have simulated the human auditory functions and we are very close to a
+complete simulation of the human visual function.  And we have a good
+idea of the neuroanatomy of these systems.  Simply take how much
+hardware does it take to simulate these functions, how much of the brain
+do these functions comprise, extrapolate how much hardware it takes to
+simulate the whole brain.
+
+
+

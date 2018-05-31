@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: features of an AI code</title>
+<meta name="Author" content="Eugen Leitl (eugen@leitl.org)">
+<meta name="Subject" content="features of an AI code">
+<meta name="Date" content="2004-07-08">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>features of an AI code</h1>
+<!-- received="Thu Jul  8 04:55:50 2004" -->
+<!-- isoreceived="20040708105550" -->
+<!-- sent="Thu, 8 Jul 2004 12:55:47 +0200" -->
+<!-- isosent="20040708105547" -->
+<!-- name="Eugen Leitl" -->
+<!-- email="eugen@leitl.org" -->
+<!-- subject="features of an AI code" -->
+<!-- id="20040708105547.GA14846@leitl.org" -->
+<!-- charset="us-ascii" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eugen Leitl (<a href="mailto:eugen@leitl.org?Subject=Re:%20features%20of%20an%20AI%20code"><em>eugen@leitl.org</em></a>)<br>
+<strong>Date:</strong> Thu Jul 08 2004 - 04:55:47 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="9557.html">Eugen Leitl: "Re: Cognitive Systems Conference, CCortex, and alternative  friendliness aproaches"</a>
+<li><strong>Previous message:</strong> <a href="9555.html">Bill Hibbard: "Re: Cognitive Systems Conference, CCortex, and alternative  friendliness aproaches"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="9562.html">J. Andrew Rogers: "Re: features of an AI code"</a>
+<li><strong>Maybe reply:</strong> <a href="9562.html">J. Andrew Rogers: "Re: features of an AI code"</a>
+<li><strong>Maybe reply:</strong> <a href="9568.html">Yan King Yin: "re: features of an AI code"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#9556">[ date ]</a>
+<a href="index.html#9556">[ thread ]</a>
+<a href="subject.html#9556">[ subject ]</a>
+<a href="author.html#9556">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+This is a stream of consciousness type of comments on good features of AI codes.
+<br>
+There are reasons for them, but they're usually omitted here. It's a curious
+<br>
+mix of current good practice and future (current lunatic fringe, but, it will
+<br>
+make sense then, trust me).
+<br>
+<p>* code for today's/next year's commodity iron, but think about 
+<br>
+&nbsp;&nbsp;portability to massively parallel
+<br>
+&nbsp;&nbsp;async molecular-electronics systems with mole amounts of switches.
+<br>
+&nbsp;&nbsp;They're not so far away as you think. You might actually need them.
+<br>
+<p>* your code should scale O(0) whether for 10^0 or 10^9 nodes (yes, it can be
+<br>
+&nbsp;&nbsp;done with the right topology and communication pattern) -- if it doesn't
+<br>
+&nbsp;&nbsp;you're doing someting really wrong. Screw Amdahl, no sequential sections
+<br>
+&nbsp;&nbsp;allowed.
+<br>
+<p>* at very large (WAN and Internet2) scale, use GRID
+<br>
+<p>* use clusters, do not assume global connectivity (cubic primitive lattice is
+<br>
+&nbsp;&nbsp;a safe assumption to make, 3d is safe, higher dimensionality is iffy)
+<br>
+<p>* long-range is an iteration of short-range. This isn't inefficient if your
+<br>
+&nbsp;&nbsp;time of flight is ~relativistic, and there are a couple gate delays in
+<br>
+&nbsp;&nbsp;between -- this is for the future.
+<br>
+<p>* if you signal, try streaming jumbo packets, and do crunch while you stream
+<br>
+&nbsp;&nbsp;(if you can't, at least try to load all interfaces at the same time, then
+<br>
+&nbsp;&nbsp;crunch a block, stream, crunch, etc.)
+<br>
+<p>* this is especially true if your interconnect mesh isn't unobtainium
+<br>
+&nbsp;(Infiniband &amp; Co)
+<br>
+<p>* use multiple NICs if you've got them, look at <a href="http://aggregate.org/">http://aggregate.org/</a> for
+<br>
+&nbsp;&nbsp;inspiration (try to hit for 6 local crossbar links for each node, though)
+<br>
+<p>* use a binary protocol, specifically a minimal subset of MPI (do NOT use XML over wire
+<br>
+&nbsp;&nbsp;in local clusters, global networks is different)
+<br>
+<p>* avoid writing to disk frequently, try to do without swap. There's a special
+<br>
+&nbsp;&nbsp;case if you have a large library of patterns, and can stream sequentially,
+<br>
+&nbsp;&nbsp;or tolerate 10 ms fetches sometimes. There won't be any disk in the future.
+<br>
+<p>* try to go without local disk altogether but for checkpoints (not strictly
+<br>
+&nbsp;&nbsp;necessary for future nonvolatile core)
+<br>
+<p>* use a spatial system composition, communicate interface state to adjacent
+<br>
+&nbsp;&nbsp;nodes (see cubic primitive lattice, usually 3d) -- see array
+<br>
+<p>* use arrays of small data types, avoid absolute pointers (use relative
+<br>
+&nbsp;&nbsp;addressing as offsets to current position) 
+<br>
+<p>* only access memory in stream mode, try to limit unpredictable accesses to
+<br>
+&nbsp;&nbsp;1st/2nd level cache (here it actually pays to use assembly for prefetch,
+<br>
+&nbsp;&nbsp;otherwise don't bother with assembly but maybe for inner loop when you're
+<br>
+&nbsp;&nbsp;done. This will cut your harware budget by some 300%, ditto operation
+<br>
+&nbsp;&nbsp;costs. A single guy for the hardware is enough, unless yours is a two-digit
+<br>
+&nbsp;&nbsp;megabuck budget for iron alone. 
+<br>
+<p>* align objects to long and cache line boundaries
+<br>
+<p>* make sure your objects could signal locally, and asynchronosly (no global clock
+<br>
+&nbsp;&nbsp;or clock with jitter) -- this is different from streaming over an array
+<br>
+&nbsp;&nbsp;with a hotspot loop. This is future, not today. Make sure your code will
+<br>
+&nbsp;&nbsp;survive the future.
+<br>
+<p>* don't use floats, stick to integers
+<br>
+<p>* if you use integers, try using short integers (4-8 bit is great)
+<br>
+<p>* stick to integers and codes you can crunch in parallel with MMX/SSE* type
+<br>
+&nbsp;&nbsp;of SWAR SIMD
+<br>
+<p>* get ready for very wide words, low latency, small cores and FPGA (think
+<br>
+&nbsp;&nbsp;inner loop in FPGA)
+<br>
+<p>* make sure your inner loop would translate into logic some 10^3 gates simple
+<br>
+&nbsp;&nbsp;for each individual small integer
+<br>
+<p>* put the complexity into data pattern, not code pattern. Code is not that
+<br>
+&nbsp;&nbsp;important, state is.
+<br>
+<p>* if you think you can't do it in C, or don't need to, you're doing it wrong
+<br>
+<p>* if can't describe the algorithm and the data flow on a large piece of paper, 
+<br>
+&nbsp;&nbsp;you're doing it wrong 
+<br>
+<p>* on the long run, get ready for crystalline hardware (moles of switches,
+<br>
+&nbsp;&nbsp;local connectivity, nonvolatile state, relativistically constrained signalling)
+<br>
+<p>If you can't state your problem in above framework, you're doing it the hard
+<br>
+way. If none of it appears relevant, and you in fact think I'm nuts then you won't
+<br>
+succeed. Probably.
+<br>
+<p><pre>
+-- 
+Eugen* Leitl <a href="http://leitl.org">leitl</a>
+______________________________________________________________
+ICBM: 48.07078, 11.61144            <a href="http://www.leitl.org">http://www.leitl.org</a>
+8B29F6BE: 099D 78BA 2FD3 B014 B08A  7779 75B0 2443 8B29 F6BE
+<a href="http://moleculardevices.org">http://moleculardevices.org</a>         <a href="http://nanomachines.net">http://nanomachines.net</a>
+
+</pre>
+<p>
+<p><hr>
+<ul>
+<li>application/pgp-signature attachment: <a href="../att-9556/01-part">stored</a>
+</ul>
+<!-- attachment="01-part" -->
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="9557.html">Eugen Leitl: "Re: Cognitive Systems Conference, CCortex, and alternative  friendliness aproaches"</a>
+<li><strong>Previous message:</strong> <a href="9555.html">Bill Hibbard: "Re: Cognitive Systems Conference, CCortex, and alternative  friendliness aproaches"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="9562.html">J. Andrew Rogers: "Re: features of an AI code"</a>
+<li><strong>Maybe reply:</strong> <a href="9562.html">J. Andrew Rogers: "Re: features of an AI code"</a>
+<li><strong>Maybe reply:</strong> <a href="9568.html">Yan King Yin: "re: features of an AI code"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#9556">[ date ]</a>
+<a href="index.html#9556">[ thread ]</a>
+<a href="subject.html#9556">[ subject ]</a>
+<a href="author.html#9556">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:47 MDT
+</em></small></p>
+</body>
+</html>

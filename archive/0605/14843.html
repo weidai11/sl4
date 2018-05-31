@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: Changing the value system of FAI</title>
+<meta name="Author" content="Eliezer S. Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="Re: Changing the value system of FAI">
+<meta name="Date" content="2006-05-10">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Changing the value system of FAI</h1>
+<!-- received="Wed May 10 10:54:39 2006" -->
+<!-- isoreceived="20060510165439" -->
+<!-- sent="Wed, 10 May 2006 09:54:46 -0700" -->
+<!-- isosent="20060510165446" -->
+<!-- name="Eliezer S. Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Re: Changing the value system of FAI" -->
+<!-- id="44621AD6.3090703@pobox.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="638d4e150605092215n1d70d5a8n43e6364657ed2a64@mail.gmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eliezer S. Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20Changing%20the%20value%20system%20of%20FAI"><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Wed May 10 2006 - 10:54:46 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="14844.html">Ben Goertzel: "Re: Changing the value system of FAI"</a>
+<li><strong>Previous message:</strong> <a href="14842.html">Eliezer S. Yudkowsky: "Re: the Singularity Summit and regulation of AI"</a>
+<li><strong>In reply to:</strong> <a href="14836.html">Ben Goertzel: "Re: Changing the value system of FAI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="14844.html">Ben Goertzel: "Re: Changing the value system of FAI"</a>
+<li><strong>Reply:</strong> <a href="14844.html">Ben Goertzel: "Re: Changing the value system of FAI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#14843">[ date ]</a>
+<a href="index.html#14843">[ thread ]</a>
+<a href="subject.html#14843">[ subject ]</a>
+<a href="author.html#14843">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Ben Goertzel wrote:
+<br>
+<em>&gt; Eliezer,
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; You wrote:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;&gt; The problem I haven't been able to solve is *rigorously* describing how
+</em><br>
+<em>&gt;&gt; a classical Bayesian expected utility maximizer would make changes to
+</em><br>
+<em>&gt;&gt; its own source code, including the source code that changes the code;
+</em><br>
+<em>&gt;&gt; that is, there would be some set of code that modified itself.
+</em><br>
+<em>&gt;&gt; Classical decision theory barfs on this due to an infinite recursion.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; I'd like to get a clearer idea in my mind of the precise question
+</em><br>
+<em>&gt; you're thinking about...
+</em><br>
+<p>Schmidhuber's Godel machine doesn't actually solve any of the questions 
+<br>
+it poses, but it poses a fairly good version of the question - not 
+<br>
+exactly the question I use, but a useful question.
+<br>
+<p><em>&gt; Is it like this?
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Suppose we have a computer C with a finite memory (containing a
+</em><br>
+<em>&gt; program  of size N).   Suppose that the computer has the power to
+</em><br>
+<em>&gt; write down a program of size N in its hard drive, and then push a
+</em><br>
+<em>&gt; button causing this new program to be implemented in its main memory,
+</em><br>
+<em>&gt; overwriting the current contents.  (I.e., the computer has complete
+</em><br>
+<em>&gt; self-modification power on the software level.)
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Suppose that at time 0, the computer has a certain state, which
+</em><br>
+<em>&gt; embodies a program P doing Bayesian expected utility maximization/
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Specifically, suppose the program P solves the problem: given a
+</em><br>
+<em>&gt; computer C1 with memory size N1, and a utility function U (with
+</em><br>
+<em>&gt; algorithmic information &lt;= N1), figure out the optimal state for
+</em><br>
+<em>&gt; the computer C1's memory to be written into, in terms of optimizing
+</em><br>
+<em>&gt; the expected utility over time.
+</em><br>
+<p>I would emphasize that the utility function is over external outcomes. 
+<br>
+Thus, maximizing expected utility deals in the external consequences of 
+<br>
+internal code; the utility function is not over internal code. 
+<br>
+Schmidhuber's Godel machine also (allegedly) has this property; albeit 
+<br>
+Schmidhuber doesn't go into any of the questions I find interesting from 
+<br>
+an FAI perspective, such as how the AI derives an external model on the 
+<br>
+basis of sensory data and then applies the utility function to the 
+<br>
+external model.
+<br>
+<p>Also I am not thinking in terms of discovering optimal, maximizing 
+<br>
+states, but of discovering satisficing states, or relative improvements 
+<br>
+that are probably good and knowably noncatastrophic.  Schmidhuber talks 
+<br>
+about probably good improvements.
+<br>
+<p><em>&gt; There is then the question whether P can be applied to C ... or
+</em><br>
+<em>&gt; rather, in what generality can P be applied to C ... ?
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Is this close to the question you are thinking about?
+</em><br>
+<p>To be honest it doesn't feel at all similar to the way I think about the 
+<br>
+question.  For me the sticking point is relating the consequences of 
+<br>
+internal code to external reality, and proving the safety of changes to 
+<br>
+the code that proves the safety.
+<br>
+<p>Btw, I'm preparing for the Summit, and when I'm done with that, for your 
+<br>
+own AGI conference, so my answers may be slowed for the next couple of 
+<br>
+weeks.
+<br>
+<p><pre>
+-- 
+Eliezer S. Yudkowsky                          <a href="http://intelligence.org/">http://intelligence.org/</a>
+Research Fellow, Singularity Institute for Artificial Intelligence
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="14844.html">Ben Goertzel: "Re: Changing the value system of FAI"</a>
+<li><strong>Previous message:</strong> <a href="14842.html">Eliezer S. Yudkowsky: "Re: the Singularity Summit and regulation of AI"</a>
+<li><strong>In reply to:</strong> <a href="14836.html">Ben Goertzel: "Re: Changing the value system of FAI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="14844.html">Ben Goertzel: "Re: Changing the value system of FAI"</a>
+<li><strong>Reply:</strong> <a href="14844.html">Ben Goertzel: "Re: Changing the value system of FAI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#14843">[ date ]</a>
+<a href="index.html#14843">[ thread ]</a>
+<a href="subject.html#14843">[ subject ]</a>
+<a href="author.html#14843">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:56 MDT
+</em></small></p>
+</body>
+</html>

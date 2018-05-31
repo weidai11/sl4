@@ -1,0 +1,270 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: Coding from Scratch: Jaron Lanier</title>
+<meta name="Author" content="Dani Eder (danielravennest@yahoo.com)">
+<meta name="Subject" content="RE: Coding from Scratch: Jaron Lanier">
+<meta name="Date" content="2003-01-29">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Coding from Scratch: Jaron Lanier</h1>
+<!-- received="Wed Jan 29 14:30:59 2003" -->
+<!-- isoreceived="20030129213059" -->
+<!-- sent="Wed, 29 Jan 2003 13:30:11 -0800 (PST)" -->
+<!-- isosent="20030129213011" -->
+<!-- name="Dani Eder" -->
+<!-- email="danielravennest@yahoo.com" -->
+<!-- subject="RE: Coding from Scratch: Jaron Lanier" -->
+<!-- id="20030129213011.70658.qmail@web20421.mail.yahoo.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="LAEGJLOGJIOELPNIOOAJOEPMEDAA.ben@goertzel.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Dani Eder (<a href="mailto:danielravennest@yahoo.com?Subject=RE:%20Coding%20from%20Scratch:%20Jaron%20Lanier"><em>danielravennest@yahoo.com</em></a>)<br>
+<strong>Date:</strong> Wed Jan 29 2003 - 14:30:11 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="6134.html">Jonathan Standley: "Re: Towards a prototype mini-AI"</a>
+<li><strong>Previous message:</strong> <a href="6132.html">Slawomir Paliwoda: "Re: Towards a prototype mini-AI"</a>
+<li><strong>In reply to:</strong> <a href="6107.html">Ben Goertzel: "RE: Coding from Scratch: Jaron Lanier"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6108.html">Michael Roy Ames: "Re: Coding from Scratch: Jaron Lanier"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6133">[ date ]</a>
+<a href="index.html#6133">[ thread ]</a>
+<a href="subject.html#6133">[ subject ]</a>
+<a href="author.html#6133">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+--- Ben Goertzel &lt;<a href="mailto:ben@goertzel.org?Subject=RE:%20Coding%20from%20Scratch:%20Jaron%20Lanier">ben@goertzel.org</a>&gt; wrote:
+<br>
+<p><em>&gt; 
+</em><br>
+<em>&gt; 4) Check the software program against the
+</em><br>
+<em>&gt; specification carefully, using
+</em><br>
+<em>&gt; repeated code inspections, unit tests, and black and
+</em><br>
+<em>&gt; white box system tests.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; If this approach is followed, one will have software
+</em><br>
+<em>&gt; that is fantastically
+</em><br>
+<em>&gt; more reliable than most software produced this way.
+</em><br>
+<p>This is very close to what we do developing
+<br>
+software for the Space Station.  We have 8 people
+<br>
+in the Requirements group, who write the
+<br>
+specifications, then check the code and the
+<br>
+test suite fulfills the specifications.  We have
+<br>
+12 designers who actually write the code, and
+<br>
+finally we have 32 people (including myself) who
+<br>
+test the software.  The stuff we are developing
+<br>
+is the lower level control software that directly
+<br>
+controls fans and pumps, and reports temperature
+<br>
+and atmosphere composition.  The higher tier,
+<br>
+which involves astronaut interface, mission
+<br>
+control, and programmed sequences of commands,
+<br>
+is done elsewhere.  Most of our testing is at
+<br>
+the level of one function in one CPU's software
+<br>
+being exahustively tested for every possible
+<br>
+input condition.
+<br>
+<p>For example, there is a valve that can shut off
+<br>
+the flow of cooling water in a space station
+<br>
+module (critical components are water cooled so
+<br>
+they can continue to operate even if the module
+<br>
+loses it's atmosphere).  The valve is controlled
+<br>
+by signals from one of the onboard computers, and
+<br>
+sends back 2 sensor signals from two contacts,
+<br>
+one that is made when the valve is closed, and
+<br>
+the other when the valve is open.  We test for
+<br>
+all four possible sensor combinations (open,
+<br>
+closed, transition (no contact on either sensor),
+<br>
+and fault (contact on both sensors, which should
+<br>
+be physically impossible).
+<br>
+<p>We tested each command for each valve state (i.e.
+<br>
+issue a close valve command when the valve is
+<br>
+already closed).
+<br>
+<p>At each stage the other groups review each others
+<br>
+work.  So when the specifiction is being written,
+<br>
+design and test consider whether they can write
+<br>
+and test to that spec.  Conversely at the test
+<br>
+end, requirements and design consider whether our
+<br>
+test suite adequately covers the specified
+<br>
+performance, and exercises the flight code.  
+<br>
+<p><em>&gt; Why is this well-known approach not followed very
+</em><br>
+<em>&gt; often?
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Firstly COST ...
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; secondly IGNORANCE
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; The formal approach takes a long time, and it takes
+</em><br>
+<em>&gt; expensive people (people
+</em><br>
+<em>&gt; with a grasp of math as well as programming).  It
+</em><br>
+<em>&gt; takes more $$ spent on
+</em><br>
+<em>&gt; software testing than most companies want to spend.
+</em><br>
+<p>Space Station software has been in development for
+<br>
+10 years, and it isn't cheap.  On the plus side,
+<br>
+it's been functioning in orbit for 4 years with
+<br>
+no major problems. Yes, there have been bugs, but
+<br>
+they have been minor.
+<br>
+<p>In addition to being very careful with the software,
+<br>
+we were very careful to design critical systems
+<br>
+(where a failure would kill the crew or destroy
+<br>
+the station) so that no single computer, software,
+<br>
+human, or hardware failure would by itself be
+<br>
+critical.  We also took into account statistical
+<br>
+failure rates for equipment, and added backup units
+<br>
+where needed to bring the risk down to the
+<br>
+required level.  The major remaining risk, which
+<br>
+we couldn't do much about, was natural and manmade
+<br>
+objects running into the station.  There's about
+<br>
+a 1-2% chance per year of a hull penetration by
+<br>
+such objects, and the effect of something big
+<br>
+enough to punch through the 1 cm aluminum walls
+<br>
+is at least the energy equivalent of a hand
+<br>
+grenade.  And most anywhere in the Station, behind
+<br>
+the pressure shell there is equipment of some
+<br>
+kind - so the effect will be bits of hardware
+<br>
+flying everywhere.  That's the main reason
+<br>
+for an emergency escape capsule at the Station.
+<br>
+The poor soul who happened to be in a module when
+<br>
+something penetrates it will be dead from
+<br>
+(a) shockwave, (b) shrapnel, and (c) loss of
+<br>
+pressure.  The rest of the crew is supposed to
+<br>
+close the hatches behind them, and get out in
+<br>
+the escape capsule.
+<br>
+<p><p>__________________________________________________
+<br>
+Do you Yahoo!?
+<br>
+Yahoo! Mail Plus - Powerful. Affordable. Sign up now.
+<br>
+<a href="http://mailplus.yahoo.com">http://mailplus.yahoo.com</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="6134.html">Jonathan Standley: "Re: Towards a prototype mini-AI"</a>
+<li><strong>Previous message:</strong> <a href="6132.html">Slawomir Paliwoda: "Re: Towards a prototype mini-AI"</a>
+<li><strong>In reply to:</strong> <a href="6107.html">Ben Goertzel: "RE: Coding from Scratch: Jaron Lanier"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6108.html">Michael Roy Ames: "Re: Coding from Scratch: Jaron Lanier"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6133">[ date ]</a>
+<a href="index.html#6133">[ thread ]</a>
+<a href="subject.html#6133">[ subject ]</a>
+<a href="author.html#6133">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:41 MDT
+</em></small></p>
+</body>
+</html>

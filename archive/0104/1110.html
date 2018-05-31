@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: ARTICLE: Memory bandwidth</title>
+<meta name="Author" content="Ben Goertzel (ben@webmind.com)">
+<meta name="Subject" content="RE: ARTICLE: Memory bandwidth">
+<meta name="Date" content="2001-04-15">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: ARTICLE: Memory bandwidth</h1>
+<!-- received="Sun Apr 15 12:07:44 2001" -->
+<!-- isoreceived="20010415180744" -->
+<!-- sent="Sun, 15 Apr 2001 12:07:14 -0400" -->
+<!-- isosent="20010415160714" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@webmind.com" -->
+<!-- subject="RE: ARTICLE: Memory bandwidth" -->
+<!-- id="NDBBIBGFAPPPBODIPJMMCEPJFFAA.ben@webmind.com" -->
+<!-- charset="Windows-1252" -->
+<!-- inreplyto="200104151546.f3FFkgP21643@zeus.kia.net" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@webmind.com?Subject=RE:%20ARTICLE:%20Memory%20bandwidth"><em>ben@webmind.com</em></a>)<br>
+<strong>Date:</strong> Sun Apr 15 2001 - 10:07:14 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1111.html">Ben Goertzel: "RE: ARTICLE: Memory bandwidth"</a>
+<li><strong>Previous message:</strong> <a href="1109.html">Dale Johnstone: "RE: ARTICLE: Memory bandwidth"</a>
+<li><strong>In reply to:</strong> <a href="1109.html">Dale Johnstone: "RE: ARTICLE: Memory bandwidth"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1112.html">Eliezer S. Yudkowsky: "Re: ARTICLE: Memory bandwidth"</a>
+<li><strong>Reply:</strong> <a href="1112.html">Eliezer S. Yudkowsky: "Re: ARTICLE: Memory bandwidth"</a>
+<li><strong>Reply:</strong> <a href="1114.html">Peter Voss: "Good AI development languages"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1110">[ date ]</a>
+<a href="index.html#1110">[ thread ]</a>
+<a href="subject.html#1110">[ subject ]</a>
+<a href="author.html#1110">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Obviously, this is an issue about which I have a great deal of practical
+<br>
+experience
+<br>
+<p>I'll just  make a few points, gained from 3 years doing AI development
+<br>
+experience in Java
+<br>
+<p>Firstly, development is clearly faster in Java than in C/C++.  Not having to
+<br>
+debug malloc() errors is nice.
+<br>
+<p>Java, if you use HotSpot, is no slower than C++.  It is surely still slower
+<br>
+than a speed-optimized C program, but not by an order of magnitude
+<br>
+<p>A Java program uses about 4 times as much memory as a comparable C++
+<br>
+program.  There's not much you can do about this.  Also, all current JVM's
+<br>
+on all current OS's are limited to about 1.2 GB of RAM per Java process.
+<br>
+(Sun promises a 64-bit JVM, someday, but, well...).  So, if you want an AI
+<br>
+program with a lot of data in it, and you want to use Java, you're pushed to
+<br>
+deal with distributed processing pretty early in your work.  Distributed
+<br>
+processing, however, slows down processing a lot.  With a lot of work, we
+<br>
+got the performance of a distributed system in the range of 5-10 times
+<br>
+slower than that of a comparable 1-JVM system with the same amount of data.
+<br>
+The bottleneck turns out to be, not the actual network bandwidth, but the
+<br>
+time required for Java to serialize/deserialize objects.  One can minimize
+<br>
+this by overriding the readObject() and writeObject() methods [custom
+<br>
+serialization], but this has limited value, unfortunately.
+<br>
+<p>Furthermore, garbage collection in existing JVM's is fantastically
+<br>
+inefficient for programs creating billions of objects.  It seems that the
+<br>
+JVM is not tuned for truly large-scale applications.
+<br>
+<p>And, there are no existing Java profilers that will profile a large-scale,
+<br>
+multi-threaded Java system.  Quite literally, they all crash when applied to
+<br>
+such a program.  For this reason we have created our own Java profiler. [The
+<br>
+reason the commercial profilers crash is that they try to report all events
+<br>
+in the program to their GUI's, and the Java GUI tools are not able to deal
+<br>
+with such a high volume of data.  Our profiler just saves events in a log
+<br>
+file, which avoids the problem.]
+<br>
+<p>There are also no adequate debuggers in Java, when one is creating a
+<br>
+large-scale software system.
+<br>
+<p>Finally, there are not as many useful 'peripheral' software tools in Java as
+<br>
+in C++.  To take a random example that's come up in my own work, graph
+<br>
+visualization toolkits in java are vastly worse than those in C++.  Advanced
+<br>
+math libraries are harder to come by.  Etc.
+<br>
+<p>The  main practical problem we've found using Java, then, is this.  Using
+<br>
+Java, we created a system that uses so much memory that we were pushed to
+<br>
+work with distributed processing very early on.  Distributed computing is a
+<br>
+whole science unto itself, which we've mastered, but it took a lot of time.
+<br>
+No one had ever built a really adequate Java distributed computing framework
+<br>
+before we did.  (I'm aware of things like JINI and Voyager, but they all
+<br>
+have pretty dire shortcomings.)  Next, because of requiring distributed
+<br>
+processing to do anything involving large volumes of data, we have a system
+<br>
+that's pretty hard to fiddle around with, due to the slowness of the system
+<br>
+and its multi-machine nature.  But the nature of a complex AI system is that
+<br>
+it does require a lot of informal adjustment and experimentation by the
+<br>
+human programmer.  (Sure, maybe you can come up with a simple panacea for
+<br>
+artificial thought that doesn't require any experimentation to &quot;get right.&quot;
+<br>
+If so, you'll be doing a lot better than evolution did -- evolution spent
+<br>
+millions of years doing adjustment and parameter tuning.)
+<br>
+<p>What a few of us are doing now is taking the most essential aspects of the
+<br>
+system and re-coding them in C in a very simple and specialized way.  We're
+<br>
+not dealing with distributed processing in this experimental version yet.
+<br>
+We just want a simple system in which we can play around with the
+<br>
+interaction of the various AI components of the system, freely and easily.
+<br>
+In a couple months we'll deal with the reintegration of this into the main
+<br>
+codebase, using JNI, which works very nicely BTW.
+<br>
+<p>In sum, I'd highly recommend Java for small-scale engineering projects.
+<br>
+It's a fun language to work with.  But for large-scale projects (meaning,
+<br>
+systems that will use a lot of memory and a lot of threads), my advice is to
+<br>
+stick with C/C++.  Java is just not tuned for such projects, and you run
+<br>
+into a hell of a lot of annoying problems that waste a huge amount of time
+<br>
+and effort, far outweighing the savings in programming time.
+<br>
+<p>LISP is a nice language too, and there are some fast LISPs.  But in
+<br>
+large-scale use cases, they have the same garbage collection inefficiency
+<br>
+problems as current JVM's.
+<br>
+<p>Even if your artificial brain consists of 100 lines of code because your
+<br>
+theory of mind is so beautiful, it's still going to need to use up all
+<br>
+available RAM, and it's still going to want to use multiple processors when
+<br>
+available (i.e. multiple threads).  You'll still have a large-scale program,
+<br>
+for which Java will cause memory bloat, forcing you use distributed
+<br>
+processing, which will turn your 100 lines of code into many more, which
+<br>
+will mean you'll need a profiler and debugger, which don't work for
+<br>
+large-scale programs like yours, blah blah blah ... you get the picture.
+<br>
+<p>-- Ben
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1111.html">Ben Goertzel: "RE: ARTICLE: Memory bandwidth"</a>
+<li><strong>Previous message:</strong> <a href="1109.html">Dale Johnstone: "RE: ARTICLE: Memory bandwidth"</a>
+<li><strong>In reply to:</strong> <a href="1109.html">Dale Johnstone: "RE: ARTICLE: Memory bandwidth"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1112.html">Eliezer S. Yudkowsky: "Re: ARTICLE: Memory bandwidth"</a>
+<li><strong>Reply:</strong> <a href="1112.html">Eliezer S. Yudkowsky: "Re: ARTICLE: Memory bandwidth"</a>
+<li><strong>Reply:</strong> <a href="1114.html">Peter Voss: "Good AI development languages"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1110">[ date ]</a>
+<a href="index.html#1110">[ thread ]</a>
+<a href="subject.html#1110">[ subject ]</a>
+<a href="author.html#1110">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:36 MDT
+</em></small></p>
+</body>
+</html>

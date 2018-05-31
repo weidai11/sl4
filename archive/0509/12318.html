@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: mathematical reasoning</title>
+<meta name="Author" content="Nick Hay (nickjhay@hotmail.com)">
+<meta name="Subject" content="Re: mathematical reasoning">
+<meta name="Date" content="2005-09-11">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: mathematical reasoning</h1>
+<!-- received="Sun Sep 11 14:01:17 2005" -->
+<!-- isoreceived="20050911200117" -->
+<!-- sent="Mon, 12 Sep 2005 08:01:08 +1200" -->
+<!-- isosent="20050911200108" -->
+<!-- name="Nick Hay" -->
+<!-- email="nickjhay@hotmail.com" -->
+<!-- subject="Re: mathematical reasoning" -->
+<!-- id="43248D04.5090401@hotmail.com" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="022901c5b6e5$976609e0$0800a8c0@weidaim1" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Nick Hay (<a href="mailto:nickjhay@hotmail.com?Subject=Re:%20mathematical%20reasoning"><em>nickjhay@hotmail.com</em></a>)<br>
+<strong>Date:</strong> Sun Sep 11 2005 - 14:01:08 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="12319.html">Jeff Medina: "Re: Hempel's Paradox"</a>
+<li><strong>Previous message:</strong> <a href="12317.html">Wei Dai: "mathematical reasoning"</a>
+<li><strong>In reply to:</strong> <a href="12317.html">Wei Dai: "mathematical reasoning"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12321.html">Wei Dai: "Re: mathematical reasoning"</a>
+<li><strong>Reply:</strong> <a href="12321.html">Wei Dai: "Re: mathematical reasoning"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12318">[ date ]</a>
+<a href="index.html#12318">[ thread ]</a>
+<a href="subject.html#12318">[ subject ]</a>
+<a href="author.html#12318">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Wei Dai wrote:
+<br>
+<em>&gt; Another direction, taken by Marcus Hutter's AIXI-tl and Schmidhuber's 
+</em><br>
+<em>&gt; Godel Machine, is to essentially hard wire difficult-to-prove/unprovable 
+</em><br>
+<em>&gt; mathematical conjectures into the AI as unchangeable assumptions. This 
+</em><br>
+<em>&gt; may not be obvious at first glance so I'll explain. The way those AIs 
+</em><br>
+<em>&gt; work is to start with an initial policy (handcrafted program for making 
+</em><br>
+<em>&gt; decisions) and then systematically search for provable improvements to 
+</em><br>
+<em>&gt; the policy. The initial policy necessarily makes implicit or explicit 
+</em><br>
+<em>&gt; assumptions about the truth value of mathematical conjectures. Such an 
+</em><br>
+<em>&gt; assumption can't be changed unless it can be proved to be false, 
+</em><br>
+<em>&gt; otherwise it's impossible to prove that changing it won't lower expected 
+</em><br>
+<em>&gt; utility.
+</em><br>
+<p>This is not how AIXI-tl works.
+<br>
+<p>In its proving phase, AIXI-tl searches through all proofs of length 
+<br>
+smaller than a fixed size, extracting all proofs that prove:
+<br>
+<p>VA(p) = &quot;for any fixed history, policy p's estimate of its future value 
+<br>
+is &lt;= its (uncomputable, but lower semicomputable and well defined) 
+<br>
+xi-expected value&quot;
+<br>
+<p>for some policy p.  After extracting this set of policies, it leaves 
+<br>
+proof theory behind.  This &quot;mathematical reasoning&quot; is about probability 
+<br>
+theory not within it, and is done in a standard brute-force way.
+<br>
+<p>The formal system F, and the formalisation of VA in F, are unchecked 
+<br>
+inputs to the AIXI-tl: it doesn't attempt to validate them in any sense. 
+<br>
+&nbsp;&nbsp;The formalisation of VA, in particular, is assumed correct.  But this 
+<br>
+doesn't fall within &quot;difficult-to-prove/unprovable mathematical 
+<br>
+conjectures&quot;.
+<br>
+<p>-- Nick Hay
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="12319.html">Jeff Medina: "Re: Hempel's Paradox"</a>
+<li><strong>Previous message:</strong> <a href="12317.html">Wei Dai: "mathematical reasoning"</a>
+<li><strong>In reply to:</strong> <a href="12317.html">Wei Dai: "mathematical reasoning"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="12321.html">Wei Dai: "Re: mathematical reasoning"</a>
+<li><strong>Reply:</strong> <a href="12321.html">Wei Dai: "Re: mathematical reasoning"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#12318">[ date ]</a>
+<a href="index.html#12318">[ thread ]</a>
+<a href="subject.html#12318">[ subject ]</a>
+<a href="author.html#12318">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:52 MDT
+</em></small></p>
+</body>
+</html>

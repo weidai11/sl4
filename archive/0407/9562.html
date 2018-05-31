@@ -1,0 +1,296 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: Re: features of an AI code</title>
+<meta name="Author" content="J. Andrew Rogers (andrew@ceruleansystems.com)">
+<meta name="Subject" content="Re: features of an AI code">
+<meta name="Date" content="2004-07-08">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: features of an AI code</h1>
+<!-- received="Thu Jul  8 13:49:20 2004" -->
+<!-- isoreceived="20040708194920" -->
+<!-- sent="Thu, 8 Jul 2004 12:49:11 -0700" -->
+<!-- isosent="20040708194911" -->
+<!-- name="J. Andrew Rogers" -->
+<!-- email="andrew@ceruleansystems.com" -->
+<!-- subject="Re: features of an AI code" -->
+<!-- id="1089316151.8647@whirlwind.he.net" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="features of an AI code" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> J. Andrew Rogers (<a href="mailto:andrew@ceruleansystems.com?Subject=Re:%20features%20of%20an%20AI%20code"><em>andrew@ceruleansystems.com</em></a>)<br>
+<strong>Date:</strong> Thu Jul 08 2004 - 13:49:11 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="9563.html">BillK: "AI Links"</a>
+<li><strong>Previous message:</strong> <a href="9561.html">David Picon Alvarez: "Re: Cognitive Systems Conference, CCortex, and alternative friendliness aproaches"</a>
+<li><strong>Maybe in reply to:</strong> <a href="9556.html">Eugen Leitl: "features of an AI code"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="9568.html">Yan King Yin: "re: features of an AI code"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#9562">[ date ]</a>
+<a href="index.html#9562">[ thread ]</a>
+<a href="subject.html#9562">[ subject ]</a>
+<a href="author.html#9562">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Eugen wrote:
+<br>
+<em>&gt; * code for today's/next year's commodity iron, but think
+</em><br>
+<em>&gt; about portability to massively parallel async molecular
+</em><br>
+<em>&gt; electronics systems with mole amounts of switches.
+</em><br>
+<p><p>Good advice, but not always so easy to do in practice.
+<br>
+Maximum scalability on current hardware may require making
+<br>
+design choices that are not terribly compatible with a
+<br>
+design choice you would make in ten years.  There are many
+<br>
+codes that I would want to do with fine-grain message
+<br>
+passing in the future that I wouldn't want to do that way
+<br>
+today because they won't scale well.
+<br>
+<p><p><em>&gt; * your code should scale O(0) whether for 10^0 or 10^9
+</em><br>
+<em>&gt; nodes (yes, it can be done with the right topology and
+</em><br>
+<em>&gt; communication pattern) -- if it doesn't you're doing
+</em><br>
+<em>&gt; someting really wrong. Screw Amdahl, no sequential
+</em><br>
+<em>&gt; sections allowed.
+</em><br>
+<p><p>Not bloody likely.  Even with fine-grained fully async MP
+<br>
+architectures and the code to go with it, you'll still have
+<br>
+to sync up regionally if you want to get a meaningful answer
+<br>
+out of it.  Even the human brain exhibits no ability to
+<br>
+partition its resources beyond a coarse level.
+<br>
+<p><p><em>&gt; * avoid writing to disk frequently, try to do without
+</em><br>
+<em>&gt; swap. There's a special case if you have a large library
+</em><br>
+<em>&gt; of patterns, and can stream sequentially, or tolerate 10
+</em><br>
+<em>&gt; ms fetches sometimes.
+</em><br>
+<p><p>For that matter, avoid reading from disk frequently. Disk
+<br>
+is just a grossly inefficient form of RAM, and if normal
+<br>
+core latency is a bottleneck (and it is for many codes),
+<br>
+having core with 10ms latency is almost useless.
+<br>
+<p>This also means that any kind of RAM connected to switched
+<br>
+fiber within a 100km radius is vastly better than local
+<br>
+disk.  If there was an easy way to mount the RAM of an
+<br>
+arbitrary number of network connected boxes as local 64-bit
+<br>
+swap space, that would be interesting.  (It sounds like
+<br>
+something that should be easy to do on Linux or similar, but
+<br>
+it isn't in practice.)
+<br>
+<p>Useful even for codes that don't need a ton of CPU.
+<br>
+<p><p><em>&gt; * use arrays of small data types, avoid absolute pointers
+</em><br>
+<em>&gt; (use relative addressing as offsets to current position)
+</em><br>
+<p><p>If you don't make a habit of using the system to allocate
+<br>
+gobs of little objects, a good compiler will do the rest.
+<br>
+<p>The structure of the arrays matters too.  How many cache
+<br>
+lines that will get blown out can vary quite a bit depending
+<br>
+on how you lay out those data types.  Two structure arrays
+<br>
+of identical size and type but with different internal
+<br>
+layout can cause integer factor differences in performance.
+<br>
+<p><p><em>&gt; * only access memory in stream mode, try to limit
+</em><br>
+<em>&gt; unpredictable accesses to 1st/2nd level cache (here it
+</em><br>
+<em>&gt; actually pays to use assembly for prefetch, otherwise
+</em><br>
+<em>&gt; don't bother with assembly but maybe for inner loop when
+</em><br>
+<em>&gt; you're done. This will cut your harware budget by some
+</em><br>
+<em>&gt; 300%, ditto operation costs.
+</em><br>
+<p><p>The biggest performance improvements I've gotten were from
+<br>
+memory access optimization i.e. maximizing the number of
+<br>
+cache hits at all levels.  You can do this in C and
+<br>
+largely eliminate any nominal benefit one might see from
+<br>
+hand-tweaking assembly.
+<br>
+<p>In fact, I've discovered that big ugly &quot;slow&quot; codes that
+<br>
+have been optimized for extreme cache efficiency (which
+<br>
+almost invariably is what makes them &quot;big and ugly&quot;) will
+<br>
+often run integer factors faster than the tight and elegant
+<br>
+&quot;ideal&quot; implementations.  Most of the pipelines in a modern
+<br>
+CPU sit idle anyway; making them even more idle by
+<br>
+optimizing for instruction efficiency often won't net much.
+<br>
+Optimizing for cache efficiency gives all those pipelines
+<br>
+something to do, instruction optimized or not.
+<br>
+<p><p><em>&gt; * don't use floats, stick to integers
+</em><br>
+<em>&gt; * if you use integers, try using short integers (4-8 bit
+</em><br>
+<em>&gt; is great)
+</em><br>
+<p><p>Also good advice.  Integers are silicon friendly, and using
+<br>
+small integers will help sneak a lot of things inside a
+<br>
+cache line.  As for byte-slicing, I would only do that where
+<br>
+there is an obvious benefit e.g. for cache line boundaries.
+<br>
+The extra instructions are basically free, but if it isn't
+<br>
+needed then keep things simple.  A wash in many cases.
+<br>
+<p>As for floats, how much dynamic range do you really need
+<br>
+anyway?
+<br>
+<p><p><em>&gt; * stick to integers and codes you can crunch in parallel
+</em><br>
+<em>&gt; with MMX/SSE* type of SWAR SIMD
+</em><br>
+<p><p>You only have so much freedom in algorithm selection.  Some
+<br>
+codes won't be SIMD friendly in any significant sense.
+<br>
+<p><p><em>&gt; * make sure your inner loop would translate into logic
+</em><br>
+<em>&gt; some 10^3 gates simple for each individual small integer
+</em><br>
+<p><p>With a fully optimized compile, my core code can currently
+<br>
+fit entirely inside the L1 instruction cache of most modern
+<br>
+CPUs.  Which is close enough to FPGA for me. Hard to say if
+<br>
+that will last though.  Probably won't.
+<br>
+<p><p><em>&gt; * put the complexity into data pattern, not code pattern.
+</em><br>
+<em>&gt; Code is not that important, state is.
+</em><br>
+<p><p>Or to rephrase, there is no difference between state and
+<br>
+code.  Making the code as tight as possible will keep the
+<br>
+other cache free for more important things.
+<br>
+<p><p><em>&gt; * if you think you can't do it in C, or don't need to,
+</em><br>
+<em>&gt; you're doing it wrong
+</em><br>
+<p><p>Most likely, though I know there will be howls of protest.
+<br>
+The only reason this isn't true is if you can afford to blow
+<br>
+an order of magnitude of both speed and memory consumption
+<br>
+for a friendlier language.  Personally, I find any
+<br>
+differences in performance and efficiency that can be
+<br>
+described in terms of &quot;orders of magnitude&quot; to be
+<br>
+qualitative and therefore important.
+<br>
+<p>And no, JIT compiled Java etc does not even come close for
+<br>
+types of codes Eugen is talking about.  Languages like Java
+<br>
+have pathological cache behaviors that cannot be optimized
+<br>
+away.  This is precisely the space where C becomes glorious
+<br>
+in its capabilities compared to most other languages.
+<br>
+<p><p><em>&gt; * if can't describe the algorithm and the data flow on a
+</em><br>
+<em>&gt; large piece of paper, you're doing it wrong
+</em><br>
+<p><p>Yup.
+<br>
+<p><p>j. andrew rogers
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="9563.html">BillK: "AI Links"</a>
+<li><strong>Previous message:</strong> <a href="9561.html">David Picon Alvarez: "Re: Cognitive Systems Conference, CCortex, and alternative friendliness aproaches"</a>
+<li><strong>Maybe in reply to:</strong> <a href="9556.html">Eugen Leitl: "features of an AI code"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="9568.html">Yan King Yin: "re: features of an AI code"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#9562">[ date ]</a>
+<a href="index.html#9562">[ thread ]</a>
+<a href="subject.html#9562">[ subject ]</a>
+<a href="author.html#9562">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:48 MDT
+</em></small></p>
+</body>
+</html>

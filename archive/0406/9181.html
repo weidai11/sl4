@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>SL4: RE: About &quot;safe&quot; AGI architecture</title>
+<meta name="Author" content="Ben Goertzel (ben@goertzel.org)">
+<meta name="Subject" content="RE: About &quot;safe&quot; AGI architecture">
+<meta name="Date" content="2004-06-13">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: About &quot;safe&quot; AGI architecture</h1>
+<!-- received="Sun Jun 13 10:08:03 2004" -->
+<!-- isoreceived="20040613160803" -->
+<!-- sent="Sun, 13 Jun 2004 12:07:49 -0400" -->
+<!-- isosent="20040613160749" -->
+<!-- name="Ben Goertzel" -->
+<!-- email="ben@goertzel.org" -->
+<!-- subject="RE: About &quot;safe&quot; AGI architecture" -->
+<!-- id="003101c45160$93563ff0$6501a8c0@ZOMBIETHUSTRA" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="8A6AC64D-BD0C-11D8-85E5-000A95B1AFDE@objectent.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ben Goertzel (<a href="mailto:ben@goertzel.org?Subject=RE:%20About%20&quot;safe&quot;%20AGI%20architecture"><em>ben@goertzel.org</em></a>)<br>
+<strong>Date:</strong> Sun Jun 13 2004 - 10:07:49 MDT
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="9182.html">Philip Sutton: "Re: Where does friendliness come from before Collective Volition"</a>
+<li><strong>Previous message:</strong> <a href="9180.html">Eliezer Yudkowsky: "Re: Collective Volition: Wanting vs Doing."</a>
+<li><strong>In reply to:</strong> <a href="9179.html">Samantha Atkins: "Re: About &quot;safe&quot; AGI architecture"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="9185.html">Harvey Newstrom: "Re: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Reply:</strong> <a href="9185.html">Harvey Newstrom: "Re: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Reply:</strong> <a href="9196.html">Samantha Atkins: "Re: About &quot;safe&quot; AGI architecture"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#9181">[ date ]</a>
+<a href="index.html#9181">[ thread ]</a>
+<a href="subject.html#9181">[ subject ]</a>
+<a href="author.html#9181">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Hi,
+<br>
+<p><em>&gt; I don't see how &quot;formal verification of Java programs&quot; can be 
+</em><br>
+<em>&gt; done.  Or 
+</em><br>
+<em>&gt; at least, I would assume that the specification of what the 
+</em><br>
+<em>&gt; program is 
+</em><br>
+<em>&gt; supposed to do is  where much of the trick takes place.   If the 
+</em><br>
+<em>&gt; specification is detailed enough and is itself provably correct (why 
+</em><br>
+<em>&gt; don't we get an infinite recurse?) then it might well be a 
+</em><br>
+<em>&gt; better form 
+</em><br>
+<em>&gt; of the program than the Java one was anyway.  
+</em><br>
+<p>Formal specification may take place in a mathematical specification
+<br>
+language such as Z.  This is not a good form for a practical software
+<br>
+program, because it doesn't deal with issues of memory or processing
+<br>
+efficiency, except at the very abstract level of the order-of-complexity
+<br>
+of algorithms and the design of data structures.  Currently there is no
+<br>
+technology for taking a Z specification and turning it into an efficient
+<br>
+software program.  However, the supercompiler technology may eventually
+<br>
+lead to such a capability, in which case, indeed, the specification will
+<br>
+be the program.
+<br>
+<p>The point is that the specification is much smaller and simpler than a
+<br>
+program, and hence can be more thoroughly checed my humans.  We don't
+<br>
+get an infinite recursion because the recursion stops with human
+<br>
+judgment.  The problem is that software programs that are too big and
+<br>
+complex are hard for humans to reliably verify as correct by direct
+<br>
+inspection.
+<br>
+<p><em>&gt;  The things 
+</em><br>
+<em>&gt; Java removed 
+</em><br>
+<em>&gt; from C++ do not afaik make it any more powerful, certainly not more 
+</em><br>
+<em>&gt; succinct, and arguably no easier to prove a program is correct in. 
+</em><br>
+<p>This is not true.  Java lacks pointers and explicit heap memory
+<br>
+management, and this is what makes it orders of magnitude more feasible
+<br>
+to analyze Java programs mathematically, than C++ programs.  C# programs
+<br>
+are tractable in the sense that Java programs are, if one doesn't use
+<br>
+unsafe blocks of code and the pointer-manipulation that they permit.  
+<br>
+<p>The existing, partially functional Java supercompiler -- and the
+<br>
+existing C# partial-evaluator made by the same team under a research
+<br>
+grant from Microsoft -- could not have feasibly been made for C#.
+<br>
+<p><em>&gt; I 
+</em><br>
+<em>&gt; believe you can do this type of formalism for fairly small 
+</em><br>
+<em>&gt; programs.   
+</em><br>
+<em>&gt; If it works for larger software systems then your friends should 
+</em><br>
+<em>&gt; practically own the server software space.
+</em><br>
+<p>Well, we have big ambitions for supercompilers.com, which will more
+<br>
+likely be carried out via partnership with major software firms than by
+<br>
+competing directly with them.  However, the technology is still in
+<br>
+development, and right now it works for SOME large software systems and
+<br>
+not others.
+<br>
+<p>Specifically, if you design a software program with knowledge of the
+<br>
+supercompilation process in mind, then the program can be large and
+<br>
+complex and the supercompiler can still grok it.  But if it's not
+<br>
+designed with supercompilation in mind, then the supercompiler may not
+<br>
+be able to do anything useful with it right now.
+<br>
+<p>Hopefully, this limitation will be overcome.  Even if not, however, it's
+<br>
+not such an obstacle for Novamente, because if we recode the Novamente
+<br>
+core in Java in future with supercompilation in mind, we can make sure
+<br>
+to structure the design in a supercompiler-friendly way.
+<br>
+&nbsp;
+<br>
+<em>&gt; So how does this work?  Is the core succinct enough to be formalized 
+</em><br>
+<em>&gt; into a proof engine?  Or have the folks at supercompilers.com done 
+</em><br>
+<em>&gt; something that seems to me roughly equivalent to solving the halting 
+</em><br>
+<em>&gt; problem?
+</em><br>
+<p>You don't need to solve the halting problem to prove that a program
+<br>
+successfully fulfills its specification, in most realistic cases.  Yeah,
+<br>
+you can come up with cases where a program verifier will choke.  But in
+<br>
+reality you can design a software system so that the program verifier
+<br>
+doesn't choke.
+<br>
+<p>There is a LOT of knowledge in the area of formal program verification
+<br>
+and transformation, and plenty of cool academic-ish technology, even
+<br>
+though very little of this has found its way into the commercial
+<br>
+software community.
+<br>
+<p>-- Ben G
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="9182.html">Philip Sutton: "Re: Where does friendliness come from before Collective Volition"</a>
+<li><strong>Previous message:</strong> <a href="9180.html">Eliezer Yudkowsky: "Re: Collective Volition: Wanting vs Doing."</a>
+<li><strong>In reply to:</strong> <a href="9179.html">Samantha Atkins: "Re: About &quot;safe&quot; AGI architecture"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="9185.html">Harvey Newstrom: "Re: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Reply:</strong> <a href="9185.html">Harvey Newstrom: "Re: About &quot;safe&quot; AGI architecture"</a>
+<li><strong>Reply:</strong> <a href="9196.html">Samantha Atkins: "Re: About &quot;safe&quot; AGI architecture"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#9181">[ date ]</a>
+<a href="index.html#9181">[ thread ]</a>
+<a href="subject.html#9181">[ subject ]</a>
+<a href="author.html#9181">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Jul 17 2013 - 04:00:47 MDT
+</em></small></p>
+</body>
+</html>
